@@ -1,0 +1,151 @@
+<!-- Static files -->
+{% load static %}
+
+<html lang="es">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Meta tags para Facebook, Twitter, etc. -->
+    <meta name="description" content="La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative" />
+    <meta name="author" content="Fundación Ciudadanía Inteligente" />
+    <meta name="keywords" content="FCI, LCeN"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="La Constitución es Nuestra"/>
+    <meta property="og:title" content="La Constitución es Nuestra">
+    <meta property="og:image" content="{% static 'img/logo-lcen.png' %}"/>
+    <meta property="og:description" content="La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative"/>
+    <meta property="og:url" content="https://laconstitucionesnuestra.cl">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ciudadania_i" />
+    <meta name="twitter:creator" content="@ciudadania_i">
+    <meta name="twitter:title" content="La Constitución es Nuestra" />
+    <meta name="twitter:description" content="La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative" />
+    <meta name="twitter:image" content="{% static 'img/logo-lcen.png' %}" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+
+    <!-- Estilos CSS LCeN -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>La Constitución es Nuestra - {% block title %}{% endblock %}</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0VHB77FX6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R0VHB77FX6');
+</script>
+
+  </head>
+
+  <body>
+
+    <header class="container-fluid fixed-top">
+        <nav class="navbar navbar-expand-lg container">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="#"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-item" href="{% url 'quees' %}">Qué Es</a>
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Propuestas</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Ver Propuestas</a></li>
+                            <li><a class="dropdown-item" href="#">tututu</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Convencionales</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">tututu</a></li>
+                            <li><a class="dropdown-item" href="#">tututu</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Organizaciones</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Ver Organizaciones</a></li>
+                            <li><a class="dropdown-item" href="#">tututu</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">tututu</a></li>
+                            <li><a class="dropdown-item" href="#">tututu</a></li>
+                            </ul>
+                        </li> -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ingresar</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Login</a></li>
+                            <li><a class="dropdown-item" href="#">Ciudadan@</a></li>
+                            <li><a class="dropdown-item" href="#">Convencional</a></li>
+                            <li><a class="dropdown-item" href="#">Organización</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<div class="container" style="margin-top:150px; margin-bottom:50px;">
+Estas navegando como: {{ user.get_username }} en la página {{ request.get_full_path }}
+{% block content %}
+
+
+
+{% endblock %}
+</div>
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 logo">
+            <img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid logo">
+        </div>
+        <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 collage-1">
+            <img src="{% static 'img/collage-footer-1.png' %}" alt="collage footer 1" class="img-fluid">
+        </div>
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 redes">
+            <ul class="rrss">
+                <li><a href="https://github.com/ciudadanointeligente/lcen" target="_blank"><img src="{% static 'img/github-brand.png' %}" alt="git" class="img-fluid"></a></li>
+                <li><a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank"><img src="{% static 'img/creative-commons.png' %}" alt="git" class="img-fluid"></a></li>
+            </ul>
+        </div>
+        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 collage-2">
+            <img src="{% static 'img/collage-footer-2.png' %}" alt="collage footer 2" class="img-fluid">
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

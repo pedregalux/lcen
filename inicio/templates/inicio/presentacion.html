@@ -1,0 +1,217 @@
+{% load static %}
+<html lang="es">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Meta tags para Facebook, Twitter, etc. -->
+    <meta name="description" content="La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative" />
+    <meta name="author" content="Fundación Ciudadanía Inteligente" />
+    <meta name="keywords" content="FCI, LCeN"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="La Constitución es Nuestra"/>
+    <meta property="og:title" content="La Constitución es Nuestra">
+    <meta property="og:image" content="{% static 'img/logo-lcen.png' %}"/>
+    <meta property="og:description" content="La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative"/>
+    <meta property="og:url" content="https://laconstitucionesnuestra.cl">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ciudadania_i" />
+    <meta name="twitter:creator" content="@ciudadania_i">
+    <meta name="twitter:title" content="La Constitución es Nuestra" />
+    <meta name="twitter:description" content="La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative" />
+    <meta name="twitter:image" content="{% static 'img/logo-lcen.png' %}" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+
+    <!-- Estilos CSS LCeN -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>La Constitución es Nuestra - {% block title %}{% endblock %}</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0VHB77FX6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R0VHB77FX6');
+</script>
+
+  </head>
+
+  <body>
+
+    <header class="container-fluid fixed-top">
+        <nav class="navbar navbar-expand-lg container">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="#"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#que-es">Qué es</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sumate">Súmate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quienes-somos">Quiénes Somos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- Portada -->
+
+<section class="container portada">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <h1>
+                Porque <span>la Constitución</span> es de todas y todos, es momento de involucrarnos y empujar para que <span>la voz ciudadana se escuche fuerte</span> en la Convención Constitucional
+            </h1>
+            <div class="scroll-icon">
+                <a href="#que-es">Más información <img src="{% static 'img/arrow-white.png' %}" alt="arrow icon" class="arrow"></a>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <img src="{% static 'img/collage-portada.png' %}" alt="collage portada" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid" id="que-es">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                <h2>Qué es</h2>
+                <img src="{% static 'img/isotipo.png' %}" alt="isotipo" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                <p>
+                    <b>La Constitución es Nuestra</b> (LCeN) es una plataforma abierta y colaborativa que busca reinvidicar el poder ciudadano. Nuestro objetivo es visibilizar y articular tus propuestas para la nueva Constitución, las que conectaremos con el trabajo de las y los Convencionales Constituyentes en Chile, para que en conjunto podamos incidir en materia de derechos sociales y fortalecimiento democrático.
+
+                </p>
+                <p>
+                    Podrás también encontrar toda la información relevante sobre la Constitución, el Proceso Constituyente, la Convención Constitucional y sus mecanismos de participación ciudadana en un formato claro y amigable, así como diversas herramientas para que puedas elaborar e impulsar tus propuestas.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mensaje-destacado container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <h3>
+                    ÚNETE A LA <span>TRANSFORMACIÓN DE CHILE</span> PORQUE EN LA LUCHA POR SOCIEDADES MÁS JUSTAS E INCLUSIVAS, JUNTAS Y JUNTOS SOMOS MÁS FUERTES
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="sumate">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <h2>Súmate</h2>
+            <p>
+                Con tu apoyo <b>trabajaremos arduamente para abrir la Convención Constitucional a la ciudadanía</b>, diversificar miradas, amplificar voces y hacer llegar a los y las convencionales tus propuestas para que queden garantizadas en la Nueva Constitución de Chile. Súmate para poder después inscribir tus propuestas.
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe02KW51OycoVZwF8av9fbaV5cGfWLSSPGeTYDKcpv5s7PrwA/viewform" class="bt-sumate">Súmate aquí</a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <img src="{% static 'img/collage-sumate.png' %}" alt="collage sumate" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid" id="quienes-somos">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <h2>Quiénes Somos</h2>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <img src="{% static 'img/logo-fci.png' %}" alt="logo-fci" class="img-fluid">
+                <div class="decoracion red"></div>
+                <p>Somos una organización con foco latinoamericano, inclusiva y feminista que lucha por el fortalecimiento de las democracias. Con más de 10 años de experiencia en 14 países de la región, investigamos sobre los obstáculos que impiden el empoderamiento ciudadano y aplicamos nuestros hallazgos creando herramientas tecnológicas que fiscalizan autoridades, acercan comunidades a sus gobiernos, luchan contra la corrupción, fortalecen el trabajo de activistas, y permiten la incidencia en políticas públicas.</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <img src="{% static 'img/logo-constituyo.png' %}" alt="logo constituyo" class="img-fluid">
+                <div class="decoracion yellow"></div>
+                <p>Somos una red autoconvocada de 30 personas diversas en edad, género, educación y ocupación cuya misión es promover el aprendizaje, la participación y la incidencia ciudadana en todas las etapas del Proceso Constituyente, teniendo como horizonte el fortalecimiento de nuestra democracia. Para ello, elaboramos contenidos y metodologías de mediación de libre uso; organizamos instancias abiertas de aprendizaje y diálogo cívico; y desarrollamos proyectos colaborativos que fortalecen la articulación, participación e incidencia ciudadana. No representamos a ningún partido o coalición política.</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <img src="{% static 'img/logo-theglobaliniciative.png' %}" alt="logo the global iniciative" class="img-fluid">
+                <div class="decoracion green"></div>
+                <p>Somos una organización internacional no-gubernamental de derechos humanos que busca avanzar la realización de los derechos económicos, sociales y culturales alrededor del mundo, enfrentando los problemas estructurales de desigualdad y pobreza global. Trabajamos para que el marco de los derechos humanos refleje las experiencias reales de vida de todas las personas, fomentando la justicia social, la dignidad humana y catalizando cambios desde lo local hacia lo global.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="apoyo container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <h6>Con el apoyo de:</h6>
+            <img src="{% static 'img/logo-fes-2.png' %}" alt="logo FES" class="img-fluid">
+            <img src="{% static 'img/logo-ned.png' %}" alt="logo NED" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<div class="decoracion-colores">
+    <div class="blue"></div>
+    <div class="green"></div>
+    <div class="yellow"></div>
+    <div class="red"></div>
+</div>
+
+
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 logo">
+            <img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid logo">
+        </div>
+        <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 collage-1">
+            <img src="{% static 'img/collage-footer-1.png' %}" alt="collage footer 1" class="img-fluid">
+        </div>
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 redes">
+            <ul class="rrss">
+                <li><a href="https://github.com/ciudadanointeligente/lcen" target="_blank"><img src="{% static 'img/github-brand.png' %}" alt="git" class="img-fluid"></a></li>
+                <li><a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank"><img src="{% static 'img/creative-commons.png' %}" alt="git" class="img-fluid"></a></li>
+            </ul>
+        </div>
+        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 collage-2">
+            <img src="{% static 'img/collage-footer-2.png' %}" alt="collage footer 2" class="img-fluid">
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
