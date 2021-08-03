@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+
+{% block content %}
+  {% if form.non_field_errors %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {% for error in form.non_field_errors %}
+        <p{% if forloop.last %} class="mb-0"{% endif %}>{{ error }}</p>
+      {% endfor %}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% endif %}
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+      <h2>Log in</h2>
+      <form method="post" novalidate>
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {{ form.username }}
+        {{ form.password }}
+        <button type="submit" class="btn btn-primary">Log in</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+      <h2>Login Github</h2>
+      <a href="{% provider_login_url 'github' %}" class="btn btn-secondary">
+      <i class="fa fa-github fa-fw"></i>
+      <span>Ingresar con GitHub</span>
+    </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+      <h2>Login Google</h2>
+      <a href="{% provider_login_url 'google' %}" class="btn btn-secondary">
+      <i class="fa fa-github fa-fw"></i>
+      <span>Ingresar con Google</span>
+    </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+      <h2>Login Facebook</h2>
+      <a href="{% provider_login_url 'facebook' method='oauth2' %}" class="btn btn-secondary">
+      <i class="fa fa-github fa-fw"></i>
+      <span>Ingresar con Facebook</span>
+    </a>
+    </div>
+  </div>
+{% endblock %}
