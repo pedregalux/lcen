@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from django.db import transaction
-from managers.models import Pais, Region, Comuna, Distrito
+from mantenedores.models import Pais, Region, Comuna, Distrito
 from .models import User, Ciudadano, Organizacion, Convencional
 from django.contrib.auth.models import Group
 

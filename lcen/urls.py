@@ -15,4 +15,5 @@ admin.site.site_title = 'La Constitución es Nuestra Admin' # default: "Django s
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('inicio.urls')),
+    path('usuarios/', include('usuarios.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

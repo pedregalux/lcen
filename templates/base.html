@@ -97,11 +97,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ingresar</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Login</a></li>
-                            <li><a class="dropdown-item" href="#">Ciudadan@</a></li>
-                            <li><a class="dropdown-item" href="#">Convencional</a></li>
-                            <li><a class="dropdown-item" href="#">Organización</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                              <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
+                              <li><a class="dropdown-item" href="{% url 'ciudadano_register' %}">Ciudadan@</a></li>
+                              <li><a class="dropdown-item" href="{% url 'convencional_register' %}">Convencional</a></li>
+                              <li><a class="dropdown-item" href="{% url 'organizacion_register' %}">Organización</a></li>
+                              <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
                             </ul>
                         </li>
                     </ul>
