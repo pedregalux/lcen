@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'mantenedores.apps.MantenedoresConfig',
     'usuarios.apps.UsuariosConfig',
     'inicio.apps.InicioConfig',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 AUTH_USER_MODEL = 'usuarios.User'
@@ -149,3 +151,7 @@ MEDIA_URL = config('MEDIA_URL')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Crispy forms bootstrap5
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
