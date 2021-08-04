@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Crear Propuesta{% endblock %}
+
+{% block content %}
+<section>
+
+  <div class="row">
+    <div class="col-md-8 col-sm-10 col-12">
+      <h2>Crear Propuesta</h2>
+          <form action="{% url 'crear_propuesta' %}" method="POST" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-success">Crear Propuesta</button>
+          </form>
+    </div>
+  </div>
+
+</section>
+{% endblock %}

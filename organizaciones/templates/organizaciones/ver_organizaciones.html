@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Organizaciones{% endblock %}
+
+{% block content %}
+
+{% for organizacion in organizaciones_list %}
+<p><a href="{{ organizacion.pk }}">{{ organizacion }}</a></p>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Organización{% endblock %}
+
+{% block content %}
+
+<h2>Organización</h2>
+
+{% if object.nombre %}
+Nombre: {{ object.nombre }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.sigla %}
+Sigla: {{ object.sigla }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.logo %}
+Logo: <img src="{{ MEDIA_URL }}{{ object.logo.url }}" class="img-responsive"/>
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.descripcion %}
+Descripción: {{ object.descripcion }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.email %}
+Email Organización: {{ object.email }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.twitter %}
+Twitter:
+{{ object.twitter }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.facebook %}
+Facebook:
+{{ object.facebook }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.instagram %}
+Instagram:
+{{ object.instagram }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.pais %}
+País: {{ object.pais }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.region %}
+Región: {{ object.region }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.comuna %}
+Comuna: {{ object.comuna }}
+{% else %}
+{% endif %}
+
+<br />
+
+Otros temas:
+{% for alcance in object.alcance.all %}
+{{ alcance }} ·
+{% endfor %}
+
+<br />
+
+{% endblock %}

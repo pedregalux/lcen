@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Propuestas{% endblock %}
+
+{% block content %}
+
+{% for propuesta in propuestas_list %}
+<p><a href="{{ propuesta.pk }}">{{ propuesta }}</a></p>
+{% endfor %}
+
+
+{% endblock %}
