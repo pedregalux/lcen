@@ -33,8 +33,8 @@ class VerPropuestaView(DetailView):
 
 
 
-class CrearPropuestaView(PermissionRequiredMixin, LoginRequiredMixin, FormView):
-    permission_required = 'propuestas.add_propuesta'
+class CrearPropuestaView(LoginRequiredMixin, FormView):
+    # permission_required = 'propuestas.add_propuesta'
     form_class = CrearPropuestaForm
     template_name = 'propuestas/crear_propuesta.html'
     success_url = '/propuestas/'
@@ -45,3 +45,18 @@ class CrearPropuestaView(PermissionRequiredMixin, LoginRequiredMixin, FormView):
             prop.autor = self.request.user
             form.save()
         return super().form_valid(form)
+
+
+
+# class CrearPropuestaView(PermissionRequiredMixin, LoginRequiredMixin, FormView):
+#     permission_required = 'propuestas.add_propuesta'
+#     form_class = CrearPropuestaForm
+#     template_name = 'propuestas/crear_propuesta.html'
+#     success_url = '/propuestas/'
+#     login_url = 'login'
+#     def form_valid(self, form):
+#         if form.is_valid():
+#             prop = form.save(commit=False)
+#             prop.autor = self.request.user
+#             form.save()
+#         return super().form_valid(form)
