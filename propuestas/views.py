@@ -34,7 +34,7 @@ class VerPropuestaView(DetailView):
 
 
 class CrearPropuestaView(LoginRequiredMixin, FormView):
-    # permission_required = 'propuestas.add_propuesta'
+    permission_required = 'propuestas.add_propuesta'
     form_class = CrearPropuestaForm
     template_name = 'propuestas/crear_propuesta.html'
     success_url = '/propuestas/'
