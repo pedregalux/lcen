@@ -52,8 +52,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
-    'crispy_forms',
-    'crispy_bootstrap5',
+    'formtools',
+    # 'crispy_forms',
+    # 'crispy_bootstrap5',
 ]
 
 AUTH_USER_MODEL = 'usuarios.User'
@@ -184,5 +185,5 @@ MEDIA_URL = config('MEDIA_URL')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Crispy forms bootstrap5
-CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+# CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+# CRISPY_TEMPLATE_PACK = 'bootstrap5'

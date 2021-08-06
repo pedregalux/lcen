@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
+
 
 {% block content %}
 <section>
@@ -10,7 +10,7 @@
           <form action="{% url 'ciudadano_register' %}" method="POST" novalidate>
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}">
-            {{ form|crispy }}
+            {{ form }}
             <button type="submit" class="btn btn-success">Inscribir</button>
           </form>
     </div>

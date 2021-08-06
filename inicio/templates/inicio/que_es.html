@@ -4,5 +4,127 @@
 
 {% block content %}
 
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-que-es.jpg' %}" alt="img collage portada" class="img-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">¿Qué es?</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container que-es-lcen py-5 my-5">
+    <div class="row d-flex align-items-center">
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+            <h2>La constitución es nuestra</h2>
+            <p>La Constitución es Nuestra es una plataforma abierta, colaborativa y colectiva que busca reivindicar el poder ciudadano en la Convención Constitucional.</p>
+            <p>Nuestro objetivo es promover la participación informada, articulada e incidente de la ciudadanía movilizada, sociedad civil y grupos históricamente excluidos de la toma de decisiones durante el Proceso Constituyente, para producir cambios sustantivos que garanticen derechos sociales y nuevas formas de participación democrática en la Nueva Constitución de Chile.
+            </p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-lcen button hvr-sweep-to-right" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Ver video </button>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Video: La constitución es nuestra</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/38HD1vXub_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+            <img src="{% static 'img/collage-lcen.png' %}" alt="collage la constitución es nuestra">
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid infografia-que-es">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-4 item">
+                <p><span class="yellow">1</span></p>
+                <p>Visibilizamos y difundimos tus propuestas para la nueva constitución.</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 item">
+                <p><span class="green">2</span></p>
+                <p>Llevamos tus propuestas a las y los convencionales para impulsar una constitución que garantice derechos sociales.</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 item">
+                <p><span class="red">3</span></p>
+                <p>Entregamos información sobre todo el Proceso Constituyente de manera simple, amigable y transparente.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quienes-somos-lcen container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12">
+            <h2>Quienes Somos</h2>
+            <div class="decoracion yellow"></div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12">
+            <ul class="organizaciones-list">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'img/fci-logo.png' %}" alt="img organizacion logo fci"></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <img src="{% static 'img/arrow-hover.png' %}" alt="arrow">
+                        <div class="contenido">
+                            <p>ONG sin fines de lucro y apartidista. Buscamos fortalecer las democracias de Latinoamérica mediante el uso innovador de tecnologías.</p>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'img/constituyo-logo.png' %}" alt="img organizacion logo constituyo"></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <img src="{% static 'img/arrow-hover.png' %}" alt="arrow">
+                        <div class="contenido">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus turpis sit amet risus efficitur, ac suscipit dui bibendum.</p>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'img/the-global-iniciative-logo.png' %}" alt="img organizacion logo the global iniciative"></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <img src="{% static 'img/arrow-hover.png' %}" alt="arrow">
+                        <div class="contenido">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus turpis sit amet risus efficitur, ac suscipit dui bibendum.</p>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'img/fes-logo.png' %}" alt="img organizacion logo fes"></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <img src="{% static 'img/arrow-hover.png' %}" alt="arrow">
+                        <div class="contenido">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus turpis sit amet risus efficitur, ac suscipit dui bibendum.</p>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12">
+            <ul class="apoyo">
+                <li>
+                    <p>Con el apoyo de:</p>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'img/ned-logo.png' %}" alt="logo Ned" class="img-fluid logo"></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <img src="{% static 'img/arrow-hover.png' %}" alt="arrow">
+                        <div class="contenido">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus turpis sit amet risus efficitur, ac suscipit dui bibendum.</p>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 {% endblock %}

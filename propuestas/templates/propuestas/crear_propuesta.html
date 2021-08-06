@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
+
 {% block title %}Crear Propuesta{% endblock %}
 
 {% block content %}
@@ -11,7 +11,7 @@
           <form action="{% url 'crear_propuesta' %}" method="POST" novalidate>
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}">
-            {{ form|crispy }}
+            {{ form }}
             <button type="submit" class="btn btn-success">Crear Propuesta</button>
           </form>
     </div>

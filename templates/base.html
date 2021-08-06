@@ -32,6 +32,12 @@
     <!-- Estilos CSS LCeN -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
+    <!-- Hover CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/hover.css' %}" />
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -56,76 +62,104 @@
     <header class="container-fluid fixed-top">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid p-0">
-                <a class="navbar-brand" href="#"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
+                <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-item" href="{% url 'quees' %}">Qué Es</a>
-
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'quees' %}">¿Qué es?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Propuestas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Convencionales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Organizaciones</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Propuestas</a>
+                            <a class="nav-link dropdown-toggle" href="www.google.com" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{% url 'ver_propuestas' %}">Ver Propuestas</a></li>
-                            <li><a class="dropdown-item" href="{% url 'crear_propuesta' %}">Crear Propuesta</a></li>
+                                <li><a class="dropdown-item" href="#">Mapa Constitucional</a></li>
+                                <li><a class="dropdown-item" href="#">Preguntas Frecuentes</a></li>
+                                <li><a class="dropdown-item" href="#">Constitución Feminista</a></li>
+                                <li><a class="dropdown-item" href="#">Actualidad</a></li>
+                                <li><a class="dropdown-item" href="#">Ensayos constitucionales</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Convencionales</a>
+                        <li class="nav-item dropdown ingresar">
+                            {% if user.is_authenticated %}
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Saludos, {{ user.username }}!</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">tututu</a></li>
-                            <li><a class="dropdown-item" href="#">tututu</a></li>
+                                <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Nueva Contraseña</a></li>
+                                <li><a class="dropdown-item" href="{% url 'logout' %}">Salir</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Organizaciones</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Ver Organizaciones</a></li>
-                            <li><a class="dropdown-item" href="#">tututu</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ingresar</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
-                              <li><a class="dropdown-item" href="{% url 'ciudadano_register' %}">Ciudadan@</a></li>
-                              <li><a class="dropdown-item" href="{% url 'convencional_register' %}">Convencional</a></li>
-                              <li><a class="dropdown-item" href="{% url 'organizacion_register' %}">Organización</a></li>
-                              <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
-                            </ul>
+                            {% else %}
+                            <a class="nav-link dropdown-toggle button hvr-sweep-to-right" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Ingresar
+                            </a>
+                            {% endif %}
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-<div class="container" style="margin-top:150px; margin-bottom:50px;">
-Estas navegando como: {{ user.get_username }} en la página {{ request.get_full_path }}
+
 {% block content %}
 
 
 
 {% endblock %}
+
+<div class="decoracion-colores">
+    <div class="yellow"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+    <div class="red"></div>
 </div>
+Estas navegando como: {{ user.get_username }} en la página {{ request.get_full_path }}
 <footer class="container-fluid">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 logo">
             <img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid logo">
         </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 impulsado">
+            <h3>Impulsado por:</h3>
+            <div class="logos-organizaciones">
+                <img src="{% static 'img/fci-logo.png' %}" alt="logo fci" class="img-fluid logo">
+                <img src="{% static 'img/constituyo-logo.png' %}" alt="logo Constituyo" class="img-fluid logo">
+                <img src="{% static 'img/the-global-iniciative-logo.png' %}" alt="logo the global iniciative" class="img-fluid logo">
+                <img src="{% static 'img/fes-logo.png' %}" alt="logo FES" class="img-fluid logo">
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 apoyo">
+            <h3>Con el apoyo de:</h3>
+            <div class="logos-organizaciones">
+                <img src="{% static 'img/ned-logo.png' %}" alt="logo Ned" class="img-fluid logo">
+            </div>
+        </div>
+
         <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 collage-1">
-            <img src="{% static 'img/collage-footer-1.png' %}" alt="collage footer 1" class="img-fluid">
+            <img src="{% static 'img/footer-collage-1.png' %}" alt="collage footer 1" class="img-fluid">
         </div>
         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 redes">
+            <p>#LaConstituciónEsNuestra</p>
             <ul class="rrss">
-                <li><a href="https://github.com/ciudadanointeligente/lcen" target="_blank"><img src="{% static 'img/github-brand.png' %}" alt="git" class="img-fluid"></a></li>
-                <li><a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank"><img src="{% static 'img/creative-commons.png' %}" alt="git" class="img-fluid"></a></li>
+                <li><a href="#" target="_blank"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://github.com/ciudadanointeligente/lcen" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank"><i class="far fa-closed-captioning"></i></a></li>
             </ul>
         </div>
         <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 collage-2">
-            <img src="{% static 'img/collage-footer-2.png' %}" alt="collage footer 2" class="img-fluid">
+            <img src="{% static 'img/footer-collage-2.png' %}" alt="collage footer 2" class="img-fluid">
         </div>
     </div>
 </footer>
