@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
-    'formtools',
+    # 'formtools',
     # 'crispy_forms',
     # 'crispy_bootstrap5',
 ]
