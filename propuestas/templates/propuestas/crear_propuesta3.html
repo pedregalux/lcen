@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Crear Propuesta{% endblock %}
+
+{% block content %}
+
+<section class="container-fluid portada-collage-lcen">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 wow animate__animated animate__fadeIn animate__delay-1s">
+                <img src="{% static 'img/collage-portada-secciones.png' %}" alt="img collage portada" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 titulo wow animate__animated animate__fadeIn animate__delay-1s">
+                <div class="informacion">
+                    <div class="decoracion yellow"></div>
+                    <h1>Crea tu propuesta</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Crear propuesta: Paso 3</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container subir-propuesta">
+    <div class="row justify-content-md-center d-flex align-items-start">
+        <div class="col-12 col-sm-12 col-md-4 informacion">
+            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
+            <div class="informacion-ayuda">
+                <p class="paso-propuesta">Paso 3</p>
+                <h2>Escribe tu propuesta</h2>
+                <h4>Para tener en cuenta</h4>
+                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
+                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
+            </div>
+            <div class="blue contacto-ayuda">
+                <h3>¿Necesitas ayuda técnica?</h3>
+                <p>Por favor ccontacta a <b>XXXXXX</b></p>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-5 form">
+            <form action="" class="formulario">
+                <div class="my-3 pb-3 item-form">
+                    <label for="problematica-propuesta" class="form-label">1. ¿Cuál es el problema que tú o tu organización busca solucionar?</label>
+                    <p><i>Pregunta abierta con un máximo de 250 palabras aproximadamente.</i></p>
+                    <textarea class="form-control" id="problematica-propuesta" rows="4" placeholder="Escribe problema aquí"></textarea>
+                </div>
+                <div class="my-3 pb-3 item-form">
+                    <label for="situacion-ideal" class="form-label">2. Con respecto al problema planteado, ¿cuál sería la situación ideal?</label>
+                    <p><i>Pregunta abierta con un máximo de 250 palabras aproximadamente.</i></p>
+                    <textarea class="form-control" id="situacion-ideal" rows="4" placeholder="Escribe situación ideal aquí"></textarea>
+                </div>
+                <div class="my-3 pb-3 item-form">
+                    <label for="labor-constitucional" class="form-label">3. Para avanzar en el logro de esa situación ideal, ¿qué debería contemplar la Nueva Constitución?</label>
+                    <p><i>Pregunta abierta con un máximo de 250 palabras aproximadamente.</i></p>
+                    <textarea class="form-control" id="labor-constitucional" rows="4" placeholder="Escribe que deberia contemplar la constitución aquí"></textarea>
+                </div>
+                <div class="my-3 item-form btn-siguiente">
+                    <a href="#" class="btn-lcen button hvr-sweep-to-right">Siguiente</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

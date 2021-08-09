@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Crear Propuesta{% endblock %}
+
+{% block content %}
+
+<section class="container-fluid portada-collage-lcen">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 wow animate__animated animate__fadeIn animate__delay-1s">
+                <img src="{% static 'img/collage-portada-secciones.png' %}" alt="img collage portada" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 titulo wow animate__animated animate__fadeIn animate__delay-1s">
+                <div class="informacion">
+                    <div class="decoracion yellow"></div>
+                    <h1>Crea tu propuesta</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Crear propuesta: Paso 2</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container subir-propuesta">
+    <div class="row justify-content-md-center d-flex align-items-start">
+        <div class="col-12 col-sm-12 col-md-4 informacion">
+            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
+            <div class="informacion-ayuda">
+                <p class="paso-propuesta">Paso 2</p>
+                <h2>¿Qué temas aborda tu propuesta?</h2>
+                <h4>Para tener en cuenta</h4>
+                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
+                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
+            </div>
+            <div class="blue contacto-ayuda">
+                <h3>¿Necesitas ayuda técnica?</h3>
+                <p>Por favor ccontacta a <b>XXXXXX</b></p>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-5 form">
+            <form action="" class="formulario">
+                <div class="my-3 pb-5 item-form">
+                    <label for="tema-principal" class="form-label">1. ¿Cuál es el tema principal de tu propuesta?</label>
+                    <p><i>Considera un listado cerrado de categorías. Solo se puede seleccionar un tema.</i></p>
+                    <select class="form-select" aria-label="tema-principal">
+                      <option selected>Selecciona tema principal</option>
+                      <option value="1">Tema 1</option>
+                      <option value="2">Tema 2</option>
+                      <option value="3">Tema 3</option>
+                      <option value="4">Tema 4</option>
+                      <option value="5">Tema 5</option>
+                      <option value="6">Tema 6</option>
+                      <option value="7">Tema 7</option>
+                    </select>
+                </div>
+                <div class="my-3 item-form">
+                    <label for="region" class="form-label">2. ¿Qué otros temas aborda tu propuesta? Por favor selecciona hasta tres temas adicionales.</label>
+                    <p><i>Considera el mismo listado cerrado de categorías. Se puede seleccionar hasta tres opciones.</i></p>
+                    <select class="form-select" aria-label="region">
+                      <option selected>Selecciona otros temas</option>
+                      <option value="1">Tema 1</option>
+                      <option value="2">Tema 2</option>
+                      <option value="3">Tema 3</option>
+                      <option value="4">Tema 4</option>
+                      <option value="5">Tema 5</option>
+                      <option value="6">Tema 6</option>
+                      <option value="7">Tema 7</option>
+                    </select>
+                </div>
+                <div class="my-3 item-form btn-siguiente">
+                    <a href="#" class="btn-lcen button hvr-sweep-to-right">Siguiente</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

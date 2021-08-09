@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Crear Propuesta{% endblock %}
+
+{% block content %}
+
+<section class="container-fluid portada-collage-lcen">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 wow animate__animated animate__fadeIn animate__delay-1s">
+                <img src="{% static 'img/collage-portada-secciones.png' %}" alt="img collage portada" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 titulo wow animate__animated animate__fadeIn animate__delay-1s">
+                <div class="informacion">
+                    <div class="decoracion yellow"></div>
+                    <h1>Crea tu propuesta</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Crear propuesta: Paso 7</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container subir-propuesta">
+    <div class="row justify-content-md-center d-flex align-items-center">
+        <div class="col-12 col-sm-12 col-md-4 informacion">
+            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
+            <div class="informacion-ayuda">
+                <p class="paso-propuesta">Paso 5</p>
+                <h2>Información adicional</h2>
+                <h4>Para tener en cuenta</h4>
+                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
+                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
+            </div>
+            <div class="blue contacto-ayuda">
+                <h3>¿Necesitas ayuda técnica?</h3>
+                <p>Por favor ccontacta a <b>XXXXXX</b></p>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-5 form">
+            <form action="" class="formulario">
+                <div class="mb-3">
+                    <label for="formFileMultiple" class="form-label">Si has elaborado un documento de tu propuesta en extenso, por favor adjúntalo.</label>
+                    <p><i>Asimismo, si cuentas con otros materiales (estudios, encuestas, presentaciones, material comunicacional, etc.) que complementen tu propuesta, agrégalos.</i></p>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple>
+                </div>
+                <div class="my-3 item-form btn-siguiente">
+                    <a href="#" class="btn-lcen button hvr-sweep-to-right">Siguiente</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
