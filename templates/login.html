@@ -1,53 +1,88 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
 {% load socialaccount %}
 {% providers_media_js %}
 
 
 {% block content %}
-  {% if form.non_field_errors %}
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-      {% for error in form.non_field_errors %}
-        <p{% if forloop.last %} class="mb-0"{% endif %}>{{ error }}</p>
-      {% endfor %}
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-  {% endif %}
-  <div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-8 col-12">
-      <h2>Log in</h2>
-      <p>
-        Para crear y votar propuestas en LCeN debes ingresar con tu usuari@ a la plataforma
-        </p>
-      <form method="post" novalidate>
-        {% csrf_token %}
-        <input type="hidden" name="next" value="{{ next }}">
-        {{ form.username }}
-        {{ form.password }}
-        <button type="submit" class="btn btn-primary">Log in</button>
-      </form>
-    </div>
-  </div>
-  <div class="row">
 
-  </div>
-  <div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-8 col-12">
-      <h2>Login Google</h2>
-      <a href="{% provider_login_url 'google' %}" class="btn btn-secondary">
-      <i class="fa fa-github fa-fw"></i>
-      <span>Ingresar con Google</span>
-    </a>
+<section class="container-fluid portada-collage-lcen">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 wow animate__animated animate__fadeIn animate__delay-1s">
+                <img src="{% static 'img/collage-portada-secciones.png' %}" alt="img collage portada" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 titulo wow animate__animated animate__fadeIn animate__delay-1s">
+               <div class="informacion">
+                <div class="decoracion yellow"></div>
+                <h1>Ingresar</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Ingresar</li>
+                    </ol>
+                </nav>
+               </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-8 col-12">
-      <h2>Login Facebook</h2>
-      <a href="{% provider_login_url 'facebook' method='oauth2' %}" class="btn btn-secondary">
-      <i class="fa fa-github fa-fw"></i>
-      <span>Ingresar con Facebook</span>
-    </a>
+</section>
+
+
+<section class="container formularios-lcen ingresar-seccion">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-7 col-lg-5">
+            <h3>Ingresa con tus cuentas de:</h3>
+            <div class="cuentas-usuario">
+                <a href="{% provider_login_url 'google' %}" class="gmail btn-lcen button hvr-sweep-to-right"><i class="fab fa-google"></i><span>|</span>Gmail</a>
+                 <a href="{% provider_login_url 'facebook' method='oauth2' %}" class="facebook btn-lcen button hvr-sweep-to-right"><i class="fab fa-facebook-f"></i><span>|</span>Facebook</a>
+            </div>
+
+            {% if form.non_field_errors %}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {% for error in form.non_field_errors %}
+                  <p{% if forloop.last %} class="mb-0"{% endif %}>{{ error }}</p>
+                {% endfor %}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            {% endif %}
+
+            <form method="post" novalidate>
+              {% csrf_token %}
+              <input type="hidden" name="next" value="{{ next }}">
+              {{ form.username }}
+              {{ form.password }}
+              <button type="submit" class="btn btn-primary">Log in</button>
+            </form>
+
+            <div class="registrate-cta">
+                <p>¿No estás registrado aún?</p>
+                <a href="#" class="btn-lcen button hvr-sweep-to-right">Registrate aquí</a>
+            </div>
+            <div class="recuperar-clave">
+                <p>¿Olvidaste tu contraseña?</p>
+                <a href="#" class="">Recuperar clave</a>
+            </div>
+        </div>
     </div>
-  </div>
+</section>
+
+<!-- form abel -->
+<!-- <form action="" class="formulario">
+    <div class="mb-3">
+        <label for="nombre-usuario" class="form-label">Nombre de Usuario</label>
+        <input type="text" class="form-control" id="nombre-usuario" placeholder="Escribe nombre de usuario">
+    </div>
+    <div class="mb-3">
+        <label for="contraseña-usuario" class="col-sm-2 col-form-label">Contraseña</label>
+        <input type="password" class="form-control" id="contraseña-usuario" placeholder="Escribe tu contraseña">
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-lcen button hvr-sweep-to-right">Ingresar</button>
+    </div>
+</form> -->
+
 {% endblock %}

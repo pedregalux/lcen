@@ -11,16 +11,6 @@ from formtools.wizard.views import SessionWizardView
 from .forms import *
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 
-# from propuestas.forms import CrearPropuestaForm, PropuestaForm1, PropuestaForm2, PropuestaForm3, PropuestaForm4, PropuestaForm5, PropuestaForm6, PropuestaForm7
-
-
-FORMS = [("cc1", ContactForm1),
-         ("cc2", ContactForm2),
-         ("cc3", ContactForm3)]
-
-TEMPLATES = {"cc1": "propuestas/contact_form.html",
-             "cc2": "propuestas/contact_form1.html",
-             "cc3": "propuestas/contact_form2.html"}
 
 
 FORMS2 = [("p1", PropuestaForm1),
@@ -41,18 +31,6 @@ TEMPLATES2 = {"p1": "propuestas/crear_propuesta1.html",
 
 
 
-
-class ContactWizard(SessionWizardView):
-    # template_name = 'propuestas/contact_form.html'
-    def get_template_names(self):
-        return [TEMPLATES[self.steps.current]]
-    def done(self, form_list, **kwargs):
-        return render(self.request, 'done.html', {
-            'form_data': [form.cleaned_data for form in form_list],
-        })
-
-
-
 class VerPropuestasView(ListView):
     model = Propuesta
     context_object_name = 'propuestas_list'
@@ -67,7 +45,8 @@ class VerPropuestaView(DetailView):
 
 
 
-class PropuestaWizardView(SessionWizardView, LoginRequiredMixin):
+class PropuestaWizardView(LoginRequiredMixin, SessionWizardView):
+
     def get_template_names(self):
         return [TEMPLATES2[self.steps.current]]
     instance = None
@@ -85,15 +64,16 @@ class PropuestaWizardView(SessionWizardView, LoginRequiredMixin):
 
 
 
-class CrearPropuestaView(FormView):
-    permission_required = 'propuestas.add_propuesta'
-    form_class = CrearPropuestaForm
-    template_name = 'propuestas/crear_propuesta.html'
-    success_url = '/propuestas/'
-    login_url = 'login'
-    def form_valid(self, form):
-        if form.is_valid():
-            prop = form.save(commit=False)
-            prop.autor = self.request.user
-            form.save()
-        return super().form_valid(form)
+
+# class CrearPropuestaView(FormView):
+#     permission_required = 'propuestas.add_propuesta'
+#     form_class = CrearPropuestaForm
+#     template_name = 'propuestas/crear_propuesta.html'
+#     success_url = '/propuestas/'
+#     login_url = 'login'
+#     def form_valid(self, form):
+#         if form.is_valid():
+#             prop = form.save(commit=False)
+#             prop.autor = self.request.user
+#             form.save()
+#         return super().form_valid(form)

@@ -6,42 +6,6 @@ from mantenedores.models import *
 
 
 
-class CrearPropuestaForm(forms.ModelForm):
-    class Meta:
-        model = Propuesta
-        fields = [
-        'pais',
-        'region',
-        'comuna',
-        'tema',
-        'otros_temas',
-        'problema',
-        'situacion',
-        'componente',
-        'otras_organizaciones',
-        'organizaciones_de_propuesta',
-        'compromiso_convencionales',
-        'convencionales_comprometidos',
-        'anexo_propuesta',
-        'titulo'
-        ]
-
-
-
-
-class ContactForm1(forms.Form):
-    subject = forms.CharField(max_length=100)
-
-class ContactForm2(forms.Form):
-    sender = forms.EmailField()
-
-class ContactForm3(forms.Form):
-    message = forms.CharField(widget=forms.Textarea)
-
-
-
-
-
 class PropuestaForm1(forms.ModelForm):
     class Meta:
         model = Propuesta
@@ -105,5 +69,22 @@ class PropuestaForm7(forms.ModelForm):
         ]
 
 
-# class PropuestaForm8(forms.Form):
-#     subject = forms.CharField(max_length=100)
+# class CrearPropuestaForm(forms.ModelForm):
+#     class Meta:
+#         model = Propuesta
+#         fields = [
+#         'pais',
+#         'region',
+#         'comuna',
+#         'tema',
+#         'otros_temas',
+#         'problema',
+#         'situacion',
+#         'componente',
+#         'otras_organizaciones',
+#         'organizaciones_de_propuesta',
+#         'compromiso_convencionales',
+#         'convencionales_comprometidos',
+#         'anexo_propuesta',
+#         'titulo'
+#         ]

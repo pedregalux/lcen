@@ -108,8 +108,8 @@ SOCIALACCOUNT_PROVIDERS = {
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = 'inicio'
-LOGOUT_REDIRECT_URL = 'inicio'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'inicio'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
