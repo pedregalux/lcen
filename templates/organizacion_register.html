@@ -1,20 +1,65 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}Registro Organización{% endblock %}
 
 
 {% block content %}
-<section>
 
-  <div class="row">
-    <div class="col-md-8 col-sm-10 col-12">
-      <h2>Inscripción como Organización</h2>
-          <form action="{% url 'organizacion_register' %}" method="POST" novalidate>
-            {% csrf_token %}
-            <input type="hidden" name="next" value="{{ next }}">
-            {{ form }}
-            <button type="submit" class="btn btn-success">Inscribir</button>
-          </form>
+<section class="container-fluid portada-collage-lcen">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 wow animate__animated animate__fadeIn animate__delay-1s">
+                <img src="{% static 'img/collage-portada-secciones.png' %}" alt="img collage portada" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 titulo wow animate__animated animate__fadeIn animate__delay-1s">
+               <div class="informacion">
+                <div class="decoracion yellow"></div>
+                <h1>Registro organización</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'register' %}">Registro</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"> Organización</li>
+                    </ol>
+                </nav>
+               </div>
+            </div>
+        </div>
     </div>
-  </div>
-
 </section>
+
+
+<section class="registros container">
+    <div class="row w-85 justify-content-center">
+        <div class="col-12 col-sm-12 col-md-12 titular-seccion">
+            <div class="img-icono-registro">
+                <img src="{% static 'img/organizacion-icono.jpg' %}" alt="icono organización" class="img-fluid">
+                <div class="decoracion-img"></div>
+            </div>
+            <div class="informacion">
+                <a href="#"><i class="fas fa-chevron-left"></i>Volver</a>
+                <h2>Te estás registrando como <span>Organización</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urn</p>
+            </div>
+        </div>
+
+        <form action="{% url 'organizacion_register' %}" method="POST" novalidate>
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ next }}">
+          {{ form | crispy }}
+          <button type="submit" class="btn btn-lcen button hvr-sweep-to-right">Inscribir</button>
+        </form>
+
+        <div class="col-12 col-sm-12 col-md-6">
+            <div class="registrate-cta border-bottom-hidden">
+                <p>¿Ya estás registrado?</p>
+                <a href="{% url 'login' %}" class="btn-lcen button hvr-sweep-to-right">Ingresa aquí</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
 {% endblock %}

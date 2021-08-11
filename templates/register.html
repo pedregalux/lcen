@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Registro{% endblock %}
+
+{% block content %}
+
+<section class="container-fluid portada-collage-lcen">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 wow animate__animated animate__fadeIn animate__delay-1s">
+                <img src="{% static 'img/collage-portada-secciones.png' %}" alt="img collage portada" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 titulo wow animate__animated animate__fadeIn animate__delay-1s">
+                <div class="informacion">
+                    <div class="decoracion yellow"></div>
+                    <h1>Registrate y sube tus propuestas</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Registro</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container formularios-lcen ingresar-seccion registro-usuarios">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-7 col-lg-6">
+            <div class="seleccion-registro">
+                <p>Para comenzar</p>
+                <h3>Selecciona de que forma te registraras</h3>
+                <div class="seleccionar">
+                    <a href="{% url 'ciudadano_register' %}" class="btn-registro">
+                       <span class="icono">
+                        <img src="{% static 'img/ciudadano-icono.jpg' %}" alt="icono ciudadano">
+                        <div class="decoracion-blue"></div>
+                       </span>
+                    <p>Persona</p>
+                    </a>
+                    <a href="{% url 'organizacion_register' %}" class="btn-registro">
+                       <span class="icono">
+                          <img src="{% static 'img/organizacion-icono.jpg' %}" alt="icono organizacion">
+                          <div class="decoracion-blue"></div>
+                       </span>
+                    <p>Organización</p></a>
+                </div>
+            </div>
+
+            <div class="registrate-cta border-bottom-hidden">
+                <p>¿Ya tienes una cuenta creada?</p>
+                <a href="{% url 'login' %}" class="btn-lcen button hvr-sweep-to-right">Ingresa aquí</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
