@@ -1,28 +1,43 @@
+import os
+from django.conf import settings
 from django.shortcuts import render, redirect
 from propuestas.models import Propuesta
 from django.views.generic.edit import FormView
 from django.views.generic import ListView
 from django.views.generic import DetailView
-from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
+from django.views.generic import FormView, TemplateView
+from django.core.files.storage import FileSystemStorage
 from formtools.wizard.views import SessionWizardView
-from propuestas.forms import CrearPropuestaForm, PropuestaForm1, PropuestaForm2, PropuestaForm3, PropuestaForm4, PropuestaForm5, PropuestaForm6, PropuestaForm7
+from .forms import *
+from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
+
+# from propuestas.forms import CrearPropuestaForm, PropuestaForm1, PropuestaForm2, PropuestaForm3, PropuestaForm4, PropuestaForm5, PropuestaForm6, PropuestaForm7
 
 
-FORMS = [("crearpropuesta1", "propuestas.forms.PropuestaForm1"),
-         ("crearpropuesta2", "propuestas.forms.PropuestaForm2"),
-         ("crearpropuesta3", "propuestas.forms.PropuestaForm3"),
-         ("crearpropuesta4", "propuestas.forms.PropuestaForm4"),
-         ("crearpropuesta5", "propuestas.forms.PropuestaForm5"),
-         ("crearpropuesta6", "propuestas.forms.PropuestaForm6"),
-         ("crearpropuesta7", "propuestas.forms.PropuestaForm7")]
+# FORMS = [("crearpropuesta1", "propuestas.forms.PropuestaForm1"),
+#          ("crearpropuesta2", "propuestas.forms.PropuestaForm2"),
+#          ("crearpropuesta3", "propuestas.forms.PropuestaForm3"),
+#          ("crearpropuesta4", "propuestas.forms.PropuestaForm4"),
+#          ("crearpropuesta5", "propuestas.forms.PropuestaForm5"),
+#          ("crearpropuesta6", "propuestas.forms.PropuestaForm6"),
+#          ("crearpropuesta7", "propuestas.forms.PropuestaForm7")]
+#
+# TEMPLATES = {"crearpropuesta1": "propuestas/crear_propuesta1.html",
+#              "crearpropuesta2": "propuestas/crear_propuesta2.html",
+#              "crearpropuesta3": "propuestas/crear_propuesta3.html",
+#              "crearpropuesta4": "propuestas/crear_propuesta4.html",
+#              "crearpropuesta5": "propuestas/crear_propuesta5.html",
+#              "crearpropuesta6": "propuestas/crear_propuesta6.html",
+#              "crearpropuesta7": "propuestas/crear_propuesta7.html"}
 
-TEMPLATES = {"crearpropuesta1": "propuestas/crear_propuesta1.html",
-             "crearpropuesta2": "propuestas/crear_propuesta2.html",
-             "crearpropuesta3": "propuestas/crear_propuesta3.html",
-             "crearpropuesta4": "propuestas/crear_propuesta4.html",
-             "crearpropuesta5": "propuestas/crear_propuesta5.html",
-             "crearpropuesta6": "propuestas/crear_propuesta6.html",
-             "crearpropuesta7": "propuestas/crear_propuesta7.html"}
+
+
+class ContactWizard(SessionWizardView):
+    template_name = 'propuestas/contact_form.html'
+    def done(self, form_list, **kwargs):
+        return render(self.request, 'done.html', {
+            'form_data': [form.cleaned_data for form in form_list],
+        })
 
 
 
@@ -40,17 +55,24 @@ class VerPropuestaView(DetailView):
 
 
 
-class PropuestaWizardView(SessionWizardView):
-    # template_name = 'crear_propuesta.html'
-    form_list = [PropuestaForm1, PropuestaForm2, PropuestaForm3, PropuestaForm4, PropuestaForm5, PropuestaForm6, PropuestaForm7]
+class PropuestaWizardView(SessionWizardView, LoginRequiredMixin):
+    template_name = 'propuestas/nueva_propuesta.html'
+    instance = None
+    file_storage = FileSystemStorage(location=os.path.join(settings.MEDIA_ROOT, 'propuestas_pdf'))
+
+    def get_form_instance(self, step):
+        if self.instance is None:
+            self.instance = Propuesta()
+        return self.instance
+
     def done(self, form_list, **kwargs):
-        return render(self.request, 'done.html', {
-            'form_data': [form.cleaned_data for form in form_list],
-        })
+        self.instance.autor = self.request.user
+        self.instance.save()
+        return render(self.request, 'done.html')
 
 
 
-class CrearPropuestaView(LoginRequiredMixin, PermissionRequiredMixin, FormView):
+class CrearPropuestaView(FormView):
     permission_required = 'propuestas.add_propuesta'
     form_class = CrearPropuestaForm
     template_name = 'propuestas/crear_propuesta.html'
