@@ -87,21 +87,28 @@
                             <a class="nav-link" href="#">Organizaciones</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="www.google.com" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Mapa Constitucional</a></li>
                                 <li><a class="dropdown-item" href="#">Preguntas Frecuentes</a></li>
                                 <li><a class="dropdown-item" href="#">Constitución Feminista</a></li>
                                 <li><a class="dropdown-item" href="#">Actualidad</a></li>
                                 <li><a class="dropdown-item" href="#">Ensayos constitucionales</a></li>
-                                <li><a class="dropdown-item" href="{% url 'logout' %}">Salir</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ingresar</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
-                                <li><a class="dropdown-item" href="#">Nueva Contraseña</a></li>
+                                <li>
+                                {% if user.is_authenticated %}
+                                <a class="dropdown-item" href="#">
+                                 Hola {{ user.username }}</a>
+                                {% else %}
+                                 <a class="dropdown-item" href="{% url 'login' %}">
+                                  Login</a>
+                                {% endif %}
+                                </li>
+                                <li><a class="dropdown-item" href="#">Registrarse</a></li>
                                 <li><a class="dropdown-item" href="{% url 'logout' %}">Salir</a></li>
                             </ul>
                         </li>
