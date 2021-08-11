@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load crispy_forms_tags %}
 {% block title %}Crear Propuesta{% endblock %}
 
 {% block content %}
-
 
 <section class="container-fluid portada-collage-lcen">
     <div class="container">
@@ -19,7 +17,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Crear propuesta: Paso 1</li>
+                            <li class="breadcrumb-item active" aria-current="page">Crear propuesta: Paso 6</li>
                         </ol>
                     </nav>
                 </div>
@@ -31,12 +29,12 @@
 
 
 <section class="container subir-propuesta">
-    <div class="row justify-content-md-center d-flex align-items-start">
+    <div class="row justify-content-md-center d-flex align-items-center">
         <div class="col-12 col-sm-12 col-md-4 informacion">
-            <!--<a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>-->
+            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
             <div class="informacion-ayuda">
-                <p class="paso-propuesta">Paso 1</p>
-                <h2>Tu Ubicación</h2>
+                <p class="paso-propuesta">Último paso</p>
+                <h2>Elige un título</h2>
                 <h4>Para tener en cuenta</h4>
                 <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
                 <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
@@ -47,31 +45,25 @@
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-5 form">
-          <form action="{% url 'crear_propuesta' %}" method="POST" novalidate>
-            {% csrf_token %}
-            <input type="hidden" name="next" value="{{ next }}">
-            {{ form | crispy }}
-            <button type="submit" class="btn btn-success">Crear Propuesta</button>
-          </form>
+            <form action="" class="formulario">
+                <div class="my-3 pb-3 item-form">
+                    <label for="titulo-propuesta" class="form-label">Por favor, revisa el resumen de tu propuesta y escribe un título atractivo para que podamos difundirla hacia la ciudadanía y la Convención Constitucional.</label>
+                    <p><i>Título: máximo 280 caracteres</i></p>
+                    <textarea class="form-control" id="titulo-propuesta" rows="4" placeholder="Escribe el título de tu propuesta aquí"></textarea>
+                </div>
+                <div class="my-3 pb-2 item-form">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label" for="flexCheckIndeterminate">Acepto los términos y condiciones</label>
+                    </div>
+                </div>
+
+                <div class="my-3 item-form btn-siguiente">
+                    <button type="submit" class="btn-lcen button hvr-sweep-to-right">Enviar</button>
+                </div>
+            </form>
         </div>
     </div>
-</section>
-
-
-<section>
-
-<div class="row">
-    <div class="col-md-8 col-sm-10 col-12">
-      <h2>Crear Propuesta</h2>
-          <form action="{% url 'crear_propuesta' %}" method="POST" novalidate>
-            {% csrf_token %}
-            <input type="hidden" name="next" value="{{ next }}">
-            {{ form | crispy }}
-            <button type="submit" class="btn btn-success">Crear Propuesta</button>
-          </form>
-    </div>
-</div>
-
 </section>
 
 {% endblock %}

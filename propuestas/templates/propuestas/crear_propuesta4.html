@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Crear Propuesta{% endblock %}
+
+{% block content %}
+
+<section class="container-fluid portada-collage-lcen">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 wow animate__animated animate__fadeIn animate__delay-1s">
+                <img src="{% static 'img/collage-portada-secciones.png' %}" alt="img collage portada" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 titulo wow animate__animated animate__fadeIn animate__delay-1s">
+                <div class="informacion">
+                    <div class="decoracion yellow"></div>
+                    <h1>Crea tu propuesta</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Crear propuesta: Paso 4</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container subir-propuesta">
+    <div class="row justify-content-md-center d-flex align-items-start">
+        <div class="col-12 col-sm-12 col-md-4 informacion">
+            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
+            <div class="informacion-ayuda">
+                <p class="paso-propuesta">Paso 4</p>
+                <h2>Tus Alianzas</h2>
+                <h4>Para tener en cuenta</h4>
+                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
+                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
+            </div>
+            <div class="blue contacto-ayuda">
+                <h3>¿Necesitas ayuda técnica?</h3>
+                <p>Por favor ccontacta a <b>XXXXXX</b></p>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-5 form">
+            <form action="" class="formulario">
+                <div class="my-3 pb-2 item-form">
+                    <label for="">1. ¿Esta propuesta fue elaborada en conjunto con otras organizaciones?</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">No</label>
+                    </div>
+                </div>
+                <div class="my-3 pb-2 item-form">
+                    <label for="colaboradores-propuesta" class="form-label">2. Si tu respuesta fue “sí”, por favor escribe cuáles (una por línea). No te olvides de incluir a tu organización.</label>
+                    <p><i>Pregunta abierta sin límite de palabras.</i></p>
+                    <textarea class="form-control" id="colaboradores-propuesta" rows="4" placeholder="Escribe los colaboradores aquí"></textarea>
+                </div>
+                <div class="my-3 pb-2 item-form">
+                    <label for="">3. ¿Tu propuesta cuenta con compromisos formales de apoyo de convencionales constituyentes?</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">No</label>
+                    </div>
+                </div>
+                <div class="my-3 pb-2 item-form">
+                    <label for="convencionales-propuesta" class="form-label">4. Si tu respuesta fue “sí”, por favor marca todos los/as convencionales que se comprometieron con tu propuesta. Por favor considera que verificaremos esta información.</label>
+                    <p><i>Listado 155 ordenados alfabéticamente por “apellido, nombre”.</i></p>
+                    <textarea class="form-control" id="convencionales-propuesta" rows="4" placeholder="Escribe los convencionales aquí"></textarea>
+                </div>
+
+                <div class="my-3 item-form btn-siguiente">
+                    <a href="#" class="btn-lcen button hvr-sweep-to-right">Siguiente</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

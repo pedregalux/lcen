@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load crispy_forms_tags %}
 {% block title %}Crear Propuesta{% endblock %}
 
 {% block content %}
-
 
 <section class="container-fluid portada-collage-lcen">
     <div class="container">
@@ -28,8 +26,6 @@
     </div>
 </section>
 
-
-
 <section class="container subir-propuesta">
     <div class="row justify-content-md-center d-flex align-items-start">
         <div class="col-12 col-sm-12 col-md-4 informacion">
@@ -47,31 +43,38 @@
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-5 form">
-          <form action="{% url 'crear_propuesta' %}" method="POST" novalidate>
-            {% csrf_token %}
-            <input type="hidden" name="next" value="{{ next }}">
-            {{ form | crispy }}
-            <button type="submit" class="btn btn-success">Crear Propuesta</button>
-          </form>
+            <form action="" method="post" class="formulario">
+              {% csrf_token %}
+                <div class="my-3 pb-3 item-form">
+                    <label for="pais-seleccion" class="form-label">1. País</label>
+                    <select class="form-select" aria-label="pais-seleccion">
+                      <option selected>Selecciona tu País</option>
+                      <option value="1">Chile</option>
+                      <option value="2">Argentina</option>
+                    </select>
+                </div>
+                <div class="my-3 pb-3 item-form">
+                    <label for="region" class="form-label">2. Región</label>
+                    <select class="form-select" aria-label="region">
+                      <option selected>Selecciona tu región</option>
+                      <option value="1">Región Metropolitana</option>
+                      <option value="2">Arica</option>
+                    </select>
+                </div>
+                <div class="my-3 pb-3 item-form">
+                    <label for="comuna" class="form-label">3. Selecciona tu Comuna</label>
+                    <select class="form-select" aria-label="comuna">
+                      <option selected>Selecciona tu comuna</option>
+                      <option value="1">Puente Alto</option>
+                      <option value="2">Pirque</option>
+                    </select>
+                </div>
+                <div class="my-3 item-form btn-siguiente">
+                    <a href="#" class="btn-lcen button hvr-sweep-to-right">Siguiente</a>
+                </div>
+            </form>
         </div>
     </div>
-</section>
-
-
-<section>
-
-<div class="row">
-    <div class="col-md-8 col-sm-10 col-12">
-      <h2>Crear Propuesta</h2>
-          <form action="{% url 'crear_propuesta' %}" method="POST" novalidate>
-            {% csrf_token %}
-            <input type="hidden" name="next" value="{{ next }}">
-            {{ form | crispy }}
-            <button type="submit" class="btn btn-success">Crear Propuesta</button>
-          </form>
-    </div>
-</div>
-
 </section>
 
 {% endblock %}
