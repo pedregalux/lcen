@@ -58,7 +58,7 @@ class VerPropuestaView(DetailView):
 class PropuestaWizardView(SessionWizardView, LoginRequiredMixin):
     template_name = 'propuestas/nueva_propuesta.html'
     instance = None
-    file_storage = FileSystemStorage(location=os.path.join(settings.MEDIA_ROOT, 'propuestas_pdf'))
+    file_storage = FileSystemStorage(location=os.path.join(settings.MEDIA_ROOT, 'documents'))
 
     def get_form_instance(self, step):
         if self.instance is None:
