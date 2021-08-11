@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block title %}Crear Propuesta{% endblock %}
 
 {% block content %}
@@ -29,7 +30,7 @@
 <section class="container subir-propuesta">
     <div class="row justify-content-md-center d-flex align-items-start">
         <div class="col-12 col-sm-12 col-md-4 informacion">
-            <!--<a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>-->
+            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
             <div class="informacion-ayuda">
                 <p class="paso-propuesta">Paso 1</p>
                 <h2>Tu Ubicación</h2>
@@ -43,36 +44,28 @@
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-5 form">
-            <form action="" method="post" class="formulario">
-              {% csrf_token %}
-                <div class="my-3 pb-3 item-form">
-                    <label for="pais-seleccion" class="form-label">1. País</label>
-                    <select class="form-select" aria-label="pais-seleccion">
-                      <option selected>Selecciona tu País</option>
-                      <option value="1">Chile</option>
-                      <option value="2">Argentina</option>
-                    </select>
-                </div>
-                <div class="my-3 pb-3 item-form">
-                    <label for="region" class="form-label">2. Región</label>
-                    <select class="form-select" aria-label="region">
-                      <option selected>Selecciona tu región</option>
-                      <option value="1">Región Metropolitana</option>
-                      <option value="2">Arica</option>
-                    </select>
-                </div>
-                <div class="my-3 pb-3 item-form">
-                    <label for="comuna" class="form-label">3. Selecciona tu Comuna</label>
-                    <select class="form-select" aria-label="comuna">
-                      <option selected>Selecciona tu comuna</option>
-                      <option value="1">Puente Alto</option>
-                      <option value="2">Pirque</option>
-                    </select>
-                </div>
-                <div class="my-3 item-form btn-siguiente">
-                    <a href="#" class="btn-lcen button hvr-sweep-to-right">Siguiente</a>
-                </div>
-            </form>
+
+          <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
+
+            <table>
+            {{ wizard.management_form }}
+            {% if wizard.form.forms %}
+                {{ wizard.form.management_form }}
+                {% for form in wizard.form.forms %}
+                    {{ form }}
+                {% endfor %}
+            {% else %}
+                {{ wizard.form | crispy }}
+            {% endif %}
+            </table>
+            {% if wizard.steps.prev %}
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">first step</button>
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">prev step</button>
+            {% endif %}
+            <input type="submit" value="submit"/>
+
+          </form>
+
         </div>
     </div>
 </section>

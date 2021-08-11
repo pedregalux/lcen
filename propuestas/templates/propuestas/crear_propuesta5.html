@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block title %}Crear Propuesta{% endblock %}
 
 {% block content %}
@@ -45,16 +46,28 @@
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-5 form">
-            <form action="" class="formulario">
-                <div class="mb-3">
-                    <label for="formFileMultiple" class="form-label">Si has elaborado un documento de tu propuesta en extenso, por favor adjúntalo.</label>
-                    <p><i>Asimismo, si cuentas con otros materiales (estudios, encuestas, presentaciones, material comunicacional, etc.) que complementen tu propuesta, agrégalos.</i></p>
-                    <input class="form-control" type="file" id="formFileMultiple" multiple>
-                </div>
-                <div class="my-3 item-form btn-siguiente">
-                    <a href="#" class="btn-lcen button hvr-sweep-to-right">Siguiente</a>
-                </div>
-            </form>
+
+          <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
+
+            <table>
+            {{ wizard.management_form }}
+            {% if wizard.form.forms %}
+                {{ wizard.form.management_form }}
+                {% for form in wizard.form.forms %}
+                    {{ form }}
+                {% endfor %}
+            {% else %}
+                {{ wizard.form | crispy }}
+            {% endif %}
+            </table>
+            {% if wizard.steps.prev %}
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">first step</button>
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">prev step</button>
+            {% endif %}
+            <input type="submit" value="submit"/>
+
+          </form>
+
         </div>
     </div>
 </section>

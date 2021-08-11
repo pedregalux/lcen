@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block title %}Crear Propuesta{% endblock %}
 
 {% block content %}
@@ -44,41 +45,30 @@
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-5 form">
-            <form action="" class="formulario">
-                <div class="my-3 pb-5 item-form">
-                    <label for="tema-principal" class="form-label">1. ¿Cuál es el tema principal de tu propuesta?</label>
-                    <p><i>Considera un listado cerrado de categorías. Solo se puede seleccionar un tema.</i></p>
-                    <select class="form-select" aria-label="tema-principal">
-                      <option selected>Selecciona tema principal</option>
-                      <option value="1">Tema 1</option>
-                      <option value="2">Tema 2</option>
-                      <option value="3">Tema 3</option>
-                      <option value="4">Tema 4</option>
-                      <option value="5">Tema 5</option>
-                      <option value="6">Tema 6</option>
-                      <option value="7">Tema 7</option>
-                    </select>
-                </div>
-                <div class="my-3 item-form">
-                    <label for="region" class="form-label">2. ¿Qué otros temas aborda tu propuesta? Por favor selecciona hasta tres temas adicionales.</label>
-                    <p><i>Considera el mismo listado cerrado de categorías. Se puede seleccionar hasta tres opciones.</i></p>
-                    <select class="form-select" aria-label="region">
-                      <option selected>Selecciona otros temas</option>
-                      <option value="1">Tema 1</option>
-                      <option value="2">Tema 2</option>
-                      <option value="3">Tema 3</option>
-                      <option value="4">Tema 4</option>
-                      <option value="5">Tema 5</option>
-                      <option value="6">Tema 6</option>
-                      <option value="7">Tema 7</option>
-                    </select>
-                </div>
-                <div class="my-3 item-form btn-siguiente">
-                    <a href="#" class="btn-lcen button hvr-sweep-to-right">Siguiente</a>
-                </div>
-            </form>
+
+          <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
+
+            <table>
+            {{ wizard.management_form }}
+            {% if wizard.form.forms %}
+                {{ wizard.form.management_form }}
+                {% for form in wizard.form.forms %}
+                    {{ form }}
+                {% endfor %}
+            {% else %}
+                {{ wizard.form | crispy }}
+            {% endif %}
+            </table>
+            {% if wizard.steps.prev %}
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">first step</button>
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">prev step</button>
+            {% endif %}
+            <input type="submit" value="submit"/>
+
+          </form>
+
         </div>
     </div>
-</section>
+</section> -->
 
 {% endblock %}

@@ -14,26 +14,38 @@ from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMix
 # from propuestas.forms import CrearPropuestaForm, PropuestaForm1, PropuestaForm2, PropuestaForm3, PropuestaForm4, PropuestaForm5, PropuestaForm6, PropuestaForm7
 
 
-# FORMS = [("crearpropuesta1", "propuestas.forms.PropuestaForm1"),
-#          ("crearpropuesta2", "propuestas.forms.PropuestaForm2"),
-#          ("crearpropuesta3", "propuestas.forms.PropuestaForm3"),
-#          ("crearpropuesta4", "propuestas.forms.PropuestaForm4"),
-#          ("crearpropuesta5", "propuestas.forms.PropuestaForm5"),
-#          ("crearpropuesta6", "propuestas.forms.PropuestaForm6"),
-#          ("crearpropuesta7", "propuestas.forms.PropuestaForm7")]
-#
-# TEMPLATES = {"crearpropuesta1": "propuestas/crear_propuesta1.html",
-#              "crearpropuesta2": "propuestas/crear_propuesta2.html",
-#              "crearpropuesta3": "propuestas/crear_propuesta3.html",
-#              "crearpropuesta4": "propuestas/crear_propuesta4.html",
-#              "crearpropuesta5": "propuestas/crear_propuesta5.html",
-#              "crearpropuesta6": "propuestas/crear_propuesta6.html",
-#              "crearpropuesta7": "propuestas/crear_propuesta7.html"}
+FORMS = [("cc1", ContactForm1),
+         ("cc2", ContactForm2),
+         ("cc3", ContactForm3)]
+
+TEMPLATES = {"cc1": "propuestas/contact_form.html",
+             "cc2": "propuestas/contact_form1.html",
+             "cc3": "propuestas/contact_form2.html"}
+
+
+FORMS2 = [("p1", PropuestaForm1),
+          ("p2", PropuestaForm2),
+          ("p3", PropuestaForm3),
+          ("p4", PropuestaForm4),
+          ("p5", PropuestaForm5),
+          ("p6", PropuestaForm6),
+          ("p7", PropuestaForm7)]
+
+TEMPLATES2 = {"p1": "propuestas/crear_propuesta1.html",
+              "p2": "propuestas/crear_propuesta2.html",
+              "p3": "propuestas/crear_propuesta3.html",
+              "p4": "propuestas/crear_propuesta4.html",
+              "p5": "propuestas/crear_propuesta5.html",
+              "p6": "propuestas/crear_propuesta6.html",
+              "p7": "propuestas/crear_propuesta7.html"}
+
 
 
 
 class ContactWizard(SessionWizardView):
-    template_name = 'propuestas/contact_form.html'
+    # template_name = 'propuestas/contact_form.html'
+    def get_template_names(self):
+        return [TEMPLATES[self.steps.current]]
     def done(self, form_list, **kwargs):
         return render(self.request, 'done.html', {
             'form_data': [form.cleaned_data for form in form_list],
@@ -56,7 +68,8 @@ class VerPropuestaView(DetailView):
 
 
 class PropuestaWizardView(SessionWizardView, LoginRequiredMixin):
-    template_name = 'propuestas/nueva_propuesta.html'
+    def get_template_names(self):
+        return [TEMPLATES2[self.steps.current]]
     instance = None
     file_storage = FileSystemStorage(location=os.path.join(settings.MEDIA_ROOT, 'documents'))
 

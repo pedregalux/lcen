@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block title %}Crear Propuesta{% endblock %}
 
 {% block content %}
@@ -45,44 +46,28 @@
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-5 form">
-            <form action="" class="formulario">
-                <div class="my-3 pb-2 item-form">
-                    <label for="">1. ¿Esta propuesta fue elaborada en conjunto con otras organizaciones?</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">Si</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">No</label>
-                    </div>
-                </div>
-                <div class="my-3 pb-2 item-form">
-                    <label for="colaboradores-propuesta" class="form-label">2. Si tu respuesta fue “sí”, por favor escribe cuáles (una por línea). No te olvides de incluir a tu organización.</label>
-                    <p><i>Pregunta abierta sin límite de palabras.</i></p>
-                    <textarea class="form-control" id="colaboradores-propuesta" rows="4" placeholder="Escribe los colaboradores aquí"></textarea>
-                </div>
-                <div class="my-3 pb-2 item-form">
-                    <label for="">3. ¿Tu propuesta cuenta con compromisos formales de apoyo de convencionales constituyentes?</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">Si</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">No</label>
-                    </div>
-                </div>
-                <div class="my-3 pb-2 item-form">
-                    <label for="convencionales-propuesta" class="form-label">4. Si tu respuesta fue “sí”, por favor marca todos los/as convencionales que se comprometieron con tu propuesta. Por favor considera que verificaremos esta información.</label>
-                    <p><i>Listado 155 ordenados alfabéticamente por “apellido, nombre”.</i></p>
-                    <textarea class="form-control" id="convencionales-propuesta" rows="4" placeholder="Escribe los convencionales aquí"></textarea>
-                </div>
 
-                <div class="my-3 item-form btn-siguiente">
-                    <a href="#" class="btn-lcen button hvr-sweep-to-right">Siguiente</a>
-                </div>
-            </form>
+          <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
+
+            <table>
+            {{ wizard.management_form }}
+            {% if wizard.form.forms %}
+                {{ wizard.form.management_form }}
+                {% for form in wizard.form.forms %}
+                    {{ form }}
+                {% endfor %}
+            {% else %}
+                {{ wizard.form | crispy }}
+            {% endif %}
+            </table>
+            {% if wizard.steps.prev %}
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">first step</button>
+            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">prev step</button>
+            {% endif %}
+            <input type="submit" value="submit"/>
+
+          </form>
+
         </div>
     </div>
 </section>
