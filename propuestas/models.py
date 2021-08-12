@@ -73,7 +73,6 @@ class Propuesta(models.Model):
         help_text="¿Qué otros temas aborda tu propuesta? Por favor selecciona hasta tres temas adicionales.")
     # paso 3
     problema = models.TextField("Descripción de problema a solucionar",
-        max_length=225,
         null=True,
         blank=True,
         help_text="¿Cuál es el problema que tú o tu organización busca solucionar?")
