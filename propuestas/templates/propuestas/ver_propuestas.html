@@ -96,18 +96,12 @@
                         </p>
                         {% endif %}
                     </div>
-
-
-                    <!-- <img src="{% static 'img/salud-bg-propuesta.png' %}" alt="img salud" class="img-tema-propuesta"> -->
-
                     <img src="{{ propuesta.tema.icono_tema.url }}" alt="img salud" class="img-tema-propuesta">
-
-
                 </div>
                 <div class="bg-black">
                     <div class="call-to-action">
                         <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
-                        <a href="#" class="btn-lcen">Leer propuesta</a>
+                        <a href="{{ propuesta.pk }}" class="btn-lcen">Leer propuesta</a>
                     </div>
                     <div class="cifras">
                         <p><span class="numero">43</span> convencionales comprometidos</p>
@@ -118,34 +112,6 @@
         </div>
 
 {% endfor %}
-
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-            <div class="propuesta salud">
-                <div class="informacion-propuesta">
-                    <h3 class="tema">Medio ambiente adecuado</h3>
-                    <p class="numero-propuesta">Propuesta <b>N° 394</b></p>
-                    <h2 class="titulo">Nombre de propuesta Lorem ipsum eneanut vestibulum.</h2>
-                    <p class="extracto">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
-                    <div class="informacion-datos">
-                        <h4>Se realizo en:</h4>
-                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
-                        <h4>Propuesta de</h4>
-                        <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
-                    </div>
-                    <img src="{% static 'img/medio-ambiente-bg-propuesta.png' %}" alt="img medio ambiente" class="img-tema-propuesta">
-                </div>
-                <div class="bg-black">
-                    <div class="call-to-action">
-                        <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
-                        <a href="#" class="btn-lcen">Leer propuesta</a>
-                    </div>
-                    <div class="cifras">
-                        <p><span class="numero">43</span> convencionales comprometidos</p>
-                        <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
 <div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
@@ -169,16 +135,6 @@
 </div>
 </div>
 </section>
-
-
-
-
-
-{% for propuesta in propuestas_list %}
-
-<p><a href="{{ propuesta.pk }}">{{ propuesta }}</a></p>
-
-{% endfor %}
 
 
 

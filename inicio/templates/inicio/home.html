@@ -9,7 +9,7 @@
     <div class="informacion-portada container">
         <h1 class="animate__animated wow animate__fadeIn animate__delay-1s">Impulsemos una constitución <br>escrita por la ciudadania</h1>
         <div class="linea-decoracion yellow wow animate__animated animate__fadeIn animate__delay-1s"></div>
-        <a href="#" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate__delay-2s">Ver propuestas ciudadanas</a>
+        <a href="{% url 'ver_propuestas' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate__delay-2s">Ver propuestas ciudadanas</a>
     </div>
 </section>
 
@@ -48,7 +48,7 @@
             <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
                 <h2>A ponerse con propuestas</h2>
                 <p>Porque la Constitución es de todas y todos, es momento de involucrarnos, reflexionar, conversar y proponer ideas para que la voz ciudadana se escuche fuerte en la Convención Constitucional.</p>
-                <a href="#" class="btn-lcen button hvr-sweep-to-right">Sube tu propuesta</a>
+                <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right">Sube tu propuesta</a>
             </div>
             <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
                 <img src="{% static 'img/collage-a-ponerse-con-propuestas.png' %}" alt="collage a ponerse con propuestas">

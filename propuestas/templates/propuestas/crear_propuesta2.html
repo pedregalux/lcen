@@ -30,20 +30,21 @@
 
 <section class="container subir-propuesta">
     <div class="row justify-content-md-center d-flex align-items-start">
-        <div class="col-12 col-sm-12 col-md-4 informacion">
-            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
-            <div class="informacion-ayuda">
-                <p class="paso-propuesta">Paso 2</p>
-                <h2>¿Qué temas aborda tu propuesta?</h2>
-                <h4>Para tener en cuenta</h4>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-            </div>
-            <div class="blue contacto-ayuda">
-                <h3>¿Necesitas ayuda técnica?</h3>
-                <p>Por favor ccontacta a <b>XXXXXX</b></p>
-            </div>
-        </div>
+      <div class="col-12 col-sm-12 col-md-4 informacion">
+          <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
+          <div class="informacion-ayuda">
+              <p class="paso-propuesta">Paso 2</p>
+              <h2>¿Qué temas aborda tu propuesta?</h2>
+              <h4>Para tener en cuenta</h4>
+              <p class="recomendacion"><b>Tema principal:</b> Hemos definido diez grandes temas principales solo para que las personas puedan encontrar tu propuesta fácilmente.
+              </p>
+              <p class="recomendacion"><b>Temas secundarios:</b> Para conocer en mayor detalle tu propuesta, e identificar otras que sean afines a la tuya, por favor especifica qué otros temas aborda.</p>
+          </div>
+          <div class="blue contacto-ayuda">
+              <h3>¿Necesitas ayuda técnica?</h3>
+              <p>Por favor ccontacta a <b>XXXXXX</b></p>
+          </div>
+      </div>
         <div class="col-12 col-sm-12 col-md-5 form">
 
           <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
@@ -60,10 +61,10 @@
             {% endif %}
             </table>
             {% if wizard.steps.prev %}
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">first step</button>
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">prev step</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">Inicio</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">Anterior</button>
             {% endif %}
-            <input type="submit" value="submit"/>
+            <input class="btn-lcen button hvr-sweep-to-right" type="submit" value="siguiente"/>
 
           </form>
 

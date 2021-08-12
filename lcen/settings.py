@@ -179,7 +179,6 @@ STATICFILES_DIRS = config('STATICFILES_DIRS',  cast=Csv())
 MEDIA_ROOT = config('MEDIA_ROOT')
 MEDIA_URL = config('MEDIA_URL')
 
-MEDIASIMG = config('MEDIASIMG')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

@@ -29,20 +29,21 @@
 
 <section class="container subir-propuesta">
     <div class="row justify-content-md-center d-flex align-items-start">
-        <div class="col-12 col-sm-12 col-md-4 informacion">
-            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
-            <div class="informacion-ayuda">
-                <p class="paso-propuesta">Paso 1</p>
-                <h2>Tu Ubicación</h2>
-                <h4>Para tener en cuenta</h4>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-            </div>
-            <div class="blue contacto-ayuda">
-                <h3>¿Necesitas ayuda técnica?</h3>
-                <p>Por favor ccontacta a <b>XXXXXX</b></p>
-            </div>
-        </div>
+
+      <div class="col-12 col-sm-12 col-md-4 informacion">
+          <div class="informacion-ayuda">
+              <p class="paso-propuesta">Paso 1</p>
+              <h2>Tu Ubicación</h2>
+              <h4>Para tener en cuenta</h4>
+              <p class="recomendacion">Por favor, cuéntanos desde dónde estás enviando tu propuesta, pues nos ayudará a conectarla con las y los convencionales constituyentes de tu distrito (si aplica). También nos permitirá sistematizar territorialmente las propuestas recibidas.</p>
+              <p class="recomendacion">Si eres parte de una comunidad chilena en el exterior, solo deberás indicar en qué país te encuentras, seleccionando en región y comuna la opción “no aplica”.</p>
+          </div>
+          <div class="blue contacto-ayuda">
+              <h3>¿Necesitas ayuda técnica?</h3>
+              <p>Por favor ccontacta a <b>XXXXXX</b></p>
+          </div>
+      </div>
+
         <div class="col-12 col-sm-12 col-md-5 form">
 
           <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
@@ -59,10 +60,10 @@
             {% endif %}
             </table>
             {% if wizard.steps.prev %}
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">first step</button>
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">prev step</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">Primer Paso</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">Paso Anterior</button>
             {% endif %}
-            <input type="submit" value="submit"/>
+            <input class="btn-lcen button hvr-sweep-to-right" type="submit" value="siguiente"/>
 
           </form>
 
