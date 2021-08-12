@@ -72,7 +72,8 @@ class Propuesta(models.Model):
         verbose_name="Otros Temas de Propuesta",
         blank=True,
         help_text="¿Qué otros temas aborda tu propuesta? Por favor selecciona hasta tres temas adicionales.")
-    tema_extra = models.TextField("Tema complementario",
+    tema_extra = models.CharField("Tema complementario",
+        max_length=255,
         null=True,
         blank=True,
         help_text="Tema complementario")
