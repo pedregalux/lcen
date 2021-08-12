@@ -10,6 +10,7 @@ class TemaPropuesta(models.Model):
         max_length=100,
         unique=True,
         help_text="Temas predefinidos de propuestas")
+    icono_tema = models.ImageField("Ícono Temas Propuestas", upload_to='iconostemas/', null=True, blank=True)
     class Meta:
         verbose_name = "Tema Propuestas"
         verbose_name_plural = "Temas Propuestas"

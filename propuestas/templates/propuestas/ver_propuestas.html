@@ -80,16 +80,26 @@
                     <p class="numero-propuesta">Propuesta <b>N° {{ propuesta.id }}</b></p>
                     <h2 class="titulo">{{ propuesta.titulo }}</h2>
                     <p class="extracto">
-                      
+                      {{ propuesta.problema|truncatechars:250 }}...
                     </p>
                     <div class="informacion-datos">
-                        <h4>Se realizo en:</h4>
-                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
+                        <h4>Se realizó en:</h4>
+                        <p class="lugar">
+                          Región {{ propuesta.region }}, Comuna {{ propuesta.comuna }}
+                        </p>
                         <h4>Propuesta de</h4>
+                        {% if propuesta.autor.is_organizacion %}
                         <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+                        {% else %}
+                        <p class="lugar">
+                        Propuesta Personal
+                        </p>
+                        {% endif %}
                     </div>
-                    <p class="destacado">Aprobada</p>
+                    <!-- <p class="destacado">Aprobada</p> -->
+                    
                     <img src="{% static 'img/salud-bg-propuesta.png' %}" alt="img salud" class="img-tema-propuesta">
+
                 </div>
                 <div class="bg-black">
                     <div class="call-to-action">
