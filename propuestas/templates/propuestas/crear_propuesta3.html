@@ -30,20 +30,23 @@
 
 <section class="container subir-propuesta">
     <div class="row justify-content-md-center d-flex align-items-start">
-        <div class="col-12 col-sm-12 col-md-4 informacion">
-            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
-            <div class="informacion-ayuda">
-                <p class="paso-propuesta">Paso 3</p>
-                <h2>Escribe tu propuesta</h2>
-                <h4>Para tener en cuenta</h4>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-            </div>
-            <div class="blue contacto-ayuda">
-                <h3>¿Necesitas ayuda técnica?</h3>
-                <p>Por favor ccontacta a <b>XXXXXX</b></p>
-            </div>
-        </div>
+      <div class="col-12 col-sm-12 col-md-4 informacion">
+          <!-- <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a> -->
+          <div class="informacion-ayuda">
+              <p class="paso-propuesta">Paso 3</p>
+              <h2>Escribe tu propuesta</h2>
+              <h4>Para tener en cuenta</h4>
+              <p class="recomendacion"><b>El problema:</b> La Constitución es un conjunto de normas fundamentales que definen: los principios que organizan nuestra vida en sociedad, nuestros derechos, la estructura del Estado y la forma en que tomamos decisiones. Como todas las leyes y políticas públicas deben basarse en la Constitución, se espera que ésta permanezca en el tiempo.
+              <br/> <br/>
+              Para definir el problema que tu propuesta buscará resolver, identifica una situación que -de ser solucionada- mejoraría considerablemente las vidas de quienes integramos esta sociedad. También <a href="https://www.bcn.cl/formacioncivica/constitucion.html" target="_blank">te recomendamos revisar lo que la Constitución actual señala (o no) sobre el tema de tu propuesta.</a></p>
+              <p class="recomendacion"><b>La situación ideal:</b> Imagina que el problema que planteaste se resolvió de la mejor manera posible, ¿cómo describirías la nueva situación? ¿cómo te gustaría que fuera el Chile del futuro?</p>
+              <p class="recomendacion"><b>Tu propuesta:</b> Con respecto al problema y la situación ideal que planteaste, ¿cuál es tu propuesta para la Nueva Constitución? Por ejemplo: incluir un principio, mejorar la redacción de un derecho o consagrar uno que no aparece en la actualidad, reformular una institución actual o proponer una nueva, entre otras muchas posibilidades. Para elaborar tu propuesta <a href="https://www.constituteproject.org/" target="_blank">te sugerimos revisar lo que otras constituciones del mundo señalan sobre el tema que te interesa.</a></p>
+          </div>
+          <div class="blue contacto-ayuda">
+              <h3>¿Necesitas ayuda técnica?</h3>
+              <p>Por favor ccontacta a <b>XXXXXX</b></p>
+          </div>
+      </div>
         <div class="col-12 col-sm-12 col-md-5 form">
 
           <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
@@ -60,10 +63,10 @@
             {% endif %}
             </table>
             {% if wizard.steps.prev %}
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">first step</button>
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">prev step</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">Inicio</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">Anterior</button>
             {% endif %}
-            <input type="submit" value="submit"/>
+            <input class="btn-lcen button hvr-sweep-to-right" type="submit" value="siguiente"/>
 
           </form>
 

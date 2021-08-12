@@ -31,21 +31,22 @@
 
 <section class="container subir-propuesta">
     <div class="row justify-content-md-center d-flex align-items-center">
-        <div class="col-12 col-sm-12 col-md-4 informacion">
-            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
-            <div class="informacion-ayuda">
-                <p class="paso-propuesta">Paso 5</p>
-                <h2>Información adicional</h2>
-                <h4>Para tener en cuenta</h4>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-            </div>
-            <div class="blue contacto-ayuda">
-                <h3>¿Necesitas ayuda técnica?</h3>
-                <p>Por favor ccontacta a <b>XXXXXX</b></p>
-            </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-5 form">
+      <div class="col-12 col-sm-12 col-md-8 informacion">
+          <!-- <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a> -->
+          <div class="informacion-ayuda">
+              <p class="paso-propuesta">Último paso</p>
+              <h2 class="mb-1">Elige un título</h2>
+              <h4 class="mb-3">¡Felicitaciones! Tu propuesta está casi lista. Lo primero que las personas leerán de tu propuesta es el título.</h4>
+              <p class="recomendacion">Por ello, te sugerimos escribir una frase breve y fácil de comprender, potente en su contenido, y que pueda funcionar como el hashtag (#) de una campaña comunicacional en redes sociales.</p>
+              <p class="recomendacion">En otras palabras, responde en un tweet: ¿cuál es el cambio más importante que tú o tu organización quiere ver reflejado en la Nueva Constitución?</p>
+              <p class="recomendacion">No olvides revisar tu propuesta y chequear que aceptas los términos y condiciones de participación antes de “enviar”.</p>
+          </div>
+          <!-- <div class="blue contacto-ayuda">
+              <h3>¿Necesitas ayuda técnica?</h3>
+              <p>Por favor ccontacta a <b>XXXXXX</b></p>
+          </div> -->
+      </div>
+        <div class="col-12 col-sm-12 col-md-8 form mt-4">
 
           <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
 
@@ -61,10 +62,10 @@
             {% endif %}
             </table>
             {% if wizard.steps.prev %}
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">first step</button>
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">prev step</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">Inicio</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">Anterior</button>
             {% endif %}
-            <input type="submit" value="submit"/>
+            <input class="btn-lcen button hvr-sweep-to-right" type="submit" value="siguiente"/>
 
           </form>
 

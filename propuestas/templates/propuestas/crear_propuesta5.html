@@ -31,20 +31,20 @@
 
 <section class="container subir-propuesta">
     <div class="row justify-content-md-center d-flex align-items-center">
-        <div class="col-12 col-sm-12 col-md-4 informacion">
-            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
-            <div class="informacion-ayuda">
-                <p class="paso-propuesta">Paso 5</p>
-                <h2>Información adicional</h2>
-                <h4>Para tener en cuenta</h4>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-            </div>
-            <div class="blue contacto-ayuda">
-                <h3>¿Necesitas ayuda técnica?</h3>
-                <p>Por favor ccontacta a <b>XXXXXX</b></p>
-            </div>
-        </div>
+      <div class="col-12 col-sm-12 col-md-4 informacion">
+          <!-- <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a> -->
+          <div class="informacion-ayuda">
+              <p class="paso-propuesta">Paso 5</p>
+              <h2>Tus Alianzas</h2>
+              <h4>Para tener en cuenta</h4>
+              <p class="recomendacion">Una propuesta constitucional se fortalece con los aportes de más personas y organizaciones. ¡Te invitamos a trabajar colaborativamente! Además, mientras más apoyo tenga, más posibilidades tiene de incidir en el debate constitucional, tanto entre las y los convencionales constituyentes, como entre la ciudadanía.</p>
+              <p class="recomendacion">Si comenzaste a trabajar tu propuesta hace meses y lograste las firmas y/o compromisos por parte de quienes hoy son convencionales constituyentes, ¡cuéntanos quiénes se comprometieron! Esto nos ayudará en la definición de una estrategia de incidencia para lograr más apoyos para tu propuesta (y otras afines) dentro de la Convención.</p>
+          </div>
+          <div class="blue contacto-ayuda">
+              <h3>¿Necesitas ayuda técnica?</h3>
+              <p>Por favor ccontacta a <b>XXXXXX</b></p>
+          </div>
+      </div>
         <div class="col-12 col-sm-12 col-md-5 form">
 
           <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
@@ -61,10 +61,10 @@
             {% endif %}
             </table>
             {% if wizard.steps.prev %}
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">first step</button>
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">prev step</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">Inicio</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">Anterior</button>
             {% endif %}
-            <input type="submit" value="submit"/>
+            <input class="btn-lcen button hvr-sweep-to-right" type="submit" value="siguiente"/>
 
           </form>
 

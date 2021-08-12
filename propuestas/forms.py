@@ -15,14 +15,9 @@ class PropuestaForm1(forms.ModelForm):
         'comuna'
         ]
         labels = {
-            'pais': ('1. País'),
-            'region': ('2. Región'),
-            'comuna': ('3. Comuna'),
-        }
-        help_texts = {
-            'pais': ('Selecciona tu país'),
-            'region': ('Selecciona tu región'),
-            'comuna': ('Selecciona tu comuna'),
+            'pais': ('<h6><span style="text-transform:uppercase">1. País</span></h6><i>Selecciona tu país</i>'),
+            'region': ('<h6><span style="text-transform:uppercase">2. Región</span></h6><i>Selecciona tu región</i>'),
+            'comuna': ('<h6><span style="text-transform:uppercase">3. Comuna</span></h6><i>Selecciona tu comuna</i>'),
         }
 
 
@@ -32,15 +27,13 @@ class PropuestaForm2(forms.ModelForm):
         model = Propuesta
         fields = [
         'tema',
-        'otros_temas'
+        'otros_temas',
+        'tema_extra',
         ]
         labels = {
-            'tema': ('1. ¿Cuál es el tema principal de tu propuesta?'),
-            'otros_temas': ('2. ¿Qué otros temas aborda tu propuesta?'),
-        }
-        help_text = {
-            'tema': ('Selecciona tema principal'),
-            'otros_temas': ('Por favor selecciona hasta tres temas adicionales'),
+            'tema': ('<h6><span style="text-transform:uppercase">1. ¿Cuál es el tema principal de tu propuesta?</span></h6><i>Selecciona tema principal</i>'),
+            'otros_temas': ('<h6><span style="text-transform:uppercase">2. ¿Qué otros temas aborda tu propuesta?</span></h6><i>Por favor selecciona hasta tres temas adicionales</i>'),
+            'tema_extra': ('<h6><span style="text-transform:uppercase">3. Otro tema, ¿cuál?</span></h6><i>Si tu propuesta contempla algún tema que no está en el listado, por favor escríbelo aquí en una palabra o frase breve</i>'),
         }
 
 
@@ -54,14 +47,14 @@ class PropuestaForm3(forms.ModelForm):
         'componente'
         ]
         labels = {
-            'problema': ('1. País'),
-            'situacion': ('2. Región'),
-            'componente': ('2. Región'),
+            'problema': ('<h6><span style="text-transform:uppercase">1. ¿Cuál es el problema que tú o tu organización busca solucionar?</span></h6><i>Ejemplo: El actual sistema de seguridad social no garantiza pensiones dignas para todas las personas.</i>'),
+            'situacion': ('<h6><span style="text-transform:uppercase">2. Con respecto al problema planteado, ¿cuál sería la situación ideal?</span></h6><i>Ejemplo: Cuando jubilan, todas las personas tienen acceso a una pensión que cubre sus necesidades básicas para vivir con dignidad.</i>'),
+            'componente': ('<h6><span style="text-transform:uppercase">3. Para avanzar en el logro de esa situación ideal, ¿qué debería contemplar la Nueva Constitución?</span></h6><i>Ejemplo: Consagrar constitucionalmente el derecho a la protección social y explicitar la obligación del Estado de asegurar a todas las personas una pensión digna.</i>'),
         }
-        help_text = {
-            'problema': ('1. País'),
-            'situacion': ('2. Región'),
-            'componente': ('2. Región'),
+        widgets = {
+            'problema': forms.Textarea(attrs={'placeholder': 'Describe el problema de manera precisa y breve en un máximo de 250 palabras.'}),
+            'situacion': forms.Textarea(attrs={'placeholder': 'Describe la situación ideal de manera precisa y breve en un máximo de 250 palabras.'}),
+            'componente': forms.Textarea(attrs={'placeholder': 'Escribe tu propuesta de manera precisa y breve en un máximo de 250 palabras.'}),
         }
 
 
@@ -73,13 +66,12 @@ class PropuestaForm4(forms.ModelForm):
         'otras_organizaciones',
         'organizaciones_de_propuesta'
         ]
-        labels = {
-            'otras_organizaciones': ('1. País'),
-            'organizaciones_de_propuesta': ('2. Región'),
+        widgets = {
+            'otras_organizaciones': forms.CheckboxInput()
         }
-        help_text = {
-            'otras_organizaciones': ('1. País'),
-            'organizaciones_de_propuesta': ('2. Región'),
+        labels = {
+            'otras_organizaciones': ('<h6><span style="text-transform:uppercase">1. ¿Esta propuesta fue elaborada en conjunto con otras organizaciones?</span></h6><i>Marque si es así.</i>'),
+            'organizaciones_de_propuesta': ('<h6><span style="text-transform:uppercase">2. Si tu respuesta fue “sí”, escribe cuáles:</span></h6><i>Por favor escribe los nombres de las organizaciones que participaron en la elaboración de la propuesta. No olvides mencionar a tu organización.</i>'),
         }
 
 
@@ -91,13 +83,12 @@ class PropuestaForm5(forms.ModelForm):
         'compromiso_convencionales',
         'convencionales_comprometidos'
         ]
-        labels = {
-            'compromiso_convencionales': ('1. País'),
-            'convencionales_comprometidos': ('2. Región'),
+        widgets = {
+            'compromiso_convencionales': forms.CheckboxInput()
         }
-        help_text = {
-            'compromiso_convencionales': ('1. País'),
-            'convencionales_comprometidos': ('2. Región'),
+        labels = {
+            'compromiso_convencionales': ('<h6><span style="text-transform:uppercase">1. ¿Tu propuesta cuenta con compromisos formales de apoyo de convencionales constituyentes?</span></h6><i>Marque si es así.</i>'),
+            'convencionales_comprometidos': ('<h6><span style="text-transform:uppercase">2. Si tu respuesta fue “sí”, marca todos los/as convencionales constituyentes que se comprometieron con tu propuesta.</span></h6><i>Por favor considera que verificaremos esta información.</i>'),
         }
 
 
@@ -109,7 +100,7 @@ class PropuestaForm6(forms.ModelForm):
         'anexo_propuesta'
         ]
         labels = {
-            'anexo_propuesta': ('1. País'),
+            'anexo_propuesta': ('<h6><span style="text-transform:uppercase">Si has elaborado un documento con tu propuesta constitucional desarrollada en mayor detalle y profundidad, adjúntalo:</span></h6><i>Asimismo, si cuentas con otros materiales (estudios, encuestas, presentaciones, material comunicacional, etc.) que complementen tu propuesta, agrégalos.</i>'),
         }
 
 
@@ -121,7 +112,7 @@ class PropuestaForm7(forms.ModelForm):
         'titulo'
         ]
         labels = {
-            'titulo': ('1. País'),
+            'titulo': ('<h6><span style="text-transform:uppercase">Escribe un título atractivo para que podamos difundirla entre la ciudadanía y en la Convención Constitucional.</span></h6><i>Título: máximo 280 caracteres</i>'),
         }
 
 

@@ -31,20 +31,20 @@
 
 <section class="container subir-propuesta">
     <div class="row justify-content-md-center d-flex align-items-center">
-        <div class="col-12 col-sm-12 col-md-4 informacion">
-            <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a>
-            <div class="informacion-ayuda">
-                <p class="paso-propuesta">Último paso</p>
-                <h2>Elige un título</h2>
-                <h4>Para tener en cuenta</h4>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-                <p class="recomendacion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consequuntur fugit sapiente ipsum et obcaecati, nisi mollitia nobis.</p>
-            </div>
-            <div class="blue contacto-ayuda">
-                <h3>¿Necesitas ayuda técnica?</h3>
-                <p>Por favor ccontacta a <b>XXXXXX</b></p>
-            </div>
-        </div>
+      <div class="col-12 col-sm-12 col-md-4 informacion">
+          <!-- <a href="#" class="volver"><i class="fas fa-chevron-left"></i>Paso anterior</a> -->
+          <div class="informacion-ayuda">
+              <p class="paso-propuesta">Paso 6</p>
+              <h2>Información adicional</h2>
+              <h4>Para tener en cuenta</h4>
+              <p class="recomendacion">Este formulario ha sido diseñado para que puedas comunicar tu propuesta de manera eficaz y breve a la Convención y a la ciudadanía en general. </p>
+              <p class="recomendacion">Pero si tienes un documento con tu propuesta en detalle, podremos difundirla entre las y los convencionales constituyentes para que puedan conocerla y utilizarla en el debate. Además, podremos analizarla para identificar otras propuestas y organizaciones afines con las cuales te podrías vincular para potenciar la incidencia ¡y así lograr los cambios que soñamos!</p>
+          </div>
+          <div class="blue contacto-ayuda">
+              <h3>¿Necesitas ayuda técnica?</h3>
+              <p>Por favor ccontacta a <b>XXXXXX</b></p>
+          </div>
+      </div>
         <div class="col-12 col-sm-12 col-md-5 form">
 
           <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
@@ -61,10 +61,10 @@
             {% endif %}
             </table>
             {% if wizard.steps.prev %}
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">first step</button>
-            <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">prev step</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">Inicio</button>
+            <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">Anterior</button>
             {% endif %}
-            <input type="submit" value="submit"/>
+            <input class="btn-lcen button hvr-sweep-to-right" type="submit" value="siguiente"/>
 
           </form>
 
