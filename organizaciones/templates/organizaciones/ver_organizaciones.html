@@ -9,7 +9,7 @@
     <img src="{% static 'img/header-organizaciones.jpg' %}" alt="img collage portada" class="img-fluid">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
             <li class="breadcrumb-item active" aria-current="page">Organizaciones</li>
         </ol>
     </nav>
@@ -22,7 +22,7 @@
             <div class="organizaciones-lista wow animate__animated animate__fadeIn animate__delay-2s">
                 <ul>
                   {% for organizacion in organizaciones_list %}
-                  <li><a href="#"><img src="{{ organizacion.logo.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
+                  <li><a href="{{ organizacion.pk }}"><img src="{{ organizacion.logo.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
                   {% endfor %}
                 </ul>
             </div>
