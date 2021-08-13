@@ -20,7 +20,7 @@
     <div class="row justify-content-md-center">
         <div class="col-12 col-sm-12 col-md-4 col-lg-3">
             <div class="img-constituyente">
-                <img src="{% static 'img/img-constituyente.png' %}" alt="img convencional" class="img-fluid convencional">
+                <img src="{{ object.foto.url }}" alt="img convencional" class="img-fluid convencional">
                 <div class="decorativo blue"></div>
                 <div class="decorativo red"></div>
                 <div class="decorativo green"></div>
@@ -32,37 +32,37 @@
             <div class="decorativo blue"></div>
             <ul>
                 <li>
-                    <p><b>Cargo / Comisión / ¿Escaño reservado?:</b> Lorem Ipsum</p>
+                    <p><b>Cargo / Comisión / ¿Escaño reservado?:</b> {{ object.cargo }} Hay que hacerlo</p>
                 </li>
                 <li>
-                    <p><b>Distrito:</b> Lorem Ipsum</p>
+                    <p><b>Distrito:</b> {{ object.distrito }}</p>
                 </li>
                 <li>
-                    <p><b>Partido:</b> Lorem Ipsum</p>
+                    <p><b>Movimiento / Partido:</b> {{ object.movimiento }}</p>
                 </li>
                 <li>
-                    <p><b>Lista:</b> Lorem Ipsum</p>
+                    <p><b>Lista:</b> {{ object.lista }}</p>
                 </li>
                 <li>
-                    <p><b>Movimiento / Organización:</b> Lorem Ipsum</p>
+                    <p><b>Movimiento / Organización:</b> Está como partido y/o movimiento </p>
                 </li>
                 <li>
-                    <p><b>Enlace a declaración de intereses y patrimonio: <a href="#" class="enlace-parrafos">Revisar</a></b></p>
+                    <p><b>Enlace a declaración de intereses y patrimonio: <a href="{{ object.linkintereses }}" class="enlace-parrafos">Revisar</a></b></p>
                 </li>
                 <li>
-                    <p><b>Redes Sociales:</b></p>
+                    <p><b>Redes Sociales:(agregar linkedin)</b></p>
                 </li>
                 <li class="redes-sociales">
-                    <a href="#"><i class="fab fa-twitter-square"></i></a>
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="{{ object.twitter }}"><i class="fab fa-twitter-square"></i></a>
+                    <a href="{{ object.facebook }}"><i class="fab fa-facebook-square"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                    <a href="{{ object.instagram }}"><i class="fab fa-instagram-square"></i></a>
                 </li>
             </ul>
         </div>
         <div class="col-12 col-sm-12 col-md-8 biografia">
             <div class="decoracion-left blue"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ullam, voluptate ducimus perspiciatis tempora delectus quaerat error temporibus in natus, commodi earum fugit nesciunt sequi aut facilis voluptatem saepe nisi?. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ullam, voluptate ducimus perspiciatis tempora delectus quaerat error temporibus in natus, commodi earum fugit nesciunt sequi aut facilis voluptatem saepe nisi?</p>
+            <p>{{ object.biografia|linebreaks }}</p>
             <div class="decoracion-right blue"></div>
         </div>
     </div>
