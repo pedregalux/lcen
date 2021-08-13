@@ -4,5 +4,191 @@
 
 {% block content %}
 
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-convencionales.jpg' %}" alt="img collage portada" class="img-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'ver_convencionales' %}">Convencionales</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ object.nombre }}</li>
+        </ol>
+    </nav>
+</section>
+
+
+<div class="container perfil-convencional">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3">
+            <div class="img-constituyente">
+                <img src="{% static 'img/img-constituyente.png' %}" alt="img convencional" class="img-fluid convencional">
+                <div class="decorativo blue"></div>
+                <div class="decorativo red"></div>
+                <div class="decorativo green"></div>
+                <div class="decorativo yellow"></div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-5 datos">
+            <h2>Nombre Convencional</h2>
+            <div class="decorativo blue"></div>
+            <ul>
+                <li>
+                    <p><b>Cargo / Comisión / ¿Escaño reservado?:</b> Lorem Ipsum</p>
+                </li>
+                <li>
+                    <p><b>Distrito:</b> Lorem Ipsum</p>
+                </li>
+                <li>
+                    <p><b>Partido:</b> Lorem Ipsum</p>
+                </li>
+                <li>
+                    <p><b>Lista:</b> Lorem Ipsum</p>
+                </li>
+                <li>
+                    <p><b>Movimiento / Organización:</b> Lorem Ipsum</p>
+                </li>
+                <li>
+                    <p><b>Enlace a declaración de intereses y patrimonio: <a href="#" class="enlace-parrafos">Revisar</a></b></p>
+                </li>
+                <li>
+                    <p><b>Redes Sociales:</b></p>
+                </li>
+                <li class="redes-sociales">
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 biografia">
+            <div class="decoracion-left blue"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ullam, voluptate ducimus perspiciatis tempora delectus quaerat error temporibus in natus, commodi earum fugit nesciunt sequi aut facilis voluptatem saepe nisi?. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ullam, voluptate ducimus perspiciatis tempora delectus quaerat error temporibus in natus, commodi earum fugit nesciunt sequi aut facilis voluptatem saepe nisi?</p>
+            <div class="decoracion-right blue"></div>
+        </div>
+    </div>
+</div>
+
+<section class="propuestas-convencionales propuestas-seccion container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12">
+            <h2>compromisos e iniciativas de -nombre convencional-</h2>
+            <div class="decoracion blue"></div>
+        </div>
+
+         <div class="col-12 col-sm-12 col-md-12">
+            <ul class="filtro-temas-propuestas">
+                <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Propuestas que se compromete</a></li>
+                <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Iniciativas presentadas en la convención</a></li>
+            </ul>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+            <div class="propuesta salud">
+                <div class="informacion-propuesta">
+                    <h3 class="tema">Salud</h3>
+                    <p class="numero-propuesta">Propuesta <b>N° 394</b></p>
+                    <h2 class="titulo">Nombre de propuesta Lorem ipsum eneanut vestibulum.</h2>
+                    <p class="extracto">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
+                    <div class="informacion-datos">
+                        <h4>Se realizo en:</h4>
+                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
+                        <h4>Propuesta de</h4>
+                        <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+                    </div>
+                    <p class="destacado">Aprobada</p>
+                    <img src="{% static 'img/salud-bg-propuesta.png' %}" alt="img salud" class="img-tema-propuesta">
+                </div>
+                <div class="bg-black">
+                    <div class="call-to-action">
+                        <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
+                        <a href="#" class="btn-lcen">Leer propuesta</a>
+                    </div>
+                    <div class="cifras">
+                        <p><span class="numero">43</span> convencionales comprometidos</p>
+                        <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+            <div class="propuesta salud">
+                <div class="informacion-propuesta">
+                    <h3 class="tema">Medio ambiente adecuado</h3>
+                    <p class="numero-propuesta">Propuesta <b>N° 394</b></p>
+                    <h2 class="titulo">Nombre de propuesta Lorem ipsum eneanut vestibulum.</h2>
+                    <p class="extracto">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
+                    <div class="informacion-datos">
+                        <h4>Se realizo en:</h4>
+                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
+                        <h4>Propuesta de</h4>
+                        <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+                    </div>
+                    <img src="{% static 'img/medio-ambiente-bg-propuesta.png' %}" alt="img medio ambiente" class="img-tema-propuesta">
+                </div>
+                <div class="bg-black">
+                    <div class="call-to-action">
+                        <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
+                        <a href="#" class="btn-lcen">Leer propuesta</a>
+                    </div>
+                    <div class="cifras">
+                        <p><span class="numero">43</span> convencionales comprometidos</p>
+                        <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+            <div class="propuesta salud">
+                <div class="informacion-propuesta">
+                    <h3 class="tema">Adultos Mayores</h3>
+                    <p class="numero-propuesta">Propuesta <b>N° 394</b></p>
+                    <h2 class="titulo">Nombre de propuesta Lorem ipsum eneanut vestibulum.</h2>
+                    <p class="extracto">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
+                    <div class="informacion-datos">
+                        <h4>Se realizo en:</h4>
+                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
+                        <h4>Propuesta de</h4>
+                        <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+                    </div>
+                    <p class="destacado">Aprobada</p>
+                    <img src="{% static 'img/adultos-mayores-bg-propuesta.png' %}" alt="img adultos mayores" class="img-tema-propuesta">
+                </div>
+                <div class="bg-black">
+                    <div class="call-to-action">
+                        <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
+                        <a href="#" class="btn-lcen">Leer propuesta</a>
+                    </div>
+                    <div class="cifras">
+                        <p><span class="numero">43</span> convencionales comprometidos</p>
+                        <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+</section>
+
 
 {% endblock %}
