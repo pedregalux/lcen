@@ -37,13 +37,16 @@
             <ul>
                 <li>
                     <p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ullam, voluptate ducimus perspiciatis tempora delectus quaerat error temporibus in natus, commodi earum fugit nesciunt sequi aut facilis voluptatem saepe nisi?. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ullam, voluptate ducimus perspiciatis tempora delectus quaerat error temporibus in natus, commodi earum fugit nesciunt sequi aut facilis voluptatem saepe nisi?</p>
+                        <p>{{ object.descripcion|linebreaks }}</p>
                 </li>
                 <li>
-                    <p><b>Ubicación:</b><br> Lorem Ipsum</p>
+                    <p><b>Ubicación: </b><br>{{ object.pais }}</p>
                 </li>
                 <li>
-                    <p><b>Alcance de trabajo:</b><br> Lorem Ipsum</p>
+                    <p><b>Alcance de trabajo: </b><br>
+                      {% for alcance in object.alcance.all %}
+                      {{ alcance }} ·
+                      {% endfor %}</p>
                 </li>
                 <li>
                     <a href="#" class="btn btn-lcen button hvr-sweep-to-right">Sitio Web</a>
