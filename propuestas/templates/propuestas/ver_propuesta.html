@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Propuesta{% endblock %}
 
 {% block content %}
+
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-propuestas.jpg' %}" alt="img collage portada" class="img-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'ver_propuestas' %}">Propuestas</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ object.titulo|truncatechars:50 }}</li>
+        </ol>
+    </nav>
+</section>
+
+
 
 <h2>Propouesta</h2>
 
