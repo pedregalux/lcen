@@ -61,7 +61,7 @@ def login_request(request):
             password=password)
             if user is not None :
                 login(request,user)
-                return redirect('/inicio')
+                return redirect('/propuestas/crearpropuestas')
             else:
                 messages.error(request,"La contraseña o usuari@ no corresponden. Por favor revisa bien.")
         else:

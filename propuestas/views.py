@@ -45,8 +45,7 @@ class VerPropuestaView(DetailView):
 
 
 
-class PropuestaWizardView(LoginRequiredMixin, SessionWizardView):
-
+class PropuestaWizardView(LoginRequiredMixin,SessionWizardView):
     def get_template_names(self):
         return [TEMPLATES2[self.steps.current]]
     instance = None

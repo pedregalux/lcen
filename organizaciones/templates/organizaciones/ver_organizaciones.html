@@ -4,6 +4,21 @@
 
 {% block content %}
 
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-organizaciones.jpg' %}" alt="img collage portada" class="img-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Organizaciones</li>
+        </ol>
+    </nav>
+</section>
+
+
+
+
+
 {% for organizacion in organizaciones_list %}
 <p><a href="{{ organizacion.pk }}">{{ organizacion }}</a></p>
 {% endfor %}
