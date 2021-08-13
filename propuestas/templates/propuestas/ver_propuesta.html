@@ -22,7 +22,7 @@
             <p class="numero-propuesta">Propuesta <b>N° {{ object.id }}</b></p>
             <p class="tema-principal">{{ object.tema }}</p>
             <h3>{{ object.titulo }}</h3>
-            <p class="autor">Esta es una propuesta de: <b><a href="#">Nombre persona/organización</a></b></p>
+            <p class="autor">Esta es una propuesta de: <b><a href="#">{{ object.autor }}</a></b></p>
             <p class="colaborador">Elaborada con: <b><a href="#">Nombre persona/organización</a></b></p>
             <div class="linea yellow my-3"></div>
 
@@ -55,7 +55,7 @@
         </div>
         <div class="col-12 col-sm-12 col-md-4 informacion-destacada">
             <div class="bg-color">
-                <img src="{% static 'img/medio-ambiente-bg-propuesta.png' %}" alt="img medio ambiente" class="img-tema-propuesta">
+                <img src="{{ object.tema.icono_tema.url }}" alt="img medio ambiente" class="img-tema-propuesta">
                 <h3>Esta propuesta cuenta con:</h3>
                 <div class="cifras">
                     <p><span class="numero">43</span> convencionales comprometidos</p>
