@@ -16,11 +16,23 @@
 </section>
 
 
+<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
+    <div class="container">
+        <div class="row">
+            <div class="organizaciones-lista wow animate__animated animate__fadeIn animate__delay-2s">
+                <ul>
+                  {% for organizacion in organizaciones_list %}
+                  <li><a href="#"><img src="{{ organizacion.logo.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
+                  {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
-{% for organizacion in organizaciones_list %}
 <p><a href="{{ organizacion.pk }}">{{ organizacion }}</a></p>
-{% endfor %}
+
 
 {% endblock %}
