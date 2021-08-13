@@ -109,6 +109,7 @@ SOCIALACCOUNT_PROVIDERS = {
 SITE_ID = 1
 
 LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'inicio'
 LOGOUT_URL = 'inicio'
 
 # Database
