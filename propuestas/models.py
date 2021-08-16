@@ -99,6 +99,14 @@ class Propuesta(models.Model):
         verbose_name="Anexos de la Propuesta",
         null=True,
         blank=True)
+    anexo2_propuesta = models.FileField(upload_to='documents/',
+        verbose_name="Otros anexos de la Propuesta-1",
+        null=True,
+        blank=True)
+    anexo3_propuesta = models.FileField(upload_to='documents/',
+        verbose_name="Otros anexos de la Propuesta-2",
+        null=True,
+        blank=True)
     # paso 7
     titulo = models.CharField("Título Propuesta",
         max_length=255,
