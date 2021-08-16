@@ -97,10 +97,14 @@ class PropuestaForm6(forms.ModelForm):
     class Meta:
         model = Propuesta
         fields = [
-        'anexo_propuesta'
+        'anexo_propuesta',
+        'anexo2_propuesta',
+        'anexo3_propuesta'
         ]
         labels = {
-            'anexo_propuesta': ('<h6><span style="text-transform:uppercase">Si has elaborado un documento con tu propuesta constitucional desarrollada en mayor detalle y profundidad, adjúntalo:</span></h6><i>Asimismo, si cuentas con otros materiales (estudios, encuestas, presentaciones, material comunicacional, etc.) que complementen tu propuesta, agrégalos.</i>'),
+            'anexo_propuesta': ('<h6><span style="text-transform:uppercase">Si has elaborado un documento con tu propuesta constitucional desarrollada en mayor detalle y profundidad, adjúntalo:</span></h6>'),
+            'anexo2_propuesta': ('<i>Asimismo, si cuentas con otros materiales (estudios, encuestas, presentaciones, material comunicacional, etc.) que complementen tu propuesta, agrégalos.</i>'),
+            'anexo3_propuesta': ('<i>Otro material anexo a tu propuesta.</i>'),
         }
 
 

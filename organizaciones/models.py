@@ -33,6 +33,10 @@ class OrganizacionProfile(models.Model):
         max_length=254,
         null=True,
         blank=True)
+    sitioweb = models.URLField("Sitio web",
+        max_length=254,
+        null=True,
+        blank=True)
     pais = models.ForeignKey(Pais,
         blank=True,
         null=True,
