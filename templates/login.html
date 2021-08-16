@@ -50,13 +50,32 @@
               </div>
             {% endif %}
 
-            <form method="post" novalidate>
+            <!-- <form method="post" novalidate>
               {% csrf_token %}
               <input type="hidden" name="next" value="{{ next }}">
               {{ form.username }}
               {{ form.password }}
               <button type="submit" class="btn btn-primary">Log in</button>
-            </form>
+            </form> -->
+
+<form method="post" class="formulario" novalidate>
+{% csrf_token %}
+<input type="hidden" name="next" value="{{ next }}" />
+
+<div class="mb-3">
+<label for="nombre-usuario" class="form-label">Nombre de Usuario</label>
+<div class="form-control">{{ form.username }}</div>
+</div>
+
+<div class="mb-3">
+<label for="contraseña-usuario" class="col-sm-2 col-form-label">Contraseña</label>
+<div class="form-control">{{ form.password }}</div>
+</div>
+
+<div class="mb-3">
+<button type="submit" class="btn btn-lcen button hvr-sweep-to-right">Ingresar</button>
+</div>
+</form>
 
             <div class="registrate-cta">
                 <p>¿No estás registrado aún?</p>
