@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings
 from django.contrib.auth.models import Group
-from mantenedores.models import Pais, Region, Distrito, Comuna
+from mantenedores.models import Pais, Region, Distrito, Comuna, Alcance
 
 
 
@@ -66,12 +66,73 @@ class Ciudadano(models.Model):
 
 
 class Organizacion(models.Model):
+
     user = models.OneToOneField(User,
         on_delete = models.CASCADE)
     email = models.EmailField(max_length=255)
-    email_contacto = models.EmailField(max_length=255)
-    telefono_contacto = models.CharField(max_length=255)
-    cualquiercosa = models.CharField(max_length=255)
+
+    # datos públicos del pefil
+    logo_organizacion = models.ImageField(
+        'Logo/Imagen de la Organización',
+        null=True,
+        blank=True,
+        help_text="Si deseas subir una imagen o logo representativo de tu organización al perfil público, lo puedes cargar acá")
+    descripcion = models.TextField(
+        'Reseña de la Organización',
+        null=True,
+        blank=True,
+        help_text="Este es la reseña oficial de la Organización y se usará en el perfil público")
+
+    # datos de ubicación
+    pais = models.ForeignKey(Pais, null=True, on_delete=models.SET_NULL)
+    region = models.ForeignKey(Region, null=True, on_delete=models.SET_NULL)
+    comuna = models.ForeignKey(Comuna, null=True, on_delete=models.SET_NULL)
+    alcance = models.ForeignKey(Alcance, null=True, on_delete=models.SET_NULL)
+
+    # redes sociales
+    sitioweb = models.URLField(
+        'Sitio Web de la Organización',
+        null=True,
+        blank=True,
+        help_text="Ingresa la dirección de tu sitio así: https://www.organizacion.com. Quedará publicado en el perfil público.")
+    twitter = models.URLField(
+        'Twitter de la Organización',
+        null=True,
+        blank=True,
+        help_text="Ingresa la dirección de tu perfil así: https://www.twitter.com/miorganizacion. Quedará publicado en el perfil público.")
+    facebook = models.URLField(
+        'Facebook de la Organización',
+        null=True,
+        blank=True,
+        help_text="Ingresa la dirección de tu perfil así: https://www.facebook.com/miorganizacion. Quedará publicado en el perfil público.")
+    instagram = models.URLField(
+        'Instagram de la Organización',
+        null=True,
+        blank=True,
+        help_text="Ingresa la dirección de tu perfil así: https://www.instagram.com/miorganizacion. Quedará publicado en el perfil público.")
+    linkedin = models.URLField(
+        'LinkedIn de la Organización',
+        null=True,
+        blank=True,
+        help_text="Ingresa la dirección de tu perfil así: https://www.instagram.com/miorganizacion. Quedará publicado en el perfil público.")
+
+    # de contacto privado
+    nombre_contacto = models.CharField(
+        'Nombre Contacto',
+        max_length=255,
+        null=True,
+        blank=True,
+        help_text="Este nombre de contacto no será difundido públicamente")
+    email_contacto = models.EmailField(
+        help_text="No será difundido públicamente",
+        null=True,
+        blank=True)
+    telefono_contacto = models.CharField(
+        max_length=255,
+        help_text="No será difundido públicamente",
+        null=True,
+        blank=True)
+
     class Meta:
         verbose_name = "Organzación"
         verbose_name_plural = "Organizaciones"

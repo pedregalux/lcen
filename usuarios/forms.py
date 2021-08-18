@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from django.db import transaction
-from mantenedores.models import Pais, Region, Comuna, Distrito
+from mantenedores.models import Pais, Region, Comuna, Distrito, Alcance
 from .models import User, Ciudadano, Organizacion, Convencional
 from django.contrib.auth.models import Group
 
@@ -43,14 +43,85 @@ class CiudadanoSignUpForm(UserCreationForm):
 
 
 class OrganizacionSignUpForm(UserCreationForm):
-    username = forms.CharField(label='Nombre Usuario')
-    password1 = forms.CharField(label='Contraseña', widget=(forms.PasswordInput(attrs={'class': 'form-control'})))
-    password2 = forms.CharField(label='Confirmar Contraseña', widget=(forms.PasswordInput(attrs={'class': 'form-control'})))
-    nombre = forms.CharField(label='Nombre Organización/Colectivo', required=True)
-    email = forms.EmailField(required=True)
-    email_contacto = forms.EmailField(required=True)
-    telefono_contacto = forms.CharField(required=False)
-    cualquiercosa = forms.CharField(required=True)
+
+    # datos de registro
+    username = forms.CharField(
+        label='Nombre Usuario',
+        required = True,
+        help_text="Este nombre, junto a una contraseña, es necesario para ingresar a la plataforma")
+    password1 = forms.CharField(
+        label='Contraseña',
+        required = True,
+        widget=(forms.PasswordInput(attrs={'class': 'form-control'})))
+    password2 = forms.CharField(
+        label='Confirmar Contraseña',
+        required = True,
+        widget=(forms.PasswordInput(attrs={'class': 'form-control'})))
+    nombre = forms.CharField(label='Nombre de la Organización', required=True)
+    email = forms.EmailField(
+        label='E-mail de registro',
+        required=True,
+        help_text="Este e-mail se usará para acciones como recuperación de contraseña y no se mostrará al público")
+
+    # datos públicos del pefil
+    logo_organizacion = forms.ImageField(
+        label='Logo/Imagen de la Organización',
+        help_text="Si deseas subir una imagen o logo representativo de tu organización al perfil público, lo puedes cargar acá",
+        required=True)
+    descripcion = forms.CharField(
+        widget=forms.Textarea,
+        label='Reseña de la Organización',
+        required=False,
+        help_text="Este es la reseña oficial de la Organización y se usará en el perfil público")
+
+    # datos de ubicación
+    pais = forms.ModelChoiceField(
+        queryset=Pais.objects,
+        empty_label="Seleccionar País")
+    region = forms.ModelChoiceField(
+        queryset=Region.objects,
+        empty_label="Seleccionar Región")
+    comuna = forms.ModelChoiceField(
+        queryset=Comuna.objects,
+        empty_label="Seleccionar Comuna")
+    alcance = forms.ModelChoiceField(
+        queryset=Alcance.objects,
+        help_text="Selecciona el alcance territorial del trabajo de tu organiación.",
+        empty_label="Seleccionar Alcance")
+
+    # redes sociales
+    sitioweb = forms.URLField(
+        label='Sitio Web de la Organización',
+        help_text="Ingresa la dirección de tu sitio así: https://www.organizacion.com. Quedará publicado en el perfil público.",
+        required=True)
+    twitter = forms.URLField(
+        label='Twitter de la Organización',
+        help_text="Ingresa la dirección de tu perfil así: https://www.twitter.com/miorganizacion. Quedará publicado en el perfil público.",
+        required=True)
+    facebook = forms.URLField(
+        label='Facebook de la Organización',
+        help_text="Ingresa la dirección de tu perfil así: https://www.facebook.com/miorganizacion. Quedará publicado en el perfil público.",
+        required=True)
+    instagram = forms.URLField(
+        label='Instagram de la Organización',
+        help_text="Ingresa la dirección de tu perfil así: https://www.instagram.com/miorganizacion. Quedará publicado en el perfil público.",
+        required=True)
+    linkedin = forms.URLField(
+        label='LinkedIn de la Organización',
+        help_text="Ingresa la dirección de tu perfil así: https://www.instagram.com/miorganizacion. Quedará publicado en el perfil público.",
+        required=True)
+
+    # de contacto privado
+    nombre_contacto = forms.CharField(
+        label='Nombre Contacto',
+        required=False,
+        help_text="Este nombre de contacto no será difundido públicamente")
+    email_contacto = forms.EmailField(
+        help_text="No será difundido públicamente",
+        required=False)
+    telefono_contacto = forms.CharField(
+        help_text="No será difundido públicamente",
+        required=False)
 
     class Meta(UserCreationForm.Meta):
         model = User
@@ -61,11 +132,28 @@ class OrganizacionSignUpForm(UserCreationForm):
         user.is_organizacion = True
         user.nombre = self.cleaned_data.get('nombre')
         user.save()
+
         organizacion = Organizacion.objects.create(user=user)
         organizacion.email=self.cleaned_data.get('email')
+        organizacion.descripcion=self.cleaned_data.get('descripcion')
+
+        organizacion.pais=self.cleaned_data.get('pais')
+        organizacion.region=self.cleaned_data.get('region')
+        organizacion.comuna=self.cleaned_data.get('comuna')
+        organizacion.alcance=self.cleaned_data.get('alcance')
+
+        organizacion.sitioweb=self.cleaned_data.get('sitioweb')
+        organizacion.twitter=self.cleaned_data.get('twitter')
+        organizacion.facebook=self.cleaned_data.get('facebook')
+        organizacion.instagram=self.cleaned_data.get('instagram')
+        organizacion.linkedin=self.cleaned_data.get('linkedin')
+
+        organizacion.nombre_contacto=self.cleaned_data.get('nombre_contacto')
         organizacion.email_contacto=self.cleaned_data.get('email_contacto')
         organizacion.telefono_contacto=self.cleaned_data.get('telefono_contacto')
-        organizacion.cualquiercosa=self.cleaned_data.get('cualquiercosa')
+
+        organizacion.logo_organizacion=self.cleaned_data.get('logo_organizacion')
+
         organizacion.save()
         return user
 
