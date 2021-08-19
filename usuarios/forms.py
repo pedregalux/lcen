@@ -58,13 +58,20 @@ class OrganizacionSignUpForm(UserCreationForm):
         label='Confirmar Contraseña',
         required = True,
         widget=(forms.PasswordInput(attrs={'class': 'form-control'})))
-    nombre = forms.CharField(label='Nombre de la Organización', required=True)
+    nombre = forms.CharField(
+        label='Nombre de la Organización',
+        help_text="Nombre oficial de la Organización, no se puede modificar",
+        required=True)
     email = forms.EmailField(
         label='E-mail de registro',
         required=True,
         help_text="Este e-mail se usará para acciones como recuperación de contraseña y no se mostrará al público")
 
     # datos públicos del pefil
+    nombre_perfil = forms.CharField(
+        label='Nombre de la Organización',
+        help_text="Este es el nombre que será mostrado en el Perfil Público de la Organización en la plataforma",
+        required=True)
     logo_organizacion = forms.ImageField(
         label='Logo/Imagen de la Organización',
         help_text="Si deseas subir una imagen o logo representativo de tu organización al perfil público, lo puedes cargar acá",

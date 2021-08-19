@@ -72,6 +72,10 @@ class Organizacion(models.Model):
     email = models.EmailField(max_length=255)
 
     # datos públicos del pefil
+    nombre_perfil = models.CharField(
+        'Nombre Perfil',
+        max_length=255,
+        help_text="Este es el nombre que será mostrado en el Perfil Público de la Organización en la plataforma")
     logo_organizacion = models.ImageField(
         'Logo/Imagen de la Organización',
         null=True,
