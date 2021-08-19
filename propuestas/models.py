@@ -1,5 +1,5 @@
 from django.db import models
-from usuarios.models import User
+from usuarios.models import User, Ciudadano, Organizacion, Convencional
 from mantenedores.models import Pais, Region, Comuna
 from convencionales.models import Constituyente
 
@@ -116,3 +116,23 @@ class Propuesta(models.Model):
         verbose_name_plural = "Propuestas Ciudadanas"
     def __str__(self):
         return self.titulo
+
+
+
+class ApoyoPropuesta(models.Model):
+    user = models.ForeignKey(
+        User,
+        null=True,
+        related_name="apoyo_propuesta",
+        on_delete=models.SET_NULL)
+    propuesta = models.ForeignKey(
+        Propuesta,
+        null=True,
+        on_delete=models.SET_NULL)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+            verbose_name = "Apoyo Propuestas"
+            verbose_name_plural = "Apoyos Propuestas"
