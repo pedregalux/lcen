@@ -69,7 +69,7 @@ class OrganizacionSignUpForm(UserCreationForm):
 
     # datos públicos del pefil
     nombre_perfil = forms.CharField(
-        label='Nombre de la Organización',
+        label='Nombre para Perfil de la Organización',
         help_text="Este es el nombre que será mostrado en el Perfil Público de la Organización en la plataforma",
         required=True)
     logo_organizacion = forms.ImageField(
@@ -143,12 +143,14 @@ class OrganizacionSignUpForm(UserCreationForm):
 
         organizacion = Organizacion.objects.create(user=user)
         organizacion.email=self.cleaned_data.get('email')
-        organizacion.descripcion=self.cleaned_data.get('descripcion')
 
         organizacion.pais=self.cleaned_data.get('pais')
         organizacion.region=self.cleaned_data.get('region')
         organizacion.comuna=self.cleaned_data.get('comuna')
         organizacion.alcance=self.cleaned_data.get('alcance')
+
+        organizacion.nombre_perfil=self.cleaned_data.get('nombre_perfil')
+        organizacion.descripcion=self.cleaned_data.get('descripcion')
 
         organizacion.sitioweb=self.cleaned_data.get('sitioweb')
         organizacion.twitter=self.cleaned_data.get('twitter')
@@ -171,7 +173,7 @@ class OrganizacionChangeForm(ModelForm):
 
     class Meta:
         model = Organizacion
-        fields = ('descripcion','email_contacto',)
+        fields = ('nombre_perfil','descripcion','pais','region','comuna','alcance','sitioweb','twitter','facebook','instagram','linkedin','nombre_contacto','email_contacto','telefono_contacto','logo_organizacion')
 
 
 
