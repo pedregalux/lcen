@@ -111,13 +111,26 @@ class Propuesta(models.Model):
     titulo = models.CharField("Título Propuesta",
         max_length=255,
         null=True)
+    apoyos = models.ManyToManyField(User, related_name="apoyos_propuestas", through='ApoyoPropuesta')
+
     class Meta:
         verbose_name = "Propuesta Ciudadana"
         verbose_name_plural = "Propuestas Ciudadanas"
+
     def __str__(self):
         return self.titulo
 
+    @property
+    def num_likes(self):
+        return self.liked.all().count()
 
+
+
+
+VALOR_CHOICES = (
+    ('A', 'Apoyo'),
+    ('N', 'No Apoyo'),
+    )
 
 class ApoyoPropuesta(models.Model):
     user = models.ForeignKey(
@@ -129,6 +142,7 @@ class ApoyoPropuesta(models.Model):
         Propuesta,
         null=True,
         on_delete=models.SET_NULL)
+    valor = models.CharField(choices=VALOR_CHOICES, default='Apoyo', max_length=10)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
