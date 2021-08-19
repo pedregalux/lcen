@@ -1,5 +1,6 @@
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django import forms
+from django.forms import ModelForm
 from django.db import transaction
 from mantenedores.models import Pais, Region, Comuna, Distrito, Alcance
 from .models import User, Ciudadano, Organizacion, Convencional
@@ -156,6 +157,15 @@ class OrganizacionSignUpForm(UserCreationForm):
 
         organizacion.save()
         return user
+
+
+
+class OrganizacionChangeForm(ModelForm):
+
+    class Meta:
+        model = Organizacion
+        fields = ('descripcion','email_contacto',)
+
 
 
 

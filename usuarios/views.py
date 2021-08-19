@@ -1,11 +1,16 @@
 from django.contrib.auth import login, logout,authenticate
+from django.http import HttpResponseNotFound
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.views.generic import CreateView
 from django.views.generic import TemplateView
-from .forms import CiudadanoSignUpForm, OrganizacionSignUpForm, ConvencionalSignUpForm
+from django.views.generic import UpdateView
+from django.views.generic import ListView
+from django.views.generic import DetailView
+from .forms import CiudadanoSignUpForm, OrganizacionSignUpForm, ConvencionalSignUpForm, OrganizacionChangeForm
 from django.contrib.auth.forms import AuthenticationForm
-from .models import User
+from .models import User, Organizacion
+from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 
 
 
@@ -38,6 +43,38 @@ class organizacion_register(CreateView):
 
 
 
+class organizacion_update(UpdateView):
+    form_class = OrganizacionChangeForm
+    template_name = 'usuarios/updateorg.html'
+
+    def dispatch(self, request, *args, **kwargs):
+        if not (self.request.user.is_authenticated and self.request.user.is_organizacion):
+            return HttpResponseNotFound()
+        return super().dispatch(request, *args, **kwargs)
+
+    def get_object(self):
+        return self.request.user.organizacion
+
+    def form_valid(self, form):
+        organizacion = form.save()
+        return redirect('/inicio')
+
+
+
+class VerOrganizacionesView(ListView):
+    model = Organizacion
+    context_object_name = 'organizaciones_list'
+    template_name = 'usuarios/verorgs.html'
+
+
+
+class VerOrganizacionView(DetailView):
+    model = Organizacion
+    context_object_name = 'organizaciones_detail'
+    template_name = 'usuarios/verorg.html'
+
+
+
 class convencional_register(CreateView):
     model = User
     form_class = ConvencionalSignUpForm
@@ -61,7 +98,8 @@ def login_request(request):
             password=password)
             if user is not None :
                 login(request,user)
-                return redirect('/propuestas/crearpropuestas')
+                next = request.GET.get('next', '/inicio' )
+                return redirect(next)
             else:
                 messages.error(request,"La contraseña o usuari@ no corresponden. Por favor revisa bien.")
         else:

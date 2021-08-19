@@ -1,0 +1,277 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Organización{% endblock %}
+
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-organizaciones.jpg' %}" alt="img collage portada" class="img-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'verorganizaciones' %}">Organizaciones</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ object.nombre }}</li>
+        </ol>
+    </nav>
+</section>
+
+
+<div class="container perfil-convencional perfil-organizaciones">
+    <div class="row justify-content-md-center d-flex align-items-start">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3">
+            <div class="img-organizacion">
+                <img src="{{ object.logo.url }}" alt="img organizacion" class="img-fluid organizacion-img">
+                <p class="titulo-rrss">Redes Sociales:</p>
+                <ul class="redes-sociales">
+                    <li><a href="{{ object.twitter }}"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="{{ object.facebook }}"><i class="fab fa-facebook-square"></i></a></li>
+                    <li> <a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li> <a href="{{ object.instagram }}"><i class="fab fa-instagram-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 datos">
+            <p class="tipo-organizacion">Organización(hay que definirlo)</p>
+            <h2>{{ object.nombre }}</h2>
+            <div class="decorativo yellow"></div>
+            <ul>
+                <li>
+                    <p>
+                        <p>{{ object.descripcion|linebreaks }}</p>
+                </li>
+                <li>
+                    <p><b>Ubicación: </b><br>{{ object.pais }}</p>
+                </li>
+                <li>
+                    <p><b>Alcance de trabajo: </b><br>
+                      {% for alcance in object.alcance.all %}
+                      {{ alcance }} ·
+                      {% endfor %}</p>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-lcen button hvr-sweep-to-right">Sitio Web</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section class="propuestas-convencionales propuestas-seccion container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12">
+            <h2>compromisos e iniciativas de la organización</h2>
+            <div class="decoracion blue"></div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12">
+            <ul class="filtro-temas-propuestas">
+                <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Propuestas creadas</a></li>
+                <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Propuestas que apoya</a></li>
+            </ul>
+            <p class="titulo-seleccion">Propuestas creadas por - nombre organización - en LCeN</p>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+            <div class="propuesta salud">
+                <div class="informacion-propuesta">
+                    <h3 class="tema">Salud</h3>
+                    <p class="numero-propuesta">Propuesta <b>N° 394</b></p>
+                    <h2 class="titulo">Nombre de propuesta Lorem ipsum eneanut vestibulum.</h2>
+                    <p class="extracto">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
+                    <div class="informacion-datos">
+                        <h4>Se realizo en:</h4>
+                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
+                        <h4>Propuesta de</h4>
+                        <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+                    </div>
+                    <p class="destacado">Aprobada</p>
+                    <img src="{% static 'img/salud-bg-propuesta.png' %}" alt="img salud" class="img-tema-propuesta">
+                </div>
+                <div class="bg-black">
+                    <div class="call-to-action">
+                        <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
+                        <a href="#" class="btn-lcen">Leer propuesta</a>
+                    </div>
+                    <div class="cifras">
+                        <p><span class="numero">43</span> convencionales comprometidos</p>
+                        <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+            <div class="propuesta salud">
+                <div class="informacion-propuesta">
+                    <h3 class="tema">Medio ambiente adecuado</h3>
+                    <p class="numero-propuesta">Propuesta <b>N° 394</b></p>
+                    <h2 class="titulo">Nombre de propuesta Lorem ipsum eneanut vestibulum.</h2>
+                    <p class="extracto">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
+                    <div class="informacion-datos">
+                        <h4>Se realizo en:</h4>
+                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
+                        <h4>Propuesta de</h4>
+                        <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+                    </div>
+                    <img src="{% static 'img/medio-ambiente-bg-propuesta.png' %}" alt="img medio ambiente" class="img-tema-propuesta">
+                </div>
+                <div class="bg-black">
+                    <div class="call-to-action">
+                        <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
+                        <a href="#" class="btn-lcen">Leer propuesta</a>
+                    </div>
+                    <div class="cifras">
+                        <p><span class="numero">43</span> convencionales comprometidos</p>
+                        <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+            <div class="propuesta salud">
+                <div class="informacion-propuesta">
+                    <h3 class="tema">Adultos Mayores</h3>
+                    <p class="numero-propuesta">Propuesta <b>N° 394</b></p>
+                    <h2 class="titulo">Nombre de propuesta Lorem ipsum eneanut vestibulum.</h2>
+                    <p class="extracto">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
+                    <div class="informacion-datos">
+                        <h4>Se realizo en:</h4>
+                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
+                        <h4>Propuesta de</h4>
+                        <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+                    </div>
+                    <p class="destacado">Aprobada</p>
+                    <img src="{% static 'img/adultos-mayores-bg-propuesta.png' %}" alt="img adultos mayores" class="img-tema-propuesta">
+                </div>
+                <div class="bg-black">
+                    <div class="call-to-action">
+                        <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
+                        <a href="#" class="btn-lcen">Leer propuesta</a>
+                    </div>
+                    <div class="cifras">
+                        <p><span class="numero">43</span> convencionales comprometidos</p>
+                        <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<h2>Organización</h2>
+
+{% if object.nombre %}
+Nombre: {{ object.nombre }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.sigla %}
+Sigla: {{ object.sigla }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.logo %}
+Logo: <img src="{{ MEDIA_URL }}{{ object.logo.url }}" class="img-responsive"/>
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.descripcion %}
+Descripción: {{ object.descripcion }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.email %}
+Email Organización: {{ object.email }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.twitter %}
+Twitter:
+{{ object.twitter }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.facebook %}
+Facebook:
+{{ object.facebook }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.instagram %}
+Instagram:
+{{ object.instagram }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.pais %}
+País: {{ object.pais }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.region %}
+Región: {{ object.region }}
+{% else %}
+{% endif %}
+
+<br />
+
+{% if object.comuna %}
+Comuna: {{ object.comuna }}
+{% else %}
+{% endif %}
+
+<br />
+
+Otros temas:
+{% for alcance in object.alcance.all %}
+{{ alcance }} ·
+{% endfor %}
+
+<br />
+
+{% endblock %}
