@@ -126,7 +126,6 @@ class Propuesta(models.Model):
 
 
 
-
 VALOR_CHOICES = (
     ('A', 'Apoyo'),
     ('N', 'No Apoyo'),
@@ -151,6 +150,36 @@ class ApoyoPropuesta(models.Model):
     class Meta:
             verbose_name = "Apoyo Propuestas"
             verbose_name_plural = "Apoyos Propuestas"
+
+    def __str__(self):
+        return self.propuesta.titulo
+
+
+
+COMP_CHOICES = (
+    ('C', 'Compromiso'),
+    ('N', 'No Compromiso'),
+    )
+
+class CompromisoPropuesta(models.Model):
+    user = models.ForeignKey(
+        User,
+        verbose_name="Usuario que se compromete con la propuesta",
+        null=True,
+        related_name="compromiso_propuesta",
+        on_delete=models.SET_NULL)
+    propuesta = models.ForeignKey(
+        Propuesta,
+        null=True,
+        on_delete=models.SET_NULL)
+    valor = models.CharField(choices=COMP_CHOICES, default='Compromiso', max_length=10)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+            verbose_name = "Compromiso Propuestas"
+            verbose_name_plural = "Compromisos Propuestas"
 
     def __str__(self):
         return self.propuesta.titulo
