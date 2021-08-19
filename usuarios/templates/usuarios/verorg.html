@@ -10,7 +10,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
             <li class="breadcrumb-item"><a href="{% url 'verorganizaciones' %}">Organizaciones</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ object.nombre }}</li>
+            <li class="breadcrumb-item active" aria-current="page">{{ object.nombre_perfil }}</li>
         </ol>
     </nav>
 </section>
@@ -20,19 +20,19 @@
     <div class="row justify-content-md-center d-flex align-items-start">
         <div class="col-12 col-sm-12 col-md-4 col-lg-3">
             <div class="img-organizacion">
-                <img src="{{ object.logo.url }}" alt="img organizacion" class="img-fluid organizacion-img">
+                <img src="{{ object.logo_organizacion.url }}" alt="img organizacion" class="img-fluid organizacion-img">
                 <p class="titulo-rrss">Redes Sociales:</p>
                 <ul class="redes-sociales">
                     <li><a href="{{ object.twitter }}"><i class="fab fa-twitter-square"></i></a></li>
                     <li><a href="{{ object.facebook }}"><i class="fab fa-facebook-square"></i></a></li>
-                    <li> <a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li> <a href="{{ object.linkedin }}"><i class="fab fa-linkedin"></i></a></li>
                     <li> <a href="{{ object.instagram }}"><i class="fab fa-instagram-square"></i></a></li>
                 </ul>
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 datos">
-            <p class="tipo-organizacion">Organización(hay que definirlo)</p>
-            <h2>{{ object.nombre }}</h2>
+            <p class="tipo-organizacion">Organización</p>
+            <h2>{{ object.nombre_perfil }}</h2>
             <div class="decorativo yellow"></div>
             <ul>
                 <li>
@@ -43,13 +43,12 @@
                     <p><b>Ubicación: </b><br>{{ object.pais }}</p>
                 </li>
                 <li>
-                    <p><b>Alcance de trabajo: </b><br>
-                      {% for alcance in object.alcance.all %}
-                      {{ alcance }} ·
-                      {% endfor %}</p>
+                    <p><b>Alcance del trabajo: </b><br>
+                      {{ object.alcance }}
+                      </p>
                 </li>
                 <li>
-                    <a href="#" class="btn btn-lcen button hvr-sweep-to-right">Sitio Web</a>
+                    <a href="{{ object.sitioweb }}" class="btn btn-lcen button hvr-sweep-to-right">Sitio Web</a>
                 </li>
             </ul>
         </div>
