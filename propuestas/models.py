@@ -135,6 +135,7 @@ VALOR_CHOICES = (
 class ApoyoPropuesta(models.Model):
     user = models.ForeignKey(
         User,
+        verbose_name="Usuario que apoya la propuesta",
         null=True,
         related_name="apoyo_propuesta",
         on_delete=models.SET_NULL)
@@ -150,3 +151,6 @@ class ApoyoPropuesta(models.Model):
     class Meta:
             verbose_name = "Apoyo Propuestas"
             verbose_name_plural = "Apoyos Propuestas"
+
+    def __str__(self):
+        return self.propuesta.titulo
