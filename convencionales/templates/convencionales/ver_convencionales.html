@@ -63,13 +63,14 @@
     </div>
 </div>
 
-{% for convencional in constituyentes_list %}
+
 
 <section class="resultados-convencionales container">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12">
             <h3>Resultados de búsqueda por comuna: <b>Puente Alto</b></h3>
         </div>
+        {% for convencional in constituyentes_list %}
         <div class="col-12 col-sm-12 col-md-3">
             <figure class="figure">
                 <img src="{{ convencional.foto.url }}" alt="constituyente" class="figure-img img-fluid">
@@ -90,8 +91,10 @@
                 </figcaption>
             </figure>
         </div>
+        {% endfor %}
       </div>
   </section>
+
 
 
   <!-- Media Luna Convencionales -->
@@ -2651,8 +2654,6 @@
 
       </div>
   </section>
-
-{% endfor %}
 
 
 
