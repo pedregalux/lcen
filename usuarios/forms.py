@@ -177,7 +177,6 @@ class OrganizacionChangeForm(ModelForm):
 
 
 
-
 class ConvencionalSignUpForm(UserCreationForm):
     username = forms.CharField(label='Nombre Usuario')
     password1 = forms.CharField(label='Contraseña', widget=(forms.PasswordInput(attrs={'class': 'form-control'})))
