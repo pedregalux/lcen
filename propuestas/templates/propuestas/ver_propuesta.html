@@ -39,9 +39,24 @@
             <div class="info-adicional">
                 <h5>Documentos adjuntos:</h5>
                 <ul>
+                  {% if object.anexo_propuesta %}
                     <li><a href="{{ object.anexo_propuesta.url }}" target="_blank">Documento Adjunto (Abrir o Descargar)</a></li>
-                    <li><a href="#" target="_blank">Nombre documento</a></li>
-                    <li><a href="#" target="_blank">Nombre documento</a></li>
+                  {% else %}
+                    No hay un documento anexo
+                  {% endif %}
+
+                  {% if object.anexo2_propuesta %}
+                    <li><a href="{{ object.anexo2_propuesta.url }}" target="_blank">Documento Adjunto (Abrir o Descargar)</a></li>
+                  {% else %}
+                    
+                  {% endif %}
+
+                  {% if object.anexo3_propuesta %}
+                    <li><a href="{{ object.anexo3_propuesta.url }}" target="_blank">Documento Adjunto (Abrir o Descargar)</a></li>
+                  {% else %}
+
+                  {% endif %}
+
                 </ul>
                 <h5>Enlaces de interes:</h5>
                 <ul>
