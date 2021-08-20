@@ -59,7 +59,7 @@
                 <h3>Esta propuesta cuenta con:</h3>
                 <div class="cifras">
                     <p><span class="numero">43</span> convencionales comprometidos</p>
-                    <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
+                    <p><span class="numero">{{ object.apoyos.count }}</span> apoyo(s) ciudadano(s)</p>
                 </div>
                 <h3 class="apoyar">Apoya esta propuesta</h3>
                 <!-- Button trigger modal -->
@@ -72,9 +72,18 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <h3>¿Deseas apoyar la propuesta Nombre de propuesta?</h3>
+                                <h3>¿Deseas apoyar la propuesta {{ object.titulo }}?</h3>
                                 <p>Al apoyar esta propuesta aceptas que La Constitución es Nuestra te notifique vía correo electrónico cuando un convencional decida apoyar esta propuesta.</p>
+
                                 <a href="#" class="btn btn-lcen apoyar button hvr-sweep-to-right">Apoyar <i class="fas fa-heart"></i></a>
+
+                                <form class="" action="{% url 'prop_apoyo' object.pk %}" method="post">
+                                  {% csrf_token %}
+                                  <button type="submit" name="object_id" value="{{ object.id }}" class="btn btn-lcen apoyar button hvr-sweep-to-right">
+                                    Apoyar2 <i class="fas fa-heart"></i>
+                                  </button>
+                                </form>
+
                             </div>
                         </div>
                     </div>

@@ -112,6 +112,7 @@ class Propuesta(models.Model):
         max_length=255,
         null=True)
     apoyos = models.ManyToManyField(User, related_name="apoyos_propuestas", through='ApoyoPropuesta')
+    compromisos = models.ManyToManyField(User, related_name="compromisos_propuestas", through='CompromisoPropuesta')
 
     class Meta:
         verbose_name = "Propuesta Ciudadana"
@@ -121,8 +122,14 @@ class Propuesta(models.Model):
         return self.titulo
 
     @property
-    def num_likes(self):
-        return self.liked.all().count()
+    def numapoyos_likes(self):
+        return self.apoyos.all().count()
+
+    @property
+    def numcompromisos_likes(self):
+        return self.compromisos.all().count()
+
+
 
 
 
