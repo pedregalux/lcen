@@ -4,7 +4,7 @@ from .models import TemaPropuesta, ComponenteConstitucion, Propuesta, ApoyoPropu
 
 
 class ApoyoPropuestaAdmin(admin.ModelAdmin):
-    list_display = ('propuesta', 'user', 'valor')
+    list_display = ('propuesta', 'user')
 
 
 admin.site.register(TemaPropuesta)

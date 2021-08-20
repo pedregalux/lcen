@@ -107,6 +107,16 @@ class Propuesta(models.Model):
         verbose_name="Otros anexos de la Propuesta-2",
         null=True,
         blank=True)
+    link_extra1 = models.URLField(
+        'Link a información complementaria -2-',
+        null=True,
+        blank=True,
+        help_text="Ingresa la URL así: https://www.link.com")
+    link_extra2 = models.URLField(
+        'Link a información complementaria -1-',
+        null=True,
+        blank=True,
+        help_text="Ingresa la URL así: https://www.link.com")
     # paso 7
     titulo = models.CharField("Título Propuesta",
         max_length=255,
