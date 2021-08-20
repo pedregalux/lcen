@@ -95,8 +95,6 @@
                                 <h3>¿Deseas apoyar la propuesta {{ object.titulo }}?</h3>
                                 <p>Al apoyar esta propuesta aceptas que La Constitución es Nuestra te notifique vía correo electrónico cuando un convencional decida apoyar esta propuesta.</p>
 
-                                <a href="#" class="btn btn-lcen apoyar button hvr-sweep-to-right">Apoyar <i class="fas fa-heart"></i></a>
-
                                 <form class="" action="{% url 'prop_apoyo' object.pk %}" method="post">
                                   {% csrf_token %}
                                   <button type="submit" name="object_id" value="{{ object.id }}" class="btn btn-lcen apoyar button hvr-sweep-to-right">
