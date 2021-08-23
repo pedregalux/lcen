@@ -9,6 +9,7 @@ from django.views.generic import ListView
 from django.views.generic import DetailView
 from .forms import CiudadanoSignUpForm, OrganizacionSignUpForm, ConvencionalSignUpForm, OrganizacionChangeForm
 from django.contrib.auth.forms import AuthenticationForm
+from propuestas.models import Propuesta
 from .models import User, Organizacion
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 
@@ -73,6 +74,11 @@ class VerOrganizacionView(DetailView):
     model = Organizacion
     context_object_name = 'organizaciones_detail'
     template_name = 'usuarios/verorg.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['propuesta_list'] = Propuesta.objects.all()
+        return context
 
 
 
