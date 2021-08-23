@@ -67,94 +67,109 @@
                 <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Propuestas creadas</a></li>
                 <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Propuestas que apoya</a></li>
             </ul>
+        </div>
+
+
+
+            <div class="col-12 col-sm-12 col-md-12">
             <p class="titulo-seleccion">Propuestas creadas por {{ object.nombre_perfil }} en LCeN</p>
-        </div>
+            </div>
 
 
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-            <div class="propuesta salud">
-                <div class="informacion-propuesta">
-                    <h3 class="tema">Salud</h3>
-                    <p class="numero-propuesta">Propuesta <b>N° 394</b></p>
-                    <h2 class="titulo">Nombre de propuesta Lorem ipsum eneanut vestibulum.</h2>
-                    <p class="extracto">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
-                    <div class="informacion-datos">
-                        <h4>Se realizo en:</h4>
-                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
-                        <h4>Propuesta de</h4>
-                        <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+
+        {% for propuesta in lista_creadas %}
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="propuesta salud">
+                    <div class="informacion-propuesta">
+                        <h3 class="tema">{{ propuesta.tema }}</h3>
+                        <p class="numero-propuesta">Propuesta <b>N° {{ propuesta.id }}</b></p>
+                        <h2 class="titulo">{{ propuesta.titulo }}</h2>
+                        <p class="extracto">
+                          {{ propuesta.problema|truncatechars:250 }}
+                        </p>
+                        <div class="informacion-datos">
+                            <h4>Se realizó en:</h4>
+                            <p class="lugar">
+                              {{ propuesta.region }}, Comuna {{ propuesta.comuna }}
+                            </p>
+                            <h4>Propuesta de</h4>
+                            {% if propuesta.autor.is_organizacion %}
+                            <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+                            {% else %}
+                            <p class="lugar">
+                            Propuesta Personal
+                            </p>
+                            {% endif %}
+                        </div>
+                        <img src="{{ propuesta.tema.icono_tema.url }}" alt="img salud" class="img-tema-propuesta">
                     </div>
-                    <p class="destacado">Aprobada</p>
-                    <img src="{% static 'img/salud-bg-propuesta.png' %}" alt="img salud" class="img-tema-propuesta">
-                </div>
-                <div class="bg-black">
-                    <div class="call-to-action">
-                        <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
-                        <a href="#" class="btn-lcen">Leer propuesta</a>
-                    </div>
-                    <div class="cifras">
-                        <p><span class="numero">43</span> convencionales comprometidos</p>
-                        <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
+                    <div class="bg-black">
+                        <div class="call-to-action">
+                            <a href="/propuestas/verpropuestas/{{ propuesta.id }}" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
+                            <a href="/propuestas/verpropuestas/{{ propuesta.id }}" class="btn-lcen">Leer propuesta</a>
+                        </div>
+                        <div class="cifras">
+                            <p><span class="numero"></span> convencionales comprometidos</p>
+                            <p><span class="numero">{{ propuesta.apoyos.count }}</span> apoyo(s) ciudadano(s)</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+        {% endfor %}
+
+
+
+        <div class="col-12 col-sm-12 col-md-12">
+        <p class="titulo-seleccion">Propuestas apoyadas por {{ object.nombre_perfil }} en LCeN</p>
         </div>
 
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-            <div class="propuesta salud">
-                <div class="informacion-propuesta">
-                    <h3 class="tema">Medio ambiente adecuado</h3>
-                    <p class="numero-propuesta">Propuesta <b>N° 394</b></p>
-                    <h2 class="titulo">Nombre de propuesta Lorem ipsum eneanut vestibulum.</h2>
-                    <p class="extracto">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
-                    <div class="informacion-datos">
-                        <h4>Se realizo en:</h4>
-                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
-                        <h4>Propuesta de</h4>
-                        <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+
+
+        {% for propuesta in lista_apoyadas %}
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="propuesta salud">
+                    <div class="informacion-propuesta">
+                        <h3 class="tema">{{ propuesta.tema }}</h3>
+                        <p class="numero-propuesta">Propuesta <b>N° {{ propuesta.id }}</b></p>
+                        <h2 class="titulo">{{ propuesta.titulo }}</h2>
+                        <p class="extracto">
+                          {{ propuesta.problema|truncatechars:250 }}
+                        </p>
+                        <div class="informacion-datos">
+                            <h4>Se realizó en:</h4>
+                            <p class="lugar">
+                              {{ propuesta.region }}, Comuna {{ propuesta.comuna }}
+                            </p>
+                            <h4>Propuesta de</h4>
+                            {% if propuesta.autor.is_organizacion %}
+                            <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+                            {% else %}
+                            <p class="lugar">
+                            Propuesta Personal
+                            </p>
+                            {% endif %}
+                        </div>
+                        <img src="{{ propuesta.tema.icono_tema.url }}" alt="img salud" class="img-tema-propuesta">
                     </div>
-                    <img src="{% static 'img/medio-ambiente-bg-propuesta.png' %}" alt="img medio ambiente" class="img-tema-propuesta">
-                </div>
-                <div class="bg-black">
-                    <div class="call-to-action">
-                        <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
-                        <a href="#" class="btn-lcen">Leer propuesta</a>
-                    </div>
-                    <div class="cifras">
-                        <p><span class="numero">43</span> convencionales comprometidos</p>
-                        <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-            <div class="propuesta salud">
-                <div class="informacion-propuesta">
-                    <h3 class="tema">Adultos Mayores</h3>
-                    <p class="numero-propuesta">Propuesta <b>N° 394</b></p>
-                    <h2 class="titulo">Nombre de propuesta Lorem ipsum eneanut vestibulum.</h2>
-                    <p class="extracto">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
-                    <div class="informacion-datos">
-                        <h4>Se realizo en:</h4>
-                        <p class="lugar">Distrito 12, comuna Puente Alto</p>
-                        <h4>Propuesta de</h4>
-                        <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
-                    </div>
-                    <p class="destacado">Aprobada</p>
-                    <img src="{% static 'img/adultos-mayores-bg-propuesta.png' %}" alt="img adultos mayores" class="img-tema-propuesta">
-                </div>
-                <div class="bg-black">
-                    <div class="call-to-action">
-                        <a href="#" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
-                        <a href="#" class="btn-lcen">Leer propuesta</a>
-                    </div>
-                    <div class="cifras">
-                        <p><span class="numero">43</span> convencionales comprometidos</p>
-                        <p><span class="numero">120</span> apoyo(s) ciudadano(s)</p>
+                    <div class="bg-black">
+                        <div class="call-to-action">
+                            <a href="/propuestas/verpropuestas/{{ propuesta.id }}" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
+                            <a href="/propuestas/verpropuestas/{{ propuesta.id }}" class="btn-lcen">Leer propuesta</a>
+                        </div>
+                        <div class="cifras">
+                            <p><span class="numero"></span> convencionales comprometidos</p>
+                            <p><span class="numero">{{ propuesta.apoyos.count }}</span> apoyo(s) ciudadano(s)</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        {% endfor %}
+
+
 
         <div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
             <nav aria-label="Page navigation example">
@@ -185,87 +200,7 @@
 
 
 
-<h2>Organización</h2>
 
-{% if object.nombre %}
-Nombre: {{ object.nombre }}
-{% else %}
-{% endif %}
-
-<br />
-
-{% if object.sigla %}
-Sigla: {{ object.sigla }}
-{% else %}
-{% endif %}
-
-<br />
-
-{% if object.logo %}
-Logo: <img src="{{ MEDIA_URL }}{{ object.logo.url }}" class="img-responsive"/>
-{% else %}
-{% endif %}
-
-<br />
-
-{% if object.descripcion %}
-Descripción: {{ object.descripcion }}
-{% else %}
-{% endif %}
-
-<br />
-
-{% if object.email %}
-Email Organización: {{ object.email }}
-{% else %}
-{% endif %}
-
-<br />
-
-{% if object.twitter %}
-Twitter:
-{{ object.twitter }}
-{% else %}
-{% endif %}
-
-<br />
-
-{% if object.facebook %}
-Facebook:
-{{ object.facebook }}
-{% else %}
-{% endif %}
-
-<br />
-
-{% if object.instagram %}
-Instagram:
-{{ object.instagram }}
-{% else %}
-{% endif %}
-
-<br />
-
-{% if object.pais %}
-País: {{ object.pais }}
-{% else %}
-{% endif %}
-
-<br />
-
-{% if object.region %}
-Región: {{ object.region }}
-{% else %}
-{% endif %}
-
-<br />
-
-{% if object.comuna %}
-Comuna: {{ object.comuna }}
-{% else %}
-{% endif %}
-
-<br />
 
 Otros temas:
 {% for alcance in object.alcance.all %}

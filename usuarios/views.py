@@ -77,7 +77,8 @@ class VerOrganizacionView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['propuesta_list'] = Propuesta.objects.all()
+        context['lista_creadas'] = Propuesta.objects.filter(autor=self.object.user)
+        context['lista_apoyadas'] = Propuesta.objects.filter(apoyos=self.object.user)
         return context
 
 
