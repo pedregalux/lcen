@@ -58,13 +58,13 @@
                 <h5>Enlaces de interes:</h5>
                 <ul>
                   {% if object.link_extra1 %}
-                    <li><a href="{{ object.anexo_propuesta.url }}" target="_blank">{{ object.link_extra1 }}</a></li>
+                    <li><a href="{{ object.link_extra1 }}" target="_blank">{{ object.link_extra1 }}</a></li>
                   {% else %}
                     No hay link con información complementaria
                   {% endif %}
 
                   {% if object.link_extra2 %}
-                    <li><a href="{{ object.anexo_propuesta.url }}" target="_blank">{{ object.link_extra2 }}</a></li>
+                    <li><a href="{{ object.link_extra2 }}" target="_blank">{{ object.link_extra2 }}</a></li>
                   {% else %}
                   {% endif %}
                 </ul>

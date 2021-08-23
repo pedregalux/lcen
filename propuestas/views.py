@@ -70,6 +70,14 @@ def ApoyoView(request, pk):
     return HttpResponseRedirect(reverse('ver_propuesta', args=[str(pk)]))
 
 
+
+def CompromisoView(request, pk):
+    apyo = Propuesta.objects.get(pk=pk)
+    apyo.compromisos.add(request.user)
+    return HttpResponseRedirect(reverse('ver_propuesta', args=[str(pk)]))
+
+
+
 # class CrearPropuestaView(FormView):
 #     permission_required = 'propuestas.add_propuesta'
 #     form_class = CrearPropuestaForm
