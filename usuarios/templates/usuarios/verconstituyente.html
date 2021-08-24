@@ -50,19 +50,19 @@
                 <li>
                     <p><b>Lista:</b> {{ object.lista }}</p>
                 </li>
-                <li>
+                <!-- <li>
                     <p><b>Movimiento / Organización:</b> Está como partido y/o movimiento </p>
-                </li>
+                </li> -->
                 <li>
                     <p><b>Enlace a declaración de intereses y patrimonio: <a href="{{ object.linkintereses }}" class="enlace-parrafos">Revisar</a></b></p>
                 </li>
                 <li>
-                    <p><b>Redes Sociales:(agregar linkedin)</b></p>
+                    <p><b>Redes Sociales:</b></p>
                 </li>
                 <li class="redes-sociales">
                     <a href="{{ object.twitter }}"><i class="fab fa-twitter-square"></i></a>
                     <a href="{{ object.facebook }}"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="{{ object.linkedin }}"><i class="fab fa-linkedin"></i></a>
                     <a href="{{ object.instagram }}"><i class="fab fa-instagram-square"></i></a>
                 </li>
             </ul>
