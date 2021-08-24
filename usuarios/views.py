@@ -10,7 +10,7 @@ from django.views.generic import DetailView
 from .forms import CiudadanoSignUpForm, OrganizacionSignUpForm, ConvencionalSignUpForm, OrganizacionChangeForm
 from django.contrib.auth.forms import AuthenticationForm
 from propuestas.models import Propuesta
-from .models import User, Organizacion
+from .models import User, Organizacion, Convencional
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 
 
@@ -79,6 +79,25 @@ class VerOrganizacionView(DetailView):
         context = super().get_context_data(**kwargs)
         context['lista_creadas'] = Propuesta.objects.filter(autor=self.object.user)
         context['lista_apoyadas'] = Propuesta.objects.filter(apoyos=self.object.user)
+        return context
+
+
+
+class VerConvencionalesView(ListView):
+    model = Convencional
+    context_object_name = 'constituyentes_list'
+    template_name = 'usuarios/verconstituyentes.html'
+
+
+
+class VerConvencionalView(DetailView):
+    model = Convencional
+    context_object_name = 'constituyentes_detail'
+    template_name = 'usuarios/verconstituyente.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['lista_comprometidas'] = Propuesta.objects.filter(autor=self.object.user)
         return context
 
 

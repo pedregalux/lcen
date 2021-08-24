@@ -9,6 +9,8 @@ urlpatterns=[
      path('verorganizaciones/',views.VerOrganizacionesView.as_view(), name='verorganizaciones'),
      path('verorganizaciones/<pk>',views.VerOrganizacionView.as_view(), name='verorganizacion'),
      path('convencional_register/',views.convencional_register.as_view(), name='convencional_register'),
+     path('verconvencionales/',views.VerConvencionalesView.as_view(), name='verconvencionales'),
+     path('verconvencionales/<pk>',views.VerConvencionalView.as_view(), name='verconvencional'),
      path('login/',views.login_request, name='login'),
      path('logout/',views.logout_view, name='logout'),
 ]

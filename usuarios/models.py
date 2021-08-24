@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings
 from django.contrib.auth.models import Group
+from convencionales.models import Cargo, Lista, Movimiento, Comision
 from mantenedores.models import Pais, Region, Distrito, Comuna, Alcance
 
 
@@ -145,10 +146,74 @@ class Organizacion(models.Model):
 
 
 
+
+
 class Convencional(models.Model):
     user = models.OneToOneField(User,
         on_delete = models.CASCADE)
     email = models.EmailField(max_length=255)
+    # campos adicionales para completar por admin
+    cargo = models.ManyToManyField(Cargo,
+        related_name="cargos_en_constituyente",
+        verbose_name="Cargos de Constituyente en la Convención",
+        blank=True)
+    RESERVADO = (
+        ('Sí', 'Sí'),
+        ('No', 'No'),
+        )
+    reservado = models.CharField("Reservado",
+        max_length=100,
+        choices=RESERVADO)
+    lista = models.ForeignKey(Lista,
+        related_name="lista_de_constituyente",
+        verbose_name="Lista del Constituyente",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL)
+    distrito = models.ForeignKey(Distrito,
+        related_name="distrito_de_constituyente",
+        verbose_name="Distrito del Constituyente",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL)
+    movimiento = models.ForeignKey(Movimiento,
+        related_name="movimiento_de_constituyente",
+        verbose_name="Partido/Movimiento del Constituyente",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL)
+    linkintereses = models.URLField("Link Declaración de Intereses",
+        max_length = 225,
+        null=True,
+        blank=True)
+    biografia = models.TextField("Historia Política",
+        null=True,
+        blank=True)
+    email = models.EmailField("E-mail de Contacto",
+        max_length=254,
+        null=True,
+        blank=True)
+    twitter = models.URLField("Twitter",
+        max_length=254,
+        null=True,
+        blank=True)
+    facebook = models.URLField("Facebook",
+        max_length=254,
+        null=True,
+        blank=True)
+    instagram = models.URLField("Instagram",
+        max_length=254,
+        null=True,
+        blank=True)
+    linkedin = models.URLField("Linkedin",
+        max_length=254,
+        null=True,
+        blank=True)
+    foto = models.ImageField("Foto Constituyente",
+        upload_to='fotos_constituyentes/',
+        null=True,
+        blank=True)
+
     cualquiercosa = models.CharField(max_length=255)
     class Meta:
         verbose_name = "Convencional"
