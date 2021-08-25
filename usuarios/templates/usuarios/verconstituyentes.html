@@ -82,7 +82,11 @@
         {% for convencional in constituyentes_list %}
         <div class="col-12 col-sm-12 col-md-3">
             <figure class="figure">
+              {% if convencional.foto %}
                 <img src="{{ convencional.foto.url }}" alt="constituyente" class="figure-img img-fluid">
+              {% else %}
+                <img src="{% static 'img/foto.jpeg' %}" alt="constituyente" class="figure-img img-fluid">
+              {% endif %}
                 <figcaption class="figure-caption">
                     <h4>{{ convencional.user.nombre }}</h4>
                     <ul class="datos">
