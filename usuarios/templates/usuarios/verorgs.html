@@ -19,7 +19,7 @@
 <section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
     <div class="container">
         <div class="row">
-            <div class="organizaciones-lista wow animate__animated animate__fadeIn animate__delay-2s">
+            <div class="organizaciones-lista wow animate__animated animate__fadeIn">
                 <ul>
                   {% for organizacion in organizaciones_list %}
                   <li><a href="{{ organizacion.pk }}"><img src="{{ organizacion.logo_organizacion.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
@@ -30,12 +30,13 @@
     </div>
 </section>
 
+
 <section class="container call-to-action-organizaciones">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn">
             <h2>¿Eres una organización y quieres estar aquí?</h2>
             <div class="call-to-action">
-                <a href="{% url 'organizacion_register' %}" class="btn-lcen button hvr-sweep-to-right">Ingresa aquí</a>
+                <a href="#" class="btn-lcen button hvr-sweep-to-right">Ingresa aquí</a>
             </div>
         </div>
     </div>

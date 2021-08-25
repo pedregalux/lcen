@@ -1,0 +1,233 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %} Preguntas Frecuentes {% endblock %} 
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/preguntas-frecuentes.jpeg' %}" alt="img collage portada" class="img-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Preguntas Frecuentes</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container que-es-lcen py-5 mt-5">
+    <div class="row d-flex align-items-center">
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+            <h2>Preguntas Frecuentes</h2>
+            <p>¿Cómo llegamos al proceso constituyente? ¿Qué se viene? Acá te explicamos en simples palabras todas tus preguntas relacionadas con el proceso histórico que Chile está viviendo.</p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-2s">
+            <img src="{% static 'img/collage-preguntas-frecuentes.png' %}" alt="collage preguntas frecuentes" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<div class="container preguntas wow animate__animated animate__fadeIn animate__delay-1s">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-10">
+            <h3>1. Plazos de la convención</h3>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse1" aria-expanded="true" aria-controls="panelsStayOpen-collapse1">
+        ¿Cuáles son los plazos de funcionamiento de la convención constitucional?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading1">
+                        <div class="accordion-body">
+                            <p>Una vez iniciado su funcionamiento, la Convención Constitucional tendrá un plazo de <b>9 meses</b> para la redacción de la Constitución, que podrán ser extendidos sólo una vez por <b>3 meses más</b>. Es decir, la Convención tendrá como máximo <b>1 año</b> para redactar la nueva Constitución.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false" aria-controls="panelsStayOpen-collapse2">
+        ¿Qué ocurrirá luego que la convención redacte una nueva Constitución?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading2">
+                        <div class="accordion-body">
+                            <p>La Convención debe comunicar la propuesta de texto constitucional a la Presidenta o el Presidente de la República, la que deberá convocar un plebiscito nacional, conocido como “plebiscito de salida”. En él, la ciudadanía decidirá si aprueba o rechaza la propuesta elaborada por la Convención. El plebiscito de salida deberá realizarse 60 días después de la convocatoria de la Presidenta o el Presidente de la República</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+        ¿Cuáles son las opciones luego de que se realice el plebiscito de salida?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+                        <div class="accordion-body">
+                            <p>Si el resultado del plebiscito fuera la aprobación, tendremos nueva Constitución, la que deberá ser promulgada y publicada por la/el Presidenta/e de la República.</p>
+                            <p>En ese momento, la nueva carta fundamental entraría en vigencia. Por el contrario, si ganara la opción de rechazo, la Constitución de 1980 se mantendría vigente sin interrupciones. </p>
+                            <p>Hay que resaltar que durante el tiempo de trabajo de la Convención Constitucional, la actual Constitución de 1980 seguirá vigente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>2. Composición de la Convención Constitucional</h3>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+        ¿Cómo se compone la convención constitucional?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+                        <div class="accordion-body">
+                            <p>La Convención estará integrada por 155 Convencionales, quienes representan a los 28 distritos en los que está dividido el país y a 10 pueblos indígenas.</p>
+                            <p>Chile tendrá el primer proceso constituyente paritario en el mundo. Esto significa que las listas que se presentaron a las elecciones de la convención Constitucional debieron contemplar la misma cantidad de hombres y mujeres. Además, una vez realizada la elección, se revisó en cada distrito si el resultado fue paritario. En aquellos casos en los que no se cumplió con la paridad, se ajustó la lista de convencionales electas/os hasta que se logre el equilibrio. La Convención quedó compuesta por 78 convencionales hombres y 77 mujeres; y la aplicación de la regla de paridad resultó en el reemplazo de 12 mujeres y 5 hombres.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3>3. La regla de ⅔ y “Hoja en blanco”</h3>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+        ¿Cómo serán votadas las propuestas en la Convención Constitucional?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+                        <div class="accordion-body">
+                            <p>Todas las normas que la Convención Constitucional incorpore en la futura Constitución deben ser aprobadas por ⅔ de sus integrantes. Por ejemplo: para decidir si el derecho al agua debe estar consagrado en la nueva Constitución, se requiere que 103 miembros de la Convención estén de acuerdo con esa norma.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+        ¿Qué significa que la Convención Constituyente comience a escribir la nueva Constitución en una hoja en blanco?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+                        <div class="accordion-body">
+                            <p>Se habla de la “hoja en blanco” porque la Convención no utilizará como base la Constitución actual, sino que la elaboración de la Nueva Constitución comenzará desde cero.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7" aria-expanded="false" aria-controls="panelsStayOpen-collapse7">
+       ¿Qué pasará con aquellas materias que no sean aprobadas por la Convención Constitucional?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading7">
+                        <div class="accordion-body">
+                            <p>Aquellas materias que no sean aprobadas por ⅔ de la Convención Constitucional quedarán fuera de la Constitución y deberán ser resueltos por el Congreso a través de la dictación de las leyes respectivas. Por ejemplo, si no hubiera un acuerdo de ⅔ de la Convención Constitucional sobre las reglas de las Fuerzas Armadas y de Orden, no significa que estas dejen de existir, sino que estarán reguladas por las leyes específicas para ellas, las que podrán ser reformadas con mayor flexibilidad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8" aria-expanded="false" aria-controls="panelsStayOpen-collapse8">
+¿Qué decisiones de la Convención están sometidas a la regla de 2/3?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading8">
+                        <div class="accordion-body">
+                            <p>Solamente el reglamento de votación y las normas que se incorporen en el borrador de Constitución. Esto significa que </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3>4. Límites</h3>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading9">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse9" aria-expanded="false" aria-controls="panelsStayOpen-collapse9">
+       ¿Hay límites en los temas que puede aprobar la convención constitucional?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse9" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading9">
+                        <div class="accordion-body">
+                            <p>Que la Convención Constitucional comience la redacción “desde cero” no significa que puedan hacer cualquier cosa. La Convención Constitucional no puede proponer una Constitución contraria al carácter de república del Estado de Chile y su régimen democrático. En otras palabras, la Nueva Constitución no puede establecer una monarquía ni una dictadura.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading10">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse10" aria-expanded="false" aria-controls="panelsStayOpen-collapse10">
+       ¿Cuál es el objetivo de la convención constitucional?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse10" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading10">
+                        <div class="accordion-body">
+                            <p>Que la Convención Constitucional comience la redacción “desde cero” no significa que puedan hacer cualquier cosa. La Convención Constitucional no puede proponer una Constitución contraria al carácter de república del Estado de Chile y su régimen democrático. En otras palabras, la Nueva Constitución no puede establecer una monarquía ni una dictadura.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading11">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse11" aria-expanded="false" aria-controls="panelsStayOpen-collapse11">
+       ¿Qué ocurrirá durante la redacción de la nueva Constitución con los tratados internacionales que Chile ha firmado?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse11" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading11">
+                        <div class="accordion-body">
+                            <p>Los tratados internacionales seguirán siendo obligatorios para Chile y no es la Convención la que decide si el Estado debe suscribir un nuevo tratado ni denunciar uno que ya haya sido suscrito. Estas decisiones las debe adoptar el Gobierno en conjunto con el Congreso.</p>
+                            <p>Sin embargo, la Nueva Constitución puede definir nuevas reglas sobre la firma y retiro de Tratados Internacionales, que podrían ser más democráticas y, por ejemplo, incorporar la participación ciudadana en las decisiones. Por lo tanto, que la Convención tenga como límite las obligaciones internacionales a las que está sometido el Estado de Chile, la implementación de la Nueva Constitución podría generar nuevos espacios para innovar en esta materia.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3>5. El reglamento</h3>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading12">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse12" aria-expanded="false" aria-controls="panelsStayOpen-collapse12">
+       ¿La convención constitucional puede crear sus propias reglas?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse12" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading12">
+                        <div class="accordion-body">
+                            <p>Todos los temas que no estén regulados serán regulados en el Reglamento de la Convención Constitucional, que deberá ser aprobado por esta misma.</p>
+                            <p>Dentro del reglamento, las normas sobre votación deberán ser aprobadas por ⅔ de la Convención Constitucional, mientras que para el resto no se estableció un quórum, por lo que se aplica la mayoría simple. En este segundo grupo están las normas que regulen la estructura de la Convención Constitucional; por ejemplo, si se crean comisiones de trabajo temáticas, cada cuánto funciona el plenario o si funcionarán en otras regiones del país distintas a la Metropolitana, entre otros, los mecanismos de participación ciudadana y las reglas de transparencia del proceso.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3>6. Órganos y potestades</h3>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading13">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse13" aria-expanded="false" aria-controls="panelsStayOpen-collapse13">
+       ¿Cómo se organizará la Convención Constitucional?
+      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse13" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading13">
+                        <div class="accordion-body">
+                            <p>La Convención Constitucional tendrá un/a Presidente/a y un/a Vicepresidente/a, que deberán elegirse en la primera sesión por la mayoría absoluta de las/los Convencionales.</p>
+                            <p>La Convención deberá constituir una secretaría técnica, con personas de la academia y profesionales con trayectoria y capacidades probadas.</p>
+                            <p>En su primer mes de funcionamiento, la Convención Constitucional adoptó la siguiente estructura.</p>
+                            <ul>
+                                <li>
+                                    <p><b>Presidenta:</b> Elisa Loncón (Pueblo Mapuche)</p>
+                                </li>
+                                <li>
+                                    <p><b>Vicepresidente:</b> Jaime Bassa (Convergencia Social)</p>
+                                </li>
+                                <li>
+                                    <p><b>Vicepresidencias adjuntas:</b> Rodrigo Rojas (Lista del Pueblo), Lorena Céspedes (Independientes No Neutrales), Pedro Muñoz (Colectivo Socialista), Elisa Giustinianovic (Movimientos Sociales Constituyentes), Rodrigo Álvarez (UDI), Tiare Aguilera (Pueblo Nación Rapa Nui), Isabel Godoy (Pueblo Nación Colla)</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

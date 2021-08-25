@@ -16,6 +16,7 @@
 </section>
 
 
+
 <div class="container perfil-convencional">
     <div class="row justify-content-md-center">
         <div class="col-12 col-sm-12 col-md-4 col-lg-3">
@@ -26,44 +27,42 @@
                 <div class="decorativo green"></div>
                 <div class="decorativo yellow"></div>
             </div>
+            <li style="list-style: none;" class="mt-4">
+                <p style="text-align: center;"><b>Redes Sociales:</b></p>
+            </li>
+            <li class="redes-sociales" style="list-style: none;">
+                <a href="{{ object.twitter }}"><i class="fab fa-twitter-square"></i></a>
+                <a href="{{ object.facebook }}"><i class="fab fa-facebook-square"></i></a>
+                <a href="{{ object.linkedin }}"><i class="fab fa-linkedin"></i></a>
+                <a href="{{ object.instagram }}"><i class="fab fa-instagram-square"></i></a>
+            </li>
         </div>
         <div class="col-12 col-sm-12 col-md-5 datos">
+           <p class="convencional">Convencional</p>
             <h2>{{ object.user.nombre }}</h2>
             <div class="decorativo blue"></div>
             <ul>
-                <li>
-                    <p><b>Cargos/Comisiones en la Convención:</b>
-                      {% for cargo in object.cargo.all %}
-                      {{ cargo }} ·
-                      {% endfor %}
-                    </p>
-                </li>
-                <li>
-                    <p><b>¿Escaño reservado?:</b> {{ object.reservado }}</p>
-                </li>
+              <li>
+                  <p><b>Cargos/Comisiones en la Convención:</b>
+                    {% for cargo in object.cargo.all %}
+                    {{ cargo }} ·
+                    {% endfor %}
+                  </p>
+              </li>
+              <li>
+                  <p><b>¿Escaño reservado?:</b> {{ object.reservado }}</p>
+              </li>
                 <li>
                     <p><b>Distrito:</b> {{ object.distrito }}</p>
                 </li>
                 <li>
-                    <p><b>Movimiento / Partido:</b> {{ object.movimiento }}</p>
-                </li>
-                <li>
                     <p><b>Lista:</b> {{ object.lista }}</p>
                 </li>
-                <!-- <li>
-                    <p><b>Movimiento / Organización:</b> Está como partido y/o movimiento </p>
-                </li> -->
                 <li>
-                    <p><b>Enlace a declaración de intereses y patrimonio: <a href="{{ object.linkintereses }}" class="enlace-parrafos">Revisar</a></b></p>
+                    <p><b>Movimiento / Organización:</b> {{ object.movimiento }}</p>
                 </li>
                 <li>
-                    <p><b>Redes Sociales:</b></p>
-                </li>
-                <li class="redes-sociales">
-                    <a href="{{ object.twitter }}"><i class="fab fa-twitter-square"></i></a>
-                    <a href="{{ object.facebook }}"><i class="fab fa-facebook-square"></i></a>
-                    <a href="{{ object.linkedin }}"><i class="fab fa-linkedin"></i></a>
-                    <a href="{{ object.instagram }}"><i class="fab fa-instagram-square"></i></a>
+                    <p><b>Enlace a declaración de intereses y patrimonio: <a href="{{ object.linkintereses }}" class="enlace-parrafos">Revisar (link externo)</a></b></p>
                 </li>
             </ul>
         </div>
@@ -75,19 +74,20 @@
     </div>
 </div>
 
+
 <section class="propuestas-convencionales propuestas-seccion container">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12">
-            <h2>compromisos e iniciativas de {{ object.nombre }}</h2>
+            <h2>compromisos de {{ object.user.nombre }}</h2>
             <div class="decoracion blue"></div>
         </div>
 
-         <div class="col-12 col-sm-12 col-md-12">
-            <ul class="filtro-temas-propuestas">
-                <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Propuestas que se compromete</a></li>
-                <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Iniciativas presentadas en la convención</a></li>
-            </ul>
-        </div>
+        <div class="col-12 col-sm-12 col-md-12">
+           <ul class="filtro-temas-propuestas">
+               <li><a href="#" class="btn-filtro active">Compromisos</a></li>
+               <li><a href="#" class="btn-filtro">Iniciativas</a></li>
+           </ul>
+       </div>
 
         <div class="col-12 col-sm-12 col-md-6 col-lg-4">
             <div class="propuesta salud">
@@ -174,7 +174,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
+        <!-- <div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
                     <li class="page-item disabled">
@@ -192,7 +192,7 @@
                     </li>
                 </ul>
             </nav>
-        </div>
+        </div> -->
 
     </div>
 </section>

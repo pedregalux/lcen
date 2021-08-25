@@ -16,19 +16,20 @@
 </section>
 
 
+
 <div class="container perfil-convencional perfil-organizaciones">
     <div class="row justify-content-md-center d-flex align-items-start">
         <div class="col-12 col-sm-12 col-md-4 col-lg-3">
             <div class="img-organizacion">
                 <img src="{{ object.logo_organizacion.url }}" alt="img organizacion" class="img-fluid organizacion-img">
-                <p class="titulo-rrss">Redes Sociales:</p>
-                <ul class="redes-sociales">
-                    <li><a href="{{ object.twitter }}"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="{{ object.facebook }}"><i class="fab fa-facebook-square"></i></a></li>
-                    <li> <a href="{{ object.linkedin }}"><i class="fab fa-linkedin"></i></a></li>
-                    <li> <a href="{{ object.instagram }}"><i class="fab fa-instagram-square"></i></a></li>
-                </ul>
             </div>
+            <p class="titulo-rrss">Redes Sociales:</p>
+            <ul class="redes-sociales">
+                <li><a href="{{ object.twitter }}"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="{{ object.facebook }}"><i class="fab fa-facebook-square"></i></a></li>
+                <li> <a href="{{ object.linkedin }}"><i class="fab fa-linkedin"></i></a></li>
+                <li> <a href="{{ object.instagram }}"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>
         </div>
         <div class="col-12 col-sm-12 col-md-6 datos">
             <p class="tipo-organizacion">Organización</p>
@@ -40,41 +41,28 @@
                         <p>{{ object.descripcion|linebreaks }}</p>
                 </li>
                 <li>
-                    <p><b>Ubicación: </b><br>{{ object.pais }}</p>
+                    <p><b>Ubicación: </b>{{ object.pais }}</p>
                 </li>
                 <li>
-                    <p><b>Alcance del trabajo: </b><br>
-                      {{ object.alcance }}
-                      </p>
+                  <p><b>Alcance del trabajo: </b><br>
+                    {{ object.alcance }}
+                    </p>
                 </li>
-                <li>
-                    <a href="{{ object.sitioweb }}" class="btn btn-lcen button hvr-sweep-to-right">Sitio Web</a>
+                <li class="d-flex">
+                   <p><b>Sitio Web:</b></p><a href="{{ object.sitioweb }}" class="sitio-web-org px-2"> Revisar</a>
                 </li>
             </ul>
         </div>
     </div>
 </div>
 
+
 <section class="propuestas-convencionales propuestas-seccion container">
-    <div class="row">
-        <div class="col-12 col-sm-12 col-md-12">
-            <h2>compromisos e iniciativas de la organización</h2>
-            <div class="decoracion blue"></div>
-        </div>
-
-        <div class="col-12 col-sm-12 col-md-12">
-            <ul class="filtro-temas-propuestas">
-                <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Propuestas creadas</a></li>
-                <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Propuestas que apoya</a></li>
-            </ul>
-        </div>
-
-
-
-            <div class="col-12 col-sm-12 col-md-12">
-            <p class="titulo-seleccion">Propuestas creadas por {{ object.nombre_perfil }} en LCeN</p>
-            </div>
-
+  <div class="row">
+      <div class="col-12 col-sm-12 col-md-12">
+          <h2><img src="{% static 'img/icono-bien.png' %}" alt="icono" width="30px;"> Propuestas creadas por <b>{{ object.nombre_perfil }}</b> en LCeN</h2>
+          <div class="decoracion red mb-5"></div>
+      </div>
 
 
         {% for propuesta in lista_creadas %}
@@ -122,7 +110,8 @@
 
 
         <div class="col-12 col-sm-12 col-md-12">
-        <p class="titulo-seleccion">Propuestas apoyadas por {{ object.nombre_perfil }} en LCeN</p>
+            <h2><img src="{% static 'img/icono-bien.png' %}" alt="icono" width="30px;"> Propuestas apoyadas por <b>{{ object.nombre_perfil }}</b> en LCeN</h2>
+            <div class="decoracion red mb-5"></div>
         </div>
 
 
@@ -169,44 +158,19 @@
 
         {% endfor %}
 
-
-
-        <!-- <div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-                    </li>
-                </ul>
-            </nav>
-        </div> -->
-
     </div>
 </section>
 
+<section class="container call-to-action-organizaciones">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn">
+            <h2>¿Eres una organización y quieres estar aquí?</h2>
+            <div class="call-to-action">
+                <a href="#" class="btn-lcen button hvr-sweep-to-right">Ingresa aquí</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-
-
-
-
-
-
-
-Otros temas:
-{% for alcance in object.alcance.all %}
-{{ alcance }} ·
-{% endfor %}
-
-<br />
 
 {% endblock %}

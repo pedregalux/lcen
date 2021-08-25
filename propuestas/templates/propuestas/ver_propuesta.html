@@ -16,14 +16,15 @@
     </nav>
 </section>
 
+
 <section class="leer-propuesta container">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-8 informacion-propuesta">
-            <p class="numero-propuesta">Propuesta <b>N° {{ object.id }}</b></p>
             <p class="tema-principal">{{ object.tema }}</p>
+            <p class="numero-propuesta">Propuesta <b>N° {{ object.id }}</b></p>
             <h3>{{ object.titulo }}</h3>
-            <p class="autor">Esta es una propuesta de: <b><a href="#">{{ object.autor }}</a></b></p>
-            <p class="colaborador">Elaborada con: <b><a href="#">Nombre persona/organización</a></b></p>
+            <p class="autor">Esta es una propuesta de: <b> {{ object.autor }}</b></p>
+            <!-- <p class="colaborador">Elaborada con: <b><a href="#">Nombre persona/organización</a></b></p> -->
             <div class="linea yellow my-3"></div>
 
             <h4>Problema a solucionar:</h4>
@@ -34,44 +35,8 @@
 
             <h4>Qué debe contemplar la Nueva Constitución</h4>
             <p>{{ object.componente|linebreaks }}</p>
-
             <div class="linea yellow my-3"></div>
-            <div class="info-adicional">
-                <h5>Documentos adjuntos:</h5>
-                <ul>
-                  {% if object.anexo_propuesta %}
-                    <li><a href="{{ object.anexo_propuesta.url }}" target="_blank">Documento Adjunto (Abrir o Descargar)</a></li>
-                  {% else %}
-                    No hay un documento anexo
-                  {% endif %}
-
-                  {% if object.anexo2_propuesta %}
-                    <li><a href="{{ object.anexo2_propuesta.url }}" target="_blank">Documento Adjunto (Abrir o Descargar)</a></li>
-                  {% else %}
-                  {% endif %}
-
-                  {% if object.anexo3_propuesta %}
-                    <li><a href="{{ object.anexo3_propuesta.url }}" target="_blank">Documento Adjunto (Abrir o Descargar)</a></li>
-                  {% else %}
-                  {% endif %}
-                </ul>
-                <h5>Enlaces de interes:</h5>
-                <ul>
-                  {% if object.link_extra1 %}
-                    <li><a href="{{ object.link_extra1 }}" target="_blank">{{ object.link_extra1 }}</a></li>
-                  {% else %}
-                    No hay link con información complementaria
-                  {% endif %}
-
-                  {% if object.link_extra2 %}
-                    <li><a href="{{ object.link_extra2 }}" target="_blank">{{ object.link_extra2 }}</a></li>
-                  {% else %}
-                  {% endif %}
-                </ul>
-
-            </div>
-            <div class="linea yellow my-3"></div>
-            <p class="lugar">Esta propuesta se elaboró en: <b>{{ object.comuna }}, {{ object.region }}, {{ object.pais }}</b></p>
+            <p class="lugar"><i class="fas fa-map-marker-alt"></i>Esta propuesta se elaboró en: <b>{{ object.comuna }}, {{ object.region }}, {{ object.pais }}</b></p>
         </div>
         <div class="col-12 col-sm-12 col-md-4 informacion-destacada">
             <div class="bg-color">
@@ -114,6 +79,43 @@
                     <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
                 </ul>
             </div>
+            <div class="linea yellow my-3"></div>
+
+            <div class="info-adicional">
+                <h5>Documentos adjuntos:</h5>
+                <ul>
+                  {% if object.anexo_propuesta %}
+                    <li><a href="{{ object.anexo_propuesta.url }}" target="_blank"><i class="fas fa-circle"></i>Documento Adjunto (Abrir o Descargar)</a></li>
+                  {% else %}
+                    No hay un documento anexo
+                  {% endif %}
+
+                  {% if object.anexo2_propuesta %}
+                    <li><a href="{{ object.anexo2_propuesta.url }}" target="_blank"><i class="fas fa-circle"></i>Documento Adjunto (Abrir o Descargar)</a></li>
+                  {% else %}
+                  {% endif %}
+
+                  {% if object.anexo3_propuesta %}
+                    <li><a href="{{ object.anexo3_propuesta.url }}" target="_blank"><i class="fas fa-circle"></i>Documento Adjunto (Abrir o Descargar)</a></li>
+                  {% else %}
+                  {% endif %}
+                </ul>
+                <h5>Enlaces de interes:</h5>
+                <ul>
+                  {% if object.link_extra1 %}
+                    <li><a href="{{ object.link_extra1 }}" target="_blank"><i class="fas fa-circle"></i>{{ object.link_extra1 }}</a></li>
+                  {% else %}
+                    No hay link con información complementaria
+                  {% endif %}
+
+                  {% if object.link_extra2 %}
+                    <li><a href="{{ object.link_extra2 }}" target="_blank"><i class="fas fa-circle"></i>{{ object.link_extra2 }}</a></li>
+                  {% else %}
+                  {% endif %}
+                </ul>
+
+            </div>
+
             <p class="reportar">Si encuentras que esta propuesta viola los <a href="#" target="_blank">"Términos y Condiciones"</a> para la creación de una propuesta, ayúdanos <a href="#" target="_blank">reportando</a> esta propuesta.</p>
         </div>
     </div>

@@ -3,8 +3,9 @@
 {% block title %}Done{% endblock %}
 
 {% block content %}
-<br><br><br><br><br><br>
-<h2>Gracias</h2>
+<div class="container propuesta-creada">
+    <h2><img src="/static/img/icono-bien.png" alt="icono" width="30px;"> Tu propuesta fue creada con exito</h2>
+</div>
 {% for form in form_data %}
 {{ form }}
 {% endfor %}

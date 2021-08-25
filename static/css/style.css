@@ -1,24 +1,19 @@
-/* Ajustes Generales */
-/* comentario */
+/* Ajustes Generales Web*/
+
 body {
     font-size: 14px;
+    overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
-    font-family: 'Raleway', sans-serif !important;
+.modal-open {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    padding-right: 0px !important;
 }
 
 .container {
     width: 80% !important;
 }
-
 
 .navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     background-image: url(../img/cerrar-menu.svg) !important;
@@ -34,6 +29,93 @@ a {
     box-shadow: none !important;
 }
 
+.border-bottom-hidden {
+    border-bottom: 0px !important;
+}
+
+.w-85 {
+    width: 85% !important;
+    margin: auto;
+}
+
+.no-bg {
+    background: transparent !important;
+}
+
+.red {
+    background: #CC0000;
+}
+
+.yellow {
+    background: #FFD700;
+}
+
+.green {
+    background: #008000;
+}
+
+.blue {
+    background: #75AADB;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+option,
+input,
+select,
+button,
+label,
+textarea {
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-family: 'Raleway', sans-serif !important;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+a {
+    transition: 0.4s all;
+}
+
+.btn-lcen {
+    background: #75AADB;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: 0px;
+    padding: 8px 20px;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    transition: 0.5s all;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.hvr-sweep-to-right:before {
+    background: #CC0000 !important;
+}
+
+.ingresar a#navbarDropdown {
+    margin-top: 0px;
+    background: black;
+}
+
+header .ingresar:hover {
+    overflow: visible;
+}
+
+/*Estilos Landing de existencia*/
 
 /* Header */
 
@@ -96,7 +178,6 @@ header ul.navbar-nav li a:visited {
 header ul.navbar-nav li a:focus {
     color: #75AADB;
 }
-
 
 /*Portada*/
 
@@ -204,7 +285,6 @@ header ul.navbar-nav li a:focus {
     font-size: 1.1em;
 }
 
-
 /*Mensaje Destacado*/
 
 .mensaje-destacado {
@@ -287,51 +367,6 @@ header ul.navbar-nav li a:focus {
     align-self: center;
 }
 
-
-
-/*#sumate form {
-    padding-left: 15%;
-    display: flex;
-    flex-direction: column;
-}
-
-
-#sumate form input {
-    background: rgba(151, 191, 228, 0.2);
-    border: none;
-}
-
-#sumate form textarea {
-    background: rgba(151, 191, 228, 0.2);
-    height: 150px;
-    border: none;
-}
-
-#sumate .send-button {
-    border: none;
-    background: transparent;
-    font-size: 1.2em;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
-    padding-bottom: 10px;
-    border-bottom: 16px solid #CC0000;
-    width: 80px;
-    margin: 0 auto;
-    text-align: center;
-    transition: 0.5s all;
-    margin-top: 10px;
-}
-
-#sumate .send-button:hover {
-    border-bottom: 16px solid black;
-}
-
-#sumate .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgb(151 191 228 / 100%);
-}
-*/
-
 /*Quienes Somos*/
 
 #quienes-somos {
@@ -371,19 +406,6 @@ header ul.navbar-nav li a:focus {
     margin: 30px auto;
 }
 
-.red {
-    background: #CC0000;
-}
-
-.yellow {
-    background: #FFD700;
-}
-
-.green {
-    background: #008000;
-}
-
-
 /*Apoyo*/
 
 .apoyo {
@@ -410,7 +432,6 @@ header ul.navbar-nav li a:focus {
     margin: 0px 40px;
     filter: grayscale(100%);
 }
-
 
 /*Footer*/
 
@@ -504,10 +525,21 @@ footer .rrss li a img {
     width: 40px;
 }
 
-footer .rrss li a:hover{
+footer .rrss li a:hover {
     opacity: 1;
     transition: 0.5 all;
 }
+
+footer {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer .logo img {
+    margin-bottom: 0px;
+}
+
 
 @media(max-width:1180px) {
     .portada h1 {
@@ -528,25 +560,20 @@ footer .rrss li a:hover{
     .container {
         width: 90% !important;
     }
-
     header .navbar-brand img {
         width: 150px;
     }
-
     header ul.navbar-nav li a {
         border-top: 0px;
         border-left: 10px solid transparent;
     }
-
     header ul.navbar-nav li a:hover {
         border-top: 0px;
         border-left: 10px solid #75AADB;
     }
-
     header ul.navbar-nav li {
         margin: 0%;
     }
-
     header ul.navbar-nav li a {
         padding: 12px 0px 12px 20px !important;
         margin-bottom: 40px;
@@ -579,31 +606,26 @@ footer .rrss li a:hover{
         align-self: center;
         padding-right: 20px;
     }
-
     #que-es {
         padding-top: 140px;
         padding-bottom: 100px;
     }
-
     #que-es h2 {
         margin-left: 0%;
         width: 100%;
         font-size: 1.5em;
-
     }
     #que-es img {
         margin-left: 0%;
         width: 100px;
         margin-bottom: 50px;
     }
-
     #que-es div div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
     #que-es p {
         font-size: 1em;
         margin-top: 0px !important;
@@ -616,13 +638,11 @@ footer .rrss li a:hover{
         width: 100%;
         line-height: 24px;
     }
-
     #sumate {
         padding-top: 140px;
         padding-left: 15px;
         padding-right: 15px;
     }
-
     #sumate h2 {
         margin-left: 0%;
         font-size: 1.5em;
@@ -633,11 +653,9 @@ footer .rrss li a:hover{
         margin-bottom: 20px;
         font-weight: 500;
     }
-
     #sumate a {
         margin-left: 20px;
     }
-
     #sumate img {
         margin-top: 50px;
         width: 100%;
@@ -648,22 +666,18 @@ footer .rrss li a:hover{
         padding-top: 140px;
         padding-bottom: 100px;
     }
-
     #quienes-somos h2 {
         margin-left: 0%;
         font-size: 1.5em;
         margin-bottom: 50px;
     }
-
     #quienes-somos p {
         font-size: 1em;
         text-align: justify;
     }
-
     #quienes-somos .align-items-start {
         flex-direction: column;
     }
-
     #quienes-somos .tab-content {
         margin-left: 0%;
         margin-top: 20px;
@@ -675,7 +689,6 @@ footer .rrss li a:hover{
         font-size: 1em;
         font-weight: 500;
     }
-
     .apoyo .row div h6 {
         margin-right: 0px;
         margin-bottom: 20px;
@@ -684,17 +697,14 @@ footer .rrss li a:hover{
         width: 40%;
         margin: 20px 20px;
     }
-
     .apoyo .row div {
         flex-direction: column;
     }
-
     footer .logo img {
         width: 250px !important;
         align-self: center;
         margin-bottom: 0px;
     }
-
     footer .collage-2 {
         display: none;
     }
@@ -713,7 +723,6 @@ footer .rrss li a:hover{
     }
 }
 
-
 @media (max-width:350px) {
     .portada h1 {
         width: 100%;
@@ -723,14 +732,6 @@ footer .rrss li a:hover{
     }
 }
 
-footer {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-footer .logo img {
-    margin-bottom: 0px;
-}
 @media(max-width:768px) {
     .mensaje-destacado {
         padding: 100px 0px;
@@ -739,87 +740,9 @@ footer .logo img {
     }
 }
 
+/*END estilos Landing de existencia*/
 
-
-
-
-
-/*Sitio web LCeN */
-
-body {
-    overflow-x: hidden;
-}
-
-.no-bg {
-    background: transparent !important;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-li,
-option,
-input,
-select,
-button,
-label,
-textarea {
-    font-feature-settings: 'pnum' on, 'lnum' on;
-    font-family: 'Raleway', sans-serif !important;
-}
-
-a {
-    transition: 0.4s all;
-}
-
-.blue {
-    background: #75AADB;
-}
-
-.hvr-sweep-to-right:before {
-    background: #CC0000;
-}
-
-.btn-lcen {
-    background: #75AADB;
-    color: white;
-    font-size: 1.1em;
-    font-weight: 800;
-    text-transform: uppercase;
-    border: 0px;
-    padding: 8px 20px;
-    text-align: center;
-    margin-top: 20px;
-    letter-spacing: 0.4px;
-    text-decoration: none;
-    transition: 0.5s all;
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.modal-open {
-    overflow-y: visible !important;
-    overflow-x: hidden !important;
-    padding-right: 0px !important;
-}
-
-.border-bottom-hidden {
-    border-bottom: 0px !important;
-}
-
-.w-85 {
-    width: 85% !important;
-    margin: auto;
-}
-
-.no-bg {
-    background: transparent !important;
-}
+/*SITIO WEB LCeN */
 
 /*Formularios*/
 
@@ -899,11 +822,6 @@ a {
     box-shadow: none !important;
 }
 
-.limpiar-historial {
-    background: #008000 !important;
-    margin-left: 10px !important;
-}
-
 /*Header*/
 
 header .container {
@@ -921,7 +839,7 @@ header ul.navbar-nav {
 }
 
 header ul.navbar-nav li {
-    margin: 0px 15px;
+    margin: 0px 10px;
 }
 
 header ul.navbar-nav li a {
@@ -947,14 +865,14 @@ header .ingresar {
     overflow: hidden;
 }
 
-header ul.navbar-nav li.ingresar>a {
+header ul.navbar-nav li.ingresar > a {
     padding: 8px 15px 8px 15px !important;
     border-top: 0px !important;
     letter-spacing: 1px;
     color: white;
 }
 
-header ul.navbar-nav li.ingresar>a:hover {
+header ul.navbar-nav li.ingresar > a:hover {
     padding: 8px 15px 8px 15px !important;
     border-top: 0px !important;
     letter-spacing: 1px;
@@ -1091,7 +1009,7 @@ footer .rrss li a i {
 }
 
 .portada-gif .transparencia {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.55);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1122,6 +1040,17 @@ footer .rrss li a i {
     margin: 20px 0px;
 }
 
+.portada-gif p.portada {
+    color: white;
+    margin: 20px auto;
+    width: 75%;
+    font-size: 1.8em;
+    font-weight: 800;
+    padding: 0px;
+    text-align: center;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
 .btn-scroll-home {
     display: flex;
     justify-content: center;
@@ -1136,24 +1065,15 @@ footer .rrss li a i {
     padding: 8px 15px;
 }
 
-
 /*Home Primer mensaje destacado*/
 
 .mensaje-destacado-bandera {
-    background: url(../img/bg-personas-manifestacion.jpg);
-    padding: 140px 0px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    /*background: url(../img/bg-personas-manifestacion.jpg);*/
+    background: #75AADB;
+    padding: 60px 0px;
 }
 
 /*Home - Que es La constitución es nuestra*/
-
-.que-es-lcen {
-    padding-top: 90px;
-    padding-bottom: 130px;
-}
 
 .que-es-lcen {
     padding-top: 80px;
@@ -1180,11 +1100,18 @@ footer .rrss li a i {
 /*Home - A ponerse con propuestas*/
 
 .a-ponerse-con-propuestas {
-    padding: 120px 0px;
+    padding: 160px 0px 50px 0px;
     background: url(../img/bg-textura-papel.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+.a-ponerse-con-propuestas .img-titulo {
+    width: 100% !important;
+    position: absolute;
+    top: -80px;
 }
 
 .a-ponerse-con-propuestas h2 {
@@ -1193,7 +1120,7 @@ footer .rrss li a i {
     font-weight: 900;
     text-transform: uppercase;
     font-size: 2em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-left: 0;
     letter-spacing: 0px;
 }
@@ -1202,7 +1129,7 @@ footer .rrss li a i {
     padding-left: 30px;
     font-weight: 500;
     padding-right: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .a-ponerse-con-propuestas .btn-lcen {
@@ -1211,7 +1138,7 @@ footer .rrss li a i {
 }
 
 .propuestas-home {
-    padding: 120px 0px;
+    padding: 80px 0px 60px 0px;
 }
 
 .propuestas-home h2 {
@@ -1231,6 +1158,35 @@ footer .rrss li a i {
     display: flex;
     justify-content: center;
     margin: 20px auto;
+}
+
+.propuestas-home .info-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.propuestas-home .info-row p {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.propuestas-home a.btn-secundario {
+    background: transparent;
+    color: #75AADB;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-decoration: none;
+    margin-left: 10px;
+    border-bottom: 5px solid #75AADB;
+    font-size: 1.1em;
+}
+
+.propuestas-home a.btn-secundario:hover {
+    color: #CC0000;
+    border-bottom: 5px solid #CC0000;
 }
 
 .propuestas-home ul.filtro-temas-propuestas {
@@ -1293,9 +1249,14 @@ footer .rrss li a i {
 }
 
 .propuesta .informacion-propuesta h2.titulo {
-    font-size: 1.4em;
+    padding: 0px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    margin-bottom: 0px;
+    margin-left: 0;
+    letter-spacing: 0px;
     text-align: left;
-    padding-bottom: 10px;
 }
 
 .propuesta .informacion-propuesta p.extracto {
@@ -1408,7 +1369,7 @@ footer .rrss li a i {
     z-index: -1;
     filter: opacity(1);
     right: 0px;
-    padding: 20% 0% 0% 30%;
+    padding: 0%;
 }
 
 .ver-propuestas-button {
@@ -1419,13 +1380,26 @@ footer .rrss li a i {
     margin-top: 0px;
 }
 
+/*Convencionales Home*/
+
 .convencionales-home {
-    padding: 100px 0px;
+    padding: 90px 0px;
+    background-image: url(../img/bg-convencionales-home.png) !important;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 100%;
+    min-height: 420px;
 }
 
-.convencionales-home h3 {
-    font-size: 1.8em;
+.convencionales-home h2 {
+    margin-top: 40px;
     margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    font-size: 4.5em;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 
 .convencionales-home p {
@@ -1434,8 +1408,9 @@ footer .rrss li a i {
     width: 55%;
     margin: 10px auto;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.15em;
     line-height: normal;
+    font-weight: 500;
 }
 
 .convencionales-home .call-to-action {
@@ -1444,6 +1419,18 @@ footer .rrss li a i {
     align-content: center;
     align-items: center;
     align-self: center;
+}
+
+.convencionales-home .call-to-action a {
+    background: #CC0000;
+}
+
+.convencionales-home .call-to-action a:before {
+    background: white !important;
+}
+
+.convencionales-home .call-to-action a:hover {
+    color: #CC0000;
 }
 
 .organizaciones-home {
@@ -1484,12 +1471,21 @@ footer .rrss li a i {
 
 .organizaciones-lista li {
     list-style: none;
+    margin: 25px 15px;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .organizaciones-lista li img {
-    height: 60px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     padding: 0px;
-    margin: 25px;
+    margin: 0px;
 }
 
 .call-to-action-organizaciones {
@@ -1557,7 +1553,7 @@ footer .rrss li a i {
     text-decoration: underline;
 }
 
-.portada-lcen-colores .breadcrumb-item+.breadcrumb-item::before {
+.portada-lcen-colores .breadcrumb-item + .breadcrumb-item::before {
     color: black;
     font-weight: 400 !important;
 }
@@ -1630,7 +1626,7 @@ footer .rrss li a i {
     color: #CC0000;
 }
 
-.portada-collage-lcen .breadcrumb-item+.breadcrumb-item::before {
+.portada-collage-lcen .breadcrumb-item + .breadcrumb-item::before {
     color: black;
 }
 
@@ -1771,7 +1767,6 @@ footer .rrss li a i {
     border: 0;
 }
 
-
 /*Propuestas Sección*/
 
 .filtro-propuestas {
@@ -1795,19 +1790,20 @@ footer .rrss li a i {
 .filtro-propuestas p {
     text-align: center;
     margin: 0 auto;
-    font-size: 1.1em;
+    font-size: 1.15em;
     font-weight: 500;
 }
 
 .filtro-propuestas .formulario {
     padding: 0px;
+    margin-bottom: 30px;
 }
 
 .filtro-propuestas form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     padding-top: 20px;
 }
@@ -1818,14 +1814,58 @@ footer .rrss li a i {
 }
 
 .filtro-propuestas form .btn-lcen {
-    margin-top: 14px;
-    margin-left: auto;
-    margin-right: 1%;
+    margin: 1%;
+}
+
+.resultados-busqueda-titulo {
+    background: rgba(204, 204, 204, 0.2);
+    padding: 20px 0px;
+    margin-bottom: 30px;
+}
+
+.resultados-busqueda-titulo h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.resultados-busqueda-titulo h3 img {
+    margin-right: 10px;
+}
+
+.resultados-busqueda-titulo h3 span {
+    font-weight: 800;
+    padding-left: 5px;
+}
+
+.resultados-busqueda-titulo a.limpiar-historial {
+    color: #CC0000;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.5s all;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.resultados-busqueda-titulo a.limpiar-historial:hover {
+    color: #008000;
+}
+
+.resultados-busqueda-titulo a.limpiar-historial i {
+    font-size: 1.1em;
+    padding-right: 5px;
 }
 
 .propuestas-seccion {
     padding-top: 30px;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
 }
 
 .propuestas-seccion h3 {
@@ -1847,6 +1887,7 @@ footer .rrss li a i {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 .propuestas-seccion .page-link {
@@ -1872,6 +1913,8 @@ footer .rrss li a i {
     color: white;
     background: #008000 !important;
 }
+
+
 
 /*Ingresa Seccion*/
 
@@ -2006,7 +2049,6 @@ footer .rrss li a i {
     position: relative;
     transition: 0.5s all;
     text-decoration: none;
-
 }
 
 .seleccionar .icono {
@@ -2041,6 +2083,7 @@ footer .rrss li a i {
 .seleccionar a:hover p {
     border-bottom: 8px solid #CC0000;
 }
+
 
 /*Registro Usuarios*/
 
@@ -2145,11 +2188,10 @@ footer .rrss li a i {
     letter-spacing: 1px;
 }
 
-.btn-check:focus+.btn,
+.btn-check:focus + .btn,
 .btn:focus {
     box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%) !important;
 }
-
 
 /*Subir propuesta*/
 
@@ -2220,7 +2262,7 @@ a.volver:hover {
     padding-left: 20px;
 }
 
-.subir-propuesta .informacion-ayuda>p.recomendacion::before {
+.subir-propuesta .informacion-ayuda > p.recomendacion::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f0c8";
@@ -2228,6 +2270,14 @@ a.volver:hover {
     position: absolute;
     left: 0px;
     font-size: 0.8em;
+}
+.subir-propuesta .informacion-ayuda a{
+    color: #75AADB;
+    transition: 0.5s all;
+    font-weight: bold;
+}
+.subir-propuesta .informacion-ayuda a:hover{
+    color:#CC0000;
 }
 
 .subir-propuesta .contacto-ayuda {
@@ -2356,6 +2406,14 @@ a.volver:hover {
     font-size: 1.8em;
 }
 
+.perfil-convencional p.convencional {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    font-size: 1.1em;
+    color: black;
+}
+
 .perfil-convencional .datos .decorativo {
     width: 60px;
     height: 8px;
@@ -2380,32 +2438,33 @@ a.volver:hover {
 
 .perfil-convencional .datos ul li p a {
     color: #75AADB;
+    text-decoration: none;
 }
 
 .perfil-convencional .datos ul li p a:hover {
     color: #CC0000;
 }
 
-.perfil-convencional .datos ul li.redes-sociales {
+.perfil-convencional li.redes-sociales {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+    margin-top: 0px;
 }
 
-.perfil-convencional .datos ul li.redes-sociales a {
+.perfil-convencional li.redes-sociales a {
     color: black;
-    font-size: 1.8em;
-    margin-right: 12px;
+    font-size: 2em;
+    margin: 0px 6px;
 }
 
-.perfil-convencional .datos ul li.redes-sociales a:hover {
+.perfil-convencional li.redes-sociales a:hover {
     color: #CC0000;
 }
 
 .perfil-convencional .biografia {
     margin-top: 80px;
-
 }
 
 .perfil-convencional .biografia .decoracion-left {
@@ -2466,18 +2525,36 @@ a.volver:hover {
 }
 
 .propuestas-convencionales .filtro-temas-propuestas li a {
-    margin-top: 0px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid transparent;
+    font-weight: 800;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s all;
+    margin: 0px 10px;
+    font-size: 1.2em;
+}
+
+.propuestas-convencionales .filtro-temas-propuestas li a.active {
+    border-bottom: 5px solid #FFD700;
+}
+
+.propuestas-convencionales .filtro-temas-propuestas li a:hover {
+    border-bottom: 5px solid #FFD700;
 }
 
 .propuestas-convencionales p.titulo-seleccion {
     text-align: center;
-    font-size: 1.5em;
-    font-weight: 900;
+    font-size: 1.3em;
+    font-weight: 400;
     color: black;
-    margin-bottom: 35px;
-    margin-top: 80px;
+    margin-bottom: 30px;
+    margin-top: 15px;
 }
 
+.propuestas-convencionales p.titulo-seleccion b {
+    font-weight: 900;
+}
 
 /*Organizaciones Seccion*/
 
@@ -2496,7 +2573,6 @@ a.volver:hover {
     filter: grayscale(0%);
 }
 
-
 /*Perfil Organizaciones*/
 
 .perfil-organizaciones .tipo-organizacion {
@@ -2506,18 +2582,26 @@ a.volver:hover {
     font-size: 1.1em;
     color: black;
 }
-.perfil-organizaciones .titulo-rrss{
+
+.perfil-organizaciones .titulo-rrss {
     margin-top: 20px;
     font-weight: 800;
     text-transform: uppercase;
     color: black;
+    text-align: center;
 }
+
+.perfil-organizaciones .img-organizacion {
+    margin-bottom: 50px;
+}
+
 .perfil-organizaciones ul.redes-sociales {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     padding-left: 0px;
-    margin-top:10px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
@@ -2535,14 +2619,33 @@ a.volver:hover {
     color: #CC0000;
 }
 
-.perfil-organizaciones .btn{
+.perfil-organizaciones .btn {
     margin-top: 10px;
+}
+
+.perfil-organizaciones .sitio-web-org {
+    color: #75AADB;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-decoration: none;
+    transition: 0.5s all;
+}
+
+.perfil-organizaciones .sitio-web-org:hover {
+    color: #CC0000;
 }
 
 /*Seccion Convencionales*/
 
+.filtro-convencionales form {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+}
+
 .resultados-convencionales {
-    margin-top: 30px;
+    margin: 50px auto;
 }
 
 .resultados-convencionales h3 {
@@ -2712,7 +2815,6 @@ a.volver:hover {
     width: 150px;
 }
 
-
 .convencionales-medialuna .tab-content .informacion-convencional {
     display: flex;
     justify-content: center;
@@ -2862,7 +2964,6 @@ a.volver:hover {
     top: 70.5%;
     left: 10.6%;
 }
-
 
 .convencionales-medialuna .medialuna li.nav-item-10 {
     top: 66%;
@@ -3049,7 +3150,6 @@ a.volver:hover {
     left: 26.2%;
 }
 
-
 .convencionales-medialuna .medialuna li.nav-item-47 {
     top: 18.8%;
     left: 24.5%;
@@ -3099,7 +3199,6 @@ a.volver:hover {
     top: 35%;
     left: 36.3%;
 }
-
 
 .convencionales-medialuna .medialuna li.nav-item-57 {
     top: 26.7%;
@@ -3466,8 +3565,6 @@ a.volver:hover {
     left: 79.4%;
 }
 
-.convencionales-medialuna .medialuna li.nav-item-130 {}
-
 .convencionales-medialuna .medialuna li.nav-item-130 {
     top: 43%;
     left: 81.9%;
@@ -3604,7 +3701,8 @@ a.volver:hover {
     justify-content: center;
     align-items: center;
     align-content: center;
-    bottom: 50px;
+    bottom: 30px;
+    z-index: 1;
 }
 
 /*Formulario ultimo paso subir propuesta*/
@@ -3712,22 +3810,21 @@ a.volver:hover {
     height: 1.25rem;
     margin-left: auto;
     content: "";
-    background-image: url({% static 'img/arrow-blanco.png' %});
+    background-image: url(../img/arrow-blanco.png) !important;
     background-repeat: no-repeat;
     background-size: 1.25rem;
     transition: transform 0.2s ease-in-out;
 }
 
 .accordion-button:not(.collapsed)::after {
-    background-image: url({% static 'img/arrow-yellow.png' %});
+    background-image: url(../img/arrow-yellow.png) !important;
     transform: rotate( -360deg);
 }
-
 
 /*VER PROPUESTA*/
 
 .leer-propuesta {
-    margin: 100px auto;
+    margin: 50px auto 150px auto;
 }
 
 .leer-propuesta .informacion-propuesta {
@@ -3735,15 +3832,15 @@ a.volver:hover {
     flex-direction: column;
     justify-content: flex-start;
     align-self: flex-start;
-    align-content: flex-start;
     align-items: flex-start;
+    padding-right: 5%;
 }
 
 .leer-propuesta .numero-propuesta {
     color: #757575;
     font-size: 1em;
     text-align: left;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .leer-propuesta .tema-principal {
@@ -3753,7 +3850,7 @@ a.volver:hover {
     font-weight: 800;
     font-size: 0.9em;
     padding: 6px 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     letter-spacing: 1px;
     border-radius: 4px;
 }
@@ -3827,19 +3924,40 @@ a.volver:hover {
     font-style: italic;
 }
 
+.leer-propuesta .lugar i {
+    color: #008000;
+    font-size: 1.6em;
+    margin-right: 10px;
+}
+
 .leer-propuesta .info-adicional h5 {
     font-weight: 900;
     font-size: 1.2em;
     font-feature-settings: 'pnum' on, 'lnum' on;
-    color: black;
+    color: #75AADB;
     text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.leer-propuesta .info-adicional ul {
+    padding-left: 0px;
+}
+
+.leer-propuesta .info-adicional ul li {
+    list-style: none;
+    margin-bottom: 10px;
 }
 
 .leer-propuesta .info-adicional ul li a {
     color: #757575;
     text-decoration: none;
-    margin-bottom: 10px;
     font-weight: 700;
+}
+
+.leer-propuesta .info-adicional ul li a i {
+    color: #008000;
+    font-size: 10px;
+    padding-right: 10px;
 }
 
 .leer-propuesta .info-adicional ul li a:hover {
@@ -3857,6 +3975,8 @@ a.volver:hover {
     bottom: 0px;
     height: 100%;
     z-index: -1;
+    right: 0px;
+    opacity: 0.85;
 }
 
 .leer-propuesta .informacion-destacada .bg-color h3 {
@@ -3865,7 +3985,6 @@ a.volver:hover {
     padding-bottom: 0px;
     text-align: center;
 }
-
 
 .leer-propuesta .informacion-destacada .bg-color .cifras p {
     text-align: center;
@@ -3883,16 +4002,15 @@ a.volver:hover {
     font-weight: 800;
 }
 
-
 .leer-propuesta .informacion-destacada .bg-color h3.apoyar {
     margin-top: 70px;
 }
-
 
 .leer-propuesta .informacion-destacada .bg-color .btn-lcen {
     margin: auto;
     display: flex;
     margin-top: 10px;
+    align-items: center;
 }
 
 .leer-propuesta .informacion-destacada .bg-color .btn-lcen i {
@@ -3936,8 +4054,11 @@ a.volver:hover {
 .leer-propuesta p.reportar a {
     color: #75AADB;
     font-weight: bold;
+    text-decoration: none;
 }
-
+.leer-propuesta p.reportar a:hover{
+    color:#CC0000;
+}
 .modal-title {
     font-weight: 900;
     text-transform: uppercase;
@@ -3965,7 +4086,7 @@ a.volver:hover {
     text-align: center;
 }
 
-.modal-body p{
+.modal-body p {
     text-align: center;
     color: #424242;
 }
@@ -3974,4 +4095,206 @@ a.volver:hover {
     .modal-dialog {
         max-width: 700px;
     }
+}
+
+
+
+/*Ajustes formularios*/
+.registros form div{
+    width: 50%;
+    float: left;
+    padding:0px 10px;
+}
+.registros form input.form-control{
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+    background: white;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+}
+
+.registros form .form-select {
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.registros form option {
+    font-weight: 500;
+    background: white;
+    border: 0px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 20px 0px;
+}
+
+.registros form input#formFileMultiple {
+    border: 1px solid #ced4da;
+}
+
+.registros form input#formFileMultiple:hover {
+    border: 1px solid #ced4da !important;
+}
+
+.registros form input#formFileMultiple:focus {
+    border: 1px solid #ced4da !important;
+}
+
+.registros form textarea {
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.registros form .form-control:focus,
+.registros form .form-select:focus {
+    border: 3px solid #FFD700 !important;
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.registros form button.btn {
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+}
+
+
+/*Subir propuesta formulario implementacion*/
+.subir-propuesta form{
+    padding-left: 30px;
+}
+.subir-propuesta form div{
+    width: 100%;
+}
+
+.subir-propuesta label h6{
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: black;
+}
+.subir-propuesta form input.form-control{
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+    background: white;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+}
+
+.subir-propuesta form .form-select {
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.subir-propuesta form option {
+    font-weight: 500;
+    background: white;
+    border: 0px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 5px 0px;
+}
+
+.subir-propuesta form input#formFileMultiple {
+    border: 1px solid #ced4da;
+}
+
+.subir-propuesta form input#formFileMultiple:hover {
+    border: 1px solid #ced4da !important;
+}
+
+.subir-propuesta form input#formFileMultiple:focus {
+    border: 1px solid #ced4da !important;
+}
+
+.subir-propuesta form textarea {
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.subir-propuesta form .form-control:focus,
+.subir-propuesta form .form-select:focus {
+    border: 3px solid #FFD700 !important;
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.subir-propuesta form button.btn {
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+}
+
+/*Propuesta creada*/
+.propuesta-creada{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.propuesta-creada h2{
+    text-align: center;
+    font-weight: 900;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+
+/*Ingresar formulario implementacion*/
+
+.ingresar-seccion form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    
+}
+.ingresar-seccion form label{
+    font-weight: 900;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: black;
+    width: 80%;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.ingresar-seccion form input{
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+    background: white;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    width: 80%;
+}
+
+.ingresar-seccion input:focus-visible {
+    outline-offset: 0px;
+    border: 3px solid #FFD700;
+    background: transparent;
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.ingresar-seccion form .btn{
+    margin-bottom: 50px;
 }

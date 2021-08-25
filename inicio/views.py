@@ -15,3 +15,6 @@ class HomeView(TemplateView):
 
 class QueesView(TemplateView):
     template_name = 'inicio/que_es.html'
+
+class PreguntasView(TemplateView):
+    template_name = 'inicio/preguntas-frecuentes.html'
