@@ -1,5 +1,6 @@
 from django.urls import path
 from . import  views
+from usuarios.views import *
 
 urlpatterns=[
      path('register/',views.register, name='register'),
@@ -11,6 +12,9 @@ urlpatterns=[
      path('convencional_register/',views.convencional_register.as_view(), name='convencional_register'),
      path('verconvencionales/',views.VerConvencionalesView.as_view(), name='verconvencionales'),
      path('verconvencionales/<pk>',views.VerConvencionalView.as_view(), name='verconvencional'),
+     path('verpropuestasconvencionales/',views.VerPropuestasConvencionalView.as_view(), name='verpropuestasconvencionales'),
+     path('verpropuestasconvencionales/<pk>',views.VerPropuestaConvencionalView.as_view(), name='verpropuestaconvencionales'),
+     path('propcompromiso/<pk>',CompromisoView, name='prop_compromiso'),
      path('login/',views.login_request, name='login'),
      path('logout/',views.logout_view, name='logout'),
 ]

@@ -1,5 +1,6 @@
 from django.contrib.auth import login, logout,authenticate
-from django.http import HttpResponseNotFound
+from django.http import HttpResponseNotFound, HttpResponseRedirect
+from django.urls import reverse
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.views.generic import CreateView
@@ -97,8 +98,29 @@ class VerConvencionalView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['lista_comprometidas'] = Propuesta.objects.filter(autor=self.object.user)
+        context['lista_comprometidas'] = Propuesta.objects.filter(compromisos=self.object.user)
         return context
+
+
+
+class VerPropuestasConvencionalView(ListView):
+    model = Propuesta
+    context_object_name = 'propuestas_list'
+    template_name = 'usuarios/ver_propuestas_convencional.html'
+
+
+
+class VerPropuestaConvencionalView(DetailView):
+    model = Propuesta
+    context_object_name = 'propuestas_detail'
+    template_name = 'usuarios/ver_propuesta_convencional.html'
+
+
+
+def CompromisoView(request, pk):
+    apyo = Propuesta.objects.get(pk=pk)
+    apyo.compromisos.add(request.user)
+    return HttpResponseRedirect(reverse('verpropuestaconvencionales', args=[str(pk)]))
 
 
 

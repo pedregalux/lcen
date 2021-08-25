@@ -48,22 +48,22 @@
                 </div>
                 <h3 class="apoyar">Apoya esta propuesta</h3>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn-lcen apoyar button hvr-sweep-to-right" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apoyar <i class="fas fa-heart"></i></button>
+                <button type="button" class="btn-lcen apoyar button hvr-sweep-to-right" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Comprometer <i class="fas fa-heart"></i></button>
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Apoyar Propuesta</h5>
+                                <h5 class="modal-title" id="staticBackdropLabel">Comprometer con Propuesta</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <h3>¿Deseas apoyar la propuesta {{ object.titulo }}?</h3>
-                                <p>Al apoyar esta propuesta aceptas que La Constitución es Nuestra te notifique vía correo electrónico cuando un convencional decida apoyar esta propuesta.</p>
+                                <h3>¿Deseas comprometerte con la propuesta {{ object.titulo }}?</h3>
+                                <p></p>
 
-                                <form class="" action="{% url 'prop_apoyo' object.pk %}" method="post">
+                                <form class="" action="{% url 'prop_compromiso' object.pk %}" method="post">
                                   {% csrf_token %}
                                   <button type="submit" name="object_id" value="{{ object.id }}" class="btn btn-lcen apoyar button hvr-sweep-to-right">
-                                    Apoyar <i class="fas fa-heart"></i>
+                                    Comprometer <i class="fas fa-heart"></i>
                                   </button>
                                 </form>
 
