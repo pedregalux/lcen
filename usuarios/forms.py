@@ -19,7 +19,7 @@ class CiudadanoSignUpForm(UserCreationForm):
     pais = forms.ModelChoiceField(queryset=Pais.objects, empty_label="Seleccionar País")
     region = forms.ModelChoiceField(queryset=Region.objects, empty_label="Seleccionar Región")
     comuna = forms.ModelChoiceField(queryset=Comuna.objects, empty_label="Seleccionar Comuna")
-    cualquiercosa = forms.CharField(required=False)
+    # cualquiercosa = forms.CharField(required=False)
 
     class Meta(UserCreationForm.Meta):
         model = User
@@ -37,7 +37,7 @@ class CiudadanoSignUpForm(UserCreationForm):
         ciudadano.pais=self.cleaned_data.get('pais')
         ciudadano.region=self.cleaned_data.get('region')
         ciudadano.comuna=self.cleaned_data.get('comuna')
-        ciudadano.cualquiercosa=self.cleaned_data.get('cualquiercosa')
+        # ciudadano.cualquiercosa=self.cleaned_data.get('cualquiercosa')
         ciudadano.save()
         return user
 
@@ -178,12 +178,12 @@ class OrganizacionChangeForm(ModelForm):
 
 
 class ConvencionalSignUpForm(UserCreationForm):
-    username = forms.CharField(label='Nombre Usuario')
+    username = forms.CharField(label='Nombre Usuario', help_text="El Nombre de Usuario es para identificarse en la plataforma, debe ser en minúsculas, sin espacios y sólo letras y/o números.")
     password1 = forms.CharField(label='Contraseña', widget=(forms.PasswordInput(attrs={'class': 'form-control'})))
     password2 = forms.CharField(label='Confirmar Contraseña', widget=(forms.PasswordInput(attrs={'class': 'form-control'})))
     nombre = forms.CharField(label='Nombre y Apellido', required=True)
     email = forms.EmailField(required=True)
-    cualquiercosa = forms.CharField(required=True)
+    # cualquiercosa = forms.CharField(required=False)
 
     class Meta(UserCreationForm.Meta):
         model = User
@@ -196,6 +196,6 @@ class ConvencionalSignUpForm(UserCreationForm):
         user.save()
         convencional = Convencional.objects.create(user=user)
         convencional.email=self.cleaned_data.get('email')
-        convencional.cualquiercosa=self.cleaned_data.get('cualquiercosa')
+        # convencional.cualquiercosa=self.cleaned_data.get('cualquiercosa')
         convencional.save()
         return user

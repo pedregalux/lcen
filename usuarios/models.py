@@ -57,7 +57,10 @@ class Ciudadano(models.Model):
         blank=True,
         null=True,
         on_delete=models.SET_NULL)
-    cualquiercosa = models.CharField(max_length=255)
+    cualquiercosa = models.CharField(
+        blank=True,
+        null=True,
+        max_length=255)
     class Meta:
         verbose_name = "Ciudadan@"
         verbose_name_plural = "Ciudadan@s"
@@ -214,7 +217,10 @@ class Convencional(models.Model):
         null=True,
         blank=True)
 
-    cualquiercosa = models.CharField(max_length=255)
+    cualquiercosa = models.CharField(
+        blank=True,
+        null=True,
+        max_length=255)
     class Meta:
         verbose_name = "Convencional"
         verbose_name_plural = "Convencionales"
