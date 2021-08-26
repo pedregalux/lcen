@@ -108,12 +108,27 @@ class VerPropuestasConvencionalView(ListView):
     context_object_name = 'propuestas_list'
     template_name = 'usuarios/ver_propuestas_convencional.html'
 
+    def dispatch(self, request, *args, **kwargs):
+        if not (self.request.user.is_authenticated and self.request.user.is_convencional):
+            return redirect('linkconvencionalesaviso')
+        return super().dispatch(request, *args, **kwargs)
+
 
 
 class VerPropuestaConvencionalView(DetailView):
     model = Propuesta
     context_object_name = 'propuestas_detail'
     template_name = 'usuarios/ver_propuesta_convencional.html'
+
+    def dispatch(self, request, *args, **kwargs):
+        if not (self.request.user.is_authenticated and self.request.user.is_convencional):
+            return HttpResponseNotFound()
+        return super().dispatch(request, *args, **kwargs)
+
+
+
+class LinkConvencionalesAvisoView(TemplateView):
+    template_name = 'usuarios/avisoconvencionaleslink.html'
 
 
 

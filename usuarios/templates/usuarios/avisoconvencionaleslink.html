@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Propuesta Creada{% endblock %}
+{% block title %}Aviso Compromisos{% endblock %}
 
 {% block content %}
 <div class="container propuesta-creada">
-    <h2><img src="/static/img/icono-bien.png" alt="icono" width="30px;"> Tu propuesta fue creada con exito</h2>
+    <h2><img src="/static/img/icono-bien.png" alt="icono" width="30px;"> Te agradecemos que desees participar en LCeN, pero la opción de comprometerse con propuestas sólo está activada para Constituyentes. Las organizaciones y ciudadanxs pueden apoyar las propuestas</h2>
     <a href="{% url 'ver_propuestas' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate">Ver propuestas</a>
 </div>
 {% for form in form_data %}
