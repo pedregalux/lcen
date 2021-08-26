@@ -110,7 +110,7 @@ class VerPropuestasConvencionalView(ListView):
 
     def dispatch(self, request, *args, **kwargs):
         if not (self.request.user.is_authenticated and self.request.user.is_convencional):
-            return redirect('linkconvencionalesaviso')
+            return redirect('loginconvencionales')
         return super().dispatch(request, *args, **kwargs)
 
 
@@ -122,13 +122,8 @@ class VerPropuestaConvencionalView(DetailView):
 
     def dispatch(self, request, *args, **kwargs):
         if not (self.request.user.is_authenticated and self.request.user.is_convencional):
-            return HttpResponseNotFound()
+            return redirect('loginconvencionales')
         return super().dispatch(request, *args, **kwargs)
-
-
-
-class LinkConvencionalesAvisoView(TemplateView):
-    template_name = 'usuarios/avisoconvencionaleslink.html'
 
 
 
@@ -170,6 +165,29 @@ def login_request(request):
                 messages.error(request,"La contraseña o usuari@ no corresponden. Por favor revisa bien.")
     return render(request, '../templates/login.html',
     context={'form':AuthenticationForm()})
+
+
+
+def login_convencionales(request):
+    if request.method=='POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(
+            username=username,
+            password=password)
+            if user is not None :
+                login(request,user)
+                next = request.GET.get('next', 'verpropuestasconvencionales' )
+                return redirect(next)
+            else:
+                messages.error(request,"La contraseña o usuari@ no corresponden. Por favor revisa bien.")
+        else:
+                messages.error(request,"La contraseña o usuari@ no corresponden. Por favor revisa bien.")
+    return render(request, '../templates/login_convencionales.html',
+    context={'form':AuthenticationForm()})
+
 
 
 

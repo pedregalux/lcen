@@ -20,7 +20,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Ingresar</li>
+                        <li class="breadcrumb-item active" aria-current="page">Ingreso Constituyentes</li>
                     </ol>
                 </nav>
                </div>
@@ -32,12 +32,13 @@
 
 <section class="container formularios-lcen ingresar-seccion">
     <div class="row justify-content-md-center">
+
+      <div class="registrate-cta">
+          <p>Para comprometerse con las propuestas ciudadanas presentes en La Constitución es Nuestra, debes ingresar con tus credenciales de nombre de usuario y contraseña.</p>
+      </div>
+
+
         <div class="col-12 col-sm-12 col-md-7 col-lg-5">
-            <h3>Ingresa con tus cuentas de:</h3>
-            <div class="cuentas-usuario">
-                <a href="{% provider_login_url 'google' %}" class="gmail btn-lcen button hvr-sweep-to-right"><i class="fab fa-google"></i><span>|</span>Gmail</a>
-                 <a href="{% provider_login_url 'facebook' method='oauth2' %}" class="facebook btn-lcen button hvr-sweep-to-right"><i class="fab fa-facebook-f"></i><span>|</span>Facebook</a>
-            </div>
 
             {% if form.non_field_errors %}
               <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -60,10 +61,7 @@
               <button type="submit" class="btn btn-lcen button hvr-sweep-to-right">Acceder</button>
             </form>
 
-            <div class="registrate-cta">
-                <p>¿No estás registrado aún?</p>
-                <a href="{% url 'register' %}" class="btn-lcen button hvr-sweep-to-right">Registrate aquí</a>
-            </div>
+
             <div class="recuperar-clave">
                 <p>¿Olvidaste tu contraseña?</p>
                 <a href="#" class="">Recuperar clave</a>

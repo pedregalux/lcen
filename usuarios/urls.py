@@ -13,9 +13,9 @@ urlpatterns=[
      path('verconvencionales/',views.VerConvencionalesView.as_view(), name='verconvencionales'),
      path('verconvencionales/<pk>',views.VerConvencionalView.as_view(), name='verconvencional'),
      path('verpropuestasconvencionales/',views.VerPropuestasConvencionalView.as_view(), name='verpropuestasconvencionales'),
-     path('linkconvencionalesaviso/',views.LinkConvencionalesAvisoView.as_view(), name='linkconvencionalesaviso'),
      path('verpropuestasconvencionales/<pk>',views.VerPropuestaConvencionalView.as_view(), name='verpropuestaconvencionales'),
      path('propcompromiso/<pk>',CompromisoView, name='prop_compromiso'),
      path('login/',views.login_request, name='login'),
+     path('loginconvencionales/',views.login_convencionales, name='loginconvencionales'),
      path('logout/',views.logout_view, name='logout'),
 ]

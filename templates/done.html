@@ -5,7 +5,9 @@
 {% block content %}
 <div class="container propuesta-creada">
     <h2><img src="/static/img/icono-bien.png" alt="icono" width="30px;"> Tu propuesta fue creada con exito</h2>
-    <a href="{% url 'ver_propuestas' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate">Ver propuestas</a>
+    <div class="col-12 col-sm-12 col-md-12 ver-propuestas-button">
+        <a href="{% url 'ver_propuestas' %}" class="btn-lcen button hvr-sweep-to-right">Ver todas las propuestas</a>
+    </div>
 </div>
 {% for form in form_data %}
 {{ form }}
