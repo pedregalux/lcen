@@ -81,14 +81,15 @@ class PropuestaForm5(forms.ModelForm):
         model = Propuesta
         fields = [
         'compromiso_convencionales',
-        'convencionales_comprometidos'
+        'anexo3_propuesta',
         ]
         widgets = {
             'compromiso_convencionales': forms.CheckboxInput()
         }
         labels = {
             'compromiso_convencionales': ('<h6><span style="text-transform:uppercase">1. ¿Tu propuesta cuenta con compromisos formales de apoyo de convencionales constituyentes?</span></h6><i>Marque si es así.</i>'),
-            'convencionales_comprometidos': ('<h6><span style="text-transform:uppercase">2. Si tu respuesta fue “sí”, marca todos los/as convencionales constituyentes que se comprometieron con tu propuesta.</span></h6><i>Por favor considera que verificaremos esta información.</i>'),
+            'anexo3_propuesta': ('<i>Si tienes un documento o archivo que acredite los compromisos, insgresalo acá.</i>'),
+
         }
 
 
@@ -99,14 +100,12 @@ class PropuestaForm6(forms.ModelForm):
         fields = [
         'anexo_propuesta',
         'anexo2_propuesta',
-        'anexo3_propuesta',
         'link_extra1',
         'link_extra2'
         ]
         labels = {
             'anexo_propuesta': ('<h6><span style="text-transform:uppercase">Si has elaborado un documento con tu propuesta constitucional desarrollada en mayor detalle y profundidad, adjúntalo:</span></h6>'),
             'anexo2_propuesta': ('<i>Asimismo, si cuentas con otros materiales (estudios, encuestas, presentaciones, material comunicacional, etc.) que complementen tu propuesta, agrégalos.</i>'),
-            'anexo3_propuesta': ('<i>Otro material anexo a tu propuesta.</i>'),
             'link_extra1': ('<i>Link a material complementario.</i>'),
             'link_extra2': ('<i>Otro link a material complementario.</i>'),
         }
