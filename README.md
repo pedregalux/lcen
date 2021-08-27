@@ -14,3 +14,9 @@ pip install django-formtools
 pip install crispy-bootstrap5
 
 pip install django-allauth
+
+pip install django-extensions
+
+pip install django-filters
+
+pip install django-import-export

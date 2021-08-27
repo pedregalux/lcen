@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'django_extensions',
+    'import_export',
 ]
 
 AUTH_USER_MODEL = 'usuarios.User'
