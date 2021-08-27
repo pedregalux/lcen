@@ -108,6 +108,9 @@ class VerPropuestasConvencionalView(ListView):
     context_object_name = 'propuestas_list'
     template_name = 'usuarios/ver_propuestas_convencional.html'
 
+    def get_queryset(self):
+        return Propuesta.objects.annotate(compromisos_count=Count('compromisos')).order_by('-compromisos_count')
+
     def dispatch(self, request, *args, **kwargs):
         if not (self.request.user.is_authenticated and self.request.user.is_convencional):
             return redirect('loginconvencionales')
