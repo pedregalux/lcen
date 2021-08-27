@@ -14,7 +14,8 @@ class PaisResource(resources.ModelResource):
 class RegionResource(resources.ModelResource):
     class Meta:
         model = Region
-        fields = ('region',)
+        import_id_fields = ('id',)
+        fields = ('id','region',)
 
 
 class DistritoResource(resources.ModelResource):
