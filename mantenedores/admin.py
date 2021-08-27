@@ -21,13 +21,14 @@ class RegionResource(resources.ModelResource):
 class DistritoResource(resources.ModelResource):
     class Meta:
         model = Distrito
-        fields = ('distrito', 'region_distrito',)
+        import_id_fields = ('id',)
+        fields = ('id','distrito','region_distrito',)
 
 
 class ComunaResource(resources.ModelResource):
     class Meta:
         model = Comuna
-        fields = ('comuna', 'distrito_comuna',)
+        fields = ('comuna','distrito_comuna',)
 
 
 class PaisAdmin(ImportExportModelAdmin):
