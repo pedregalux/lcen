@@ -88,7 +88,7 @@ class PropuestaForm5(forms.ModelForm):
         }
         labels = {
             'compromiso_convencionales': ('<h6><span style="text-transform:uppercase">1. ¿Tu propuesta cuenta con compromisos formales de apoyo de convencionales constituyentes?</span></h6><i>Marque si es así.</i>'),
-            'anexo3_propuesta': ('<i>Si tienes un documento o archivo que acredite los compromisos, insgresalo acá.</i>'),
+            'anexo3_propuesta': ('<i>Si tienes un documento o archivo que acredite los compromisos, ingrésalo acá.</i>'),
 
         }
 
