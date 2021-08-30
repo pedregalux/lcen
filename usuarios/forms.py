@@ -85,15 +85,19 @@ class OrganizacionSignUpForm(UserCreationForm):
     # datos de ubicación
     pais = forms.ModelChoiceField(
         queryset=Pais.objects,
+        required=False,
         empty_label="Seleccionar País")
     region = forms.ModelChoiceField(
         queryset=Region.objects,
+        required=False,
         empty_label="Seleccionar Región")
     comuna = forms.ModelChoiceField(
         queryset=Comuna.objects,
+        required=False,
         empty_label="Seleccionar Comuna")
     alcance = forms.ModelChoiceField(
         queryset=Alcance.objects,
+        required=False,
         help_text="Selecciona el alcance territorial del trabajo de tu organiación.",
         empty_label="Seleccionar Alcance")
 
