@@ -15,9 +15,9 @@ class PropuestaForm1(forms.ModelForm):
         'comuna'
         ]
         labels = {
-            'pais': ('<h6><span style="text-transform:uppercase">1. País</span></h6><i>Selecciona tu país</i>'),
-            'region': ('<h6><span style="text-transform:uppercase">2. Región</span></h6><i>Selecciona tu región</i>'),
-            'comuna': ('<h6><span style="text-transform:uppercase">3. Comuna</span></h6><i>Selecciona tu comuna</i>'),
+            'pais': ('<h6><span style="text-transform:uppercase">1. País</span></h6><i>Selecciona el país desde donde ingresas la propuesta</i>'),
+            'region': ('<h6><span style="text-transform:uppercase">2. Región</span></h6><i>Selecciona la región relacionada con la propuesta, si corresponde</i>'),
+            'comuna': ('<h6><span style="text-transform:uppercase">3. Comuna</span></h6><i>Selecciona la comuna relacionada con la propuesta, si corresponde</i>'),
         }
 
 
@@ -31,8 +31,8 @@ class PropuestaForm2(forms.ModelForm):
         'tema_extra',
         ]
         labels = {
-            'tema': ('<h6><span style="text-transform:uppercase">1. ¿Cuál es el tema principal de tu propuesta?</span></h6><i>Selecciona tema principal</i>'),
-            'otros_temas': ('<h6><span style="text-transform:uppercase">2. ¿Qué otros temas aborda tu propuesta?</span></h6><i>Por favor selecciona hasta tres temas adicionales</i>'),
+            'tema': ('<h6><span style="text-transform:uppercase">1. ¿Cuál es el tema principal de tu propuesta?</span></h6><i>Selecciona el tema principal desde la lista desplegable</i>'),
+            'otros_temas': ('<h6><span style="text-transform:uppercase">2. ¿Qué otros temas aborda tu propuesta?</span></h6><i>Por favor selecciona hasta tres temas adicionales, debes seleccionarlos con el mouse y apretando la telca Control -Ctrl-</i>'),
             'tema_extra': ('<h6><span style="text-transform:uppercase">3. Otro tema, ¿cuál?</span></h6><i>Si tu propuesta contempla algún tema que no está en el listado, por favor escríbelo aquí en una palabra o frase breve</i>'),
         }
 
@@ -71,7 +71,7 @@ class PropuestaForm4(forms.ModelForm):
         }
         labels = {
             'otras_organizaciones': ('<h6><span style="text-transform:uppercase">1. ¿Esta propuesta fue elaborada en conjunto con otras organizaciones?</span></h6><i>Marque si es así.</i>'),
-            'organizaciones_de_propuesta': ('<h6><span style="text-transform:uppercase">2. Si tu respuesta fue “sí”, escribe cuáles:</span></h6><i>Por favor escribe los nombres de las organizaciones que participaron en la elaboración de la propuesta. No olvides mencionar a tu organización.</i>'),
+            'organizaciones_de_propuesta': ('<h6><span style="text-transform:uppercase">2. Si tu respuesta fue “sí”, escribe cuáles:</span></h6><i>Por favor escribe los nombres de las organizaciones que participaron en la elaboración de la propuesta, separados por comas ¡No olvides incluir a tu organización!</i>'),
         }
 
 
@@ -89,7 +89,6 @@ class PropuestaForm5(forms.ModelForm):
         labels = {
             'compromiso_convencionales': ('<h6><span style="text-transform:uppercase">1. ¿Tu propuesta cuenta con compromisos formales de apoyo de convencionales constituyentes?</span></h6><i>Marque si es así.</i>'),
             'anexo3_propuesta': ('<i>Si tienes un documento o archivo que acredite los compromisos, ingrésalo acá.</i>'),
-
         }
 
 
@@ -105,8 +104,8 @@ class PropuestaForm6(forms.ModelForm):
         ]
         labels = {
             'anexo_propuesta': ('<h6><span style="text-transform:uppercase">Si has elaborado un documento con tu propuesta constitucional desarrollada en mayor detalle y profundidad, adjúntalo:</span></h6>'),
-            'anexo2_propuesta': ('<i>Asimismo, si cuentas con otros materiales (estudios, encuestas, presentaciones, material comunicacional, etc.) que complementen tu propuesta, agrégalos.</i>'),
-            'link_extra1': ('<i>Link a material complementario.</i>'),
+            'anexo2_propuesta': ('<i>Asimismo, si cuentas con otros materiales que complementen tu propuesta (estudios, encuestas, presentaciones, material comunicacional, etc.) , agrégalos acá.</i>'),
+            'link_extra1': ('<i>Si hay una página o documento online, ingresa un link a material complementario.</i>'),
             'link_extra2': ('<i>Otro link a material complementario.</i>'),
         }
 
@@ -119,7 +118,7 @@ class PropuestaForm7(forms.ModelForm):
         'titulo'
         ]
         labels = {
-            'titulo': ('<h6><span style="text-transform:uppercase">Escribe un título atractivo para que podamos difundirla entre la ciudadanía y en la Convención Constitucional.</span></h6><i>Título: máximo 280 caracteres</i>'),
+            'titulo': ('<h6><span style="text-transform:uppercase">Escribe un título atractivo para que podamos difundirla entre la ciudadanía y en la Convención Constitucional.</span></h6><i>Título: máximo 280 caracteres.</i>'),
         }
 
 
