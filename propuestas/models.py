@@ -19,6 +19,20 @@ class TemaPropuesta(models.Model):
 
 
 
+class SubtemaPropuesta(models.Model):
+    subtema_propuesta = models.CharField("Subtema de Propuesta",
+        max_length=100,
+        unique=True,
+        help_text="Subtemas predefinidos de propuestas")
+    icono_tema = models.ImageField("Ícono Temas Propuestas", upload_to='iconostemas/', null=True, blank=True)
+    class Meta:
+        verbose_name = "Subtema Propuestas"
+        verbose_name_plural = "Subtemas Propuestas"
+    def __str__(self):
+        return self.subtema_propuesta
+
+
+
 class ComponenteConstitucion(models.Model):
     componente_constitucion = models.CharField("Componente Constitucional",
         max_length=100,
@@ -63,7 +77,7 @@ class Propuesta(models.Model):
     tema = models.ForeignKey(TemaPropuesta,
         null=True,
         on_delete=models.SET_NULL)
-    otros_temas = models.ManyToManyField(TemaPropuesta,
+    otros_temas = models.ManyToManyField(SubtemaPropuesta,
         related_name="otros_temas_propuesta",
         verbose_name="Otros Temas de Propuesta",
         blank=True)
