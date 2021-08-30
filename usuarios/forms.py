@@ -15,7 +15,7 @@ class CiudadanoSignUpForm(UserCreationForm):
     nombre = forms.CharField(label='Nombre y Apellido', required=True)
     email = forms.EmailField(required=True)
     genero = forms.CharField(required=False, widget=forms.Select(choices=Ciudadano.GENERO))
-    rangoedad = forms.CharField(required=False, widget=forms.Select(choices=Ciudadano.RANGOEDAD))
+    rangoedad = forms.CharField(label='Seleccionar rango de edad', required=False, widget=forms.Select(choices=Ciudadano.RANGOEDAD))
     pais = forms.ModelChoiceField(queryset=Pais.objects, empty_label="Seleccionar País")
     region = forms.ModelChoiceField(queryset=Region.objects, empty_label="Seleccionar Región")
     comuna = forms.ModelChoiceField(queryset=Comuna.objects, empty_label="Seleccionar Comuna")
@@ -101,23 +101,23 @@ class OrganizacionSignUpForm(UserCreationForm):
     sitioweb = forms.URLField(
         label='Sitio Web de la Organización',
         help_text="Ingresa la dirección de tu sitio así: https://www.organizacion.com. Quedará publicado en el perfil público.",
-        required=True)
+        required=False)
     twitter = forms.URLField(
         label='Twitter de la Organización',
         help_text="Ingresa la dirección de tu perfil así: https://www.twitter.com/miorganizacion. Quedará publicado en el perfil público.",
-        required=True)
+        required=False)
     facebook = forms.URLField(
         label='Facebook de la Organización',
         help_text="Ingresa la dirección de tu perfil así: https://www.facebook.com/miorganizacion. Quedará publicado en el perfil público.",
-        required=True)
+        required=False)
     instagram = forms.URLField(
         label='Instagram de la Organización',
         help_text="Ingresa la dirección de tu perfil así: https://www.instagram.com/miorganizacion. Quedará publicado en el perfil público.",
-        required=True)
+        required=False)
     linkedin = forms.URLField(
         label='LinkedIn de la Organización',
         help_text="Ingresa la dirección de tu perfil así: https://www.instagram.com/miorganizacion. Quedará publicado en el perfil público.",
-        required=True)
+        required=False)
 
     # de contacto privado
     nombre_contacto = forms.CharField(
