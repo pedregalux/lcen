@@ -14,7 +14,7 @@ class CiudadanoSignUpForm(UserCreationForm):
     password2 = forms.CharField(label='Confirmar Contraseña', widget=(forms.PasswordInput(attrs={'class': 'form-control'})))
     nombre = forms.CharField(label='Nombre y Apellido', required=True)
     email = forms.EmailField(required=True)
-    genero = forms.CharField(required=False, widget=forms.Select(choices=Ciudadano.GENERO))
+    genero = forms.CharField(label='Seleccionar Género', required=False, widget=forms.Select(choices=Ciudadano.GENERO))
     rangoedad = forms.CharField(label='Seleccionar rango de edad', required=False, widget=forms.Select(choices=Ciudadano.RANGOEDAD))
     pais = forms.ModelChoiceField(queryset=Pais.objects, empty_label="Seleccionar País")
     region = forms.ModelChoiceField(queryset=Region.objects, empty_label="Seleccionar Región")
