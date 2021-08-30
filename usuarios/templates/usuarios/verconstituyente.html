@@ -35,10 +35,22 @@
                 <p style="text-align: center;"><b>Redes Sociales:</b></p>
             </li>
             <li class="redes-sociales" style="list-style: none;">
+                {% if object.twitter %}
                 <a href="{{ object.twitter }}"><i class="fab fa-twitter-square"></i></a>
+                {% else %}
+                {% endif %}
+                {% if object.facebook %}
                 <a href="{{ object.facebook }}"><i class="fab fa-facebook-square"></i></a>
+                {% else %}
+                {% endif %}
+                {% if object.linkedin %}
                 <a href="{{ object.linkedin }}"><i class="fab fa-linkedin"></i></a>
+                {% else %}
+                {% endif %}
+                {% if object.instagram %}
                 <a href="{{ object.instagram }}"><i class="fab fa-instagram-square"></i></a>
+                {% else %}
+                {% endif %}
             </li>
         </div>
         <div class="col-12 col-sm-12 col-md-5 datos">
@@ -66,7 +78,10 @@
                     <p><b>Movimiento / Organización:</b> {{ object.movimiento }}</p>
                 </li>
                 <li>
-                    <p><b>Enlace a declaración de intereses y patrimonio: <a href="{{ object.linkintereses }}" class="enlace-parrafos">Revisar (link externo)</a></b></p>
+                  {% if object.linkintereses %}
+                    <p><b>Enlace a declaración de intereses y patrimonio: <a href="{{ object.linkintereses }}" class="enlace-parrafos">Revisar Link</a></b></p>
+                  {% else %}
+                  {% endif %}
                 </li>
             </ul>
         </div>
