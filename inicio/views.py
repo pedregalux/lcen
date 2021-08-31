@@ -32,3 +32,8 @@ class QueesView(TemplateView):
 
 class PreguntasView(TemplateView):
     template_name = 'inicio/preguntas-frecuentes.html'
+
+
+
+class TerminosView(TemplateView):
+    template_name = 'inicio/terminos.html'

@@ -17,6 +17,7 @@ class UserAdmin(UserAdmin):
     )
 
 
+
 admin.site.register(User, UserAdmin)
 admin.site.register(Ciudadano)
 admin.site.register(Organizacion)

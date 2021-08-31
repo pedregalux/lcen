@@ -39,7 +39,7 @@
               <h4 class="mb-3">¡Felicitaciones! Tu propuesta está casi lista. Lo primero que las personas leerán de tu propuesta es el título.</h4>
               <p class="recomendacion">Por ello, te sugerimos escribir una frase breve y fácil de comprender, potente en su contenido, y que pueda funcionar como el hashtag (#) de una campaña comunicacional en redes sociales.</p>
               <p class="recomendacion">En otras palabras, responde en un tweet: ¿cuál es el cambio más importante que tú o tu organización quiere ver reflejado en la Nueva Constitución?</p>
-              <p class="recomendacion">No olvides revisar tu propuesta y chequear que aceptas los términos y condiciones de participación antes de “enviar”.</p>
+              <p class="recomendacion">No olvides revisar tu propuesta y revisar los <a href="{% url 'terminos' %}" target="_blank">términos y condiciones</a> de participación antes de “enviar”.</p>
           </div>
           <!-- <div class="blue contacto-ayuda">
               <h3>¿Necesitas ayuda técnica?</h3>
@@ -65,7 +65,7 @@
             <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">Inicio</button>
             <button class="btn-lcen button hvr-sweep-to-right" name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">Anterior</button>
             {% endif %}
-            <input class="btn-lcen button hvr-sweep-to-right" type="submit" value="siguiente"/>
+            <input class="btn-lcen button hvr-sweep-to-right" type="submit" value="enviar"/>
 
           </form>
 
