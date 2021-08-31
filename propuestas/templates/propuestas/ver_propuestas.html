@@ -21,6 +21,11 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12">
                 <h2>Tenemos <span>{{ propuestas_list.count }}</span> propuestas ciudadanas para la nueva constitución</h2>
+
+                <div class="btn-subir-propuestas">
+                     <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right subir-propuesta-btn">Sube tu propuesta</a>
+                </div>
+
                 <p>Revisa las propuestas ciudadanas</p>
             </div>
             <!-- <div class="col-12 col-sm-12 col-md-12 formulario">
@@ -67,9 +72,6 @@
 
 <section class="container propuestas-seccion wow animate__animated animate__fadeIn">
     <div class="row">
-        <!-- <div class="col-12 col-sm-12 col-md-12">
-            <h3>Resultados de búsqueda: <span>Salud</span></h3>
-        </div> -->
 
 {% for propuesta in propuestas_list %}
 
@@ -139,6 +141,26 @@
 </nav>
 </div> -->
 </div>
+</section>
+
+
+<section class="a-ponerse-con-propuestas container-fluid no-bg">
+   <div class="llamado-propuestas">
+       <h1>A ponerse con propuestas</h1>
+       <img src="{% static 'img/megafono-recorte.png' %}" alt="megafono-recorte" class="megafono-recorte img-fluid">
+   </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+                <img src="{% static 'img/collage-propuestas.png' %}" alt="collage a ponerse con propuestas" class="img-fluid p-4">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+                <h2>Tu propuesta a la convención</h2>
+                <p>Acá tienes la oportunidad de subir tus propuestas para la nueva Constitución de Chile y nosotrxs la haremos llegar a la Convención. <b>¡No te quedes fuera!</b></p>
+                <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right">Sube tu propuesta</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 
