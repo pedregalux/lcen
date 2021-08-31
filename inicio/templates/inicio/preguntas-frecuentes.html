@@ -1,10 +1,11 @@
-{% extends "base.html" %} 
-{% load static %} 
-{% block title %} Preguntas Frecuentes {% endblock %} 
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Preguntas Frecuentes {% endblock %}
 {% block content %}
 
 <section class="portada-lcen-colores">
     <img src="{% static 'img/preguntas-frecuentes.jpeg' %}" alt="img collage portada" class="img-fluid">
+    <img src="{% static 'img/preguntas-frecuentes-movil.jpeg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
