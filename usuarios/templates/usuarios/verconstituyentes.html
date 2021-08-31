@@ -5,7 +5,7 @@
 {% block content %}
 
 <section class="portada-lcen-colores">
-    <img src="{% static 'img/header-convencionales.jpg' %}" alt="img collage portada" class="img-fluid">
+    <img src="{% static 'img/header-convencionales.jpg' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
     <img src="{% static 'img/header-convencionales-movil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -110,44 +110,23 @@
 </section>
 
 
-<!-- <div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
+
+<div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
 <nav aria-label="Page navigation example">
-    <ul class="pagination">
-        <li class="page-item disabled">
-            <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-        </li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-        </li>
-    </ul>
-</nav>
-</div> -->
-
-
-
-<div class="pagination">
-    <span class="step-links">
+  <ul class="pagination">
+    <!-- <span class="step-links"> -->
         {% if page_obj.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            <li class="page-item"><a class="page-link" href="?page=1">&laquo; Inicio</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previo</a></li>
         {% endif %}
-
-        <span class="current">
-            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-        </span>
 
         {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">next</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Siguiente</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Último &raquo;</a></li>
         {% endif %}
-    </span>
+    <!-- </span> -->
+  </ul>
+</nav>
 </div>
 
 

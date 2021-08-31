@@ -86,7 +86,7 @@ class VerOrganizacionView(DetailView):
 
 
 class VerConvencionalesView(ListView):
-    paginate_by = 8
+    paginate_by = 12
     model = Convencional
     context_object_name = 'constituyentes_list'
     template_name = 'usuarios/verconstituyentes.html'
