@@ -7,6 +7,7 @@
 
 <section class="portada-lcen-colores">
     <img src="{% static 'img/header-propuestas.jpg' %}" alt="img collage portada" class="img-fluid">
+    <img src="{% static 'img/header-propuestas-movil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
@@ -112,6 +113,26 @@
             </div>
 
             <p class="reportar">Si encuentras que esta propuesta viola los <a href="#" target="_blank">"Términos y Condiciones"</a> para la creación de una propuesta, ayúdanos <a href="#" target="_blank">reportando</a> esta propuesta.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="a-ponerse-con-propuestas container-fluid no-bg">
+   <div class="llamado-propuestas">
+       <h1>A ponerse con propuestas</h1>
+       <img src="{% static 'img/megafono-recorte.png' %}" alt="megafono-recorte" class="megafono-recorte img-fluid">
+   </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+                <img src="{% static 'img/collage-propuestas.png' %}" alt="collage a ponerse con propuestas" class="img-fluid p-4">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+                <h2>Tu propuesta a la convención</h2>
+                <p>Acá tienes la oportunidad de subir tus propuestas para la nueva Constitución de Chile y nosotrxs la haremos llegar a la Convención. <b>¡No te quedes fuera!</b></p>
+                <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right">Sube tu propuesta</a>
+            </div>
         </div>
     </div>
 </section>
