@@ -88,7 +88,7 @@ class PropuestaForm5(forms.ModelForm):
         }
         labels = {
             'compromiso_convencionales': ('<h6><span style="text-transform:uppercase">1. ¿Tu propuesta cuenta con compromisos formales de apoyo de convencionales constituyentes?</span></h6><i>Marque si es así.</i>'),
-            'anexo3_propuesta': ('<i>Si tienes un documento o archivo que acredite los compromisos, ingrésalo acá.</i>'),
+            'anexo3_propuesta': ('<i>Si tienes un documento o archivo que acredite los compromisos, ingrésalo acá. Por favor no subir documentos con peso mayor a 10MB.</i>'),
         }
 
 
@@ -103,8 +103,8 @@ class PropuestaForm6(forms.ModelForm):
         'link_extra2'
         ]
         labels = {
-            'anexo_propuesta': ('<h6><span style="text-transform:uppercase">Si has elaborado un documento con tu propuesta constitucional desarrollada en mayor detalle y profundidad, adjúntalo:</span></h6>'),
-            'anexo2_propuesta': ('<i>Asimismo, si cuentas con otros materiales que complementen tu propuesta (estudios, encuestas, presentaciones, material comunicacional, etc.) , agrégalos acá.</i>'),
+            'anexo_propuesta': ('<h6><span style="text-transform:uppercase">Si has elaborado un documento con tu propuesta constitucional desarrollada en mayor detalle y profundidad, adjúntalo -no subir documentos con peso mayor a 10MB-:</span></h6>'),
+            'anexo2_propuesta': ('<i>Asimismo, si cuentas con otros materiales que complementen tu propuesta (estudios, encuestas, presentaciones, material comunicacional, etc.) , agrégalos acá. No subir documentos con peso mayor a 10MB.</i>'),
             'link_extra1': ('<i>Si hay una página o documento online, ingresa un link a material complementario.</i>'),
             'link_extra2': ('<i>Otro link a material complementario.</i>'),
         }
