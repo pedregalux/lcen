@@ -68,6 +68,8 @@ class PropuestaWizardView(LoginRequiredMixin,SessionWizardView):
 
 
 def ApoyoView(request, pk):
+    if not request.user.is_authenticated:
+        return redirect('login')
     post = Propuesta.objects.get(pk=pk)
     post.apoyos.add(request.user)
     return HttpResponseRedirect(reverse('ver_propuesta', args=[str(pk)]))
