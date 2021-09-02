@@ -732,12 +732,20 @@ header ul.navbar-nav li .dropdown-menu a {
 
 .organizaciones-lista li {
     list-style: none;
-    margin: 25px;
-    height: 120px;
-    width: 120px;
+    margin: 5px 0px;
+    height: auto;
+    width: 200px;
     display: flex;
-     justify-content: center;
+    justify-content: center;
     align-items: center;
+}
+
+.organizaciones-home img {
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: 0.4s all;
+    height: auto;
+    width: 100%;
 }
 
 .organizaciones-home img {
@@ -2749,16 +2757,16 @@ ul.pagination .active a {
         width: 100%;
     }
 
-    /*Logos organizaciones seccion*/
+/*Logos organizaciones seccion*/
     .organizaciones-lista li {
-        margin: 20px 10px;
+        margin: 10px 0px;
         height: auto;
-        width: auto;
+        width: 180px !important;
     }
 
     .organizaciones-home img {
-        height: 45px;
-        width: auto;
+        height: auto;
+        width: 100%;
     }
 
     /*Propuestas lectura resumen*/
@@ -2974,10 +2982,13 @@ ul.pagination .active a {
     }
 }
 
-
 @media (max-width: 500px) {
     .resultados-convencionales figcaption .datos {
         margin-top: 60px;
         padding-left: 20px;
+    }
+    /*Logos organizaciones seccion*/
+    .organizaciones-lista li {
+        width: 140px !important;
     }
 }
