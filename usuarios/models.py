@@ -82,6 +82,7 @@ class Organizacion(models.Model):
         help_text="Este es el nombre que será mostrado en el Perfil Público de la Organización en la plataforma")
     logo_organizacion = models.ImageField(
         'Logo/Imagen de la Organización',
+        upload_to='fotos_constituyentes/',
         null=True,
         blank=True,
         help_text="Si deseas subir una imagen o logo representativo de tu organización al perfil público, lo puedes cargar acá")
