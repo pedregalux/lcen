@@ -48,6 +48,7 @@
                     <p><span class="numero">{{ object.apoyos.count }}</span> apoyos ciudadanxs</p>
                 </div>
                 <h3 class="apoyar">Apoya esta propuesta</h3>
+                <p>Recuerda que debes <a href="{% url 'login' %}?next={{request.path}}">Ingresar</a> para Apoyar</p>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn-lcen apoyar button hvr-sweep-to-right" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apoyar <i class="fas fa-heart"></i></button>
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -60,6 +61,7 @@
                             <div class="modal-body">
                                 <h3>¿Deseas apoyar la propuesta {{ object.titulo }}?</h3>
                                 <p>Al apoyar esta propuesta aceptas que La Constitución es Nuestra te notifique vía correo electrónico cuando un convencional decida apoyar esta propuesta.</p>
+                                <p>Recuerda que debes <a href="{% url 'login' %}?next={{request.path}}">Ingresar</a> para Apoyar</p>
 
                                 <form class="" action="{% url 'prop_apoyo' object.pk %}" method="post">
                                   {% csrf_token %}
