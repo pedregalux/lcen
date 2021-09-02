@@ -82,14 +82,17 @@
                             <p class="lugar">
                               {{ propuesta.region }}, Comuna {{ propuesta.comuna }}
                             </p>
-                            <!-- <h4>Propuesta de</h4>
-                            {% if propuesta.autor.is_organizacion %}
-                            <img src="{{ organizacion.logo_organizacion.url }}" alt="logo organización">
+                            <h4>Propuesta de</h4>
+                            {% if propuesta.autor.organizacion %}
+                            <img src="{{ propuesta.autor.organizacion.logo_organizacion.url }}" alt="logo organizacion">
+                            <p class="lugar">
+                            {{ propuesta.autor.organizacion.nombre_perfil }}
+                            </p>
                             {% else %}
                             <p class="lugar">
-                            {{ propuesta.organizacion.nombre_perfil }}
+                            Propuesta Personal
                             </p>
-                            {% endif %} -->
+                            {% endif %}
                         </div>
                        <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
                     </div>
@@ -133,14 +136,17 @@
                             <p class="lugar">
                               {{ propuesta.region }}, Comuna {{ propuesta.comuna }}
                             </p>
-                            <!-- <h4>Propuesta de</h4>
-                            {% if propuesta.autor.is_organizacion %}
-                            <img src="{% static 'img/logo-organizacion-ejemplo.png' %}" alt="logo organización">
+                            <h4>Propuesta de</h4>
+                            {% if propuesta.autor.organizacion %}
+                            <img src="{{ propuesta.autor.organizacion.logo_organizacion.url }}" alt="logo organizacion">
+                            <p class="lugar">
+                            {{ propuesta.autor.organizacion.nombre_perfil }}
+                            </p>
                             {% else %}
                             <p class="lugar">
                             Propuesta Personal
                             </p>
-                            {% endif %} -->
+                            {% endif %}
                         </div>
                         <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
                     </div>
