@@ -87,14 +87,11 @@ class Propuesta(models.Model):
         blank=True)
     # paso 3
     problema = models.TextField("Descripción de problema a solucionar",
-        null=True,
-        blank=True)
+        null=True)
     situacion = models.TextField("Situación ideal de solución",
-        null=True,
-        blank=True)
+        null=True)
     componente = models.TextField("Componente de la Constitución",
-        null=True,
-        blank=True)
+        null=True)
     # paso 4
     otras_organizaciones = models.BooleanField("Junto a otras organizaciones",
         default=False)
