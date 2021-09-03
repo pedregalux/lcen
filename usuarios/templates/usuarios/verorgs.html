@@ -24,7 +24,7 @@
                 <ul>
                   {% for organizacion in organizaciones_list %}
                   <div class="col-6 col-sm-4 col-md-2">
-                      <li><a href="{{ organizacion.pk }}"><img src="{{ organizacion.logo.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
+                      <li><a href="{{ organizacion.pk }}"><img src="{{ organizacion.logo_organizacion.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
                   </div>
                   {% endfor %}
                 </ul>
