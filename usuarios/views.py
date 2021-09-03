@@ -91,6 +91,9 @@ class VerConvencionalesView(ListView):
     context_object_name = 'constituyentes_list'
     template_name = 'usuarios/verconstituyentes.html'
 
+    def get_queryset(self):
+        return Convencional.objects.order_by('-user')
+
 
 
 class VerConvencionalView(DetailView):
