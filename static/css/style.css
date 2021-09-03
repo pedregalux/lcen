@@ -2992,3 +2992,78 @@ ul.pagination .active a {
         width: 140px !important;
     }
 }
+
+.organizaciones-seccion li {
+    list-style: none;
+    height: 95%;
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+.organizaciones-seccion img {
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: 0.4s all;
+    height: auto;
+    width: auto;
+    max-height: 80px;
+    max-width: 140px;
+}
+@media (max-width: 500px) {
+    .organizaciones-seccion li {
+        height: 90% !important;
+        width: 75% !important;
+    }
+    .organizaciones-seccion img {
+        max-height: 65px;
+        max-width: 120px;
+    }
+    .organizaciones-seccion {
+        padding: 20px 0px 0px 0px !important;
+    }
+}
+@media (max-width: 340px) {
+    .organizaciones-seccion img {
+        max-height: 50px;
+        max-width: 90px;
+    }
+}
+
+.terminosycondiciones{
+    padding: 70px 0px;
+}
+.terminosycondiciones h1{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: black;
+    padding: 8px 0px;
+}
+.terminosycondiciones h2{
+    font-size: 1.3em;
+    text-transform: inherit;
+    padding-left: 0px;
+    border: 0px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: black;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+}
+.terminosycondiciones p{
+    font-size: 1em;
+    color: black;
+    padding-bottom:6px;
+    margin-bottom: 0px;
+}
+.terminosycondiciones li{
+    font-size: 1em;
+    color: black;
+    padding-bottom: 5px;
+}

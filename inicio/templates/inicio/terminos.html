@@ -1,91 +1,79 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} Preguntas Frecuentes {% endblock %}
+{% block title %}Términos y Condiciones{% endblock %}
 {% block content %}
 
-<!-- <section class="portada-lcen-colores">
-    <img src="{% static 'img/preguntas-frecuentes.jpeg' %}" alt="img collage portada" class="img-fluid">
-    <img src="{% static 'img/preguntas-frecuentes-movil.jpeg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-terminos.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-terminos-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></p>
-            <li class="breadcrumb-item active" aria-current="page">Términos y Condiciones</p>
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Términos y Condiciones</li>
         </ol>
     </nav>
-</section> -->
-<section class="container que-es-lcen">
-    <div class="row d-flex align-items-center">
-        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
-          <br /><br /><br />
-            <h2>Términos y Condiciones</h2>
-            <p>Esta página contiene los Términos y Condiciones de nuestra web, además de nuestra política de privacidad. Por favor lee cuidadosamente antes de realizar alguna propuesta.</p>
+</section>
+
+
+<div class="container terminosycondiciones">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-sm-10 col-md-8">
+            <h1>Términos y Condiciones</h1>
+            <div class="decoracion yellow"></div>
+            <p class="pt-4">Esta página contiene los Términos y Condiciones de nuestra web, además de nuestra política de privacidad. Por favor lee cuidadosamente antes de realizar alguna propuesta.</p>
             <p>En La Constitución Es Nuestra creemos en una sociedad diversa e inclusiva. Por esto, las propuestas que inciten al odio o discriminación por razones políticas, sexuales, de credo, género, étnicas,raciales, etc. serán rechazadas inmediatamente.</p>
-            <h5>Política de privacidad</h5>
 
+            <h2>Política de privacidad</h2>
             <p>La privacidad de tus datos es primordial para La Constitución Es Nuestra, y aseguramos que la información de carácter personal que nos entregues a través de formularios de registro, será utilizada sólo para las finalidades correspondientes al proyecto.</p>
-            <h5>¿Qué datos te solicitamos para registrarte en La Constitución es Nuestra?</h5>
 
-            <p>Los datos personales que registramos de los usuarios al inscribirse en la plataforma, son:
-            </p>
-            <p>
-              Nombre y Apellido</p>
-            <p>
-              Rango de edad</p>
-            <p>
-              Género</p>
-            <p>
-              Teléfono</p>
-            <p>
-              Correo electrónico</p>
-            <p>
-              País, región y comuna</p>
-
+            <h2>¿Qué datos te solicitamos para registrarte en La Constitución es Nuestra?</h2>
+            <p>Los datos personales que registramos de los usuarios al inscribirse en la plataforma, son:</p>
+            <ul>
+                <li>Nombre y Apellido</li>
+                <li>Rango de edad</li>
+                <li>Género</li>
+                <li>Teléfono</li>
+                <li>Correo electrónico</li>
+                <li>País, región y comuna</li>
+            </ul>
             <p>En el caso de la inscripción de organizaciones y cabildos, el registro del perfil en la plataforma se realiza con los datos correspondientes a la organización y, además, se solicitan los datos de contacto de un usuario en nombre de la organización.</p>
-            <h5>¿Qué hacemos con tus datos personales?</h5>
+            <h2>¿Qué hacemos con tus datos personales?</h2>
+            <p>Crear y mantener tu perfil en la web.</p>
+            <p>Verificar tu cuenta de usuario, por razones de seguridad.</p>
+            <p>Mejorar la plataforma y tu experiencia en este sitio web a través de la evaluación de usabilidad del sitio.</p>
+            <p>Gestionar la identificación y autentificación de usuarios.</p>
+            <p>Elaborar informes temáticos que consideran dentro las variables de análisis los datos personales descriptivos que otorgan los usuarios registrados.</p>
 
-            <p>
-              Crear y mantener tu perfil en la web.</p>
-            <p>
-              Verificar tu cuenta de usuario, por razones de seguridad.</p>
-            <p>
-              Mejorar la plataforma y tu experiencia en este sitio web a través de la evaluación de usabilidad del sitio.</p>
-            <p>
-              Gestionar la identificación y autentificación de usuarios.</p>
-            <p>
-              Elaborar informes temáticos que consideran dentro las variables de análisis los datos personales descriptivos que otorgan los usuarios registrados.</p>
-
-            <h5>¿Recibirás notificaciones?</h5>
-
+            <h2>¿Recibirás notificaciones?</h2>
             <p>Al registrarte en la plataforma, nos autorizas a enviarte notificaciones cuando:</p>
-
-            <p>
-              Una organización quiera apoyar tu propuesta.</p>
-            <p>
-              Una o un constituyente se comprometa con tu propuesta.</p>
-            <p>
-              Recibir anuncios de eventos y talleres vinculados al diálogo y generación de incidencia entre organizaciones.</p>
-            <h5>¿Qué haremos con las propuestas que subas a la plataforma?</h5>
+            <ul>
+                <li>Una organización quiera apoyar tu propuesta.</li>
+                <li>Una o un constituyente se comprometa con tu propuesta.</li>
+                <li>Recibir anuncios de eventos y talleres vinculados al diálogo y generación de incidencia entre organizaciones.</li>
+            </ul>
+            <h2>¿Qué haremos con las propuestas que subas a la plataforma?</h2>
             <p>Sabemos que las propuestas que se suben a la plataforma son de autoría de los individuos y organizaciones que las realizan y esto quedará explicitado en todas las instancias del proyecto. Al subir tu propuesta constitucional en la plataforma, nos autorizas a:</p>
-            <p>
-              Compartirla en todas las instancias relacionadas al desarrollo del proyecto (RR.SS., otras organizaciones, talleres, etc.)</p>
-            <h5>¿Qué propuestas no se pueden subir a La Constitución es Nuestra?</h5>
+            <p>Compartirla en todas las instancias relacionadas al desarrollo del proyecto (RR.SS., otras organizaciones, talleres, etc.)</p>
+
+            <h2>¿Qué propuestas no se pueden subir a La Constitución es Nuestra?</h2>
             <p>Aquellas, que buscan:</p>
-            <p>
-              Promover acciones que escapen a las facultades de la Convención Constitucional.</p>
-            <p>
-              Promover causas particulares y no de interés colectivo.</p>
-            <p>
-              Escaparse de los principios democráticos. En La Constitución Es Nuestra creemos que la base de la democracia es la creencia de que toda la ciudadanía debe tener derecho al mismo nivel de incidencia sobre la decisiones de nuestra comunidad.</p>
-            <br />
-            <h5>¿Cuáles son tus derechos?</h5>
+            <ul>
+                <li>Promover acciones que escapen a las facultades de la Convención Constitucional.</li>
+                <li>Promover causas particulares y no de interés colectivo.</li>
+                <li>Escaparse de los principios democráticos. En La Constitución Es Nuestra creemos que la base de la democracia es la creencia de que toda la ciudadanía debe tener derecho al mismo nivel de incidencia sobre la decisiones de nuestra comunidad.</li>
+            </ul>
+
+            <h2>¿Cuáles son tus derechos?</h2>
             <p>En todo momento, puedes solicitar el ejercicio de tus derechos de acceso, rectificación, cancelación y oposición de los datos que nos entregues, de acuerdo con el artículo 12 de la Ley N° 19.628 sobre protección a la vida privada, enviándonos un correo electrónico a soporte@laconstitucionesnuestra.cl y obtendrás una respuesta del equipo en un periodo de tres días hábiles.</p>
             <p>Te recordamos que los datos sólo se conservarán durante el tiempo necesario para cumplir con las finalidades de este proyecto.</p>
-            <h5>¿Cuál es nuestra política de cookies?</h5>
+
+            <h2>¿Cuál es nuestra política de cookies?</h2>
             <p>Como la mayoría de sitios web, utilizamos cookies para optimizar tu experiencia y la de otras personas que visiten esta plataforma. Es importante que estés al tanto de que nunca utilizaremos cookies para identificar y rastrear a las y los usuarios de nuestra web. Tampoco se realizarán cruces de datos, pues nos interesa resguardar tu privacidad.</p>
             <p>En cualquier momento, puedes cambiar tus preferencias sobre el uso de cookies, por medio de las herramientas facilitadas por cada navegador web.</p>
         </div>
     </div>
-</section>
+</div>
 
 
 
