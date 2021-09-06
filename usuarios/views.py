@@ -220,7 +220,7 @@ def password_reset_request(request):
 			associated_users = User.objects.filter(Q(email=data))
 			if associated_users.exists():
 				for user in associated_users:
-					subject = "Password Reset Requested"
+					subject = "Cambio de Contraseña en LCeN - La Constitución es Nuestra"
 					email_template_name = "password_reset_email.txt"
 					c = {
 					"email":user.email,
