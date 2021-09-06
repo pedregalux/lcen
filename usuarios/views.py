@@ -222,7 +222,7 @@ def password_reset_request(request):
 					email_template_name = "password_reset_email.txt"
 					c = {
 					"email":user.email,
-					'domain':'dev.laconstitucionesnuestra.cl',
+					'domain':'laconstitucionesnuestra.cl',
 					'site_name': 'LCeN',
 					"uid": urlsafe_base64_encode(force_bytes(user.pk)),
 					"user": user,
