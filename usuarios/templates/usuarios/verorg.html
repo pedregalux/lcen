@@ -26,10 +26,22 @@
             </div>
             <p class="titulo-rrss">Redes Sociales:</p>
             <ul class="redes-sociales">
+              {% if object.twitter %}
                 <li><a href="{{ object.twitter }}"><i class="fab fa-twitter-square"></i></a></li>
+              {% else %}
+              {% endif %}
+              {% if object.facebook %}
                 <li><a href="{{ object.facebook }}"><i class="fab fa-facebook-square"></i></a></li>
+              {% else %}
+              {% endif %}
+              {% if object.linkedin %}
                 <li> <a href="{{ object.linkedin }}"><i class="fab fa-linkedin"></i></a></li>
+              {% else %}
+              {% endif %}
+              {% if object.instagram %}
                 <li> <a href="{{ object.instagram }}"><i class="fab fa-instagram-square"></i></a></li>
+              {% else %}
+              {% endif %}
             </ul>
         </div>
         <div class="col-12 col-sm-12 col-md-6 datos">
@@ -42,16 +54,25 @@
                         <p>{{ object.descripcion|linebreaks }}</p>
                 </li>
                 <li>
+                  {% if object.pais %}
                     <p><b>Ubicación: </b>{{ object.pais }}</p>
+                  {% else %}
+                  {% endif %}
                 </li>
                 <li>
+                  {% if object.alcance %}
                   <p><b>Alcance del trabajo: </b><br>
                     {{ object.alcance }}
                     </p>
+                  {% else %}
+                  {% endif %}
                 </li>
+                {% if object.sitioweb %}
                 <li class="d-flex">
                    <p><b>Sitio Web:</b></p><a href="{{ object.sitioweb }}" class="sitio-web-org px-2"> Revisar</a>
                 </li>
+                  {% else %}
+                  {% endif %}
             </ul>
         </div>
     </div>
