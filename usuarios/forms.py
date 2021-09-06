@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordResetForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordResetForm, SetPasswordForm
 from django import forms
 from django.forms import ModelForm
 from django.db import transaction
@@ -212,7 +212,21 @@ class UserPasswordResetForm(PasswordResetForm):
 
     email = forms.EmailField(label='', widget=forms.EmailInput(attrs={
         'class': 'your class',
-        'placeholder': 'your placeholder',
+        'placeholder': 'Ingrese acá el e-mail',
         'type': 'email',
         'name': 'email'
         }))
+
+
+
+class passwordform(SetPasswordForm):
+    new_password1 = forms.CharField(
+        label=("Nueva Password"),
+        widget=forms.PasswordInput(attrs={'autocomplete': 'new-password'}),
+        strip=False,
+    )
+    new_password2 = forms.CharField(
+        label=("Confirme Nueva Password"),
+        strip=False,
+        widget=forms.PasswordInput(attrs={'autocomplete': 'new-password'}),
+    )
