@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordResetForm
 from django import forms
 from django.forms import ModelForm
 from django.db import transaction
@@ -203,3 +203,16 @@ class ConvencionalSignUpForm(UserCreationForm):
         # convencional.cualquiercosa=self.cleaned_data.get('cualquiercosa')
         convencional.save()
         return user
+
+
+
+class UserPasswordResetForm(PasswordResetForm):
+    def __init__(self, *args, **kwargs):
+        super(UserPasswordResetForm, self).__init__(*args, **kwargs)
+
+    email = forms.EmailField(label='', widget=forms.EmailInput(attrs={
+        'class': 'your class',
+        'placeholder': 'Ingrese acá el e-mail',
+        'type': 'email',
+        'name': 'email'
+        }))
