@@ -9,7 +9,7 @@ from django.views.generic import TemplateView
 from django.views.generic import UpdateView
 from django.views.generic import ListView
 from django.views.generic import DetailView
-from .forms import CiudadanoSignUpForm, OrganizacionSignUpForm, ConvencionalSignUpForm, OrganizacionChangeForm
+from .forms import CiudadanoSignUpForm, OrganizacionSignUpForm, ConvencionalSignUpForm, OrganizacionChangeForm, UserPasswordResetForm
 from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm
 from propuestas.models import Propuesta
 from .models import User, Organizacion, Convencional
@@ -20,8 +20,6 @@ from django.db.models.query_utils import Q
 from django.utils.http import urlsafe_base64_encode
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
-
-
 
 
 
@@ -214,7 +212,7 @@ def logout_view(request):
 
 def password_reset_request(request):
 	if request.method == "POST":
-		password_reset_form = PasswordResetForm(request.POST)
+		password_reset_form = UserPasswordResetForm(request.POST)
 		if password_reset_form.is_valid():
 			data = password_reset_form.cleaned_data['email']
 			associated_users = User.objects.filter(Q(email=data))
@@ -237,5 +235,5 @@ def password_reset_request(request):
 					except BadHeaderError:
 						return HttpResponse('Invalid header found.')
 					return redirect ("/password_reset/done/")
-	password_reset_form = PasswordResetForm()
+	password_reset_form = UserPasswordResetForm()
 	return render(request=request, template_name="password_reset.html", context={"password_reset_form":password_reset_form})
