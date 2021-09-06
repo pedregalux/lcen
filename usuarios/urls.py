@@ -2,6 +2,8 @@ from django.urls import path
 from . import  views
 from usuarios.views import *
 
+
+
 urlpatterns=[
      path('register/',views.register, name='register'),
      path('ciudadano_register/',views.ciudadano_register.as_view(), name='ciudadano_register'),
@@ -18,4 +20,5 @@ urlpatterns=[
      path('login/',views.login_request, name='login'),
      path('loginconvencionales/',views.login_convencionales, name='loginconvencionales'),
      path('logout/',views.logout_view, name='logout'),
+     path("password_reset/", views.password_reset_request, name="password_reset"),
 ]
