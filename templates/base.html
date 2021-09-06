@@ -103,7 +103,7 @@
                             </ul>
                         </li>-->
                         <li class="nav-item dropdown ingresar">
-                            {% if user.is_authenticated %}
+                        {% if user.is_authenticated %}
                             <a class="nav-link dropdown-toggle btn-lcen button hvr-sweep-to-right" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hola {{ user.username }}</a>
                             {% else %}
                             <a class="nav-link dropdown-toggle btn-lcen button hvr-sweep-to-right" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Registro</a>
@@ -111,6 +111,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
                                 {% if user.is_authenticated %}
+                                <li><a class="dropdown-item" href="{% url 'password_reset' %}">Recuperar Contraseña</a></li>
                                 {% else %}
                                  <a class="dropdown-item" href="{% url 'login' %}">
                                   Login</a>
