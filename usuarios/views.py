@@ -233,7 +233,7 @@ def password_reset_request(request):
 					}
 					email = render_to_string(email_template_name, c)
 					try:
-						send_mail(subject, email, 'sporte@laconstitucionesnuestra.cl' , [user.email], fail_silently=False)
+						send_mail(subject, email, 'soporte@laconstitucionesnuestra.cl' , [user.email], fail_silently=False)
 					except BadHeaderError:
 						return HttpResponse('Invalid header found.')
 					return redirect ("/password_reset/done/")
