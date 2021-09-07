@@ -58,7 +58,6 @@ class Propuesta(models.Model):
     pais = models.ForeignKey(Pais,
         related_name="pais_propuesta",
         verbose_name="País de Origen de Propuesta",
-        blank=True,
         null=True,
         on_delete=models.SET_NULL)
     region = models.ForeignKey(Region,

@@ -49,7 +49,21 @@
             <h4>Qué debe contemplar la Nueva Constitución</h4>
             <p>{{ object.componente|linebreaks }}</p>
             <div class="linea yellow my-3"></div>
-            <p class="lugar"><i class="fas fa-map-marker-alt"></i>Esta propuesta se elaboró en: <b>{{ object.comuna }}, {{ object.region }}, {{ object.pais }}</b></p>
+            <p class="lugar"><i class="fas fa-map-marker-alt"></i>Esta propuesta se elaboró en: <b>
+              {% if propuesta.region %}
+              {{ propuesta.region }} ·
+              {% endif %}
+              {% if not propuesta.region %}
+              {% endif %}
+              {% if propuesta.comuna %}
+              {{ propuesta.comuna }}
+              {% endif %}
+              {% if not propuesta.comuna %}
+              {% endif %}
+              {% if not propuesta.region and not propuesta.comuna %}
+              Sin región y/o comuna definidas
+              {% endif %},  
+              {{ object.pais }}</b></p>
         </div>
         <div class="col-12 col-sm-12 col-md-4 informacion-destacada">
             <div class="bg-color">
