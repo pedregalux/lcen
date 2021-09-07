@@ -50,19 +50,19 @@
             <p>{{ object.componente|linebreaks }}</p>
             <div class="linea yellow my-3"></div>
             <p class="lugar"><i class="fas fa-map-marker-alt"></i>Esta propuesta se elaboró en: <b>
-              {% if propuesta.region %}
-              {{ propuesta.region }} ·
+              {% if object.region %}
+              {{ object.region }} ·
               {% endif %}
-              {% if not propuesta.region %}
+              {% if not object.region %}
               {% endif %}
-              {% if propuesta.comuna %}
-              {{ propuesta.comuna }}
+              {% if object.comuna %}
+              {{ object.comuna }}
               {% endif %}
-              {% if not propuesta.comuna %}
+              {% if not object.comuna %}
               {% endif %}
-              {% if not propuesta.region and not propuesta.comuna %}
+              {% if not object.region and not object.comuna %}
               Sin región y/o comuna definidas
-              {% endif %},  
+              {% endif %},
               {{ object.pais }}</b></p>
         </div>
         <div class="col-12 col-sm-12 col-md-4 informacion-destacada">
