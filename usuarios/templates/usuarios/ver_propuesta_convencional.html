@@ -23,7 +23,6 @@
             <p class="tema-principal">{{ object.tema }}</p>
             <p>
               {% if object.otros_temas %}
-              Otros temas:
               {% for otro_tema in object.otros_temas.all %}
               {{ otro_tema }} ·
               {% endfor %}
