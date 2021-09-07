@@ -33,7 +33,7 @@ class PropuestaForm2(forms.ModelForm):
         labels = {
             'tema': ('<h6><span style="text-transform:uppercase">1. ¿Cuál es el tema principal de tu propuesta?</span></h6><i>Selecciona el tema principal desde la lista desplegable</i>'),
             'otros_temas': ('<h6><span style="text-transform:uppercase">2. ¿Qué otros temas aborda tu propuesta?</span></h6><i>Por favor selecciona hasta tres temas adicionales, debes seleccionarlos con el mouse y apretando la telca Control -Ctrl-</i>'),
-            'tema_extra': ('<h6><span style="text-transform:uppercase">3. Otro tema, ¿cuál?</span></h6><i>Si tu propuesta contempla algún tema que no está en el listado, por favor escríbelo aquí en una palabra o frase breve</i>'),
+            'tema_extra': ('<h6><span style="text-transform:uppercase">3. Otro tema, ¿cuál?</span></h6><i>Si tu propuesta contempla algún tema que no está en el listado, por favor escríbelo aquí en una palabra o frase breve -máximo 100 cars.-</i>'),
         }
 
 

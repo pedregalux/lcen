@@ -81,7 +81,7 @@ class Propuesta(models.Model):
         related_name="otros_temas_propuesta",
         verbose_name="Otros Temas de Propuesta")
     tema_extra = models.CharField("Tema complementario",
-        max_length=255,
+        max_length=100,
         null=True,
         blank=True)
     # paso 3
