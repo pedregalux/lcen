@@ -80,7 +80,7 @@ class Propuesta(models.Model):
     otros_temas = models.ManyToManyField(SubtemaPropuesta,
         related_name="otros_temas_propuesta",
         verbose_name="Otros Temas de Propuesta",
-        blank=True)
+        null=True)
     tema_extra = models.CharField("Tema complementario",
         max_length=255,
         null=True,
