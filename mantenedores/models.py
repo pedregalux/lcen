@@ -9,6 +9,7 @@ class Pais(models.Model):
     class Meta:
         verbose_name = "País"
         verbose_name_plural = "Países"
+        ordering = ['pais']
     def __str__(self):
         return self.pais
 
@@ -20,6 +21,7 @@ class Region(models.Model):
         unique=True)
     class Meta:
         verbose_name = "Región"
+        ordering = ['region']
         verbose_name_plural = "Regiones"
     def __str__(self):
         return self.region
@@ -55,6 +57,7 @@ class Comuna(models.Model):
     class Meta:
         verbose_name = "Comuna"
         verbose_name_plural = "Comunas"
+        ordering = ['comuna']
     def __str__(self):
         return self.comuna
 

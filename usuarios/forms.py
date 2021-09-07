@@ -16,9 +16,9 @@ class CiudadanoSignUpForm(UserCreationForm):
     email = forms.EmailField(required=True)
     genero = forms.CharField(label='Seleccionar Género', required=False, widget=forms.Select(choices=Ciudadano.GENERO))
     rangoedad = forms.CharField(label='Seleccionar rango de edad', required=False, widget=forms.Select(choices=Ciudadano.RANGOEDAD))
-    pais = forms.ModelChoiceField(queryset=Pais.objects, empty_label="Seleccionar País")
-    region = forms.ModelChoiceField(queryset=Region.objects, empty_label="Seleccionar Región")
-    comuna = forms.ModelChoiceField(queryset=Comuna.objects, empty_label="Seleccionar Comuna")
+    pais = forms.ModelChoiceField(queryset=Pais.objects.order_by('pais'), initial=239, empty_label="Seleccionar País")
+    region = forms.ModelChoiceField(queryset=Region.objects.order_by('region'), empty_label="Seleccionar Región")
+    comuna = forms.ModelChoiceField(queryset=Comuna.objects.order_by('comuna'), empty_label="Seleccionar Comuna")
     # cualquiercosa = forms.CharField(required=False)
 
     class Meta(UserCreationForm.Meta):
@@ -84,15 +84,16 @@ class OrganizacionSignUpForm(UserCreationForm):
 
     # datos de ubicación
     pais = forms.ModelChoiceField(
-        queryset=Pais.objects,
+        queryset=Pais.objects.order_by('pais'),
+        initial=239,
         required=False,
         empty_label="Seleccionar País")
     region = forms.ModelChoiceField(
-        queryset=Region.objects,
+        queryset=Region.objects.order_by('region'),
         required=False,
         empty_label="Seleccionar Región")
     comuna = forms.ModelChoiceField(
-        queryset=Comuna.objects,
+        queryset=Comuna.objects.order_by('comuna'),
         required=False,
         empty_label="Seleccionar Comuna")
     alcance = forms.ModelChoiceField(
