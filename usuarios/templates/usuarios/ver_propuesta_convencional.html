@@ -21,6 +21,19 @@
     <div class="row">
         <div class="col-12 col-sm-12 col-md-8 informacion-propuesta">
             <p class="tema-principal">{{ object.tema }}</p>
+            <p>
+              {% if object.otros_temas %}
+              Otros temas:
+              {% for otro_tema in object.otros_temas.all %}
+              {{ otro_tema }} ·
+              {% endfor %}
+              {% else %}
+              {% endif %}
+            </p>
+              {% if object.tema_extra %}
+              <p>Tema Complementario: {{ object.tema_extra }}</p>
+              {% else %}
+              {% endif %}
             <p class="numero-propuesta">Propuesta <b>N° {{ object.id }}</b></p>
             <h3>{{ object.titulo }}</h3>
             <p class="autor">Esta es una propuesta de: <b> {{ object.autor }}</b></p>
