@@ -61,8 +61,11 @@ class PropuestaWizardView(LoginRequiredMixin,SessionWizardView):
         return self.instance
 
     def done(self, form_list, **kwargs):
+        data = {}
+        [data.update(form.cleaned_data) for form in form_list]
         self.instance.autor = self.request.user
         self.instance.save()
+        self.instance.otros_temas.set(data['otros_temas'])
         return render(self.request, 'done.html')
 
 
