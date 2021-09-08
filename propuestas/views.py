@@ -39,7 +39,7 @@ class VerPropuestasView(ListView):
     template_name = 'propuestas/ver_propuestas.html'
 
     def get_queryset(self):
-        return Propuesta.objects.annotate(apoyos_count=Count('apoyos')).order_by('-apoyos_count')
+        return Propuesta.objects.annotate(apoyos_count=Count('apoyos')).order_by('-apoyos_count','-autor__organizacion')
 
 
 class VerPropuestaView(DetailView):
