@@ -1,7 +1,7 @@
 from django import forms
 from django.db import transaction
 from django.forms import ModelForm
-from propuestas.models import Propuesta, TemaPropuesta
+from propuestas.models import Propuesta, TemaPropuesta, SubtemaPropuesta
 from mantenedores.models import *
 
 
