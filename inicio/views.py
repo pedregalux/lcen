@@ -20,7 +20,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
-        context['propuestas'] = Propuesta.objects.order_by('-created')[:3]
+        context['propuestas'] = Propuesta.objects.order_by('-autor__organizacion')[:3]
         return context
 
 
