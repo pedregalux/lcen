@@ -120,6 +120,10 @@
                                 {% else %}
                                 <li><a class="dropdown-item" href="{% url 'register' %}">Registrarse</a></li>
                                 {% endif %}
+                                {% if user.is_authenticated and user.is_organizacion %}
+                                <li><a class="dropdown-item" href="{% url 'organizacion_update' %}">Modificar Perfil</a></li>
+                                {% else %}
+                                {% endif %}
                                 <li><a class="dropdown-item" href="{% url 'logout' %}">Salir</a></li>
                             </ul>
                         </li>
