@@ -93,10 +93,10 @@ class Organizacion(models.Model):
         help_text="Este es la reseña oficial de la Organización y se usará en el perfil público")
 
     # datos de ubicación
-    pais = models.ForeignKey(Pais, null=True, on_delete=models.SET_NULL)
-    region = models.ForeignKey(Region, null=True, on_delete=models.SET_NULL)
-    comuna = models.ForeignKey(Comuna, null=True, on_delete=models.SET_NULL)
-    alcance = models.ForeignKey(Alcance, null=True, on_delete=models.SET_NULL)
+    pais = models.ForeignKey(Pais, null=True, blank=True, on_delete=models.SET_NULL)
+    region = models.ForeignKey(Region, null=True, blank=True, on_delete=models.SET_NULL)
+    comuna = models.ForeignKey(Comuna, null=True, blank=True, on_delete=models.SET_NULL)
+    alcance = models.ForeignKey(Alcance, null=True, blank=True, on_delete=models.SET_NULL)
 
     # redes sociales
     sitioweb = models.URLField(
