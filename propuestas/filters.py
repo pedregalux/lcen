@@ -6,6 +6,8 @@ from mantenedores.models import *
 
 class PropuestaTemas(django_filters.FilterSet):
     tema = filters.ModelChoiceFilter(queryset=TemaPropuesta.objects.all(), label='', empty_label='Ordenar por Tema...')
+    comuna = filters.ModelChoiceFilter(queryset=Comuna.objects.all(), label='', empty_label='Ordenar por Comuna...')
+
     class Meta:
         model = Propuesta
-        fields = ('tema',)
+        fields = ('tema','comuna',)

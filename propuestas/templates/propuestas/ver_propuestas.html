@@ -31,7 +31,7 @@
 
             <div class="col-12 col-sm-12 col-md-12 formulario">
                   <form  method="get">
-                    {{ vertemas.form }}
+                    {{ filtropropuestas.form }}
                     <button type="submit" class="btn btn-lcen button hvr-sweep-to-right">Buscar</button>
                     <a href="{% url 'ver_propuestas' %}" class="limpiar-historial btn btn-lcen button hvr-sweep-to-right">Limpiar búsqueda</a>
                 </form>
@@ -45,7 +45,7 @@
 <section class="container propuestas-seccion wow animate__animated animate__fadeIn">
     <div class="row">
 
-      {% for propuesta in vertemas.qs %}
+      {% for propuesta in filtropropuestas.qs %}
 
               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                   <div class="propuesta salud">
