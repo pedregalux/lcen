@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block title %}Propuestas{% endblock %}
 
 
@@ -22,49 +23,19 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12">
                 <h2>Tenemos <span>{{ propuestas_list.count }}</span> propuestas ciudadanas para la nueva constitución</h2>
-
                 <div class="btn-subir-propuestas">
                      <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right subir-propuesta-btn">Sube tu propuesta</a>
                 </div>
-
                 <p>Revisa las propuestas ciudadanas</p>
             </div>
-            <!-- <div class="col-12 col-sm-12 col-md-12 formulario">
-                <form action="">
-                    <select class="form-select" aria-label="seleccion tema">
-                      <option selected>Buscar por tema</option>
-                      <option value="1">Salud</option>
-                      <option value="2">Medio ambiente adecuado</option>
-                      <option value="3">Adultos mayores</option>
-                    </select>
 
-                    <select class="form-select" aria-label="seleccion comuna">
-                      <option selected>Buscar por comuna</option>
-                      <option value="1">La Florida</option>
-                      <option value="2">Renca</option>
-                      <option value="3">Providencia</option>
-                      <option value="4">La Reina</option>
-                      <option value="5">Puente Alto</option>
-                      <option value="6">Pirque</option>
-                    </select>
-
-                    <select class="form-select" aria-label="propuesta hecha por">
-                      <option selected>Hecha por</option>
-                      <option value="1">Ciudadanxs</option>
-                      <option value="2">Organizaciones</option>
-                    </select>
-
-                    <select class="form-select" aria-label="Ordenar por">
-                      <option selected>Ordenar por</option>
-                      <option value="1">Más apoyos ciudadanos</option>
-                      <option value="2">Más apoyos convencionales</option>
-                      <option value="3">Más antiguas</option>
-                      <option value="3">Más recientes</option>
-                    </select>
+            <div class="col-12 col-sm-12 col-md-12 formulario">
+                  <form  method="get">
+                    {{ filtropropuestas.form }}
                     <button type="submit" class="btn btn-lcen button hvr-sweep-to-right">Buscar</button>
-                    <a href="#" class="limpiar-historial btn btn-lcen button hvr-sweep-to-right">Limpiar resultados de búsqueda</a>
+                    <a href="{% url 'ver_propuestas' %}" class="limpiar-historial btn btn-lcen button hvr-sweep-to-right">Limpiar búsqueda</a>
                 </form>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>
@@ -74,7 +45,70 @@
 <section class="container propuestas-seccion wow animate__animated animate__fadeIn">
     <div class="row">
 
-{% for propuesta in propuestas_list %}
+      {% for propuesta in filtropropuestas.qs %}
+
+              <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">{{ propuesta.tema }}</h3>
+                          <p class="numero-propuesta">Propuesta <b>N° {{ propuesta.id }}</b></p>
+                          <h2 class="titulo">{{ propuesta.titulo }}</h2>
+                          <p class="extracto">
+                            {{ propuesta.problema|truncatechars:250 }}
+                          </p>
+                          <div class="informacion-datos">
+                              <h4>Se realizó en:</h4>
+                              <p class="lugar">
+                                {% if propuesta.region %}
+                                {{ propuesta.region }} ·
+                                {% endif %}
+                                {% if not propuesta.region %}
+                                {% endif %}
+                                {% if propuesta.comuna %}
+                                {{ propuesta.comuna }}
+                                {% endif %}
+                                {% if not propuesta.comuna %}
+                                {% endif %}
+                                {% if not propuesta.region and not propuesta.comuna %}
+                                Sin región y/o comuna definidas
+                                {% endif %}
+                              </p>
+                              <h4>Propuesta de</h4>
+                              {% if propuesta.autor.organizacion %}
+                              <img src="{{ propuesta.autor.organizacion.logo_organizacion.url }}" alt="logo organizacion">
+                              <p class="lugar">
+                              {{ propuesta.autor.organizacion.nombre_perfil }}
+                              </p>
+                              {% else %}
+                              <p class="lugar">
+                              Propuesta Personal
+                              </p>
+                              {% endif %}
+
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="{{ propuesta.pk }}" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
+                              <a href="{{ propuesta.pk }}" class="btn-lcen">Leer propuesta</a>
+                          </div>
+                          <div class="cifras">
+                              <p><span class="numero">{{ propuesta.compromisos.count }}</span> convencionalxs comprometidxs</p>
+                              <p><span class="numero">{{ propuesta.apoyos.count }}</span> apoyos ciudadanos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+      {% endfor %}
+
+
+
+
+
+
+<!-- {% for propuesta in propuestas_list %}
 
         <div class="col-12 col-sm-12 col-md-6 col-lg-4">
             <div class="propuesta salud">
@@ -130,7 +164,7 @@
             </div>
         </div>
 
-{% endfor %}
+{% endfor %} -->
 
 
 <!-- <div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
