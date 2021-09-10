@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'django_extensions',
     'import_export',
-    #'django_social_share',
+    'django_filters',
 ]
 
 AUTH_USER_MODEL = 'usuarios.User'

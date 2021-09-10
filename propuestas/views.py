@@ -4,13 +4,14 @@ from django.conf import settings
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from propuestas.models import Propuesta
+from propuestas.models import Propuesta, TemaPropuesta
 from django.views.generic import ListView
 from django.views.generic import DetailView
 from django.views.generic import FormView, TemplateView
 from django.core.files.storage import FileSystemStorage
 from formtools.wizard.views import SessionWizardView
 from .forms import *
+from .filters import PropuestaTemas
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 
 
@@ -40,6 +41,12 @@ class VerPropuestasView(ListView):
 
     def get_queryset(self):
         return Propuesta.objects.annotate(apoyos_count=Count('apoyos')).order_by('-autor__organizacion','-apoyos_count')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['vertemas'] = PropuestaTemas(self.request.GET, queryset=self.get_queryset())
+        return context
+
 
 
 class VerPropuestaView(DetailView):
