@@ -99,10 +99,10 @@ class Propuesta(models.Model):
     #paso 5
     compromiso_convencionales = models.BooleanField("Convencionales comprometidos",
         default=False)
-    convencionales_comprometidos = models.ManyToManyField(Constituyente,
-        related_name="convencionales_comprometidos",
-        verbose_name="Nombres Convencionales Comprometidos",
-        blank=True)
+    # convencionales_comprometidos = models.ManyToManyField(Constituyente,
+    #     related_name="convencionales_comprometidos",
+    #     verbose_name="Nombres Convencionales Comprometidos",
+    #     blank=True)
     # paso 6
     anexo_propuesta = models.FileField(upload_to='documents/',
         verbose_name="Anexos de la Propuesta",
