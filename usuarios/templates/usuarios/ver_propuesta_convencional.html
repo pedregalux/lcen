@@ -35,7 +35,13 @@
               {% endif %}
             <p class="numero-propuesta">Propuesta <b>N° {{ object.id }}</b></p>
             <h3>{{ object.titulo }}</h3>
-            <p class="autor">Esta es una propuesta de: <b> {{ object.autor }}</b></p>
+            <p class="autor">Esta es una propuesta de: <b>
+              {% if object.autor.organizacion %}
+              {{ object.autor.organizacion.nombre_perfil }}
+              {% else %}
+              {{ object.autor }}
+              {% endif %}
+            </b></p>
             <!-- <p class="colaborador">Elaborada con: <b><a href="#">Nombre persona/organización</a></b></p> -->
             <div class="linea yellow my-3"></div>
 
