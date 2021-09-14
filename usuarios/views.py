@@ -11,7 +11,8 @@ from django.views.generic import ListView
 from django.views.generic import DetailView
 from .forms import CiudadanoSignUpForm, OrganizacionSignUpForm, ConvencionalSignUpForm, OrganizacionChangeForm, UserPasswordResetForm
 from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm
-from propuestas.models import Propuesta
+from propuestas.models import Propuesta, TemaPropuesta
+from propuestas.filters import PropuestaTemas
 from .models import User, Organizacion, Convencional
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.core.mail import send_mail, BadHeaderError
@@ -120,7 +121,12 @@ class VerPropuestasConvencionalView(ListView):
     template_name = 'usuarios/ver_propuestas_convencional.html'
 
     def get_queryset(self):
-        return Propuesta.objects.annotate(compromisos_count=Count('compromisos')).order_by('-compromisos_count')
+        return Propuesta.objects.annotate(apoyos_count=Count('apoyos')).order_by('-autor__organizacion','-apoyos_count')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filtropropuestas'] = PropuestaTemas(self.request.GET, queryset=self.get_queryset())
+        return context
 
     def dispatch(self, request, *args, **kwargs):
         if not (self.request.user.is_authenticated and self.request.user.is_convencional):
