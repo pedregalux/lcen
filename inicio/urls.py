@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 from .views import *
+from django.conf.urls import handler404, handler500, handler403, handler400
 
 urlpatterns = [
     path('', HomeView.as_view(), name='inicio'),
