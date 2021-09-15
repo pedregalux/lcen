@@ -4,7 +4,9 @@ from django.conf.urls import include
 from django.conf import settings
 from django.views.static import serve
 from django.conf.urls.static import static
-from django.contrib.auth import views as auth_views #import this
+from django.contrib.auth import views as auth_views
+from inicio.views import error404, error500, error400, error403
+from django.conf.urls import handler404, handler500, handler403, handler400
 
 
 
@@ -27,3 +29,9 @@ urlpatterns = [
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name="password_reset_confirm.html"), name='password_reset_confirm'),
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='password_reset_complete.html'), name='password_reset_complete'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+handler404 = 'inicio.views.error404'
+handler500 = 'inicio.views.error500'
+handler403 = 'inicio.views.error403'
+handler400 = 'inicio.views.error400'

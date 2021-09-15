@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Error{% endblock %}
+
+{% block content %}
+
+
+
+<section class="container que-es-lcen">
+    <div class="row d-flex align-items-center">
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+            <h2>La página que intentas ver no existe en La Constitución es Nuestra</h2>
+            <p>Te invitamos a revisar las propuestas ciudadanas, subir tus propias propuestas y/o las de tu organización y también a conocer a las 155 personas que están escribiendo la constitución.
+            </p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+            <img src="{% static 'img/collage-lcen.png' %}" alt="collage la constitución es nuestra" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+
+<section class="a-ponerse-con-propuestas container-fluid">
+   <div class="llamado-propuestas">
+       <h1>A ponerse con propuestas</h1>
+       <img src="{% static 'img/megafono-recorte.png' %}" alt="megafono-recorte" class="megafono-recorte img-fluid">
+   </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+                <img src="{% static 'img/collage-propuestas.png' %}" alt="collage a ponerse con propuestas" class="img-fluid p-4">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+                <h2>Tu propuesta a la convención</h2>
+                <p>Acá tienes la oportunidad de subir tus propuestas para la nueva Constitución de Chile y nosotrxs la haremos llegar a la Convención. <b>¡No te quedes fuera!</b></p>
+                <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right">Sube tu propuesta</a>
+                <a href="{% url 'ver_propuestas' %}" class="btn-lcen button hvr-sweep-to-right">Ver todas las propuestas</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="convencionales-home container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9 d-flex justify-content-center flex-column  wow animate__animated animate__fadeIn animate__delay-1s">
+                <h2>Convencionales</h2>
+                <p>Aquí podrás conocer a las 155 personas que componen la Convención Constitucional y sus compromisos con la ciudadanía.</p>
+                <div class="call-to-action">
+                    <a href="{% url 'verconvencionales' %}" class="btn-lcen button hvr-sweep-to-right">Revisa a lxs convencionales</a>
+                </div>
+                <img src="{% static 'img/convencionales-img-decoracion.png' %}" alt="collage constitucion convencionales" class="img-fluid collage-constitucion-convencionales">
+                <img src="{% static 'img/media-luna-convencionales-decoracion.png' %}" alt="medialuna convencionales decoracion" class="img-fluid medialuna-adorno-convencionales">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

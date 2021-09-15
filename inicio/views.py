@@ -38,3 +38,17 @@ class PreguntasView(TemplateView):
 
 class TerminosView(TemplateView):
     template_name = 'inicio/terminos.html'
+
+
+
+def error404(request, exception, template_name='inicio/error.html'):
+    return render(request, template_name)
+
+def error500(request, template_name='inicio/error.html'):
+    return render(request, template_name)
+
+def error403(request, exception, template_name='inicio/error.html'):
+    return render(request, template_name)
+
+def error400(request, exception, template_name='inicio/error.html'):
+    return render(request, template_name)
