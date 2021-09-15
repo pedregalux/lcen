@@ -10,3 +10,8 @@ urlpatterns = [
     path('preguntasfrecuentes/', PreguntasView.as_view(), name='preguntasfrecuentes'),
     path('terminos/', TerminosView.as_view(), name='terminos'),
 ]
+
+handler404 = 'inicio.views.error404'
+handler500 = 'inicio.views.error500'
+handler403 = 'inicio.views.error403'
+handler400 = 'inicio.views.error400'
