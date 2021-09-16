@@ -9,6 +9,7 @@ from django.views.generic import TemplateView
 from django.views.generic import UpdateView
 from django.views.generic import ListView
 from django.views.generic import DetailView
+from .filters import ConvencionalesFiltro
 from .forms import CiudadanoSignUpForm, OrganizacionSignUpForm, ConvencionalSignUpForm, OrganizacionChangeForm, UserPasswordResetForm
 from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm
 from propuestas.models import Propuesta, TemaPropuesta
@@ -100,6 +101,11 @@ class VerConvencionalesView(ListView):
 
     def get_queryset(self):
         return Convencional.objects.order_by('email')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filtroconvencionales'] = ConvencionalesFiltro(self.request.GET, queryset=self.get_queryset())
+        return context
 
 
 
