@@ -71,10 +71,10 @@
 
 
 
-<div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
+<!-- <div class="col-12 col-sm-12 col-md-12 paginacion-propuestas">
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <!-- <span class="step-links"> -->
+
         {% if page_obj.has_previous %}
             <li class="page-item"><a class="page-link" href="?page=1">&laquo; Inicio</a></li>
             <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previo</a></li>
@@ -84,10 +84,10 @@
             <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Siguiente</a></li>
             <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Último &raquo;</a></li>
         {% endif %}
-    <!-- </span> -->
+
   </ul>
 </nav>
-</div>
+</div> -->
 
 
 {% endblock %}
