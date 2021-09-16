@@ -1,0 +1,15 @@
+import django_filters
+from django_filters import filters
+from .models import Convencional
+from mantenedores.models import *
+from convencionales.models import *
+
+
+class ConvencionalesFiltro(django_filters.FilterSet):
+    lista = filters.ModelChoiceFilter(queryset=Lista.objects.all().distinct(), label='', empty_label='Buscar por Lista...')
+    distrito = filters.ModelChoiceFilter(queryset=Distrito.objects.all().distinct(), label='', empty_label='Buscar por Distrito...')
+    movimiento = filters.ModelChoiceFilter(queryset=Movimiento.objects.all().distinct(), label='', empty_label='Buscar por Movimiento...')
+
+    class Meta:
+        model = Convencional
+        fields = ('lista','distrito','movimiento',)
