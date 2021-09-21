@@ -54,6 +54,11 @@ class VerPropuestaView(DetailView):
     context_object_name = 'propuestas_detail'
     template_name = 'propuestas/ver_propuesta.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['comprometidos'] = Propuesta.objects.filter(compromisos=self.object.compromisos.all())
+        return context
+
 
 
 class PropuestaWizardView(LoginRequiredMixin,SessionWizardView):
