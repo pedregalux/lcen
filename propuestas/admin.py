@@ -1,6 +1,6 @@
 from django.contrib import admin
 from import_export import resources, fields
-from import_export.widgets import ManyToManyWidget
+from import_export.widgets import ManyToManyWidget, ForeignKeyWidget
 from import_export.admin import ImportExportModelAdmin
 from .models import TemaPropuesta, SubtemaPropuesta, ComponenteConstitucion, Propuesta, ApoyoPropuesta, CompromisoPropuesta
 from usuarios.models import User
@@ -24,9 +24,9 @@ class SubtemaResource(resources.ModelResource):
 
 class PropuestaResource(resources.ModelResource):
         titulo = fields.Field(attribute='titulo', column_name='Título')
-        titulo = fields.Field(attribute='tema', column_name='Tema Principal')
-        otros_temas = fields.Field(attribute='otros_temas', widget=ManyToManyWidget(SubtemaPropuesta, field='subtema_propuesta'), column_name='Subtemas')
-        titulo = fields.Field(attribute='tema_extra', column_name='Título')
+        tema = fields.Field(attribute='tema', widget=ForeignKeyWidget(SubtemaPropuesta, field='subtema_propuesta'), column_name='Tema Principal')
+        otros_temas = fields.Field(attribute='otros_temas', widget=ManyToManyWidget(SubtemaPropuesta, field='subtema_propuesta'), column_name='Sub Temas')
+        tema_extra = fields.Field(attribute='tema_extra', column_name='Tema Extra')
 
 
         class Meta:
