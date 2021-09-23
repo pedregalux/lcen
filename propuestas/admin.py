@@ -32,7 +32,7 @@ class SubtemaResource(resources.ModelResource):
 
 
 class PropuestaResource(resources.ModelResource):
-        autor = fields.Field(attribute='autor', widget=ForeignKeyWidget(User), column_name='Autor')
+        autor = fields.Field(attribute='autor', widget=ForeignKeyWidget(User, field='username'), column_name='Autor')
         titulo = fields.Field(attribute='titulo', column_name='Título')
         tema = fields.Field(attribute='tema', widget=ForeignKeyWidget(SubtemaPropuesta, field='tema_propuesta'), column_name='Tema Principal')
         otros_temas = fields.Field(attribute='otros_temas', widget=ManyToManyWidget(SubtemaPropuesta, field='subtema_propuesta'), column_name='Sub Temas')
