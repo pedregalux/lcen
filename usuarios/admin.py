@@ -10,8 +10,7 @@ from .models import User, Ciudadano, Organizacion, Convencional
 class UserResource(resources.ModelResource):
     class Meta:
         model = User
-        exclude = ('password',)
-
+        exclude = ('password','groups',)
 
 
 class UserChangeForm(UserChangeForm):
