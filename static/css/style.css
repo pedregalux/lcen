@@ -3067,3 +3067,287 @@ ul.pagination .active a {
     color: black;
     padding-bottom: 5px;
 }
+
+/* Cambio de Password */
+
+.section-password {
+    padding: 80px 0px;
+}
+
+.section-password h2 {
+    text-align: center;
+    border: 0px;
+    padding: 0px;
+}
+
+.section-password h2 img {
+    margin-right: 5px;
+}
+
+.section-password b {
+    font-weight: 900;
+}
+
+.section-password a {
+    margin: auto;
+}
+
+.section-password form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-password form div {
+    width: 100%;
+}
+
+.section-password form input.form-control {
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    background: white;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+}
+
+.section-password form ul {
+    margin-top: 10px;
+}
+
+.ingresar-seccion span {
+    padding: 0px;
+}
+
+.ingresar-seccion h3 {
+    padding-bottom: 30px;
+}
+
+.ingresar-seccion .seleccionar a {
+    margin: 0px 10px;
+}
+
+@media (max-width: 768px) {
+    .seleccionar .decoracion-blue {
+        right: -10px;
+    }
+}
+
+
+/*Ensayos*/
+
+.ensayos-descripcion h2 {
+    text-align: center;
+    border-left: 0px !important;
+    padding-left: 0px;
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.ensayos-descripcion h3 {
+    text-align: center;
+    font-size: 1.25em;
+    color: black;
+    font-weight: normal;
+    text-transform: inherit;
+    margin-top: 5px;
+}
+
+.decoracion {
+    width: 40px;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    margin-bottom: 40px;
+}
+
+.ensayos-list {
+    margin-bottom: 100px;
+}
+
+.ensayos-list .ensayo {
+    padding: 0px 40px;
+}
+
+.ensayos-list h2 {
+    text-align: center;
+    color: black;
+    margin: 0px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2em;
+    border-left: 0px;
+    padding-left: 0px;
+}
+
+.ensayos-list .decoracion {
+    margin-bottom: 20px;
+}
+
+.ensayos-list img {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.ensayos-list h3 {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+.ensayos-list p.creditos {
+    font-size: 0.85em;
+    color: grey;
+    font-weight: 500;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+}
+
+.ensayos-list p {
+    font-size: 1em;
+    color: black;
+    font-weight: 400;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+.ensayos-list a {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.ensayos-list .info {
+    margin: 20px 0px 20px 0px;
+    padding-left: 0px;
+    border-left: 0px solid #FFD700;
+}
+
+.ensayo-tomo-descripcion {
+    margin-bottom: 0px !important;
+}
+
+.ensayo-tomo-descripcion .titulo {
+    border-left: 8px solid #FFD700;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ensayo-tomo-descripcion .titulo h2 {
+    border: 0px;
+    padding-left: 0px;
+    font-size: 1.8em;
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+.ensayo-tomo-descripcion .titulo p.tomo {
+    font-size: 0.9em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    background: #75AADB;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 5px;
+}
+
+.ensayo-tomo-descripcion p.creditos {
+    font-size: 0.85em;
+    color: grey;
+    font-weight: 500;
+    padding-bottom: 0px !important;
+    margin: 0px 0px;
+    font-weight: bold;
+}
+
+.ensayo-tomo-descripcion b {
+    color: #008000;
+}
+
+.ensayo-tomo-descripcion .titulo h3 {
+    font-size: 1.1em;
+    text-transform: inherit;
+    color: black;
+    font-weight: normal;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos {
+    margin-top: 40px;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos h2 {
+    border: 0px;
+    font-size: 1.6em;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos .decoracion {
+    margin-left: 0px;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos h3 {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 40px;
+    font-size: 1.25em;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos p {
+    padding: 0px;
+    margin: 5px;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos a {
+    color: #2098D1;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.5s all;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos a:hover {
+    color: #CC0000;
+}
+
+.ensayo-tomo-descripcion .cita {
+    margin: 30px 0px;
+}
+
+.ensayo-tomo-descripcion .cita h4 {
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+@media(max-width:768px) {
+    .ensayos-list .ensayo {
+        padding: 0px 0px;
+    }
+    .ensayos-list h2 {
+        font-size: 1.5em;
+    }
+    .ensayo-tomo-descripcion .titulo h2 {
+        font-size: 1.4em;
+    }
+    .ensayo-tomo-descripcion .titulo {
+        border-left: 4px solid #FFD700;
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+    section.container {
+        width: 100%;
+        max-width: 100% !important;
+    }
+    .ensayos-list img {
+        margin-top: 30px;
+    }
+}

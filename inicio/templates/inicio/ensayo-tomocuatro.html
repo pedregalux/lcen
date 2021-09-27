@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Ensayos {% endblock %}
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/banner-portada-ensayos.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/banner-portada-ensayos-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'ensayos' %}">Ensayos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tomo 4</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container py-5 my-5 ensayo-tomo-descripcion">
+    <div class="row d-flex justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+            <div class="titulo">
+            <p class="tomo">Tomo 4</p>
+            <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+            <h2>Grupos de especial protección</h2>
+            <h3>Derechos sociales y el momento constituyente de Chile: Perspectivas globales y locales para el debate constitucional</h3>
+            </div>
+            <div class="descripcion">
+            <p>Este tomo presta atención y profundiza en la <b>situación de diversos grupos que requieren especial protección de cara a la garantía real y sustantiva de los derechos sociales</b>, poniendo a disposición de quienes leen, una serie de elementos, argumentos y herramientas para incluir estos grupos dentro de la discusión sobre derechos sociales.</p>
+            <p>Comenzando con la exploración de las formas que las constituciones de diferentes países utilizan para fomentar la igualdad de derechos en sus países, este tomo presenta reflexiones en torno al rol de la Constitución en la garantía de los derechos sociales de pueblos indígenas, mujeres; niños, niñas y adolescentes; personas con discapacidad y personas adultas mayores.</p>
+            <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar Tomo</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-9 ensayo-capitulos">
+            <h2>Capítulos:</h2>
+            <div class="decoracion green"></div>
+            <h3>Sección A: Igualdad</h3>
+            <p>1. <a href="#">Fomentando la igualdad de derechos en las constituciones: 193 países en perspectiva.</a> Aleta Sprague, Pam Stek, Amy Raub y Jody Heymann</p>
+
+            <h3>Sección B: Pueblos indígenas</h3>
+            <p>2. <a href="#">Los derechos de los pueblos indñigenas en la nueva Constitución.</a> José Aylwin</p>
+
+            <h3>Sección C: Mujeres</h3>
+            <p>3. <a href="#">El derecho constitucional de las mujeres a la igualdad: Una perspectiva comparada.</a> Meghan Campbell</p>
+
+            <h3>Sección D: Niños, niñas y adolescentes</h3>
+            <p>4. <a href="#">Los niños y las constituciones.</a> Aoife Nolan y Conor O’Mahony</p>
+
+            <h3>Sección E: Personas con discapacidad</h3>
+            <p>5. <a href="#">Disposiciones constitucionales sobre los derechos de las personas con discapacidad: Enfoques nacionales y contexto internacional.</a> Gonzalo Moreno, Michael Ashley Stein y Jody Heymann</p>
+            <p>6. <a href="#">Hacia un proceso constituyente inclusivo de las personas con discapacidad.</a> Pablo Marshall, Viviana Ponce de León y Eduardo Marchant</p>
+
+            <h3>Sección F: Adultos mayores</h3>
+            <p>7. <a href="#">La constitucionalización de los derechos de las personas mayores: Una práctica emergente.</a> Frederic Megret y Alexander Agnello</p>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-9 cita">
+            <h4>Cita sugerida</h4>
+            <p><i>Global Initiative for Economic, Social and Cultural Rights, Centro de Derechos Humanos de la Universidad de Essex y Universidad de Concepción (2021) Derechos sociales y el momento constituyente de Chile: Perspectivas globales y locales para el debate constitucional. Tomo IV: Grupos de especial protección. Santiago, Chile: Global Initiative for Economic, Social and Cultural Rights. DOI: 10.53110/ZOIT6415.</i></p>
+        </div>
+
+    </div>
+</section>
+
+<section class="container ensayos-list">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-md-11">
+            <h2>Revisa todos los tomos</h2>
+            <div class="decoracion blue"></div>
+            <div class="row">
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="#"><img src="{% static 'img/tomo-1-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Chile, desigualdad y derechos sociales</h3>
+                        <p>¿Cómo han influido los derechos sociales en el momento constituyente de Chile? Descubre respuestas a esta y otras preguntas aquí.</p>
+                        <a href="/ensayo-tomouno/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="#"><img src="{% static 'img/tomo-2-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Mecanismos de garantía de los derechos sociales</h3>
+                        <p>¿Y cómo se aseguran los derechos sociales? No es una tarea fácil, pero aquí te proponemos algunas formas para hacerlo y varias posturas para tener en cuenta.</p>
+                        <a href="/ensayo-tomodos/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="#"><img src="{% static 'img/tomo-3-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Los derechos económicos, sociales, culturales y ambientales</h3>
+                        <p>¿Derechos sociales en el catálogo de derechos fundamentales? ¡Claro! Aquí te explicamos los elementos claves y sistémicos a los que se debe prestar atención para hacerlo.</p>
+                        <a href="/ensayo-tomotres/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="#"><img src="{% static 'img/tomo-4-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Grupos de especial protección</h3>
+                        <p>¿Derechos humanos iguales para todas las personas? ¡Claro! Pero la realidad hace que algunos grupos merezcan una protección especial. Aquí te contamos de algunos.</p>
+                        <a href="/ensayo-tomocuatro/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="#"><img src="{% static 'img/tomo-5-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Procesos constituyentes y lecciones aprendidas</h3>
+                        <p>¿Y qué han aprendido otros países al incorporar derechos sociales en sus procesos constituyentes? ¡Pues muchas cosas! Aquí puedes ver algunas de ellas.</p>
+                        <a href="/ensayo-tomocinco/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
