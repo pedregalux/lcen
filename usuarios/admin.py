@@ -17,6 +17,9 @@ class UserResource(resources.ModelResource):
 
 class CiudadanoResource(resources.ModelResource):
     user = fields.Field(attribute='user', widget=ForeignKeyWidget(User, field='username'),column_name='Usuario')
+    pais = fields.Field(attribute='pais', widget=ForeignKeyWidget(Pais, field='pais'), column_name='País')
+    region = fields.Field(attribute='region', widget=ForeignKeyWidget(Region, field='region'), column_name='Región')
+    comuna = fields.Field(attribute='comuna', widget=ForeignKeyWidget(Comuna, field='comuna'), column_name='Comuna')
 
     class Meta:
         model = Ciudadano
@@ -25,6 +28,9 @@ class CiudadanoResource(resources.ModelResource):
 
 class OrganizacionResource(resources.ModelResource):
     user = fields.Field(attribute='user', widget=ForeignKeyWidget(User, field='username'),column_name='Usuario')
+    pais = fields.Field(attribute='pais', widget=ForeignKeyWidget(Pais, field='pais'), column_name='País')
+    region = fields.Field(attribute='region', widget=ForeignKeyWidget(Region, field='region'), column_name='Región')
+    comuna = fields.Field(attribute='comuna', widget=ForeignKeyWidget(Comuna, field='comuna'), column_name='Comuna')
     alcance = fields.Field(attribute='alcance', widget=ForeignKeyWidget(Alcance, field='alcance'),column_name='Alcance')
 
     class Meta:
