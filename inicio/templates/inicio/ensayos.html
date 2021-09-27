@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Ensayos {% endblock %}
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/banner-portada-ensayos.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/banner-portada-ensayos-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ensayos</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container py-5 my-5 ensayos-descripcion">
+    <div class="row d-flex justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+            <h2>Derechos sociales y el momento constituyente de Chile</h2>
+            <h3>Perspectivas globales y locales para el debate constitucional</h3>
+            <div class="decoracion red"></div>
+            <p>A nivel global, existe un vínculo entre los niveles de desigualdad y los de protección de derechos socioeconómicos y medioambientales: en general, a menor protección de estos derechos, mayor tiende a ser la desigualdad, y viceversa. Por ello desde hace décadas, las demandadas ciudadanas en Chile se hayan centrado en el acceso a estos derechos, incluyendo educación, salud, pensiones y vivienda, las que sólo se agudizaron con el estallido social y el impacto desastroso de la pandemia.</p>
+            <p>Es por eso que hoy Chile vive un momento de esperanza y de potencial transformación que le pone en el foco de atención mundial, pues es una oportunidad histórica de tomarse los derechos socioeconómicos y medioambientales en serio en un proceso político participativo que no deje a nadie atrás.</p>
+            <p>Por eso, desde la Iniciativa Global por los Derechos Económicos, Sociales y Culturales, junto al Centro de Derechos Humanos de la Universidad de Essex y el Programa de Derecho Ambiental y Cambio Climático de la Universidad de Concepción, buscamos aportar nuevos puntos de vista e ideas que contribuyan a enriquecer el debate en la Convención Constitucional con argumentos y propuestas que fortalezcan la protección de los derechos económicos, sociales, culturales y ambientales.</p>
+
+            <p>Para ello, hemos invitado a más de 50 expertos y expertas, de Chile y un variado número de países, incluyendo Argentina, Colombia, Escocia, Estados Unidos, Inglaterra, Irlanda y Sudáfrica, quienes han escrito más de una treintena de ensayos que pretenden aportar una mirada internacional y comparada a modelos de reconocimiento constitucional de los derechos socioeconómicos y medioambientales, junto con un análisis plural sobre la posible articulación de los derechos socioeconómicos y medioambientales en el marco jurídico chileno.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container ensayos-list">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-md-11">
+            <h2>Revisa todos los tomos</h2>
+            <div class="decoracion blue"></div>
+            <div class="row">
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomouno' %}"><img src="{% static 'img/tomo-1-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Chile, desigualdad y derechos sociales</h3>
+                        <p>¿Cómo han influido los derechos sociales en el momento constituyente de Chile? Descubre respuestas a esta y otras preguntas aquí.</p>
+                        <a href="{% url 'ensayo-tomouno' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_1_chile_desigualdad_y_derechos_sociales.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomodos' %}"><img src="{% static 'img/tomo-2-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Mecanismos de garantía de los derechos sociales</h3>
+                        <p>¿Y cómo se aseguran los derechos sociales? No es una tarea fácil, pero aquí te proponemos algunas formas para hacerlo y varias posturas para tener en cuenta.</p>
+                        <a href="{% url 'ensayo-tomodos' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_2_mecanismos_de_garantía.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomotres' %}"><img src="{% static 'img/tomo-3-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Los derechos económicos, sociales, culturales y ambientales</h3>
+                        <p>¿Derechos sociales en el catálogo de derechos fundamentales? ¡Claro! Aquí te explicamos los elementos claves y sistémicos a los que se debe prestar atención para hacerlo.</p>
+                        <a href="{% url 'ensayo-tomotres' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo-3-desca.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomocuatro' %}"><img src="{% static 'img/tomo-4-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Grupos de especial protección</h3>
+                        <p>¿Derechos humanos iguales para todas las personas? ¡Claro! Pero la realidad hace que algunos grupos merezcan una protección especial. Aquí te contamos de algunos.</p>
+                        <a href="{% url 'ensayo-tomocuatro' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_4_grupos_de_especial_proteccion.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomocinco' %}"><img src="{% static 'img/tomo-5-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Procesos constituyentes y lecciones aprendidas</h3>
+                        <p>¿Y qué han aprendido otros países al incorporar derechos sociales en sus procesos constituyentes? ¡Pues muchas cosas! Aquí puedes ver algunas de ellas.</p>
+                        <a href="{% url 'ensayo-tomocinco' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_5_leciones_aprendidas.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

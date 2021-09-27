@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Ensayos {% endblock %}
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/banner-portada-ensayos.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/banner-portada-ensayos-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'ensayos' %}">Ensayos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tomo 5</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container py-5 my-5 ensayo-tomo-descripcion">
+    <div class="row d-flex justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+            <div class="titulo">
+            <p class="tomo">Tomo 5</p>
+            <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+            <h2>Procesos constituyentes y lecciones aprendidas</h2>
+            <h3>Derechos sociales y el momento constituyente de Chile: Perspectivas globales y locales para el debate constitucional</h3>
+            </div>
+            <div class="descripcion">
+            <p>Este tomo presenta los casos de los procesos constituyentes de Sudáfrica y Colombia, donde los derechos sociales jugaron un rol preponderante en la discusión constituyente. De ambos casos se extraen lecciones en primera persona que demuestran la importancia de deliberar sobre los derechos en sede constitucional y los aprendizajes obtenidos en ambos procesos, que pueden iluminar y facilitar la experiencia del proceso constituyente que Chile atraviesa.</p>
+            <a href="{% static 'img/pdfensayos/tomo_5_leciones_aprendidas.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar Tomo</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-9 ensayo-capitulos">
+            <h2>Capítulos:</h2>
+            <div class="decoracion green"></div>
+            <h3>A. Sudáfrica</h3>
+            <p>1. <a href="{% static 'img/pdfensayos/capitulos-tomo-5/1-liebenberg_derechos_socioeconómicos_en_la_constitución_sudafricana.pdf' %}" target="_blank">Derechos socioeconómicos en la Constitución Sudafricana: Metas, logros, decepciones y lecciones.</a> Sandra Liebenberg</p>
+
+            <h3>B. Colombia</h3>
+            <p>2. <a href="{% static 'img/pdfensayos/capitulos-tomo-5/2-newman_publicidad_y_estado_social_de_derecho.pdf' %}" target="_blank">Publicidad y Estado Social de Derecho: El acceso a la información pública como derecho fundamental e instrumental para los derechos económicos y sociales en la Constitución Política de Colombia.</a> Vivian Newman</p>
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-9 cita">
+            <h4>Cita sugerida</h4>
+            <p><i>Global Initiative for Economic, Social and Cultural Rights, Centro de Derechos Humanos de la Universidad de Essex y Universidad de Concepción (2021) Derechos sociales y el momento constituyene de Chile: Perspectivas globales y locales para el debate constitucional. Tomo V: Procesos constituyentes y lecciones aprendidas. Santiago, Chile: Global Initiative for Economic, Social and Cultural Rights. DOI: 10.53110/ZLQV6402.</i></p>
+        </div>
+    </div>
+</section>
+
+<section class="container ensayos-list">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-md-11">
+            <h2>Revisa todos los tomos</h2>
+            <div class="decoracion blue"></div>
+            <div class="row">
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomouno' %}"><img src="{% static 'img/tomo-1-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Chile, desigualdad y derechos sociales</h3>
+                        <p>¿Cómo han influido los derechos sociales en el momento constituyente de Chile? Descubre respuestas a esta y otras preguntas aquí.</p>
+                        <a href="{% url 'ensayo-tomouno' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_1_chile_desigualdad_y_derechos_sociales.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomodos' %}"><img src="{% static 'img/tomo-2-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Mecanismos de garantía de los derechos sociales</h3>
+                        <p>¿Y cómo se aseguran los derechos sociales? No es una tarea fácil, pero aquí te proponemos algunas formas para hacerlo y varias posturas para tener en cuenta.</p>
+                        <a href="{% url 'ensayo-tomodos' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_2_mecanismos_de_garantía.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomotres' %}"><img src="{% static 'img/tomo-3-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Los derechos económicos, sociales, culturales y ambientales</h3>
+                        <p>¿Derechos sociales en el catálogo de derechos fundamentales? ¡Claro! Aquí te explicamos los elementos claves y sistémicos a los que se debe prestar atención para hacerlo.</p>
+                        <a href="{% url 'ensayo-tomotres' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo-3-desca.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomocuatro' %}"><img src="{% static 'img/tomo-4-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Grupos de especial protección</h3>
+                        <p>¿Derechos humanos iguales para todas las personas? ¡Claro! Pero la realidad hace que algunos grupos merezcan una protección especial. Aquí te contamos de algunos.</p>
+                        <a href="{% url 'ensayo-tomocuatro' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_4_grupos_de_especial_proteccion.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomocinco' %}"><img src="{% static 'img/tomo-5-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Procesos constituyentes y lecciones aprendidas</h3>
+                        <p>¿Y qué han aprendido otros países al incorporar derechos sociales en sus procesos constituyentes? ¡Pues muchas cosas! Aquí puedes ver algunas de ellas.</p>
+                        <a href="{% url 'ensayo-tomocinco' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_5_leciones_aprendidas.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

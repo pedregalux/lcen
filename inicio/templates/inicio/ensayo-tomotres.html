@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Ensayos {% endblock %}
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/banner-portada-ensayos.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/banner-portada-ensayos-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'ensayos' %}">Ensayos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tomo 3</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container py-5 my-5 ensayo-tomo-descripcion">
+    <div class="row d-flex justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+            <div class="titulo">
+            <p class="tomo">Tomo 3</p>
+            <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+            <h2>Los derechos económicos, sociales, culturales y ambientales</h2>
+            <h3>Derechos sociales y el momento constituyente de Chile: Perspectivas globales y locales para el debate constitucional</h3>
+            </div>
+            <div class="descripcion">
+            <p>Este tomo profundiza en la <b>importancia y las implicancias de incorporar los derechos económicos, sociales, culturales y ambientales dentro de la Constitución, para avanzar en la proposición de ciertos elementos esenciales que el proceso constituyente chileno debe tener en mente a lo largo de su desarrollo</b>, siempre con cautela del carácter sistémico de las constituciones y la interdependencia de los derechos humanos.</p>
+            <p>Adentrándose en derechos como la seguridad social, el trabajo, el estándar más alto de salud posible, la vivienda desde una perspectiva de un estándar de vida adecuado y la ciudad en el contexto de los DESCA, el tomo indaga en la utilización de nuevos instrumentos o enfoques para abordar el derecho a la educación, el derecho humano al agua y el saneamiento y el derecho a un medio ambiente sano, explorando incluso los aspectos de derechos humanos para hacer frente al cambio climático.</p>
+            <a href="{% static 'img/pdfensayos/tomo-3-desca.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar Tomo</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-9 ensayo-capitulos">
+            <h2>Capítulos:</h2>
+            <div class="decoracion green"></div>
+            <h3>Sección A: Seguridad social</h3>
+            <p>1. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/1-barrantes_la_consagración_del_derecho_a_la_seguridad_social_en_la_constitucion.pdf' %}" target="_blank">La consagración del derecho a la seguridad social en la constitución: implicancias y oportunidades.</a> Alexandra Barrantes</p>
+
+            <h3>Sección B: Trabajo</h3>
+            <p>2. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/2-domínguez_trabajo_y_constitucion.pdf' %}" target="_blank">Trabajo y Constitución: Análisis, crítica y propuestas al modelo constitucional laboral chileno.</a> Álvaro Domínguez Montoya</p>
+
+            <h3>Sección C: Salud</h3>
+            <p>3. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/3-bueno_de_mesquita_constitucionalizando_el_derecho_a_la_salud_para_todos.pdf' %}" target="_blank">Constitucionalizando el derecho a la salud para todos.</a> Judith Bueno de Mesquita y Octávio Luiz Motta Ferraz</p>
+            <p>4. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/4-zuniga_una_propuesta_de_adjudicación_de_recursos_sanitarios_para_la_nueva_constitucion_chilena.pdf' %}" target="_blank">Una propuesta de adjudicación de recursos sanitarios para la Nueva Constitución chilena.</a> Alejandra Zúñiga Fajuri</p>
+
+            <h3>Sección D: Vivienda como estándar de vida adecuado</h3>
+            <p>5. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/5-casla_tomando_el_derecho_a_una_vivienda_adecuada_en_serio_en_la_proxima_constitucion_chilena.pdf' %}" target="_blank">Tomando el derecho a una vivienda adecuada en serio en la próxima constitución chilena: Un derecho en construcción desde cero.</a> Dr. Koldo Casla y Verónica Valenzuela</p>
+            <p>6. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/6-sugranyes_la_ciudad_y_los_desca.pdf' %}" target="_blank">La ciudad y los DESCA.</a> Ana Sugranyes Bickel y Maricarmen Tapia Gómez</p>
+
+            <h3>Sección E: Educación</h3>
+            <p>7. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/7-henríquez_el_derecho_a_la_educación_evolucion_nudos_criticos_y_perspectivas_de_futuro.pdf' %}" target="_blank">El derecho a la educación: evolución, nudos críticos y perspectivas de futuro.</a> Alfonso Henríquez R.</p>
+            <p>8. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/8-contreras_constitucionalizando_los_principios_deabiyan.pdf' %}" target="_blank">Constitucionalizando los Principios de Abiyán sobre el derecho a la educación: Claves para el proceso chileno.</a> Valentina Contreras Orrego, Vicente Silva y Delphine Dorsi</p>
+
+            <h3>Sección F: Agua y saneamiento</h3>
+            <p>9. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/9-delgado_el_derecho_humano_al_agua_y_al_saneamiento.pdf' %}" target="_blank">El derecho humano al agua y saneamiento: La priorización del uso ecosistémico como un presupuesto necesario. </a> Verónica Delgado Schneider y Juan Francisco Zapata Hassi</p>
+
+            <h3>Sección G: Medio ambiente sano</h3>
+            <p>10. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/10-delgado_nueva_constitucion_y_medio_ambiente.pdf' %}" target="_blank">Nueva Constitución y Medio Ambiente.</a> Verónica Delgado y Dominique Hervé</p>
+            <p>11. <a href="{% static 'img/pdfensayos/capitulos-tomo-3/11-cisterna_derechos_humanos_para_la_incorporacion_del_cambio_climatico_en_la_nueva_constitucion.pdf' %}" target="_blank">Derechos humanos para la incorporación del cambio climático en la Nueva constitución.</a> Pedro Cisterna y Ezio Costa</p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-9 cita">
+            <h4>Cita sugerida</h4>
+            <p><i>Global Initiative for Economic, Social and Cultural Rights, Centro de Derechos Humanos de la Universidad de Essex y Universidad de Concepción (2021) Derechos sociales y el momento constituyente de Chile: Perspectivas globales y locales para el debate constitucional. Tomo III: Los derechos económicos, sociales, culturales y ambientales. Santiago, Chile: Global Initiative for Economic, Social and Cultural Rights. DOI: 10.53110/MWKB2533.</i></p>
+        </div>
+
+    </div>
+</section>
+
+<section class="container ensayos-list">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-md-11">
+            <h2>Revisa todos los tomos</h2>
+            <div class="decoracion blue"></div>
+            <div class="row">
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomouno' %}"><img src="{% static 'img/tomo-1-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Chile, desigualdad y derechos sociales</h3>
+                        <p>¿Cómo han influido los derechos sociales en el momento constituyente de Chile? Descubre respuestas a esta y otras preguntas aquí.</p>
+                        <a href="{% url 'ensayo-tomouno' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_1_chile_desigualdad_y_derechos_sociales.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomodos' %}"><img src="{% static 'img/tomo-2-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Mecanismos de garantía de los derechos sociales</h3>
+                        <p>¿Y cómo se aseguran los derechos sociales? No es una tarea fácil, pero aquí te proponemos algunas formas para hacerlo y varias posturas para tener en cuenta.</p>
+                        <a href="{% url 'ensayo-tomodos' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_2_mecanismos_de_garantía.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomotres' %}"><img src="{% static 'img/tomo-3-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Los derechos económicos, sociales, culturales y ambientales</h3>
+                        <p>¿Derechos sociales en el catálogo de derechos fundamentales? ¡Claro! Aquí te explicamos los elementos claves y sistémicos a los que se debe prestar atención para hacerlo.</p>
+                        <a href="{% url 'ensayo-tomotres' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo-3-desca.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomocuatro' %}"><img src="{% static 'img/tomo-4-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Grupos de especial protección</h3>
+                        <p>¿Derechos humanos iguales para todas las personas? ¡Claro! Pero la realidad hace que algunos grupos merezcan una protección especial. Aquí te contamos de algunos.</p>
+                        <a href="{% url 'ensayo-tomocuatro' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_4_grupos_de_especial_proteccion.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ensayo">
+                    <a href="{% url 'ensayo-tomocinco' %}"><img src="{% static 'img/tomo-5-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <div class="info">
+                        <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
+                        <h3>Procesos constituyentes y lecciones aprendidas</h3>
+                        <p>¿Y qué han aprendido otros países al incorporar derechos sociales en sus procesos constituyentes? ¡Pues muchas cosas! Aquí puedes ver algunas de ellas.</p>
+                        <a href="{% url 'ensayo-tomocinco' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_5_leciones_aprendidas.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

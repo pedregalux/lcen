@@ -36,6 +36,36 @@ class PreguntasView(TemplateView):
 
 
 
+class EnsayosView(TemplateView):
+    template_name = 'inicio/ensayos.html'
+
+
+
+class EnsayotomounoView(TemplateView):
+    template_name = "inicio/ensayo-tomouno.html"
+
+
+
+class EnsayotomodosView(TemplateView):
+    template_name = "inicio/ensayo-tomodos.html"
+
+
+
+class EnsayotomotresView(TemplateView):
+    template_name = "inicio/ensayo-tomotres.html"
+
+
+
+class EnsayotomocuatroView(TemplateView):
+    template_name = "inicio/ensayo-tomocuatro.html"
+
+
+
+class EnsayotomocincoView(TemplateView):
+    template_name = "inicio/ensayo-tomocinco.html"
+
+
+
 class TerminosView(TemplateView):
     template_name = 'inicio/terminos.html'
 
