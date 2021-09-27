@@ -5,6 +5,7 @@ from import_export import resources, fields
 from import_export.widgets import ManyToManyWidget, ForeignKeyWidget
 from import_export.admin import ImportExportModelAdmin
 from .models import User, Ciudadano, Organizacion, Convencional
+from mantenedores.models import *
 
 
 
@@ -24,6 +25,7 @@ class CiudadanoResource(resources.ModelResource):
 
 class OrganizacionResource(resources.ModelResource):
     user = fields.Field(attribute='user', widget=ForeignKeyWidget(User, field='username'),column_name='Usuario')
+    alcance = fields.Field(attribute='alcance', widget=ForeignKeyWidget(Alcance, field='alcance'),column_name='Alcance')
 
     class Meta:
         model = Organizacion
