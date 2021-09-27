@@ -27,7 +27,7 @@
             <div class="descripcion">
             <p>Este tomo presta atención y profundiza en la <b>situación de diversos grupos que requieren especial protección de cara a la garantía real y sustantiva de los derechos sociales</b>, poniendo a disposición de quienes leen, una serie de elementos, argumentos y herramientas para incluir estos grupos dentro de la discusión sobre derechos sociales.</p>
             <p>Comenzando con la exploración de las formas que las constituciones de diferentes países utilizan para fomentar la igualdad de derechos en sus países, este tomo presenta reflexiones en torno al rol de la Constitución en la garantía de los derechos sociales de pueblos indígenas, mujeres; niños, niñas y adolescentes; personas con discapacidad y personas adultas mayores.</p>
-            <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar Tomo</a>
+            <a href="{% static 'img/pdfensayos/tomo_4_grupos_de_especial_proteccion.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar Tomo</a>
             </div>
         </div>
 
@@ -35,23 +35,23 @@
             <h2>Capítulos:</h2>
             <div class="decoracion green"></div>
             <h3>Sección A: Igualdad</h3>
-            <p>1. <a href="#">Fomentando la igualdad de derechos en las constituciones: 193 países en perspectiva.</a> Aleta Sprague, Pam Stek, Amy Raub y Jody Heymann</p>
+            <p>1. <a href="{% static 'img/pdfensayos/capitulos-tomo-4/1-sprague_fomentando_la_igualdad_de_derechos_en_las_constituciones.pdf' %}" target="_blank">Fomentando la igualdad de derechos en las constituciones: 193 países en perspectiva.</a> Aleta Sprague, Pam Stek, Amy Raub y Jody Heymann</p>
 
             <h3>Sección B: Pueblos indígenas</h3>
-            <p>2. <a href="#">Los derechos de los pueblos indñigenas en la nueva Constitución.</a> José Aylwin</p>
+            <p>2. <a href="{% static 'img/pdfensayos/capitulos-tomo-4/2-aylwin_los_derechos_de_pueblos_indigenas_en_la_nueva_constitucion.pdf' %}" target="_blank">Los derechos de los pueblos indñigenas en la nueva Constitución.</a> José Aylwin</p>
 
             <h3>Sección C: Mujeres</h3>
-            <p>3. <a href="#">El derecho constitucional de las mujeres a la igualdad: Una perspectiva comparada.</a> Meghan Campbell</p>
+            <p>3. <a href="{% static 'img/pdfensayos/capitulos-tomo-4/3-campbell_el_derecho_constitucional_de_las_mujeres_a_la_igualdad.pdf' %}" target="_blank">El derecho constitucional de las mujeres a la igualdad: Una perspectiva comparada.</a> Meghan Campbell</p>
 
             <h3>Sección D: Niños, niñas y adolescentes</h3>
-            <p>4. <a href="#">Los niños y las constituciones.</a> Aoife Nolan y Conor O’Mahony</p>
+            <p>4. <a href="{% static 'img/pdfensayos/capitulos-tomo-4/4-nolan_los_ninos_y_las_constituciones.pdf' %}" target="_blank">Los niños y las constituciones.</a> Aoife Nolan y Conor O’Mahony</p>
 
             <h3>Sección E: Personas con discapacidad</h3>
-            <p>5. <a href="#">Disposiciones constitucionales sobre los derechos de las personas con discapacidad: Enfoques nacionales y contexto internacional.</a> Gonzalo Moreno, Michael Ashley Stein y Jody Heymann</p>
-            <p>6. <a href="#">Hacia un proceso constituyente inclusivo de las personas con discapacidad.</a> Pablo Marshall, Viviana Ponce de León y Eduardo Marchant</p>
+            <p>5. <a href="{% static 'img/pdfensayos/capitulos-tomo-4/5-moreno_disposiciones_constitucionales_sobre_los_derechos_de_las_personas_con_discapacidad.pdf' %}" target="_blank">Disposiciones constitucionales sobre los derechos de las personas con discapacidad: Enfoques nacionales y contexto internacional.</a> Gonzalo Moreno, Michael Ashley Stein y Jody Heymann</p>
+            <p>6. <a href="{% static 'img/pdfensayos/capitulos-tomo-4/6-marshall_hacia_un_proceso_constituyente_inclusivo_de_las_personas_con_discapacidad.pdf' %}" target="_blank">Hacia un proceso constituyente inclusivo de las personas con discapacidad.</a> Pablo Marshall, Viviana Ponce de León y Eduardo Marchant</p>
 
             <h3>Sección F: Adultos mayores</h3>
-            <p>7. <a href="#">La constitucionalización de los derechos de las personas mayores: Una práctica emergente.</a> Frederic Megret y Alexander Agnello</p>
+            <p>7. <a href="{% static 'img/pdfensayos/capitulos-tomo-4/7-megret_la_constitucionalizacion_de_los_derechos_de_las_personas_mayores.pdf' %}" target="_blank">La constitucionalización de los derechos de las personas mayores: Una práctica emergente.</a> Frederic Megret y Alexander Agnello</p>
         </div>
 
         <div class="col-12 col-sm-12 col-md-9 cita">
@@ -69,53 +69,53 @@
             <div class="decoracion blue"></div>
             <div class="row">
                 <div class="col-12 col-md-6 ensayo">
-                    <a href="#"><img src="{% static 'img/tomo-1-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <a href="{% url 'ensayo-tomouno' %}"><img src="{% static 'img/tomo-1-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
                     <div class="info">
                         <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
                         <h3>Chile, desigualdad y derechos sociales</h3>
                         <p>¿Cómo han influido los derechos sociales en el momento constituyente de Chile? Descubre respuestas a esta y otras preguntas aquí.</p>
-                        <a href="/ensayo-tomouno/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
-                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                        <a href="{% url 'ensayo-tomouno' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_1_chile_desigualdad_y_derechos_sociales.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 ensayo">
-                    <a href="#"><img src="{% static 'img/tomo-2-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <a href="{% url 'ensayo-tomodos' %}"><img src="{% static 'img/tomo-2-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
                     <div class="info">
                         <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
                         <h3>Mecanismos de garantía de los derechos sociales</h3>
                         <p>¿Y cómo se aseguran los derechos sociales? No es una tarea fácil, pero aquí te proponemos algunas formas para hacerlo y varias posturas para tener en cuenta.</p>
-                        <a href="/ensayo-tomodos/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
-                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                        <a href="{% url 'ensayo-tomodos' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_2_mecanismos_de_garantía.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 ensayo">
-                    <a href="#"><img src="{% static 'img/tomo-3-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <a href="{% url 'ensayo-tomotres' %}"><img src="{% static 'img/tomo-3-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
                     <div class="info">
                         <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
                         <h3>Los derechos económicos, sociales, culturales y ambientales</h3>
                         <p>¿Derechos sociales en el catálogo de derechos fundamentales? ¡Claro! Aquí te explicamos los elementos claves y sistémicos a los que se debe prestar atención para hacerlo.</p>
-                        <a href="/ensayo-tomotres/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
-                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                        <a href="{% url 'ensayo-tomotres' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo-3-desca.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 ensayo">
-                    <a href="#"><img src="{% static 'img/tomo-4-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <a href="{% url 'ensayo-tomocuatro' %}"><img src="{% static 'img/tomo-4-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
                     <div class="info">
                         <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
                         <h3>Grupos de especial protección</h3>
                         <p>¿Derechos humanos iguales para todas las personas? ¡Claro! Pero la realidad hace que algunos grupos merezcan una protección especial. Aquí te contamos de algunos.</p>
-                        <a href="/ensayo-tomocuatro/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
-                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                        <a href="{% url 'ensayo-tomocuatro' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_4_grupos_de_especial_proteccion.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 ensayo">
-                    <a href="#"><img src="{% static 'img/tomo-5-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <a href="{% url 'ensayo-tomocinco' %}"><img src="{% static 'img/tomo-5-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
                     <div class="info">
                         <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
                         <h3>Procesos constituyentes y lecciones aprendidas</h3>
                         <p>¿Y qué han aprendido otros países al incorporar derechos sociales en sus procesos constituyentes? ¡Pues muchas cosas! Aquí puedes ver algunas de ellas.</p>
-                        <a href="/ensayo-tomocinco/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
-                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                        <a href="{% url 'ensayo-tomocinco' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_5_leciones_aprendidas.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
                     </div>
                 </div>
             </div>

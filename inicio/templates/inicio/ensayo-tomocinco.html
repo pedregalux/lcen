@@ -26,7 +26,7 @@
             </div>
             <div class="descripcion">
             <p>Este tomo presenta los casos de los procesos constituyentes de Sudáfrica y Colombia, donde los derechos sociales jugaron un rol preponderante en la discusión constituyente. De ambos casos se extraen lecciones en primera persona que demuestran la importancia de deliberar sobre los derechos en sede constitucional y los aprendizajes obtenidos en ambos procesos, que pueden iluminar y facilitar la experiencia del proceso constituyente que Chile atraviesa.</p>
-            <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar Tomo</a>
+            <a href="{% static 'img/pdfensayos/tomo_5_leciones_aprendidas.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar Tomo</a>
             </div>
         </div>
 
@@ -34,10 +34,10 @@
             <h2>Capítulos:</h2>
             <div class="decoracion green"></div>
             <h3>A. Sudáfrica</h3>
-            <p>1. <a href="#">Derechos socioeconómicos en la Constitución Sudafricana: Metas, logros, decepciones y lecciones.</a> Sandra Liebenberg</p>
+            <p>1. <a href="{% static 'img/pdfensayos/capitulos-tomo-5/1-liebenberg_derechos_socioeconómicos_en_la_constitución_sudafricana.pdf' %}" target="_blank">Derechos socioeconómicos en la Constitución Sudafricana: Metas, logros, decepciones y lecciones.</a> Sandra Liebenberg</p>
 
             <h3>B. Colombia</h3>
-            <p>2. <a href="#">Publicidad y Estado Social de Derecho: El acceso a la información pública como derecho fundamental e instrumental para los derechos económicos y sociales en la Constitución Política de Colombia.</a> Vivian Newman</p>
+            <p>2. <a href="{% static 'img/pdfensayos/capitulos-tomo-5/2-newman_publicidad_y_estado_social_de_derecho.pdf' %}" target="_blank">Publicidad y Estado Social de Derecho: El acceso a la información pública como derecho fundamental e instrumental para los derechos económicos y sociales en la Constitución Política de Colombia.</a> Vivian Newman</p>
 
         </div>
         <div class="col-12 col-sm-12 col-md-9 cita">
@@ -54,53 +54,53 @@
             <div class="decoracion blue"></div>
             <div class="row">
                 <div class="col-12 col-md-6 ensayo">
-                    <a href="#"><img src="{% static 'img/tomo-1-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <a href="{% url 'ensayo-tomouno' %}"><img src="{% static 'img/tomo-1-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
                     <div class="info">
                         <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
                         <h3>Chile, desigualdad y derechos sociales</h3>
                         <p>¿Cómo han influido los derechos sociales en el momento constituyente de Chile? Descubre respuestas a esta y otras preguntas aquí.</p>
-                        <a href="/ensayo-tomouno/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
-                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                        <a href="{% url 'ensayo-tomouno' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_1_chile_desigualdad_y_derechos_sociales.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 ensayo">
-                    <a href="#"><img src="{% static 'img/tomo-2-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <a href="{% url 'ensayo-tomodos' %}"><img src="{% static 'img/tomo-2-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
                     <div class="info">
                         <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
                         <h3>Mecanismos de garantía de los derechos sociales</h3>
                         <p>¿Y cómo se aseguran los derechos sociales? No es una tarea fácil, pero aquí te proponemos algunas formas para hacerlo y varias posturas para tener en cuenta.</p>
-                        <a href="/ensayo-tomodos/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
-                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                        <a href="{% url 'ensayo-tomodos' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_2_mecanismos_de_garantía.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 ensayo">
-                    <a href="#"><img src="{% static 'img/tomo-3-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <a href="{% url 'ensayo-tomotres' %}"><img src="{% static 'img/tomo-3-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
                     <div class="info">
                         <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
                         <h3>Los derechos económicos, sociales, culturales y ambientales</h3>
                         <p>¿Derechos sociales en el catálogo de derechos fundamentales? ¡Claro! Aquí te explicamos los elementos claves y sistémicos a los que se debe prestar atención para hacerlo.</p>
-                        <a href="/ensayo-tomotres/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
-                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                        <a href="{% url 'ensayo-tomotres' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo-3-desca.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 ensayo">
-                    <a href="#"><img src="{% static 'img/tomo-4-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <a href="{% url 'ensayo-tomocuatro' %}"><img src="{% static 'img/tomo-4-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
                     <div class="info">
                         <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
                         <h3>Grupos de especial protección</h3>
                         <p>¿Derechos humanos iguales para todas las personas? ¡Claro! Pero la realidad hace que algunos grupos merezcan una protección especial. Aquí te contamos de algunos.</p>
-                        <a href="/ensayo-tomocuatro/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
-                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                        <a href="{% url 'ensayo-tomocuatro' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_4_grupos_de_especial_proteccion.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 ensayo">
-                    <a href="#"><img src="{% static 'img/tomo-5-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
+                    <a href="{% url 'ensayo-tomocinco' %}"><img src="{% static 'img/tomo-5-ensayo-portada.png' %}" alt="img portada ensayo" class="img-fluid w-100"></a>
                     <div class="info">
                         <p class="creditos">GI-ESCR, HRC UNIVERSITY OF ESSEX Y UNIVERSIDAD DE CONCEPCIÓN</p>
                         <h3>Procesos constituyentes y lecciones aprendidas</h3>
                         <p>¿Y qué han aprendido otros países al incorporar derechos sociales en sus procesos constituyentes? ¡Pues muchas cosas! Aquí puedes ver algunas de ellas.</p>
-                        <a href="/ensayo-tomocinco/" class="btn-lcen button hvr-sweep-to-right">Leer</a>
-                        <a href="#" class="btn-lcen button hvr-sweep-to-right">Descargar</a>
+                        <a href="{% url 'ensayo-tomocinco' %}" class="btn-lcen button hvr-sweep-to-right">Leer</a>
+                        <a href="{% static 'img/pdfensayos/tomo_5_leciones_aprendidas.pdf' %}" class="btn-lcen button hvr-sweep-to-right" target="_blank">Descargar</a>
                     </div>
                 </div>
             </div>
