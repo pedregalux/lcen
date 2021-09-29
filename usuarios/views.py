@@ -25,6 +25,7 @@ from django.utils.encoding import force_bytes
 
 
 
+
 def register(request):
     return render(request, '../templates/register.html')
 
