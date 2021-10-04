@@ -15,7 +15,8 @@
     <meta name="keywords" content="La Constitución es Nuestra, LCen, Convención, Constitucional"/>
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="La Constitución es Nuestra"/>
-    <meta property="og:title" content="Visita La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative">
+    <!-- <meta property="og:title" content="Visita La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative"> -->
+    <meta property="og:title" content="{% if object.propuesta %}Revisa la propuesta {{ object.titulo }} en La Constitución es Nuestra{% else %}Conoce La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative{% endif %}">
     <meta property="og:image" content="{% static 'img/logo-lcen.png' %}"/>
     <meta property="og:description" content="La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative"/>
     <meta property="og:url" content="https://laconstitucionesnuestra.cl">
