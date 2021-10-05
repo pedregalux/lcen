@@ -78,6 +78,7 @@ class PropuestaWizardView(LoginRequiredMixin,SessionWizardView):
         self.instance.autor = self.request.user
         self.instance.save()
         self.instance.otros_temas.set(data['otros_temas'])
+        self.instance.organizaciones.set(data['organizaciones'])
         return render(self.request, 'done.html')
 
 
