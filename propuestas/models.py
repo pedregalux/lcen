@@ -96,6 +96,10 @@ class Propuesta(models.Model):
     organizaciones_de_propuesta = models.TextField("Otras Organizaciones",
         null=True,
         blank=True)
+    organizaciones = models.ManyToManyField(Organizacion,
+        verbose_name="Otras Organizaciones de la Propuesta",
+        blank=True,
+        related_name="organizaciones_propuesta")
     #paso 5
     compromiso_convencionales = models.BooleanField("Convencionales comprometidos",
         default=False)
