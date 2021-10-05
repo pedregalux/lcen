@@ -103,6 +103,38 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- ////////////////// Tarjeta para compartir ////////////////// -->
+                <!-- ///////////////// ------------------------ ///////////////// -->
+
+
+                <!-- <button type="button" class="btn-lcen apoyar button hvr-sweep-to-right" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Compartir Tarjeta <i class="fas fa-heart"></i></button>
+                <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">{{ object.titulo }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h3>¿Deseas apoyar la propuesta {{ object.titulo }}?</h3>
+                                <p><a href="{% url 'login' %}?next={{request.path}}">Ingresar</a> para Apoyar</p>
+
+                                <form class="" action="{% url 'prop_apoyo' object.pk %}" method="post">
+                                  {% csrf_token %}
+                                  <button type="submit" name="object_id" value="{{ object.id }}" class="btn btn-lcen apoyar button hvr-sweep-to-right">
+                                    Apoyar <i class="fas fa-heart"></i>
+                                  </button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- ///////////////// ------------------------ ///////////////// -->
+                
+
                 <h3 class="compartir">Comparte esta propuesta</h3>
 
                 <!-- <ul class="redes-sociales">
