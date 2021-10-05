@@ -65,7 +65,8 @@ class PropuestaForm4(forms.ModelForm):
         model = Propuesta
         fields = [
         'otras_organizaciones',
-        'organizaciones_de_propuesta'
+        'organizaciones_de_propuesta',
+        'organizaciones',
         ]
         widgets = {
             'otras_organizaciones': forms.CheckboxInput()
@@ -73,6 +74,7 @@ class PropuestaForm4(forms.ModelForm):
         labels = {
             'otras_organizaciones': ('<h6><span style="text-transform:uppercase">1. ¿Esta propuesta fue elaborada en conjunto con otras organizaciones?</span></h6><i>Marque si es así.</i>'),
             'organizaciones_de_propuesta': ('<h6><span style="text-transform:uppercase">2. Si tu respuesta fue “sí”, escribe cuáles:</span></h6><i>Por favor escribe los nombres de las organizaciones que participaron en la elaboración de la propuesta, separados por comas ¡No olvides incluir a tu organización!</i>'),
+            'organizaciones': ('<h6><span style="text-transform:uppercase">2. ¿Esta Propuesta involucra a otras organizaciones que están en La Constitución es Nuestra?</span></h6><i>Por favor selecciona hasta dos organizaciones adicionales, debes seleccionarlos con el mouse y apretando la telca Control -Ctrl-</i>'),
         }
 
 
