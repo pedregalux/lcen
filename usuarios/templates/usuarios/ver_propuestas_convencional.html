@@ -83,6 +83,12 @@
                       Propuesta Personal
                       </p>
                       {% endif %}
+                      {% for organizacion in propuesta.organizaciones.all %}
+                      <img src="{{ organizacion.logo_organizacion.url }}" alt="logo organizacion">
+                      <p class="lugar">
+                      {{ organizacion.nombre_perfil }} ·
+                      </p>
+                      {% endfor %}
                   </div>
                   <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
               </div>
