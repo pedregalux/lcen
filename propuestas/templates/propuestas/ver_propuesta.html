@@ -35,10 +35,13 @@
             <h3>{{ object.titulo }}</h3>
             <p class="autor">Esta es una propuesta de: <b>
               {% if object.autor.organizacion %}
-              {{ object.autor.organizacion.nombre_perfil }}
+              {{ object.autor.organizacion.nombre_perfil }} ·
               {% else %}
-              {{ object.autor }}
+              {{ object.autor }} ·
               {% endif %}
+              {% for organizacion in object.organizaciones.all %}
+              {{ organizacion.nombre_perfil }} ·
+              {% endfor %}
             </b></p>
             <!-- <p class="colaborador">Elaborada con: <b><a href="#">Nombre persona/organización</a></b></p> -->
             <div class="linea yellow my-3"></div>
@@ -133,7 +136,7 @@
                 </div> -->
 
                 <!-- ///////////////// ------------------------ ///////////////// -->
-                
+
 
                 <h3 class="compartir">Comparte esta propuesta</h3>
 

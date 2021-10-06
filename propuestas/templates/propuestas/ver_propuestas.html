@@ -73,17 +73,30 @@
                                 Sin región y/o comuna definidas
                                 {% endif %}
                               </p>
-                              <h4>Propuesta de</h4>
+                              <h4>Propuesta de:</h4>
+
+                              <div class="row">
+
+                              <p class="lugar">
                               {% if propuesta.autor.organizacion %}
                               <img src="{{ propuesta.autor.organizacion.logo_organizacion.url }}" alt="logo organizacion">
-                              <p class="lugar">
+
                               {{ propuesta.autor.organizacion.nombre_perfil }}
-                              </p>
+
                               {% else %}
-                              <p class="lugar">
+
                               Propuesta Personal
-                              </p>
+
                               {% endif %}
+
+                              {% for organizacion in propuesta.organizaciones.all %}
+                              <img src="{{ organizacion.logo_organizacion.url }}" alt="logo organizacion">
+                              {{ organizacion.nombre_perfil }}
+
+                              {% endfor %}
+                              </p>
+                              
+                              </div>
 
                           </div>
                           <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
