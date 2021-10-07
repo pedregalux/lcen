@@ -61,6 +61,13 @@ class VerPropuestaView(DetailView):
 
 
 
+class CardPropuestaView(DetailView):
+    model = Propuesta
+    context_object_name = 'propuestas_card'
+    template_name = 'propuestas/cardpropuesta.html'
+
+
+
 class PropuestaWizardView(LoginRequiredMixin,SessionWizardView):
     def get_template_names(self):
         return [TEMPLATES2[self.steps.current]]
