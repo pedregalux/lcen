@@ -89,6 +89,7 @@ class VerOrganizacionView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['lista_creadas'] = Propuesta.objects.filter(autor=self.object.user)
+        context['lista_cocreadas'] = Propuesta.objects.filter(organizaciones=self.object.id)
         context['lista_apoyadas'] = Propuesta.objects.filter(apoyos=self.object.user)
         return context
 
