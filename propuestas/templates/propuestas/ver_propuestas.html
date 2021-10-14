@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load propuestas_extra %}
 {% load static %}
 {% load crispy_forms_tags %}
 {% block title %}Propuestas{% endblock %}
@@ -30,11 +31,16 @@
             </div>
 
             <div class="col-12 col-sm-12 col-md-12 formulario">
-                  <form  method="get">
+
+              <p class="bajada text-center">Te invitamos a filtrar y encontrar propuestas ciudadanas en los siguientes temas</p>
+
+            {% propuestasxsubtema %}
+
+                <!-- <form  method="get">
                     {{ filtropropuestas.form }}
                     <button type="submit" class="btn btn-lcen button hvr-sweep-to-right">Buscar</button>
                     <a href="{% url 'ver_propuestas' %}" class="limpiar-historial btn btn-lcen button hvr-sweep-to-right">Limpiar búsqueda</a>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
@@ -95,7 +101,7 @@
 
                               {% endfor %}
                               </p>
-                              
+
                               </div>
 
                           </div>
