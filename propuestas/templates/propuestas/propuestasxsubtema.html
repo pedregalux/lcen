@@ -3,7 +3,7 @@
 <ul class="filtro-temas-propuestas">
   {% for subtema in subtemas %}
       <li>
-      <a href="{% url 'ver_propuestas' %}?otros_temas={{ subtema.pk }}" class="btn-lcen button">{{ subtema }}</a>
+      <a href="{% url 'ver_propuestas' %}?otros_temas={{ subtema.pk }}" class="btn-lcen button hvr-sweep-to-right">{{ subtema }}</a>
       </li>
   {% endfor %}
 </ul>
