@@ -29,17 +29,14 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-12 col-md-12 formulario">
+            <div class="col-12 col-sm-12 col-md-12">
 
               <p class="bajada text-center">Te invitamos a filtrar y encontrar propuestas ciudadanas en los siguientes temas</p>
 
-            {% propuestasxsubtema %}
 
-                <!-- <form  method="get">
-                    {{ filtropropuestas.form }}
-                    <button type="submit" class="btn btn-lcen button hvr-sweep-to-right">Buscar</button>
-                    <a href="{% url 'ver_propuestas' %}" class="limpiar-historial btn btn-lcen button hvr-sweep-to-right">Limpiar búsqueda</a>
-                </form> -->
+              {% propuestasxsubtema %}
+
+
             </div>
         </div>
     </div>
