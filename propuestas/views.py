@@ -4,7 +4,7 @@ from django.conf import settings
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from propuestas.models import Propuesta, TemaPropuesta
+from propuestas.models import Propuesta, TemaPropuesta, SubtemaPropuesta
 from django.views.generic import ListView
 from django.views.generic import DetailView
 from django.views.generic import FormView, TemplateView

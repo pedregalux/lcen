@@ -21,12 +21,11 @@
 <section class="leer-propuesta container">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-8 informacion-propuesta">
-            <p class="tema-principal">{{ object.tema }}</p>
-            <p>
+              <div class="tema-principal">
               {% for otro_tema in object.otros_temas.all %}
               {{ otro_tema }} ·
               {% endfor %}
-            </p>
+              </div>
               {% if object.tema_extra %}
               <p>Tema Complementario: {{ object.tema_extra }}</p>
               {% else %}
@@ -107,36 +106,6 @@
                     </div>
                 </div>
 
-                <!-- ////////////////// Tarjeta para compartir ////////////////// -->
-                <!-- ///////////////// ------------------------ ///////////////// -->
-
-
-                <!-- <button type="button" class="btn-lcen apoyar button hvr-sweep-to-right" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Compartir Tarjeta <i class="fas fa-heart"></i></button>
-                <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">{{ object.titulo }}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <h3>¿Deseas apoyar la propuesta {{ object.titulo }}?</h3>
-                                <p><a href="{% url 'login' %}?next={{request.path}}">Ingresar</a> para Apoyar</p>
-
-                                <form class="" action="{% url 'prop_apoyo' object.pk %}" method="post">
-                                  {% csrf_token %}
-                                  <button type="submit" name="object_id" value="{{ object.id }}" class="btn btn-lcen apoyar button hvr-sweep-to-right">
-                                    Apoyar <i class="fas fa-heart"></i>
-                                  </button>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- ///////////////// ------------------------ ///////////////// -->
-
 
                 <h3 class="compartir">Comparte esta propuesta</h3>
 
@@ -149,6 +118,80 @@
                     <!-- <li><a href="#"><i class="fab fa-linkedin"></i></a></li> -->
                     <!-- <li><a href="#"><i class="fab fa-instagram-square"></i></a></li> -->
                 </ul>
+
+                <!-- ////////////////// Tarjeta para compartir ////////////////// -->
+                <!-- ///////////////// ------------------------ ///////////////// -->
+
+<!--
+                <button type="button" class="btn-lcen apoyar button hvr-sweep-to-right" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Compartir Propuesta <i class="fas fa-heart"></i></button>
+                <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">{{ object.titulo }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="col-12 col-sm-12 col-md-8 informacion-propuesta">
+                                <h3>Temas de la Propuesta</h3>
+                                  <p><b>
+                                    {{ object.tema }} ·
+                                    {% for otro_tema in object.otros_temas.all %}
+                                    {{ otro_tema }} ·
+                                    {% endfor %}
+                                    {% if object.tema_extra %}
+                                    {{ object.tema_extra }} ·
+                                    {% else %}
+                                    {% endif %}
+                                  </b></p>
+                                <h3>Creada por</h3>
+                                  <p><b>
+                                    {% if object.autor.organizacion %}
+                                    {{ object.autor.organizacion.nombre_perfil }} ·
+                                    {% else %}
+                                    {{ object.autor }} ·
+                                    {% endif %}
+                                    {% for organizacion in object.organizaciones.all %}
+                                    {{ organizacion.nombre_perfil }} ·
+                                    {% endfor %}
+                                  </b></p>
+                                  <p class="colaborador">Elaborada con: <b><a href="#">Nombre persona/organización</a></b></p>
+                                  <div class="linea yellow my-3"></div>
+
+                                  <h4>Problema a solucionar:</h4>
+                                  <p>{{ object.problema|linebreaks }}</p>
+
+                                  <h4>Situación Ideal:</h4>
+                                  <p>{{ object.situacion|linebreaks }}</p>
+
+                                  <h4>Qué debe contemplar la Nueva Constitución</h4>
+                                  <p>{{ object.componente|linebreaks }}</p>
+                                  <div class="linea yellow my-3"></div>
+                                  <p class="lugar"><i class="fas fa-map-marker-alt"></i>Esta propuesta se elaboró en: <b>
+                                    {% if object.region %}
+                                    {{ object.region }} ·
+                                    {% endif %}
+                                    {% if not object.region %}
+                                    {% endif %}
+                                    {% if object.comuna %}
+                                    {{ object.comuna }}
+                                    {% endif %}
+                                    {% if not object.comuna %}
+                                    {% endif %}
+                                    {% if not object.region and not object.comuna %}
+                                    Sin región y/o comuna definidas
+                                    {% endif %},
+                                    {{ object.pais }}</b></p>
+                                  <p class="numero-propuesta">Propuesta <b>N° {{ object.id }}</b></p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+-->
+                <!-- ///////////////// ------------------------ ///////////////// -->
+
+
             </div>
             <div class="linea yellow my-3"></div>
 
