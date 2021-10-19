@@ -14,10 +14,10 @@ class Cargo(models.Model):
 
 
 class Lista(models.Model):
-    nombre = models.CharField("Nombre Lista", max_length=220, unique=True)
+    nombre = models.CharField("Nombre Colectivo", max_length=220, unique=True)
     class Meta:
-        verbose_name = "Lista"
-        verbose_name_plural = "Listas"
+        verbose_name = "Colectivo"
+        verbose_name_plural = "Colectivos"
     def __str__(self):
         return self.nombre
 
