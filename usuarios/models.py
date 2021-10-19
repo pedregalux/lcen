@@ -170,7 +170,7 @@ class Convencional(models.Model):
         choices=RESERVADO)
     lista = models.ForeignKey(Lista,
         related_name="lista_de_constituyente",
-        verbose_name="Lista del Constituyente",
+        verbose_name="Colectivo del Constituyente",
         null=True,
         blank=True,
         on_delete=models.SET_NULL)
