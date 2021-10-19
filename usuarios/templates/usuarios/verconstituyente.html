@@ -60,7 +60,7 @@
             <div class="decorativo blue"></div>
             <ul>
               <li>
-                  <p><b>Cargos/Comisiones en la Convención:</b>
+                  <p><b>Comisiones en la Convención:</b>
                     {% for cargo in object.cargo.all %}
                     {{ cargo }} ·
                     {% endfor %}
@@ -76,7 +76,7 @@
                     <p><b>Colectivo:</b> {{ object.lista }}</p>
                 </li>
                 <li>
-                    <p><b>Movimiento / Organización:</b> {{ object.movimiento }}</p>
+                    <p><b>Movimiento/Organización:</b> {{ object.movimiento }}</p>
                 </li>
                 <li>
                   {% if object.linkintereses %}
