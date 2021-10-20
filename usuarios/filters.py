@@ -9,10 +9,11 @@ class ConvencionalesFiltro(django_filters.FilterSet):
 
     lista = filters.ModelChoiceFilter(queryset=Lista.objects.all().distinct(), label='', empty_label='Buscar por Colectivo...')
     distrito = filters.ModelChoiceFilter(queryset=Distrito.objects.all().distinct(), label='', empty_label='Buscar por Distrito...')
+    cargo = filters.ModelChoiceFilter(queryset=Cargo.objects.all().distinct(), label='', empty_label='Buscar por Comisión...')
     # movimiento = filters.ModelChoiceFilter(queryset=Movimiento.objects.all().distinct(), label='', empty_label='Buscar por Partido/Movimiento...')
 
 
 
     class Meta:
         model = Convencional
-        fields = ('lista','distrito',)
+        fields = ('lista','cargo','distrito',)
