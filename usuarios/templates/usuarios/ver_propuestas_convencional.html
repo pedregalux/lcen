@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load propuestas_extra %}
+{% load propuestas_extra_convencionales %}
 {% load static %}
 {% block title %}Propuestas{% endblock %}
 
@@ -23,18 +23,18 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12">
                 <h2>Tenemos <span>{{ propuestas_list.count }}</span> propuestas ciudadanas para la nueva constitución</h2>
-                <div class="btn-subir-propuestas">
+                <!-- <div class="btn-subir-propuestas">
                      <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right subir-propuesta-btn">Sube tu propuesta</a>
-                </div>
+                </div> -->
             </div>
+
+            <a name="todaslaspropuestas"></a>
 
             <div class="col-12 col-sm-12 col-md-12">
 
               <p class="bajada text-center">Te invitamos a filtrar y encontrar propuestas ciudadanas en los siguientes temas</p>
 
-
-              {% propuestasxsubtema %}
-
+              {% propuestasxsubtemaconvencionales %}
 
             </div>
         </div>
