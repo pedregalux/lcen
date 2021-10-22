@@ -477,7 +477,7 @@ header ul.navbar-nav li .dropdown-menu a {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0px;
-    margin: 20px 0px 40px 0px;
+    margin: 20px 0px 10px 0px;
 }
 
 .propuestas-home ul.filtro-temas-propuestas li {
@@ -486,8 +486,8 @@ header ul.navbar-nav li .dropdown-menu a {
 
 .propuestas-home ul.filtro-temas-propuestas .btn-lcen {
     font-size: 0.9em;
-    padding: 5px 10px;
-    margin: 5px;
+    padding: 1px 5px;
+    margin: 3px;
 }
 
 
@@ -2731,8 +2731,8 @@ ul.pagination .active a {
     }
 
     .propuestas-home ul.filtro-temas-propuestas .btn-lcen {
-        font-size: 0.8em;
-        margin: 4px 2px;
+        font-size: 0.9em;
+        margin: 3px 2px;
     }
 
     .convencionales-home {
