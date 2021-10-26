@@ -1,0 +1,11 @@
+
+<ul class="filtro-temas-propuestas">
+  {% for subtema in subtemas %}
+      <li>
+      <a href="{% url 'verpropuestasconvencionales' %}?otros_temas={{ subtema.pk }}" class="btn-lcen button hvr-sweep-to-right">{{ subtema }}</a>
+      </li>
+  {% endfor %}
+      <li>
+      <a href="{% url 'verpropuestasconvencionales' %}#todaslaspropuestas" class="btn-lcen button hvr-sweep-to-right">Ver Todas</a>
+      </li>
+</ul>
