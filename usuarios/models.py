@@ -226,4 +226,4 @@ class Convencional(models.Model):
         verbose_name = "Convencional"
         verbose_name_plural = "Convencionales"
     def __str__(self):
-        return self.user.username
+        return self.user.nombre
