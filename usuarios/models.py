@@ -146,7 +146,7 @@ class Organizacion(models.Model):
         verbose_name = "Organzación"
         verbose_name_plural = "Organizaciones"
     def __str__(self):
-        return self.user.username
+        return self.nombre_perfil
 
 
 
