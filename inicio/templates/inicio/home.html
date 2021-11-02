@@ -174,7 +174,7 @@
                 <div class="decoracion green"></div>
             </div>
             <div class="organizaciones-lista wow animate__animated animate__fadeIn animate__delay-2s">
-                <ul>
+                <!-- <ul>
                     <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-fcc.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
 
                     <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-fima.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
@@ -224,6 +224,13 @@
                     <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-urbasocial.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
 
                     <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-vegetarianos-hoy.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
+                </ul> -->
+                <ul>
+                  {% for organizacion in organizaciones %}
+                  <div class="col-6 col-sm-4 col-md-2">
+                      <li><a href="{{ organizacion.pk }}"><img src="{{ organizacion.logo_organizacion.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
+                  </div>
+                  {% endfor %}
                 </ul>
             </div>
         </div>
