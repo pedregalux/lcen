@@ -3351,3 +3351,102 @@ ul.pagination .active a {
         margin-top: 30px;
     }
 }
+
+/* Propuestas Tarjetas */.espacio {
+    height: 100px;
+}.card-propuesta-lcen {
+    zoom: 0.8;
+    border: 0px;
+}.card-propuesta-lcen .card-bvody {
+    background: url(../img/bg-lcen-azul.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75%;
+    width: 100%;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}.card-propuesta-lcen .logo-lcen {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    right: 0px;
+    padding-right: 40px;
+    top: 20px;
+}.card-propuesta-lcen p.n-propuesta {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 1.3em;
+}.card-propuesta-lcen .card-bvody h2 {
+    border-left: 0px;
+    padding-left: 0px;
+    color: white;
+    font-size: 2.2em;
+    font-weight: 900;
+}.card-propuesta-lcen p.info-card {
+    color: white;
+    font-size: 1.3em;
+    font-weight: normal;
+}.card-propuesta-lcen p b {
+    font-weight: 800;
+}.card-propuesta-lcen .logo-org {
+    height: 70px;
+    width: auto;
+}.card-propuesta-lcen .img-propuesta-decoracion {
+    position: absolute;
+    right: 20px;
+    bottom: 15%;
+    width: 55%;
+}.card-propuesta-lcen .creador-propuesta p {
+    margin-right: 10px;
+}.card-propuesta-lcen .adorno-lineas {
+    height: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}.card-propuesta-lcen .adorno-lineas .green {
+    width: 15%;
+    height: 8px;
+}.card-propuesta-lcen .adorno-lineas .yellow {
+    width: 35%;
+    height: 8px;
+}.card-propuesta-lcen .adorno-lineas .blue {
+    width: 30%;
+    height: 8px;
+    background: #AB47BC
+;
+}.card-propuesta-lcen .adorno-lineas .red {
+    width: 20%;
+    height: 8px;
+}.card-propuesta-lcen .card-footer {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: url(../img/bg-textura-papel.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25%;
+    width: 100%;
+}.card-propuesta-lcen .card-footer h4 {
+    color: black;
+    text-transform: inherit;
+    font-size: 1.3em;
+    font-weight: 800;
+    margin-bottom: 10px;
+}.card-propuesta-lcen .card-footer p.destacado-lcen-enlace {
+    padding: 5px 10px;
+    background: #CC0000
+;
+    color: white;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 0px;
+}

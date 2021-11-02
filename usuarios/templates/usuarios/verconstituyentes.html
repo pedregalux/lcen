@@ -27,12 +27,14 @@
 
             <div class="col-12 col-sm-12 col-md-12 formulario">
                   <form  method="get">
-                    {{ filtroconvencionales.form }}
+                  {{ filtroconvencionales.form.lista }}
+                  {{ filtroconvencionales.form.distrito }}
+                  {{ filtroconvencionales.form.cargo }}
+                  {{ filtroconvencionales.form.email }}
                     <button type="submit" class="btn btn-lcen button hvr-sweep-to-right">Buscar</button>
                     <a href="{% url 'verconvencionales' %}" class="limpiar-historial btn btn-lcen button hvr-sweep-to-right">Limpiar</a>
-                </form>
+                  </form>
             </div>
-
         </div>
     </div>
 </div>

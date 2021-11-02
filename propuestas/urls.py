@@ -11,7 +11,7 @@ urlpatterns=[
     path('verpropuestas/', views.VerPropuestasView.as_view(), name='ver_propuestas'),
     path('verpropuestas/<pk>', views.VerPropuestaView.as_view(), name='ver_propuesta'),
     path('verpropuestas/<pk>', views.CardPropuestaView.as_view(), name='cardpropuesta'),
-    path('crearpropuestas/', (PropuestaWizardView.as_view(FORMS2)), name='crearpropuestas'),
+    path('crearpropuestas/', PropuestaWizardView.as_view(), name='crearpropuestas'),
     path('propapoyo/<pk>', ApoyoView, name='prop_apoyo'),
     # path('crearpropuesta/', views.CrearPropuestaView.as_view(), name='crear_propuesta'),
 ]

@@ -1,5 +1,46 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Tarjeta Propuesta{% endblock %}
+{% block title %}Propuesta para compartir{% endblock %}
 
 {% block content %}
+
+<div class="espacio"></div>
+
+
+<section class="container py-5">
+
+   <!-- CARD FORMATO INSTAGRAM FEED  1080 x 1080 - LO DEJE ESCALADO A 800px -->
+
+    <div class="card card-propuesta-lcen" style="width: 700px; height: 700px;">
+        <div class="card-bvody">
+            <img src="{% static 'img/logo-lcen.png' %}" class="logo-lcen" alt="logo lcen">
+            <p class="n-propuesta">Propuesta <b>N° 102</b></p>
+            <h2 class="card-title">Reconocimiento del trabajo de cuidados no remunerados como actividad productiva</h2>
+            <p class="info-card"><b>Creada en:</b><br> Región Metropolitana de Santiago, San Joaquín</p>
+            <div class="creador-propuesta">
+                <p class="info-card"><b>Propuesta de:</b></p>
+                <img src="{% static 'img/logo-sjm.png' %}" alt="logo-org" class="logo-org">
+            </div>
+            </div>
+            <div class="adorno-lineas">
+                <div class="green"></div>
+                <div class="yellow"></div>
+                <div class="blue"></div>
+                <div class="red"></div>
+            </div>
+            <div class="card-footer">
+            <h4>Apoya la propuesta en:</h4>
+            <p class="destacado-lcen-enlace">laconstituciónesnuestra.cl</p>
+            <img src="{% static 'img/img-decoracion-propuestas.png' %}" class="img-propuesta-decoracion" alt="img propuesta">
+            </div>
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+{% endblock %}
