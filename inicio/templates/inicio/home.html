@@ -166,7 +166,30 @@
 </section>
 
 
-<section class="container-fluid organizaciones-home">
+
+<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
+    <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn animate__delay-1s">
+              <h2>Organizaciones Presentes</h2>
+              <div class="decoracion green"></div>
+          </div>
+            <div class="organizaciones-lista wow animate__animated animate__fadeIn">
+                <ul>
+                  {% for organizacion in organizaciones %}
+                  <div class="col-6 col-sm-4 col-md-2">
+                      <li><a href="/usuarios/verorganizaciones/{{ organizacion.pk }}"><img src="{{ organizacion.logo_organizacion.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
+                  </div>
+                  {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <section class="container-fluid organizaciones-home">
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn animate__delay-1s">
@@ -174,7 +197,7 @@
                 <div class="decoracion green"></div>
             </div>
             <div class="organizaciones-lista wow animate__animated animate__fadeIn animate__delay-2s">
-                <!-- <ul>
+                 <ul>
                     <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-fcc.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
 
                     <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-fima.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
@@ -224,18 +247,18 @@
                     <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-urbasocial.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
 
                     <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-vegetarianos-hoy.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-                </ul> -->
+                </ul>
                 <ul>
                   {% for organizacion in organizaciones %}
-                  <div class="col-6 col-sm-4 col-md-2">
-                      <li><a href="{{ organizacion.pk }}"><img src="{{ organizacion.logo_organizacion.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
-                  </div>
+
+                      <li><a href="/usuarios/verorganizaciones/{{ organizacion.pk }}"><img src="{{ organizacion.logo_organizacion.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
+
                   {% endfor %}
                 </ul>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 
