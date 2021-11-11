@@ -17,6 +17,6 @@ pip install django-allauth
 
 pip install django-extensions
 
-pip install django-filters
+pip install django-filter
 
 pip install django-import-export
