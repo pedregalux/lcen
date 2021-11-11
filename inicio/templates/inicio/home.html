@@ -4,6 +4,7 @@
 
 {% block content %}
 
+
 <section class="container-fluid portada-gif">
     <div class="transparencia"></div>
     <div class="informacion-portada container">
@@ -128,7 +129,6 @@
         {% endfor %}
 
 
-
         <div class="col-12 col-sm-12 col-md-12 ver-propuestas-button">
             <a href="{% url 'ver_propuestas' %}" class="btn-lcen button hvr-sweep-to-right">Ver todas las propuestas</a>
         </div>
@@ -166,7 +166,6 @@
 </section>
 
 
-
 <section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
     <div class="container">
         <div class="row">
@@ -186,80 +185,6 @@
         </div>
     </div>
 </section>
-
-
-
-<!-- <section class="container-fluid organizaciones-home">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn animate__delay-1s">
-                <h2>Organizaciones Presentes</h2>
-                <div class="decoracion green"></div>
-            </div>
-            <div class="organizaciones-lista wow animate__animated animate__fadeIn animate__delay-2s">
-                 <ul>
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-fcc.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-fima.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-afich.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-amnistia.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-antp.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-ciudad-constituyente.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-cos.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-derechos-digitales.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-ebn.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-fplc.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-greenpeace.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-humanas.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-iguales.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-ninas-valientes.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-nuestra-voz-importa.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-observatorio.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-observatorio-fiscal.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/comunidad-mujer-logo.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-techo.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-rimisp.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-sjm.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-summa.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-tqhde.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-urbasocial.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                    <li><a href="#"><img src="{% static 'img/logos-organizaciones/logo-vegetarianos-hoy.png' %}" alt="organizacion logo" class="img-fluid logo"></a></li>
-                </ul>
-                <ul>
-                  {% for organizacion in organizaciones %}
-
-                      <li><a href="/usuarios/verorganizaciones/{{ organizacion.pk }}"><img src="{{ organizacion.logo_organizacion.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
-
-                  {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
-</section> -->
-
 
 
 {% endblock %}
