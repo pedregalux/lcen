@@ -76,10 +76,6 @@ class CardPropuestaView(DetailView):
 
 
 
-
-
-
-
 class PropuestaWizardViewBase(LoginRequiredMixin,SessionWizardView):
     def get_template_names(self):
         return [TEMPLATES2[self.steps.current]]

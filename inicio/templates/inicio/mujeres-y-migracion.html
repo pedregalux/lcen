@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-constitucionfeminista.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-constitucionfeminista-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mujeres y migración</li>
+        </ol>
+    </nav>
+</section>
+
+
+<section class="container-fluid constitucionfeminista-descripcion  no-bg py-5">
+    <div class="container py-5 ensayos-descripcion reflexion">
+        <div class="row d-flex justify-content-md-center">
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <h2>Mujeres y migración</h2>
+                <h3>Reflexiones de Catalina Bosch Carcuro, Coordinadora Nacional de Inmigrantes / Plataforma Chile Migra</h3>
+
+                <div class="decoracion violeta"></div>
+                
+                <div class="video-responsive">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XFPtBmPfBj4?rel=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute; top:0; left: 0"></iframe>
+                </div>
+                
+
+                <h4 class="mt-3 pt-5 pb-3">Conoce la campaña “Por una Constitución que Garantice el Derecho a Migrar” aquí:</h4>
+                
+                <div class="video-responsive">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQugvey3J-c?rel=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute; top:0; left: 0"></iframe>
+                </div>
+                
+
+                <h5 class="mt-5 pt-3"><a href="https://observatorio.cl/wp-content/uploads/2021/10/cartilla-movilidad-humana-y-nueva-constitucin.pdf" target="_blank">También descarga la Cartilla “Movilidad Humana y Nueva Constitución” aquí</a></h5>
+                
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <div class="logo-autor">
+                    <img src="{% static 'img/img-reflexiones/logos-reflexiones/coordinadora-nacional-migrantes-logo.jpg' %}" alt="logo autor">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

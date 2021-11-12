@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-constitucionfeminista.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-constitucionfeminista-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mujeres y DESC</li>
+        </ol>
+    </nav>
+</section>
+
+
+<section class="container-fluid constitucionfeminista-descripcion  no-bg py-5">
+    <div class="container py-5 ensayos-descripcion reflexion">
+        <div class="row d-flex justify-content-md-center">
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <h2>Mujeres y DESC</h2>
+                <h3>Reflexiones de Corporación Opción</h3>
+                <div class="decoracion violeta"></div>
+
+                <div class="video-responsive">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ezid0aGSma0?rel=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute; top:0; left: 0"></iframe>
+                </div>
+
+                <p class="pt-5">Bien, que la nueva Constitución haya incorporado la exigencia de ser paritaria nos lleva a nuevas formas de hacer y de entender la política y nos obliga, de una u otra forma, a pensar los contenidos desde las mujeres, desde las niñas, desde la diversidad sexual, las disidencias, los pueblos originarios, las personas con discapacidad, como grupos históricamente vulnerados. Y esto se constituye en un hecho histórico para nuestra consagración como sujetas de derecho. Ahora bien, la Constitución Política de la República debiese abordar la desigualdad de género con garantías estatales robustas que no apunten sólo a la criminalización de la violencia contra la mujer, sino más bien a erradicarlo, comprendiendo las dimensiones estructurales que tienen su origen en lo político, en lo social, en lo económico. Creo que la nueva Constitución debiese consagrar en su carta fundamental los derechos sociales, de modo de poder exigirlos por medio de la producción o de la modificación de leyes que hoy no responden a las necesidades de las ciudadanas. Por medio de políticas públicas, por medio de regulaciones ambientales, de acceso a la vivienda, a la salud, a la educación, entre otros. De una u otra forma que sea un rayado de cancha que establezca las garantías de los derechos sociales en el centro antes que las condiciones del mercado, a fin de favorecer las experiencias de vida de las mujeres en Chile. <b><i><span>Paulina Castillo Directora Programa.</span></i></b></p>
+
+                <p>La nueva Constitución es un nuevo pacto. Es un nuevo acuerdo como país de cómo queremos que sean las relaciones sociales. Y para ello, es fundamental reconocer las necesidades específicas de las mujeres y así hablar de igualdad real y efectiva. Esperamos cambios en materia laboral. Existen todavía brechas salariales y en los cargos que ocupamos. Necesitamos eliminar la violencia en todas sus formas para nosotras; acceder a una justicia real y que comprenda la real magnitud de este problema. Necesitamos acceder al derecho a la salud sexual y reproductiva con libertad de acción y de decisión. Esperamos avanzar a estándares internacionales con una reforma profunda de nuestra sociedad. <b><i><span>Lilian Córdoba Directora Programa</span></i></b></p>
+
+                <p>La nueva Constitución puede mejorar las experiencias de vida de las mujeres, poniendo al centro a estos grupos que históricamente han estado al margen, han estado subyugados: como las mujeres, las infancias y las juventudes; nuestros pueblos originarios, migrantes, disidencias sexuales; abriendo espacios para un Chile de mayor participación y de incidencia para todos, para todas. Así también creo que esta nueva Constitución puede favorecer en el pleno ejercicio de nuestros derechos laborales, nuestros derechos económicos y con una real apropiación de nuestros cuerpos, de los derechos reproductivos, así como también que nuestras infancias y juventudes se puedan educar en el marco de los derechos humanos, en una educación libre de estereotipos, en una educación no sexista. Y que esta nueva Constitución también permita, aperture espacios de participación para todos, para todas, ocupando las mujeres mayores espacios de incidencia social, incidencia política, de incidencia pública. <b><i><span>Karen Jiménez Profesional Programa.</span></i></b></p>
+
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <div class="logo-autor">
+                    <img src="{% static 'img/img-reflexiones/logos-reflexiones/logo-opcion.jpg' %}" alt="logo autor">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

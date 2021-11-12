@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-constitucionfeminista.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-constitucionfeminista-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Niñas, adolescentes y la Constitución</li>
+        </ol>
+    </nav>
+</section>
+
+
+<section class="container-fluid constitucionfeminista-descripcion  no-bg py-5">
+    <div class="container py-5 ensayos-descripcion reflexion">
+        <div class="row d-flex justify-content-md-center">
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <h2>Niñas, adolescentes y la Constitución</h2>
+                <h3>Reflexiones de Bárbara, 13 años</h3>
+
+                <div class="decoracion violeta"></div>
+                
+                <p>Debería haber equidad entre hombres y mujeres. No necesariamente que la mujer sea mejor o esté por encima del hombre, sino que pueda estar a la par.</p>
+                
+                <p><b><i><span>La nueva Constitución podría ayudar a las mujeres a tener la posibilidad de decidir sobre su cuerpo</span></i></b>, en caso que quiera abortar, o no, pues hay mujeres que tienen a sus hijos e hijas, pero no los quieren. Después esos hijos sufren y andan en la calle.</p>
+                
+                <p>Respecto a los derechos ambientales, pueden mejorar si la derecha no se mete, si los empresarios no se meten. Porque ellos nunca querrán dejar de explotar la tierra, las aguas, el mar… <b><i><span>a ellos la plata los manda.</span></i></b></p>
+                
+                <p>También, <b><i><span>las mujeres deberían exigir un sueldo equitativo</span></i></b>, igual al de los hombres si es el mismo trabajo. <b><i><span>Y la salud no debería ser más cara para las mujeres, sólo por ser mujeres.</span></i></b></p>
+                
+                <p><span class="destacado-reflexion">Pienso que la nueva Constitución puede ayudar en todo eso.</span></p>
+                
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <div class="logo-autor">
+                    <img src="{% static 'img/img-reflexiones/logos-reflexiones/logo-opcion.jpg' %}" alt="logo autor">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-constitucionfeminista.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-constitucionfeminista-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+            <li class="breadcrumb-item active" aria-current="page">La importancia de los derechos sexuales y reproductivos (...)</li>
+        </ol>
+    </nav>
+</section>
+
+
+<section class="container-fluid constitucionfeminista-descripcion  no-bg py-5">
+    <div class="container py-5 ensayos-descripcion reflexion">
+        <div class="row d-flex justify-content-md-center">
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <h2>La importancia de los derechos sexuales y reproductivos y su inclusión en la nueva constitución</h2>
+                <h3>Reflexiones de Corporación Miles</h3>
+
+                <div class="decoracion violeta"></div>
+
+                <h5 class="my-3"><strong>¿Por qué son tan importantes los derechos sexuales y reproductivos para incluirlos en una nueva constitución?</strong></h5>
+
+                <div class="video-responsive mb-4"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/nMe9_Jxi528?rel=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute; top:0; left: 0"></iframe></div>
+
+
+                <p>En materia regulatoria, los derechos sexuales y reproductivos en Chile solo están regulados a nivel de decretos y algunas leyes. La Constitución actual no se encuentra consagrada con ninguna norma que haga referencia a algún aspecto de los derechos reproductivos, lo que dificulta y debilita la protección y seguridad de las personas.</p>
+
+                <p>La falta de control e información sobre el propio cuerpo y la sexualidad tienen un tremendo impacto especialmente en la vida de mujeres y niñas, que día a día ven vulnerados sus derechos al no tener una ley integral contra la violencia de género.</p>
+
+                <p>Todos los actos de nuestra vida en sociedad, están regulados por la Constitución. La oportunidad de incorporar la consagración de los derechos sexuales y reproductivos en un nuevo texto constitucional contribuye a la reivindicación de las mujeres como sujetas plenas de derecho. Ejercer derechos sexuales y reproductivos, permiten construir ciudadanía asumiendo los derechos y las responsabilidades que las personas tienen respecto a estos temas.</p>
+
+                <p>El acceso a información clara y de calidad es lo que permite tomar decisiones libres e informadas más en el plano de la vida sexual y reproductiva que es un ámbito de la vida crucial para la dignidad humana. Poder decidir sobre nuestra salud, nuestro cuerpo y nuestra vida sexual es un derecho humano que debe garantizar autonomía, goce, información, derecho a decidir y plenitud.</p>
+
+                <h5 class="mt-5 mb-3"><strong>¿Qué son los derechos sexuales y reproductivos?</strong></h5>
+
+                <div class="video-responsive"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/NNNPc_VsiX8?rel=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute; top:0; left: 0"></iframe></div>
+                
+                <h5 class="mt-5 mb-3"><strong>Los impactos de su vulneración</strong></h5>
+                
+                <div class="video-responsive mb-5"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/E82NoVfRY7g?rel=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute; top:0; left: 0"></iframe></div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <div class="logo-autor">
+                    <img src="{% static 'img/img-reflexiones/logos-reflexiones/logo-miles.jpg' %}" alt="logo autor">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
