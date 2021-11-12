@@ -28,7 +28,7 @@
                 </div> -->
             </div>
 
-            <a name="todaslaspropuestas"></a> 
+            <a name="todaslaspropuestas"></a>
 
             <div class="col-12 col-sm-12 col-md-12">
 
@@ -91,8 +91,14 @@
                       <img src="{{ organizacion.logo_organizacion.url }}" alt="logo organizacion">
                       <p class="lugar">
                       {{ organizacion.nombre_perfil }} ·
-                      </p>
                       {% endfor %}
+                      </p>
+                      {% if propuesta.organizaciones_de_propuesta %}
+                      <p class="lugar">
+                      Apoyada por:
+                      {{ propuesta.organizaciones_de_propuesta }}
+                      {% endif %}
+                      </p>
                   </div>
                   <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
               </div>

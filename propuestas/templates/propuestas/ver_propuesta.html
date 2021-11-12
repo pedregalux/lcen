@@ -42,6 +42,12 @@
               {{ organizacion.nombre_perfil }} ·
               {% endfor %}
             </b></p>
+            {% if object.organizaciones_de_propuesta %}
+            <p class="lugar">
+            Apoyada por:
+            {{ object.organizaciones_de_propuesta }}
+            {% endif %}
+            </p>
             <!-- <p class="colaborador">Elaborada con: <b><a href="#">Nombre persona/organización</a></b></p> -->
             <div class="linea yellow my-3"></div>
 
