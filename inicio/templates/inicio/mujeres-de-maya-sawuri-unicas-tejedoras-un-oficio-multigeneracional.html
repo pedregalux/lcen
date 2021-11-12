@@ -1,0 +1,71 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-constitucionfeminista.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-constitucionfeminista-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mujeres de Maya Sawuri: Únicas tejedoras. (...)</li>
+        </ol>
+    </nav>
+</section>
+
+
+<section class="container-fluid constitucionfeminista-descripcion  no-bg py-5">
+    <div class="container py-5 ensayos-descripcion reflexion">
+        <div class="row d-flex justify-content-md-center">
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <h2>Mujeres de Maya Sawuri: Únicas tejedoras. Un oficio multigeneracional</h2>
+                <h3>Reflexiones de Maya Sawuri</h3>
+
+                <div class="decoracion violeta"></div>
+
+                <p>La señora Pilar Quispe Mamani, artesana aymara, cuenta con una trayectoria de 43 años en la textilería, radicada en la localidad de Pozo Almonte, región de Tarapacá. Para ella, la importancia de una nueva constitución implica reconocimiento y respeto por parte de todo un país, que se materializa en que la palabra paisana en la actualidad sea de orgullo. Pilar nos cuenta que espera de la nueva constitución por fin ser reconocidas como parte de un pueblo plurinacional que garantice las autonomías territoriales. <b><i><span>La nueva constitución hace “que uno tenga esperanzas de reconocimiento y que por fin se sienten libre de expresarse, tanto en los rituales y tradiciones a nuestra Pachamama, como a nuestra tierra madre”.</span></i></b></p>
+
+                <div class="img-center">
+                    <img src="{% static 'img/img-reflexiones/img-reflexiones-1.png' %}" alt="logo autor" class="img-contenido-reflexiones pt-5" width="70%" height="auto">
+
+                    <p class="creditos-fotografico mt-3 mb-5 py-1">Pilar Quispe Mamani</p>
+                </div>
+
+                <p>En el norte del país hay una gran cantidad de aymaras –tanto de Perú y Bolivia– donde la lengua materna es aimara o quechua dependiendo del sector donde se encuentre. La diferencia que se tiene en la actualidad es casi nula, pues se tiene las mismas costumbres y tradiciones, <b><i><span>es por eso mismo que nos consideramos un pueblo plurinacional.</span></i></b></p>
+
+                <p>Nuestra madre y abuela Barbarita Vilches Chamaca, artesana aimara de la localidad de Enquelga, comuna de Colchane, región de Tarapacá, tras tratar de responder esta pregunta sobre la Constitución, señala que <b><i><span>no conoce y no sabe los posibles cambios que puedan existir a futuro. Señala que por su larga edad será difícil verlos y que sólo recuerda que cuando era adolescente, vivía de los ingresos de las ventas de tejidos a turistas sin un sistema de regulación comercial.</span></i></b></p>
+
+                <div class="img-center"><img src="{% static 'img/img-reflexiones/img-reflexiones-2.jpg' %}" alt="logo autor" class="img-contenido-reflexiones pt-5" width="70%" height="auto">
+
+                    <p class="creditos-fotografico mt-3 mb-5 py-1">Barbarita Vilches Chamaca</p>
+                </div>
+
+
+                <p>Yo Gabriela López Quispe nieta e hija de la cultura aymara, aprendiz de la textilería aymara, de la localidad de alto hospicio, Región de Tarapacá, <b><i><span>creo que la nueva constitución generará un gran cambio para nuestro pueblo, para ser reconocido y poder reparar el daño histórico que le ha causado el gobierno de Chile.</span></i></b></p>
+
+                <div class="img-center">
+                    <img src="{% static 'img/img-reflexiones/img-reflexiones-3.jpg' %}" alt="logo autor" class="img-contenido-reflexiones pt-5" width="70%" height="auto">
+
+                    <p class="creditos-fotografico mt-3 mb-5 py-1">Gabriela López Quispe</p>
+                </div>
+
+                <p>Es bien sabido que la incorporación de los pueblos originarios a la asamblea constituyente podría traer consecuencias económicas para el país, dado que muchos pueblos han sido arrebatados por estos distintos sectores económicos, específicamente, aquí en el norte pasa con las mineras y el agua. La injusticia del poder del Estado, de apropiarse de terrenos ancestrales y el hecho de ser entregada a empresas mineras, produciendo el empobrecimiento de nuestras tierras, <b><i><span>ha generado un aislamiento de nuestras costumbres y nuestra identidad.</span></i></b> <span class="destacado-reflexion">Tenemos esperanza que este nuevo proceso que se acompaña de 500 años de lucha por parte de las primeras naciones, reivindique los derechos de nuestros pueblos, la situación de la escasez del agua en el norte de nuestro país y el reconocimiento y visibilización de nuestro trabajo y cultura.</span></p>
+                <div class="img-center">
+                    <img src="{% static 'img/img-reflexiones/img-reflexiones-4.png' %}" alt="logo autor" class="img-contenido-reflexiones pt-5" width="70%" height="auto">
+
+                    <p class="creditos-fotografico mt-3 mb-5 py-1">Gabriela López Quispe</p>
+                </div>
+
+                <h4 class="pb-5 text-uppercase"><b>Documentación: Gloria Mancilla Ibacache</b></h4>
+            </div>
+
+          <!--  <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <div class="logo-autor">
+                    <img src="{% static 'img/img-reflexiones/logos-reflexiones/logo-opcion.jpg' %}" alt="logo autor">
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

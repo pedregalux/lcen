@@ -3450,3 +3450,159 @@ ul.pagination .active a {
     font-weight: 800;
     margin-bottom: 0px;
 }
+
+
+/*Constitución Feminista Seccion*/
+
+.violeta {
+    background: #AB47BC;
+}
+
+.constitucion-feminista h2 {
+    border-color: #008000;
+}
+
+.constitucionfeminista-descripcion {
+    background: url(../img/bg-textura-papel.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.constitucionfeminista-descripcion p span {
+    color: #AB47BC;
+}
+
+.constitucionfeminista-descripcion h4 {
+    font-size: 1.4em;
+    color: black;
+}
+
+.constitucionfeminista-descripcion .enlaces li {
+    padding: 5px 0px;
+}
+
+.constitucionfeminista-descripcion .enlaces a {
+    color: black;
+    transition: 0.4s all;
+    font-weight: 500;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.constitucionfeminista-descripcion .enlaces a:hover {
+    color: #AB47BC;
+}
+
+.constitucionfeminista-descripcion p.contacto-cfeminista a {
+    color: black;
+}
+
+
+
+/*Constitución Feminista Seccion - Reflexiones lista*/
+
+.cf-reflexiones-list .decoracion-reflexion {
+    width: 40px;
+    height: 8px;
+}
+
+.cf-reflexiones-list .reflexion-cf .info {
+    margin: 0px;
+    padding: 20px;
+    background: #F0F0F0;
+}
+
+.cf-reflexiones-list .reflexion-cf h3 {
+    text-transform: inherit;
+    letter-spacing: 0px;
+    font-size: 1.4em;
+}
+
+.cf-reflexiones-list .reflexion-cf h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.cf-reflexiones-list .reflexion-cf h3 a:hover {
+    color: #008000;
+}
+
+/*Constitución Feminista - Reflexión*/
+
+.constitucionfeminista-descripcion p span.destacado-reflexion {
+    background: #f5bdff;
+    color: black;
+    font-weight: bold;
+    padding: 3px 0px;
+}
+
+.constitucionfeminista-descripcion .logo-autor img {
+    width: auto;
+    max-width: 350px;
+    margin-top: 50px;
+}
+
+.constitucionfeminista-descripcion .reflexion ul li {
+    padding-bottom: 8px;
+}
+
+.constitucionfeminista-descripcion .reflexion a {
+    color: #AB47BC;
+    font-weight: bold;
+}
+
+.constitucionfeminista-descripcion .reflexion a:hover {
+    color: #AB47BC;
+    font-weight: bold;
+}
+
+.ref-cf {
+    font-size: 0.9em;
+}
+
+.constitucionfeminista-descripcion .video-responsive {
+    padding-bottom: 56.25%;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.creditos-fotografico {
+    font-size: 1em;
+    font-weight: 500;
+    color: #008000;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 4px solid #008000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media(max-width:975px) {
+    .constitucion-feminista {
+        margin-top: 50px;
+    }
+}
+
+
+/*Convencionales form*/
+
+input#id_apellido {
+    width: 23%;
+    margin: 1%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+:focus-visible {
+    outline: 0px !important;
+}
+
+@media (max-width: 768px) {
+    input#id_apellido {
+        width: 100%;
+        margin: 0px;
+        padding: 6px;
+    }
+}

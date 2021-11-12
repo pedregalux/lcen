@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-constitucionfeminista.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-constitucionfeminista-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mujeres y sistema judicial</li>
+        </ol>
+    </nav>
+</section>
+
+
+<section class="container-fluid constitucionfeminista-descripcion  no-bg py-5">
+    <div class="container py-5 ensayos-descripcion reflexion">
+        <div class="row d-flex justify-content-md-center">
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <h2>Mujeres y sistema judicial</h2>
+                <h3>Reflexiones de Karina, Adulta</h3>
+                <div class="decoracion violeta"></div>
+                <p>Esta nueva Constitución es el cambio que necesitábamos las mujeres de nuestro país para garantizar el cumplimiento de nuestros derechos, porque hoy en día somos vulnerables en todos los aspectos. Por ejemplo; en lo penal. <b><i><span>Nuestras mujeres mueren en mano de sus agresores por la tardanza de medidas cautelares, dado que es totalmente burocrático todo el sistema judicial y, cuando se nos otorga la medida cautelar, no hay quien controle el cumplimiento de esta y al final es solo un papel que no nos garantiza nada.</span></i></b> Las penas que se les da a un agresor son muy bajas comparado al daño que se hace hacia la mujer y su entorno. Ser víctima en este país es tan tenebroso en lo judicial, que jamás tendremos lo que esperamos. Ni el apoyo, ni la reparación, ni mucho menos la justicia. Por eso es importante cambiar la nueva Constitución.</p>
+
+                <p><b><i><span>Como mujeres somos castigadas hasta en la crianza de nuestros hijos, porque si el  alimentante no paga, nosotras no tenemos la garantía de la alimentación.</span></i></b> Si bien es cierto, está estipulado en los derechos del niño que nuestros hijos tienen derecho a la salud, estudios y alimentación, pero si esto no se cumple, nada nos garantiza que se hará. Es ahí donde comienza el calvario de las madres al sentirse completamente desamparadas, ya que obligar a cumplir al alimentante es prácticamente imposible (y lo digo desde mi propia vivencia, con una deuda de pensión de más de ocho millones de pesos y pidiendo cumplimiento de pensión hace más de cuatro años y dejando los pies en el Tribunal semana tras semana y, aun así, no hay solución).</p>
+
+                <p>Esto lo vivimos el 84% de las mujeres, es ahí donde no tenemos alternativa y para darle lo mejor a nuestros hijos e hijas tenemos que trabajar el doble, sacrificando el tiempo con nuestros ellos y ellas. <b><i><span>Creo que así como se persigue a un deudor del fisco, de entidades bancarias y tiendas comerciales, se deberían seguir a los deudores de pensión de alimentos.</span></i></b></p>
+
+                <p><b><i><span>En lo laboral somos discriminadas desde la entrevista de trabajo, cuando se nos  pregunta ¿cuántos hijos tiene y de qué edades?.</span></i></b> Las que tenemos más de 4 hijos y niños pequeños estamos perdidas. Como si tener hijos nos inhabilitara en lo profesional. </p>
+
+                <p><span class="destacado-reflexion">Más protección e igualdad para nuestras mujeres.</span></p>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
+                <div class="logo-autor">
+                    <img src="{% static 'img/img-reflexiones/logos-reflexiones/logo-opcion.jpg' %}" alt="logo autor">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
