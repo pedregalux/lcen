@@ -19,25 +19,29 @@
 <div class="filtro-propuestas formulario filtro-convencionales">
     <div class="container">
         <div class="row">
-
             <div class="col-12 col-sm-12 col-md-12">
                 <h2><span>155 personas</span> encargadas de escribir la nueva constitución</h2>
                 <p>Conoce quiénes son lxs convencionales y con qué propuestas de la ciudadanía se comprometen y apoyan</p>
             </div>
-
-            <div class="col-12 col-sm-12 col-md-12 formulario">
+        </div>
+        <div class="col-12 col-sm-12 col-md-12">
                   <form  method="get">
+                  <div class="row">
                   {{ filtroconvencionales.form.lista }}
                   {{ filtroconvencionales.form.distrito }}
                   {{ filtroconvencionales.form.cargo }}
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-6">
                   {{ filtroconvencionales.form.email }}
                     <button type="submit" class="btn btn-lcen button hvr-sweep-to-right">Buscar</button>
                     <a href="{% url 'verconvencionales' %}" class="limpiar-historial btn btn-lcen button hvr-sweep-to-right">Limpiar</a>
                   </form>
-            </div>
+
         </div>
+
     </div>
 </div>
+
 
 
 
