@@ -1,4 +1,7 @@
-{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
 
 <section class="portada-lcen-colores">
     <img src="{% static 'img/header-constitucionfeminista.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
@@ -47,12 +50,12 @@
 
                     <h4>Más que Juanitas en los medios:</h4>
                     <ul>
-                        <li><a href="#" target="_blank">Más que Juanitas</a></li>
-                        <li><a href="#" target="_blank">Las dueñas de casa sin casa: el derecho a la vivienda desde una perspectiva de género</a></li>
-                        <li><a href="#" target="_blank">El rol de las mujeres indígenas en el desarrollo social, político y cultural de sus pueblos y en la construcción de un nuevo Chile</a></li>
-                        <li><a href="#" target="_blank">La visión de las mujeres afrodescendientes</a></li>
-                        <li><a href="#" target="_blank">Enfoque de género en el proceso constituyente chileno</a></li>
-                        <li><a href="#" target="_blank">Derechos sexuales y reproductivos descentralizados en la Nueva Constitución</a></li>
+                        <li><a href="#">Más que Juanitas</a></li>
+                        <li><a href="{% url 'las-duenas-de-casa-sin-casa' %}">Las dueñas de casa sin casa: el derecho a la vivienda desde una perspectiva de género</a></li>
+                        <li><a href="{% url 'el-rol-de-las-mujeres-indigenas-en-el-desarrollo-social-politico-y-cultural-de-sus-pueblos' %}">El rol de las mujeres indígenas en el desarrollo social, político y cultural de sus pueblos y en la construcción de un nuevo Chile</a></li>
+                        <li><a href="{% url 'la-vision-de-las-mujeres-afrodescendientes' %}">La visión de las mujeres afrodescendientes</a></li>
+                        <!-- <li><a href="{% url 'inicio' %}">Enfoque de género en el proceso constituyente chileno</a></li> -->
+                        <li><a href="{% url 'derechos-sexuales-y-reproductivos-descentralizados-en-la-nueva-constitucion' %}">Derechos sexuales y reproductivos descentralizados en la Nueva Constitución</a></li>
                     </ul>
                     <p class="contacto-cfeminista py-4">¿Quieres participar de Más que Juanitas? <a href="#">Contáctanos aquí</a></p>
                 </div>
@@ -70,17 +73,17 @@
             <div class="row">
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% static 'img/pdf/libro-la-constitucion-de-1980-bajo-la-lupa-feminista-abofem.pdf' %}" target="_blank"><img src="{% static 'img/img-reflexiones/constitucion-feminista-img-1980.png' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% static 'img/libro-la-constitucion-de-1980-bajo-la-lupa-feminista-abofem.pdf' %}"><img src="{% static 'img/constitucion-feminista-img-1980.png' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
-                        <h3><a href="{% static 'img/pdf/libro-la-constitucion-de-1980-bajo-la-lupa-feminista-abofem.pdf' %}" target="_blank">Libro La Constitución de 1980 bajo la lupa feminista</a></h3>
+                        <h3><a href="{% static 'img/libro-la-constitucion-de-1980-bajo-la-lupa-feminista-abofem.pdf' %}">Libro La Constitución de 1980 bajo la lupa feminista</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
                         <p class="autora">ABOFEM</p>
                     </div>
                 </div>
-               
-               
+
+
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'constitucion-con-enfoque-de-desarrollo-territorial' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-20.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'constitucion-con-enfoque-de-desarrollo-territorial' %}"><img src="{% static 'img/reflexion-img-20.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'constitucion-con-enfoque-de-desarrollo-territorial' %}">Constitución con enfoque de desarrollo territorial</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -89,7 +92,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'derecho-al-trabajo-remunerado' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-4.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'derecho-al-trabajo-remunerado' %}"><img src="{% static 'img/reflexion-img-4.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'derecho-al-trabajo-remunerado' %}">Derecho al trabajo remunerado</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -98,7 +101,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'derechos-sexuales-y-reproductivos-descentralizados-en-la-nueva-constitucion' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-3.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'derechos-sexuales-y-reproductivos-descentralizados-en-la-nueva-constitucion' %}"><img src="{% static 'img/reflexion-img-3.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'derechos-sexuales-y-reproductivos-descentralizados-en-la-nueva-constitucion' %}">Derechos sexuales y reproductivos descentralizados en la Nueva Constitución</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -107,25 +110,25 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'salud-y-autonomia-sexual-y-reproductiva' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-3.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'salud-y-autonomia-sexual-y-reproductiva' %}"><img src="{% static 'img/reflexion-img-3.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'salud-y-autonomia-sexual-y-reproductiva' %}">Salud y autonomía sexual y reproductiva</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
                         <p class="autora">Reflexiones de Fundación Observatorio de Violencia Obstétrica de Chile (OVO CHILE)</p>
                     </div>
                 </div>
-               
+
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'educacion-integral-en-sexualidad-en-la-nueva-constitucion' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-19.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'educacion-integral-en-sexualidad-en-la-nueva-constitucion' %}"><img src="{% static 'img/reflexion-img-19.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'educacion-integral-en-sexualidad-en-la-nueva-constitucion' %}">Educación integral en sexualidad en la nueva constitución</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
                         <p class="autora">Reflexiones de Danitza Peréz Cáceres, ABOFEM</p>
                     </div>
                 </div>
-               
+
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'educacion-no-sexista' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-18.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'educacion-no-sexista' %}"><img src="{% static 'img/reflexion-img-18.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'educacion-no-sexista' %}">Educación no sexista</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -134,7 +137,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'el-rol-de-las-mujeres-y-ninas-en-la-gestion-hidrica' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-17.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'el-rol-de-las-mujeres-y-ninas-en-la-gestion-hidrica' %}"><img src="{% static 'img/reflexion-img-17.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'el-rol-de-las-mujeres-y-ninas-en-la-gestion-hidrica' %}">El rol de las mujeres y niñas en la gestión hídrica</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -143,16 +146,16 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'juntas-abortamos' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-3.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'juntas-abortamos' %}"><img src="{% static 'img/reflexion-img-3.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'juntas-abortamos' %}">Juntas, Abortamos</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
                         <p class="autora">Reflexiones de Colectivo Las Tesis</p>
                     </div>
                 </div>
-               
+
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'la-importancia-de-los-derechos-sexuales-y-reproductivos-y-su-inclusion-en-la-nueva-constitucion' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-3.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'la-importancia-de-los-derechos-sexuales-y-reproductivos-y-su-inclusion-en-la-nueva-constitucion' %}"><img src="{% static 'img/reflexion-img-3.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'la-importancia-de-los-derechos-sexuales-y-reproductivos-y-su-inclusion-en-la-nueva-constitucion' %}">La importancia de los derechos sexuales y reproductivos y su inclusión en la nueva constitución</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -161,7 +164,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'el-rol-de-las-mujeres-indigenas-en-el-desarrollo-social-politico-y-cultural-de-sus-pueblos' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-16.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'el-rol-de-las-mujeres-indigenas-en-el-desarrollo-social-politico-y-cultural-de-sus-pueblos' %}"><img src="{% static 'img/reflexion-img-16.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'el-rol-de-las-mujeres-indigenas-en-el-desarrollo-social-politico-y-cultural-de-sus-pueblos' %}">El rol de las mujeres indígenas en el desarrollo social, político y cultural de sus pueblos y en la construcción de un nuevo Chile</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -170,7 +173,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'las-duenas-de-casa-sin-casa' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-15.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'las-duenas-de-casa-sin-casa' %}"><img src="{% static 'img/reflexion-img-15.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'las-duenas-de-casa-sin-casa' %}">Las dueñas de casa sin casa: El derecho a la vivienda desde una perspectiva de género</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -179,7 +182,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'los-desafios-del-proceso-constituyente-para-abordar-la-crisis-de-los-ciudadanos' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-14.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'los-desafios-del-proceso-constituyente-para-abordar-la-crisis-de-los-ciudadanos' %}"><img src="{% static 'img/reflexion-img-14.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'los-desafios-del-proceso-constituyente-para-abordar-la-crisis-de-los-ciudadanos' %}">Los desafíos del proceso constituyente para abordar la crisis de los cuidados: la importancia del reconocimiento y la urgencia de la redistribución</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -188,7 +191,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'la-vision-de-las-mujeres-afrodescendientes' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-13.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'la-vision-de-las-mujeres-afrodescendientes' %}"><img src="{% static 'img/reflexion-img-13.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'la-vision-de-las-mujeres-afrodescendientes' %}">La visión de las mujeres afrodescendientes</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -197,7 +200,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'mujeres-de-maya-sawuri-unicas-tejedoras-un-oficio-multigeneracional' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-12.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'mujeres-de-maya-sawuri-unicas-tejedoras-un-oficio-multigeneracional' %}"><img src="{% static 'img/reflexion-img-12.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'mujeres-de-maya-sawuri-unicas-tejedoras-un-oficio-multigeneracional' %}">Mujeres de Maya Sawuri: Únicas tejedoras. Un oficio multigeneracional</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -206,7 +209,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'mujeres-de-zonas-de-sacrificio-en-resistencia-de-quintero-y-puchuncavi-reflexiones-y-propuestas' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-11.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'mujeres-de-zonas-de-sacrificio-en-resistencia-de-quintero-y-puchuncavi-reflexiones-y-propuestas' %}"><img src="{% static 'img/reflexion-img-11.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'mujeres-de-zonas-de-sacrificio-en-resistencia-de-quintero-y-puchuncavi-reflexiones-y-propuestas' %}">Mujeres de Zonas de Sacrificio en Resistencia de Quintero y Puchuncaví: reflexiones y propuestas</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -215,7 +218,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'las-mujeres-en-chile' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-6.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'las-mujeres-en-chile' %}"><img src="{% static 'img/reflexion-img-6.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'las-mujeres-en-chile' %}">Las mujeres en Chile</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -224,7 +227,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'mujeres-salud-y-patologizacion-del-ciclo-vital' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-10.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'mujeres-salud-y-patologizacion-del-ciclo-vital' %}"><img src="{% static 'img/reflexion-img-10.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'mujeres-salud-y-patologizacion-del-ciclo-vital' %}">Mujeres, salud y patologización del ciclo vital</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -233,7 +236,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'mujeres-y-desc' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-6.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'mujeres-y-desc' %}"><img src="{% static 'img/reflexion-img-6.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'mujeres-y-desc' %}">Mujeres y DESC</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -242,35 +245,35 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'mujeres-y-migracion' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-9.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'mujeres-y-migracion' %}"><img src="{% static 'img/reflexion-img-9.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'mujeres-y-migracion' %}">Mujeres y migración</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
                         <p class="autora">Reflexiones de Catalina Bosch Carcuro, Coordinadora Nacional de Inmigrantes / Plataforma Chile Migra</p>
                     </div>
                 </div>
-               
+
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'mas-que-juanitas-del-mar' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-8.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'mas-que-juanitas-del-mar' %}"><img src="{% static 'img/reflexion-img-8.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'mas-que-juanitas-del-mar' %}">Más que Juanitas del Mar</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
                         <p class="autora">Reflexiones de Valentina Muñoz Farías, Fundación Mujeres de Mar</p>
                     </div>
                 </div>
-  
-               
+
+
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'ninas-adolescentes-y-la-constitucion' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-2.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'ninas-adolescentes-y-la-constitucion' %}"><img src="{% static 'img/reflexion-img-2.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'ninas-adolescentes-y-la-constitucion' %}">Niñas, adolescentes y la Constitución</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
                         <p class="autora">Reflexiones de Bárbara, 13 años</p>
                     </div>
                 </div>
-                
+
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'participar-en-la-vida-cultural-o-participar-para-cambiar-la-cultura' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-7.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'participar-en-la-vida-cultural-o-participar-para-cambiar-la-cultura' %}"><img src="{% static 'img/reflexion-img-7.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'participar-en-la-vida-cultural-o-participar-para-cambiar-la-cultura' %}">Participar en la vida cultural, o participar para cambiar la cultura</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -279,7 +282,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'red-de-defensoras-de-los-ddhh-y-el-programa-feminista-por-una-nueva-constitución-en-busqueda-de-la-articulacion-y-vocacion-de-poder-del-movimiento-feminista' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-6.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'red-de-defensoras-de-los-ddhh-y-el-programa-feminista-por-una-nueva-constitución-en-busqueda-de-la-articulacion-y-vocacion-de-poder-del-movimiento-feminista' %}"><img src="{% static 'img/reflexion-img-6.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'red-de-defensoras-de-los-ddhh-y-el-programa-feminista-por-una-nueva-constitución-en-busqueda-de-la-articulacion-y-vocacion-de-poder-del-movimiento-feminista' %}">Red de Defensoras de los DD.HH. y el Programa Feminista por una nueva constitución: En búsqueda de la articulación y vocación de poder del movimiento feminista</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -288,7 +291,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'reflexiones-a-partir-de-las-experiencias-de-cinco-mujeres-en-la-defensa-de-sus-territorios' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-5.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'reflexiones-a-partir-de-las-experiencias-de-cinco-mujeres-en-la-defensa-de-sus-territorios' %}"><img src="{% static 'img/reflexion-img-5.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'reflexiones-a-partir-de-las-experiencias-de-cinco-mujeres-en-la-defensa-de-sus-territorios' %}">Reflexiones a partir de las experiencias de cinco mujeres en la defensa de sus territorios</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -297,7 +300,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'teletrabajo-e-inequidades-de-genero' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-4.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'teletrabajo-e-inequidades-de-genero' %}"><img src="{% static 'img/reflexion-img-4.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'teletrabajo-e-inequidades-de-genero' %}">Teletrabajo e inequidades de género</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -306,7 +309,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'vida-y-aborto-en-torno-a-la-violencia-de-la-penalizacion' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-3.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'vida-y-aborto-en-torno-a-la-violencia-de-la-penalizacion' %}"><img src="{% static 'img/reflexion-img-3.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'vida-y-aborto-en-torno-a-la-violencia-de-la-penalizacion' %}">Vida y Aborto: en torno a la violencia de la penalización</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -315,7 +318,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'nueva-constitucion-ninas-y-adolescentes' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-2.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'nueva-constitucion-ninas-y-adolescentes' %}"><img src="{% static 'img/reflexion-img-2.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'nueva-constitucion-ninas-y-adolescentes' %}">Nueva Constitución, niñas y adolescentes</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
@@ -324,7 +327,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% url 'mujeres-y-sistema-judicial' %}"><img src="{% static 'img/img-reflexiones/reflexion-img-1.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
+                    <a href="{% url 'mujeres-y-sistema-judicial' %}"><img src="{% static 'img/reflexion-img-1.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
                     <div class="info">
                         <h3><a href="{% url 'mujeres-y-sistema-judicial' %}">Mujeres y sistema judicial</a></h3>
                         <div class="decoracion-reflexion violeta my-3"></div>
