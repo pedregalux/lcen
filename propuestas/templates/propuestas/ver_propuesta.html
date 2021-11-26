@@ -79,16 +79,16 @@
         <div class="col-12 col-sm-12 col-md-4 informacion-destacada">
             <div class="bg-color">
                 <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img medio ambiente" class="img-tema-propuesta">
-                <h3>Esta propuesta cuenta con:</h3>
+                <!-- <h3>Esta propuesta cuenta con:</h3>
                 <div class="cifras">
                     <p><span class="numero">{{ object.compromisos.count }}</span> convencionales comprometidxs</p>
                     <p><span class="numero">{{ object.apoyos.count }}</span> apoyos ciudadanxs</p>
-                </div>
-                <h3 class="apoyar">Apoya esta propuesta</h3>
-                <p>Recuerda que debes <a href="{% url 'login' %}?next={{request.path}}">Ingresar</a> para Apoyar</p>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn-lcen apoyar button hvr-sweep-to-right" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apoyar <i class="fas fa-heart"></i></button>
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                </div> -->
+                <!-- <h3 class="apoyar">Apoya esta propuesta</h3>
+                <p>Recuerda que debes <a href="{% url 'login' %}?next={{request.path}}">Ingresar</a> para Apoyar</p> -->
+
+                <!-- <button type="button" class="btn-lcen apoyar button hvr-sweep-to-right" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apoyar <i class="fas fa-heart"></i></button> -->
+                <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -110,7 +110,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
                 <h3 class="compartir">Comparte esta propuesta</h3>
@@ -227,7 +227,7 @@
                   {% endif %}
                 </ul>
 
-                <h5>Compromisos de Convencionales:</h5>
+                <!-- <h5>Compromisos de Convencionales:</h5>
                 {% if object.compromisos.all %}
                 <p>
                   Covencionales comprometidos con propuesta:
@@ -237,13 +237,13 @@
                   </ul>
                   {% endfor %}
                 </p>
-                {% endif %}
+                {% endif %} -->
 
-                {% if not object.compromisos.all %}
+                <!-- {% if not object.compromisos.all %}
                 <p>
                   No hay Convencionales comprometidos con esta propuesta ciudadana.
                 </p>
-                {% endif %}
+                {% endif %} -->
 
             </div>
 
@@ -269,7 +269,7 @@
             <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
                 <h2>Tu propuesta a la convención</h2>
                 <p>Acá tienes la oportunidad de subir tus propuestas para la nueva Constitución de Chile y nosotrxs la haremos llegar a la Convención. <b>¡No te quedes fuera!</b></p>
-                <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right">Sube tu propuesta</a>
+                <!-- <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right">Sube tu propuesta</a> -->
             </div>
         </div>
     </div>
