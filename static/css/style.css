@@ -3610,5 +3610,11 @@ input#id_apellido {
 /*Manual Convención*/
 
 .boton-manual-convencion{
-    padding-left: 30px;
+    margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+   .boton-manual-convencion{
+       margin-left: 0px;
+   }
 }
