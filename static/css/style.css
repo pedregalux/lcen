@@ -3606,3 +3606,9 @@ input#id_apellido {
         padding: 6px;
     }
 }
+
+/*Manual Convención*/
+
+.boton-manual-convencion{
+    padding-left: 30px;
+}
