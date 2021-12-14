@@ -1,0 +1,174 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Vivienda adecuada</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Vivienda adecuada</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Vivienda adecuada</h3>
+            <p>El derecho a una vivienda adecuada se considera como el derecho de todas las personas a vivir en seguridad, paz y dignidad en alguna parte. Este derecho se vincula con otros derechos humanos y a los principios fundamentales del derecho internacional de los derechos humanos, como la dignidad humana.</p>
+            <p>Fuente: <b>Comité DESC (1991) Observación General Nº 4. El derecho a una vivienda adecuada.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>8 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Seguridad de la tenencia de la vivienda</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Disponibilidad de servicios, materiales, instalaciones e infraestructura de la vivienda</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Gastos soportables de la vivienda</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Habitabilidad de la vivienda</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Asequibilidad de la vivienda</span></button>
+                    <button class="nav-link" id="v-pills-tab-6" data-bs-toggle="pill" data-bs-target="#v-pills-6" type="button" role="tab" aria-controls="v-pills-6" aria-selected="false"><span>Lugar de la vivienda</span></button>
+                    <button class="nav-link" id="v-pills-tab-7" data-bs-toggle="pill" data-bs-target="#v-pills-7" type="button" role="tab" aria-controls="v-pills-7" aria-selected="false"><span>Adecuación cultural de la vivienda</span></button>
+                    <button class="nav-link" id="v-pills-tab-8" data-bs-toggle="pill" data-bs-target="#v-pills-8" type="button" role="tab" aria-controls="v-pills-8" aria-selected="false"><span>Desalojos forzosos</span></button>
+                   
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Seguridad de la tenencia de la vivienda</h4>
+                        <p>La tenencia de la vivienda puede tomar muchas formas, como por ejemplo, arriendo, cooperativa y propiedad, entre otras. Sin embargo, todas las personas deben gozar de cierto grado de seguridad de esta tenencia que les garantice una protección legal contra el desahucio, el hostigamiento u otras amenazas.</p>
+                        <p>Fuente: <b>Comité DESC (1991) Observación General Nº 4. El derecho a una vivienda adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Disponibilidad de servicios, materiales, instalaciones e infraestructura de la vivienda</h4>
+                        <p>Se refiere al acceso a ciertos servicios indispensables para la salud, la seguridad, la comodidad y la nutrición, entre los que se encuentran los recursos naturales y comunes, el agua potable y la sanitización, la energía y la calefacción, y los servicios de emergencia.</p>
+                        <p>Fuente: <b>Comité DESC (1991) Observación General Nº 4. El derecho a una vivienda adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Gastos soportables de la vivienda</h4>
+                        <p>Los gastos individuales o grupales en que debe incurrir una familia por causa de la vivienda, deben ser de tal magnitud que no impidan ni comprometan el logro y satisfacción de otras necesidades básicas. Esto requiere la adopción de medidas como subsidios, protecciones contra los niveles desproporcionados de alquiler o la garantía del acceso a materiales de construcción, entre otros.</p>
+                        <p>Fuente: <b>Comité DESC (1991) Observación General Nº 4. El derecho a una vivienda adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Habitabilidad de la vivienda</h4>
+                        <p>Es la capacidad de la vivienda de constituir un espacio adecuado para sus ocupantes y de protegerlos del frío, la humedad, el calor, la lluvia, el viento u otras amenazas para la salud, de riesgos estructurales y de la enfermedad.</p>
+                        <p>Fuente: <b>Comité DESC (1991) Observación General Nº 4. El derecho a una vivienda adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Asequibilidad de la vivienda</h4>
+                        <p>Este elemento requiere cierto grado de consideración prioritaria en la esfera de la vivienda a los grupos desfavorecidos, tales como los adultos mayores, los niños, las personas con discapacidad y las víctimas de desastres naturales, entre muchos otros..</p>
+                        <p>Fuente: <b>Comité DESC (1991) Observación General Nº 4. El derecho a una vivienda adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-tab-6">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Lugar de la vivienda</h4>
+                        <p>Para que una vivienda sea adecuada debe encontrarse en un lugar que permita el acceso al empleo, servicios de atención de salud, centros de atención para niños, escuelas y otros servicios sociales. Adicionalmente, se requiere que la vivienda no se encuentre en las cercanías de fuentes de contaminación que amenacen el derecho a la salud de los habitantes.</p>
+                        <p>Fuente: <b>Comité DESC (1991) Observación General Nº 4. El derecho a una vivienda adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-7" role="tabpanel" aria-labelledby="v-pills-tab-7">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Adecuación cultural de la vivienda</h4>
+                        <p>Este elemento requiere que tanto las formas de construcción, los materiales y las políticas de apoyo permitan la expresión de la identidad cultural y la diversidad de la vivienda, además de asegurar –entre otros- servicios tecnológicos modernos.</p>
+                        <p>Fuente: <b>Comité DESC (1991) Observación General Nº 4. El derecho a una vivienda adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-8" role="tabpanel" aria-labelledby="v-pills-tab-8">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Desalojos forzosos</h4>
+                        <p>Se refiere a las circunstancias de hacer salir a personas, familias y/o comunidades de los hogares y/o las tierras que ocupan, en forma permanente o provisional, sin ofrecerles medios apropiados de protección legal o de otra índole ni permitirles su acceso a ellos. La utilización de los desalojos forzosos como sanción esta prohiida y su uso puede justificarse excepcionalmente cuando se respeten los derechos humanos de las personas afectadas y ellas dispongan de recursos legales adecuados.</p>
+                        <p>Fuente: <b>Comité DESC (1997) Observación General Nº 7. El derecho a una vivienda adecuada: los desalojos forzosos.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

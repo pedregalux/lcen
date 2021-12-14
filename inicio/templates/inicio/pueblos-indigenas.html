@@ -1,0 +1,135 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Pueblos indígenas</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Pueblos indígenas</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Pueblos indígenas</h3>
+            <p>Los pueblos indígenas son iguales en dignidad y derechos a todos los demás pueblos, y como tales, contribuyen a la diversidad y riqueza de las civilizaciones y culturas, todas las que constituyen el patrimonio de la humanidad. Sin embargo, esta declaración exige reconocer el derecho de todos los pueblos a ser diferentes, a considerarse a sí mismos diferentes y a ser respetados como tales. Para asegurar esta igualdad entre pueblos, debe garantizarse la libertad respecto de la discriminación en el ejercicio de los derechos, para lo que los Estados deben establecer, en conjunto con los pueblos indígenas, procesos de reconocimiento de las leyes, tradiciones, costumbres y sistemas de tenencia de la tierra de los pueblos indígenas en relación con sus tierras, territorios y recursos.</p>
+            <p>Fuente: <b>ONU (2007) Declaración de las Naciones Unidas sobre los derechos de los Pueblos Indígenas.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>5 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Libre determinación</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Tradiciones y costumbres</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Participación</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Educación</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Medicinas tradicionales</span></button>
+
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Libre determinación</h4>
+                        <p>Los pueblos indígenas tienen derecho a la libre determinación. Esto significa que tienen el derecho de determinar libremente su condición política y perseguir libremente su desarrollo económico, social y cultural. Esto incluye la autonomía y autogobierno en las cuestiones internas y locales.</p>
+                        <p>Fuente: <b>ONU (2007) Declaración de las Naciones Unidas sobre los derechos de los pueblos indígenas.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Tradiciones y costumbres</h4>
+                        <p>Los pueblos indígenas tienen derecho a manifestar, practicar, desarrollar y enseñar sus tradiciones, costumbres y ceremonias espirituales y religiosas; a mantener y proteger sus lugares religiosos y culturales y a acceder a ellos privadamente; a utilizar y controlar sus objetos de culto, y a obtener la repatriación de sus restos humanos.</p>
+                        <p>Fuente: <b>ONU (2007) Declaración de las Naciones Unidas sobre los derechos de los pueblos indígenas.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Participación</h4>
+                        <p>Los pueblos indígenas tienen derecho a participar en la adopción de decisiones en las cuestiones que afecten a sus derechos, por conducto de representantes elegidos por ellos de conformidad con sus propios procedimientos, así como a mantener y desarrollar sus propias instituciones de adopción de decisiones.</p>
+                        <p>Fuente: <b>ONU (2007) Declaración de las Naciones Unidas sobre los derechos de los pueblos indígenas.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Educación</h4>
+                        <p>Los pueblos indígenas tienen derecho a que la dignidad y diversidad de sus culturas, tradiciones, historias y aspiraciones queden debidamente reflejadas en la educación y la información pública. Además tienen derecho a establecer y controlar sistemas e instituciones docentes que impartan educación en su idioma y métodos culturales.</p>
+                        <p>Fuente: <b>ONU (2007) Declaración de las Naciones Unidas sobre los derechos de los pueblos indígenas.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Medicinas tradicionales</h4>
+                        <p>Los pueblos indígenas tienen derecho a sus propias medicinas tradicionales y a mantener sus prácticas de salud, incluida la conservación de sus plantas medicinales, animales y minerales de interés vital. Las personas indígenas también tienen derecho de acceso, sin discriminación alguna, a todos los servicios sociales y de salud.</p>
+                        <p>Fuente: <b>ONU (2007) Declaración de las Naciones Unidas sobre los derechos de los pueblos indígenas.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Pensiones y seguridad social</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Pensiones y seguridad social</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Pensiones y seguridad social</h3>
+            <p>El derecho a la seguridad social se orienta a garantizar la dignidad humana frente a circunstancias que privan a las personas de su capacidad para ejercer plenamente sus derechos. La seguridad social es un bien social y no una mercancía, desempeñando un papel importante en la reduccción y mitigación de la pobreza, la prevención de la exclusión social y la promoción de la inclusión social.</p>
+            <p>Fuente: <b>Comité DESC (2007) Observación General Nro. 19. El derecho a la seguridad social.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>5 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Disponibilidad de la seguridad social</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Riesgos e imprevistos sociales</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Nivel suficiente de seguridad social</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Accesibilidad de la seguridad social</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Medidas de seguridad social</span></button>
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Disponibilidad de la seguridad social</h4>
+                        <p>Este elemento requiere que se haya establecido y funcione un sistema que garantice las prestaciones correspondientes a los riesgos e imprevistos sociales de que se trate. Este sistema debe estar establecido por ley y ser administrado o fiscalizado por las autoridades públicas.</p>
+                        <p>Fuente: <b>Comité DESC (2007) Observación General Nro. 19. El derecho a la seguridad social.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Riesgos e imprevistos sociales</h4>
+                        <p>El sistema disponible debe cubrir las nueve ramas principales de la seguridad social. Estas son: atención de salud, enfermedad, vejez, desempleo, accidentes laborales, prestaciones familiares, maternidad, discapacidad, y sobrevivencia y orfandad.</p>
+                        <p>Fuente: <b>Comité DESC (2007) Observación General Nro. 19. El derecho a la seguridad social.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Nivel suficiente de seguridad social</h4>
+                        <p>Las prestaciones ofrecidas deben ser suficientes en importe y duración a fin de que todos puedan gozar de sus derechos. Los métodos que se apliquen deben, asimismo, asegurar un nivel suficiente de las prestaciones, debiendo revisarse periódicamente los criterios de evaluación de suficiencia.</p>
+                        <p>Fuente: <b>Comité DESC (2007) Observación General Nro. 19. El derecho a la seguridad social.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Accesibilidad de la seguridad social</h4>
+                        <p>Las prestaciones ofrecidas por el sistema disponible deben ser accesibles en diversos aspectos. En términos de cobertura, todas las personas deben estar cubiertas por el sistema, sin discriminación. Las condiciones para acceder a las prestaciones deben ser razonables, proporcionadas y transparentes. Los costos de los planes deben estar definidos por adelantado y sus costos deben ser asequibles. Los beneficiarios deben poder participar en la administración del sistema y acceder a la información de manera clara y transparente, y deben tener acceso físico a las prestaciones.</p>
+                        <p>Fuente: <b>Comité DESC (2007) Observación General Nro. 19. El derecho a la seguridad social.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Medidas de seguridad social</h4>
+                        <p>Los medidas que deben tomar los Estados para asegurar la seguridad social pueden tomar diversas formas. Pueden consistir en planes contributivos o basados en un seguro, que implican el pago de cotizaciones obligatorias de los beneficiarios, los empleadores y a veces el Estado. Pueden ser planes no contributivos, que ofrecen la prestación correspondiente a toda persona expuesta a un riesgo o situación imprevista particular. O también pueden tomar otras formas, como los planes privados y las medidas de autoayuda, como los planes comunitarios o los planes de asistencia mutua.</p>
+                        <p>Fuente: <b>Comité DESC (2007) Observación General Nro. 19. El derecho a la seguridad social.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}
