@@ -3881,3 +3881,15 @@ input#id_apellido {
         margin-top: 40px;
     }
 }
+
+/*Manual Convención*/
+
+.boton-manual-convencion{
+    margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+   .boton-manual-convencion{
+       margin-left: 0px;
+   }
+}
