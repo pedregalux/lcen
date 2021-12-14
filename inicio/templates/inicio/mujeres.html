@@ -1,0 +1,135 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mujeres</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Mujeres</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Mujeres</h3>
+            <p>Las mujeres se ven con frecuencia privadas del disfrute de sus derechos humanos en pie de igualdad, en especial debido a la condición de inferioridad que la tradición, las costumbres o la discriminación abierta o encubierta les asignan, las que suelen combinarse además con otros motivos como la raza, las opiniones políticas y el nivel economico, entre muchos otros. De esta forma, el disfrute de los derechos humanos en pie de igualdad entre hombres y mujeres requieren de medidas especiales para lograr tanto la igualdad formal como sustantiva.</p>
+            <p>Fuente: <b>Comité DESC (2005) Observación General Nº 16. La igualdad de derechos del hombre y la mujer al disfrute de los derechoes económicos, sociales y culturales.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>5 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Discriminación contra la mujer</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Trabajo doméstico y cuidados</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Derechos sexuales y reproductivos</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Violencia de género</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Educación transformadora</span></button>
+
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Discriminación contra la mujer</h4>
+                        <p>Toda distinción, exclusión o restricción basada en el sexo que tenga por objeto o resultado menoscabar o anular el reconocimiento, goce o ejercicio por la mujer, independientemente de su estado civil, sobre la base de la igualdad del hombre y la mujer, de los derechos humanos y las libertades fundamentales en las esferas política, económica, social, cultural y civil o en cualquier otra esfera.</p>
+                        <p>Fuente: <b>ONU (1979) Convención sobre la eliminación de todas las formas de discriminación contra la mujer.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Trabajo doméstico y cuidados</h4>
+                        <p>En todo el mundo, mujeres y niñas dedican considerablemente más tiempo que los hombres a los trabajos domésticos no remunerados. Éstos incluyen el trabajo doméstico (preparación de comidas, limpieza, lavado de ropa, acarreo de agua y combustible) y el cuidado directo de personas (incluidos niños, personas de edad y personas con discapacidad, así como adultos hábiles) en hogares y comunidades.</p>
+                        <p>Fuente: <b>Asamblea General de Naciones Unidas (2013) La extrema pobreza y los derechos humanos.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Derechos sexuales y reproductivos</h4>
+                        <p>Con lleva un conjunto de libertades y derechos. Entre las libertades figura el derecho a adoptar decisiones y hacer elecciones libres y responsables, sin violencia, coacción ni discriminación, con respecto a los asuntos relativos al propio cuerpo y la propia salud sexual  y reproductiva. Entre los derechos cabe mencionar el acceso sin trabas a toda una serie de establecimientos, bienes, servicios e información relativos a la salud, que  asegure a  todas las personas el pleno disfrute del derecho a la salud sexual y reproductiva.</p>
+                        <p>Fuente: <b>Comité DESC (2016) Observación General Nº 22, relativa al derecho a la salud sexual y reproductiva.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Violencia de género</h4>
+                        <p>La violencia de género contra la mujer es uno de los medios sociales, políticos y económicos fundamentales a través de los que se perpetúa la posición subordinada de la mujer con respecto al hombre y sus papeles estereotipados. La prohibición de este tipo de violencia es un principio del derecho internacional consuetudinario.</p>
+                        <p>Fuente: <b>CEDAW (2017) Recomendación General Nº 35, sobre la violencia por razón de género contra la mujer.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Educación transformadora</h4>
+                        <p>La educación, cuando empodera a las niñas y las mujeres, las capacita para reclamar y ejercer sus derechos socioeconómicos, culturales y políticos en igualdad de condiciones con los niños y los hombres. Para lograr la igualdad de género, todos los aspectos del sistema educativo (legislación y políticas, contenidos educativos, pedagogías y entornos de aprendizaje) deben tener en cuenta las cuestiones de género, atender a las necesidades de las niñas y las mujeres y ser transformadores para todos.</p>
+                        <p>Fuente: <b>CEDAW (2017) Recomendación General Nº 36, sobre el derecho de niñas y las mujeres a la educación.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

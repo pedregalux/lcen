@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Órganos Autónomos</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Órganos Autónomos</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">El estado</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">El Estado</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>“Una comunidad humana, fijada sobre un territorio propio, que posee una organización que resulta para ese grupo, en lo que respecta a las relaciones con sus miembros, una potencia suprema de acción, de mando y coerción”, <u>Carré de Malberg (1988).</u></p>
+                            <h4>¿Por qué tenemos un Estado?</h4>
+                            <p>Los Estados existen para cuidar a las personas y asegurar el bienestar de las sociedades. Para lograr este objetivo, las Constituciones establecen un conjunto de reglas y principios, que establecen las atribuciones de los órganos del Estado, limitan el poder público y determinan los fines que deben cumplir las instituciones.</p>
+                            <h4>¿Cómo se organiza el Estado?</h4>
+                            <p>Conjunto de normas de la Constitución sobre cómo se organiza el Estado. Tal como en los planos de una sala de máquinas, en los aspectos orgánicos nos encontraremos con las reglas sobre la función, los límites al poder, la posición en la estructura jerárquica y los requisitos para que las personas integren cada una de las piezas del Estado. Estas piezas se conocen como "Órganos", por lo que estas reglas también se conocen como los aspectos orgánicos de la Constitución.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Órganos Autónomos</h3>
+            <p>Conjunto de órganos del Estado que se regulan expresamente en la Constitución y que no están sometidos jerárquicamente a ninguno de los tres poderes del Estado, como la Contraloría General de la República.</p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+               
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>6 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"> <span>Banco Central</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Contraloría General del la República</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Defensoría Penal Pública</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Ministerio Público o Fiscalía</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Servicio Electoral</span></button>
+                    <button class="nav-link" id="v-pills-tab-6" data-bs-toggle="pill" data-bs-target="#v-pills-6" type="button" role="tab" aria-controls="v-pills-6" aria-selected="false"><span>Defensoría del Pueblo</span></button>
+                </div>
+                
+                <div class="tab-content" id="v-pills-tabContent">
+                   
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Banco Central</h4>
+                        <p>Órgano autónomo encarado de velar por que la inflación sea baja y estable; y promover la estabilidad y eficacia del sistema financiero, velando por el normal funcionamiento de los pagos internos y externos. Para cumplir con sus objetivos el Banco regula la cantidad de dinero en circulación y el crédito en la economía, de manera que sean suficientes para que las personas, empresas e instituciones hagan sus transacciones.</p>
+                        <p>Fuente: <a href="https://www.bcentral.cl/web/banco-central/el-banco/gobierno-corporativo/funciones-del-banco" target="_blank" class="enlaces">bcentral.cl</a></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Contraloría General del la República</h4>
+                        <p>Órgano que se encarga del control de la legalidad de los actos de la Administración, fiscaliza el ingreso y la inversión de los fondos del Fisco, de las municipalidades y de los demás organismos y servicios que determinen las leyes; examina y juzga las cuentas de las personas que tengan a su cargo bienes de esas entidades; lleva la contabilidad general de la Nación, y desempeña las demás funciones que le encomiende la ley orgánica constitucional respectiva.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Defensoría Penal Pública</h4>
+                        <p>Servicio público encargado de la defensa jurídica gratuita para quienes se enfenten a uan persecución penal de parte del Estado, desde la etapa investigativa hasta finalizado el cumplimiento de la condena.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Ministerio Público o Fiscalía</h4>
+                        <p>Órgano autónomo que dirige la investigación de los hechos que puedan ser constitutivos de delito y, en si logra recabar suficientes anteedentes para justificar una acusación, ejerce la acción penal pública en la forma prevista por la ley.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Servicio Electoral</h4>
+                        <p>Organismo autónomo, con personalidad jurídica y patrimonio propios, a cargo de la administración, supervigilancia y fiscalización de los procesos electorales y plebiscitarios; del cumplimiento de las normas sobre transparencia, límite y control del gasto electoral; de las normas sobre los partidos políticos, y las demás funciones que señale una ley orgánica constitucional.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-tab-6">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Defensoría del Pueblo</h4>
+                        <p>Órgano autónomo, encargado de la promoción y defensa de los derechos de las personas. Tienen la potestad de fiscalizar que el resto de las instituciones cumplan con sus obligaciones de derechos fundamentales en el desempeño de sus funciones.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

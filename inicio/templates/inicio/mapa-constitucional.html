@@ -1,0 +1,217 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mapa Constitucional</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container que-es-lcen py-5 my-5 mapa-constitucional">
+    <div class="row d-flex align-items-center">
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+            <h2>Mapa Constitucional</h2>
+            <p>Una constitución es un sistema. Cada una de sus partes se conecta con las otras e impacta sobre las formas en que el Estado y los derechos de las personas se van haciendo realidad. En esta sección te entregaremos una herramienta para ayudarte a navegar en las aguas de la carta fundamental, a través de nuestro mapa constitucional.</p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+            <img src="{% static 'img/collage-mapa-constitucional.png' %}" alt="collage mapa constitucional">
+        </div>
+    </div>
+</section>
+
+<section class="container mapa-temas-list">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-md-12">
+            <h2>Filtrar por Tema</h2>
+            <div class="decoracion yellow"></div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-11">
+            <div class="row justify-content-md-center">
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'rol-de-estado' %}"><img src="{% static 'img/iconos-mapa-constitucional/01-rol-del-estado.png' %}" alt="icono">
+            <p>Rol de Estado</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'politica-fiscal' %}"><img src="{% static 'img/iconos-mapa-constitucional/02-política-fiscal.png' %}" alt="icono">
+            <p>Politíca Fiscal</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'republica-democratica' %}"><img src="{% static 'img/iconos-mapa-constitucional/03-republica-democratica.png' %}" alt="icono">
+            <p>República Democrática</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'plurinacionalidad' %}"><img src="{% static 'img/iconos-mapa-constitucional/04-plurinacionalidad.png' %}" alt="icono">
+            <p>Plurinacionalidad</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'sistema-de-gobierno' %}"><img src="{% static 'img/iconos-mapa-constitucional/05-sistema-de-gobierno.png' %}" alt="icono">
+            <p>Sistema de Gobierno</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'forma-de-estado' %}"><img src="{% static 'img/iconos-mapa-constitucional/06-forma-de-estado.png' %}" alt="icono">
+            <p>Forma de Estado</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'control-constitucional' %}"><img src="{% static 'img/iconos-mapa-constitucional/07-control-constitucional.png' %}" alt="icono">
+            <p>Control Constitucional</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'organos-autonomos' %}"><img src="{% static 'img/iconos-mapa-constitucional/08-organos-autonomos.png' %}" alt="icono">
+            <p>Órganos Autónomos</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'fuerzas-armadas-y-policias' %}"><img src="{% static 'img/iconos-mapa-constitucional/09-fuerzas-armadas-y-policias.png' %}" alt="icono">
+            <p>Fuerzas Armadas y Policías</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'participacion-popular' %}"><img src="{% static 'img/iconos-mapa-constitucional/10-participacion-popular.png' %}" alt="icono">
+            <p>Participación Popular</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'trabajo-digno' %}"><img src="{% static 'img/iconos-mapa-constitucional/11-trabajo-digno.png' %}" alt="icono">
+            <p>Trabajo digno</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'pensiones-y-seguridad-social' %}"><img src="{% static 'img/iconos-mapa-constitucional/12-pensiones-y-seguridad-social.png' %}" alt="icono">
+            <p>Pensiones y seguridad social</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'nivel-de-vida-adecuado' %}"><img src="{% static 'img/iconos-mapa-constitucional/13-nivel-de-vida-adecuado.png' %}" alt="icono">
+            <p>Nivel de vida adecuado</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'alimentacion' %}"><img src="{% static 'img/iconos-mapa-constitucional/14-alimentación.png' %}" alt="icono">
+            <p>Alimentación</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'agua' %}"><img src="{% static 'img/iconos-mapa-constitucional/15-agua.png' %}" alt="icono">
+            <p>Agua</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'vivienda-adecuada' %}"><img src="{% static 'img/iconos-mapa-constitucional/16-vivienda-adecuada.png' %}" alt="icono">
+            <p>Vivienda adecuada</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'salud' %}"><img src="{% static 'img/iconos-mapa-constitucional/17-salud.png' %}" alt="icono">
+            <p>Salud</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'educacion' %}"><img src="{% static 'img/iconos-mapa-constitucional/18-educación.png' %}" alt="icono">
+            <p>Educación</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'cultura' %}"><img src="{% static 'img/iconos-mapa-constitucional/19-cultura.png' %}" alt="icono">
+            <p>Cultura</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'ciencia-y-arte' %}"><img src="{% static 'img/iconos-mapa-constitucional/20-ciencia-y-arte.png' %}" alt="icono">
+            <p>Ciencia y arte</p>
+            </a>
+                </div>
+
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'medio-ambiente-sano' %}"><img src="{% static 'img/iconos-mapa-constitucional/21-medio-ambiente-sano.png' %}" alt="icono">
+            <p>Medio ambiente sano</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'exigibilidad-de-los-derechos' %}"><img src="{% static 'img/iconos-mapa-constitucional/22-exigibilidad-de-los-derechos.png' %}" alt="icono">
+            <p>Exigibilidad de los derechos</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'mujeres' %}"><img src="{% static 'img/iconos-mapa-constitucional/23-mujeres.png' %}" alt="icono">
+            <p>Mujeres</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'lgbti+' %}"><img src="{% static 'img/iconos-mapa-constitucional/24-lgbti.png' %}" alt="icono">
+            <p>LGBTI+</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'infancias' %}"><img src="{% static 'img/iconos-mapa-constitucional/25-infancias.png' %}" alt="icono">
+            <p>Infancias</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'pueblos-indigenas' %}"><img src="{% static 'img/iconos-mapa-constitucional/26-pueblos-indigenas.png' %}" alt="icono">
+            <p>Pueblos indígenas</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'personas-con-discapacidad' %}"><img src="{% static 'img/iconos-mapa-constitucional/27-personas-con-discapacidad.png' %}" alt="icono">
+            <p>Personas con discapacidad</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'personas-mayores' %}"><img src="{% static 'img/iconos-mapa-constitucional/28-personas-mayores.png' %}" alt="icono">
+            <p>Personas mayores</p>
+            </a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <a href="{% url 'personas-migrantes' %}"><img src="{% static 'img/iconos-mapa-constitucional/29-personas-migrantes.png' %}" alt="icono">
+            <p>Personas migrantes</p>
+            </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

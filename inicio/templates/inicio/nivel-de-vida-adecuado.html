@@ -1,0 +1,96 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Nivel de vida adecuado</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Nivel de vida adecuado</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Nivel de vida adecuado</h3>
+            <p>El derecho a un nivel de vida adecuado representa un esfuerzo para asegurar la ausencia de miseria. La extrema pobreza va más allá de la simple falta de ingresos suficientes, sino que lleva aparejada una falta de ingresos, una falta de acceso a servicios básicos como salud, educación y condiciones de vivienda, sumada a la exclusión social. Este derecho incluye y da origen a una serie de otros derechos humanos, tales como la alimentación, vestido y vivienda adecuados, tanto para el sujeto del derecho como para su familia, y su objetivo -a la larga- es la mejora continua de las condiciones de existencia.</p>
+            <p>Bajo esta conceptualización, el derecho humano a un nivel de vida adecuado tiene una importancia fundamental para el disfrute de todos los derechos económicos, sociales y culturales.</p>
+            <p>Fuente: <a href="https://news.un.org/es/story/2018/12/1447511" target="_blank" class="enlaces">news.un.org</a> y <a href="https://www.acnur.org/fileadmin/Documentos/BDL/2005/3594.pdf" target="_blank" class="enlaces">acnur.org</a></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>2 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Vestimenta adecuada</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Mejora continua de las condiciones de existencia</span></button>
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Vestimenta adecuada</h4>
+                        <p>El derecho a una vestimenta adecuada es más que una necesidad física. Tiene elementos culturales y religiosos, ya que la vestimenta es a menudo una expresión visible de la cultura, las costumbres, la religión, las creencias o las opiniones políticas de una persona.</p>
+                        <p>Fuente: <a href="https://web.archive.org/web/20140718132410/http://www.humanrights.is/the-human-rights-project/humanrightscasesandmaterials/humanrightsconceptsideasandfora/substantivehumanrights/therighttoanadequatestandardofliving/" target="_blank" class="enlaces">humanrights.is</a></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Mejora continua de las condiciones de existencia</h4>
+                        <p>Implica el reconocimiento del principio de progreso continuo en el ámbito de la vida de las personas, en pleno cumplimiento de los estándares de derechos humanos.</p>
+                        <p>Fuente: <a href="https://www2.ohchr.org/english/issues/opinion/articles1920_iccpr/docs/A-2929.pdf" target="_blank" class="enlaces">ohchr.org</a></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

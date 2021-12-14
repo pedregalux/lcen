@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Rol de Estado</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Rol de Estado</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">El estado</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">El Estado</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>“Una comunidad humana, fijada sobre un territorio propio, que posee una organización que resulta para ese grupo, en lo que respecta a las relaciones con sus miembros, una potencia suprema de acción, de mando y coerción”, <u>Carré de Malberg (1988).</u></p>
+                            <h4>¿Por qué tenemos un Estado?</h4>
+                            <p>Los Estados existen para cuidar a las personas y asegurar el bienestar de las sociedades. Para lograr este objetivo, las Constituciones establecen un conjunto de reglas y principios, que establecen las atribuciones de los órganos del Estado, limitan el poder público y determinan los fines que deben cumplir las instituciones.</p>
+                            <h4>¿Cómo se organiza el Estado?</h4>
+                            <p>Conjunto de normas de la Constitución sobre cómo se organiza el Estado. Tal como en los planos de una sala de máquinas, en los aspectos orgánicos nos encontraremos con las reglas sobre la función, los límites al poder, la posición en la estructura jerárquica y los requisitos para que las personas integren cada una de las piezas del Estado. Estas piezas se conocen como "Órganos", por lo que estas reglas también se conocen como los aspectos orgánicos de la Constitución.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Rol de Estado</h3>
+            <p>El rol del Estado consiste en la determinación de quiénes gozan del protagonismo en el cumplimiento de los mandatos constitucionales, como la prestación de los servicios de los que se componen los Derechos Fundamentales. Si el Estado adopta un rol subsidiario, serán los privados los primeros llamados desempeñar todas las actividades económicas, y el sector público solo podrá participar en aquellos espacios en los que no haya prestadores privados. Mientras que un Estado Garante tiene un mayor protagonismo y se encarga de efectivamente satisfacer las necesidades de la población, independiente de que pueda existir prestadores privados que lo complementen.</p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+               
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>2 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"> <span>Estado subsidiario</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Estado social de derecho</span></button>
+                </div>
+                
+                <div class="tab-content" id="v-pills-tabContent">
+                   
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Para qué tenemos un Estado?</p>
+                        <h4>Estado subsidiario</h4>
+                        <p>Es un Estado basado en el principio de subsidiariedad, que determina que al Estado no le corresponde absorber aquellas actividades que son desarrolladas adecuadamente por los particulares, ya sea personalmente o agrupados en cuerpos intermedios. Ello se debe entender, sin perjuicio, de aquellas que, por su carácter ha de asumir el Estado.</p>
+                        <p>El Estado sólo participa temporalmente en aquellos sectores económicos en los que los privados no puedan hacerlo por sus limitaciones o por qué no les es rentable participar. Asimismo, el Estado debe abstenerse de intervenir en aquellas áreas en las que los individuos o grupos de la sociedad se basten por sí mismos. Por tanto, el Estado Subsidiario no se caracteriza sólo por reducir la participación del Estado en la vida económica y social, sino también por fomentar la participación privada en todas las esferas de la vida cotidiana (salud, educación, alimentación, vivienda).</p>
+                        <p>En la historia, esto ha sido impuesto constitucionalmente mediante la fuerza y no como producto de un acuerdo amplio.</p>
+                        <p>Fuente: <a href="https://www.diarioconstitucional.cl/temas-civicos/estado-subsidiario/" target="_blank" class="enlaces">diarioconstitucional.cl</a></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Para qué tenemos un Estado?</p>
+                        <h4>Estado social de derecho</h4>
+                        <p>Modelo de Estado en el que los derechos están al centro del rol de las instituciones públicas. En un Estado Social de Derecho, el Estado se estructura sobre la base de que las decisiones deben tomarse respetando siempre el principio democrático y todos los derechos son una obligación para los órganos públicos, que deben velar por la igualdad en la distribución de los recursos. En los sectores económicos relacionados con los derechos, el Estado no tiene un rol subsidiario, sino protagonista.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

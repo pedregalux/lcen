@@ -1,0 +1,135 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Personas con discapacidad</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Personas con discapacidad</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Personas con discapacidad</h3>
+            <p>Las personas con diversidades funcionales han visto denegada su dignidad, integridad e igualdad, producto de la utilización tradicional del modelo médico de la discapacidad. Sin embargo, un modelo basado en los derechos humanos reconoce que la discapacidad es una construcción social que no debe considerar las diferencias como un motivo legítimo para denegar o restringir los derechos humanos: la discapacidad entonces se transforma en una forma de identidad. Por ello, los Estados, al implementar medidas legislativas o de cualquier otra índole deben tener en cuenta esta diversidad, promoviendo un modelo de igualdad inclusiva que aborde tanto la igualdad formal como la igualdad sustantiva.</p>
+            <p>Fuente: <b>CDPD (2018) Observación general núm. 6 sobre la igualdad y la no discriminación.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>5 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Modelo de discapacidad</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Discriminación por discapacidad</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Vida independiente</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Ajustes razonables</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Diseño universal</span></button>
+
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Modelo de discapacidad</h4>
+                        <p>El modelo de discapacidad basado en los derechos humanos reconoce que la discapacidad es una construcción social y que las deficiencias no deben considerarse un motivo legítimo para denegar o restringir los derechos  humanos. Según este modelo, la discapacidad es uno de los diversos estratos de identidad, siendo la sociedad la que debe adecuarse a ellos.</p>
+                        <p>Fuente: <b>Comité sobre los Derechos de las Personas con Discapacidad (2018) Observación General Nº 6, sobre la igualdad y la no discriminación.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Discriminación por discapacidad</h4>
+                        <p>Cualquier distinción, exclusión o restricción por motivos de discapacidad que tenga el propósito o el efecto de obstaculizar o dejar sin efecto el reconocimiento, goce o ejercicio, en igualdad de condiciones, de todos los derechos humanos y libertades fundamentales en los ámbitos político, económico, social, cultural, civil o de otro tipo.</p>
+                        <p>Fuente: <b>ONU (2006) Convención sobre los derechos de las personas con discapacidad.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Vida independiente</h4>
+                        <p>Vivir de forma independiente requiere que las personas con discapacidad cuenten con todos los medios necesarios para que puedan tomar opciones y ejercer el control sobre sus vidas, y adoptar todas las decisiones que las afecten. La autonomía personal y la libre determinación son fundamentales para la vida independiente, incluidos el acceso al transporte, la información, el lugar de residencia y los derechos sexuales y reproductivos, entre muchos otros.</p>
+                        <p>Fuente: <b>Comité sobre los Derechos de las Personas con Discapacidad (2017) Observación General Nº 5, sobre el derecho a vivir de forma independiente y a ser incluido en la comunidad.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Ajustes razonables</h4>
+                        <p>Son las modificaciones y adaptaciones necesarias y adecuadas que se requieren en un caso particular para garantizar a las personas con discapacidad el goce o ejercicio de todos los derechos humanos y libertades fundamentales en igualdad de condiciones con las demás, y siempre que no impongan una carga desproporcionada o indebida.</p>
+                        <p>Fuente: <b>ONU (2006) Convención sobre los derechos de las personas con discapacidad.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Diseño universal</h4>
+                        <p>Diseño de productos, entornos, programas y servicios que puedan utilizar todas las personas, en la mayor medida posible, sin necesidad de adaptación ni diseño especializado. Este diseño no excluye las ayudas técnicas para grupos particulares de personas con discapacidad, cuando se necesiten.</p>
+                        <p>Fuente: <b>ONU (2006) Convención sobre los derechos de las personas con discapacidad.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}
