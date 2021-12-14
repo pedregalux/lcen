@@ -1,0 +1,174 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cultura</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cultura</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Cultura</h3>
+            <p>La expresión "vida cultural" hace referencia explícita al carácter de la cultura como un proceso vital, histórico, dinámico y evolutivo, que tiene un pasado, un presente y un futuro. La cultura comprende, entre otras cosas, las  formas  de  vida,  el  lenguaje,  la  literatura  escrita y oral, la música y las canciones, la comunicación no verbal, los sistemas de religión y de creencias, los ritos y las ceremonias, los deportes y juegos, los métodos de producción o la tecnología, el entorno natural y el producido por el ser humano, la comida, el vestido y la vivienda, así como las artes, costumbres y tradiciones, por los cuales individuos, grupos y  comunidades  expresan  su  humanidad  y  el  sentido  que  dan  a  su  existencia.</p>
+            <p>Fuente: <b>Comité DESC (2009) Observación General Nº 21. Derecho de toda persona a participar en la vida cultural.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>8 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Participación en la vida cultural</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Acceso a la vida cultural</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Contribución a la vida cultural</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Disponibilidad de vida cultural</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Accesibilidad de la vida cultural</span></button>
+                    <button class="nav-link" id="v-pills-tab-6" data-bs-toggle="pill" data-bs-target="#v-pills-6" type="button" role="tab" aria-controls="v-pills-6" aria-selected="false"><span>Aceptabilidad de la vida cultural</span></button>
+                    <button class="nav-link" id="v-pills-tab-7" data-bs-toggle="pill" data-bs-target="#v-pills-7" type="button" role="tab" aria-controls="v-pills-7" aria-selected="false"><span>Adaptabilidad de la vida cultural</span></button>
+                    <button class="nav-link" id="v-pills-tab-8" data-bs-toggle="pill" data-bs-target="#v-pills-8" type="button" role="tab" aria-controls="v-pills-8" aria-selected="false"><span>Idoneidad de la vida cultural</span></button>
+                   
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Participación en la vida cultural</h4>
+                        <p>Inluye el derecho de toda persona a actuar libremente, a escoger su identidad, a identificarse o no con una o con varias comunidades, o a cambiar de idea; a participar en la vida política de la sociedad; a ejercer sus propias  prácticas culturales y a expresarse en la lengua de su elección.</p>
+                        <p>Fuente: <b>Comité DESC (2009) Observación General Nº 21. Derecho de toda persona a participar en la vida cultural.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Acceso a la vida cultural</h4>
+                        <p>Comprende el derecho de toda persona a conocer y comprender su propia cultura y la de otros, a través de la educación y la información, y a recibir educación y capacitación de calidad con pleno respeto a su identidad cultural.</p>
+                        <p>Fuente: <b>Comité DESC (2009) Observación General Nº 21. Derecho de toda persona a participar en la vida cultural.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Contribución a la vida cultural</h4>
+                        <p>Derecho de toda persona a contribuir a la creación de las manifestaciones espirituales, materiales, intelectuales y emocionales de la comunidad. Incluye también el derecho a participar en el desarrollo de la comunidad a la que pertenece, así como en la definición, formulación y aplicación de políticas y decisiones que incidan en el ejercicio de sus derechos culturales.</p>
+                        <p>Fuente: <b>Comité DESC (2009) Observación General Nº 21. Derecho de toda persona a participar en la vida cultural.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Disponibilidad de vida cultural</h4>
+                        <p>Presencia de bienes y servicios culturales que todo el mundo pueda disfrutar y aprovechar, entre otros, bibliotecas, museos, teatros; literatura, incluido el folclore y las artes en todas sus manifestaciones; espacios abiertos compartidos (parques,  plazas, etc.); dones  de  la  naturaleza,  como  mares y montañas; y bienes culturales intangibles (lenguas, costumbres, tradiciones, etc.).</p>
+                        <p>Fuente: <b>Comité DESC (2009) Observación General Nº 21. Derecho de toda persona a participar en la vida cultural.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Accesibilidad de la vida cultural</h4>
+                        <p>Consiste en disponer de oportunidades efectivas y concretas de que los individuos y las comunidades disfruten plenamente de una cultura que esté al alcance físico y financiero de todos, en las zonas urbanas y en las rurales, sin discriminación.</p>
+                        <p>Fuente: <b>Comité DESC (2009) Observación General Nº 21. Derecho de toda persona a participar en la vida cultural.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-tab-6">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Aceptabilidad de la vida cultural</h4>
+                        <p>Implica que las leyes, políticas, estrategias, programas y medidas adoptadas por el Estado deben formularse y aplicarse de tal forma que sean aceptables para las personas y las comunidades de que se trate. Esto incluye la adopción de medidas como la celebración de consultas con las comunidades y grupos respectivos.</p>
+                        <p>Fuente: <b>Comité DESC (2009) Observación General Nº 21. Derecho de toda persona a participar en la vida cultural.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-7" role="tabpanel" aria-labelledby="v-pills-tab-7">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Adaptabilidad de la vida cultural</h4>
+                        <p>Se refiere a la flexibilidad y la pertinencia que deben tener las políticas, los programas y las medidas que adopte el Estado en cualquier ámbito de la vida cultural, las que deben respetar la diversidad cultural de las personas y las comunidades.</p>
+                        <p>Fuente: <b>Comité DESC (2009) Observación General Nº 21. Derecho de toda persona a participar en la vida cultural.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-8" role="tabpanel" aria-labelledby="v-pills-tab-8">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Idoneidad de la vida cultural</h4>
+                        <p>Se refiere a la realización de todos los derechos humanos de manera respetuosa de la cultura y los derechos culturales de las personas y las comunidades, con inclusión de las minorías y de los pueblos indígenas.</p>
+                        <p>Fuente: <b>Comité DESC (2009) Observación General Nº 21. Derecho de toda persona a participar en la vida cultural.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

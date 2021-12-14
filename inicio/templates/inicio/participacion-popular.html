@@ -1,0 +1,107 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Participación Popular</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Participación Popular</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">El estado</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">El Estado</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>“Una comunidad humana, fijada sobre un territorio propio, que posee una organización que resulta para ese grupo, en lo que respecta a las relaciones con sus miembros, una potencia suprema de acción, de mando y coerción”, <u>Carré de Malberg (1988).</u></p>
+                            <h4>¿Por qué tenemos un Estado?</h4>
+                            <p>Los Estados existen para cuidar a las personas y asegurar el bienestar de las sociedades. Para lograr este objetivo, las Constituciones establecen un conjunto de reglas y principios, que establecen las atribuciones de los órganos del Estado, limitan el poder público y determinan los fines que deben cumplir las instituciones.</p>
+                            <h4>¿Cómo se organiza el Estado?</h4>
+                            <p>Conjunto de normas de la Constitución sobre cómo se organiza el Estado. Tal como en los planos de una sala de máquinas, en los aspectos orgánicos nos encontraremos con las reglas sobre la función, los límites al poder, la posición en la estructura jerárquica y los requisitos para que las personas integren cada una de las piezas del Estado. Estas piezas se conocen como "Órganos", por lo que estas reglas también se conocen como los aspectos orgánicos de la Constitución.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Participación Popular</h3>
+            <p>Involucramiento del pueblo en los procesos de toma de decisiones de las instituciones estatales. En algunos casos, como los plebiscitos, se otorga a la decisión mayoritaria el efecto de obligar a la institución respectiva a adoptar el criterio de la ciudadanía, mientras que en otros, como las consultas, las opiniones o los antecedentes aportados por la ciudadanía son tomadas en cuenta por la autoridad para adoptar una mejor decisión.</p>
+            <p>Para que un mecanismo de participación ciudadana tenga un efecto democratizante o permita a las instituciones identificar la mejor solución posible a un problema, el grupo de personas que sea consultado debe ser representativo de la diversidad de la que se compone el conjunto relevante para la decisión. Sus resultados deben sistematizarse adecuadamente y la institución respectiva debe explicar fundadamente qué elementos de los resultados sistematizados serán incorporados en la decisión y cuáles no.</p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>3 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Derecho a voto</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Libertad de reunión y derecho a la protesta</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Libertad de asociación</span></button>
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Derecho a voto</h4>
+                        <p>Uno de los derechos políticos más básicos. Consiste en la facultad que se reconoce a la ciudadanía de manifestar su voluntad a través del sufragio. En Chile, el voto es secreto, universal y voluntario, pero existen tres desafíos principales:</p>
+                        <p>1. No hay mecanismos adecuados para asegurar la participación de toda la ciudadanía (por ejemplo, no pueden votar las personas privadas de libertad aunque mantengan vigentes sus derechos políticos y no hay ningún tipo de flexibilidad para quienes no pueden acercarse al local de votación durante el día de los comicios);</p>
+                        <p>2. La participación electoral es muy baja en el país, lo que debilita las instituciones públicas; y</p>
+                        <p>3. Solamente se contempla el voto como un mecanismo para elegir a las personas que nos representan en algunos órganos del Estado, mientras que los plebiscitos y otras formas de consulta existen en casos muy restringidos.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Libertad de reunión y derecho a la protesta</h4>
+                        <p>La Constitución y los Tratados Internacionales de Derechos Humanos aseguran a todas las personas el derecho a reunirse de manera pacífica, sin armas y sin permiso previo. Este derecho, junto con la libertad de expresión, son la base del derecho a la protesta, que constituye un pilar fundamental de la democracia, ya que permite a las personas participar de discusión pública a través de las manifestaciones.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Libertad de asociación</h4>
+                        <p>La Constitución y los Tratados Internacionales de Derechos Humanos aseguran a todas las personas el derecho de asociarse libremente, creando organizaciones que les permiten participar de la vida pública en conjunto, como fundaciones, sindicatos, partidos políticos y otros.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

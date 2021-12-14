@@ -1,0 +1,135 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Personas mayores</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Personas mayores</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Personas mayores</h3>
+            <p>Las personas mayores tienen los mismos derechos humanos y libertades fundamentales que otras personas. Sin embargo, el envejecimiento impone desafíos que requieren asegurar específicamente que las personas sigan disfrutando de una vida plena, independiente y autónoma, con salud, seguridad, integración y participación activa en las esferas económica, social, cultural y política de sus sociedades. Ello impone a los Estados obligaciones de prevenir, sancionar y erradicar prácticas discriminatorias, además de adoptar medidas legislativas, administrativas, judiciales, presupuestarias y de cualquier otra índole que favorezcan y equiparen a las personas mayores con las demás y que ajusten el entorno a sus necesidades particulares.</p>
+            <p>Fuente: <b>OEA (2015) Convención interamericana sobre la protección de los derechos humanos de las personas mayores, Comité DESC (1995) Observación general Nº 6. Los derechos económicos, sociales y culturales de las personas mayores.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>5 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Discriminación por edad</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Vejez</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Independencia y autonomía</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Participación e integración</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Protección contra la violencia</span></button>
+
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Discriminación por edad</h4>
+                        <p>Cualquier distinción, exclusión o restricción basada en la edad que tenga como objetivo o efecto anular o restringir el reconocimiento, goce o ejercicio en igualdad de condiciones de los derechos humanos y libertades fundamentales en la esfera política, económica, social, cultural o en cualquier otra esfera de la vida pública y privada.</p>
+                        <p>Fuente: <b>OEA (2015) Convención Interamericana sobre la protección de los derechos humanos de las personas mayores.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Vejez</h4>
+                        <p>Construcción social de la última etapa del curso de vida, que se se caracteriza por ser un proceso gradual que conlleva cambios biológicos, fisiológicos, psico-sociales y funcionales de variadas consecuencias, las cuales se asocian con interacciones dinámicas y permanentes entre el sujeto y su medio.</p>
+                        <p>Fuente: <b>OEA (2015) Convención Interamericana sobre la protección de los derechos humanos de las personas mayores.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Independencia y autonomía</h4>
+                        <p>Las personas mayores tiene el derecho a tomar decisiones, a definir su plan de vida; a desarrollar una vida autónoma e independiente, conforme a sus tradiciones y creencias, en igualdad de condiciones; y a disponer de mecanismos para poder ejercer sus derechos.</p>
+                        <p>Fuente: <b>OEA (2015) Convención Interamericana sobre la protección de los derechos humanos de las personas mayores.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Participación e integración</h4>
+                        <p>Las personas mayores tienen el derecho a la participación activa, productiva, plena y efectiva dentro de la familia, la comunidad y la sociedad para su integración en todas ellas.</p>
+                        <p>Fuente: <b>OEA (2015) Convención Interamericana sobre la protección de los derechos humanos de las personas mayores.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Cómo avanzar hacia la igualdad y la no disciminación?</p>
+                        <h4>Protección contra la violencia</h4>
+                        <p>Las personas mayores tienen derecho a la seguridad y a una vida sin ningún tipo de violencia, a recibir un trato digno y a ser respetadas y valoradas, independientemente de la raza, el color, el sexo o cualquier otra condición.</p>
+                        <p>Fuente: <b>OEA (2015) Convención Interamericana sobre la protección de los derechos humanos de las personas mayores.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

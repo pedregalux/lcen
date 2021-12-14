@@ -186,6 +186,100 @@ class Feminista37View(TemplateView):
 
 
 
+class MapaconstitucionalView(TemplateView):
+    template_name = "inicio/mapa-constitucional.html"
+
+class MapaconstitucionalterminosView(TemplateView):
+    template_name = "inicio/mapa-constitucional-terminos.html"
+
+class RoldeestadoView(TemplateView):
+    template_name = "inicio/rol-de-estado.html"
+
+class PoliticafiscalView(TemplateView):
+    template_name = "inicio/politica-fiscal.html"
+
+class RepublicademocraticaView(TemplateView):
+    template_name = "inicio/republica-democratica.html"
+
+class SistemadegobiernoView(TemplateView):
+    template_name = "inicio/sistema-de-gobierno.html"
+
+class PlurinacionalidadView(TemplateView):
+    template_name = "inicio/plurinacionalidad.html"
+
+class FormadeestadoView(TemplateView):
+    template_name = "inicio/forma-de-estado.html"
+
+class ControlconstitucionalView(TemplateView):
+    template_name = "inicio/control-constitucional.html"
+
+class OrganosautonomosView(TemplateView):
+    template_name = "inicio/organos-autonomos.html"
+
+class FuerzasarmadasypoliciasView(TemplateView):
+    template_name = "inicio/fuerzas-armadas-y-policias.html"
+
+class ParticipacionpopularView(TemplateView):
+    template_name = "inicio/participacion-popular.html"
+
+class TrabajodignoView(TemplateView):
+    template_name = "inicio/trabajo-digno.html"
+
+class PensionesyseguridadsocialView(TemplateView):
+    template_name = "inicio/pensiones-y-seguridad-social.html"
+
+class NiveldevidaadecuadoView(TemplateView):
+    template_name = "inicio/nivel-de-vida-adecuado.html"
+
+class AlimentacionView(TemplateView):
+    template_name = "inicio/alimentacion.html"
+
+class AguaView(TemplateView):
+    template_name = "inicio/agua.html"
+
+class ViviendaadecuadaView(TemplateView):
+    template_name = "inicio/vivienda-adecuada.html"
+
+class SaludView(TemplateView):
+    template_name = "inicio/salud.html"
+
+class EducacionView(TemplateView):
+    template_name = "inicio/educacion.html"
+
+class CulturaView(TemplateView):
+    template_name = "inicio/cultura.html"
+
+class CienciayarteView(TemplateView):
+    template_name = "inicio/ciencia-y-arte.html"
+
+class MedioambientesanoView(TemplateView):
+    template_name = "inicio/medio-ambiente-sano.html"
+
+class ExigibilidaddelosderechosView(TemplateView):
+    template_name = "inicio/exigibilidad-de-los-derechos.html"
+
+class MujeresView(TemplateView):
+    template_name = "inicio/mujeres.html"
+
+class LgbtiView(TemplateView):
+    template_name = "inicio/lgbti+.html"
+
+class InfanciasView(TemplateView):
+    template_name = "inicio/infancias.html"
+
+class PueblosindigenasView(TemplateView):
+    template_name = "inicio/pueblos-indigenas.html"
+
+class PersonascondiscapacidadView(TemplateView):
+    template_name = "inicio/personas-con-discapacidad.html"
+
+class PersonasmayoresView(TemplateView):
+    template_name = "inicio/personas-mayores.html"
+
+class PersonasmigrantesView(TemplateView):
+    template_name = "inicio/personas-migrantes.html"
+
+
 def error404(request, exception, template_name='inicio/error.html'):
     return render(request, template_name)
 

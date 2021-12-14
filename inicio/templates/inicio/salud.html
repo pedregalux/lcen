@@ -1,0 +1,148 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Salud</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Salud</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Salud</h3>
+            <p>El derecho a la salud no significa el derecho a estar sano, sino que se refiere a una serie de libertades y derechos. Dentro de las libertades se encuentran el derecho a controlar la propia salud y cuerpo, con inclusión de la libertad sexual y genésica, y el derecho a no padecer injerencias, como el derecho a no ser sometido a torturas ni a tratamientos y experimentos médicos no consensuados. Dentro de los derechos se encuentra el acceso a un sistema de protección de la salud que brinde a las personas oportunidades iguales para disfrutar del más alto nivel posible de salud.</p>
+            <p>Fuente: <b>Comité DESC (2000) Observación General Nº 14. El derecho al disfrute del más alto nivel posible de salud.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>6 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Adaptabilidad de la educación</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Concepto de salud</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Disponibilidad del derecho a la salud</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Accesibilidad de la salud</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Aceptabilidad de la salud</span></button>
+                    <button class="nav-link" id="v-pills-tab-6" data-bs-toggle="pill" data-bs-target="#v-pills-6" type="button" role="tab" aria-controls="v-pills-6" aria-selected="false"><span>Calidad de la salud</span></button>
+                   
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Adaptabilidad de la educación</h4>
+                        <p>Este requisito exige, por un lado, que la educación sea lo suficientemente flexible como para adaptarse a las necesidades de sociedades y comunidades en transformación, y por otro, que responda a las necesidades de estudiantes con contextos culturales y sociales variados.</p>
+                        <p>Fuente: <b>Comité DESC (2000) Observación General Nº 14. El derecho al disfrute del más alto nivel posible de salud.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Concepto de salud</h4>
+                        <p>Según la Organización Mundial de la Salud, la salud puede ser definida como un estado de completo bienestar físico, mental y social, y no solamente como la ausencia de afecciones o enfermedades. Desde un punto de vista de los derechos humanos, se protege el "más alto nivel posible de salud", lo que toma en consideración tanto las condiciones biológicas y socioeconómicas esenciales de la persona como los recursos con que cuenta el Estado. En este sentido, el derecho a la salud debe entenderse como un derecho al disfrute de toda una gama de facilidades, bienes, servicios y condiciones necesarias para alcanzar el más alto nivel posible de salud; las que deben disponibles, accesibles, aceptables y de calidad.</p>
+                        <p>Fuente: <b>Comité DESC (2000) Observación General Nº 14. El derecho al disfrute del más alto nivel posible de salud.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Disponibilidad del derecho a la salud</h4>
+                        <p>La disponibilidad requiere de la existencia de un número suficiente de establecimientos, bienes y servicios públicos de salud, centros de atención de la salud y de programas; los que aunque pueden variar según el territorio en el que se apliquen, deben siempre incluir los factores determinantes básicos de la salud.</p>
+                        <p>Fuente: <b>Comité DESC (2000) Observación General Nº 14. El derecho al disfrute del más alto nivel posible de salud.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Accesibilidad de la salud</h4>
+                        <p>La accesibilidad requiere que los establecimientos y programas disponibles sean accesibles para todas las personas que se encuentren en el territorio de un Estado, sin discriminación. Este elemento contiene cuatro dimensiones: la no discriminación propiamente tal; que el acceso físico se encuentre al alcance geográfico de todos los sectores de la población y que la infraestructura disponible se ajuste a las necesidades de las personas con discapacidad; que los servicios estén al alcance de todas las personas, evitando la sobrecarga de sectores más desventajados; y que se asegure el derecho a solicitar, recibir y difundir información e ideas acerca de las cuestiones relacionadas con la salud.</p>
+                        <p>Fuente: <b>Comité DESC (2000) Observación General Nº 14. El derecho al disfrute del más alto nivel posible de salud.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Aceptabilidad de la salud</h4>
+                        <p>Requiere que todas las instituciones y prestaciones de salud sean respetuosas de la ética médica y culturalmente apropiados, y que se encuentren concebidas para respetar la confidencialidad y mejorar el estado de salud de las personas que se trate.</p>
+                        <p>Fuente: <b>Comité DESC (2000) Observación General Nº 14. El derecho al disfrute del más alto nivel posible de salud.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-tab-6">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Calidad de la salud</h4>
+                        <p>Requiere que las instituciones y prestaciones sean apropiadas desde el punto de vista científico y médico y ser de buena calidad, lo que implica por ejemplo, personal médico capacitado, medicamentos y equipo hospitalario científicamente aprobados y en buen estado, agua limpia potable y condiciones sanitarias adecuadas.</p>
+                        <p>Fuente: <b>Comité DESC (2000) Observación General Nº 14. El derecho al disfrute del más alto nivel posible de salud.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

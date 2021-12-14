@@ -1,0 +1,160 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Alimentación</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Alimentación</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Alimentación</h3>
+            <p>El derecho a la alimentación adecuada se ejerce cuando todo hombre, mujer o niño, ya sea sólo o en común con otros, tiene acceso físico y económico, en todo momento, a la alimentación adecuada o a medios para obtenerla. En este sentido, este derecho es más amplio que el derecho a un conjunto de calorías, proteínas y otros elementos nutritivos concretos.</p>
+            <p>Fuente: <b>Comité DESC (1999) Observación General Nro. 12. El derecho a una alimentación adecuada.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>7 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Sostenibilidad de los alimentos</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Seguridad alimentaria</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Necesidades alimentarias</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Adecuación de los alimentos</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Disponibilidad de alimentos</span></button>
+                    <button class="nav-link" id="v-pills-tab-6" data-bs-toggle="pill" data-bs-target="#v-pills-6" type="button" role="tab" aria-controls="v-pills-6" aria-selected="false"><span>Accesibilidad de alimentos</span></button>
+                    <button class="nav-link" id="v-pills-tab-7" data-bs-toggle="pill" data-bs-target="#v-pills-7" type="button" role="tab" aria-controls="v-pills-7" aria-selected="false"><span>Aceptabilidad de los alimentos</span></button>
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Sostenibilidad de los alimentos</h4>
+                        <p>El concepto de sostenibilidad considera que el contenido básico del derecho a la alimentación adecuada comprende la disponibilidad y la accesibilidad de los alimentos.</p>
+                        <p>Fuente: <b>Comité DESC (1999) Observación General Nro. 12. El derecho a una alimentación adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Seguridad alimentaria</h4>
+                        <p>Requiere asegurar la posibilidad de acceso a los alimentos por parte de las generaciones presentes y futuras.</p>
+                        <p>Fuente: <b>Comité DESC (1999) Observación General Nro. 12. El derecho a una alimentación adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Necesidades alimentarias</h4>
+                        <p>Combinación de productos nutritivos para el crecimiento físico y mental, el desarrollo, el mantenimiento y la actividad física suficiente para satisfacer las necesidades fisiológicas humanas en todas las etapas del ciclo vital, según el sexo y la ocupación.</p>
+                        <p>Fuente: <b>Comité DESC (1999) Observación General Nro. 12. El derecho a una alimentación adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Adecuación de los alimentos</h4>
+                        <p>La adecuación pone de relieve el conjunto de factores que deben tenerse en cuenta para determinar si ciertas formas de alimentos o regímenes de alimentación a las que se tiene acceso son las más adecuadas en ciertas circunstancias. Estos factores vienen dados por las condiciones sociales, económicas, culturales, climáticas, ecológicas y de otro tipo que imperen en el momento.</p>
+                        <p>Fuente: <b>Comité DESC (1999) Observación General Nro. 12. El derecho a una alimentación adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Disponibilidad de alimentos</h4>
+                        <p>Posibilidades que tienen las personas de alimentarse ya sea directamente, explotando la tierra productiva u otras fuentes naturales de alimentos, o mediante sistemas de distribución, elaboración y comercialización que funcionen adecuadamente y que puedan trasladar los alimentos a donde sean necesarios.</p>
+                        <p>Fuente: <b>Comité DESC (1999) Observación General Nro. 12. El derecho a una alimentación adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-tab-6">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Accesibilidad de alimentos</h4>
+                        <p>La accesibilidad debe ser tanto económica como física. La accesibilidad económica requiere que los costos financieros personales o familiares asociados con la adquisición de los alimentos deben ser de tal nivel que no amenacen o pongan en peligro la provisión y satisfacción de otras necesidades básicas. La accesibilidad física implica que la alimentación debe ser accesible a todos, incluidas las personas físicamente vulnerables como lactantes y niños pequeños, personas adultas mayores y personas con discapacidad, entre muchos otros.</p>
+                        <p>Fuente: <b>Comité DESC (1999) Observación General Nro. 12. El derecho a una alimentación adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-7" role="tabpanel" aria-labelledby="v-pills-tab-7">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Aceptabilidad de los alimentos</h4>
+                        <p>Significa que se deben tener en cuenta, tanto los valores no relacionados con la nutrición que se asocian a los alimentos y su consumo, como las preocupaciones de los consumidores acerca de la naturaleza de los alimentos disponibles.</p>
+                        <p>Fuente: <b>Comité DESC (1999) Observación General Nro. 12. El derecho a una alimentación adecuada.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

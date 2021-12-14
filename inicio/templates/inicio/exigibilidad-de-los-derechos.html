@@ -1,0 +1,109 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Exigibilidad de los derechos</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Exigibilidad de los derechos</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Exigibilidad de los derechos</h3>
+            <p>Los Estados están obligados a tomar una serie de medidas para garantizar los derechos humanos. Estas medidas se deben garantizar sin discriminación y deben adoptarse dentro de un plazo razonablemente breve. Para cumplir con estas medidas se deben usar todos los medios apropiados, incluyendo la adopción de medidas legislativas y otras de caracter administrativo, financiero, educacional y social. En particular, la exigibilidad de los derechos se refiere al ofrecimiento de vías judiciales y otras vías efectivas para denunciar y reparar a las personas cuyos derechos estén en riesgo o ya hayan sido vulnerados.</p>
+            <p>Fuente: <b>Comité DESC (1990) Observación General Nº 3. La índole de las obligaciones de los Estados Partes.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>3 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Incorporación legislativa</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Medidas administrativas</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Recursos judiciales</span></button>
+
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Incorporación legislativa</h4>
+                        <p>El Estado se ecnuentra obligado a tomar todas las medidas necesarias para proteger los derechos humanos, incluyendo las medidas legislativas. La incorporación directa de los derechos humanos en la ley, incluyendo la Constitución, evita los problemas que podrían derivarse de la traducción que los órganos del Estado deben hacer respecto de las obligaciones de los tratados internacionales de derechos humanos, dándoles desde un inicio un mandato claro para ejercer sus respectivas funciones con enfoque de derechos humanos.</p>
+                        <p>Fuente: <b>Comité DESC (1998) Proyecto de Observación General Nº 9. La aplicación interna del Pacto.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Medidas administrativas</h4>
+                        <p>La protección de los derecho humanos puede hacerse también a través de medidas administrativas. En este caso, los canales administrativos deben ser accesibles, no onerosos, rápidos y eficaces. También es conveniente establecer un derecho último de apelación judicial con respecto a los procedimientos administrativos de este tipo.</p>
+                        <p>Fuente: <b>Comité DESC (1998) Proyecto de Observación General Nº 9. La aplicación interna del Pacto.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Recursos judiciales</h4>
+                        <p>Por último, la eficacia de los derechos humanos exige tener en cuenta la necesidad de asegurar la justiciabilidad de los derechos. Esto implica que las normas internacionales sobre derechos humanos jtengan valor directo dentro del sistema legal chileno, permitiendo así que las personas puedan reclamar la protección de sus derechos ante los jueces y tribunales nacionales.</p>
+                        <p>Fuente: <b>Comité DESC (1998) Proyecto de Observación General Nº 9. La aplicación interna del Pacto.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}
