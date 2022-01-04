@@ -1,25 +1,25 @@
 Aplicaciones necesarias para correr el proyecto
 -----------------------------------------------
 
-pip install django
+- pip install django
 
-pip install mysqlclient
+- pip install mysqlclient
 
-pip install pillow
+- pip install pillow
 
-pip install python-decouple
+- pip install python-decouple
 
-pip install django-formtools
+- pip install django-formtools
 
-pip install crispy-bootstrap5
+- pip install crispy-bootstrap5
 
-pip install django-allauth
+- pip install django-allauth
 
-pip install django-extensions
+- pip install django-extensions
 
-pip install django-filter
+- pip install django-filter
 
-pip install django-import-export
+- pip install django-import-export
 
 
 
@@ -37,20 +37,13 @@ La Constitución es Nuestra es un proyecto de Ciudadanía Inteligente, The Globa
 
 El objetivo de esta guía es documentar los pasos necesarios para la instalación y la modificación del código del proyecto para otras necesidades.
 
-## 
+## Componentes del proyecto
 
-Dillinger uses a number of open source projects to work properly:
+LCeN es la suma de varios componentes principales:
 
-- [AngularJS] - HTML enhanced for web apps!
-- [Ace Editor] - awesome web-based text editor
-- [markdown-it] - Markdown parser done right. Fast and easy to extend.
-- [Twitter Bootstrap] - great UI boilerplate for modern web apps
-- [node.js] - evented I/O for the backend
-- [Express] - fast node.js network app framework [@tjholowaychuk]
-- [Gulp] - the streaming build system
-- [Breakdance](https://breakdance.github.io/breakdance/) - HTML
-to Markdown converter
-- [jQuery] - duh
+- [Django] - El framework de aplicaciones web
+- [MySQL] - Base de datos -se puede utilizar otra!-
+- [nginx] - Servidor web utilizado -se puede reemplazar por otro!-
 
 And of course Dillinger itself is open source with a [public repository][dill]
  on GitHub.
