@@ -28,6 +28,7 @@ Aplicaciones necesarias para correr el proyecto
 ## Guía de instalación y desarrollo
 
 [![N|Solid](https://miro.medium.com/fit/c/262/262/2*HiWjbN9GrdV-jsf4vm5_2A.png)](https://ciudadaniai.org/index)
+[![N|Solid](https://laconstitucionesnuestra.cl/static/img/logo-lcen.png)
 
 La Constitución es Nuestra es un proyecto de Ciudadanía Inteligente, The Global Initiative y Constitu+yo.
 
@@ -56,7 +57,9 @@ La instalación de Python, MySQL, nginx y wsgi en un servidor para hacer correr 
 - [NGINX](https://www.linode.com/docs/guides/how-to-configure-nginx/)
 - [Django-uwsgi](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/uwsgi/)
 
-Todo el código utilizado está  [public repository](https://developpaper.com/build-python-web-server-with-ubuntu-django-nginx-uwsgi-mysql/) on GitHub.
+Todo el código utilizado está [público](https://github.com/ciudadanointeligente/lcen) on GitHub.
+
+Todo el código utilizado está [público](https://gitlab.com/ciudadaniai/lcen) on Gitlab.
 
 ## Installation
 
