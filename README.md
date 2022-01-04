@@ -25,7 +25,7 @@ Aplicaciones necesarias para correr el proyecto
 
 # La Constitución es Nuestra
 
-## Guía de desarrollo
+## Guía de instalación y desarrollo
 
 [![N|Solid](https://miro.medium.com/fit/c/262/262/2*HiWjbN9GrdV-jsf4vm5_2A.png)](https://ciudadaniai.org/index)
 
@@ -43,11 +43,19 @@ El objetivo de esta guía es documentar los pasos necesarios para la instalació
 LCeN es la suma de varios componentes principales:
 
 - [Django] - El framework de aplicaciones web
+- [Python] - Lenguaje de programación que utiliza Django
 - [MySQL] - Base de datos -se puede utilizar otra!-
-- [nginx] - Servidor web utilizado -se puede reemplazar por otro!-
+- [NGINX] - Servidor web utilizado -se puede reemplazar por otro!-
+- [wsgi] - Software que permite la comunicación entre la aplicación y el servidor web
 
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
+La instalación de Python, MySQL, nginx y wsgi en un servidor para hacer correr el proyecto **no** se cubre en esta guía, sin embargo acá hay una lista de tutoriales muy buenos que pueden servir:
+
+- [Django-MySQL](https://developpaper.com/build-python-web-server-with-ubuntu-django-nginx-uwsgi-mysql/)
+- [Django-NGINX-uwsgi](https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html)
+- [NGINX](https://www.linode.com/docs/guides/how-to-configure-nginx/)
+- [Django-uwsgi](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/uwsgi/)
+
+Todo el código utilizado está  [public repository](https://developpaper.com/build-python-web-server-with-ubuntu-django-nginx-uwsgi-mysql/) on GitHub.
 
 ## Installation
 
