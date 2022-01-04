@@ -85,7 +85,19 @@
                             <div class="informacion-datos">
                                 <h4>Se realizó en:</h4>
                                 <p class="lugar">
-                                  {{ propuesta.region }}, Comuna {{ propuesta.comuna }}
+                                  {% if propuesta.region %}
+                                  {{ propuesta.region }} ·
+                                  {% endif %}
+                                  {% if not propuesta.region %}
+                                  {% endif %}
+                                  {% if propuesta.comuna %}
+                                  {{ propuesta.comuna }}
+                                  {% endif %}
+                                  {% if not propuesta.comuna %}
+                                  {% endif %}
+                                  {% if not propuesta.region and not propuesta.comuna %}
+                                  Sin región y/o comuna definidas
+                                  {% endif %}
                                 </p>
                                 <h4>Propuesta de</h4>
 
