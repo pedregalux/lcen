@@ -28,6 +28,7 @@ Aplicaciones necesarias para correr el proyecto
 ## Guía de desarrollo
 
 [![N|Solid](https://miro.medium.com/fit/c/262/262/2*HiWjbN9GrdV-jsf4vm5_2A.png)](https://ciudadaniai.org/index)
+
 La Constitución es Nuestra es un proyecto de Ciudadanía Inteligente, The Global Initiative y Constitu+yo.
 
 ## Objetivos del proyecto
