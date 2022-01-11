@@ -84,23 +84,26 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
                         </li>
+                      <!--  <li class="nav-item">
+                            <a class="nav-link" href="#">Iniciativa Popular</a>
+                        </li> -->
+                        <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
+                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                 <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+                                 <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+                                 <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                                 <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
+                             </ul>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link" href="{% url 'verconvencionales' %}">Convencionales</a>
+                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'ver_propuestas' %}">Propuestas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'verconvencionales' %}">Convencionales</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'verorganizaciones' %}">Organizaciones</a>
-                        </li>
-                       <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
-                                <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
-                                <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
-                                <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
-                            </ul>
                         </li>
                     </ul>
                 </div>

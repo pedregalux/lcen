@@ -10,25 +10,25 @@
     <div class="informacion-portada container">
         <h1 class="animate__animated wow animate__fadeIn animate__delay-1s">Impulsemos una constitución <br>escrita por la ciudadanía</h1>
         <div class="linea-decoracion yellow wow animate__animated animate__fadeIn animate__delay-1s"></div>
-        <p class="portada wow animate__animated animate__fadeIn animate__delay-2s">¡Súmate con tu propuesta y la haremos llegar a la Convención!</p>
+        <p class="portada wow animate__animated animate__fadeIn animate__delay-1s">¡Súmate con tu propuesta y la haremos llegar a la Convención!</p>
         <!-- <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate__delay-2s">Sube tu propuesta</a> -->
     </div>
 </section>
 
 <div class="btn-scroll-home">
-    <a href="#que-es-lcen" class="btn-lcen button hvr-sweep-to-right animate__animated animate__fadeIn animate__delay-3s"><i class="fas fa-chevron-down"></i><div id="que-es-lcen"></div></a>
+    <a href="#que-es-lcen" class="btn-lcen button hvr-sweep-to-right animate__animated animate__fadeIn animate__delay-2s"><i class="fas fa-chevron-down"></i><div id="que-es-lcen"></div></a>
 </div>
 
-<section class="container que-es-lcen">
+<section class="container que-es-lcen seccion-info">
     <div class="row d-flex align-items-center">
         <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
             <h2>La constitución es nuestra</h2>
             <p>La Constitución es Nuestra (LCeN) es una plataforma abierta, colaborativa y colectiva que busca reivindicar el poder ciudadano en la Convención Constitucional. Si tienes propuestas para la nueva constitución y quieres que tu voz sea escuchada, únete y participa <b>¡Unidas y unidos somos más fuertes!</b>
             </p>
             <br>
-            <h2>¡Te ayudamos a llevar tu Iniciativa Popular a la Convención!</h2>
+          <!--  <h2>¡Te ayudamos a llevar tu Iniciativa Popular a la Convención!</h2>
             <p class="mb-0">Juntando 15 mil firmas las propuestas ciudadanas pueden ser discutidas por la Convención Constitucional. Descarga el manual con el paso a paso acá.</p>
-            <a href="{% static 'img/manual-ipn.pdf' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Descargar manual</a>
+            <a href="{% static 'img/manual-ipn.pdf' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Descargar manual</a>-->
         </div>
         <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
             <img src="{% static 'img/collage-lcen.png' %}" alt="collage la constitución es nuestra" class="img-fluid">
@@ -37,7 +37,42 @@
 </section>
 
 
-<section class="a-ponerse-con-propuestas container-fluid">
+<!-- Iniciativa Popular de Norma -->
+<section class="iniciativa-popular container-fluid">
+      <div class="img img-uno wow animate__animated animate__fadeIn">
+          <img src="{% static 'img/megafono-lcen.png' %}" alt="img megafono lcen" class="img-ipn-uno">
+      </div>
+      <div class="informacion wow animate__animated animate__fadeIn">
+          <h3>
+            ¡Te ayudamos a llevar tu iniciativa popular a la convención!
+          </h3>
+          <p>
+            Juntando <b>15 mil firmas</b> las propuestas ciudadanas pueden ser discutidas por la Convención Constitucional. Descarga el manual con el paso a paso acá.
+          </p>
+          <a href="{% static 'img/manual-ipn.pdf' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Descargar manual</a>
+      </div>
+      <div class="img img-dos wow animate__animated animate__fadeIn">
+          <img src="{% static 'img/papel-lcen.png' %}" alt="img mano con papel lcen" class="img-ipn-dos">
+      </div>
+</section>
+
+
+<section class="container mapa-constitucional-home seccion-info">
+    <div class="row d-flex align-items-center">
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+            <h2>Mapa Constitucional</h2>
+            <p>Una constitución es un sistema. Cada una de sus partes se conecta con las otras e impacta sobre las formas en que el Estado y los derechos de las personas se van haciendo realidad. En esta sección te entregaremos <b>una herramienta para ayudarte a navegar en las aguas de la carta fundamental, a través de nuestro mapa constitucional</b>.
+            </p>
+            <a href="{% url 'mapa-constitucional' %}" class="btn-lcen button hvr-sweep-to-right">Revisar Mapa Constitucional</a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+            <img src="{% static 'img/mapa-constitucional-collage.png' %}" alt="collage mapa constitucional" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+
+<!--<section class="a-ponerse-con-propuestas container-fluid">
    <div class="llamado-propuestas">
        <h1>A ponerse con propuestas</h1>
        <img src="{% static 'img/megafono-recorte.png' %}" alt="megafono-recorte" class="megafono-recorte img-fluid">
@@ -50,21 +85,21 @@
             <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
                 <h2>Tu propuesta a la convención</h2>
                 <p>Acá tienes la oportunidad de subir tus propuestas para la nueva Constitución de Chile y nosotrxs la haremos llegar a la Convención. <b>¡No te quedes fuera!</b></p>
-                <!-- <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right">Sube tu propuesta</a> -->
+                 <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right">Sube tu propuesta</a>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-
-<section class="container propuestas-home">
+<!-- Propuestas Home -->
+<!-- <section class="container propuestas-home">
     <div class="row wow animate__animated animate__fadeIn animate__delay-1s">
         <div class="col-12 col-sm-12 col-md-12">
             <h2>Descubre otras propuestas</h2>
             <div class="decoracion yellow"></div>
             <div class="info-row">
                 <p>¡Súmate con tu propuesta y la haremos llegar a la Convención!</p>
-                <!-- <a href="{% url 'crearpropuestas' %}" class="btn-secundario">Sube tu propuesta</a> -->
+                <a href="{% url 'crearpropuestas' %}" class="btn-secundario">Sube tu propuesta</a>
             </div>
         </div>
 
@@ -129,7 +164,7 @@
                         </div>
                         <div class="bg-black">
                             <div class="call-to-action">
-                              <!-- <a href="/propuestas/verpropuestas/{{ propuesta.id }}" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a> -->
+                               <a href="/propuestas/verpropuestas/{{ propuesta.id }}" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
                               <a href="/propuestas/verpropuestas/{{ propuesta.id }}" class="btn-lcen">Leer propuesta</a>
                             </div>
                         </div>
@@ -144,13 +179,13 @@
         </div>
 
     </div>
-</section>
+</section> -->
 
 
 <section class="convencionales-home container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9 d-flex justify-content-center flex-column  wow animate__animated animate__fadeIn animate__delay-1s">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9 d-flex justify-content-center flex-column  wow animate__animated animate__fadeIn">
                 <h2>Convencionales</h2>
                 <p>Aquí podrás conocer a las 155 personas que componen la Convención Constitucional y sus compromisos con la ciudadanía.</p>
                 <div class="call-to-action">
@@ -159,6 +194,21 @@
                 <img src="{% static 'img/convencionales-img-decoracion.png' %}" alt="collage constitucion convencionales" class="img-fluid collage-constitucion-convencionales">
                 <img src="{% static 'img/media-luna-convencionales-decoracion.png' %}" alt="medialuna convencionales decoracion" class="img-fluid medialuna-adorno-convencionales">
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="container constitucion-feminista-home seccion-info">
+    <div class="row d-flex align-items-center">
+      <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+          <img src="{% static 'img/constitucion-feminista-collage.png' %}" alt="collage mapa constitucional" class="img-fluid">
+      </div>
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+            <h2>Constitución Feminista</h2>
+            <p>Revisa los testimonios de diversas organizaciones sobre las experiencias de vida de las mujeres en Chile y respuestas a cómo la nueva constitución puede mejorarlas incorporando el enfoque de género de manera transversal en los derechos sociales.
+            </p>
+            <p><b>¡Derechos sociales con enfoque de género en la nueva constitución!</b></p>
+            <a href="{% url 'constitucion-feminista' %}" class="btn-lcen button hvr-sweep-to-right">Revisar Reflexiones</a>
         </div>
     </div>
 </section>
@@ -176,7 +226,7 @@
 </section> -->
 
 
-<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
+<!--<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
     <div class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn animate__delay-1s">
@@ -194,7 +244,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 {% endblock %}

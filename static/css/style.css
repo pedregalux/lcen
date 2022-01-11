@@ -8,10 +8,6 @@
     margin: 0px;
 }
 
-.navbar-nav .dropdown-menu {
-    position: absolute;
-}
-
 header .ingresar:hover {
     overflow: visible;
 }
@@ -72,10 +68,18 @@ header .ingresar:hover {
     border-left: 0;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0px;
-    transition: 0.5s all;
+@media(min-width: 992px) {
+
+    /*Dropdown efecto al Hover*/
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0px;
+        transition: 0.5s all;
+    }
 }
 
 /*Estilos Generales Textos*/
@@ -99,7 +103,7 @@ select,
 button,
 label,
 textarea {
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum'on, 'lnum'on;
     font-family: 'Raleway', sans-serif !important;
 }
 
@@ -240,7 +244,7 @@ header ul.navbar-nav {
 }
 
 header ul.navbar-nav li {
-    margin: 0% 0.5%;
+    margin: 0% 0.8%;
 }
 
 header ul.navbar-nav li a {
@@ -254,7 +258,7 @@ header ul.navbar-nav li a {
 }
 
 header ul.navbar-nav li a:hover {
-    color: black;
+    color: black !important;
     border-top: 8px solid #75AADB;
 }
 
@@ -292,9 +296,22 @@ header .dropdown-menu li {
 }
 
 header ul.navbar-nav li .dropdown-menu a {
-    padding: 20px 40px 20px 40px !important;
+    padding: 18px 25px !important;
     border-top: 0px solid transparent;
-    font-size: 0.9em !important;
+    font-size: 0.85em !important;
+}
+
+header .dropdown-item:active {
+    background-color: #e9ecef !important;
+    background-color: transparent !important;
+}
+
+header ul.dropdown-menu.show {
+    margin: 0px;
+}
+
+header .nav-link:focus {
+    color: black !important;
 }
 
 /*HOME*/
@@ -646,7 +663,7 @@ header ul.navbar-nav li .dropdown-menu a {
 /*Convencionales Home*/
 
 .convencionales-home {
-    background: #75AADB;
+    background-image: url(../img/textura-verde-lcen.jpg);
     position: relative;
     padding: 50px 0px 60px 0px;
 }
@@ -680,11 +697,11 @@ header ul.navbar-nav li .dropdown-menu a {
 }
 
 .convencionales-home .call-to-action a:hover {
-    color: #CC0000;
+    color: white;
 }
 
 .convencionales-home .call-to-action a:before {
-    background: white !important;
+    background: black !important;
 }
 
 .convencionales-home img.medialuna-adorno-convencionales {
@@ -1006,16 +1023,24 @@ footer .rrss li a i {
     padding: 60px 0px;
 }
 
+.infografia-que-es .item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
 .infografia-que-es p {
-    padding: 0% 10%;
+    padding: 0% 3%;
+    margin: 0px;
 }
 
 .infografia-que-es p span {
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: 900;
     color: white;
-    padding: 8px 15px;
+    padding: 6px 13px;
     border-radius: 2px;
+    margin-top: 5px;
 }
 
 .quienes-somos-lcen {
@@ -1054,6 +1079,10 @@ footer .rrss li a i {
 .quienes-somos-lcen li a {
     opacity: 0.6;
     transition: 0.5s all;
+    display: flex;
+    align-items: center;
+    margin: auto 15px;
+    height: 100%;
 }
 
 .quienes-somos-lcen li a:hover {
@@ -1061,10 +1090,29 @@ footer .rrss li a i {
 }
 
 .quienes-somos-lcen img {
-    height: 60px;
     width: auto;
     margin: 0px;
     padding: 0px;
+}
+
+.quienes-somos-lcen img.logo-fci {
+    height: 50px !important;
+}
+
+.quienes-somos-lcen img.logo-constituyo {
+    height: 80px !important;
+}
+
+.quienes-somos-lcen img.logo-gi {
+    height: 55px;
+}
+
+.quienes-somos-lcen img.logo-fes {
+    height: 60px;
+}
+
+.quienes-somos-lcen img img.logo-ned {
+    height: 50px !important;
 }
 
 .quienes-somos-lcen .apoyo {
@@ -1077,7 +1125,7 @@ footer .rrss li a i {
 }
 
 .quienes-somos-lcen .apoyo img {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s all;
 }
 
@@ -1120,19 +1168,21 @@ footer .rrss li a i {
 .quienes-somos-lcen .dropdown:hover .dropdown-menu .contenido {
     display: block;
     margin-top: 0px;
-    width: 300px;
+    width: 250px;
     border: 5px solid #75AADB;
     padding: 20px;
     left: 30px;
     border-radius: 2px;
+    background: #75AADB;
 }
 
 .quienes-somos-lcen li .contenido p {
     font-size: 0.9em;
     text-align: left;
-    color: black;
+    color: white;
     padding: 0px;
     margin: 0px;
+    font-weight: 600;
 }
 
 
@@ -1913,7 +1963,7 @@ ul.pagination .active a {
 
 .preguntas .accordion-button:not(.collapsed)::after {
     background-image: url(../img/arrow-yellow.png) !important;
-    transform: rotate( -360deg);
+    transform: rotate(-360deg);
 }
 
 /*Formularios*/
@@ -2622,10 +2672,12 @@ ul.pagination .active a {
 }
 
 @media(max-width:991px) {
+
     /*Menu*/
     header {
         padding: 15px 0px !important;
     }
+
     header .navbar-brand img {
         width: 140px;
     }
@@ -2652,6 +2704,7 @@ ul.pagination .active a {
     li.nav-item.dropdown.ingresar {
         margin: 30px;
     }
+
     .dropdown:hover .dropdown-menu {
         width: 100%;
     }
@@ -2677,6 +2730,7 @@ ul.pagination .active a {
     h2 {
         font-size: 1.5em;
     }
+
     p {
         font-size: 1em;
     }
@@ -2686,9 +2740,11 @@ ul.pagination .active a {
         margin-top: 84px;
         height: 450px;
     }
+
     .portada-gif h1 {
         font-size: 2em;
     }
+
     .portada-gif p {
         font-size: 1.2em;
     }
@@ -2702,12 +2758,14 @@ ul.pagination .active a {
         padding: 60px 0px 20px 0px;
         margin-top: 40px;
     }
+
     .a-ponerse-con-propuestas .llamado-propuestas h1 {
         font-size: 2em;
         width: 90%;
         padding: 0px;
         margin: auto;
     }
+
     .a-ponerse-con-propuestas img.img-fluid.p-4 {
         padding: 0px !important;
         margin-bottom: 30px;
@@ -2717,6 +2775,7 @@ ul.pagination .active a {
         padding-left: 0px;
         padding-right: 0px;
     }
+
     .a-ponerse-con-propuestas .llamado-propuestas img.megafono-recorte {
         width: 200px;
         top: -60px;
@@ -2759,7 +2818,7 @@ ul.pagination .active a {
         width: 100%;
     }
 
-/*Logos organizaciones seccion*/
+    /*Logos organizaciones seccion*/
     .organizaciones-lista li {
         margin: 10px 0px;
         height: auto;
@@ -2816,6 +2875,7 @@ ul.pagination .active a {
     footer .collage-2 {
         width: 80%;
         margin-left: auto;
+        display: none;
     }
 
     /*Banner secciones*/
@@ -2845,10 +2905,12 @@ ul.pagination .active a {
         margin-bottom: 50px;
         margin-left: 0px !important;
     }
+
     .infografia-que-es .item {
         margin-bottom: 30px;
         padding: 0px;
     }
+
     .infografia-que-es p {
         padding: 0px 0px 5px 0px;
     }
@@ -2861,6 +2923,7 @@ ul.pagination .active a {
         flex-direction: column;
         align-items: center;
     }
+
     .quienes-somos-lcen img {
         height: 40px;
     }
@@ -2950,20 +3013,25 @@ ul.pagination .active a {
         margin-top: 40px;
         padding-left: 20px;
     }
+
     .registros .informacion h2 {
         font-size: 1.4em;
         margin-bottom: 20px;
     }
+
     .registros form div {
         width: 100%;
     }
+
     .registros form button.btn {
         margin: auto;
         margin-right: auto;
     }
+
     .registrate-cta a {
         margin: 0px 0px 0px 0px;
     }
+
     .registrate-cta p {
         width: 100%;
         text-align: center;
@@ -2989,6 +3057,7 @@ ul.pagination .active a {
         margin-top: 60px;
         padding-left: 20px;
     }
+
     /*Logos organizaciones seccion*/
     .organizaciones-lista li {
         width: 140px !important;
@@ -3006,6 +3075,7 @@ ul.pagination .active a {
     align-content: center;
     align-self: center;
 }
+
 .organizaciones-seccion img {
     opacity: 0.6;
     filter: grayscale(100%);
@@ -3015,19 +3085,23 @@ ul.pagination .active a {
     max-height: 80px;
     max-width: 140px;
 }
+
 @media (max-width: 500px) {
     .organizaciones-seccion li {
         height: 90% !important;
         width: 75% !important;
     }
+
     .organizaciones-seccion img {
         max-height: 65px;
         max-width: 120px;
     }
+
     .organizaciones-seccion {
         padding: 20px 0px 0px 0px !important;
     }
 }
+
 @media (max-width: 340px) {
     .organizaciones-seccion img {
         max-height: 50px;
@@ -3035,10 +3109,11 @@ ul.pagination .active a {
     }
 }
 
-.terminosycondiciones{
+.terminosycondiciones {
     padding: 70px 0px;
 }
-.terminosycondiciones h1{
+
+.terminosycondiciones h1 {
     font-size: 1.5em;
     text-transform: uppercase;
     font-weight: 900;
@@ -3047,7 +3122,8 @@ ul.pagination .active a {
     color: black;
     padding: 8px 0px;
 }
-.terminosycondiciones h2{
+
+.terminosycondiciones h2 {
     font-size: 1.3em;
     text-transform: inherit;
     padding-left: 0px;
@@ -3058,13 +3134,15 @@ ul.pagination .active a {
     margin-bottom: 10px;
     padding-bottom: 0px;
 }
-.terminosycondiciones p{
+
+.terminosycondiciones p {
     font-size: 1em;
     color: black;
-    padding-bottom:6px;
+    padding-bottom: 6px;
     margin-bottom: 0px;
 }
-.terminosycondiciones li{
+
+.terminosycondiciones li {
     font-size: 1em;
     color: black;
     padding-bottom: 5px;
@@ -3334,32 +3412,42 @@ ul.pagination .active a {
     .ensayos-list .ensayo {
         padding: 0px 0px;
     }
+
     .ensayos-list h2 {
         font-size: 1.5em;
     }
+
     .ensayo-tomo-descripcion .titulo h2 {
         font-size: 1.4em;
     }
+
     .ensayo-tomo-descripcion .titulo {
         border-left: 4px solid #FFD700;
         padding-left: 15px;
         margin-bottom: 20px;
     }
+
     section.container {
         width: 100%;
         max-width: 100% !important;
     }
+
     .ensayos-list img {
         margin-top: 30px;
     }
 }
 
-/* Propuestas Tarjetas */.espacio {
+/* Propuestas Tarjetas */
+.espacio {
     height: 100px;
-}.card-propuesta-lcen {
+}
+
+.card-propuesta-lcen {
     zoom: 0.8;
     border: 0px;
-}.card-propuesta-lcen .card-bvody {
+}
+
+.card-propuesta-lcen .card-bvody {
     background: url(../img/bg-lcen-azul.png);
     background-size: cover;
     background-position: center;
@@ -3371,60 +3459,87 @@ ul.pagination .active a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}.card-propuesta-lcen .logo-lcen {
+}
+
+.card-propuesta-lcen .logo-lcen {
     width: 200px;
     height: auto;
     position: absolute;
     right: 0px;
     padding-right: 40px;
     top: 20px;
-}.card-propuesta-lcen p.n-propuesta {
+}
+
+.card-propuesta-lcen p.n-propuesta {
     margin-top: 30px;
     margin-bottom: 0px;
     color: white;
     font-size: 1.3em;
-}.card-propuesta-lcen .card-bvody h2 {
+}
+
+.card-propuesta-lcen .card-bvody h2 {
     border-left: 0px;
     padding-left: 0px;
     color: white;
     font-size: 2.2em;
     font-weight: 900;
-}.card-propuesta-lcen p.info-card {
+}
+
+.card-propuesta-lcen p.info-card {
     color: white;
     font-size: 1.3em;
     font-weight: normal;
-}.card-propuesta-lcen p b {
+}
+
+.card-propuesta-lcen p b {
     font-weight: 800;
-}.card-propuesta-lcen .logo-org {
+}
+
+.card-propuesta-lcen .logo-org {
     height: 70px;
     width: auto;
-}.card-propuesta-lcen .img-propuesta-decoracion {
+}
+
+.card-propuesta-lcen .img-propuesta-decoracion {
     position: absolute;
     right: 20px;
     bottom: 15%;
     width: 55%;
-}.card-propuesta-lcen .creador-propuesta p {
+}
+
+.card-propuesta-lcen .creador-propuesta p {
     margin-right: 10px;
-}.card-propuesta-lcen .adorno-lineas {
+}
+
+.card-propuesta-lcen .adorno-lineas {
     height: 8px;
     width: 100%;
     display: flex;
     flex-direction: row;
-}.card-propuesta-lcen .adorno-lineas .green {
+}
+
+.card-propuesta-lcen .adorno-lineas .green {
     width: 15%;
     height: 8px;
-}.card-propuesta-lcen .adorno-lineas .yellow {
+}
+
+.card-propuesta-lcen .adorno-lineas .yellow {
     width: 35%;
     height: 8px;
-}.card-propuesta-lcen .adorno-lineas .blue {
+}
+
+.card-propuesta-lcen .adorno-lineas .blue {
     width: 30%;
     height: 8px;
-    background: #AB47BC
-;
-}.card-propuesta-lcen .adorno-lineas .red {
+    background: #AB47BC;
+}
+
+.card-propuesta-lcen .adorno-lineas .red {
     width: 20%;
     height: 8px;
-}.card-propuesta-lcen .card-footer {
+}
+
+.card-propuesta-lcen .card-footer {
     padding: 20px 40px;
     display: flex;
     flex-direction: column;
@@ -3436,16 +3551,19 @@ ul.pagination .active a {
     background-position: center;
     height: 25%;
     width: 100%;
-}.card-propuesta-lcen .card-footer h4 {
+}
+
+.card-propuesta-lcen .card-footer h4 {
     color: black;
     text-transform: inherit;
     font-size: 1.3em;
     font-weight: 800;
     margin-bottom: 10px;
-}.card-propuesta-lcen .card-footer p.destacado-lcen-enlace {
+}
+
+.card-propuesta-lcen .card-footer p.destacado-lcen-enlace {
     padding: 5px 10px;
-    background: #CC0000
-;
+    background: #CC0000;
     color: white;
     font-size: 1.3em;
     text-transform: uppercase;
@@ -3661,16 +3779,16 @@ input#id_apellido {
 }
 
 /*Sección Interna de Mapa Constitucional*/
-.mapa-constitucional-terminos h3{
+.mapa-constitucional-terminos h3 {
     font-size: 1.7em;
 }
 
-.mapa-constitucional-terminos p{
-    font-size: 1em!important;
+.mapa-constitucional-terminos p {
+    font-size: 1em !important;
 }
 
-.mapa-constitucional-terminos p a.enlaces{
-    color:#008000;
+.mapa-constitucional-terminos p a.enlaces {
+    color: #008000;
     font-weight: 600;
 }
 
@@ -3724,8 +3842,8 @@ input#id_apellido {
     color: black;
 }
 
-.mapa-constitucional-terminos .modal-body h4{
-    text-align: left!important;
+.mapa-constitucional-terminos .modal-body h4 {
+    text-align: left !important;
     font-size: 1.1em;
     color: black;
     width: 100%;
@@ -3853,6 +3971,7 @@ input#id_apellido {
     .mapa-constitucional-terminos {
         margin: 50px auto;
     }
+
     .mapa-constitucional-terminos .align-items-start {
         margin-top: 50px;
     }
@@ -3862,17 +3981,21 @@ input#id_apellido {
     .mapa-constitucional-terminos {
         margin: 50px auto;
     }
+
     .mapa-constitucional-terminos .btn-concepto-modal {
         padding: 8px 8px;
         font-size: 1em;
     }
+
     .mapa-constitucional-terminos .nav-pills {
         width: 100%;
         margin: 25px 0px;
     }
+
     .mapa-constitucional-terminos .tab-content {
         width: 100%;
     }
+
     .mapa-constitucional-terminos .align-items-start {
         flex-wrap: wrap;
     }
@@ -3884,12 +4007,200 @@ input#id_apellido {
 
 /*Manual Convención*/
 
-.boton-manual-convencion{
+.boton-manual-convencion {
     margin-left: 150px;
 }
 
 @media (max-width: 768px) {
-   .boton-manual-convencion{
-       margin-left: 0px;
-   }
+    .boton-manual-convencion {
+        margin-left: 0px;
+    }
 }
+
+
+/*Iniciativa Popular de Norma - Home */
+.iniciativa-popular {
+    background-image: url(../img/textura-azul-lcen.jpg);
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.iniciativa-popular .img {
+    width: 20%;
+    position: absolute;
+    bottom: -40px;
+}
+
+.iniciativa-popular .img.img-uno {
+    left: 0px;
+}
+
+.iniciativa-popular .img.img-dos {
+    right: 0px;
+}
+
+.iniciativa-popular .img img {
+    width: 100%;
+}
+
+.iniciativa-popular .informacion {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 0px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iniciativa-popular .informacion h3 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.iniciativa-popular .informacion p {
+    text-align: center;
+}
+
+.iniciativa-popular .boton-manual-convencion {
+    background: #CC0000;
+    margin-left: 0px;
+}
+
+.iniciativa-popular .boton-manual-convencion.hvr-sweep-to-right:before {
+    background: black !important;
+}
+
+
+/*Reestructuracion sitio web - secciones*/
+
+.seccion-info img {
+    width: 85%;
+    display: flex;
+    align-self: center;
+    margin: auto;
+}
+
+.mapa-constitucional-home {
+    margin-bottom: 100px;
+}
+
+.mapa-constitucional-home h2 {
+    border-color: #CC0000;
+}
+
+.constitucion-feminista-home {
+    margin: 100px auto;
+}
+
+.constitucion-feminista-home h2 {
+    border-color: #AB47BC;
+}
+
+.constitucion-feminista-home a {
+    background: #008000;
+}
+
+.constitucion-feminista-home a.hvr-sweep-to-right:before {
+    background: #AB47BC !important;
+}
+
+
+
+@media(max-width:1200px) {
+    .seccion-info img {
+        width: 100%;
+    }
+}
+
+@media(max-width:1150px) {
+    .iniciativa-popular .informacion {
+        padding: 0px;
+    }
+}
+
+@media(max-width:991px) {
+    .portada-gif {
+        margin-top: 85px;
+    }
+
+    header ul.navbar-nav li ul.dropdown-menu {
+        background: #F2F2F2;
+        border-top: 8px solid #FFD700;
+        border-bottom: 8px solid #FFD700;
+        box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%);
+        -webkit-box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0%);
+    }
+
+    header ul.navbar-nav li a {
+        font-size: 0.9em !important;
+    }
+
+    header ul.navbar-nav li > .dropdown-menu a {
+        font-size: 0.8em !important;
+    }
+}
+
+@media(max-width:767px) {
+    .iniciativa-popular {
+        margin-top: 50px;
+    }
+
+    .iniciativa-popular .img.img-uno {
+        top: -40px;
+        width: 40%;
+    }
+
+    .iniciativa-popular .img.img-dos {
+        width: 40%;
+        top: -40px;
+    }
+
+    .iniciativa-popular .informacion {
+        width: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 40px;
+    }
+
+    .iniciativa-popular .informacion h3 {
+        font-size: 1.3em;
+    }
+
+    .seccion-info img {
+        width: 90%;
+    }
+
+    .mapa-constitucional-home {
+        margin-bottom: 50px;
+    }
+
+    .mapa-constitucional-home img {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+
+    .constitucion-feminista-home {
+        margin: 50px auto;
+    }
+
+    .constitucion-feminista-home img {
+        padding-top: 0px;
+    }
+
+}
+
+@media(max-width:500px) {
+    .seccion-info img {
+        width: 100%;
+    }
+
+    .btn-lcen {
+        font-size: 0.9em;
+    }
