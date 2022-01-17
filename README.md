@@ -67,6 +67,13 @@ Clone el proyecto desde la última versión de desarrollo en Github. Esta está 
 git clone https://github.com/pedregalux/lcen
 ```
 
+Aplicaciones de django requeridas:
+
+1. Obviamente Django:
+```sh
+pip install django
+```
+
 
 ## Repositorios FCI
 
@@ -74,35 +81,8 @@ Todo el código utilizado está [público](https://github.com/ciudadanointeligen
 
 Todo el código utilizado está [público](https://gitlab.com/ciudadaniai/lcen) on Gitlab.
 
-## Plugins
 
 
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
-
-## Development
-
-
-
-#### Building for source
-
-
-
-## Docker
-
-
-
-
-
-```sh
-127.0.0.1:8000
-```
 
 ## Licencia
 
