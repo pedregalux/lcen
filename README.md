@@ -43,11 +43,11 @@ El objetivo de esta guía es documentar los pasos necesarios para la instalació
 
 LCeN es la suma de varios componentes principales:
 
-- [Django] - El framework de aplicaciones web
-- [Python] - Lenguaje de programación que utiliza Django
-- [MySQL] - Base de datos -se puede utilizar otra!-
-- [NGINX] - Servidor web utilizado -se puede reemplazar por otro!-
-- [wsgi] - Software que permite la comunicación entre la aplicación y el servidor web
+- [Django](https://www.djangoproject.com) - El framework de aplicaciones web
+- [Python](https://www.python.org) - Lenguaje de programación que utiliza Django
+- [MySQL-MariaDB](https://mariadb.org) - Base de datos -se puede utilizar otra!-
+- [NGINX](https://nginx.org/en/) - Servidor web utilizado -se puede reemplazar por otro!-
+- [uwsgi](https://uwsgi-docs.readthedocs.io/en/latest/) - Software que permite la comunicación entre la aplicación y el servidor web
 
 La instalación de Python, MySQL, nginx y wsgi en un servidor para hacer correr el proyecto **no** se cubre en esta guía, sin embargo acá hay una lista de tutoriales muy buenos que pueden servir:
 
@@ -57,33 +57,25 @@ La instalación de Python, MySQL, nginx y wsgi en un servidor para hacer correr 
 - [NGINX](https://www.linode.com/docs/guides/how-to-configure-nginx/)
 - [Django-uwsgi](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/uwsgi/)
 
+
+
+## Instalación
+
+Clone el proyecto desde la última versión de desarrollo en Github. Esta está en [este repositorio](https://github.com/pedregalux/lcen). Existen dos ramas principales, dev y master, para desarrollo y producción respectivamente.
+
+```sh
+git clone https://github.com/pedregalux/lcen
+```
+
+
+## Repositorios FCI
+
 Todo el código utilizado está [público](https://github.com/ciudadanointeligente/lcen) on GitHub.
 
 Todo el código utilizado está [público](https://gitlab.com/ciudadaniai/lcen) on Gitlab.
 
-## Instalación
-
-Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
-
-Install the dependencies and devDependencies and start the server.
-
-```sh
-cd dillinger
-npm i
-node app
-```
-
-For production environments...
-
-```sh
-npm install --production
-NODE_ENV=production node app
-```
-
 ## Plugins
 
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
 
 | Plugin | README |
 | ------ | ------ |
@@ -96,74 +88,17 @@ Instructions on how to use them in your own application are linked below.
 
 ## Development
 
-Want to contribute? Great!
 
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantaneously see your updates!
-
-Open your favorite Terminal and run these commands.
-
-First Tab:
-
-```sh
-node app
-```
-
-Second Tab:
-
-```sh
-gulp watch
-```
-
-(optional) Third:
-
-```sh
-karma test
-```
 
 #### Building for source
 
-For production release:
 
-```sh
-gulp build --prod
-```
-
-Generating pre-built zip archives for distribution:
-
-```sh
-gulp build dist --prod
-```
 
 ## Docker
 
-Dillinger is very easy to install and deploy in a Docker container.
 
-By default, the Docker will expose port 8080, so change this within the
-Dockerfile if necessary. When ready, simply use the Dockerfile to
-build the image.
 
-```sh
-cd dillinger
-docker build -t <youruser>/dillinger:${package.json.version} .
-```
 
-This will create the dillinger image and pull in the necessary dependencies.
-Be sure to swap out `${package.json.version}` with the actual
-version of Dillinger.
-
-Once done, run the Docker image and map the port to whatever you wish on
-your host. In this example, we simply map port 8000 of the host to
-port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
-
-```sh
-docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger <youruser>/dillinger:${package.json.version}
-```
-
-> Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
-
-Verify the deployment by navigating to your server address in
-your preferred browser.
 
 ```sh
 127.0.0.1:8000
