@@ -27,7 +27,7 @@ Aplicaciones necesarias para correr el proyecto
 
 ## Guía de instalación y desarrollo
 
-<a href="https://ciudadaniai.org/index"><img src="https://miro.medium.com/fit/c/262/262/2*HiWjbN9GrdV-jsf4vm5_2A.png" width="150"></a>
+<a href="https://ciudadaniai.org/index"><img src="https://gitlab.com/pedregalux/images2021/-/raw/master/logofci.png" width="150"></a>
 <a href="https://laconstitucionesnuestra.cl/"><img src="https://gitlab.com/pedregalux/images2021/-/raw/master/lcen.jpg" width="150"></a>
 
 La Constitución es Nuestra es un proyecto de Ciudadanía Inteligente, The Global Initiative y Constitu+yo.
