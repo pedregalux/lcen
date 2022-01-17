@@ -67,7 +67,7 @@ Clone el proyecto desde la última versión de desarrollo en Github. Esta está 
 git clone https://github.com/pedregalux/lcen
 ```
 
-Le recomendamos crear un entorno virtual de desarrollo local para este proyecto, así no afectará otras instalaciones de python y django que pueda tener en su servidor o máquina local. Si ya tiene instalados python3 y viartualenv, el comando para crear el ambiente debería ser:
+Le recomendamos usar virtualenv, un paquete de python para crear un [entorno virtual de desarrollo](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment) local para este proyecto, así no afectará otras instalaciones de python y django que pueda tener en su servidor o máquina local. Si ya tiene instalados python3 y viartualenv, el comando para crear el ambiente de trabajo debería ser:
 ```sh
 python3 -m venv /ruta/entorno/virtual
 ```
@@ -82,6 +82,52 @@ Aplicaciones de django requeridas:
 ```sh
 pip install django
 ```
+
+2. mysqlclient para conectar la aplicación con la base de datos creada en MySQL o MariaDB
+```sh
+pip install mysqlclient
+```
+
+3. pillow da a python soporte para trabajar con imágenes
+```sh
+pip install pillow
+```
+
+4. python-decouple para separar en un archivo .env las contraseñas e información sensible
+```sh
+pip install python-decouple
+```
+
+5. django-formtools para usar formularios separados en pasos
+```sh
+pip install django-formtools
+```
+
+6. crispy-bootstrap5 integra los estilos de bootstrap 5 a los formularios
+```sh
+pip install crispy-bootstrap5
+```
+
+7. django-allauth es la aplicación para que usuarios de google y facebook -u otras- puedan usar sus credenciales en la plataforma
+```sh
+pip install django-allauth
+```
+
+8. django-extensions instala utilidades varias que sirven para el desarrollo
+```sh
+pip install django-extensions
+```
+
+9. django-filter para usar algunos buscadores
+```sh
+pip install django-filter
+```
+
+10. django-import-export para exportar usuarios, propuestas, etc.
+```sh
+pip install django-import-export
+```
+
 
 
 ## Repositorios FCI
