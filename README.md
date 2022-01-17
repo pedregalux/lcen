@@ -67,6 +67,15 @@ Clone el proyecto desde la última versión de desarrollo en Github. Esta está 
 git clone https://github.com/pedregalux/lcen
 ```
 
+Le recomendamos crear un entorno virtual de desarrollo local para este proyecto, así no afectará otras instalaciones de python y django que pueda tener en su servidor o máquina local. Si ya tiene instalados python3 y viartualenv, el comando para crear el ambiente debería ser:
+```sh
+python3 -m venv /ruta/entorno/virtual
+```
+Luego se activa con:
+```sh
+source bin/activate
+```
+
 Aplicaciones de django requeridas:
 
 1. Obviamente Django:
