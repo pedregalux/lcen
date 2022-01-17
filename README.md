@@ -27,8 +27,8 @@ Aplicaciones necesarias para correr el proyecto
 
 ## Guía de instalación y desarrollo
 
-[![N|Solid](https://miro.medium.com/fit/c/262/262/2*HiWjbN9GrdV-jsf4vm5_2A.png)](https://ciudadaniai.org/index)
-[![N|Solid](https://gitlab.com/pedregalux/images2021/-/raw/master/lcen.jpg)](https://laconstitucionesnuestra.cl)
+[![N|Solid](https://miro.medium.com/fit/c/262/262/2*HiWjbN9GrdV-jsf4vm5_2A.png)](https://ciudadaniai.org/index) { width: 200px; }
+[![N|Solid](https://gitlab.com/pedregalux/images2021/-/raw/master/lcen.jpg)](https://laconstitucionesnuestra.cl) { width: 200px; }
 
 La Constitución es Nuestra es un proyecto de Ciudadanía Inteligente, The Global Initiative y Constitu+yo.
 
@@ -61,7 +61,7 @@ Todo el código utilizado está [público](https://github.com/ciudadanointeligen
 
 Todo el código utilizado está [público](https://gitlab.com/ciudadaniai/lcen) on Gitlab.
 
-## Installation
+## Instalación
 
 Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
 
