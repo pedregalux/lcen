@@ -23,6 +23,18 @@
     outline: 0px !important;
 }
 
+a:-webkit-any-link:focus-visible {
+    outline-offset: 0px!important;
+}
+
+:focus-visible {
+    outline: 0px !important;
+}
+
+:focus {
+  outline: none;
+  box-shadow: none;
+}
 
 /* Modales */
 .modal-header {
@@ -2452,6 +2464,48 @@ footer .rrss li a i {
     color: black;
 }
 
+/*Libro Constitucion feminista 1980*/
+
+.libro-constitucion-feminista{
+    background: #FFDF94;
+}
+
+.libro-constitucion-feminista p.creditos-libro{
+   font-size: 1.3em;
+   font-weight: 500;
+   text-transform: uppercase;
+   margin-left: 30px;
+   margin-bottom: 0px;
+}
+
+.libro-constitucion-feminista .border-decoracion{
+    width: 80px;
+    height: 8px;
+    margin-left: 30px;
+    background: #AB47BC;
+    margin-bottom: 15px;
+}
+
+.libro-constitucion-feminista h2{
+   font-size: 2.4em;
+   color: black;
+   border-left: 0px;
+   padding: 0px;
+   margin-left: 30px;
+}
+
+.libro-constitucion-feminista a{
+  background: #008000;
+  margin-left: 30px;
+}
+
+.libro-constitucion-feminista a:before{
+  background: #AB47BC!important;
+}
+
+.libro-constitucion-feminista img{
+  padding: 50px!important;
+}
 
 /*Constitución Feminista - Reflexiones lista*/
 .cf-reflexiones-list .decoracion-reflexion {
@@ -3631,6 +3685,26 @@ ul.pagination .active a {
         font-size: 0.75em !important;
         padding: 12px 10px!important;
     }
+    /*Libro Constitucion feminista 1980*/
+    .libro-constitucion-feminista p.creditos-libro{
+       margin-left: 0px;
+    }
+
+    .libro-constitucion-feminista .border-decoracion{
+        margin-left: 0px;
+    }
+
+    .libro-constitucion-feminista h2{
+       font-size: 1.6em;
+       margin-left: 0px;
+    }
+
+    .libro-constitucion-feminista a{
+      margin-left: 0px;
+    }
+    .libro-constitucion-feminista img{
+      padding: 20px 0px!important;
+    }
 }
 
 
@@ -4059,6 +4133,17 @@ ul.pagination .active a {
 
     .constitucion-feminista-home img {
         padding-top: 0px;
+    }
+
+    /*Libro Constitucion feminista 1980*/
+    .libro-constitucion-feminista{
+      padding: 80px 0px;
+    }
+    .libro-constitucion-feminista h2{
+      font-size: 1.4em;
+    }
+    .libro-constitucion-feminista img{
+      padding: 40px 20px 0px 20px!important;
     }
 }
 
