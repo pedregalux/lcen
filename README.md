@@ -104,7 +104,29 @@ pip install django-filter
 pip install django-import-export
 ```
 
+## Creación de base de datos
 
+Cree una base de datos MySQL, MariaDB o Postgresql, la que prefiera. Guarde su nombre, usuario y contraseña.
+
+## Configuración de partida
+
+Para mantener ordenado el proyecto, las contraseñas se guardan en un archivo .env local que es independiente del código, para eso debe crear un archivo .env en la raíz del proyecto, la carpeta lcen.
+
+En ese archivo debe incluir la siguiente información:
+
+<code>SECRET_KEY=cualquier contraseña que quiera, bien larga</code>
+
+DEBUG=True
+ALLOWED_HOSTS=
+DB_NAME=lcen2021
+DB_USER=root
+DB_PASSWORD=chanaral
+DB_HOST=localhost
+STATIC_URL='/static/'
+STATIC_ROOT=/home/felipe/lcen/static/
+STATICFILES_DIRS=/home/felipe/lcen/lcen/static
+MEDIA_ROOT=/home/felipe/lcen/lcen/media/
+MEDIA_URL='/media/'
 
 ## Repositorios FCI
 
