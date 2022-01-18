@@ -83,47 +83,47 @@ Aplicaciones de django requeridas:
 pip install django
 ```
 
-2. mysqlclient para conectar la aplicación con la base de datos creada en MySQL o MariaDB
+2. mysqlclient para conectar la aplicación con la base de datos creada en MySQL o MariaDB:
 ```sh
 pip install mysqlclient
 ```
 
-3. pillow da a python soporte para trabajar con imágenes
+3. pillow da a python soporte para trabajar con imágenes:
 ```sh
 pip install pillow
 ```
 
-4. python-decouple para separar en un archivo .env las contraseñas e información sensible
+4. python-decouple para separar en un archivo .env las contraseñas e información sensible:
 ```sh
 pip install python-decouple
 ```
 
-5. django-formtools para usar formularios separados en pasos
+5. django-formtools para usar formularios separados en pasos:
 ```sh
 pip install django-formtools
 ```
 
-6. crispy-bootstrap5 integra los estilos de bootstrap 5 a los formularios
+6. crispy-bootstrap5 integra los estilos de bootstrap 5 a los formularios:
 ```sh
 pip install crispy-bootstrap5
 ```
 
-7. django-allauth es la aplicación para que usuarios de google y facebook -u otras- puedan usar sus credenciales en la plataforma
+7. django-allauth es la aplicación para que usuarios de google y facebook -u otras- puedan usar sus credenciales en la plataforma:
 ```sh
 pip install django-allauth
 ```
 
-8. django-extensions instala utilidades varias que sirven para el desarrollo
+8. django-extensions instala utilidades varias que sirven para el desarrollo:
 ```sh
 pip install django-extensions
 ```
 
-9. django-filter para usar algunos buscadores
+9. django-filter para usar algunos buscadores:
 ```sh
 pip install django-filter
 ```
 
-10. django-import-export para exportar usuarios, propuestas, etc.
+10. django-import-export para exportar usuarios, propuestas, etc.:
 ```sh
 pip install django-import-export
 ```
