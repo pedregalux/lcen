@@ -114,9 +114,11 @@ Para mantener ordenado el proyecto, las contraseñas se guardan en un archivo .e
 
 En ese archivo debe incluir la siguiente información:
 
-<code>SECRET_KEY=cualquier contraseña que quiera, bien larga</code>
+<code>SECRET_KEY=xxxxxxx  (cualquier contraseña que quiera, bien larga)</code>
 
-DEBUG=True
+<code>DEBUG=True  (en producción se debe cambiar a False)</code>
+
+
 ALLOWED_HOSTS=
 DB_NAME=lcen2021
 DB_USER=root
