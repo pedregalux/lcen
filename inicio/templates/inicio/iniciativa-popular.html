@@ -1,0 +1,892 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Iniciativa Popular{% endblock %}
+
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/ipn-seccion-header.jpg' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/ipn-seccion-headermovil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Iniciativa Popular</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container seccion-iniciatipa-popular wow animate__animated animate__fadeIn">
+     <div class="container">
+          <div class="row justify-content-md-center">
+              <div class="col-12 col-sm-12 col-md-10 col-lg-8 presentacion-seccion">
+                  <img src="{% static 'img/texto-ipn-seccion.png' %}" alt="" class="w-100">
+                  <a href="{% static 'img/manual-ipn.pdf' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Descargar manual</a>
+              </div>
+          </div>
+     </div>
+</section>
+
+<section class="infografia-ipn wow animate__animated animate__fadeIn">
+  <img src="{% static 'img/infografia-seccion-ipn-1.jpg' %}" alt="" class="w-100 infografia-desktop-ipn">
+  <img src="{% static 'img/infografia-seccion-ipn-1-movil.jpg' %}" alt="" class="w-100 infografia-movil-ipn">
+</section>
+
+
+<section class="container propuestas-seccion wow animate__animated animate__fadeIn iniciativas-propuestas">
+    <div class="row">
+
+      <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn">
+          <h2>A estas iniciativas nosotros adherimos</h2>
+          <div class="decoracion green"></div>
+      </div>
+
+     <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn v-desktop-carrousel">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <!--  <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div> -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+
+             <div class="row">
+               <!--iniciativas-->
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 4.758</b></p>
+                             <h2 class="titulo">El Derecho a la Seguridad Social</h2>
+                             <p class="extracto">
+                               Consagrar como derecho inalienable la seguridad social con un sistema previsional que garantice al final de la vida activa pensiones que le permitan vivir con dignidad.
+                             </p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Coordinadora Nacional de Trabajadoras y Trabajadores NO+AFP</p>
+                                  <img src="{% static 'img/logos-organizaciones/no-afp-logo.jpg' %}" alt="logo" class="logo-organizacion">
+                                </div>
+                                <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                            </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/4758" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 18.202</b></p>
+                             <h2 class="titulo">Servicios Públicos Universales y de Calidad y Política Fiscal Universal y Justa para la Garantía de Derechos Sociales</h2>
+                             <p class="extracto">
+                               Que la nueva Constitución establezca un Estado Social y Democrático de Derechos.
+                             </p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Internacional de Servicios Públicos (ISP)</p>
+                                 <img src="{% static 'img/logos-organizaciones/psi-logo.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/18202" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 10.898</b></p>
+                             <h2 class="titulo">Por el Derecho a la Educación Construyendo un Sistema Plurinacional de Educación Pública Estatal Comunitaria</h2>
+                             <p class="extracto">
+                               Garantizar una educación pública moderna</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Articulación de organizaciones educativas por el derecho a la educación</p>
+                                 <!--<img src="{{ propuesta.autor.organizacion.logo_organizacion.url }}" alt="logo organizacion">-->
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/10898" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+              </div>
+
+          </div>
+
+
+          <div class="carousel-item">
+
+            <div class="row">
+              <!--iniciativas-->
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Democracia</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 17606</b></p>
+                            <h2 class="titulo">Participación Ciudadana como Principio en la Nueva Constitución</h2>
+                            <p class="extracto">
+                              Democracia y Participación en Asuntos Públicos</p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Red para la Participación</p>
+                                <img src="{% static 'img/logos-organizaciones/logo-rdp.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/17606" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Democracia</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 17630</b></p>
+                            <h2 class="titulo">Derecho Fundamental a la Participación Ciudadana</h2>
+                            <p class="extracto">
+                              Democracia y Participación Ciudadana</p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Red para la Participación</p>
+                                <img src="{% static 'img/logos-organizaciones/logo-rdp.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/17630" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Feminismo</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 9.638</b></p>
+                            <h2 class="titulo">Derecho a los Cuidados</h2>
+                            <p class="extracto">
+                              Derecho al cuidado y reconocimiento del trabajo doméstico y de cuidado no remunerado</p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Comunidad Mujer y Núcleo Constitucional Universidad Alberto Hurtado</p>
+                                <img src="{% static 'img/logos-organizaciones/logo-cm-nc.jpg' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/9638" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+
+          </div>
+          <div class="carousel-item">
+
+            <div class="row">
+              <!--iniciativas-->
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Feminismo</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 38</b></p>
+                            <h2 class="titulo">Una Educación Feminista para Chile: Laica, Pública y No Sexista</h2>
+                            <p class="extracto">
+                              Educación no sexista</p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>REDOFEM (Red Docente Feminista)</p>
+                                <img src="{% static 'img/logos-organizaciones/logo-redofem.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/38" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 5.918</b></p>
+                            <h2 class="titulo">Por el Reconocimiento Constitucional del Pueblo Tribal Afrodescendiente Chileno basado en el Antirracismo como Principio de Convivencia en la Plurinacionalidad</h2>
+                            <p class="extracto">
+                              Propuesta antirracista y Reconocimiento del pueblo Afro-chileno</p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Mesa Técnica Política del Pueblo Tribal Afrodescendiente Chileno</p>
+                                <img src="{% static 'img/logos-organizaciones/logo-ptac.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/5918" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 11.906</b></p>
+                            <h2 class="titulo">Reconocimiento Constitucional del derecho a migrar y de los Derechos de las Personas migrantes y Refugiadas como Chilenos en el Exterior</h2>
+                            <p class="extracto">
+                              Derechos de las personas migrantes y Chilenos en el Exterior</p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Chile Migra</p>
+                                <img src="{% static 'img/logos-organizaciones/logo-chilemigra.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/11906" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+             </div>
+
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn v-tablet-carrousel">
+       <div id="carouselExampleIndicators-tablet" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-inner">
+           <div class="carousel-item active">
+
+              <div class="row">
+                <!--iniciativas-->
+                   <div class="col-12 col-sm-12 col-md-6">
+                      <div class="propuesta salud">
+                          <div class="informacion-propuesta">
+                              <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                              <p class="numero-propuesta">Iniciativa <b>N° 4.758</b></p>
+                              <h2 class="titulo">El Derecho a la Seguridad Social</h2>
+                              <p class="extracto">
+                                Consagrar como derecho inalienable la seguridad social con un sistema previsional que garantice al final de la vida activa pensiones que le permitan vivir con dignidad.
+                              </p>
+                              <div class="informacion-datos">
+                                  <h4>Propuesta de:</h4>
+                                  <p>Coordinadora Nacional de Trabajadoras y Trabajadores NO+AFP</p>
+                                   <img src="{% static 'img/logos-organizaciones/no-afp-logo.jpg' %}" alt="logo" class="logo-organizacion">
+                                 </div>
+                                 <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                             </div>
+                          <div class="bg-black">
+                              <div class="call-to-action">
+                                  <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/4758" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                              </div>
+                          </div>
+                      </div>
+                   </div>
+
+                   <div class="col-12 col-sm-12 col-md-6">
+                      <div class="propuesta salud">
+                          <div class="informacion-propuesta">
+                              <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                              <p class="numero-propuesta">Iniciativa <b>N° 18.202</b></p>
+                              <h2 class="titulo">Servicios Públicos Universales y de Calidad y Política Fiscal Universal y Justa para la Garantía de Derechos Sociales</h2>
+                              <p class="extracto">
+                                Que la nueva Constitución establezca un Estado Social y Democrático de Derechos.
+                              </p>
+                              <div class="informacion-datos">
+                                  <h4>Propuesta de:</h4>
+                                  <p>Internacional de Servicios Públicos (ISP)</p>
+                                  <img src="{% static 'img/logos-organizaciones/psi-logo.png' %}" alt="logo" class="logo-organizacion">
+                              </div>
+                              <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                          </div>
+                          <div class="bg-black">
+                              <div class="call-to-action">
+                                  <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/18202" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                              </div>
+                          </div>
+                      </div>
+                   </div>
+
+
+               </div>
+           </div>
+
+
+
+           <div class="carousel-item">
+              <div class="row">
+                <!--iniciativas-->
+                   <div class="col-12 col-sm-12 col-md-6">
+                      <div class="propuesta salud">
+                          <div class="informacion-propuesta">
+                              <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                              <p class="numero-propuesta">Iniciativa <b>N° 10.898</b></p>
+                              <h2 class="titulo">Por el Derecho a la Educación Construyendo un Sistema Plurinacional de Educación Pública Estatal Comunitaria</h2>
+                              <p class="extracto">
+                                Garantizar una educación pública moderna</p>
+                              <div class="informacion-datos">
+                                  <h4>Propuesta de:</h4>
+                                  <p>Articulación de organizaciones educativas por el derecho a la educación</p>
+                                  <!--<img src="{{ propuesta.autor.organizacion.logo_organizacion.url }}" alt="logo organizacion">-->
+                              </div>
+                              <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                          </div>
+                          <div class="bg-black">
+                              <div class="call-to-action">
+                                  <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/10898" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                              </div>
+                          </div>
+                      </div>
+                   </div>
+
+                   <div class="col-12 col-sm-12 col-md-6">
+                      <div class="propuesta salud">
+                          <div class="informacion-propuesta">
+                              <h3 class="tema">Democracia</h3>
+                              <p class="numero-propuesta">Iniciativa <b>N° 17606</b></p>
+                              <h2 class="titulo">Participación Ciudadana como Principio en la Nueva Constitución</h2>
+                              <p class="extracto">
+                                Democracia y Participación en Asuntos Públicos</p>
+                              <div class="informacion-datos">
+                                  <h4>Propuesta de:</h4>
+                                  <p>Red para la Participación</p>
+                                  <img src="{% static 'img/logos-organizaciones/logo-rdp.png' %}" alt="logo" class="logo-organizacion">
+                              </div>
+                              <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                          </div>
+                          <div class="bg-black">
+                              <div class="call-to-action">
+                                  <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/17606" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                              </div>
+                          </div>
+                      </div>
+                   </div>
+
+               </div>
+           </div>
+
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+                  <div class="col-12 col-sm-12 col-md-6">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Democracia</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 17630</b></p>
+                             <h2 class="titulo">Derecho Fundamental a la Participación Ciudadana</h2>
+                             <p class="extracto">
+                               Democracia y Participación Ciudadana</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Red para la Participación</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-rdp.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/17630" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-6">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Feminismo</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 9.638</b></p>
+                             <h2 class="titulo">Derecho a los Cuidados</h2>
+                             <p class="extracto">
+                               Derecho al cuidado y reconocimiento del trabajo doméstico y de cuidado no remunerado</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Comunidad Mujer y Núcleo Constitucional Universidad Alberto Hurtado</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-cm-nc.jpg' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/9638" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+              </div>
+           </div>
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+                  <div class="col-12 col-sm-12 col-md-6">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Feminismo</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 38</b></p>
+                             <h2 class="titulo">Una Educación Feminista para Chile: Laica, Pública y No Sexista</h2>
+                             <p class="extracto">
+                               Educación no sexista</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>REDOFEM (Red Docente Feminista)</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-redofem.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/38" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-6">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 5.918</b></p>
+                             <h2 class="titulo">Por el Reconocimiento Constitucional del Pueblo Tribal Afrodescendiente Chileno basado en el Antirracismo como Principio de Convivencia en la Plurinacionalidad</h2>
+                             <p class="extracto">
+                               Propuesta antirracista y Reconocimiento del pueblo Afro-chileno</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Mesa Técnica Política del Pueblo Tribal Afrodescendiente Chileno</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-ptac.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/5918" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+              </div>
+           </div>
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+
+                  <div class="col-12 col-sm-12 col-md-6">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 11.906</b></p>
+                             <h2 class="titulo">Reconocimiento Constitucional del derecho a migrar y de los Derechos de las Personas migrantes y Refugiadas como Chilenos en el Exterior</h2>
+                             <p class="extracto">
+                               Derechos de las personas migrantes y Chilenos en el Exterior</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Chile Migra</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-chilemigra.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/11906" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+              </div>
+           </div>
+
+
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-tablet" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-tablet" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+         </button>
+       </div>
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn v-movil-carrousel">
+       <div id="carouselExampleIndicators-movil" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-inner">
+           <div class="carousel-item active">
+
+              <div class="row">
+                <!--iniciativas-->
+                   <div class="col-12 col-sm-12">
+                      <div class="propuesta salud">
+                          <div class="informacion-propuesta">
+                              <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                              <p class="numero-propuesta">Iniciativa <b>N° 4.758</b></p>
+                              <h2 class="titulo">El Derecho a la Seguridad Social</h2>
+                              <p class="extracto">
+                                Consagrar como derecho inalienable la seguridad social con un sistema previsional que garantice al final de la vida activa pensiones que le permitan vivir con dignidad.
+                              </p>
+                              <div class="informacion-datos">
+                                  <h4>Propuesta de:</h4>
+                                  <p>Coordinadora Nacional de Trabajadoras y Trabajadores NO+AFP</p>
+                                   <img src="{% static 'img/logos-organizaciones/no-afp-logo.jpg' %}" alt="logo" class="logo-organizacion">
+                                 </div>
+                                 <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                             </div>
+                          <div class="bg-black">
+                              <div class="call-to-action">
+                                  <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/4758" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                              </div>
+                          </div>
+                      </div>
+                   </div>
+
+               </div>
+           </div>
+
+
+           <div class="carousel-item">
+              <div class="row">
+                <!--iniciativas-->
+                   <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                      <div class="propuesta salud">
+                          <div class="informacion-propuesta">
+                              <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                              <p class="numero-propuesta">Iniciativa <b>N° 18.202</b></p>
+                              <h2 class="titulo">Servicios Públicos Universales y de Calidad y Política Fiscal Universal y Justa para la Garantía de Derechos Sociales</h2>
+                              <p class="extracto">
+                                Que la nueva Constitución establezca un Estado Social y Democrático de Derechos.
+                              </p>
+                              <div class="informacion-datos">
+                                  <h4>Propuesta de:</h4>
+                                  <p>Internacional de Servicios Públicos (ISP)</p>
+                                  <img src="{% static 'img/logos-organizaciones/psi-logo.png' %}" alt="logo" class="logo-organizacion">
+                              </div>
+                              <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                          </div>
+                          <div class="bg-black">
+                              <div class="call-to-action">
+                                  <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/18202" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                              </div>
+                          </div>
+                      </div>
+                   </div>
+
+               </div>
+           </div>
+
+
+           <div class="carousel-item">
+              <div class="row">
+                <!--iniciativas-->
+                   <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                      <div class="propuesta salud">
+                          <div class="informacion-propuesta">
+                              <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                              <p class="numero-propuesta">Iniciativa <b>N° 10.898</b></p>
+                              <h2 class="titulo">Por el Derecho a la Educación Construyendo un Sistema Plurinacional de Educación Pública Estatal Comunitaria</h2>
+                              <p class="extracto">
+                                Garantizar una educación pública moderna</p>
+                              <div class="informacion-datos">
+                                  <h4>Propuesta de:</h4>
+                                  <p>Articulación de organizaciones educativas por el derecho a la educación</p>
+                                  <!--<img src="{{ propuesta.autor.organizacion.logo_organizacion.url }}" alt="logo organizacion">-->
+                              </div>
+                              <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                          </div>
+                          <div class="bg-black">
+                              <div class="call-to-action">
+                                  <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/10898" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                              </div>
+                          </div>
+                      </div>
+                   </div>
+               </div>
+           </div>
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Democracia</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 17606</b></p>
+                             <h2 class="titulo">Participación Ciudadana como Principio en la Nueva Constitución</h2>
+                             <p class="extracto">
+                               Democracia y Participación en Asuntos Públicos</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Red para la Participación</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-rdp.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/17606" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+              </div>
+           </div>
+
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Democracia</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 17630</b></p>
+                             <h2 class="titulo">Derecho Fundamental a la Participación Ciudadana</h2>
+                             <p class="extracto">
+                               Democracia y Participación Ciudadana</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Red para la Participación</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-rdp.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/17630" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+              </div>
+           </div>
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Feminismo</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 9.638</b></p>
+                             <h2 class="titulo">Derecho a los Cuidados</h2>
+                             <p class="extracto">
+                               Derecho al cuidado y reconocimiento del trabajo doméstico y de cuidado no remunerado</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Comunidad Mujer y Núcleo Constitucional Universidad Alberto Hurtado</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-cm-nc.jpg' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/9638" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+              </div>
+
+           </div>
+
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Feminismo</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 38</b></p>
+                             <h2 class="titulo">Una Educación Feminista para Chile: Laica, Pública y No Sexista</h2>
+                             <p class="extracto">
+                               Educación no sexista</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>REDOFEM (Red Docente Feminista)</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-redofem.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/38" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+              </div>
+           </div>
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 5.918</b></p>
+                             <h2 class="titulo">Por el Reconocimiento Constitucional del Pueblo Tribal Afrodescendiente Chileno basado en el Antirracismo como Principio de Convivencia en la Plurinacionalidad</h2>
+                             <p class="extracto">
+                               Propuesta antirracista y Reconocimiento del pueblo Afro-chileno</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Mesa Técnica Política del Pueblo Tribal Afrodescendiente Chileno</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-ptac.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/5918" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+              </div>
+           </div>
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 11.906</b></p>
+                             <h2 class="titulo">Reconocimiento Constitucional del derecho a migrar y de los Derechos de las Personas migrantes y Refugiadas como Chilenos en el Exterior</h2>
+                             <p class="extracto">
+                               Derechos de las personas migrantes y Chilenos en el Exterior</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Chile Migra</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-chilemigra.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/11906" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+              </div>
+           </div>
+
+
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-movil" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-movil" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+         </button>
+       </div>
+       </div>
+
+
+
+
+</div>
+</section>
+
+
+
+{% endblock %}
