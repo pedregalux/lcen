@@ -26,7 +26,7 @@ class HomeView(TemplateView):
 
         # este context fue cambiado para una org
         context['propuestas'] = Propuesta.objects.order_by('-id')[:3]
-        # este context fue cambiado para una org 
+        # este context fue cambiado para una org
 
         # context['propuestas'] = Propuesta.objects.annotate(apoyos_count=Count('apoyos')).order_by('-autor__organizacion','-apoyos_count')[:3]
         return context
@@ -283,6 +283,9 @@ class PersonasmayoresView(TemplateView):
 
 class PersonasmigrantesView(TemplateView):
     template_name = "inicio/personas-migrantes.html"
+
+class IniciativapopularView(TemplateView):
+        template_name = "inicio/iniciativa-popular.html"
 
 
 def error404(request, exception, template_name='inicio/error.html'):

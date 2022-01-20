@@ -977,11 +977,11 @@ footer .rrss li a i {
 
 /*Iniciativa Popular de Norma - Home */
 .iniciativa-popular {
-    background-image: url(../img/textura-azul-lcen.jpg);
+    background-image: url(../img/bg-home-ipn.jpg);
     display: flex;
     flex-direction: row;
     padding: 50px 0px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     position: relative;
 }
 
@@ -1016,12 +1016,13 @@ footer .rrss li a i {
 .iniciativa-popular .informacion h3 {
     text-align: center;
     color: white;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 5px;
 }
 
 .iniciativa-popular .informacion p {
     text-align: center;
+    font-size: 1.2em;
 }
 
 .iniciativa-popular .boton-manual-convencion {
@@ -1034,10 +1035,39 @@ footer .rrss li a i {
     background: black !important;
 }
 
+/*Infografia IPN*/
+
+.infografia-ipn{
+  margin-bottom: 100px;
+}
+
+.infografia-ipn img.infografia-desktop-ipn{
+  display: block;
+}
+.infografia-ipn img.infografia-movil-ipn{
+  display: none;
+}
+
+@media(max-width:768px){
+  .infografia-ipn img.infografia-desktop-ipn{
+    display: none;
+  }
+  .infografia-ipn img.infografia-movil-ipn{
+    display: block;
+  }
+  .infografia-ipn{
+    margin-bottom: 50px;
+  }
+  .iniciativa-popular .informacion p {
+    text-align: center;
+    font-size: 1em;
+}
+}
+
 
 /*Convencionales Home*/
 .convencionales-home {
-    background-image: url(../img/textura-verde-lcen.jpg);
+    background-image: url(../img/bg-home-ipn.jpg);
     position: relative;
     padding: 50px 0px 60px 0px;
 }
@@ -2185,6 +2215,124 @@ footer .rrss li a i {
     font-weight: 600;
 }
 
+
+/*Seccion Iniciativa Popular*/
+
+.seccion-iniciatipa-popular{
+    margin-bottom: 100px;
+}
+
+.seccion-iniciatipa-popular .presentacion-seccion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-iniciatipa-popular img {
+    width: 70%!important;
+    padding: 50px 50px 30px 50px;
+}
+
+.iniciativas-propuestas h2 {
+    border: 0px;
+    text-align: center;
+}
+
+.iniciativas-propuestas .carousel {
+    margin-top: 30px;
+    min-height: 700px;
+}
+
+.iniciativas-propuestas .informacion-propuesta .informacion-datos img {
+    display: flex;
+    width: auto;
+    max-height: 70px;
+    margin: 5px auto 10px auto;
+}
+
+.iniciativas-propuestas .carousel-control-next-icon {
+    background-image: url(../img/arrow-carrousel-next.png)!important;
+}
+
+.iniciativas-propuestas .carousel-control-prev-icon {
+    background-image: url(../img/arrow-carrousel-prev.png)!important;
+  }
+
+.iniciativas-propuestas .carousel-control-prev-icon,
+.iniciativas-propuestas .carousel-control-next-icon {
+      width: 20px;
+      height: 32px;
+  }
+
+.iniciativas-propuestas .carousel-control-prev, .iniciativas-propuestas .carousel-control-next {
+      width: 5%;
+      height: 70%;
+  }
+
+.iniciativas-propuestas .carousel-inner .row{
+    padding: 0 5%;
+  }
+
+.v-desktop-carrousel{
+  display: block;
+}
+.v-tablet-carrousel{
+    display: none;
+}
+.v-movil-carrousel{
+    display: none;
+}
+
+@media(max-width:1200px){
+  .v-desktop-carrousel{
+    display: none;
+  }
+  .v-tablet-carrousel{
+      display: block;
+  }
+  .v-movil-carrousel{
+      display: none;
+  }
+  .seccion-iniciatipa-popular img {
+    width: 80%!important;
+}
+}
+
+@media(max-width:992px){
+  .iniciativas-propuestas{
+   max-width: 100%!important;
+}
+.seccion-iniciatipa-popular img {
+  width: 90%!important;
+}
+}
+
+@media(max-width:768px){
+  .v-desktop-carrousel{
+    display: none;
+  }
+  .v-tablet-carrousel{
+      display: none;
+  }
+  .v-movil-carrousel{
+      display: block;
+  }
+  .seccion-iniciatipa-popular img {
+    width: 100%!important;
+    padding: 50px 50px 30px 50px;
+}
+}
+
+@media(max-width:500px){
+  .seccion-iniciatipa-popular img {
+    width: 100%!important;
+    padding: 0px 0px 30px 0px;
+}
+.seccion-iniciatipa-popular {
+    margin-bottom: 50px;
+}
+}
 
 
 /*Mapa Constitucional - Seccion*/
