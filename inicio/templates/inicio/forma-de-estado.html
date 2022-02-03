@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Forma de Estado</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Forma de Estado</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">El estado</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">El Estado</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>“Una comunidad humana, fijada sobre un territorio propio, que posee una organización que resulta para ese grupo, en lo que respecta a las relaciones con sus miembros, una potencia suprema de acción, de mando y coerción”, <u>Carré de Malberg (1988).</u></p>
+                            <h4>¿Por qué tenemos un Estado?</h4>
+                            <p>Los Estados existen para cuidar a las personas y asegurar el bienestar de las sociedades. Para lograr este objetivo, las Constituciones establecen un conjunto de reglas y principios, que establecen las atribuciones de los órganos del Estado, limitan el poder público y determinan los fines que deben cumplir las instituciones.</p>
+                            <h4>¿Cómo se organiza el Estado?</h4>
+                            <p>Conjunto de normas de la Constitución sobre cómo se organiza el Estado. Tal como en los planos de una sala de máquinas, en los aspectos orgánicos nos encontraremos con las reglas sobre la función, los límites al poder, la posición en la estructura jerárquica y los requisitos para que las personas integren cada una de las piezas del Estado. Estas piezas se conocen como "Órganos", por lo que estas reglas también se conocen como los aspectos orgánicos de la Constitución.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Forma de Estado</h3>
+            <p>Manera en que se distribuye el poder entre la capital y el resto de los territorios existentes dentro de un Estado.</p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+               
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>2 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"> <span>Estado Unitario</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Estado Federal</span></button>
+                </div>
+                
+                <div class="tab-content" id="v-pills-tabContent">
+                   
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Estado Unitario</h4>
+                        <p>Sistema en el que existe un solo centro de impulsión político que, a su vez, concentra las funciones Ejecutiva, Legislativa y Judicial en órganos del Gobierno Central. En general, en un estado unitario todos los territorios están sometidos a las mismas reglas.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Cómo se organiza el Estado?</p>
+                        <h4>Estado Federal</h4>
+                        <p>Sistema de distribución del poder basado en el reconocimiento de la diversidad territorial dentro de un Estado Nación. Se basa en la existencia de unidades territoriales autónomas (Estados) y órganos generales que administran la relación entre estos y su representación en instancias internacionales (Gobierno Federal). El parlamento federal se compone por representantes de los Estados, para equilibrar la autonomía de estos con la capacidad de participar de las decisiones de carácter general. Normalmente, el poder se divide entre el poder central y los gobiernos de las unidades que componen la federación de manera que no haya topes entre las potestades de cada uno.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,883 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Iniciativa Popular{% endblock %}
+
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/ipn-seccion-header.jpg' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/ipn-seccion-headermovil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Iniciativa Popular</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container seccion-iniciatipa-popular wow animate__animated animate__fadeIn">
+     <div class="container">
+          <div class="row justify-content-md-center">
+              <div class="col-12 col-sm-12 col-md-10 col-lg-8 presentacion-seccion">
+                  <img src="{% static 'img/texto-ipn-seccion.png' %}" alt="" class="w-100">
+                  <a href="{% static 'img/manual-ipn.pdf' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Descargar manual</a>
+              </div>
+          </div>
+     </div>
+</section>
+
+<section class="infografia-ipn wow animate__animated animate__fadeIn">
+  <img src="{% static 'img/infografia-seccion-ipn-1.jpg' %}" alt="" class="w-100 infografia-desktop-ipn">
+  <img src="{% static 'img/infografia-seccion-ipn-1-movil.jpg' %}" alt="" class="w-100 infografia-movil-ipn">
+</section>
+
+
+<section class="container propuestas-seccion wow animate__animated animate__fadeIn iniciativas-propuestas">
+    <div class="row">
+
+      <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn">
+          <h2>A estas iniciativas nosotros adherimos</h2>
+          <div class="decoracion green"></div>
+      </div>
+
+     <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn v-desktop-carrousel">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <!--  <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div> -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+
+             <div class="row">
+               <!--iniciativas-->
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Democracia</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 17.606</b></p>
+                             <h2 class="titulo">Participación Ciudadana como Principio en la Nueva Constitución</h2>
+                             <p class="extracto">
+                              Democracia y Participación en Asuntos Públicos
+                            </p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Red para la Participación</p>
+                                  <img src="{% static 'img/logos-organizaciones/logo-rdp.png' %}" alt="logo" class="logo-organizacion">
+                                </div>
+                                <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                            </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/17606" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 18.202</b></p>
+                             <h2 class="titulo">Servicios Públicos Universales y de Calidad y Política Fiscal Universal y Justa para la Garantía de Derechos Sociales</h2>
+                             <p class="extracto">
+                               Que la nueva Constitución establezca un Estado Social y Democrático de Derechos.
+                             </p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Internacional de Servicios Públicos (ISP)</p>
+                                 <img src="{% static 'img/logos-organizaciones/psi-logo.png' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/18202" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="propuesta salud">
+                         <div class="informacion-propuesta">
+                             <h3 class="tema">Feminismo</h3>
+                             <p class="numero-propuesta">Iniciativa <b>N° 9.638</b></p>
+                             <h2 class="titulo">Derecho a los Cuidados</h2>
+                             <p class="extracto">
+                               Garantizar una educación pública moderna</p>
+                             <div class="informacion-datos">
+                                 <h4>Propuesta de:</h4>
+                                 <p>Comunidad Mujer y Núcleo Constitucional Universidad Alberto Hurtado</p>
+                                 <img src="{% static 'img/logos-organizaciones/logo-cm-nc.jpg' %}" alt="logo" class="logo-organizacion">
+                             </div>
+                             <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                         </div>
+                         <div class="bg-black">
+                             <div class="call-to-action">
+                                 <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/9638" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+              </div>
+
+          </div>
+
+
+          <div class="carousel-item">
+
+            <div class="row">
+              <!--iniciativas-->
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 5.574</b></p>
+                            <h2 class="titulo">Derechos de niños, niñas y adolescentes reconocidos y consagrados en la Nueva Constitución Política de la República</h2>
+                              <p class="extracto">
+                              Niños, niñas y adolescentes como titulares de derechos
+                            </p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Corporación Opción</p>
+                                <img src="{% static 'img/logos-organizaciones/opcion-logo.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/5574" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 59.118</b></p>
+                            <h2 class="titulo">Aguas para las comunidades y la naturaleza: desde el secano a la nueva Constitución</h2>
+                            <p class="extracto">
+                              Derecho humano al agua y estatuto constitucional del agua
+                            </p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Grupo de Investigación y Acción por el Agua</p>
+                                <img src="{% static 'img/logos-organizaciones/giaa-logo.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/59118" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 11.906</b></p>
+                            <h2 class="titulo">Reconocimiento Constitucional del derecho a migrar y de los Derechos de las Personas migrantes y Refugiadas como Chilenos en el Exterior</h2>
+                            <p class="extracto">
+                              Derechos de las personas migrantes y Chilenos en el Exterior</p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Chile Migra</p>
+                                <img src="{% static 'img/logos-organizaciones/logo-chilemigra.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/11906" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+             </div>
+
+          </div>
+          <div class="carousel-item">
+
+            <div class="row">
+              <!--iniciativas-->
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 21.782</b></p>
+                            <h2 class="titulo">El derecho a la Ciudad</h2>
+                            <p class="extracto">
+                              Mecanismos de equidad territorial</p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Ciudad Constituyente</p>
+                                <img src="{% static 'img/logos-organizaciones/ciudad-constituyente-logo.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/21782" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 9.026</b></p>
+                            <h2 class="titulo">Sistema Único de Salud, Universal, Plurinacional e Integrado para el nuevo Chile que estamos Construyendo</h2>
+                            <p class="extracto">
+                              El derecho a la salud como  un derecho humano, fundamental y social
+                            </p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Cabildo "Salud, un Derecho"</p>
+                                <img src="{% static 'img/logos-organizaciones/logo-cabildo.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/9026" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="propuesta salud">
+                        <div class="informacion-propuesta">
+                            <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                            <p class="numero-propuesta">Iniciativa <b>N° 6.470</b></p>
+                            <h2 class="titulo">Reconocimiento Constitucional de las Personas con Discapacidad</h2>
+                            <p class="extracto">
+                              El reconocimiento a las Personas con Discapacidad como sujetas y sujetos con derechos a la vida independiente, autonomía, y al ejercicio pleno de nuestro derechos y capacidades</p>
+                            <div class="informacion-datos">
+                                <h4>Propuesta de:</h4>
+                                <p>Colectivo Nacional por la Discapacidad</p>
+                                <img src="{% static 'img/logos-organizaciones/cpld-logo.png' %}" alt="logo" class="logo-organizacion">
+                            </div>
+                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                        </div>
+                        <div class="bg-black">
+                            <div class="call-to-action">
+                                <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/6470" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+             </div>
+
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn v-tablet-carrousel">
+       <div id="carouselExampleIndicators-tablet" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-inner">
+           <div class="carousel-item active">
+
+              <div class="row">
+                <!--iniciativas-->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                   <div class="propuesta salud">
+                       <div class="informacion-propuesta">
+                           <h3 class="tema">Democracia</h3>
+                           <p class="numero-propuesta">Iniciativa <b>N° 17.606</b></p>
+                           <h2 class="titulo">Participación Ciudadana como Principio en la Nueva Constitución</h2>
+                           <p class="extracto">
+                            Democracia y Participación en Asuntos Públicos
+                          </p>
+                           <div class="informacion-datos">
+                               <h4>Propuesta de:</h4>
+                               <p>Red para la Participación</p>
+                                <img src="{% static 'img/logos-organizaciones/logo-rdp.png' %}" alt="logo" class="logo-organizacion">
+                              </div>
+                              <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                          </div>
+                       <div class="bg-black">
+                           <div class="call-to-action">
+                               <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/17606" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                   <div class="propuesta salud">
+                       <div class="informacion-propuesta">
+                           <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                           <p class="numero-propuesta">Iniciativa <b>N° 18.202</b></p>
+                           <h2 class="titulo">Servicios Públicos Universales y de Calidad y Política Fiscal Universal y Justa para la Garantía de Derechos Sociales</h2>
+                           <p class="extracto">
+                             Que la nueva Constitución establezca un Estado Social y Democrático de Derechos.
+                           </p>
+                           <div class="informacion-datos">
+                               <h4>Propuesta de:</h4>
+                               <p>Internacional de Servicios Públicos (ISP)</p>
+                               <img src="{% static 'img/logos-organizaciones/psi-logo.png' %}" alt="logo" class="logo-organizacion">
+                           </div>
+                           <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                       </div>
+                       <div class="bg-black">
+                           <div class="call-to-action">
+                               <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/18202" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+
+               </div>
+           </div>
+
+
+
+           <div class="carousel-item">
+              <div class="row">
+                <!--iniciativas-->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                   <div class="propuesta salud">
+                       <div class="informacion-propuesta">
+                           <h3 class="tema">Feminismo</h3>
+                           <p class="numero-propuesta">Iniciativa <b>N° 9.638</b></p>
+                           <h2 class="titulo">Derecho a los Cuidados</h2>
+                           <p class="extracto">
+                             Garantizar una educación pública moderna</p>
+                           <div class="informacion-datos">
+                               <h4>Propuesta de:</h4>
+                               <p>Comunidad Mujer y Núcleo Constitucional Universidad Alberto Hurtado</p>
+                               <img src="{% static 'img/logos-organizaciones/logo-cm-nc.jpg' %}" alt="logo" class="logo-organizacion">
+                           </div>
+                           <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                       </div>
+                       <div class="bg-black">
+                           <div class="call-to-action">
+                               <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/9638" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                   <div class="propuesta salud">
+                       <div class="informacion-propuesta">
+                           <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                           <p class="numero-propuesta">Iniciativa <b>N° 5.574</b></p>
+                           <h2 class="titulo">Derechos de niños, niñas y adolescentes reconocidos y consagrados en la Nueva Constitución Política de la República</h2>
+                             <p class="extracto">
+                             Niños, niñas y adolescentes como titulares de derechos
+                           </p>
+                           <div class="informacion-datos">
+                               <h4>Propuesta de:</h4>
+                               <p>Corporación Opción</p>
+                               <img src="{% static 'img/logos-organizaciones/opcion-logo.png' %}" alt="logo" class="logo-organizacion">
+                           </div>
+                           <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                       </div>
+                       <div class="bg-black">
+                           <div class="call-to-action">
+                               <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/5574" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+
+               </div>
+           </div>
+
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 59.118</b></p>
+                          <h2 class="titulo">Aguas para las comunidades y la naturaleza: desde el secano a la nueva Constitución</h2>
+                          <p class="extracto">
+                            Derecho humano al agua y estatuto constitucional del agua
+                          </p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Grupo de Investigación y Acción por el Agua</p>
+                              <img src="{% static 'img/logos-organizaciones/giaa-logo.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/59118" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 11.906</b></p>
+                          <h2 class="titulo">Reconocimiento Constitucional del derecho a migrar y de los Derechos de las Personas migrantes y Refugiadas como Chilenos en el Exterior</h2>
+                          <p class="extracto">
+                            Derechos de las personas migrantes y Chilenos en el Exterior</p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Chile Migra</p>
+                              <img src="{% static 'img/logos-organizaciones/logo-chilemigra.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/11906" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+              </div>
+           </div>
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 21.782</b></p>
+                          <h2 class="titulo">El derecho a la Ciudad</h2>
+                          <p class="extracto">
+                            Mecanismos de equidad territorial</p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Ciudad Constituyente</p>
+                              <img src="{% static 'img/logos-organizaciones/ciudad-constituyente-logo.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/21782" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 9.026</b></p>
+                          <h2 class="titulo">Sistema Único de Salud, Universal, Plurinacional e Integrado para el nuevo Chile que estamos Construyendo</h2>
+                          <p class="extracto">
+                            El derecho a la salud como  un derecho humano, fundamental y social
+                          </p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Cabildo "Salud, un Derecho"</p>
+                              <img src="{% static 'img/logos-organizaciones/logo-cabildo.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/9026" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+              </div>
+           </div>
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 6.470</b></p>
+                          <h2 class="titulo">Reconocimiento Constitucional de las Personas con Discapacidad</h2>
+                          <p class="extracto">
+                            El reconocimiento a las Personas con Discapacidad como sujetas y sujetos con derechos a la vida independiente, autonomía, y al ejercicio pleno de nuestro derechos y capacidades</p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Colectivo Nacional por la Discapacidad</p>
+                              <img src="{% static 'img/logos-organizaciones/cpld-logo.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/6470" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+              </div>
+           </div>
+
+
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-tablet" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-tablet" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+         </button>
+       </div>
+       </div>
+
+
+
+
+
+
+
+
+      <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn v-movil-carrousel">
+       <div id="carouselExampleIndicators-movil" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-inner">
+           <div class="carousel-item active">
+
+              <div class="row">
+                <!--iniciativas-->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                   <div class="propuesta salud">
+                       <div class="informacion-propuesta">
+                           <h3 class="tema">Democracia</h3>
+                           <p class="numero-propuesta">Iniciativa <b>N° 17.606</b></p>
+                           <h2 class="titulo">Participación Ciudadana como Principio en la Nueva Constitución</h2>
+                           <p class="extracto">
+                            Democracia y Participación en Asuntos Públicos
+                          </p>
+                           <div class="informacion-datos">
+                               <h4>Propuesta de:</h4>
+                               <p>Red para la Participación</p>
+                                <img src="{% static 'img/logos-organizaciones/logo-rdp.png' %}" alt="logo" class="logo-organizacion">
+                              </div>
+                              <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                          </div>
+                       <div class="bg-black">
+                           <div class="call-to-action">
+                               <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/17606" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+
+               </div>
+           </div>
+
+
+           <div class="carousel-item">
+              <div class="row">
+                <!--iniciativas-->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                   <div class="propuesta salud">
+                       <div class="informacion-propuesta">
+                           <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                           <p class="numero-propuesta">Iniciativa <b>N° 18.202</b></p>
+                           <h2 class="titulo">Servicios Públicos Universales y de Calidad y Política Fiscal Universal y Justa para la Garantía de Derechos Sociales</h2>
+                           <p class="extracto">
+                             Que la nueva Constitución establezca un Estado Social y Democrático de Derechos.
+                           </p>
+                           <div class="informacion-datos">
+                               <h4>Propuesta de:</h4>
+                               <p>Internacional de Servicios Públicos (ISP)</p>
+                               <img src="{% static 'img/logos-organizaciones/psi-logo.png' %}" alt="logo" class="logo-organizacion">
+                           </div>
+                           <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                       </div>
+                       <div class="bg-black">
+                           <div class="call-to-action">
+                               <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/18202" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+
+               </div>
+           </div>
+
+
+           <div class="carousel-item">
+              <div class="row">
+                <!--iniciativas-->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                   <div class="propuesta salud">
+                       <div class="informacion-propuesta">
+                           <h3 class="tema">Feminismo</h3>
+                           <p class="numero-propuesta">Iniciativa <b>N° 9.638</b></p>
+                           <h2 class="titulo">Derecho a los Cuidados</h2>
+                           <p class="extracto">
+                             Garantizar una educación pública moderna</p>
+                           <div class="informacion-datos">
+                               <h4>Propuesta de:</h4>
+                               <p>Comunidad Mujer y Núcleo Constitucional Universidad Alberto Hurtado</p>
+                               <img src="{% static 'img/logos-organizaciones/logo-cm-nc.jpg' %}" alt="logo" class="logo-organizacion">
+                           </div>
+                           <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                       </div>
+                       <div class="bg-black">
+                           <div class="call-to-action">
+                               <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/9638" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+
+               </div>
+           </div>
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 5.574</b></p>
+                          <h2 class="titulo">Derechos de niños, niñas y adolescentes reconocidos y consagrados en la Nueva Constitución Política de la República</h2>
+                            <p class="extracto">
+                            Niños, niñas y adolescentes como titulares de derechos
+                          </p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Corporación Opción</p>
+                              <img src="{% static 'img/logos-organizaciones/opcion-logo.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/5574" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+              </div>
+           </div>
+
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 59.118</b></p>
+                          <h2 class="titulo">Aguas para las comunidades y la naturaleza: desde el secano a la nueva Constitución</h2>
+                          <p class="extracto">
+                            Derecho humano al agua y estatuto constitucional del agua
+                          </p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Grupo de Investigación y Acción por el Agua</p>
+                              <img src="{% static 'img/logos-organizaciones/giaa-logo.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/59118" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+              </div>
+           </div>
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 11.906</b></p>
+                          <h2 class="titulo">Reconocimiento Constitucional del derecho a migrar y de los Derechos de las Personas migrantes y Refugiadas como Chilenos en el Exterior</h2>
+                          <p class="extracto">
+                            Derechos de las personas migrantes y Chilenos en el Exterior</p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Chile Migra</p>
+                              <img src="{% static 'img/logos-organizaciones/logo-chilemigra.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/11906" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+              </div>
+
+           </div>
+
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 21.782</b></p>
+                          <h2 class="titulo">El derecho a la Ciudad</h2>
+                          <p class="extracto">
+                            Mecanismos de equidad territorial</p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Ciudad Constituyente</p>
+                              <img src="{% static 'img/logos-organizaciones/ciudad-constituyente-logo.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/21782" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+              </div>
+           </div>
+
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Derecho Económicos, Sociales y Culturales</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 9.026</b></p>
+                          <h2 class="titulo">Sistema Único de Salud, Universal, Plurinacional e Integrado para el nuevo Chile que estamos Construyendo</h2>
+                          <p class="extracto">
+                            El derecho a la salud como  un derecho humano, fundamental y social
+                          </p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Cabildo "Salud, un Derecho"</p>
+                              <img src="{% static 'img/logos-organizaciones/logo-cabildo.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/9026" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+              </div>
+           </div>
+
+           <div class="carousel-item">
+
+             <div class="row">
+               <!--iniciativas-->
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                  <div class="propuesta salud">
+                      <div class="informacion-propuesta">
+                          <h3 class="tema">Grupos Históricamente Excluidos</h3>
+                          <p class="numero-propuesta">Iniciativa <b>N° 6.470</b></p>
+                          <h2 class="titulo">Reconocimiento Constitucional de las Personas con Discapacidad</h2>
+                          <p class="extracto">
+                            El reconocimiento a las Personas con Discapacidad como sujetas y sujetos con derechos a la vida independiente, autonomía, y al ejercicio pleno de nuestro derechos y capacidades</p>
+                          <div class="informacion-datos">
+                              <h4>Propuesta de:</h4>
+                              <p>Colectivo Nacional por la Discapacidad</p>
+                              <img src="{% static 'img/logos-organizaciones/cpld-logo.png' %}" alt="logo" class="logo-organizacion">
+                          </div>
+                          <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
+                      </div>
+                      <div class="bg-black">
+                          <div class="call-to-action">
+                              <a href="https://iniciativas.chileconvencion.cl/m/iniciativa_popular/o/6470" class="btn-lcen" target="_blank">Apoyar iniciativa</a>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+              </div>
+           </div>
+
+
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-movil" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-movil" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+         </button>
+       </div>
+       </div>
+
+
+
+
+</div>
+</section>
+
+
+
+{% endblock %}

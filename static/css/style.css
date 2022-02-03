@@ -1,5 +1,4 @@
-/*HOJA DE ESTILOS FINAL*/
-
+/*Contenedores y Filas*/
 .container-fluid {
     padding: 0px;
 }
@@ -8,14 +7,36 @@
     margin: 0px;
 }
 
-.navbar-nav .dropdown-menu {
-    position: absolute;
+.w-85 {
+    width: 85% !important;
+    margin: auto;
 }
 
-header .ingresar:hover {
-    overflow: visible;
+.seccion-info img {
+    width: 85%;
+    display: flex;
+    align-self: center;
+    margin: auto;
 }
 
+:focus-visible {
+    outline: 0px !important;
+}
+
+a:-webkit-any-link:focus-visible {
+    outline-offset: 0px!important;
+}
+
+:focus-visible {
+    outline: 0px !important;
+}
+
+:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Modales */
 .modal-header {
     border-bottom: 0px;
     margin: 30px 20px;
@@ -49,6 +70,8 @@ header .ingresar:hover {
     }
 }
 
+
+/*Menu Icono Movil*/
 .navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     background-image: url(../img/cerrar-menu.svg) !important;
     zoom: 0.8;
@@ -72,16 +95,64 @@ header .ingresar:hover {
     border-left: 0;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0px;
-    transition: 0.5s all;
+
+/*Header Submenu - Hover*/
+@media(min-width: 992px) {
+
+    /*Dropdown efecto al Hover*/
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0px;
+        transition: 0.5s all;
+    }
 }
 
-/*Estilos Generales Textos*/
 
+/*Textos - fuentes tamaño y estilos*/
 body {
     font-size: 14px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-left: 8px solid;
+    color: black;
+    padding: 10px 0px 10px 20px;
+}
+
+h3,
+h4 {
+    font-size: 1.6em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: black;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 400;
+    color: black;
+    letter-spacing: 0px;
+    line-height: inherit;
+}
+
+a {
+    transition: 0.5s all;
 }
 
 p,
@@ -99,45 +170,12 @@ select,
 button,
 label,
 textarea {
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum'on, 'lnum'on;
     font-family: 'Raleway', sans-serif !important;
 }
 
-h1 {
-    font-size: 3em;
-}
 
-h2 {
-    font-size: 2em;
-    font-weight: 900;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    border-left: 8px solid;
-    padding: 10px 0px 10px 20px;
-    margin-bottom: 30px;
-    color: black;
-}
-
-h3,
-h4 {
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: black;
-}
-
-p {
-    font-size: 1.1em;
-    font-weight: 400;
-    color: black;
-    letter-spacing: 0px;
-    line-height: inherit;
-}
-
-a {
-    transition: 0.5s all;
-}
-
+/*Botones Estilos*/
 .btn-lcen {
     font-size: 1em;
     font-weight: 800;
@@ -149,45 +187,21 @@ a {
     background: #75AADB;
     border: 0px;
     border-radius: 3px;
-    transition: 0.5s all;
     padding: 8px 20px;
-    margin-top: 20px;
+    margin: 20px auto;
     overflow: hidden;
 }
 
-.hvr-sweep-to-right:before {
+.btn-lcen:before {
     background: #CC0000 !important;
 }
 
-.linea-decoracion {
-    width: 40px;
-    height: 8px;
-    margin: 15px 0px;
+.btn-close:focus {
+    box-shadow: 0 0 0 0rem rgb(13 110 253 / 0%) !important;
 }
 
-.decoracion {
-    width: 40px;
-    height: 8px;
-    display: flex;
-    justify-content: center;
-    margin: 15px auto;
-}
-
-/*img {
-    width: 100%;
-}*/
-
-.no-bg {
-    background: transparent !important;
-}
-
-.w-85 {
-    width: 85% !important;
-    margin: auto;
-}
 
 /*Colores LCEN*/
-
 .yellow {
     background: #FFD700;
 }
@@ -204,17 +218,38 @@ a {
     background: #008000;
 }
 
+.violeta {
+    background: #AB47BC;
+}
+
+.no-bg {
+    background: transparent !important;
+}
+
+
+/*Lineas decoracion*/
+.linea-decoracion {
+    width: 40px;
+    height: 8px;
+    margin: 15px 0px;
+}
+
+.decoracion {
+    width: 40px;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+}
+
+
 /*Header*/
 
 header {
     background: white;
     box-shadow: 0px 0px 7px -2px rgb(0 0 0 / 25%);
     -webkit-box-shadow: 0px 0px 7px -2px rgb(0 0 0 / 25%);
-    -moz-box-shadow: -0px -0px 7px -2px rgba(0, 0, 0, 0.25);
-}
-
-header .container {
-    max-width: 80% !important;
+    -moz-box-shadow: 0px 0px 7px -2px rgba(0 0 0 / 25%);
 }
 
 header nav {
@@ -240,15 +275,15 @@ header ul.navbar-nav {
 }
 
 header ul.navbar-nav li {
-    margin: 0% 0.5%;
+    margin: 0px 10px;
 }
 
 header ul.navbar-nav li a {
-    color: black;
     font-size: 0.9em;
-    text-transform: uppercase;
     font-weight: 900;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
+    color: black;
     padding: 32px 8px 40px 8px;
     border-top: 8px solid transparent;
 }
@@ -258,49 +293,278 @@ header ul.navbar-nav li a:hover {
     border-top: 8px solid #75AADB;
 }
 
-header .ingresar {
-    margin-left: 15px;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-header .ingresar:hover {
-    overflow: visible;
-}
-
-header .ingresar > a {
-    margin-top: 0px !important;
-    padding: 8px 15px 8px 15px !important;
-    border-top: 0px !important;
-    color: white !important;
-    background: black;
-}
-
-header ul.navbar-nav li ul.dropdown-menu {
+header ul.navbar-nav li > ul.dropdown-menu {
     border: 0px;
     border-top: 8px solid #FFD700;
     border-radius: 0px;
     padding: 0px;
     box-shadow: 0px 0px 7px -2px rgb(0 0 0 / 25%);
     -webkit-box-shadow: 0px 0px 7px -2px rgb(0 0 0 / 25%);
-    -moz-box-shadow: -0px -0px 7px -2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 7px -2px rgba(0 0 0 / 25%);
 }
 
-header .dropdown-menu li {
+header ul.navbar-nav li > .dropdown-menu li {
     margin: 0px !important;
     padding: 0px !important;
 }
 
-header ul.navbar-nav li .dropdown-menu a {
-    padding: 20px 40px 20px 40px !important;
+header ul.navbar-nav li > .dropdown-menu li a {
+    font-size: 0.8em;
+    padding: 18px 25px;
     border-top: 0px solid transparent;
-    font-size: 0.9em !important;
 }
 
-/*HOME*/
+header .dropdown-item:active {
+    background-color: #e9ecef !important;
+    background-color: transparent !important;
+}
+
+header ul.dropdown-menu.show {
+    margin: 0px;
+}
+
+header .nav-link:focus {
+    color: black !important;
+}
+
+/* Header - Media query para movil*/
+@media(min-width: 992px) {}
+
+
+/*Footer LCeN*/
+.decoracion-colores {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.decoracion-colores .yellow {
+    height: 8px;
+    width: 20%;
+}
+
+.decoracion-colores .blue {
+    height: 8px;
+    width: 20%;
+}
+
+.decoracion-colores .green {
+    height: 8px;
+    width: 20%;
+}
+
+.decoracion-colores .red {
+    height: 8px;
+    width: 40%;
+}
+
+footer {
+    padding-top: 80px !important;
+    background: url(../img/bg-textura-papel.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer h3 {
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+footer .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+
+footer .logo img {
+    margin-bottom: 60px;
+    width: 350px;
+    align-self: center;
+}
+
+footer .impulsado {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+footer .apoyo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+footer .logos-organizaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .logos-organizaciones .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: auto;
+    padding: 0px;
+    margin: 20px;
+}
+
+footer .collage-1,
+footer .collage-2 {
+    padding: 0px;
+    display: flex;
+    align-items: flex-end;
+}
+
+footer .collage-1 img {
+    width: 100%;
+}
+
+footer .collage-2 img {
+    width: 100%;
+}
+
+footer .redes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+footer .redes p {
+    font-size: 1.2em;
+    font-weight: 900;
+    text-align: center;
+    color: black;
+    letter-spacing: 0.5px;
+}
+
+footer .redes .rrss {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    border-top: 8px solid #FFD700;
+    padding: 0px;
+    margin: 0px 0px 100px 0px;
+    width: 100%;
+}
+
+footer .rrss li {
+    list-style: none;
+    padding: 10px;
+}
+
+footer .rrss li a {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+footer .rrss li a:hover {
+    opacity: 1;
+}
+
+footer .rrss li a i {
+    font-size: 2.5em;
+    color: black;
+}
+
+
+/*Formularios Estilos*/
+.formulario {
+    width: 100%;
+    padding: 0px 0px 0px 50px;
+}
+
+.formulario select.form-select option:hover {
+    color: white;
+    background: #008000;
+}
+
+.formulario label {
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0px;
+    color: black;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+}
+
+.formulario input {
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+    background: white;
+}
+
+.formulario select {
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+}
+
+.formulario option {
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: black;
+    background: white;
+    border: 0px;
+    padding: 20px 0px;
+}
+
+.formulario input#formFileMultiple {
+    border: 1px solid #ced4da;
+}
+
+.formulario input#formFileMultiple:hover {
+    border: 1px solid #ced4da !important;
+}
+
+.formulario input#formFileMultiple:focus {
+    border: 1px solid #ced4da !important;
+}
+
+.formulario textarea {
+    font-size: 1em;
+    font-weight: 400;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border: 3px solid #FFD700 !important;
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: none !important;
+}
+
 
 /* Portada*/
-
 .portada-gif {
     background: url(../img/loop-lcen.gif);
     height: 580px;
@@ -332,8 +596,6 @@ header ul.navbar-nav li .dropdown-menu a {
 
 .portada-gif h1 {
     text-align: center;
-    font-weight: 900;
-    text-transform: uppercase;
     color: white;
     line-height: normal;
     text-shadow: 0px 0px 3px rgb(0 0 0 / 50%);
@@ -364,7 +626,6 @@ header ul.navbar-nav li .dropdown-menu a {
 
 
 /*Que es la Constitucion es nuestra*/
-
 .que-es-lcen {
     padding-top: 80px;
     padding-bottom: 130px;
@@ -379,12 +640,8 @@ header ul.navbar-nav li .dropdown-menu a {
     padding-right: 20px;
 }
 
-.que-es-lcen img {
-    width: 100%;
-}
 
-/*A ponerse con propuestas*/
-
+/*Llamado "A ponerse con propuestas" - Home */
 .a-ponerse-con-propuestas {
     background: url(../img/bg-textura-papel.jpg);
     background-position: center;
@@ -432,7 +689,6 @@ header ul.navbar-nav li .dropdown-menu a {
 
 
 /*Propuestas Home*/
-
 .propuestas-home {
     padding: 80px 0px;
 }
@@ -491,8 +747,7 @@ header ul.navbar-nav li .dropdown-menu a {
 }
 
 
-/* Propuestas Presentación corta */
-
+/* Propuestas Presentación corta - HOME */
 .propuesta {
     border: 4px solid black;
     padding: 0px;
@@ -643,69 +898,7 @@ header ul.navbar-nav li .dropdown-menu a {
 }
 
 
-/*Convencionales Home*/
-
-.convencionales-home {
-    background: #75AADB;
-    position: relative;
-    padding: 50px 0px 60px 0px;
-}
-
-.convencionales-home h2 {
-    font-size: 4.5em;
-    text-align: center;
-    color: white;
-    border: 0px;
-    margin: 0px auto 10px auto;
-    padding: 0px;
-}
-
-.convencionales-home p {
-    text-align: center;
-    color: white;
-    width: 60%;
-    margin: 0 auto;
-    padding-bottom: 20px;
-}
-
-.convencionales-home .call-to-action {
-    display: flex;
-    justify-content: center;
-    z-index: 2;
-}
-
-.convencionales-home .call-to-action a {
-    background: #CC0000;
-    margin-top: 0px;
-}
-
-.convencionales-home .call-to-action a:hover {
-    color: #CC0000;
-}
-
-.convencionales-home .call-to-action a:before {
-    background: white !important;
-}
-
-.convencionales-home img.medialuna-adorno-convencionales {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 60%;
-    z-index: 0;
-}
-
-.convencionales-home img.collage-constitucion-convencionales {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    width: 350px;
-    z-index: 1;
-}
-
-
 /*Organizaciones Presentes*/
-
 .organizaciones-home {
     padding: 80px 0px;
     background: url(../img/bg-textura-papel.jpg);
@@ -782,168 +975,189 @@ header ul.navbar-nav li .dropdown-menu a {
 }
 
 
-/*Footer LCeN*/
-
-.decoracion-colores {
-    width: 100%;
+/*Iniciativa Popular de Norma - Home */
+.iniciativa-popular {
+    background-image: url(../img/bg-home-ipn.jpg);
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.decoracion-colores .yellow {
-    height: 8px;
-    width: 20%;
-}
-
-.decoracion-colores .blue {
-    height: 8px;
-    width: 20%;
-}
-
-.decoracion-colores .green {
-    height: 8px;
-    width: 20%;
-}
-
-.decoracion-colores .red {
-    height: 8px;
-    width: 40%;
-}
-
-footer {
-    padding-top: 80px !important;
-    background: url(../img/bg-textura-papel.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-}
-
-footer h3 {
-    font-size: 1.5em;
-    text-align: center;
-    padding-bottom: 10px;
+    padding: 50px 0px;
     margin-bottom: 0px;
+    position: relative;
 }
 
-footer .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px auto;
+.iniciativa-popular .img {
+    width: 20%;
+    position: absolute;
+    bottom: -40px;
 }
 
-footer .logo img {
-    margin-bottom: 60px;
-    width: 350px;
-    align-self: center;
+.iniciativa-popular .img.img-uno {
+    left: 0px;
 }
 
-footer .impulsado {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-bottom: 60px;
+.iniciativa-popular .img.img-dos {
+    right: 0px;
 }
 
-footer .apoyo {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-bottom: 60px;
-}
-
-footer .logos-organizaciones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-footer .logos-organizaciones .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: auto;
-    padding: 0px;
-    margin: 20px;
-}
-
-footer .collage-1,
-footer .collage-2 {
-    padding: 0px;
-    display: flex;
-    align-items: flex-end;
-}
-
-footer .collage-1 img {
+.iniciativa-popular .img img {
     width: 100%;
 }
 
-footer .collage-2 img {
-    width: 100%;
-}
-
-footer .redes {
+.iniciativa-popular .informacion {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 0px 5%;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     flex-direction: column;
+    align-items: center;
 }
 
-footer .redes p {
-    font-size: 1.2em;
-    font-weight: 900;
+.iniciativa-popular .informacion h3 {
     text-align: center;
-    color: black;
-    letter-spacing: 0.5px;
-}
-
-footer .redes .rrss {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    border-top: 8px solid #FFD700;
-    padding: 0px;
-    margin: 0px 0px 100px 0px;
-    width: 100%;
-}
-
-
-footer .rrss li {
-    list-style: none;
-    padding: 10px;
-}
-
-footer .rrss li a {
-    text-decoration: none;
-    opacity: 0.6;
-}
-
-footer .rrss li a:hover {
-    opacity: 1;
-}
-
-footer .rrss li a i {
+    color: white;
     font-size: 2.5em;
-    color: black;
+    margin-bottom: 5px;
+}
+
+.iniciativa-popular .informacion p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.iniciativa-popular .boton-manual-convencion {
+    background: #CC0000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.iniciativa-popular .boton-manual-convencion.hvr-sweep-to-right:before {
+    background: black !important;
+}
+
+/*Infografia IPN*/
+
+.infografia-ipn{
+  margin-bottom: 100px;
+}
+
+.infografia-ipn img.infografia-desktop-ipn{
+  display: block;
+}
+.infografia-ipn img.infografia-movil-ipn{
+  display: none;
+}
+
+@media(max-width:768px){
+  .infografia-ipn img.infografia-desktop-ipn{
+    display: none;
+  }
+  .infografia-ipn img.infografia-movil-ipn{
+    display: block;
+  }
+  .infografia-ipn{
+    margin-bottom: 50px;
+  }
+  .iniciativa-popular .informacion p {
+    text-align: center;
+    font-size: 1em;
+}
 }
 
 
+/*Convencionales Home*/
+.convencionales-home {
+    background-image: url(../img/bg-home-ipn.jpg);
+    position: relative;
+    padding: 50px 0px 60px 0px;
+}
 
-/*SECCIONES INTERNAS*/
+.convencionales-home h2 {
+    font-size: 4.5em;
+    text-align: center;
+    color: white;
+    border: 0px;
+    margin: 0px auto 10px auto;
+    padding: 0px;
+}
 
-/*Banner portadas secciones internas*/
+.convencionales-home p {
+    text-align: center;
+    color: white;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
 
+.convencionales-home .call-to-action {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.convencionales-home .call-to-action a {
+    background: #CC0000;
+    margin-top: 0px;
+}
+
+.convencionales-home .call-to-action a:hover {
+    color: white;
+}
+
+.convencionales-home .call-to-action a:before {
+    background: black !important;
+}
+
+.convencionales-home img.medialuna-adorno-convencionales {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 60%;
+    z-index: 0;
+}
+
+.convencionales-home img.collage-constitucion-convencionales {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 350px;
+    z-index: 1;
+}
+
+
+/*Mapa Constitucional - Home*/
+.mapa-constitucional-home {
+    margin-bottom: 100px;
+}
+
+.mapa-constitucional-home h2 {
+    border-color: #CC0000;
+}
+
+
+/*Constitucion Feminista - Home*/
+.constitucion-feminista-home {
+    margin: 100px auto;
+}
+
+.constitucion-feminista-home h2 {
+    border-color: #AB47BC;
+}
+
+.constitucion-feminista-home a {
+    background: #008000;
+}
+
+.constitucion-feminista-home a:before {
+    background: #AB47BC !important;
+}
+
+
+/*BANNER PORTADA SECCIONES INTERNAS*/
 .portada-lcen-colores {
     margin-top: 98px;
     position: relative;
+    margin-bottom: 70px;
 }
 
 .portada-lcen-colores img {
@@ -974,7 +1188,7 @@ footer .rrss li a i {
 }
 
 .portada-lcen-colores ol.breadcrumb li {
-    font-size: 1.25em !important;
+    font-size: 1.2em !important;
     color: black;
     font-weight: 800;
 }
@@ -990,8 +1204,844 @@ footer .rrss li a i {
     text-decoration: underline;
 }
 
-/*Que es*/
 
+/*Portada Collage Secciones - Secciones de Registro, subir propuesta e inicio de sesión usuarios*/
+.portada-collage-lcen {
+    background: url(../img/bg-portada-secciones-papel.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding: 25px 0px;
+    margin-top: 98px;
+    width: 100%;
+}
+
+.portada-collage-lcen .decoracion {
+    display: none;
+}
+
+.portada-collage-lcen img {
+    padding-top: 20px;
+    width: 95%;
+}
+
+.portada-collage-lcen .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.portada-collage-lcen .titulo .informacion {
+    margin-left: 20px;
+}
+
+.portada-collage-lcen .informacion nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.portada-collage-lcen .titulo .informacion h1 {
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+.portada-collage-lcen ol.breadcrumb {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px auto;
+}
+
+.portada-collage-lcen ol.breadcrumb li {
+    font-size: 1.1em;
+    font-weight: 800;
+    color: black;
+}
+
+.portada-collage-lcen ol.breadcrumb li a {
+    font-size: 1em;
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.portada-collage-lcen ol.breadcrumb li a:hover {
+    color: #CC0000;
+}
+
+.portada-collage-lcen .breadcrumb-item + .breadcrumb-item::before {
+    color: black;
+}
+
+
+/* Registro - Seccion */
+.ingresar-seccion {
+    padding: 50px 0px;
+}
+
+.seleccion-registro {
+    margin: 20px auto;
+    padding: 0px;
+}
+
+.registro-usuarios p {
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.seleccion-registro h3 {
+    font-size: 1.6em;
+    text-align: center;
+    padding-bottom: 40px;
+    margin-bottom: 0px;
+}
+
+.seleccionar {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.seleccionar a {
+    text-decoration: none;
+    padding: 0px 35px;
+    position: relative;
+}
+
+.seleccionar .icono {
+    position: relative;
+    transition: 0.5s all;
+}
+
+.seleccionar .decoracion-blue {
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    height: 100px;
+    width: 100%;
+    background: transparent;
+    z-index: -1;
+}
+
+.seleccionar a:hover .decoracion-blue {
+    background: #75AADB;
+}
+
+.seleccionar a p {
+    font-size: 1.3em;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: black;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 8px solid transparent;
+}
+
+.seleccionar a:hover p {
+    border-bottom: 8px solid #CC0000;
+}
+
+.registrate-cta {
+    margin: 0px 20px;
+    padding: 25px 0px;
+    border-top: 1px solid #b4b4b4;
+    border-bottom: 1px solid #b4b4b4;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.registrate-cta a {
+    margin: 0px 0px 0px 10px;
+    letter-spacing: 1px;
+}
+
+/*Registros Persona y Organización*/
+.registros {
+    padding: 80px 0px;
+}
+
+.registros .titular-seccion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.registros .img-icono-registro {
+    position: relative;
+}
+
+.registros .decoracion-img {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    background: #75AADB;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.registros .informacion {
+    padding-left: 35px;
+}
+
+.registros .informacion a {
+    font-size: 1em;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.registros .informacion a i {
+    color: #008000;
+    margin-right: 4px;
+}
+
+.registros .informacion h2 {
+    font-size: 1.8em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    padding-left: 0px;
+    border-left: 0px;
+}
+
+.registros .informacion h2 span {
+    padding: 3px 8px;
+    background: #CC0000;
+    color: white;
+}
+
+.registros .informacion p {
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*Ajustes formularios - Registro*/
+.registros form div {
+    width: 50%;
+    float: left;
+    padding: 0px 10px;
+}
+
+.registros form input.form-control {
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    background: white;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+}
+
+.registros form .form-select {
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    text-transform: uppercase;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+}
+
+.registros form option {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: black;
+    background: white;
+    border: 0px;
+    padding: 20px 0px;
+}
+
+.registros form input#formFileMultiple {
+    border: 1px solid #ced4da;
+}
+
+.registros form input#formFileMultiple:hover {
+    border: 1px solid #ced4da !important;
+}
+
+.registros form input#formFileMultiple:focus {
+    border: 1px solid #ced4da !important;
+}
+
+.registros form textarea {
+    font-size: 1em;
+    font-weight: 400;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+}
+
+.registros form .form-control:focus,
+.registros form .form-select:focus {
+    border: 3px solid #FFD700 !important;
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.registros form button.btn {
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+}
+
+
+/*Login - Ingreso*/
+.ingresar-seccion {
+    padding: 50px 0px;
+}
+
+.ingresar-seccion h3 {
+    font-size: 1.6em;
+    font-weight: 800;
+    text-align: center;
+    text-transform: inherit;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+.ingresar-seccion .cuentas-usuario {
+    display: flex;
+    justify-content: center;
+}
+
+.ingresar-seccion .cuentas-usuario a {
+    font-weight: 800;
+    letter-spacing: 1px;
+    width: auto;
+    background: #75AADB;
+    margin: 8px;
+}
+
+.ingresar-seccion span {
+    padding: 0px 15px;
+    font-weight: 400;
+}
+
+.ingresar-seccion form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.ingresar-seccion form input {
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    background: white;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+    width: 80%;
+}
+
+.ingresar-seccion form label {
+    font-size: 1em;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.ingresar-seccion input:focus-visible {
+    outline-offset: 0px;
+    border: 3px solid #FFD700;
+    background: transparent;
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.ingresar-seccion form .btn {
+    margin-bottom: 50px;
+}
+
+.recuperar-clave {
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.recuperar-clave p {
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+}
+
+.recuperar-clave a {
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    color: black;
+}
+
+.recuperar-clave a:hover {
+    color: #CC0000;
+}
+
+
+/*Subir Propuesta - Paso a paso*/
+.subir-propuesta {
+    padding: 80px 0px;
+}
+
+.subir-propuesta .informacion-ayuda {
+    background: rgba(117, 170, 219, 0.08);
+    border-top: 5px solid #FFD700;
+    padding: 25px 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.subir-propuesta .informacion-ayuda p.paso-propuesta {
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    background: #CC0000;
+    padding: 4px 10px;
+    margin-bottom: 0px;
+}
+
+.subir-propuesta .informacion-ayuda h2 {
+    font-size: 1.6em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    padding: 15px 0px;
+    margin-bottom: 10px;
+    border-left: 0px;
+}
+
+.subir-propuesta .informacion-ayuda h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: black;
+    padding: 5px 0px;
+    margin-bottom: 5px;
+}
+
+.subir-propuesta .informacion-ayuda > p.recomendacion::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c8";
+    font-size: 0.8em;
+    font-weight: 900;
+    color: #008000;
+    position: absolute;
+    left: 0px;
+}
+
+.subir-propuesta .informacion-ayuda p.recomendacion {
+    font-size: 0.9em;
+    color: black;
+    line-height: inherit;
+    position: relative;
+    padding-left: 20px;
+}
+
+.subir-propuesta .informacion-ayuda a {
+    font-weight: 800;
+    color: #75AADB;
+    transition: 0.5s all;
+}
+
+.subir-propuesta .informacion-ayuda a:hover {
+    color: #CC0000;
+}
+
+.subir-propuesta .contacto-ayuda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px 10px;
+}
+
+.subir-propuesta .contacto-ayuda h3 {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: white;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+}
+
+.subir-propuesta .contacto-ayuda p {
+    text-align: center;
+    color: white;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.subir-propuesta form {
+    padding-left: 30px;
+}
+
+.subir-propuesta form div {
+    width: 100%;
+}
+
+.subir-propuesta label h6 {
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: black;
+}
+
+.subir-propuesta form .form-select {
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+}
+
+.subir-propuesta form input.form-control {
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    background: white;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+}
+
+.subir-propuesta form option {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: black;
+    background: white;
+    border: 0px;
+    padding: 5px 0px;
+}
+
+.subir-propuesta form textarea {
+    font-size: 1em;
+    font-weight: 400;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+}
+
+.subir-propuesta form input#formFileMultiple {
+    border: 1px solid #ced4da;
+}
+
+.subir-propuesta form input#formFileMultiple:hover {
+    border: 1px solid #ced4da !important;
+}
+
+.subir-propuesta form input#formFileMultiple:focus {
+    border: 1px solid #ced4da !important;
+}
+
+.subir-propuesta form .form-control:focus,
+.subir-propuesta form .form-select:focus {
+    border: 3px solid #FFD700 !important;
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.subir-propuesta form button.btn {
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+}
+
+.subir-propuesta input .hvr-sweep-to-right:before {
+    background: #CC0000 !important;
+}
+
+/*Propuesta creada*/
+.propuesta-creada {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.propuesta-creada h2 {
+    font-size: 1.5em;
+    text-align: center;
+    border-left: 0px;
+    padding-left: 0px;
+}
+
+
+/* Cambio de Password */
+.section-password {
+    padding: 80px 0px;
+}
+
+.section-password h2 {
+    text-align: center;
+    border: 0px;
+    padding: 0px;
+}
+
+.section-password h2 img {
+    margin-right: 5px;
+}
+
+.section-password b {
+    font-weight: 900;
+}
+
+.section-password a {
+    margin: auto;
+}
+
+.section-password form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-password form div {
+    width: 100%;
+}
+
+.section-password form input.form-control {
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    background: white;
+    border: 3px solid #75AADB;
+    border-radius: 2px;
+}
+
+.section-password form ul {
+    margin-top: 10px;
+}
+
+.ingresar-seccion span {
+    padding: 0px;
+}
+
+.ingresar-seccion h3 {
+    padding-bottom: 30px;
+}
+
+.ingresar-seccion .seleccionar a {
+    margin: 0px 10px;
+}
+
+
+/* Propuestas Tarjetas - Compartir propuesta rrss */
+.espacio {
+    height: 100px;
+}
+
+.card-propuesta-lcen {
+    zoom: 0.8;
+    border: 0px;
+}
+
+.card-propuesta-lcen .card-bvody {
+    background: url(../img/bg-lcen-azul.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75%;
+    width: 100%;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-propuesta-lcen .logo-lcen {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    right: 0px;
+    padding-right: 40px;
+    top: 20px;
+}
+
+.card-propuesta-lcen p.n-propuesta {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 1.3em;
+}
+
+.card-propuesta-lcen .card-bvody h2 {
+    border-left: 0px;
+    padding-left: 0px;
+    color: white;
+    font-size: 2.2em;
+    font-weight: 900;
+}
+
+.card-propuesta-lcen p.info-card {
+    color: white;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
+.card-propuesta-lcen p b {
+    font-weight: 800;
+}
+
+.card-propuesta-lcen .logo-org {
+    height: 70px;
+    width: auto;
+}
+
+.card-propuesta-lcen .img-propuesta-decoracion {
+    position: absolute;
+    right: 20px;
+    bottom: 15%;
+    width: 55%;
+}
+
+.card-propuesta-lcen .creador-propuesta p {
+    margin-right: 10px;
+}
+
+.card-propuesta-lcen .adorno-lineas {
+    height: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-propuesta-lcen .adorno-lineas .green {
+    width: 15%;
+    height: 8px;
+}
+
+.card-propuesta-lcen .adorno-lineas .yellow {
+    width: 35%;
+    height: 8px;
+}
+
+.card-propuesta-lcen .adorno-lineas .blue {
+    width: 30%;
+    height: 8px;
+    background: #AB47BC;
+}
+
+.card-propuesta-lcen .adorno-lineas .red {
+    width: 20%;
+    height: 8px;
+}
+
+.card-propuesta-lcen .card-footer {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: url(../img/bg-textura-papel.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25%;
+    width: 100%;
+}
+
+.card-propuesta-lcen .card-footer h4 {
+    color: black;
+    text-transform: inherit;
+    font-size: 1.3em;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.card-propuesta-lcen .card-footer p.destacado-lcen-enlace {
+    padding: 5px 10px;
+    background: #CC0000;
+    color: white;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+
+
+/*SECCIONES INTERNAS*/
+
+/*Terminos y condiciones - Seccion */
+.terminosycondiciones {
+    padding: 70px 0px;
+}
+
+.terminosycondiciones h1 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: black;
+    padding: 8px 0px;
+}
+
+.terminosycondiciones h2 {
+    font-size: 1.3em;
+    text-transform: inherit;
+    padding-left: 0px;
+    border: 0px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: black;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+}
+
+.terminosycondiciones p {
+    font-size: 1em;
+    color: black;
+    padding-bottom: 6px;
+    margin-bottom: 0px;
+}
+
+.terminosycondiciones li {
+    font-size: 1em;
+    color: black;
+    padding-bottom: 5px;
+}
+
+
+/*¿Que es? - Seccion*/
 .que-es-lcen button {
     margin-left: 30px !important;
 }
@@ -1004,16 +2054,24 @@ footer .rrss li a i {
     padding: 60px 0px;
 }
 
+.infografia-que-es .item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
 .infografia-que-es p {
-    padding: 0% 10%;
+    padding: 0% 3%;
+    margin: 0px;
 }
 
 .infografia-que-es p span {
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: 900;
     color: white;
-    padding: 8px 15px;
+    padding: 6px 13px;
     border-radius: 2px;
+    margin-top: 5px;
 }
 
 .quienes-somos-lcen {
@@ -1052,6 +2110,10 @@ footer .rrss li a i {
 .quienes-somos-lcen li a {
     opacity: 0.6;
     transition: 0.5s all;
+    display: flex;
+    align-items: center;
+    margin: auto 15px;
+    height: 100%;
 }
 
 .quienes-somos-lcen li a:hover {
@@ -1059,10 +2121,29 @@ footer .rrss li a i {
 }
 
 .quienes-somos-lcen img {
-    height: 60px;
     width: auto;
     margin: 0px;
     padding: 0px;
+}
+
+.quienes-somos-lcen img.logo-fci {
+    height: 50px !important;
+}
+
+.quienes-somos-lcen img.logo-constituyo {
+    height: 80px !important;
+}
+
+.quienes-somos-lcen img.logo-gi {
+    height: 55px;
+}
+
+.quienes-somos-lcen img.logo-fes {
+    height: 60px;
+}
+
+.quienes-somos-lcen img img.logo-ned {
+    height: 50px !important;
 }
 
 .quienes-somos-lcen .apoyo {
@@ -1075,14 +2156,13 @@ footer .rrss li a i {
 }
 
 .quienes-somos-lcen .apoyo img {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s all;
 }
 
 .quienes-somos-lcen .apoyo img:hover {
     opacity: 1;
 }
-
 
 .quienes-somos-lcen .apoyo p {
     font-size: 1.3em;
@@ -1118,23 +2198,1098 @@ footer .rrss li a i {
 .quienes-somos-lcen .dropdown:hover .dropdown-menu .contenido {
     display: block;
     margin-top: 0px;
-    width: 300px;
+    width: 250px;
     border: 5px solid #75AADB;
     padding: 20px;
     left: 30px;
     border-radius: 2px;
+    background: #75AADB;
 }
 
 .quienes-somos-lcen li .contenido p {
     font-size: 0.9em;
     text-align: left;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 600;
+}
+
+
+/*Seccion Iniciativa Popular*/
+
+.seccion-iniciatipa-popular{
+    margin-bottom: 100px;
+}
+
+.seccion-iniciatipa-popular .presentacion-seccion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-iniciatipa-popular img {
+    width: 70%!important;
+    padding: 50px 50px 30px 50px;
+}
+
+.iniciativas-propuestas h2 {
+    border: 0px;
+    text-align: center;
+    color: grey;
+}
+
+.iniciativas-propuestas .carousel {
+    margin-top: 30px;
+    min-height: 700px;
+}
+
+.iniciativas-propuestas .informacion-propuesta .informacion-datos img {
+    display: flex;
+    width: auto;
+    max-height: 70px;
+    margin: 5px auto 10px auto;
+}
+
+.iniciativas-propuestas .carousel-control-next-icon {
+    background-image: url(../img/arrow-carrousel-next.png)!important;
+}
+
+.iniciativas-propuestas .carousel-control-prev-icon {
+    background-image: url(../img/arrow-carrousel-prev.png)!important;
+  }
+
+.iniciativas-propuestas .carousel-control-prev-icon,
+.iniciativas-propuestas .carousel-control-next-icon {
+      width: 20px;
+      height: 32px;
+  }
+
+.iniciativas-propuestas .carousel-control-prev, .iniciativas-propuestas .carousel-control-next {
+      width: 5%;
+      height: 70%;
+  }
+
+.iniciativas-propuestas .carousel-inner .row{
+    padding: 0 5%;
+  }
+
+.v-desktop-carrousel{
+  display: block;
+}
+.v-tablet-carrousel{
+    display: none;
+}
+.v-movil-carrousel{
+    display: none;
+}
+
+@media(max-width:1200px){
+  .v-desktop-carrousel{
+    display: none;
+  }
+  .v-tablet-carrousel{
+      display: block;
+  }
+  .v-movil-carrousel{
+      display: none;
+  }
+  .seccion-iniciatipa-popular img {
+    width: 80%!important;
+}
+}
+
+@media(max-width:992px){
+  .iniciativas-propuestas{
+   max-width: 100%!important;
+}
+.seccion-iniciatipa-popular img {
+  width: 90%!important;
+}
+}
+
+@media(max-width:768px){
+  .v-desktop-carrousel{
+    display: none;
+  }
+  .v-tablet-carrousel{
+      display: none;
+  }
+  .v-movil-carrousel{
+      display: block;
+  }
+  .seccion-iniciatipa-popular img {
+    width: 100%!important;
+    padding: 50px 50px 30px 50px;
+}
+}
+
+@media(max-width:500px){
+  .seccion-iniciatipa-popular img {
+    width: 100%!important;
+    padding: 0px 0px 30px 0px;
+}
+.seccion-iniciatipa-popular {
+    margin-bottom: 50px;
+}
+}
+
+
+/*Mapa Constitucional - Seccion*/
+.mapa-constitucional {
+    margin-top: 0px !important;
+}
+
+.mapa-temas-list {
+    margin-bottom: 60px;
+}
+
+.mapa-temas-list h2 {
+    color: black;
+    text-align: center;
+    padding-left: 0px;
+    border-left: 0px;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.mapa-temas-list a {
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.mapa-temas-list a img {
+    width: 80px;
+    margin: 0 auto;
+}
+
+.mapa-temas-list a:hover {
+    transition: 0.5s all;
+}
+
+.mapa-temas-list a:hover img {
+    background: #ebebeb;
+    border-radius: 10px;
+    transition: 0.5s all;
+}
+
+.mapa-temas-list a p {
+    font-weight: bold;
+    color: black;
+    margin-top: 5px;
+}
+
+
+/*Mapa Constitucional - Sección Interna*/
+.mapa-constitucional-terminos h3 {
+    font-size: 1.7em;
+}
+
+.mapa-constitucional-terminos p {
+    font-size: 1em !important;
+}
+
+.mapa-constitucional-terminos p a.enlaces {
+    color: #008000;
+    font-weight: 600;
+}
+
+.mapa-constitucional-terminos .breadcrumb li {
+    color: black;
+    font-weight: 800;
+}
+
+.mapa-constitucional-terminos .breadcrumb li a {
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+}
+
+.mapa-constitucional-terminos .btn-concepto-modal {
+    font-size: 0.9em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 5px 8px;
+    background: #CC0000;
+    border: 0px;
+    border-color: transparent;
+    border-radius: 2px;
+    transition: 0.5s all;
+}
+
+.mapa-constitucional-terminos .btn-concepto-modal:hover {
+    background: black;
+}
+
+.mapa-constitucional-terminos .modal-header {
+    margin: 40px 30px 0px 30px;
+    padding: 0px;
+}
+
+.mapa-constitucional-terminos .modal-body {
+    margin: 20px 30px 30px 30px;
+    padding: 0px;
+}
+
+.mapa-constitucional-terminos .modal-body p {
+    text-align: left;
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.mapa-constitucional-terminos .modal-body h4 {
+    text-align: left !important;
+    font-size: 1.1em;
+    color: black;
+    width: 100%;
+}
+
+.mapa-constitucional-terminos .nav-pills {
+    width: 30%;
+    align-items: flex-start;
+}
+
+.mapa-constitucional-terminos .nav-pills h4 {
+    font-size: 14px;
+}
+
+.mapa-constitucional-terminos .nav-pills .nav-link {
+    font-weight: bold;
+    text-align: left;
+    color: black;
+    background-color: transparent;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa-constitucional-terminos .nav-pills .nav-link:hover {
+    color: white;
+    transition: 0.4s all;
+}
+
+.mapa-constitucional-terminos .nav-pills .nav-link.active {
+    color: white;
+}
+
+.mapa-constitucional-terminos .nav-pills .nav-link::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f111";
+    color: #C4C4C4;
+}
+
+.mapa-constitucional-terminos .nav-pills .nav-link:hover::before {
+    color: #75AADB;
+}
+
+.mapa-constitucional-terminos .nav-pills .nav-link.active::before {
+    color: #75AADB;
+}
+
+.mapa-constitucional-terminos .nav-pills .nav-link span {
+    color: black;
+    background-color: transparent;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 5px;
+    justify-content: flex-start;
+    display: flex;
+    text-align: left;
+    line-height: normal;
+}
+
+.mapa-constitucional-terminos .nav-pills .nav-link:hover span {
+    color: white;
+    background-color: #75AADB;
+    transition: 0.4s all;
+    border-radius: 4px;
+}
+
+.mapa-constitucional-terminos .nav-pills .nav-link.active span {
+    color: white;
+    background-color: #75AADB;
+    border-radius: 4px;
+}
+
+.mapa-constitucional-terminos .tab-content {
+    width: 70%;
+}
+
+.mapa-constitucional-terminos .tab-content .text-bold {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.mapa-constitucional-terminos .tab-content h4 {
+    font-size: 1.6em;
+    text-transform: inherit;
+}
+
+.mapa-constitucional-terminos .tab-content h5 {
+    font-size: 1.2em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.mapa-constitucional-terminos .tab-content ul {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mapa-constitucional-terminos .tab-content ul li {
+    list-style: none;
+    padding-right: 5px;
+}
+
+.mapa-constitucional-terminos .tab-content ul li a {
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: inherit !important;
+    padding: 4px 10px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+
+/*Constitucion Feminista - Seccion*/
+.constitucion-feminista h2 {
+    border-color: #008000;
+}
+
+.constitucionfeminista-descripcion {
+    background: url(../img/bg-textura-papel.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.constitucionfeminista-descripcion p span {
+    color: #AB47BC;
+}
+
+.constitucionfeminista-descripcion h4 {
+    font-size: 1.4em;
+    color: black;
+}
+
+.constitucionfeminista-descripcion .enlaces li {
+    padding: 5px 0px;
+}
+
+.constitucionfeminista-descripcion .enlaces a {
+    color: black;
+    transition: 0.4s all;
+    font-weight: 500;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.constitucionfeminista-descripcion .enlaces a:hover {
+    color: #AB47BC;
+}
+
+.constitucionfeminista-descripcion p.contacto-cfeminista a {
+    color: black;
+}
+
+/*Libro Constitucion feminista 1980*/
+
+.libro-constitucion-feminista{
+    background: #FFDF94;
+}
+
+.libro-constitucion-feminista p.creditos-libro{
+   font-size: 1.3em;
+   font-weight: 500;
+   text-transform: uppercase;
+   margin-left: 30px;
+   margin-bottom: 0px;
+}
+
+.libro-constitucion-feminista .border-decoracion{
+    width: 80px;
+    height: 8px;
+    margin-left: 30px;
+    background: #AB47BC;
+    margin-bottom: 15px;
+}
+
+.libro-constitucion-feminista h2{
+   font-size: 2.4em;
+   color: black;
+   border-left: 0px;
+   padding: 0px;
+   margin-left: 30px;
+}
+
+.libro-constitucion-feminista a{
+  background: #008000;
+  margin-left: 30px;
+}
+
+.libro-constitucion-feminista a:before{
+  background: #AB47BC!important;
+}
+
+.libro-constitucion-feminista img{
+  padding: 50px!important;
+}
+
+/*Constitución Feminista - Reflexiones lista*/
+.cf-reflexiones-list .decoracion-reflexion {
+    width: 40px;
+    height: 8px;
+}
+
+.cf-reflexiones-list .reflexion-cf .info {
+    margin: 0px;
+    padding: 20px;
+    background: #F0F0F0;
+}
+
+.cf-reflexiones-list .reflexion-cf h3 {
+    text-transform: inherit;
+    letter-spacing: 0px;
+    font-size: 1.4em;
+}
+
+.cf-reflexiones-list .reflexion-cf h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.cf-reflexiones-list .reflexion-cf h3 a:hover {
+    color: #008000;
+}
+
+
+/*Constitución Feminista - Reflexión - Seccion interna*/
+.constitucionfeminista-descripcion p span.destacado-reflexion {
+    background: #f5bdff;
+    color: black;
+    font-weight: bold;
+    padding: 3px 0px;
+}
+
+.constitucionfeminista-descripcion .logo-autor img {
+    width: auto;
+    max-width: 350px;
+    margin-top: 50px;
+}
+
+.constitucionfeminista-descripcion .reflexion ul li {
+    padding-bottom: 8px;
+}
+
+.constitucionfeminista-descripcion .reflexion a {
+    color: #AB47BC;
+    font-weight: bold;
+}
+
+.constitucionfeminista-descripcion .reflexion a:hover {
+    color: #AB47BC;
+    font-weight: bold;
+}
+
+.ref-cf {
+    font-size: 0.9em;
+}
+
+.constitucionfeminista-descripcion .video-responsive {
+    padding-bottom: 56.25%;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.creditos-fotografico {
+    font-size: 1em;
+    font-weight: 500;
+    color: #008000;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 4px solid #008000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/*Ensayos - Seccion*/
+.ensayos-descripcion h2 {
+    text-align: center;
+    border-left: 0px !important;
+    padding-left: 0px;
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.ensayos-descripcion h3 {
+    text-align: center;
+    font-size: 1.25em;
+    color: black;
+    font-weight: normal;
+    text-transform: inherit;
+    margin-top: 5px;
+}
+
+.ensayos-list {
+    margin-bottom: 100px;
+}
+
+.ensayos-list .ensayo {
+    padding: 0px 40px;
+}
+
+.ensayos-list h2 {
+    text-align: center;
+    color: black;
+    margin: 0px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2em;
+    border-left: 0px;
+    padding-left: 0px;
+}
+
+.ensayos-list .decoracion {
+    margin-bottom: 20px;
+}
+
+.ensayos-list img {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.ensayos-list h3 {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+.ensayos-list p.creditos {
+    font-size: 0.85em;
+    color: grey;
+    font-weight: 500;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+}
+
+.ensayos-list p {
+    font-size: 1em;
+    color: black;
+    font-weight: 400;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+.ensayos-list a {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.ensayos-list .info {
+    margin: 20px 0px 20px 0px;
+    padding-left: 0px;
+    border-left: 0px solid #FFD700;
+}
+
+.ensayo-tomo-descripcion {
+    margin-bottom: 0px !important;
+}
+
+.ensayo-tomo-descripcion .titulo {
+    border-left: 8px solid #FFD700;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ensayo-tomo-descripcion .titulo h2 {
+    border: 0px;
+    padding-left: 0px;
+    font-size: 1.8em;
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+.ensayo-tomo-descripcion .titulo p.tomo {
+    font-size: 0.9em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    background: #75AADB;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 5px;
+}
+
+.ensayo-tomo-descripcion p.creditos {
+    font-size: 0.85em;
+    color: grey;
+    font-weight: 500;
+    padding-bottom: 0px !important;
+    margin: 0px 0px;
+    font-weight: bold;
+}
+
+.ensayo-tomo-descripcion b {
+    color: #008000;
+}
+
+.ensayo-tomo-descripcion .titulo h3 {
+    font-size: 1.1em;
+    text-transform: inherit;
+    color: black;
+    font-weight: normal;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos {
+    margin-top: 40px;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos h2 {
+    border: 0px;
+    font-size: 1.6em;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos .decoracion {
+    margin-left: 0px;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos h3 {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 40px;
+    font-size: 1.25em;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos p {
+    padding: 0px;
+    margin: 5px;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos a {
+    color: #2098D1;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.5s all;
+}
+
+.ensayo-tomo-descripcion .ensayo-capitulos a:hover {
+    color: #CC0000;
+}
+
+.ensayo-tomo-descripcion .cita {
+    margin: 30px 0px;
+}
+
+.ensayo-tomo-descripcion .cita h4 {
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+
+/*Preguntas Frecuentes - Seccion*/
+.preguntas {
+    margin: 0px auto 150px auto;
+}
+
+.preguntas h3 {
+    font-size: 1.6em;
+    margin-top: 50px;
+}
+
+.preguntas .accordion-header {
+    border-left: 0px;
+    padding: 0px;
+}
+
+.preguntas .accordion-item .accordion-button {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #222222;
+}
+
+.preguntas .accordion-body {
+    border-left: 4px solid #FFD700;
+    padding: 25px;
+}
+
+.preguntas .accordion-body p {
+    text-align: left;
+    color: black;
+    margin: 10px 0px;
+}
+
+.preguntas .accordion-item {
+    background-color: rgba(229, 229, 229, 0.50);
+    border: 0px;
+    margin-bottom: 15px;
+}
+
+.preguntas .accordion-button:focus {
+    z-index: 3;
+    border-color: transparent !important;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.preguntas .accordion-button::after {
+    margin-left: auto;
+    content: "";
+    background-image: url(../img/arrow-blanco.png) !important;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease-in-out;
+}
+
+.preguntas .accordion-button:not(.collapsed)::after {
+    background-image: url(../img/arrow-yellow.png) !important;
+    transform: rotate(-360deg);
+}
+
+
+/* Convencionales - Seccion */
+.filtro-convencionales form {
+    justify-content: flex-end;
+}
+
+.resultados-convencionales {
+    margin: 50px auto;
+}
+
+.resultados-convencionales figure {
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s all;
+}
+
+.resultados-convencionales figure img {
+    z-index: -1;
+    margin-bottom: 0px;
+}
+
+.resultados-convencionales figure:hover img {
+    filter: grayscale(100%);
+    transition: 0.4s all;
+}
+
+.resultados-convencionales figcaption {
+    position: absolute;
+    top: 75%;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    transition: 0.4s all;
+    padding: 20px;
+    z-index: 1;
+}
+
+.resultados-convencionales figcaption h4 {
+    font-size: 1.25em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    border-left: 4px solid #FFD700;
+    padding: 10px 0px 10px 10px;
+}
+
+.resultados-convencionales figcaption .datos {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.resultados-convencionales figcaption .datos li {
+    list-style: none;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.resultados-convencionales figcaption .datos li p {
+    color: white;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+.resultados-convencionales figcaption .btn {
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.resultados-convencionales figure:hover figcaption {
+    top: 0%;
+}
+
+
+/*Convencionales form*/
+input#id_apellido {
+    width: 23%;
+    margin: 1%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+    input#id_apellido {
+        width: 100%;
+        margin: 0px;
+        padding: 6px;
+    }
+}
+
+
+/*Perfil Convencionales*/
+.perfil-convencional {
+    padding: 80px 0px 50px 0px;
+}
+
+.perfil-convencional .img-constituyente {
+    position: relative;
+}
+
+.perfil-convencional .img-constituyente img.convencional {
+    width: 100%;
+    padding: 10px;
+    z-index: 1;
+}
+
+.perfil-convencional .img-constituyente .decorativo {
+    position: absolute;
+    z-index: -1;
+}
+
+.perfil-convencional .img-constituyente .decorativo.blue {
+    width: 60%;
+    height: 10%;
+    right: 0px;
+    top: 0px;
+}
+
+.perfil-convencional .img-constituyente .decorativo.green {
+    width: 60%;
+    height: 10%;
+    bottom: 0px;
+    left: 0px;
+}
+
+.perfil-convencional .img-constituyente .decorativo.red {
+    width: 10%;
+    height: 60%;
+    bottom: 0px;
+    right: 0px;
+}
+
+.perfil-convencional .img-constituyente .decorativo.yellow {
+    width: 10%;
+    height: 60%;
+    top: 0px;
+    left: 0px;
+}
+
+.perfil-convencional .datos {
+    padding-left: 5%;
+}
+
+.perfil-convencional .datos h2 {
+    font-size: 1.8em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: black;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    border-left: 0px;
+}
+
+.perfil-convencional p.convencional {
+    color: black;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.perfil-convencional .datos .decorativo {
+    width: 60px;
+    height: 8px;
+    margin-bottom: 20px;
+}
+
+.perfil-convencional .datos ul {
+    padding-left: 0px;
+}
+
+.perfil-convencional .datos ul li {
+    list-style: none;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+.perfil-convencional .datos ul li p {
     color: black;
     padding: 0px;
     margin: 0px;
 }
 
+.perfil-convencional .datos ul li p a {
+    text-decoration: none;
+    color: #75AADB;
+}
 
-/*Sección Propuestas*/
+.perfil-convencional .datos ul li p a:hover {
+    color: #CC0000;
+}
+
+.perfil-convencional li.redes-sociales {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0px;
+}
+
+.perfil-convencional li.redes-sociales a {
+    color: black;
+    font-size: 2em;
+    margin: 0px 6px;
+}
+
+.perfil-convencional li.redes-sociales a:hover {
+    color: #CC0000;
+}
+
+.perfil-convencional .biografia {
+    margin-top: 60px;
+}
+
+.perfil-convencional .biografia .decoracion-left {
+    width: 50px;
+    height: 8px;
+    margin-bottom: 20px;
+    margin-right: auto;
+}
+
+.perfil-convencional .biografia .decoracion-right {
+    width: 50px;
+    height: 8px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.perfil-convencional .biografia p {
+    text-align: justify;
+    color: black;
+}
+
+.propuestas-convencionales {
+    margin-bottom: 50px;
+}
+
+.propuestas-convencionales h2 {
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    margin-left: 0;
+    padding: 10px 0px 0px 0px;
+    border-left: 0px;
+}
+
+.propuestas-convencionales h2 img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.propuestas-convencionales .decoracion {
+    width: 50px;
+    height: 8px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.iniciativas-presentadas {
+    margin-top: 0px;
+    margin-bottom: 100px;
+    padding-top: 0px;
+}
+
+.propuestas-convencionales .filtro-temas-propuestas {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px 50px 0px;
+    padding-left: 0px;
+}
+
+.propuestas-convencionales .filtro-temas-propuestas li {
+    list-style: none;
+    margin: 0px 5px;
+}
+
+.propuestas-convencionales .filtro-temas-propuestas li a {
+    font-size: 1.2em;
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+    border-bottom: 5px solid transparent;
+    transition: 0.5s all;
+    margin: 0px 10px;
+    padding-bottom: 10px;
+}
+
+.propuestas-convencionales .filtro-temas-propuestas li a.active {
+    border-bottom: 5px solid #FFD700;
+}
+
+.propuestas-convencionales .filtro-temas-propuestas li a:hover {
+    border-bottom: 5px solid #FFD700;
+}
+
+.propuestas-convencionales p.titulo-seleccion {
+    font-size: 1.3em;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.propuestas-convencionales p.titulo-seleccion b {
+    font-weight: 900;
+}
+
+
+
+/* Propuestas - Seccion */
 
 .filtro-propuestas {
     padding: 80px 0px 20px 0px !important;
@@ -1235,7 +3390,6 @@ footer .rrss li a i {
 }
 
 /*Paginación*/
-
 ul.pagination {
     display: flex;
     justify-content: center;
@@ -1269,8 +3423,7 @@ ul.pagination .active a {
 }
 
 
-/*Propuesta lectura completa*/
-
+/*Propuesta lectura completa - Seccion interna*/
 .leer-propuesta {
     margin: 50px auto 100px auto;
 }
@@ -1493,306 +3646,12 @@ ul.pagination .active a {
 }
 
 
-/*Sección Convencionales*/
-
-.filtro-convencionales form {
-    justify-content: flex-end;
-}
-
-.resultados-convencionales {
-    margin: 50px auto;
-}
-
-.resultados-convencionales figure {
-    position: relative;
-    overflow: hidden;
-    transition: 0.4s all;
-}
-
-.resultados-convencionales figure img {
-    z-index: -1;
-    margin-bottom: 0px;
-}
-
-.resultados-convencionales figure:hover img {
-    filter: grayscale(100%);
-    transition: 0.4s all;
-}
-
-.resultados-convencionales figcaption {
-    position: absolute;
-    top: 75%;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    transition: 0.4s all;
-    padding: 20px;
-    z-index: 1;
-}
-
-.resultados-convencionales figcaption h4 {
-    font-size: 1.25em;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: white;
-    border-left: 4px solid #FFD700;
-    padding: 10px 0px 10px 10px;
-}
-
-.resultados-convencionales figcaption .datos {
-    margin-top: 30px;
-    padding-left: 20px;
-}
-
-.resultados-convencionales figcaption .datos li {
-    list-style: none;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-.resultados-convencionales figcaption .datos li p {
-    color: white;
-    padding-bottom: 10px;
-    margin-bottom: 0px;
-}
-
-.resultados-convencionales figcaption .btn {
-    margin-top: 0px;
-    margin-left: 20px;
-}
-
-.resultados-convencionales figure:hover figcaption {
-    top: 0%;
-}
-
-/*Perfil Convencionales*/
-
-.perfil-convencional {
-    padding: 80px 0px 50px 0px;
-}
-
-.perfil-convencional .img-constituyente {
-    position: relative;
-}
-
-.perfil-convencional .img-constituyente img.convencional {
-    width: 100%;
-    padding: 10px;
-    z-index: 1;
-}
-
-.perfil-convencional .img-constituyente .decorativo {
-    position: absolute;
-    z-index: -1;
-}
-
-.perfil-convencional .img-constituyente .decorativo.blue {
-    width: 60%;
-    height: 10%;
-    right: 0px;
-    top: 0px;
-}
-
-.perfil-convencional .img-constituyente .decorativo.green {
-    width: 60%;
-    height: 10%;
-    bottom: 0px;
-    left: 0px;
-}
-
-.perfil-convencional .img-constituyente .decorativo.red {
-    width: 10%;
-    height: 60%;
-    bottom: 0px;
-    right: 0px;
-}
-
-.perfil-convencional .img-constituyente .decorativo.yellow {
-    width: 10%;
-    height: 60%;
-    top: 0px;
-    left: 0px;
-}
-
-.perfil-convencional .datos {
-    padding-left: 5%;
-}
-
-.perfil-convencional .datos h2 {
-    font-size: 1.8em;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: black;
-    margin-bottom: 10px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    border-left: 0px;
-}
-
-.perfil-convencional p.convencional {
-    color: black;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-.perfil-convencional .datos .decorativo {
-    width: 60px;
-    height: 8px;
-    margin-bottom: 20px;
-}
-
-.perfil-convencional .datos ul {
-    padding-left: 0px;
-}
-
-.perfil-convencional .datos ul li {
-    list-style: none;
-    padding-bottom: 10px;
-    margin-bottom: 0px;
-}
-
-.perfil-convencional .datos ul li p {
-    color: black;
-    padding: 0px;
-    margin: 0px;
-}
-
-.perfil-convencional .datos ul li p a {
-    text-decoration: none;
-    color: #75AADB;
-}
-
-.perfil-convencional .datos ul li p a:hover {
-    color: #CC0000;
-}
-
-.perfil-convencional li.redes-sociales {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 0px;
-}
-
-.perfil-convencional li.redes-sociales a {
-    color: black;
-    font-size: 2em;
-    margin: 0px 6px;
-}
-
-.perfil-convencional li.redes-sociales a:hover {
-    color: #CC0000;
-}
-
-.perfil-convencional .biografia {
-    margin-top: 60px;
-}
-
-.perfil-convencional .biografia .decoracion-left {
-    width: 50px;
-    height: 8px;
-    margin-bottom: 20px;
-    margin-right: auto;
-}
-
-.perfil-convencional .biografia .decoracion-right {
-    width: 50px;
-    height: 8px;
-    margin-top: 20px;
-    margin-left: auto;
-}
-
-.perfil-convencional .biografia p {
-    text-align: justify;
-    color: black;
-}
-
-.propuestas-convencionales {
-    margin-bottom: 50px;
-}
-
-.propuestas-convencionales h2 {
-    font-weight: 900;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-    margin-left: 0;
-    padding: 10px 0px 0px 0px;
-    border-left: 0px;
-}
-
-.propuestas-convencionales h2 img {
-    width: 30px;
-    margin-right: 10px;
-}
-
-.propuestas-convencionales .decoracion {
-    width: 50px;
-    height: 8px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-}
-
-.iniciativas-presentadas {
-    margin-top: 0px;
-    margin-bottom: 100px;
-    padding-top: 0px;
-}
-
-.propuestas-convencionales .filtro-temas-propuestas {
-    display: flex;
-    justify-content: center;
-    margin: 15px 0px 50px 0px;
-    padding-left: 0px;
-}
-
-.propuestas-convencionales .filtro-temas-propuestas li {
-    list-style: none;
-    margin: 0px 5px;
-}
-
-.propuestas-convencionales .filtro-temas-propuestas li a {
-    font-size: 1.2em;
-    font-weight: 800;
-    text-decoration: none;
-    color: black;
-    border-bottom: 5px solid transparent;
-    transition: 0.5s all;
-    margin: 0px 10px;
-    padding-bottom: 10px;
-}
-
-.propuestas-convencionales .filtro-temas-propuestas li a.active {
-    border-bottom: 5px solid #FFD700;
-}
-
-.propuestas-convencionales .filtro-temas-propuestas li a:hover {
-    border-bottom: 5px solid #FFD700;
-}
-
-.propuestas-convencionales p.titulo-seleccion {
-    font-size: 1.3em;
-    font-weight: 400;
-    text-align: center;
-    color: black;
-    margin-bottom: 30px;
-    margin-top: 15px;
-}
-
-.propuestas-convencionales p.titulo-seleccion b {
-    font-weight: 900;
-}
-
-/*Sección Organizaciones*/
-
+/* Organizaciones - Seccion */
 .organizaciones-seccion {
     padding: 70px 0px 0px 0px !important;
 }
 
 /*Perfil Organizaciones*/
-
 .perfil-organizaciones .tipo-organizacion {
     font-size: 1.1em;
     font-weight: 500;
@@ -1854,754 +3713,46 @@ ul.pagination .active a {
     color: #CC0000;
 }
 
-/*Preguntas Frecuentes Sección*/
-
-.preguntas {
-    margin: 0px auto 150px auto;
-}
-
-.preguntas h3 {
-    font-size: 1.6em;
-    margin-top: 50px;
-}
-
-.preguntas .accordion-header {
-    border-left: 0px;
-    padding: 0px;
-}
-
-.preguntas .accordion-item .accordion-button {
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background: #222222;
-}
-
-.preguntas .accordion-body {
-    border-left: 4px solid #FFD700;
-    padding: 25px;
-}
-
-.preguntas .accordion-body p {
-    text-align: left;
-    color: black;
-    margin: 10px 0px;
-}
-
-.preguntas .accordion-item {
-    background-color: rgba(229, 229, 229, 0.50);
-    border: 0px;
-    margin-bottom: 15px;
-}
-
-.preguntas .accordion-button:focus {
-    z-index: 3;
-    border-color: transparent !important;
-    outline: 0;
-    box-shadow: none !important;
-}
-
-.preguntas .accordion-button::after {
-    margin-left: auto;
-    content: "";
-    background-image: url(../img/arrow-blanco.png) !important;
-    background-repeat: no-repeat;
-    transition: transform 0.2s ease-in-out;
-}
-
-.preguntas .accordion-button:not(.collapsed)::after {
-    background-image: url(../img/arrow-yellow.png) !important;
-    transform: rotate( -360deg);
-}
-
-/*Formularios*/
-
-.formulario {
-    width: 100%;
-    padding: 0px 0px 0px 50px;
-}
-
-.formulario select.form-select option:hover {
-    color: white;
-    background: #008000;
-}
-
-.formulario label {
-    font-size: 1em;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: left;
-    letter-spacing: 0px;
-    color: black;
-    padding-bottom: 0px;
-    margin-bottom: 5px;
-}
-
-.formulario input {
-    font-size: 1em;
-    font-weight: 500;
-    color: black;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-    background: white;
-}
-
-.formulario select {
-    font-size: 1em;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: black;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-}
-
-.formulario option {
-    font-size: 1em;
-    font-weight: 600;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-    color: black;
-    background: white;
-    border: 0px;
-    padding: 20px 0px;
-}
-
-.formulario input#formFileMultiple {
-    border: 1px solid #ced4da;
-}
-
-.formulario input#formFileMultiple:hover {
-    border: 1px solid #ced4da !important;
-}
-
-.formulario input#formFileMultiple:focus {
-    border: 1px solid #ced4da !important;
-}
-
-.formulario textarea {
-    font-size: 1em;
-    font-weight: 400;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-}
-
-.form-control:focus,
-.form-select:focus {
-    border: 3px solid #FFD700 !important;
-    color: #212529;
-    background-color: #fff;
-    outline: 0;
-    box-shadow: none !important;
-}
-
-
-/*Portada Collage Secciones - Secciones de Registro, subir propuesta e inicio de sesión usuarios*/
-
-.portada-collage-lcen {
-    background: url(../img/bg-portada-secciones-papel.jpg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    padding: 25px 0px;
-    margin-top: 98px;
-    width: 100%;
-}
-
-.portada-collage-lcen .decoracion {
-    display: none;
-}
-
-.portada-collage-lcen img {
-    padding-top: 20px;
-    width: 95%;
-}
-
-.portada-collage-lcen .titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.portada-collage-lcen .titulo .informacion {
-    margin-left: 20px;
-}
-
-.portada-collage-lcen .informacion nav {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-.portada-collage-lcen .titulo .informacion h1 {
-    font-size: 2em;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: black;
-    padding: 0px;
-    margin-bottom: 5px;
-}
-
-.portada-collage-lcen ol.breadcrumb {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 0px auto;
-}
-
-.portada-collage-lcen ol.breadcrumb li {
-    font-size: 1.1em;
-    font-weight: 800;
-    color: black;
-}
-
-.portada-collage-lcen ol.breadcrumb li a {
-    font-size: 1em;
-    color: black;
-    font-weight: 400;
-    text-decoration: none;
-}
-
-.portada-collage-lcen ol.breadcrumb li a:hover {
-    color: #CC0000;
-}
-
-.portada-collage-lcen .breadcrumb-item + .breadcrumb-item::before {
-    color: black;
-}
-
-/*Registro*/
-
-.ingresar-seccion {
-    padding: 50px 0px;
-}
-
-.seleccion-registro {
+.organizaciones-seccion li {
+    list-style: none;
+    height: 95%;
+    width: 80%;
     margin: 20px auto;
-    padding: 0px;
-}
-
-.registro-usuarios p {
-    font-size: 1.2em;
-    font-weight: 500;
-    text-align: center;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-.seleccion-registro h3 {
-    font-size: 1.6em;
-    text-align: center;
-    padding-bottom: 40px;
-    margin-bottom: 0px;
-}
-
-.seleccionar {
     display: flex;
     justify-content: center;
-    align-self: center;
-}
-
-.seleccionar a {
-    text-decoration: none;
-    padding: 0px 35px;
-    position: relative;
-}
-
-.seleccionar .icono {
-    position: relative;
-    transition: 0.5s all;
-}
-
-.seleccionar .decoracion-blue {
-    position: absolute;
-    top: -25px;
-    right: -10px;
-    height: 100px;
-    width: 100%;
-    background: transparent;
-    z-index: -1;
-}
-
-.seleccionar a:hover .decoracion-blue {
-    background: #75AADB;
-}
-
-.seleccionar a p {
-    font-size: 1.3em;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    color: black;
-    margin-top: 30px;
-    padding-bottom: 10px;
-    border-bottom: 8px solid transparent;
-}
-
-.seleccionar a:hover p {
-    border-bottom: 8px solid #CC0000;
-}
-
-.registrate-cta {
-    margin: 0px 20px;
-    padding: 25px 0px;
-    border-top: 1px solid #b4b4b4;
-    border-bottom: 1px solid #b4b4b4;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
     align-content: center;
-    align-items: center;
     align-self: center;
 }
 
-.registrate-cta a {
-    margin: 0px 0px 0px 10px;
-    letter-spacing: 1px;
-}
-
-/*Registros Persona y Organización*/
-
-.registros {
-    padding: 80px 0px;
-}
-
-.registros .titular-seccion {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 30px 0px;
-}
-
-.registros .img-icono-registro {
-    position: relative;
-}
-
-.registros .decoracion-img {
-    position: absolute;
-    right: -10px;
-    bottom: -10px;
-    background: #75AADB;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.registros .informacion {
-    padding-left: 35px;
-}
-
-.registros .informacion a {
-    font-size: 1em;
-    font-weight: 900;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    color: black;
-    margin-bottom: 5px;
-}
-
-.registros .informacion a i {
-    color: #008000;
-    margin-right: 4px;
-}
-
-.registros .informacion h2 {
-    font-size: 1.8em;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: black;
-    padding-bottom: 0px;
-    margin-bottom: 5px;
-    padding-left: 0px;
-    border-left: 0px;
-}
-
-.registros .informacion h2 span {
-    padding: 3px 8px;
-    background: #CC0000;
-    color: white;
-}
-
-.registros .informacion p {
-    color: black;
-    padding: 0px;
-    margin: 0px;
-}
-
-/*Ajustes formularios*/
-
-.registros form div {
-    width: 50%;
-    float: left;
-    padding: 0px 10px;
-}
-
-.registros form input.form-control {
-    font-size: 1em;
-    font-weight: 500;
-    color: black;
-    background: white;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-}
-
-.registros form .form-select {
-    font-size: 1em;
-    font-weight: 500;
-    color: black;
-    text-transform: uppercase;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-}
-
-.registros form option {
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    color: black;
-    background: white;
-    border: 0px;
-    padding: 20px 0px;
-}
-
-.registros form input#formFileMultiple {
-    border: 1px solid #ced4da;
-}
-
-.registros form input#formFileMultiple:hover {
-    border: 1px solid #ced4da !important;
-}
-
-.registros form input#formFileMultiple:focus {
-    border: 1px solid #ced4da !important;
-}
-
-.registros form textarea {
-    font-size: 1em;
-    font-weight: 400;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-}
-
-.registros form .form-control:focus,
-.registros form .form-select:focus {
-    border: 3px solid #FFD700 !important;
-    color: #212529;
-    background-color: #fff;
-    outline: 0;
-    box-shadow: none !important;
-}
-
-.registros form button.btn {
-    margin-left: auto;
-    margin-right: 10px;
-    display: flex;
-}
-
-/*Login - Ingreso*/
-
-.ingresar-seccion {
-    padding: 50px 0px;
-}
-
-.ingresar-seccion h3 {
-    font-size: 1.6em;
-    font-weight: 800;
-    text-align: center;
-    text-transform: inherit;
-    padding-bottom: 10px;
-    margin-bottom: 0px;
-}
-
-.ingresar-seccion .cuentas-usuario {
-    display: flex;
-    justify-content: center;
-}
-
-.ingresar-seccion .cuentas-usuario a {
-    font-weight: 800;
-    letter-spacing: 1px;
+.organizaciones-seccion img {
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: 0.4s all;
+    height: auto;
     width: auto;
-    background: #75AADB;
-    margin: 8px;
-}
-
-.ingresar-seccion span {
-    padding: 0px 15px;
-    font-weight: 400;
-}
-
-.ingresar-seccion form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.ingresar-seccion form input {
-    font-size: 1em;
-    font-weight: 500;
-    color: black;
-    background: white;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-    width: 80%;
-}
-
-.ingresar-seccion form label {
-    font-size: 1em;
-    font-weight: 900;
-    text-align: left;
-    text-transform: uppercase;
-    color: black;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    width: 80%;
-}
-
-.ingresar-seccion input:focus-visible {
-    outline-offset: 0px;
-    border: 3px solid #FFD700;
-    background: transparent;
-    outline: -webkit-focus-ring-color auto 0px;
-}
-
-.ingresar-seccion form .btn {
-    margin-bottom: 50px;
-}
-
-.recuperar-clave {
-    padding: 25px 0px;
-    display: flex;
-    flex-direction: column;
-}
-
-.recuperar-clave p {
-    font-size: 1em;
-    font-weight: 400;
-    text-align: center;
-    color: black;
-    margin-bottom: 5px;
-    padding-bottom: 0px;
-}
-
-.recuperar-clave a {
-    font-size: 1em;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    color: black;
-}
-
-.recuperar-clave a:hover {
-    color: #CC0000;
+    max-height: 80px;
+    max-width: 140px;
 }
 
 
-/*Subir Propuesta*/
-
-.subir-propuesta {
-    padding: 80px 0px;
-}
-
-.subir-propuesta .informacion-ayuda {
-    background: rgba(117, 170, 219, 0.08);
-    border-top: 5px solid #FFD700;
-    padding: 25px 20px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-.subir-propuesta .informacion-ayuda p.paso-propuesta {
-    font-size: 1em;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: white;
-    background: #CC0000;
-    padding: 4px 10px;
-    margin-bottom: 0px;
-}
-
-.subir-propuesta .informacion-ayuda h2 {
-    font-size: 1.6em;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: black;
-    padding: 15px 0px;
-    margin-bottom: 10px;
-    border-left: 0px;
-}
-
-.subir-propuesta .informacion-ayuda h4 {
-    font-size: 1.2em;
-    font-weight: 700;
-    color: black;
-    padding: 5px 0px;
-    margin-bottom: 5px;
-}
-
-.subir-propuesta .informacion-ayuda > p.recomendacion::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f0c8";
-    font-size: 0.8em;
-    font-weight: 900;
-    color: #008000;
-    position: absolute;
-    left: 0px;
-}
-
-.subir-propuesta .informacion-ayuda p.recomendacion {
-    font-size: 0.9em;
-    color: black;
-    line-height: inherit;
-    position: relative;
-    padding-left: 20px;
-}
-
-.subir-propuesta .informacion-ayuda a {
-    font-weight: 800;
-    color: #75AADB;
-    transition: 0.5s all;
-}
-
-.subir-propuesta .informacion-ayuda a:hover {
-    color: #CC0000;
-}
-
-.subir-propuesta .contacto-ayuda {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    padding: 20px 10px;
-}
-
-.subir-propuesta .contacto-ayuda h3 {
-    font-size: 1.5em;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.4px;
-    color: white;
-    margin-bottom: 5px;
-    padding-bottom: 0px;
-}
-
-.subir-propuesta .contacto-ayuda p {
-    text-align: center;
-    color: white;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-.subir-propuesta form {
-    padding-left: 30px;
-}
-
-.subir-propuesta form div {
-    width: 100%;
-}
-
-.subir-propuesta label h6 {
-    font-size: 1em;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: black;
-}
-
-.subir-propuesta form .form-select {
-    font-size: 1em;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: black;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-}
-
-.subir-propuesta form input.form-control {
-    font-size: 1em;
-    font-weight: 500;
-    color: black;
-    background: white;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-}
-
-.subir-propuesta form option {
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    color: black;
-    background: white;
-    border: 0px;
-    padding: 5px 0px;
-}
-
-.subir-propuesta form textarea {
-    font-size: 1em;
-    font-weight: 400;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-}
-
-.subir-propuesta form input#formFileMultiple {
-    border: 1px solid #ced4da;
-}
-
-.subir-propuesta form input#formFileMultiple:hover {
-    border: 1px solid #ced4da !important;
-}
-
-.subir-propuesta form input#formFileMultiple:focus {
-    border: 1px solid #ced4da !important;
-}
-
-.subir-propuesta form .form-control:focus,
-.subir-propuesta form .form-select:focus {
-    border: 3px solid #FFD700 !important;
-    color: #212529;
-    background-color: #fff;
-    outline: 0;
-    box-shadow: none !important;
-}
-
-.subir-propuesta form button.btn {
-    margin-left: auto;
-    margin-right: 10px;
-    display: flex;
-}
-
-.subir-propuesta input .hvr-sweep-to-right:before {
-    background: #CC0000 !important;
-}
-
-/*Propuesta creada*/
-
-.propuesta-creada {
-    margin-top: 200px;
-    margin-bottom: 100px;
-}
-
-.propuesta-creada h2 {
-    font-size: 1.5em;
-    text-align: center;
-    border-left: 0px;
-    padding-left: 0px;
-}
-
-
-/*Adaptación Movil y tablet*/
+/* Adaptación Movil y tablet - Estilo secciones */
 
 @media(max-width: 1260px) {
     header .container {
         max-width: 90% !important;
+    }
+}
+
+@media(max-width:1200px) {
+    .seccion-info img {
+        width: 100%;
+    }
+}
+
+@media(max-width:1150px) {
+    .iniciativa-popular .informacion {
+        padding: 0px;
     }
 }
 
@@ -2613,17 +3764,21 @@ ul.pagination .active a {
     }
 }
 
+
 @media(max-width: 1060px) {
     header .navbar-brand img {
         width: 140px;
     }
 }
 
+
 @media(max-width:991px) {
+
     /*Menu*/
     header {
         padding: 15px 0px !important;
     }
+
     header .navbar-brand img {
         width: 140px;
     }
@@ -2644,24 +3799,78 @@ ul.pagination .active a {
 
     header ul.navbar-nav li a:hover {
         border-top: 0px;
-        color: #CC0000;
     }
 
     li.nav-item.dropdown.ingresar {
         margin: 30px;
     }
+
     .dropdown:hover .dropdown-menu {
         width: 100%;
     }
 
     header ul.navbar-nav li .dropdown-menu a {
-        padding: 15px 0px 15px 0px !important;
         border-top: 0px solid transparent;
-        font-size: 0.9em !important;
     }
 
     .portada-lcen-colores {
         margin-top: 85px;
+    }
+
+    .portada-gif {
+        margin-top: 85px;
+    }
+
+    header ul.navbar-nav li ul.dropdown-menu {
+        background: #F2F2F2;
+        border-top: 8px solid #FFD700;
+        border-bottom: 8px solid #FFD700;
+        box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%);
+        -webkit-box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0%);
+    }
+
+    header ul.navbar-nav li > .dropdown-menu a {
+        font-size: 0.75em !important;
+        padding: 12px 10px!important;
+    }
+    /*Libro Constitucion feminista 1980*/
+    .libro-constitucion-feminista p.creditos-libro{
+       margin-left: 0px;
+    }
+
+    .libro-constitucion-feminista .border-decoracion{
+        margin-left: 0px;
+    }
+
+    .libro-constitucion-feminista h2{
+       font-size: 1.6em;
+       margin-left: 0px;
+    }
+
+    .libro-constitucion-feminista a{
+      margin-left: 0px;
+    }
+    .libro-constitucion-feminista img{
+      padding: 20px 0px!important;
+    }
+}
+
+
+@media(max-width:975px) {
+    .constitucion-feminista {
+        margin-top: 50px;
+    }
+}
+
+
+@media(max-width:800px) {
+    .mapa-constitucional-terminos {
+        margin: 50px auto;
+    }
+
+    .mapa-constitucional-terminos .align-items-start {
+        margin-top: 50px;
     }
 }
 
@@ -2675,8 +3884,9 @@ ul.pagination .active a {
     h2 {
         font-size: 1.5em;
     }
+
     p {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     /*Home*/
@@ -2684,9 +3894,11 @@ ul.pagination .active a {
         margin-top: 84px;
         height: 450px;
     }
+
     .portada-gif h1 {
         font-size: 2em;
     }
+
     .portada-gif p {
         font-size: 1.2em;
     }
@@ -2700,12 +3912,14 @@ ul.pagination .active a {
         padding: 60px 0px 20px 0px;
         margin-top: 40px;
     }
+
     .a-ponerse-con-propuestas .llamado-propuestas h1 {
         font-size: 2em;
         width: 90%;
         padding: 0px;
         margin: auto;
     }
+
     .a-ponerse-con-propuestas img.img-fluid.p-4 {
         padding: 0px !important;
         margin-bottom: 30px;
@@ -2715,6 +3929,7 @@ ul.pagination .active a {
         padding-left: 0px;
         padding-right: 0px;
     }
+
     .a-ponerse-con-propuestas .llamado-propuestas img.megafono-recorte {
         width: 200px;
         top: -60px;
@@ -2757,7 +3972,7 @@ ul.pagination .active a {
         width: 100%;
     }
 
-/*Logos organizaciones seccion*/
+    /*Logos organizaciones seccion*/
     .organizaciones-lista li {
         margin: 10px 0px;
         height: auto;
@@ -2814,6 +4029,7 @@ ul.pagination .active a {
     footer .collage-2 {
         width: 80%;
         margin-left: auto;
+        display: none;
     }
 
     /*Banner secciones*/
@@ -2843,12 +4059,14 @@ ul.pagination .active a {
         margin-bottom: 50px;
         margin-left: 0px !important;
     }
+
     .infografia-que-es .item {
         margin-bottom: 30px;
         padding: 0px;
     }
+
     .infografia-que-es p {
-        padding: 0px 0px 5px 0px;
+        padding: 0px 15px 5px 0px;
     }
 
     .quienes-somos-lcen .dropdown:hover .dropdown-menu .contenido {
@@ -2859,6 +4077,7 @@ ul.pagination .active a {
         flex-direction: column;
         align-items: center;
     }
+
     .quienes-somos-lcen img {
         height: 40px;
     }
@@ -2948,20 +4167,25 @@ ul.pagination .active a {
         margin-top: 40px;
         padding-left: 20px;
     }
+
     .registros .informacion h2 {
         font-size: 1.4em;
         margin-bottom: 20px;
     }
+
     .registros form div {
         width: 100%;
     }
+
     .registros form button.btn {
         margin: auto;
         margin-right: auto;
     }
+
     .registrate-cta a {
         margin: 0px 0px 0px 0px;
     }
+
     .registrate-cta p {
         width: 100%;
         text-align: center;
@@ -2980,629 +4204,164 @@ ul.pagination .active a {
     .subir-propuesta .informacion-ayuda h2 {
         font-size: 1.4em;
     }
+
+    .seleccionar .decoracion-blue {
+        right: -10px;
+    }
+
+    /*Ensayos*/
+    .ensayos-list .ensayo {
+        padding: 0px 0px;
+    }
+
+    .ensayos-list h2 {
+        font-size: 1.5em;
+    }
+
+    .ensayo-tomo-descripcion .titulo h2 {
+        font-size: 1.4em;
+    }
+
+    .ensayo-tomo-descripcion .titulo {
+        border-left: 4px solid #FFD700;
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    section.container {
+        width: 100%;
+        max-width: 100% !important;
+    }
+
+    .ensayos-list img {
+        margin-top: 30px;
+    }
+
+    /*Iniciativa popular - home*/
+    .iniciativa-popular {
+        margin-top: 50px;
+    }
+
+    .iniciativa-popular .img.img-uno {
+        top: -40px;
+        width: 40%;
+    }
+
+    .iniciativa-popular .img.img-dos {
+        width: 40%;
+        top: -40px;
+    }
+
+    .iniciativa-popular .informacion {
+        width: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 40px;
+    }
+
+    .iniciativa-popular .informacion h3 {
+        font-size: 1.3em;
+    }
+
+    .seccion-info img {
+        width: 90%;
+    }
+
+    .mapa-constitucional-home {
+        margin-bottom: 50px;
+    }
+
+    .mapa-constitucional-home img {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+
+    .constitucion-feminista-home {
+        margin: 50px auto;
+    }
+
+    .constitucion-feminista-home img {
+        padding-top: 0px;
+    }
+
+    /*Libro Constitucion feminista 1980*/
+    .libro-constitucion-feminista{
+      padding: 80px 0px;
+    }
+    .libro-constitucion-feminista h2{
+      font-size: 1.4em;
+    }
+    .libro-constitucion-feminista img{
+      padding: 40px 20px 0px 20px!important;
+    }
 }
+
 
 @media (max-width: 500px) {
     .resultados-convencionales figcaption .datos {
         margin-top: 60px;
         padding-left: 20px;
     }
+
     /*Logos organizaciones seccion*/
     .organizaciones-lista li {
         width: 140px !important;
     }
-}
 
-.organizaciones-seccion li {
-    list-style: none;
-    height: 95%;
-    width: 80%;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-}
-.organizaciones-seccion img {
-    opacity: 0.6;
-    filter: grayscale(100%);
-    transition: 0.4s all;
-    height: auto;
-    width: auto;
-    max-height: 80px;
-    max-width: 140px;
-}
-@media (max-width: 500px) {
     .organizaciones-seccion li {
         height: 90% !important;
         width: 75% !important;
     }
+
     .organizaciones-seccion img {
         max-height: 65px;
         max-width: 120px;
     }
+
     .organizaciones-seccion {
         padding: 20px 0px 0px 0px !important;
     }
+
+    /*Mapa constitucional*/
+    .mapa-constitucional-terminos {
+        margin: 50px auto;
+    }
+
+    .mapa-constitucional-terminos .btn-concepto-modal {
+        padding: 8px 8px;
+        font-size: 1em;
+    }
+
+    .mapa-constitucional-terminos .nav-pills {
+        width: 100%;
+        margin: 25px 0px;
+    }
+
+    .mapa-constitucional-terminos .tab-content {
+        width: 100%;
+    }
+
+    .mapa-constitucional-terminos .align-items-start {
+        flex-wrap: wrap;
+    }
+
+    .mapa-constitucional-terminos .modal.show .modal-dialog {
+        margin-top: 40px;
+    }
+
+    .seccion-info img {
+        width: 100%;
+    }
+
+    .btn-lcen {
+        font-size: 0.9em;
+    }
 }
+
+
 @media (max-width: 340px) {
     .organizaciones-seccion img {
         max-height: 50px;
         max-width: 90px;
-    }
-}
-
-.terminosycondiciones{
-    padding: 70px 0px;
-}
-.terminosycondiciones h1{
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight: 900;
-    text-align: center;
-    letter-spacing: 0.5px;
-    color: black;
-    padding: 8px 0px;
-}
-.terminosycondiciones h2{
-    font-size: 1.3em;
-    text-transform: inherit;
-    padding-left: 0px;
-    border: 0px;
-    font-weight: 900;
-    letter-spacing: 0.5px;
-    color: black;
-    margin-bottom: 10px;
-    padding-bottom: 0px;
-}
-.terminosycondiciones p{
-    font-size: 1em;
-    color: black;
-    padding-bottom:6px;
-    margin-bottom: 0px;
-}
-.terminosycondiciones li{
-    font-size: 1em;
-    color: black;
-    padding-bottom: 5px;
-}
-
-/* Cambio de Password */
-
-.section-password {
-    padding: 80px 0px;
-}
-
-.section-password h2 {
-    text-align: center;
-    border: 0px;
-    padding: 0px;
-}
-
-.section-password h2 img {
-    margin-right: 5px;
-}
-
-.section-password b {
-    font-weight: 900;
-}
-
-.section-password a {
-    margin: auto;
-}
-
-.section-password form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-password form div {
-    width: 100%;
-}
-
-.section-password form input.form-control {
-    font-size: 1em;
-    font-weight: 500;
-    color: black;
-    background: white;
-    border: 3px solid #75AADB;
-    border-radius: 2px;
-}
-
-.section-password form ul {
-    margin-top: 10px;
-}
-
-.ingresar-seccion span {
-    padding: 0px;
-}
-
-.ingresar-seccion h3 {
-    padding-bottom: 30px;
-}
-
-.ingresar-seccion .seleccionar a {
-    margin: 0px 10px;
-}
-
-@media (max-width: 768px) {
-    .seleccionar .decoracion-blue {
-        right: -10px;
-    }
-}
-
-
-/*Ensayos*/
-
-.ensayos-descripcion h2 {
-    text-align: center;
-    border-left: 0px !important;
-    padding-left: 0px;
-    padding-bottom: 0px !important;
-    margin-bottom: 0px !important;
-}
-
-.ensayos-descripcion h3 {
-    text-align: center;
-    font-size: 1.25em;
-    color: black;
-    font-weight: normal;
-    text-transform: inherit;
-    margin-top: 5px;
-}
-
-.decoracion {
-    width: 40px;
-    height: 8px;
-    display: flex;
-    justify-content: center;
-    margin: 15px auto;
-    margin-bottom: 40px;
-}
-
-.ensayos-list {
-    margin-bottom: 100px;
-}
-
-.ensayos-list .ensayo {
-    padding: 0px 40px;
-}
-
-.ensayos-list h2 {
-    text-align: center;
-    color: black;
-    margin: 0px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 2em;
-    border-left: 0px;
-    padding-left: 0px;
-}
-
-.ensayos-list .decoracion {
-    margin-bottom: 20px;
-}
-
-.ensayos-list img {
-    margin-top: 50px;
-    margin-bottom: 0px;
-}
-
-.ensayos-list h3 {
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 1.3em;
-}
-
-.ensayos-list p.creditos {
-    font-size: 0.85em;
-    color: grey;
-    font-weight: 500;
-    margin-bottom: 5px;
-    padding-bottom: 0px;
-}
-
-.ensayos-list p {
-    font-size: 1em;
-    color: black;
-    font-weight: 400;
-    margin-bottom: 0px;
-    padding-bottom: 5px;
-}
-
-.ensayos-list a {
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.ensayos-list .info {
-    margin: 20px 0px 20px 0px;
-    padding-left: 0px;
-    border-left: 0px solid #FFD700;
-}
-
-.ensayo-tomo-descripcion {
-    margin-bottom: 0px !important;
-}
-
-.ensayo-tomo-descripcion .titulo {
-    border-left: 8px solid #FFD700;
-    padding-left: 20px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.ensayo-tomo-descripcion .titulo h2 {
-    border: 0px;
-    padding-left: 0px;
-    font-size: 1.8em;
-    margin: 0px;
-    padding-top: 0px;
-    padding-bottom: 5px;
-}
-
-.ensayo-tomo-descripcion .titulo p.tomo {
-    font-size: 0.9em;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: white;
-    background: #75AADB;
-    border-radius: 4px;
-    padding: 6px 10px;
-    margin-bottom: 5px;
-}
-
-.ensayo-tomo-descripcion p.creditos {
-    font-size: 0.85em;
-    color: grey;
-    font-weight: 500;
-    padding-bottom: 0px !important;
-    margin: 0px 0px;
-    font-weight: bold;
-}
-
-.ensayo-tomo-descripcion b {
-    color: #008000;
-}
-
-.ensayo-tomo-descripcion .titulo h3 {
-    font-size: 1.1em;
-    text-transform: inherit;
-    color: black;
-    font-weight: normal;
-}
-
-.ensayo-tomo-descripcion .ensayo-capitulos {
-    margin-top: 40px;
-}
-
-.ensayo-tomo-descripcion .ensayo-capitulos h2 {
-    border: 0px;
-    font-size: 1.6em;
-    padding-left: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.ensayo-tomo-descripcion .ensayo-capitulos .decoracion {
-    margin-left: 0px;
-}
-
-.ensayo-tomo-descripcion .ensayo-capitulos h3 {
-    margin: 0px;
-    padding: 0px;
-    margin-top: 40px;
-    font-size: 1.25em;
-}
-
-.ensayo-tomo-descripcion .ensayo-capitulos p {
-    padding: 0px;
-    margin: 5px;
-}
-
-.ensayo-tomo-descripcion .ensayo-capitulos a {
-    color: #2098D1;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.5s all;
-}
-
-.ensayo-tomo-descripcion .ensayo-capitulos a:hover {
-    color: #CC0000;
-}
-
-.ensayo-tomo-descripcion .cita {
-    margin: 30px 0px;
-}
-
-.ensayo-tomo-descripcion .cita h4 {
-    font-size: 1.2em;
-    margin-top: 30px;
-}
-
-@media(max-width:768px) {
-    .ensayos-list .ensayo {
-        padding: 0px 0px;
-    }
-    .ensayos-list h2 {
-        font-size: 1.5em;
-    }
-    .ensayo-tomo-descripcion .titulo h2 {
-        font-size: 1.4em;
-    }
-    .ensayo-tomo-descripcion .titulo {
-        border-left: 4px solid #FFD700;
-        padding-left: 15px;
-        margin-bottom: 20px;
-    }
-    section.container {
-        width: 100%;
-        max-width: 100% !important;
-    }
-    .ensayos-list img {
-        margin-top: 30px;
-    }
-}
-
-/* Propuestas Tarjetas */.espacio {
-    height: 100px;
-}.card-propuesta-lcen {
-    zoom: 0.8;
-    border: 0px;
-}.card-propuesta-lcen .card-bvody {
-    background: url(../img/bg-lcen-azul.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 75%;
-    width: 100%;
-    position: relative;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}.card-propuesta-lcen .logo-lcen {
-    width: 200px;
-    height: auto;
-    position: absolute;
-    right: 0px;
-    padding-right: 40px;
-    top: 20px;
-}.card-propuesta-lcen p.n-propuesta {
-    margin-top: 30px;
-    margin-bottom: 0px;
-    color: white;
-    font-size: 1.3em;
-}.card-propuesta-lcen .card-bvody h2 {
-    border-left: 0px;
-    padding-left: 0px;
-    color: white;
-    font-size: 2.2em;
-    font-weight: 900;
-}.card-propuesta-lcen p.info-card {
-    color: white;
-    font-size: 1.3em;
-    font-weight: normal;
-}.card-propuesta-lcen p b {
-    font-weight: 800;
-}.card-propuesta-lcen .logo-org {
-    height: 70px;
-    width: auto;
-}.card-propuesta-lcen .img-propuesta-decoracion {
-    position: absolute;
-    right: 20px;
-    bottom: 15%;
-    width: 55%;
-}.card-propuesta-lcen .creador-propuesta p {
-    margin-right: 10px;
-}.card-propuesta-lcen .adorno-lineas {
-    height: 8px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}.card-propuesta-lcen .adorno-lineas .green {
-    width: 15%;
-    height: 8px;
-}.card-propuesta-lcen .adorno-lineas .yellow {
-    width: 35%;
-    height: 8px;
-}.card-propuesta-lcen .adorno-lineas .blue {
-    width: 30%;
-    height: 8px;
-    background: #AB47BC
-;
-}.card-propuesta-lcen .adorno-lineas .red {
-    width: 20%;
-    height: 8px;
-}.card-propuesta-lcen .card-footer {
-    padding: 20px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    background: url(../img/bg-textura-papel.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 25%;
-    width: 100%;
-}.card-propuesta-lcen .card-footer h4 {
-    color: black;
-    text-transform: inherit;
-    font-size: 1.3em;
-    font-weight: 800;
-    margin-bottom: 10px;
-}.card-propuesta-lcen .card-footer p.destacado-lcen-enlace {
-    padding: 5px 10px;
-    background: #CC0000
-;
-    color: white;
-    font-size: 1.3em;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-bottom: 0px;
-}
-
-
-/*Constitución Feminista Seccion*/
-
-.violeta {
-    background: #AB47BC;
-}
-
-.constitucion-feminista h2 {
-    border-color: #008000;
-}
-
-.constitucionfeminista-descripcion {
-    background: url(../img/bg-textura-papel.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.constitucionfeminista-descripcion p span {
-    color: #AB47BC;
-}
-
-.constitucionfeminista-descripcion h4 {
-    font-size: 1.4em;
-    color: black;
-}
-
-.constitucionfeminista-descripcion .enlaces li {
-    padding: 5px 0px;
-}
-
-.constitucionfeminista-descripcion .enlaces a {
-    color: black;
-    transition: 0.4s all;
-    font-weight: 500;
-    font-size: 1em;
-    text-decoration: none;
-}
-
-.constitucionfeminista-descripcion .enlaces a:hover {
-    color: #AB47BC;
-}
-
-.constitucionfeminista-descripcion p.contacto-cfeminista a {
-    color: black;
-}
-
-
-
-/*Constitución Feminista Seccion - Reflexiones lista*/
-
-.cf-reflexiones-list .decoracion-reflexion {
-    width: 40px;
-    height: 8px;
-}
-
-.cf-reflexiones-list .reflexion-cf .info {
-    margin: 0px;
-    padding: 20px;
-    background: #F0F0F0;
-}
-
-.cf-reflexiones-list .reflexion-cf h3 {
-    text-transform: inherit;
-    letter-spacing: 0px;
-    font-size: 1.4em;
-}
-
-.cf-reflexiones-list .reflexion-cf h3 a {
-    text-decoration: none;
-    color: black;
-}
-
-.cf-reflexiones-list .reflexion-cf h3 a:hover {
-    color: #008000;
-}
-
-/*Constitución Feminista - Reflexión*/
-
-.constitucionfeminista-descripcion p span.destacado-reflexion {
-    background: #f5bdff;
-    color: black;
-    font-weight: bold;
-    padding: 3px 0px;
-}
-
-.constitucionfeminista-descripcion .logo-autor img {
-    width: auto;
-    max-width: 350px;
-    margin-top: 50px;
-}
-
-.constitucionfeminista-descripcion .reflexion ul li {
-    padding-bottom: 8px;
-}
-
-.constitucionfeminista-descripcion .reflexion a {
-    color: #AB47BC;
-    font-weight: bold;
-}
-
-.constitucionfeminista-descripcion .reflexion a:hover {
-    color: #AB47BC;
-    font-weight: bold;
-}
-
-.ref-cf {
-    font-size: 0.9em;
-}
-
-.constitucionfeminista-descripcion .video-responsive {
-    padding-bottom: 56.25%;
-    position: relative;
-    display: block;
-    width: 100%;
-}
-
-.creditos-fotografico {
-    font-size: 1em;
-    font-weight: 500;
-    color: #008000;
-    padding-left: 20px;
-    margin-left: 20px;
-    border-left: 4px solid #008000;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-@media(max-width:975px) {
-    .constitucion-feminista {
-        margin-top: 50px;
-    }
-}
-
-
-/*Convencionales form*/
-
-input#id_apellido {
-    width: 23%;
-    margin: 1%;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-:focus-visible {
-    outline: 0px !important;
-}
-
-@media (max-width: 768px) {
-    input#id_apellido {
-        width: 100%;
-        margin: 0px;
-        padding: 6px;
     }
 }

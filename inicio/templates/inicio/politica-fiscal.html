@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Politíca Fiscal</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Politíca Fiscal</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">El estado</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">El Estado</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>“Una comunidad humana, fijada sobre un territorio propio, que posee una organización que resulta para ese grupo, en lo que respecta a las relaciones con sus miembros, una potencia suprema de acción, de mando y coerción”, <u>Carré de Malberg (1988).</u></p>
+                            <h4>¿Por qué tenemos un Estado?</h4>
+                            <p>Los Estados existen para cuidar a las personas y asegurar el bienestar de las sociedades. Para lograr este objetivo, las Constituciones establecen un conjunto de reglas y principios, que establecen las atribuciones de los órganos del Estado, limitan el poder público y determinan los fines que deben cumplir las instituciones.</p>
+                            <h4>¿Cómo se organiza el Estado?</h4>
+                            <p>Conjunto de normas de la Constitución sobre cómo se organiza el Estado. Tal como en los planos de una sala de máquinas, en los aspectos orgánicos nos encontraremos con las reglas sobre la función, los límites al poder, la posición en la estructura jerárquica y los requisitos para que las personas integren cada una de las piezas del Estado. Estas piezas se conocen como "Órganos", por lo que estas reglas también se conocen como los aspectos orgánicos de la Constitución.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Politíca Fiscal</h3>
+            <p>Se refiere al conjunto de políticas para la gestión del gasto y de los ingresos públicos, y comprende todas las técnicas a través de las que los Estados obtienen y asignan recursos, incluidos los impuestos, las formas de gasto, los ingresos obtenidos por las empresas públicas, y en general, todos los procesos asociados al ciclo presupuestario.</p>
+            <p>Fuente: <a href="https://www.cepal.org/sites/default/files/publication/files/5372/LCL3716.pdf" target="_blank" class="enlaces">cepal.org</a> y <a href="https://derechosypoliticafiscal.org/images/ASSETS/Principios_de_Derechos_Humanos_en_la_Politica_Fiscal-ES-VF-1.pdf" target="_blank" class="enlaces">derechosypoliticafiscal.org</a></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+               
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>5 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"> <span>Principios de la tributación</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Regla fiscal</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Potestades sobre presupuesto y gasto público</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Presupuestos participativos</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Finanzas subnacionales y desentralización fiscal</span></button>
+                </div>
+                
+                <div class="tab-content" id="v-pills-tabContent">
+                   
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Para qué tenemos un Estado?</p>
+                        <h4>Principios de la tributación</h4>
+                        <p>Se refieren a los principios constitucionales en  materia fiscal que guían la política tributaria. Entre ellos podemos encontrar a los principios de equidad horizontal y vertical, legalidad, igualdad, no discriminación, generalidad, capacidad contributiva, progresividad, y otros principios de tributación justa generalmente incorporados en las constituciones a nivel global.</p>
+                        <p>Fuente: <a href="https://derechosypoliticafiscal.org/index.php/es/principios-derechos-humanos-politica-fiscal" target="_blank" class="enlaces">derechosypoliticafiscal.org</a></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Para qué tenemos un Estado?</p>
+                        <h4>Regla fiscal</h4>
+                        <p>Se refiere a limitaciones constitucionales o legales a la política fiscal sobre temas de presupuesto de la nación, deuda, gastos o impuestos.</p>
+                        <p>Fuente: <a href="https://derechosypoliticafiscal.org/index.php/es/principios-derechos-humanos-politica-fiscal" target="_blank" class="enlaces">derechosypoliticafiscal.org</a></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Para qué tenemos un Estado?</p>
+                        <h4>Potestades sobre presupuesto y gasto público</h4>
+                        <p>Sobre rol del Congreso Nacional y el Poder Ejecutivo sobre gasto público y el ciclo presupuestario</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Para qué tenemos un Estado?</p>
+                        <h4>Presupuestos participativos</h4>
+                        <p>Mecanismos que permiten que la ciudadanía conozca, intervenga y decida sobre ciertos asuntos del presupuesto municipal.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Para qué tenemos un Estado?</p>
+                        <h4>Finanzas subnacionales y desentralización fiscal</h4>
+                        <p>Se refiere a la facultad de los gobiernos subnacionales para tomar decisiones autónomas en materia de ingresos, deuda, gastos e inversiones.</p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

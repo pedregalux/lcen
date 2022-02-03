@@ -14,21 +14,37 @@
     </nav>
 </section>
 
-<section class="container constitucion-feminista py-4 mb-3">
+<section class="container constitucion-feminista pb-4 mb-5 seccion-info">
     <div class="row d-flex align-items-center">
         <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
             <h2>Constitución Feminista</h2>
             <p>El aporte de los movimientos feministas ha logrado que hoy tengamos una convención paritaria. Ahora vamos por más. En esta sección podrás encontrar testimonios de diversas organizaciones sobre las experiencias de vida de las mujeres en Chile y respuestas a cómo la nueva constitución puede mejorarlas incorporando el enfoque de género de manera transversal en los derechos sociales.</p>
         </div>
         <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
-            <img src="{% static 'img/collage-feminista.png' %}" alt="collage constitucion feminista" class="p-3 w-100">
+            <img src="{% static 'img/collage-feminista.png' %}" alt="collage constitucion feminista" class="w-100">
         </div>
     </div>
 </section>
 
 
+<section class="libro-constitucion-feminista">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+            <p class="creditos-libro">ABOFEM</p>
+            <div class="border-decoracion"></div>
+            <h2>libro: La Constitución de 1980 bajo la lupa feminista</h2>
+            <a href="{% static 'img/libro-la-constitucion-de-1980-bajo-la-lupa-feminista-abofem.pdf' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Leer Libro</a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+            <img src="{% static 'img/libro-cfeminista.jpg' %}" alt="ilustracion libro constitucion feminista" class="p-3 w-100">
+        </div>
+    </div>
+  </div>
+</section>
 
-<section class="container-fluid constitucionfeminista-descripcion py-5 my-5">
+
+<section class="container-fluid constitucionfeminista-descripcion py-5 mb-5">
     <div class="container py-5 ensayos-descripcion">
         <div class="row d-flex justify-content-md-center">
             <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
@@ -71,16 +87,6 @@
             <h2>Revisa las reflexiones aquí</h2>
             <div class="decoracion green"></div>
             <div class="row">
-
-                <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
-                    <a href="{% static 'img/libro-la-constitucion-de-1980-bajo-la-lupa-feminista-abofem.pdf' %}"><img src="{% static 'img/constitucion-feminista-img-1980.png' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>
-                    <div class="info">
-                        <h3><a href="{% static 'img/libro-la-constitucion-de-1980-bajo-la-lupa-feminista-abofem.pdf' %}">Libro La Constitución de 1980 bajo la lupa feminista</a></h3>
-                        <div class="decoracion-reflexion violeta my-3"></div>
-                        <p class="autora">ABOFEM</p>
-                    </div>
-                </div>
-
 
                 <div class="col-12 col-sm-6 col-md-4 reflexion-cf">
                     <a href="{% url 'constitucion-con-enfoque-de-desarrollo-territorial' %}"><img src="{% static 'img/reflexion-img-20.jpg' %}" alt="img portada reflexiones" class="img-fluid w-100"></a>

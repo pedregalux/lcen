@@ -1,0 +1,147 @@
+{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Trabajo Digno</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container mapa-constitucional-terminos">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Temas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Trabajo Digno</li>
+                </ol>
+            </nav>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-concepto-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Derechos humanos y fundamentales</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos y fundamentales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Los derechos humanos o fundamentales son los derechos que tenemos básicamente por existir como seres humanos. Pertenecen a todas las personas, con independencia de la nacionalidad, género, origen étnico, color, religión, idioma o cualquier otra condición.</p>
+                            <h4>¿Qué son los derechos económicos, sociales, culturales y ambientales?</h4>
+                            <p>Los Derechos Económicos Sociales, Culturales y Ambientales (DESCA) son los derechos humanos que garantizan condiciones sociales y económicas básicas necesarias para una vida en dignidad y libertad.</p>
+                            <h4>¿Cómo avanzar hacia la igualdad y la no disciminación?</h4>
+                            <p>Las desigualdades amenazan el desarrollo social y económico a largo plazo, dificultan la reducción de la pobreza y destruyen el sentimiento de plenitud y valía de las personas. Es por eso debe avanzarse hacia formas de igualdad sustantiva entre todas las personas.</p>
+                            <p>Fuente: <a href="https://www.ohchr.org/sp/issues/pages/whatarehumanrights.aspx" target="_blank" class="enlaces">ohchr.org</a>, <a href="https://www.escr-net.org/es/derechos" target="_blank" class="enlaces">escr-net.org</a> y <a href="https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/derechos-civiles-derechos-politicos/" target="_blank" class="enlaces">es.amnesty.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Trabajo Digno</h3>
+            <p>El derecho al trabajo digno es aquel que respeta tanto los derechos humanos en general como las condiciones de seguridad laboral y remuneración en específico. Este derecho se aplica sobre todo tipo de trabajos, ya sean autónomos o dependientes, y tiene dimensiones individuales y colectivas. Entre las individuales, se incluyen el derecho a decidir libremente aceptar o elegir un trabajo, a no ser forzado u obligado a ejercer un trabajo y a gozar de condiciones de trabajo equitativas y satisfactorias. En las colectivas, se incluye el derecho a fundar y afiliarse a sindicatos, y el derecho de los sindicatos a funcionar libremente.</p>
+            <p>Fuente: <b>Comité DESC (2005) Observación General Nro. 18. El derecho al trabajo.</b></p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex align-items-start">
+
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h4>6 contenidos asociados</h4>
+                    <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"><span>Trabajo forzoso</span></button>
+                    <button class="nav-link" id="v-pills-tab-2" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false"><span>Economía sumergida</span></button>
+                    <button class="nav-link" id="v-pills-tab-3" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false"><span>Disponibilidad del trabajo</span></button>
+                    <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Accesibilidad del trabajo</span></button>
+                    <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Aceptabilidad y calidad del trabajo</span></button>
+                    <button class="nav-link" id="v-pills-tab-6" data-bs-toggle="pill" data-bs-target="#v-pills-6" type="button" role="tab" aria-controls="v-pills-6" aria-selected="false"><span>Condiciones equitativas y satisfactorias de trabajo</span></button>
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Trabajo forzoso</h4>
+                        <p>El trabajo forzoso se entiende como todo trabajo o servicio exigido a un individuo bajo la amenaza de una pena cualquiera y para el cual dicho individuo no se ofrece voluntariamente. Los Estados deben abolir, condendar y luchar contra todas las formas de trabajo forzoso.</p>
+                        <p>Fuente: <b>Comité DESC (2005) Observación General Nro. 18. El derecho al trabajo.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Economía sumergida</h4>
+                        <p>Se refiere a los sectores no estructurados de la economía, a los que los trabajdores acuden por necesidades de sobrevivencia cuando existen altas tasas de desempleo o carencias de seguridad en el empleo. Los Estados deben tomar las medidas necesarias para reducir en la mayor medida posible el número de trabajadores en la economía sumergida.</p>
+                        <p>Fuente: <b>Comité DESC (2005) Observación General Nro. 18. El derecho al trabajo.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Disponibilidad del trabajo</h4>
+                        <p>Obliga a los Estados Partes a contar con servicios especializados que tengan por función ayudar y apoyar a los individuos para permitirles identificar el empleo disponible y acceder a él.</p>
+                        <p>Fuente: <b>Comité DESC (2005) Observación General Nro. 18. El derecho al trabajo.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Accesibilidad del trabajo</h4>
+                        <p>Implica que el mercado del trabajo debe ser accesible a todas las personas en tres dimensiones: la no discriminación en el acceso al empleo por motivos de raza, color, sexo, religión y opinión política, entre muchas otras; la accesibilidad física del trabajo para las personas con discapacidad; y el derecho de procurar, obtener y difundir información sobre los medios para acceder al empleo, a través de redes de información local, regional y nacional.</p>
+                        <p>Fuente: <b>Comité DESC (2005) Observación General Nro. 18. El derecho al trabajo.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Aceptabilidad y calidad del trabajo</h4>
+                        <p>Se refiere especialmente al derecho del trabajador/a a condiciones justas y favorables de trabajo, en particular a condiciones laborales seguras, y al derecho a constituir sindicatos y el derecho a elegir y aceptar libremente el empleo.</p>
+                        <p>Fuente: <b>Comité DESC (2005) Observación General Nro. 18. El derecho al trabajo.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-tab-6">
+                        <p class="text-bold">¿Qué son los derechos económicos, sociales, culturales y ambientales?</p>
+                        <h4>Condiciones equitativas y satisfactorias de trabajo</h4>
+                        <p>Se refiere a las condiciones básicas para que un trabajo se considere digno. Entre ellas se encuentran factores como la prohibición del trabajo forzoso y la explotación social y económica de  niños  y  adolescentes; la remuneración justa y razonable; la  protección  contra  la  violencia  y  el  acoso,  incluido  el  acoso sexual; y las licencias de maternidad, de paternidad y parental remuneradas, sin que estos elementos sean exhaustivos.</p>
+                        <p>Fuente: <b>Comité DESC (2016) Observación General Nro. 23, sobre el derecho a condiciones de trabajo equitativas y satisfactorias.</b></p>
+                        <!--<hr>
+                        <h5>Otros temas asociados</h5>
+                        <ul>
+                            <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
+                        </ul>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}
