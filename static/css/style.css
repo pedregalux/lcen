@@ -2237,6 +2237,7 @@ footer .rrss li a i {
 .iniciativas-propuestas h2 {
     border: 0px;
     text-align: center;
+    color: grey;
 }
 
 .iniciativas-propuestas .carousel {
@@ -2610,6 +2611,31 @@ footer .rrss li a i {
 
 .constitucionfeminista-descripcion p.contacto-cfeminista a {
     color: black;
+}
+
+.btn-constitucionfeminista {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn-constitucionfeminista .btn-lcen{
+    background: #008000;
+}
+
+.btn-constitucionfeminista .btn-lcen:before{
+  background: #AB47BC!important;
+}
+
+a.enlace-cf{
+  color: #008000;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 800;
+}
+
+a.enlace-cf:hover{
+  color: #AB47BC;
 }
 
 /*Libro Constitucion feminista 1980*/
