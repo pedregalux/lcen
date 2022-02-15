@@ -288,6 +288,8 @@ class PersonasmigrantesView(TemplateView):
 class IniciativapopularView(TemplateView):
         template_name = "inicio/iniciativa-popular.html"
 
+class DebateconstituyenteView(TemplateView):
+        template_name = "inicio/debate-constituyente.html"
 
 def error404(request, exception, template_name='inicio/error.html'):
     return render(request, template_name)
