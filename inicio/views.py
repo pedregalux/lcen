@@ -189,7 +189,8 @@ class Feminista36View(TemplateView):
 class Feminista37View(TemplateView):
     template_name = 'inicio/mujeres-y-sistema-judicial.html'
 
-
+class Feminista38View(TemplateView):
+    template_name = 'inicio/mujeres-y-campamentos-en-pandemia.html'
 
 class MapaconstitucionalView(TemplateView):
     template_name = "inicio/mapa-constitucional.html"
@@ -287,6 +288,8 @@ class PersonasmigrantesView(TemplateView):
 class IniciativapopularView(TemplateView):
         template_name = "inicio/iniciativa-popular.html"
 
+class DebateconstituyenteView(TemplateView):
+        template_name = "inicio/debate-constituyente.html"
 
 def error404(request, exception, template_name='inicio/error.html'):
     return render(request, template_name)

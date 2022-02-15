@@ -86,4 +86,8 @@ urlpatterns = [
     path('personas-migrantes/', PersonasmigrantesView.as_view(), name='personas-migrantes'),
 
     path('iniciativa-popular/', IniciativapopularView.as_view(), name='iniciativa-popular'),
+
+    path('mujeres-y-campamentos-en-pandemia/', Feminista38View.as_view(), name='mujeres-y-campamentos-en-pandemia'),
+
+    path('debate-constituyente/', DebateconstituyenteView.as_view(), name='debate-constituyente'),
 ]
