@@ -282,7 +282,7 @@ header ul.navbar-nav li a {
     font-size: 0.9em;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
     color: black;
     padding: 32px 8px 40px 8px;
     border-top: 8px solid transparent;
@@ -337,7 +337,7 @@ header .nav-link:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 70px;
+    margin-top: 0px;
 }
 
 .decoracion-colores .yellow {
@@ -1127,6 +1127,7 @@ footer .rrss li a i {
 
 /*Mapa Constitucional - Home*/
 .mapa-constitucional-home {
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 
@@ -2336,6 +2337,30 @@ footer .rrss li a i {
 }
 
 
+
+/*Debate Constituyente - Seccion*/
+.debate-constituyente{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.debate-constituyente h2{
+  border-color:#FFD700;
+}
+
+.debate-constituyente img{
+  width: 100%;
+}
+
+.debate-constituyente p {
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.debate-constituyente p b{
+  font-size: 1.2em;
+}
+
 /*Mapa Constitucional - Seccion*/
 .mapa-constitucional {
     margin-top: 0px !important;
@@ -2388,6 +2413,11 @@ footer .rrss li a i {
 
 
 /*Mapa Constitucional - Sección Interna*/
+
+.mapa-constitucional-terminos {
+    margin-bottom: 70px;
+}
+
 .mapa-constitucional-terminos h3 {
     font-size: 1.7em;
 }
@@ -4286,6 +4316,7 @@ ul.pagination .active a {
 
     .iniciativa-popular .informacion h3 {
         font-size: 1.3em;
+        z-index: 1;
     }
 
     .seccion-info img {
@@ -4293,6 +4324,7 @@ ul.pagination .active a {
     }
 
     .mapa-constitucional-home {
+        margin-top: 50px;
         margin-bottom: 50px;
     }
 
@@ -4381,6 +4413,10 @@ ul.pagination .active a {
     .btn-lcen {
         font-size: 0.9em;
     }
+
+    .constitucionfeminista-descripcion .logo-autor img {
+    max-width: 150px;
+   }
 }
 
 

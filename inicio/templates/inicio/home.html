@@ -10,8 +10,8 @@
     <div class="informacion-portada container">
         <h1 class="animate__animated wow animate__fadeIn animate__delay-1s">Impulsemos una constitución <br>escrita por la ciudadanía</h1>
         <div class="linea-decoracion yellow wow animate__animated animate__fadeIn animate__delay-1s"></div>
-        <p class="portada wow animate__animated animate__fadeIn animate__delay-1s">¡Súmate con tu propuesta y la haremos llegar a la Convención!</p>
-        <!-- <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate__delay-2s">Sube tu propuesta</a> -->
+        <p class="portada wow animate__animated animate__fadeIn animate__delay-1s">¿Cómo se votan las normas convencionales?</p>
+        <a href="{% url 'debate-constituyente' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate__delay-2s">Sigue el recorrido aquí</a>
     </div>
 </section>
 
@@ -44,22 +44,22 @@
       </div>
       <div class="informacion wow animate__animated animate__fadeIn">
           <h3>
-            ¡Te ayudamos a llevar tu iniciativa popular a la convención!
+            Revisa el recorrido de las normas en la Convención
           </h3>
-          <p>
+          <!--<p>
             Juntando <b>15 mil firmas</b> las propuestas ciudadanas pueden ser discutidas por la Convención Constitucional. Descarga el manual con el paso a paso acá.
-          </p>
-          <a href="{% static 'img/manual-ipn.pdf' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Descargar manual</a>
+          </p>-->
+          <a href="{% url 'debate-constituyente' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Sigue el recorrido aquí</a>
       </div>
       <div class="img img-dos wow animate__animated animate__fadeIn">
           <img src="{% static 'img/papel-lcen.png' %}" alt="img mano con papel lcen" class="img-ipn-dos">
       </div>
 </section>
 
-<section class="infografia-ipn wow animate__animated animate__fadeIn">
+<!--<section class="infografia-ipn wow animate__animated animate__fadeIn">
   <img src="{% static 'img/infografia-1.jpg' %}" alt="" class="w-100 infografia-desktop-ipn">
   <img src="{% static 'img/infografia-1-movil.jpg' %}" alt="" class="w-100 infografia-movil-ipn">
-</section>
+</section>-->
 
 
 <section class="container mapa-constitucional-home seccion-info">
