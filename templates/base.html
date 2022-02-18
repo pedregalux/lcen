@@ -72,7 +72,7 @@
 
   <body>
 
-    <header class="container-fluid fixed-top">
+    <header class="container-fluid fixed-top header-desktop">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid p-0">
                 <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
@@ -84,9 +84,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'debate-constituyente' %}">Debate Constituyente</a>
+
+                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-27" class="dropdown nav-item">
+                            <a title="Debate Constituyente" href="{% url 'debate-constituyente' %}" class="nav-link dropdown-toggle">Debate Constituyente<i class="fas fa-chevron-down d-inline d-md-none"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-134" role="menu">
+                                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
+                                    <a title="Cronograma constitucional" href="{% url 'cronograma-constitucional' %}" class="dropdown-item">Cronograma Constitucional</a>
+                                </li>
+                            </ul>
                         </li>
+
                         <li class="nav-item dropdown">
                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -105,11 +112,60 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'verorganizaciones' %}">Organizaciones</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+
+    <header class="container-fluid fixed-top header-movil">
+        <nav class="navbar navbar-expand-lg container">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
+                        </li>
+                        <li class="nav-item dropdown-anidado">
+                            <a class="nav-link" href="{% url 'debate-constituyente' %}">Debate Constituyente</a> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'cronograma-constitucional' %}">Cronograma Constitucional</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown-anidado">
+                            <p>Recursos</p> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+                              <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+                              <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                              <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
+                            </ul>
+                        </li>
+
+                         <li class="nav-item">
+                             <a class="nav-link" href="{% url 'verconvencionales' %}">Convencionales</a>
+                         </li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="{% url 'ver_propuestas' %}">Propuestas</a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'verorganizaciones' %}">Organizaciones</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
 
 {% block content %}
 

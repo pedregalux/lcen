@@ -2361,6 +2361,367 @@ footer .rrss li a i {
   font-size: 1.2em;
 }
 
+.cronograma-cta {
+    background: url(../img/bg-cronograma-cta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 0px;
+}
+
+.cronograma-cta .btn-cronograma{
+  display: flex;
+  justify-content: center;
+}
+
+.cronograma-cta .btn-cronograma a.btn-lcen{
+  background: #CC0000;
+}
+
+.cronograma-cta .btn-cronograma a.btn-lcen:before {
+    background: black!important;
+}
+
+
+/*Cronograma Constituyente - Sección*/
+
+.cronograma-seccion h2 {
+    text-align: center;
+    border-left: 0px!important;
+    padding-left: 0px;
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.cronograma-seccion p{
+  text-align: center;
+}
+
+.cronograma {
+    margin-top: 20px;
+}
+
+.cronograma-seccion .cronograma .accordion-item h2{
+    width: 100px;
+    padding-top: 0px;
+}
+
+.cronograma-seccion .cronograma .accordion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0px;
+}
+
+.accordion-button:focus {
+    border-color: transparent!important;
+    box-shadow: 0 0 0 0rem rgb(13 110 253 / 0%)!important;
+}
+
+.cronograma-seccion .cronograma .accordion-item .linea-cronograma-visible {
+    height: 30px;
+    width: 2px;
+    background: black;
+}
+
+.cronograma-seccion .cronograma .accordion-button::after {
+    display: none;
+}
+
+.cronograma-seccion .cronograma .accordion-button {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: black;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-collapse{
+    width: 100%;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body{
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.cronograma-seccion .cronograma .accordion-item .linea-separacion {
+    width: 2px;
+    background: black;
+}
+
+.cronograma-seccion .cronograma .accordion-item .linea-separacion.uno {
+    height: 80px;
+}
+
+.cronograma-seccion .cronograma .accordion-item .linea-separacion.dos {
+    height: 110px;
+}
+
+.cronograma-seccion .cronograma .accordion-item .linea-separacion.tres {
+    height: 135px;
+}
+
+.cronograma-seccion .cronograma .accordion-item .linea-separacion.tresbr {
+    height: 150px;
+}
+
+.cronograma-seccion .cronograma .accordion-item .linea-separacion.cuatro {
+    height: 180px;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila .linea {
+    width: 30px;
+    height: 1.9px;
+    background: black;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila p .dia-numero {
+    border: 2px solid black;
+    height: 27px;
+    width: 27px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-1 {
+    width: 50%;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-1 p{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-1 span.acontecimiento {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    line-height: 18px;
+    font-size: 0.95em;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-1 p .dia-numero{
+  margin-left: 10px;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-2 {
+    width: 50%;
+    margin-top: 30px;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-2 p{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-2 p .dia-numero{
+  margin-right: 10px;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-2 span.acontecimiento {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    line-height: 18px;
+    font-size: 0.95em;
+}
+
+.cronograma-seccion .cronograma .mes-activo .linea-separacion {
+    background: #008000!important;
+}
+
+.cronograma-seccion .cronograma .mes-activo .accordion-button{
+  background: #008000!important;
+}
+
+.cronograma-seccion .cronograma .mes-activo .linea-cronograma-visible {
+    background: #008000!important;
+}
+
+
+.cronograma-seccion .cronograma .mes-activo .fila .linea {
+    background: #008000!important;
+}
+
+.cronograma-seccion .cronograma .mes-activo .fila p .dia-numero {
+    border: 2px solid #008000!important;
+    color: #008000!important;
+}
+
+.circulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo .circulo-dibujo {
+    height: 10px;
+    width: 10px;
+    background: black;
+    border-radius: 100%;
+}
+
+.plebicito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+}
+
+.plebicito .box {
+    border: 1px dashed #828282;
+}
+
+.plebicito h4 {
+    background: black;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+
+.plebicito p{
+  font-size: 1em;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 0px;
+}
+
+.plebicito a{
+  color:#008000;
+}
+
+.plebicito .box img{
+  margin-left: auto;
+}
+
+.plebicito .box img {
+    display: flex;
+    margin: 0px auto 10px auto;
+}
+
+.plebicito img.icono-voto {
+    width: 65px;
+    position: absolute;
+    top: -48px;
+}
+
+.plebicito img.bg-icono-voto {
+    width: 130px;
+    top: -69px;
+    position: absolute;
+    z-index: -1;
+}
+
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil{
+  display: none;
+}
+
+@media(max-width:768px){
+  .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-1{
+    display: none;
+  }
+  .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-2{
+    display: none;
+  }
+  .cronograma-seccion .cronograma .accordion-item .accordion-body .linea-separacion{
+    display: none;
+  }
+
+  .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil {
+      display: block;
+      border-left: 2px solid black;
+      padding-bottom: 30px;
+      width: 100%;
+      margin-left: 10px;
+  }
+
+  .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil span.acontecimiento {
+    text-align: left;
+    line-height: 18px;
+    padding-left: 10px;
+ }
+
+  .cronograma-seccion .cronograma .mes-activo .fila.fila-movil {
+      border-left: 2px solid #008000!important;
+  }
+
+  .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil p {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+  }
+
+  .cronograma-seccion .cronograma .accordion-item {
+    align-items: flex-start;
+  }
+
+  .cronograma-seccion .cronograma .accordion-button{
+    border-radius: 0px;
+  }
+
+  .cronograma-seccion .cronograma .accordion-item .linea-cronograma-visible {
+    height: 30px;
+    width: 2px;
+    background: black;
+    margin-left: 10px;
+  }
+  .circulo {
+    justify-content: flex-start;
+    padding-left: 6px;
+  }
+  .plebicito h4 {
+    font-size: 1.1em;
+  }
+
+.plebicito img.icono-voto {
+    width: 45px;
+    position: absolute;
+    top: -30px;
+}
+
+.plebicito img.bg-icono-voto {
+    width: 100px;
+    top: -48px;
+    position: absolute;
+    z-index: -1;
+}
+
+.plebicito {
+    margin-top: 50px;
+}
+
+.cronograma-seccion {
+    padding-top: 0px!important;
+}
+
+}
+
+
 /*Mapa Constitucional - Seccion*/
 .mapa-constitucional {
     margin-top: 0px !important;
@@ -4411,11 +4772,16 @@ ul.pagination .active a {
     }
 
     .btn-lcen {
-        font-size: 0.9em;
+        font-size: 0.85em;
     }
 
     .constitucionfeminista-descripcion .logo-autor img {
     max-width: 150px;
+   }
+
+   /*Cronograma*/
+   .cronograma-cta .container .row div{
+     padding: 0px;
    }
 }
 
@@ -4425,4 +4791,53 @@ ul.pagination .active a {
         max-height: 50px;
         max-width: 90px;
     }
+}
+
+
+/*Header*/
+.header-desktop{
+  display: block;
+}
+.header-movil{
+  display: none;
+}
+
+@media (max-width: 991px) {
+  /*Header*/
+  .header-desktop{
+    display: none;
+  }
+  .header-movil{
+    display: block;
+  }
+
+  .header-movil .dropdown-anidado {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+.header-movil li.nav-item.dropdown-anidado a#navbarDropdown {
+    padding: 0px 0px;
+    font-size: 1.1em;
+    padding-left: 10px;
+}
+
+  .header-movil li.nav-item.dropdown-anidado ul.dropdown-menu {
+    width: 100%;
+}
+
+header ul.navbar-nav li p {
+    font-size: 0.85em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    color: black;
+    padding: 10px 0px;
+    border-top: 0px;
+    margin-bottom: 0px;
+}
+
 }

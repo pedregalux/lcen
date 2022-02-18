@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Cronograma Constitucional{% endblock %}
+
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-cronograma.jpg' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-cronograma-movil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cronograma Constitucional</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container cronograma-seccion py-5 my-5">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 wow animate__animated animate__fadeIn">
+            <h2>Cronograma Constitucional</h2>
+            <div class="decoracion red"></div>
+            <p>Revisa las fechas más importantes de todo el proceso constituyente y no te pierdas ninguna oportunidad para que tu voz sea escuchada</p>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 wow animate__animated animate__fadeIn">
+
+  <div class="accordion cronograma" id="accordionExample">
+
+  <div class="accordion-item mes-activo">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Febrero
+      </button>
+    </h2>
+    <div class="linea-cronograma-visible"></div>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+        <div class="fila fila-1">
+          <p><span class="linea"></span><span class="dia-numero">1</span><span class="acontecimiento">Plazo final de recolección de firmas para <br>iniciativas populares de norma</span></p>
+          <p><span class="linea"></span><span class="dia-numero">15</span><span class="acontecimiento">Empiezan votaciones en el pleno</span></p>
+        </div>
+        <div class="linea-separacion tresbr"> </div>
+        <div class="fila fila-2">
+          <p><span class="linea"></span><span class="dia-numero">14</span><span class="acontecimiento">Empieza consulta indígena</span></p>
+        </div>
+
+        <div class="fila fila-movil">
+          <p><span class="linea"></span><span class="dia-numero">1</span><span class="acontecimiento">Plazo final de recolección de firmas para <br>iniciativas populares de norma</span></p>
+          <p><span class="linea"></span><span class="dia-numero">14</span><span class="acontecimiento">Empieza consulta indígena</span></p>
+          <p><span class="linea"></span><span class="dia-numero">15</span><span class="acontecimiento">Empiezan votaciones en el pleno</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Marzo
+      </button>
+    </h2>
+    <div class="linea-cronograma-visible"></div>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+        <div class="fila fila-1">
+          <p><span class="linea"></span><span class="dia-numero">4</span><span class="acontecimiento">Término consulta indígena</span></p>
+        </div>
+        <div class="linea-separacion dos"> </div>
+        <div class="fila fila-2">
+          <p><span class="linea"></span><span class="dia-numero">21</span><span class="acontecimiento">Terminan votaciones en el pleno</span></p>
+        </div>
+
+        <div class="fila fila-movil">
+          <p><span class="linea"></span><span class="dia-numero">4</span><span class="acontecimiento">Término consulta indígena</span></p>
+          <p><span class="linea"></span><span class="dia-numero">21</span><span class="acontecimiento">Terminan votaciones en el pleno</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Abril
+      </button>
+    </h2>
+    <div class="linea-cronograma-visible"></div>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+        <div class="fila fila-1">
+          <p><span class="linea"></span><span class="dia-numero">22</span><span class="acontecimiento">Cierre del debate constitucional</span></p>
+          <p><span class="linea"></span><span class="dia-numero">29</span><span class="acontecimiento">Comienzo sesiones de comisión de armonización</span></p>
+        </div>
+        <div class="linea-separacion tres"> </div>
+        <div class="fila fila-2">
+          <p><span class="linea"></span><span class="dia-numero">27</span><span class="acontecimiento">Primer Borrador de articulado aprobado por el Pleno</span></p>
+        </div>
+
+        <div class="fila fila-movil">
+          <p><span class="linea"></span><span class="dia-numero">22</span><span class="acontecimiento">Cierre del debate constitucional</span></p>
+          <p><span class="linea"></span><span class="dia-numero">27</span><span class="acontecimiento">Primer Borrador de articulado aprobado por el Pleno</span></p>
+          <p><span class="linea"></span><span class="dia-numero">29</span><span class="acontecimiento">Comienzo sesiones de comisión de armonización</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFor">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFor" aria-expanded="false" aria-controls="collapseFor">
+        Mayo
+      </button>
+    </h2>
+    <div class="linea-cronograma-visible"></div>
+    <div id="collapseFor" class="accordion-collapse collapse" aria-labelledby="headingFor" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+        <div class="fila fila-1">
+          <p><span class="linea"></span><span class="dia-numero">2</span><span class="acontecimiento">Comienzo difusión propuesta de constitución, <br>semanas territoriales</span></p>
+        </div>
+        <div class="linea-separacion uno"> </div>
+        <div class="fila fila-2">
+
+        </div>
+
+        <div class="fila fila-movil">
+          <p><span class="linea"></span><span class="dia-numero">2</span><span class="acontecimiento">Comienzo difusión propuesta de constitución, <br>semanas territoriales</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        Junio
+      </button>
+    </h2>
+    <div class="linea-cronograma-visible"></div>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+        <div class="fila fila-1">
+          <p><span class="linea"></span><span class="dia-numero">24</span><span class="acontecimiento">Deliberación del Pleno de indicaciones <br>de Armonización</span></p>
+        </div>
+        <div class="linea-separacion uno"> </div>
+        <div class="fila fila-2">
+
+        </div>
+
+        <div class="fila fila-movil">
+          <p><span class="linea"></span><span class="dia-numero">24</span><span class="acontecimiento">Deliberación del Pleno de indicaciones <br>de Armonización</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        Julio
+      </button>
+    </h2>
+    <div class="linea-cronograma-visible"></div>
+    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+        <div class="fila fila-1">
+          <p><span class="linea"></span><span class="dia-numero">5</span><span class="acontecimiento">Término del plazo de funcionamiento de la <br>Convención Constitucional</span></p>
+        </div>
+        <div class="linea-separacion uno"> </div>
+        <div class="fila fila-2">
+
+        </div>
+
+        <div class="fila fila-movil">
+          <p><span class="linea"></span><span class="dia-numero">5</span><span class="acontecimiento">Término del plazo de funcionamiento de la <br>Convención Constitucional</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div><!--end accordion-->
+<div class="circulo"><div class="circulo-dibujo"></div></div>
+
+        </div>
+        <div class="col-12 col-sm-10 col-md-4 col-lg-4 wow animate__animated animate__fadeIn">
+
+          <div class="plebicito">
+            <img src="{% static 'img/bg-voto.png' %}" alt="img collage portada" class="img-fluid bg-icono-voto">
+            <img src="{% static 'img/icono-voto.png' %}" alt="img collage portada" class="img-fluid icono-voto">
+            <div class="box">
+              <h4>Plebicito de Sálida</h4>
+              <p>Recuerda que el plebiscito de salida es con voto obligatorio y podrás votar en el local más cercano a tu domicilio electoral (Recuerda que aún tienes tiempo para solicitar el cambio de domicilio electoral <a href="https://cambiodomicilio.servel.cl/" target="_blank">aquí</a>).</p>
+              <img src="{% static 'img/aprobado-voto-icono.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+{% endblock %}

@@ -32,6 +32,17 @@
   <img src="{% static 'img/infografia-debate-constituyente.jpeg' %}" alt="" class="w-100 infografia-desktop-ipn">
 </section>
 
-
+<section class="cronograma-cta seccion-info container-fluid">
+  <div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 wow animate__animated animate__fadeIn">
+            <img src="{% static 'img/cronograma-titulo-cta.png' %}" alt="titulo cronograma" width="100%">
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn btn-cronograma">
+            <a href="{% url 'cronograma-constitucional' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion">Revisa el cronograma aquí</a>
+        </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
