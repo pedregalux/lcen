@@ -90,4 +90,6 @@ urlpatterns = [
     path('mujeres-y-campamentos-en-pandemia/', Feminista38View.as_view(), name='mujeres-y-campamentos-en-pandemia'),
 
     path('debate-constituyente/', DebateconstituyenteView.as_view(), name='debate-constituyente'),
+
+    path('cronograma-constitucional/', CronogramaconstitucionalView.as_view(), name='cronograma-constitucional'),
 ]

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Debate Constituyente{% endblock %}
@@ -35,3 +36,53 @@
 
 
 {% endblock %}
+=======
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Debate Constituyente{% endblock %}
+
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-debateconstituyente.jpg' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-debateconstituyente-movil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Debate Constituyente</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container debate-constituyente seccion-info">
+    <div class="row d-flex align-items-center">
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
+            <h2>Debate Constituyente</h2>
+            <p>La Convención Constitucional ya está discutiendo qué normas y artículos quedarán en la nueva Constitución de Chile ¿Sabes cómo avanza este proceso? Puede ser un poco complicado, pero no te preocupes porque aquí te entregamos todas las herramientas para comprender el proceso de votación de normas.</p>
+            <p><b>¡Sigue el mapa!</b></p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+            <img src="{% static 'img/collage-debate-constituyente.png' %}" alt="collage debate constituyente" width="100%">
+        </div>
+    </div>
+</section>
+
+<section class="infografia-debate wow animate__animated animate__fadeIn">
+  <img src="{% static 'img/infografia-debate-constituyente.jpeg' %}" alt="" class="w-100 infografia-desktop-ipn">
+</section>
+
+<section class="cronograma-cta seccion-info container-fluid">
+  <div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 wow animate__animated animate__fadeIn">
+            <img src="{% static 'img/cronograma-titulo-cta.png' %}" alt="titulo cronograma" width="100%">
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn btn-cronograma">
+            <a href="{% url 'cronograma-constitucional' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion">Revisa el cronograma aquí</a>
+        </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+>>>>>>> desarrollo
