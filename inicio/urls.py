@@ -92,4 +92,6 @@ urlpatterns = [
     path('debate-constituyente/', DebateconstituyenteView.as_view(), name='debate-constituyente'),
 
     path('cronograma-constitucional/', CronogramaconstitucionalView.as_view(), name='cronograma-constitucional'),
+
+    path('glosario-constitucional/', GlosarioconstitucionalView.as_view(), name='glosario-constitucional'),
 ]
