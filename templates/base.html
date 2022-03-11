@@ -91,6 +91,9 @@
                                 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
                                     <a title="Cronograma constitucional" href="{% url 'cronograma-constitucional' %}" class="dropdown-item">Cronograma Constitucional</a>
                                 </li>
+                                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
+                                    <a title="Glosario constitucional" href="{% url 'glosario-constitucional' %}" class="dropdown-item">Glosario Constitucional</a>
+                                </li>
                             </ul>
                         </li>
 
@@ -136,6 +139,7 @@
                             <a class="nav-link" href="{% url 'debate-constituyente' %}">Debate Constituyente</a> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{% url 'cronograma-constitucional' %}">Cronograma Constitucional</a></li>
+                                <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario Constitucional</a></li>
                             </ul>
                         </li>
 
@@ -224,6 +228,7 @@
 
     <!-- Bootstrap JS -->
     <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="{% static 'js/src.js' %}"></script>
   </body>
 </html>

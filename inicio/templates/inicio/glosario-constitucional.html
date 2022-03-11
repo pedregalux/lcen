@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Cronograma Constitucional{% endblock %}
+
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/glosario-banner.jpg' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/glosario-banner-movil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'debate-constituyente' %}">Debate Constituyente</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Glosario Constitucional</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container glosario-seccion pt-5 mt-5 pb-5">
+    <div class="row justify-content-md-center">
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 wow animate__animated animate__fadeIn">
+            <h2>Glosario Constitucional</h2>
+            <div class="decoracion red"></div>
+            <p>El proceso constituyente tiene tantos conceptos complicados (básicamente en idioma que solo los abogados entienden) que hace que muchas veces nos alejemos y nos cueste informarnos. Acá te presentamos algunos términos que se escuchan mucho, pero que pocas veces se explican.</p>
+        </div>
+
+        <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 wow animate__animated animate__fadeIn form align-self-center">
+           <form class="d-flex justify-content-center">
+                <div class="item">
+                    <p>¿Buscas alguna palabra?</p>
+                </div>
+                <div class="item">
+                   <input type="text" class="form-control" placeholder="Escribir palabra">
+                </div>
+                <div class="item">
+                    <button type="submit" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion">Buscar palabra</button>
+                </div>
+           </form>
+        </div> -->
+
+    </div>
+</section>
+
+<section>
+  <div class="container preguntas glosario-definiciones wow animate__animated animate__fadeIn">
+      <div class="row justify-content-md-center">
+          <div class="col-12 col-sm-12 col-md-10">
+
+              <div class="accordion" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading1">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse1" aria-expanded="true" aria-controls="panelsStayOpen-collapse1">
+          Propuesta de Norma
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading1">
+                          <div class="accordion-body">
+                              <p>Es el o los artículos, en torno a un tema específico, que son propuestos por convencionales y ciudadanía para ser discutidos por la Convención y eventualmente queden en el texto de la nueva Constitución.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading2">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false" aria-controls="panelsStayOpen-collapse2">
+           Comisiones
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading2">
+                          <div class="accordion-body">
+                              <p>La Convención Constitucional dividió su trabajo en 7 Comisiones. Éstas son básicamente grupos temáticos compuestos por un pequeño número de constituyentes  (entre 15 a 33) y se encargan de revisar, discutir y presentar propuestas específicas para después enviarlas al Pleno.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading3">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+          Pleno
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+                          <div class="accordion-body">
+                              <p>Compuesto por todas y todos los miembros electos de la Convención Constituyente (154 integrantes). Es donde se discuten y se votan las propuestas que salen de cada comisión.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading4">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+          Consulta Indigena
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+                          <div class="accordion-body">
+                              <p>Es un proceso de participación entre los escaños reservados y comunidades, pueblos y naciones indígenas en Chile donde presentan normas que luego serán discutidas en el Pleno de la Convención. Se lleva a cabo desde el 14 de febrero hasta el 4 de marzo.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading5">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+          Iniciativas de normas Constituyentes
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+                          <div class="accordion-body">
+                              <p>Suena más complicado de lo que es. Son las propuestas de norma que presentaron las y los constituyentes para ser discutidas (algo muy similar a cómo funciona actualmente el Congreso cuando presentan leyes).</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading6">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+          Iniciativas de norma Popular
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+                          <div class="accordion-body">
+                              <p>Son las propuestas de norma presentadas por la ciudadanía y que lograron conseguir las 15.000 firmas necesarias para ser discutidas por la Convención.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading7">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7" aria-expanded="false" aria-controls="panelsStayOpen-collapse7">
+          Iniciativas de norma de Pueblos Indígenas
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading7">
+                          <div class="accordion-body">
+                              <p>Son las propuestas de normas presentadas por los y las convencionales de  Pueblos Originarios (Son 17 convencionales en total).</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading8">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8" aria-expanded="false" aria-controls="panelsStayOpen-collapse8">
+          Votación en General
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading8">
+                          <div class="accordion-body">
+                              <p> Votación para aprobar o rechazar el contenido de una norma  en su totalidad. Recuerda que esta votación ocurre antes de la votación en particular y se realiza tanto en  la comisión como en el Pleno.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading9">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse9" aria-expanded="false" aria-controls="panelsStayOpen-collapse9">
+          Votación en Particular
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse9" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading9">
+                          <div class="accordion-body">
+                              <p>Votación para aprobar o rechazar una propuesta de norma que va  artículo por artículo (recuerda que una norma puede tener muchos artículos). Ocurre luego de que una norma es aprobada en general y se realiza en la comisión y en el Pleno.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading10">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse10" aria-expanded="false" aria-controls="panelsStayOpen-collapse10">
+          Indicaciones
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse10" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading10">
+                          <div class="accordion-body">
+                              <p>Es cuando una norma no es aprobada del todo y tiene detalles por corregir. Por ejemplo, un texto puede ser sustituido, modificado, se le pueden añadir algunas cosas o se le elimina algo específico</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading11">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse11" aria-expanded="false" aria-controls="panelsStayOpen-collapse11">
+          Informe de revisión
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse11" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading11">
+                          <div class="accordion-body">
+                              <p>¡Muy simple! Consiste en que cada comisión revisa y ordena las normas aprobadas en general y con indicaciones y luego elabora un informe que se somete a votación en el Pleno.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading12">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse12" aria-expanded="false" aria-controls="panelsStayOpen-collapse12">
+          Reposición de Indicaciones
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse12" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading12">
+                          <div class="accordion-body">
+                              <p>Cuando una indicación es rechazada, la Convención tiene la posibilidad de reincorporarla para que se vote ¿Cómo? Se necesita la firma de 16 convencionales y así puede ser votada nuevamente en particular.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading13">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse13" aria-expanded="false" aria-controls="panelsStayOpen-collapse13">
+          Quórum ⅔
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse13" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading13">
+                          <div class="accordion-body">
+                              <p>Es el término que se usa para ver cuántos votos son necesarios para que algo se apruebe. En el caso de la Convención se requiere ⅔, es decir, se necesita que al menos 103 convencionales aprueben una norma (sino ésta puede ser rechazada o de vuelta a la comisión)
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-heading14">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse14" aria-expanded="false" aria-controls="panelsStayOpen-collapse14">
+          Comisión de Armonización
+        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapse14" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading14">
+                          <div class="accordion-body">
+                              <p>Es la última instancia de la Convención, donde 40 convencionales revisan todo lo aprobado y ordenan el contenido para que sea coherente y comprensible a la ciudadanía.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div> <!--end accordion-->
+
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="palabras-nuevas container-fluid wow animate__animated animate__fadeIn">
+    <div class="contenedor-titulo">
+       <div class="container">
+           <div class="row">
+                <div class="titulo-seccion">
+                    <img src="{% static 'img/titulo-glosario-busqueda-palabras.png' %}" alt="titulo" class="img-fluid">
+                </div>
+           </div>
+       </div>
+    </div>
+
+    <div class="contenedor-formulario">
+      <img src="{% static 'img/collage-glosario-1.png' %}" alt="collage-persona-glosario" class="img-fluid img-persona-glosario">
+       <div class="container">
+           <div class="row">
+                <div class="formulario">
+                    <form onsubmit="sendEmail(); reset(); return false;">
+                    {% csrf_token %}
+                      <div class="titulo-form">
+                         <p>Envíanos y acá te ayudaremos con la definición <b>¡Este Glosario lo hacemos entre todxs!</b></p>
+                      </div>
+                      <div class="items-form">
+                         <input type="text" id="palabra" class="form-control" placeholder="Escribir palabra">
+                         <button type="submit" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion">Enviar</button>
+                      </div>
+                    </form>
+                </div>
+           </div>
+       </div>
+    </div>
+
+    <img src="{% static 'img/collage-glosario.png' %}" alt="collage" class="img-fluid collage-glosario">
+
+</section>
+
+
+{% endblock %}
