@@ -235,10 +235,10 @@
     Host : "smtp.gmail.com",
     Username : "palabrasglosariolcen@gmail.com",
     Password : "glosariolcen2022",
-    To : 'palabrasglosariolcen@gmail.com',
+    To : "palabrasglosariolcen@gmail.com",
     From : "soporte@laconstitucionesnuestra.cl",
-    Subject : document.getElementbyId("palabra"),
-    Body : "And this is the body"
+    Subject : "Palabra para Glosario LCEN 2022",
+    Body : document.getElementbyId("palabra").value
 }).then(
   message => alert("Se ha enviado la palabra correctamente. La revisaremos e incluiremos en el Glosario.")
 );
