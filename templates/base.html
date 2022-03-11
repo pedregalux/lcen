@@ -237,10 +237,10 @@
     Password : "glosariolcen2022",
     To : 'palabrasglosariolcen@gmail.com',
     From : "soporte@laconstitucionesnuestra.cl",
-    Subject : "This is the subject",
+    Subject : document.getElementbyId("palabra"),
     Body : "And this is the body"
 }).then(
-  message => alert("Se ha enviado la palabra correctamente. La revisaremos e incluiremos.")
+  message => alert("Se ha enviado la palabra correctamente. La revisaremos e incluiremos en el Glosario.")
 );
 }
 </script>
