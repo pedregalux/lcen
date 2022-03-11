@@ -1,8 +1,8 @@
 function sendEmail(){
   Email.send({
   Host : "smtp.gmail.com",
-  Username : "cuentalcen2022smtp@gmail.com",
-  Password : "cuentalcensmtp2022",
+  Username : "palabrasglosariolcen@gmail.com",
+  Password : "glosariolcen2022",
   To : "palabrasglosariolcen@gmail.com",
   From : "soporte@laconstitucionesnuestra.cl",
   Subject : "Palabra para Glosario LCEN 2022",
