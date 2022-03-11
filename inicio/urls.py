@@ -149,6 +149,7 @@ urlpatterns = [
     path('cronograma-constitucional/', CronogramaconstitucionalView.as_view(),
          name='cronograma-constitucional'),
 
-    path('glosario-constitucional/', GlosarioconstitucionalView.as_view(),
+    path('glosario-constitucional/', views.GlosarioconstitucionalView.as_view(),
          name='glosario-constitucional'),
+
 ]

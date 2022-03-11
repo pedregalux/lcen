@@ -356,18 +356,17 @@ class CronogramaconstitucionalView(TemplateView):
 class GlosarioconstitucionalView(TemplateView):
     template_name = "inicio/glosario-constitucional.html"
 
+    def getpalabra(request):
+        form = GlosarioForm()
+        if request.method == 'POST':
+            form = GlosarioForm(request.POST)
+            if form.is_valid():
+                subject = 'Enviado'
+                palabra = form.GET['palabra']
+                send_mail(subject,
+                          palabra, settings.EMAIL_HOST_USER, ['felipe.perry@gmail.com'], fail_silently=False)
 
-def get_palabra(request):
-    if request.method == 'POST':
-        message = request.POST['palabra']
-
-    send_mail("Palabra Glosario",
-              message,
-              settings.EMAIL_HOST_USER,
-              ['felipe.perry@gmail.com'],
-              fail_silently=False)
-
-    return render(request, 'inicio/glosario-constitucional.html')
+        return render(request, 'inicio/home.html', {'form': form})
 
 
 def error404(request, exception, template_name='inicio/error.html'):

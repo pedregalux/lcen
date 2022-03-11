@@ -251,7 +251,7 @@
        <div class="container">
            <div class="row">
                 <div class="formulario">
-                    <form action="{% url 'glosario-constitucional' %}" method="post">
+                    <form onsubmit="sendEmail(); reset(); return false;">
                     {% csrf_token %}
                       <div class="titulo-form">
                          <p>Envíanos y acá te ayudaremos con la definición <b>¡Este Glosario lo hacemos entre todxs!</b></p>

@@ -228,6 +228,21 @@
 
     <!-- Bootstrap JS -->
     <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  function sendEmail(){
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "palabrasglosariolcen@gmail.com",
+    Password : "glosariolcen2022",
+    To : 'palabrasglosariolcen@gmail.com',
+    From : "felipe@localhost",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+}
+</script>
   </body>
 </html>
