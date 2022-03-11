@@ -3,7 +3,7 @@ function sendEmail(){
   Host : "smtp.gmail.com",
   Username : "cuentalcen2022smtp@gmail.com",
   Password : "cuentalcensmtp2022",
-  To : "contacto@laconstitucionesnuestra.cl",
+  To : "palabrasglosariolcen@gmail.com",
   From : "soporte@laconstitucionesnuestra.cl",
   Subject : "Palabra para Glosario LCEN 2022",
   Body : "Palabras sugeridas para Glosario: " + document.getElementById("palabra").value
