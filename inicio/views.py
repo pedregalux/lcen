@@ -13,10 +13,11 @@ from django.conf import settings
 class LandingView(TemplateView):
     template_name = 'inicio/presentacion.html'
 
-
 class EsperaView(TemplateView):
     template_name = 'inicio/en_construccion.html'
 
+class ReimaginalaView(TemplateView):
+    template_name = 'inicio/reimaginala.html'
 
 class HomeView(TemplateView):
     template_name = 'inicio/home.html'
