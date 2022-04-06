@@ -1,0 +1,113 @@
+<!-- Static files -->
+{% load static %}
+
+<html lang="es">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Reimagina LA - {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Meta tags para Facebook, Twitter, etc. -->
+    <meta name="description" content="ReimaginaLA 2022" />
+    <meta name="author" content="Fundación Ciudadanía Inteligente" />
+    <meta name="keywords" content="ReimaginaLA 2022"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="ReimaginaLA 2022"/>
+
+    <meta property="og:description" content="ReimaginaLA 2022"/>
+    <meta property="og:url" content="https://laconstitucionesnuestra.cl/reimaginala">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ciudadania_i" />
+    <meta name="twitter:creator" content="@ciudadania_i">
+    <meta name="twitter:title" content="ReimaginaLA 2022" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+
+    <!-- Estilos CSS LCeN -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+    <!-- Hover CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/hover.css' %}" />
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Font Awesome -->
+   <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.css' %}" />
+   <script src="https://kit.fontawesome.com/8a388b05d1.js" crossorigin="anonymous"></script>
+
+   <!-- JQuery
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+    <!-- Wow.js activar animación al hacer scroll -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- Google Fonts -->
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0VHB77FX6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R0VHB77FX6');
+</script>
+
+  </head>
+
+  <body>
+
+    <header class="container-fluid fixed-top header-desktop">
+
+    </header>
+
+
+    <header class="container-fluid fixed-top header-movil">
+
+    </header>
+
+
+
+{% block content %}
+
+
+
+{% endblock %}
+
+
+
+<div class="decoracion-colores">
+    <div class="yellow"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+    <div class="red"></div>
+</div>
+
+<footer class="container-fluid">
+    <div>
+
+    </div>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/src.js' %}"></script>
+  </body>
+</html>

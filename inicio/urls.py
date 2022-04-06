@@ -152,4 +152,7 @@ urlpatterns = [
     path('glosario-constitucional/', views.GlosarioconstitucionalView.as_view(),
          name='glosario-constitucional'),
 
+    path('reimaginala/', ReimaginalaView.as_view(),
+         name='reimaginala'),
+
 ]
