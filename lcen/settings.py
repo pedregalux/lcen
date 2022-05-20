@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'convencionales.apps.ConvencionalesConfig',
     'laconstitucion.apps.LaconstitucionConfig',
     'organizaciones.apps.OrganizacionesConfig',
+    'evaluaciones.apps.EvaluacionesConfig',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
