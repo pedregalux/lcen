@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Evaluación de Norma{% endblock %}
+
+{% block content %}
+
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-organizaciones.jpg' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-organizaciones-movil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluaciones</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ object.titulo_web_norma }}</li>
+        </ol>
+    </nav>
+</section>
+
+
+<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
+    <div class="container">
+        <div class="row">
+            <div class="organizaciones-lista wow animate__animated animate__fadeIn">
+              <ul class="redes-sociales">
+
+                {% if object.org_evaluadora %}
+                  <li>{{ object.org_evaluadora }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.categoriadelanorma %}
+                  <li>{{ object.categoriadelanorma }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.tags_norma %}
+                  <li>{{ object.tags_norma }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.titulo_oficial_norma %}
+                  <li>{{ object.titulo_oficial_norma }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.titulo_web_norma %}
+                  <li>{{ object.titulo_web_norma }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.resumen_norma %}
+                  <li>{{ object.resumen_norma }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.url %}
+                  <li>{{ object.url }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.importancia_para_chile %}
+                  <li>{{ object.importancia_para_chile }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.razones_importancia_norma %}
+                  <li>{{ object.razones_importancia_norma }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.mejora_de_cp80 %}
+                  <li>{{ object.mejora_de_cp80 }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.razones_mejora_cp80 %}
+                  <li>{{ object.razones_mejora_cp80 }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.presencia_otros_paises %}
+                  <li>{{ object.presencia_otros_paises }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.historia_norma %}
+                  <li>{{ object.historia_norma }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.mitos_norma %}
+                  <li>{{ object.mitos_norma }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.futurista_norma %}
+                  <li>{{ object.futurista_norma }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.aporte_desarrollo %}
+                  <li>{{ object.aporte_desarrollo }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.aporte_ddhh_natura %}
+                  <li>{{ object.aporte_ddhh_natura }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.aporte_seguridad %}
+                  <li>{{ object.aporte_seguridad }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.aporte_igualdad %}
+                  <li>{{ object.aporte_igualdad }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.aporte_innovacion %}
+                  <li>{{ object.aporte_innovacion }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.aporte_descentralizacion %}
+                  <li>{{ object.aporte_descentralizacion }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.aporte_contra_corrupcion %}
+                  <li>{{ object.aporte_contra_corrupcion }}</li>
+                {% else %}
+                {% endif %}
+
+                {% if object.sello_norma %}
+                  <li>{{ object.sello_norma }}</li>
+                {% else %}
+                {% endif %}
+
+              </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}
