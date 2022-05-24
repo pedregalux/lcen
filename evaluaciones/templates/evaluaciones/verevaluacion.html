@@ -22,6 +22,12 @@
     <div class="container">
         <div class="row">
             <div class="organizaciones-lista wow animate__animated animate__fadeIn">
+              <div class="img-organizacion">
+                  <img src="{{ object.sello_norma.url }}" alt="img organizacion" class="img-fluid organizacion-img">
+              </div>
+              <div class="img-organizacion">
+                  <img src="{{ object.sello_norma.url }}" alt="img organizacion" class="img-fluid organizacion-img">
+              </div>
               <ul class="redes-sociales">
 
                 {% if object.org_evaluadora %}
@@ -34,10 +40,11 @@
                 {% else %}
                 {% endif %}
 
-                {% if object.tags_norma %}
-                  <li>{{ object.tags_norma }}</li>
-                {% else %}
-                {% endif %}
+                {% for tags_norma in object.tags_norma.all %}
+                <li>
+                {{ tags_norma }} ·
+                </li>
+                {% endfor %}
 
                 {% if object.titulo_oficial_norma %}
                   <li>{{ object.titulo_oficial_norma }}</li>
@@ -55,7 +62,7 @@
                 {% endif %}
 
                 {% if object.url %}
-                  <li>{{ object.url }}</li>
+                  <li><a href="{{ object.url }}">Artículo original</a></li>
                 {% else %}
                 {% endif %}
 
@@ -131,11 +138,6 @@
 
                 {% if object.aporte_contra_corrupcion %}
                   <li>{{ object.aporte_contra_corrupcion }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.sello_norma %}
-                  <li>{{ object.sello_norma }}</li>
                 {% else %}
                 {% endif %}
 
