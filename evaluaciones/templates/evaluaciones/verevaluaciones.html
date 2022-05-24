@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Evaluaciones{% endblock %}
+
+{% block content %}
+
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-organizaciones.jpg' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-organizaciones-movil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Evaluaciones</li>
+        </ol>
+    </nav>
+</section>
+
+
+<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
+    <div class="container">
+        <div class="row">
+            <div class="organizaciones-lista wow animate__animated animate__fadeIn">
+                <ul>
+                  {% for norma in evaluaciones_list %}
+                  <div class="col-6 col-sm-4 col-md-2">
+                      <li><a href="{{ norma.pk }}"><img src="{{ norma.sello_norma.url }}" alt="evaluacion" class="img-fluid logo"></a></li>
+                  </div>
+                  {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock %}
