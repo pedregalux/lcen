@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import OrganizacionNorma,CategoriaNorma,TagNorma,Norma
 
-# Register your models here.
+
+admin.site.register(OrganizacionNorma)
+admin.site.register(CategoriaNorma)
+admin.site.register(TagNorma)
+admin.site.register(Norma)
