@@ -80,7 +80,7 @@ class Norma(models.Model):
         related_name="tags_de_norma",
         verbose_name="Tags/Sellos aplicados a la norma",
         blank=True)
-    titulo_oficial_norma = models.TextField("Título oficial de norma",
+    titulo_oficial_norma = models.CharField("Título oficial de norma",
         max_length=256,
         help_text="Título oficial de la norma")
     titulo_web_norma = models.CharField("Título web de la norma",
@@ -155,7 +155,7 @@ class Norma(models.Model):
         help_text="¿En qué forma el artículo(s) analizado aporta a los procesos de participación y a la lucha contra la corrupción?")
     sello_norma = models.ImageField("Imagen/Sello de Norma", upload_to='iconostemas/', null=True, blank=True)
     class Meta:
-        verbose_name = "Norma/Artículo"
-        verbose_name_plural = "Normas/Artículos"
+        verbose_name = "Artículo"
+        verbose_name_plural = "Artículos"
     def __str__(self):
         return self.titulo_web_norma
