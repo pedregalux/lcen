@@ -5125,3 +5125,608 @@ header ul.navbar-nav li p {
     font-size: 0.8em !important;
 }
 }
+
+
+/*Nueva experiencia User*/
+.portada-banner{
+  padding-top: 98px;
+  position: relative;
+}
+
+.portada-banner img{
+  padding: 0px;
+}
+
+.portada-banner .enlace-portada {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.portada-banner a {
+    position: absolute;
+    bottom: 90px;
+    width: auto;
+}
+
+a.btn-glosario {
+    background: black;
+    color: white;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-decoration: none;
+    position: absolute;
+    right: -65px;
+    top: 200px;
+    transform: rotate(-90deg);
+    border-radius: 20px 0px 0px 0px;
+    border-right: 10px solid #CC0000;
+    position: fixed;
+    z-index: 999;
+    overflow: hidden!important;
+}
+
+
+.hvr-sweep-to-left:before {
+    background: #CC0000!important;
+    overflow: hidden!important;
+}
+
+.btn-lcen {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    background: black!important;
+    border: 0px;
+    border-radius: 50px;
+    padding: 8px 30px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.btn-scroll-home a {
+    display: flex;
+    color: white;
+    font-size: 1.7em;
+    padding: 8px 15px;
+    height: 40px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 3px;
+}
+
+
+/*Hitos*/
+
+.hitos-cc{
+  margin-bottom: 100px;
+}
+
+.hitos-cc .img-titulo {
+    display: flex;
+    justify-content: center;
+}
+
+/*Recursos*/
+
+.recursos-cc{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.recursos-cc .img-titulo {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*Evaluación de Normas*/
+
+.evaluacion-de-norma {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.evaluacion-de-norma .titular{
+    margin-bottom: 40px;
+}
+
+.evaluacion-de-norma h2 {
+    border: none;
+    text-align: center;
+    font-size: 1.8em;
+    color: black;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+.evaluacion-de-norma p {
+    text-align: center;
+    font-size: 1em;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.evaluacion-de-norma .filtro-evaluacion h4 {
+    font-size: 1.3em;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: 0px;
+}
+
+.filtro-evaluacion ul {
+    padding-left: 0px;
+    border-top: 4px solid #FFD700;
+    padding-top: 20px;
+    border-bottom: 4px solid #FFD700;
+    padding-bottom: 5px;
+    margin-bottom: 40px;
+    margin-right: 30px;
+}
+
+.filtro-evaluacion ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    transition: 0.5s all;
+}
+
+
+.filtro-evaluacion ul li a {
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 0.5s all;
+}
+
+
+.filtro-evaluacion ul li a:hover {
+    transition: 0.5s all!important;
+}
+
+
+.filtro-evaluacion ul li a span {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+
+.filtro-evaluacion ul li a:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f111";
+    color: #C4C4C4;
+}
+
+.filtro-evaluacion ul li a.active:before {
+    color: #75AADB;
+}
+
+.filtro-evaluacion ul li a.active span {
+    color: white;
+    background-color: #75AADB;
+    border-radius: 4px;
+}
+
+.filtro-evaluacion ul li a:hover:before {
+    color: #75AADB;
+}
+
+.filtro-evaluacion ul li a:hover span {
+    color: white;
+    background-color: #75AADB;
+    border-radius: 4px;
+}
+
+.titulo-simbologia {
+    background: black;
+    padding: 3px 10px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-simbologia h5 {
+    color: white;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 1.2em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.simbologia {
+    background: #F2F2F2;
+    padding: 20px 20px 0px 20px;
+    margin-right: 30px;
+}
+
+.simbologia ul {
+    padding-left: 0px;
+}
+
+.simbologia ul li {
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.simbologia ul li button {
+    border: 0px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+    text-align: left;
+    font-size: 0.9em;
+    line-height: normal;
+}
+
+
+.simbologia ul li button img {
+    width: 22px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.simbologia .modal-content p {
+    text-align: left;
+    font-size: 1em;
+    color: black;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+}
+
+.simbologia .modal-content h5{
+    border:0px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.simbologia .modal-content h5 img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.simbologia .modal-content a.enlaces{
+  color: black;
+  text-decoration: none;
+  font-weight: 800;
+  color: #0E8142;
+  transition: 0.5s all;
+}
+
+.simbologia .modal-content a.enlace:hover{
+  text-decoration: underline;
+}
+
+.simbologia .simbolo-innovacion{
+    width: auto!important;
+    height: 50px;
+}
+
+.normas-sellos .titular {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0px;
+}
+
+.normas-sellos .titular p{
+  text-align: left;
+  padding: 3px 10px;
+  background: #CC0000;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1em;
+  margin-bottom: 0px;
+}
+
+
+.normas-sellos .titular h3 {
+    font-size: 1.8em;
+    color: black;
+    padding-top: 5px;
+    border-bottom: 4px solid #FFD700;
+    margin-bottom: 20px;
+}
+
+.normas-sellos .sellos-lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.normas-sellos .sellos-lista .norma {
+    width: 24%;
+    margin: 0.5%;
+}
+
+.normas-sellos  .sellos-lista .norma{
+    position: relative;
+}
+
+.normas-sellos  .sellos-lista .norma img{
+    width: 100%;
+}
+
+.normas-sellos .sellos-lista .norma .nombre-norma {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 90%;
+    background: black;
+}
+
+.normas-sellos .sellos-lista .norma .nombre-norma h4 {
+    color: white;
+    font-size: 0.8em;
+    border-left: 4px solid #75AADB;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding: 5px 5px 5px 10px;
+}
+
+.normas-sellos .sellos-lista .norma p.evaluada-por {
+    background: black;
+    padding: 5px 10px 8px 10px;
+    margin-bottom: 0px;
+    color: white;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.normas-sellos .sellos-lista .norma p.evaluada-por a{
+  color: #FFD700;
+}
+
+
+/*Norma visitada*/
+.volver-temas{
+  margin-bottom: 30px;
+}
+
+.volver-temas li {
+    color: black!important;
+    font-weight: 700;
+}
+
+.volver-temas li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.volver-temas li a:hover{
+  text-decoration: underline;
+}
+
+.volver-temas .breadcrumb-item + .breadcrumb-item::before {
+    float: left;
+    padding-right: 0.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f053";
+    color: #C4C4C4;
+}
+
+.sello-norma-visualizacion{
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.sello-norma-visualizacion img{
+  width: 100%;
+}
+
+.otras-organizaciones{
+  margin:30px 30px 30px 0px;
+}
+
+.otras-organizaciones h5 {
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+.otras-organizaciones ul {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.otras-organizaciones ul li{
+    list-style: none;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.otras-organizaciones ul li a{
+   text-decoration: none;
+   opacity: 0.6;
+   transition: 0.5s all;
+}
+
+.otras-organizaciones ul li a:hover{
+   text-decoration: none;
+   opacity: 1;
+}
+
+.otras-organizaciones ul li a img{
+   width: auto;
+   height: 35px;
+   align-self: center;
+}
+
+.norma-diagnostico{
+   padding-left: 20px;
+}
+
+.norma-diagnostico .titular {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0px;
+}
+
+.norma-diagnostico p.tema-destacado{
+  text-align: left;
+  padding: 3px 10px;
+  background: #CC0000;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1em;
+  margin-bottom: 0px;
+}
+
+.norma-diagnostico .titular h3{
+  font-size: 1.8em;
+  color: black;
+  padding-top: 5px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.norma-diagnostico .linea-decoracion{
+  background: #FFD700;
+}
+
+.norma-diagnostico .org-evaluadora{
+  margin-bottom: 20px;
+}
+
+.norma-diagnostico .org-evaluadora p {
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.norma-diagnostico .org-evaluadora a.logo-org {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.norma-diagnostico .org-evaluadora .logo-org {
+    width: auto;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.norma-diagnostico .descripcion{
+   margin-top: 10px;
+   margin-bottom: 30px;
+}
+
+.norma-diagnostico .descripcion p{
+  text-align: left;
+  font-size: 1em;
+  color: black;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+.norma-diagnostico .preguntas{
+  margin-bottom: 0px;
+}
+
+.norma-diagnostico .preguntas h3{
+  margin-bottom: 20px;
+  padding-bottom: 0px;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: black;
+  text-align: left;
+  letter-spacing: 0px;
+}
+
+/*Ajustes movil secciones evaluacion*/
+@media(max-width:991px){
+  .normas-sellos .sellos-lista .norma {
+    width: 49%;
+    margin: 0.5%;
+   }
+   .filtro-evaluacion ul{
+     margin-right: 0px;
+   }
+   .sello-norma-visualizacion {
+     margin-right: 0px;
+   }
+   .simbologia{
+     margin-right: 0px;
+   }
+   .otras-organizaciones{
+     margin-right: 0px;
+   }
+   .normas-sellos .titular h3{
+     font-size: 1.5em;
+   }
+   .norma-diagnostico .titular h3 {
+     font-size: 1.5em;
+   }
+   .norma-diagnostico .preguntas h3 {
+     font-size: 1.3em;
+   }
+}
+
+@media(max-width:768px){
+  .evaluacion-de-norma h2 {
+      font-size: 1.5em;
+  }
+  .filtro-evaluacion ul{
+    margin-right: 0px;
+  }
+  .normas-sellos .titular h3{
+    font-size: 1.5em;
+  }
+  .normas-sellos .sellos-lista .norma {
+    width: 49%;
+    margin: 0.5%;
+   }
+  .sello-norma-visualizacion {
+    margin-right: 0px;
+  }
+  .simbologia{
+    margin-right: 0px;
+  }
+  .otras-organizaciones{
+    margin-right: 0px;
+  }
+  .norma-diagnostico {
+     padding-left: 15px;
+  }
+  .norma-diagnostico .titular h3 {
+    font-size: 1.5em;
+  }
+  .norma-diagnostico .preguntas h3 {
+    font-size: 1.3em;
+  }
+}
+
+@media(max-width:450px){
+  .normas-sellos .sellos-lista .norma {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+   }
+}
