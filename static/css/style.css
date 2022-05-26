@@ -5741,9 +5741,18 @@ a.btn-glosario {
 .portada-banner a {
     bottom: 8%!important;
 }
+
+.btn-scroll-home {
+    z-index: 9;
+}
+
+.hitos-cc{
+    margin-bottom: 80px;
+}
+
 .hitos-cc .img-titulo img {
     max-width: 400px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .hitos-cc p{
   text-align: center;
@@ -5758,32 +5767,161 @@ a.btn-glosario {
   display: none;
   width: 100%;
 }
-.decision-final-hito.container {
-    margin-bottom: 80px;
+.decision-final-hito{
+    margin-bottom: 100px;
 }
-.decision-final-hito.container .row {
+.decision-final-hito .row {
     align-items: center;
 }
-.decision-final-hito.container .row a{
-  margin-bottom: 0px;
+.decision-final-hito .row a{
+  margin-bottom: 0px!important;
 }
+
+.decision-final-hito .img-borrador img{
+  width: 100%;
+}
+
 .recursos-cc .img-titulo {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+
 .recursos-cc .img-titulo h3{
   text-align: center;
 }
+
 .linea-cronologica {
     margin-bottom: 80px;
 }
+
+.quieres-sumar-a-tu-org {
+    padding-top:100px;
+    padding-bottom: 100px;
+    background: url(../img/bg-textura-papel.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.quieres-sumar-a-tu-org .row .titulo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.quieres-sumar-a-tu-org .row .btn-box{
+  display: flex;
+  justify-content: center;
+}
+
+.recursos-cc {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.recursos-cc .titulo-img {
+    display: flex;
+    justify-content: center;
+}
+
+.recursos-cc .titulo-img img{
+    width: 300px;
+}
+
+
+.normas-evaluadas-home {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url(../img/bg-textura-papel.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: -80px;
+}
+
+.normas-evaluadas-home .titulo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.normas-evaluadas-home .titulo-img img{
+    width: 300px;
+}
+
+.normas-evaluadas-home .sellos-lista {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.normas-evaluadas-home .norma img {
+    width: 100%;
+}
+
+.normas-evaluadas-home .norma {
+    width: 33%;
+    padding: 1%;
+    position: relative;
+}
+
+.normas-evaluadas-home .enlace-norma{
+  background: black;
+}
+
+.normas-evaluadas-home .nombre-norma {
+    background: black;
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    width: 85%;
+    z-index: 999;
+}
+
+.normas-evaluadas-home .enlace-norma h4 {
+    color: white;
+    font-size: 1em;
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 4px solid #75AADB;
+    margin-bottom: 0px;
+}
+
+.normas-evaluadas-home .evaluada-por {
+    background: black;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.normas-evaluadas-home .evaluada-por a{
+  color: white;
+  text-decoration: none;
+}
+
+.normas-evaluadas-home .evaluada-por a:hover{
+  text-decoration: underline;
+}
+
+.normas-evaluadas-home .enlace-norma{
+  text-decoration: none;
+}
+
 @media(max-width:991px){
   .portada-banner {
     padding-top: 85px;
     position: relative;
 }
+.normas-evaluadas-home .norma {
+    width: 49%;
+    padding: 1%;
+}
+
 }
 @media(max-width:768px){
   .portada-desktop{
@@ -5805,6 +5943,55 @@ a.btn-glosario {
     display: block;
     width: 100%;
   }
+  .hitos-cc .img-titulo img {
+    max-width: 250px;
+    margin-bottom: 30px;
+}
+.decision-final-hito .img-borrador img {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 30px;
+}
+.titulo-img-decision{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-self: center;
+   flex-wrap: wrap;
+}
+.titulo-img-decision img{
+  width: 80%!important;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+.iniciativa-popular .titulo-img img {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+.recursos-cc .titulo-img img {
+    width: 250px;
+}
+.hitos-cc {
+    margin-bottom: 40px;
+}
+.normas-evaluadas-home {
+    top: -65px;
+}
+
+.normas-evaluadas-home .norma {
+    width: 85%;
+    padding: 1%;
+    margin: auto;
+}
+.normas-evaluadas-home .titulo-img img {
+    width: 250px;
+}
 }
 @media(max-width:550px){
   .portada-banner a {
@@ -5823,4 +6010,16 @@ a.btn-glosario {
      zoom:0.7;
      top:230px;
    }
+}
+
+header{
+  z-index: 9999999999999999;
+}
+
+footer .impulsado {
+    display: none;
+}
+18:42
+footer .impulsado {
+    display: none;
 }
