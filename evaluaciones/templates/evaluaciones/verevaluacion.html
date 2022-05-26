@@ -1,150 +1,326 @@
 {% extends "base.html" %}
+{% load normas_extra %}
 {% load static %}
-{% block title %}Evaluación de Norma{% endblock %}
+{% block title %}Evaluación de Normas{% endblock %}
 
 {% block content %}
 
-
 <section class="portada-lcen-colores">
-    <img src="{% static 'img/header-organizaciones.jpg' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
-    <img src="{% static 'img/header-organizaciones-movil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+  <img src="{% static 'img/evaluacion-de-normas.jpg' %}" alt="img portada" class="img-fluid img-banner-desktop">
+  <img src="{% static 'img/banner-evaluacion-de-normas.jpg' %}" alt="img portada movil" class="img-fluid img-banner-movil">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluaciones</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ object.titulo_web_norma }}</li>
-        </ol>
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluación de normas</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ object.titulo_web_norma }}</li>
+      </ol>
     </nav>
 </section>
 
 
-<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
-    <div class="container">
-        <div class="row">
-            <div class="organizaciones-lista wow animate__animated animate__fadeIn">
-              <div class="img-organizacion">
-                  <img src="{{ object.sello_norma.url }}" alt="img organizacion" class="img-fluid organizacion-img">
-              </div>
-              <div class="img-organizacion">
-                  <img src="{{ object.sello_norma.url }}" alt="img organizacion" class="img-fluid organizacion-img">
-              </div>
-              <ul class="redes-sociales">
+<section class="evaluacion-de-norma container">
 
-                {% if object.org_evaluadora %}
-                  <li>{{ object.org_evaluadora }}</li>
-                {% else %}
-                {% endif %}
+<div class="row">
 
-                {% if object.categoriadelanorma %}
-                  <li>{{ object.categoriadelanorma }}</li>
-                {% else %}
-                {% endif %}
+  <div class="col-12 col-sm-12 col-md-4 col-lg-3">
+    <div class="volver-temas">
+       <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Temas</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ object.categoriadelanorma }}</li>
+         </ol>
+       </nav>
+    </div>
 
-                {% for tags_norma in object.tags_norma.all %}
-                <li>
-                {{ tags_norma }} ·
-                </li>
-                {% endfor %}
+    <div class="sello-norma-visualizacion">
+       <img src="{{ object.sello_norma.url }}" alt="sello-norma" class="norma-sello w-100">
+    </div>
 
-                {% if object.titulo_oficial_norma %}
-                  <li>{{ object.titulo_oficial_norma }}</li>
-                {% else %}
-                {% endif %}
+    <div class="titulo-simbologia">
+         <h5>Simbología</h5>
+    </div>
 
-                {% if object.titulo_web_norma %}
-                  <li>{{ object.titulo_web_norma }}</li>
-                {% else %}
-                {% endif %}
+    <div class="simbologia">
+      <div class="simbolos">
 
-                {% if object.resumen_norma %}
-                  <li>{{ object.resumen_norma }}</li>
-                {% else %}
-                {% endif %}
+      {% simbolosxcategorias %}
 
-                {% if object.url %}
-                  <li><a href="{{ object.url }}">Artículo original</a></li>
-                {% else %}
-                {% endif %}
+    </div>
+  </div>
 
-                {% if object.importancia_para_chile %}
-                  <li>{{ object.importancia_para_chile }}</li>
-                {% else %}
-                {% endif %}
 
-                {% if object.razones_importancia_norma %}
-                  <li>{{ object.razones_importancia_norma }}</li>
-                {% else %}
-                {% endif %}
+    <!-- <div class="otras-organizaciones">
+         <h5>Organizaciones que también evaluaron este artículo:</h5>
+         <ul>
+           {% for org in object.org_evaluadora.all %}
+             <li>
+            <a href="" class="logo-org">
+               <img src="{{ org.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
+             </a>
+             </li>
+           {% endfor %}
+         </ul>
+    </div> -->
 
-                {% if object.mejora_de_cp80 %}
-                  <li>{{ object.mejora_de_cp80 }}</li>
-                {% else %}
-                {% endif %}
+  </div>
 
-                {% if object.razones_mejora_cp80 %}
-                  <li>{{ object.razones_mejora_cp80 }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.presencia_otros_paises %}
-                  <li>{{ object.presencia_otros_paises }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.historia_norma %}
-                  <li>{{ object.historia_norma }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.mitos_norma %}
-                  <li>{{ object.mitos_norma }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.futurista_norma %}
-                  <li>{{ object.futurista_norma }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.aporte_desarrollo %}
-                  <li>{{ object.aporte_desarrollo }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.aporte_ddhh_natura %}
-                  <li>{{ object.aporte_ddhh_natura }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.aporte_seguridad %}
-                  <li>{{ object.aporte_seguridad }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.aporte_igualdad %}
-                  <li>{{ object.aporte_igualdad }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.aporte_innovacion %}
-                  <li>{{ object.aporte_innovacion }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.aporte_descentralizacion %}
-                  <li>{{ object.aporte_descentralizacion }}</li>
-                {% else %}
-                {% endif %}
-
-                {% if object.aporte_contra_corrupcion %}
-                  <li>{{ object.aporte_contra_corrupcion }}</li>
-                {% else %}
-                {% endif %}
-
-              </ul>
+  <div class="col-12 col-sm-12 col-md-8 col-lg-9 norma-diagnostico">
+     <div class="titular">
+        <p class="tema-destacado">Artículo</p>
+        <h3>{{ object.titulo_web_norma }}</h3>
+        <div class="linea-decoracion"></div>
+        <div class="org-evaluadora">
+            <p>Evaluada por:</p>
+            <div class="logos-organizaciones">
+              <p><img src="{{ object.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">{{ object.org_evaluadora }}</p>
             </div>
         </div>
-    </div>
+     </div>
+
+     <div class="descripcion">
+          <p>{{ object.resumen_norma }}</p>
+     </div>
+
+     <div class="linea-decoracion"></div>
+     <!-- <div class="org-evaluadora">
+         <p><a href="{{ object.url }}">URL al Artículo en borrador</a></p>
+     </div> -->
+
+     <div class="descripcion-bullets preguntas">
+       <h3>Evaluación</h3>
+       <div class="accordion" id="accordionPanelsStayOpenExample">
+
+{% if object.importancia_para_chile %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading1">
+                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse1" aria-expanded="true" aria-controls="panelsStayOpen-collapse1">
+   ¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile? Valoración del 1 al 6, siendo el 6 más importante.
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading1">
+                   <div class="accordion-body">
+                       <img src="{{ object.importancia_para_chile.url }}">
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.razones_importancia_norma %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading2">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false" aria-controls="panelsStayOpen-collapse2">
+   ¿Por qué este artículo(s) tiene la importancia para la calidad de vida que indicaste en la pregunta anterior?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading2">
+                   <div class="accordion-body">
+                       <p>{{ object.razones_importancia_norma }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.mejora_de_cp80 %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading3">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+   En el marco de una agenda de justicia social, económica y de derechos humanos: ¿en qué medida la Nueva Constitución mejora respecto de la Constitución actualmente vigente? Valoración del 1 al 6, siendo el 6 más importante.
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+                   <div class="accordion-body">
+                       <img src="{{ object.mejora_de_cp80.url }}">
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.razones_mejora_cp80 %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading4">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+   ¿Cómo puedes justificar la opción asignada en la pregunta anterior?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+                   <div class="accordion-body">
+                       <p>{{ object.razones_mejora_cp80 }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.presencia_otros_paises %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading5">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+   ¿Hay presencia de artículos similares en otros países? Explícanos en qué países y en qué se parecen.
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+                   <div class="accordion-body">
+                       <p>{{ object.presencia_otros_paises }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.historia_norma %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading6">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+   ¿Cuál es la historia de este artículo en términos de su creación social?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+                   <div class="accordion-body">
+                       <p>{{ object.historia_norma }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.mitos_norma %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading7">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7" aria-expanded="false" aria-controls="panelsStayOpen-collapse7">
+   ¿Cuáles son los principales mitos asociados al artículo(s) y porqué son mitos?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading7">
+                   <div class="accordion-body">
+                       <p>{{ object.mitos_norma }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.futurista_norma %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading8">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8" aria-expanded="false" aria-controls="panelsStayOpen-collapse8">
+   Imagina que estamos en 2052: ¿Cómo es tu entorno y la vida de las personas en Chile después de este artículo(s)?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading8">
+                   <div class="accordion-body">
+                       <p>{{ object.futurista_norma }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.aporte_desarrollo %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading9">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse9" aria-expanded="false" aria-controls="panelsStayOpen-collapse9">
+   ¿En qué forma el artículo(s) analizado aporta al desarrollo del país?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse9" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading9">
+                   <div class="accordion-body">
+                       <p>{{ object.aporte_desarrollo }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.aporte_ddhh_natura %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading10">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse10" aria-expanded="false" aria-controls="panelsStayOpen-collapse10">
+   ¿En qué forma el artículo(s) analizado aporta al respeto a los derechos humanos y de la naturaleza?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse10" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading10">
+                   <div class="accordion-body">
+                       <p>{{ object.aporte_ddhh_natura }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.aporte_seguridad %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading11">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse11" aria-expanded="false" aria-controls="panelsStayOpen-collapse11">
+   ¿En qué forma el artículo(s) analizado aporta a la seguridad y certeza de las personas en Chile?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse11" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading11">
+                   <div class="accordion-body">
+                       <p>{{ object.aporte_seguridad }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.aporte_igualdad %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading12">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse12" aria-expanded="false" aria-controls="panelsStayOpen-collapse12">
+   ¿En qué forma el artículo(s) analizado aporta a la igualdad entre todas las personas?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse12" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading12">
+                   <div class="accordion-body">
+                       <p>{{ object.aporte_igualdad }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.aporte_innovacion %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading13">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse13" aria-expanded="false" aria-controls="panelsStayOpen-collapse13">
+   ¿En qué forma el artículo(s) analizado aporta a la innovación y sustentabilidad?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse13" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading13">
+                   <div class="accordion-body">
+                       <p>{{ object.aporte_innovacion }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.aporte_descentralizacion %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading14">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse14" aria-expanded="false" aria-controls="panelsStayOpen-collapse14">
+   ¿En qué forma el artículo(s) analizado aporta a los procesos de descentralización?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse14" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading14">
+                   <div class="accordion-body">
+                       <p>{{ object.aporte_descentralizacion }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+{% if object.aporte_contra_corrupcion %}
+           <div class="accordion-item">
+               <h2 class="accordion-header" id="panelsStayOpen-heading15">
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse15" aria-expanded="false" aria-controls="panelsStayOpen-collapse14">
+   ¿En qué forma el artículo(s) analizado aporta a los procesos de participación y a la lucha contra la corrupción?
+ </button>
+               </h2>
+               <div id="panelsStayOpen-collapse15" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading15">
+                   <div class="accordion-body">
+                       <p>{{ object.aporte_contra_corrupcion }}</p>
+                   </div>
+               </div>
+           </div>
+{% else %}{% endif %}
+
+       </div> <!--end accordion-->
+     </div>
+  </div>
+
+</div>
+
 </section>
 
 

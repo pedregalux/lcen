@@ -1,0 +1,7 @@
+<ul class="temas-filtro">
+  {% for categoria in categorias %}
+      <li>
+      <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ categoria.pk }}#normas" class="tema">  {{ categoria }}</a>
+      </li>
+  {% endfor %}
+</ul>
