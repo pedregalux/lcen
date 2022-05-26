@@ -39,7 +39,7 @@
       <div class="simbolos">
            <ul class="simbolos">
 
-             {% for simbolo in simbolos%}
+             {% for simbolo in simbolos %}
 
               <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#desarrollo"><img src="{{ simbolo.icono_tag.url }}" class="simbolo-simbologia" /> {{ simbolo.tag_norma }}</button> </li>
               <!-- Modal -->
@@ -57,124 +57,6 @@
                   </div>
               </div>
               {% endfor %}
-
-              <!-- <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#ddhh-y-naturaleza"><img src="{% static 'img/simbolo-2-derechoshumanosydelanaturaleza.png' %}" class="simbolo-simbologia" /> DDHH y de la Naturaleza</button> </li>
-              <!-- Modal
-              <div class="modal fade" id="ddhh-y-naturaleza" tabindex="-1" aria-labelledby="ddhhynaturalezaLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h5 class="modal-title" id="ddhhynaturalezaLabel"><img src="{% static 'img/simbolo-2-derechoshumanosydelanaturaleza.png' %}" class="simbolo-simbologia" /> DDHH y de la Naturaleza</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. Vestibulum suscipit, leo id viverra sollicitudin, orci velit ultrices ante, vel molestie turpis tellus id elit. Vestibulum condimentum, nulla non pretium sagittis, libero massa commodo metus, vitae lacinia orci magna vel ligula. Nunc tempus dictum purus non euismod. Morbi suscipit, nibh vitae rutrum placerat, velit tortor pretium ex, eget sodales lorem lorem eu ante. Vivamus fringilla dui finibus quam consectetur, eu tristique nibh vehicula. Pellentesque et pharetra urna. Maecenas eu luctus risus. Integer lacinia feugiat nulla ac facilisis.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. </p>
-                              <p>Fuente: <a href="#" target="_blank" class="enlaces">Enlace o nombre de la org</a></p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-
-
-              <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#seguridad-y-certeza"><img src="{% static 'img/simbolo-3-seguridadycerteza.png' %}" class="simbolo-simbologia" /> Seguridad y Certeza</button> </li>
-              <!-- Modal
-              <div class="modal fade" id="seguridad-y-certeza" tabindex="-1" aria-labelledby="seguridadycertezaLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h5 class="modal-title" id="seguridadycertezaLabel"><img src="{% static 'img/simbolo-3-seguridadycerteza.png' %}" class="simbolo-simbologia" /> Seguridad y Certeza</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. Vestibulum suscipit, leo id viverra sollicitudin, orci velit ultrices ante, vel molestie turpis tellus id elit. Vestibulum condimentum, nulla non pretium sagittis, libero massa commodo metus, vitae lacinia orci magna vel ligula. Nunc tempus dictum purus non euismod. Morbi suscipit, nibh vitae rutrum placerat, velit tortor pretium ex, eget sodales lorem lorem eu ante. Vivamus fringilla dui finibus quam consectetur, eu tristique nibh vehicula. Pellentesque et pharetra urna. Maecenas eu luctus risus. Integer lacinia feugiat nulla ac facilisis.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. </p>
-                              <p>Fuente: <a href="#" target="_blank" class="enlaces">Enlace o nombre de la org</a></p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-
-
-              <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#igualdad"><img src="{% static 'img/simbolo-4-igualdad.png' %}" class="simbolo-simbologia" /> Igualdad</button> </li>
-              <!-- Modal
-              <div class="modal fade" id="igualdad" tabindex="-1" aria-labelledby="igualdadLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h5 class="modal-title" id="igualdadLabel"><img src="{% static 'img/simbolo-4-igualdad.png' %}" class="simbolo-simbologia" /> Igualdad</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. Vestibulum suscipit, leo id viverra sollicitudin, orci velit ultrices ante, vel molestie turpis tellus id elit. Vestibulum condimentum, nulla non pretium sagittis, libero massa commodo metus, vitae lacinia orci magna vel ligula. Nunc tempus dictum purus non euismod. Morbi suscipit, nibh vitae rutrum placerat, velit tortor pretium ex, eget sodales lorem lorem eu ante. Vivamus fringilla dui finibus quam consectetur, eu tristique nibh vehicula. Pellentesque et pharetra urna. Maecenas eu luctus risus. Integer lacinia feugiat nulla ac facilisis.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. </p>
-                              <p>Fuente: <a href="#" target="_blank" class="enlaces">Enlace o nombre de la org</a></p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-
-
-
-              <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#innovacionysustentabilidad"><img src="{% static 'img/simbolo-5-innovacionysustentabilidad.png' %}" class="simbolo-simbologia simbolo-innovacion" /> Innovación y sustentabilidad</button> </li>
-              <!-- Modal
-              <div class="modal fade" id="innovacionysustentabilidad" tabindex="-1" aria-labelledby="innovacionysustentabilidadLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h5 class="modal-title" id="innovacionysustentabilidadLabel"><img src="{% static 'img/simbolo-5-innovacionysustentabilidad.png' %}" class="simbolo-simbologia simbolo-innovacion" /> Innovación y sustentabilidad</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. Vestibulum suscipit, leo id viverra sollicitudin, orci velit ultrices ante, vel molestie turpis tellus id elit. Vestibulum condimentum, nulla non pretium sagittis, libero massa commodo metus, vitae lacinia orci magna vel ligula. Nunc tempus dictum purus non euismod. Morbi suscipit, nibh vitae rutrum placerat, velit tortor pretium ex, eget sodales lorem lorem eu ante. Vivamus fringilla dui finibus quam consectetur, eu tristique nibh vehicula. Pellentesque et pharetra urna. Maecenas eu luctus risus. Integer lacinia feugiat nulla ac facilisis.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. </p>
-                              <p>Fuente: <a href="#" target="_blank" class="enlaces">Enlace o nombre de la org</a></p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-
-              <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#descentralizacion"><img src="{% static 'img/simbolo-6-descentralizacion.png' %}" class="simbolo-simbologia" /> Descentralización</button> </li>
-              <!-- Modal
-              <div class="modal fade" id="descentralizacion" tabindex="-1" aria-labelledby="descentralizacionLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h5 class="modal-title" id="descentralizacionLabel"><img src="{% static 'img/simbolo-6-descentralizacion.png' %}" class="simbolo-simbologia" /> Descentralización</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. Vestibulum suscipit, leo id viverra sollicitudin, orci velit ultrices ante, vel molestie turpis tellus id elit. Vestibulum condimentum, nulla non pretium sagittis, libero massa commodo metus, vitae lacinia orci magna vel ligula. Nunc tempus dictum purus non euismod. Morbi suscipit, nibh vitae rutrum placerat, velit tortor pretium ex, eget sodales lorem lorem eu ante. Vivamus fringilla dui finibus quam consectetur, eu tristique nibh vehicula. Pellentesque et pharetra urna. Maecenas eu luctus risus. Integer lacinia feugiat nulla ac facilisis.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. </p>
-                              <p>Fuente: <a href="#" target="_blank" class="enlaces">Enlace o nombre de la org</a></p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-
-              <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#participacion-y-anticorrupcion"><img src="{% static 'img/simbolo-7-participacionyluchacontralacorrupcion.png' %}" class="simbolo-simbologia" /> Participación y lucha contra la corrupción</button> </li>
-              <!-- Modal
-              <div class="modal fade" id="participacion-y-anticorrupcion" tabindex="-1" aria-labelledby="participacionyanticorrupcionLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h5 class="modal-title" id="participacionyanticorrupcionLabel"><img src="{% static 'img/simbolo-7-participacionyluchacontralacorrupcion.png' %}" class="simbolo-simbologia" /> Participación y lucha contra la corrupción</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. Vestibulum suscipit, leo id viverra sollicitudin, orci velit ultrices ante, vel molestie turpis tellus id elit. Vestibulum condimentum, nulla non pretium sagittis, libero massa commodo metus, vitae lacinia orci magna vel ligula. Nunc tempus dictum purus non euismod. Morbi suscipit, nibh vitae rutrum placerat, velit tortor pretium ex, eget sodales lorem lorem eu ante. Vivamus fringilla dui finibus quam consectetur, eu tristique nibh vehicula. Pellentesque et pharetra urna. Maecenas eu luctus risus. Integer lacinia feugiat nulla ac facilisis.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et sollicitudin tellus. Aliquam elementum a urna id imperdiet. Nulla non nisi vel diam porttitor aliquam faucibus sit amet odio. Ut eget nulla rutrum, feugiat purus at, rutrum elit. Mauris eget arcu enim. Sed aliquam, mauris imperdiet elementum vulputate, magna lectus laoreet diam, in faucibus erat erat ac sapien. Morbi tincidunt tempus libero, nec iaculis dui tincidunt eget. </p>
-                              <p>Fuente: <a href="#" target="_blank" class="enlaces">Enlace o nombre de la org</a></p>
-                          </div>
-                      </div>
-                  </div>
-              </div> -->
-
 
            </ul>
       </div>

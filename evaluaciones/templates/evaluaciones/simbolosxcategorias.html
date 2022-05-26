@@ -1,0 +1,24 @@
+
+       <ul class="simbolos">
+
+         {% for simbolo in simbolosnormas %}
+
+          <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#desarrollo"><img src="{{ simbolo.icono_tag.url }}" class="simbolo-simbologia" /> {{ simbolo.tag_norma }}</button> </li>
+          <!-- Modal -->
+          <div class="modal fade" id="desarrollo" tabindex="-1" aria-labelledby="desarrolloLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="desarrolloLabel"><img src="{{ simbolo.icono_tag.url }}" class="simbolo-simbologia" /> {{ simbolo.tag_norma }}</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <p>{{ simbolo.descripcion_tag_norma }}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          {% endfor %}
+
+       </ul>
