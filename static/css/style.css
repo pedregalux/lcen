@@ -5730,3 +5730,97 @@ a.btn-glosario {
     margin-bottom: 10px;
    }
 }
+
+/*Home 2.0*/
+.portada-desktop{
+  display: block;
+}
+.portada-movil{
+  display: none;
+}
+.portada-banner a {
+    bottom: 8%!important;
+}
+.hitos-cc .img-titulo img {
+    max-width: 400px;
+    margin-bottom: 50px;
+}
+.hitos-cc p{
+  text-align: center;
+  font-size: 1em;
+  color: black;
+}
+.linea-cronologica .img-banner-desktop{
+  display: block;
+  width: 100%;
+}
+.linea-cronologica .img-banner-movil{
+  display: none;
+  width: 100%;
+}
+.decision-final-hito.container {
+    margin-bottom: 80px;
+}
+.decision-final-hito.container .row {
+    align-items: center;
+}
+.decision-final-hito.container .row a{
+  margin-bottom: 0px;
+}
+.recursos-cc .img-titulo {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.recursos-cc .img-titulo h3{
+  text-align: center;
+}
+.linea-cronologica {
+    margin-bottom: 80px;
+}
+@media(max-width:991px){
+  .portada-banner {
+    padding-top: 85px;
+    position: relative;
+}
+}
+@media(max-width:768px){
+  .portada-desktop{
+        display: none;
+  }
+  .portada-movil{
+      display: block;
+  }
+  .portada-banner a {
+      position: absolute;
+      bottom: 25px;
+      width: auto;
+  }
+  .linea-cronologica .img-banner-desktop{
+    display: none;
+    width: 100%;
+  }
+  .linea-cronologica .img-banner-movil{
+    display: block;
+    width: 100%;
+  }
+}
+@media(max-width:550px){
+  .portada-banner a {
+      position: absolute;
+      bottom: 20px;
+      width: auto;
+      zoom:0.8;
+  }
+  .btn-scroll-home a {
+    zoom: 0.8;
+   }
+   .btn-scroll-home {
+    bottom: 35px;
+   }
+   a.btn-glosario{
+     zoom:0.7;
+     top:230px;
+   }
+}
