@@ -93,7 +93,8 @@ class Norma(models.Model):
         null=True,
         blank=True,
         help_text="URL de la Norma")
-    importancia_para_chile = models.IntegerField("Importancia para Chile",
+    importancia_para_chile = models.ImageField("Importancia para Chile",
+        upload_to='iconostemas/',
         null=True,
         blank=True,
         help_text="¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile?")
@@ -101,7 +102,8 @@ class Norma(models.Model):
         null=True,
         blank=True,
         help_text="¿Por qué este artículo(s) tiene la importancia para la calidad de vida que indicaste en la pregunta anterior?")
-    mejora_de_cp80 = models.IntegerField("Mejora de constitución anterior",
+    mejora_de_cp80 = models.ImageField("Mejora de constitución anterior",
+        upload_to='iconostemas/', 
         null=True,
         blank=True,
         help_text="En el marco de una agenda de justicia social, económica y de derechos humanos: ¿en qué medida la Nueva Constitución mejora respecto de la Constitución actualmente vigente?")

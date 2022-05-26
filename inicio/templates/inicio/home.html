@@ -26,9 +26,7 @@
             <p>La Constitución es Nuestra (LCeN) es una plataforma abierta, colaborativa y colectiva que busca reivindicar el poder ciudadano en la Convención Constitucional. Si tienes propuestas para la nueva constitución y quieres que tu voz sea escuchada, únete y participa <b>¡Unidas y unidos somos más fuertes!</b>
             </p>
             <br>
-          <!--  <h2>¡Te ayudamos a llevar tu Iniciativa Popular a la Convención!</h2>
-            <p class="mb-0">Juntando 15 mil firmas las propuestas ciudadanas pueden ser discutidas por la Convención Constitucional. Descarga el manual con el paso a paso acá.</p>
-            <a href="{% static 'img/manual-ipn.pdf' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Descargar manual</a>-->
+
         </div>
         <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
             <img src="{% static 'img/collage-lcen.png' %}" alt="collage la constitución es nuestra" class="img-fluid">
@@ -46,20 +44,13 @@
           <h3>
             Revisa el recorrido de las normas en la Convención
           </h3>
-          <!--<p>
-            Juntando <b>15 mil firmas</b> las propuestas ciudadanas pueden ser discutidas por la Convención Constitucional. Descarga el manual con el paso a paso acá.
-          </p>-->
+
           <a href="{% url 'debate-constituyente' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Sigue el recorrido aquí</a>
       </div>
       <div class="img img-dos wow animate__animated animate__fadeIn">
           <img src="{% static 'img/papel-lcen.png' %}" alt="img mano con papel lcen" class="img-ipn-dos">
       </div>
 </section>
-
-<!--<section class="infografia-ipn wow animate__animated animate__fadeIn">
-  <img src="{% static 'img/infografia-1.jpg' %}" alt="" class="w-100 infografia-desktop-ipn">
-  <img src="{% static 'img/infografia-1-movil.jpg' %}" alt="" class="w-100 infografia-movil-ipn">
-</section>-->
 
 
 <section class="container mapa-constitucional-home seccion-info">
@@ -75,116 +66,6 @@
         </div>
     </div>
 </section>
-
-
-<!--<section class="a-ponerse-con-propuestas container-fluid">
-   <div class="llamado-propuestas">
-       <h1>A ponerse con propuestas</h1>
-       <img src="{% static 'img/megafono-recorte.png' %}" alt="megafono-recorte" class="megafono-recorte img-fluid">
-   </div>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
-                <img src="{% static 'img/collage-propuestas.png' %}" alt="collage a ponerse con propuestas" class="img-fluid p-4">
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
-                <h2>Tu propuesta a la convención</h2>
-                <p>Acá tienes la oportunidad de subir tus propuestas para la nueva Constitución de Chile y nosotrxs la haremos llegar a la Convención. <b>¡No te quedes fuera!</b></p>
-                 <a href="{% url 'crearpropuestas' %}" class="btn-lcen button hvr-sweep-to-right">Sube tu propuesta</a>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-<!-- Propuestas Home -->
-<!-- <section class="container propuestas-home">
-    <div class="row wow animate__animated animate__fadeIn animate__delay-1s">
-        <div class="col-12 col-sm-12 col-md-12">
-            <h2>Descubre otras propuestas</h2>
-            <div class="decoracion yellow"></div>
-            <div class="info-row">
-                <p>¡Súmate con tu propuesta y la haremos llegar a la Convención!</p>
-                <a href="{% url 'crearpropuestas' %}" class="btn-secundario">Sube tu propuesta</a>
-            </div>
-        </div>
-
-        {% for propuesta in propuestas %}
-
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <div class="propuesta salud">
-                        <div class="informacion-propuesta">
-                            <h3 class="tema">
-                            {% for otro_tema in propuesta.otros_temas.all %}
-                            {{ otro_tema }} ·
-                            {% endfor %}</h3>
-                            <p class="numero-propuesta">Propuesta <b>N° {{ propuesta.id }}</b></p>
-                            <h2 class="titulo">{{ propuesta.titulo }}</h2>
-                            <p class="extracto">
-                              {{ propuesta.problema|truncatechars:250 }}
-                            </p>
-                            <div class="informacion-datos">
-                                <h4>Se realizó en:</h4>
-                                <p class="lugar">
-                                  {% if propuesta.region %}
-                                  {{ propuesta.region }} ·
-                                  {% endif %}
-                                  {% if not propuesta.region %}
-                                  {% endif %}
-                                  {% if propuesta.comuna %}
-                                  {{ propuesta.comuna }}
-                                  {% endif %}
-                                  {% if not propuesta.comuna %}
-                                  {% endif %}
-                                  {% if not propuesta.region and not propuesta.comuna %}
-                                  Sin región y/o comuna definidas
-                                  {% endif %}
-                                </p>
-                                <h4>Propuesta de</h4>
-
-                                <div class="row">
-
-                                <p class="lugar">
-                                {% if propuesta.autor.organizacion %}
-                                <img src="{{ propuesta.autor.organizacion.logo_organizacion.url }}" alt="logo organizacion">
-
-                                {{ propuesta.autor.organizacion.nombre_perfil }}
-
-                                {% else %}
-
-                                Propuesta Personal
-
-                                {% endif %}
-
-                                {% for organizacion in propuesta.organizaciones.all %}
-                                <img src="{{ organizacion.logo_organizacion.url }}" alt="logo organizacion">
-                                {{ organizacion.nombre_perfil }}
-
-                                {% endfor %}
-                                </p>
-
-                                </div>
-
-                            </div>
-                            <img src="{% static 'img/bg-propuestas/participacion.png' %}" alt="img salud" class="img-tema-propuesta">
-                        </div>
-                        <div class="bg-black">
-                            <div class="call-to-action">
-                               <a href="/propuestas/verpropuestas/{{ propuesta.id }}" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
-                              <a href="/propuestas/verpropuestas/{{ propuesta.id }}" class="btn-lcen">Leer propuesta</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-        {% endfor %}
-
-
-        <div class="col-12 col-sm-12 col-md-12 ver-propuestas-button">
-            <a href="{% url 'ver_propuestas' %}" class="btn-lcen button hvr-sweep-to-right">Ver todas las propuestas</a>
-        </div>
-
-    </div>
-</section> -->
 
 
 <section class="convencionales-home container-fluid">
@@ -218,38 +99,6 @@
     </div>
 </section>
 
-
-<!-- <section class="container call-to-action-organizaciones">
-    <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn animate__delay-1s">
-            <h2>¿Eres una organización y quieres estar aquí?</h2>
-            <div class="call-to-action">
-                <a href="/usuarios/organizacion_register/" class="btn-lcen button hvr-sweep-to-right">Ingresa aquí</a>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-<!--<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
-    <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn animate__delay-1s">
-              <h2>Organizaciones Presentes</h2>
-              <div class="decoracion green"></div>
-          </div>
-            <div class="organizaciones-lista wow animate__animated animate__fadeIn">
-                <ul>
-                  {% for organizacion in organizaciones %}
-                  <div class="col-6 col-sm-4 col-md-2">
-                      <li><a href="/usuarios/verorganizaciones/{{ organizacion.pk }}"><img src="{{ organizacion.logo_organizacion.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
-                  </div>
-                  {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 
 {% endblock %}

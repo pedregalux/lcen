@@ -15,8 +15,7 @@
     <meta name="keywords" content="La Constitución es Nuestra, LCen, Convención, Constitucional"/>
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="La Constitución es Nuestra"/>
-    <!-- <meta property="og:title" content="Visita La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative"> -->
-    <meta property="og:title" content="{% if object.propuesta %}Revisa la propuesta {{ object.titulo }} en La Constitución es Nuestra{% else %}Conoce La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative{% endif %}">
+    <meta property="og:title" content="La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative">
     <meta property="og:image" content="{% static 'img/lcen-redes.jpg' %}"/>
     <meta property="og:description" content="La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative"/>
     <meta property="og:url" content="https://laconstitucionesnuestra.cl">
@@ -24,7 +23,7 @@
     <meta name="twitter:site" content="@ciudadania_i" />
     <meta name="twitter:creator" content="@ciudadania_i">
     <meta name="twitter:title" content="La Constitución es Nuestra" />
-    <meta name="twitter:description" content="{% if object.propuesta %}Revisa la propuesta {{ object.titulo }} en La Constitución es Nuestra{% else %}Conoce La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative{% endif %}" />
+    <meta name="twitter:description" content="La Constitución es Nuestra, un proyecto de Ciudadanía Inteligente, Consti tu+yo y The Global Initiative" />
     <meta name="twitter:image" content="https://laconstitucionesnuestra.cl/static/img/lcen-redes.jpg" />
 
 
@@ -86,7 +85,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'verevaluaciones' %}">Evaluación de Normas</a>
+                            <a class="nav-link" href="{% url 'homeevaluaciones' %}">Evaluación de Normas</a>
                         </li>
 
                         <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-27" class="dropdown nav-item">
@@ -110,9 +109,7 @@
                                  <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
                              </ul>
                          </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link" href="{% url 'ver_propuestas' %}">Propuestas</a>
-                        </li>-->
+
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'verorganizaciones' %}">Organizaciones</a>
                         </li>
@@ -136,6 +133,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'homeevaluaciones' %}">Evaluación de Normas</a>
+                        </li>
+
                         <li class="nav-item dropdown-anidado">
                             <a class="nav-link" href="{% url 'debate-constituyente' %}">Debate Constituyente</a> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -154,12 +156,6 @@
                             </ul>
                         </li>
 
-                         <li class="nav-item">
-                             <a class="nav-link" href="{% url 'verconvencionales' %}">Convencionales</a>
-                         </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link" href="{% url 'ver_propuestas' %}">Propuestas</a>
-                        </li>-->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'verorganizaciones' %}">Organizaciones</a>
                         </li>

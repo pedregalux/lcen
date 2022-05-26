@@ -68,20 +68,17 @@
     <div class="normas-sellos">
 
 
-        <div class="titular">
-          <p class="tema-destacado">Tema</p>
-          <h3>
-          {% for norma in filtrocategorias.qs %}
-            {{ norma.categoriadelanorma }}
-          {% endfor %}
-          </h3>
+      <div class="titular">
+        <p class="tema-destacado">Artículos</p>
+        <h3>
+        Conoce todas las evaluaciones
+        </h3>
       </div>
-
 
 
       <div class="sellos-lista">
 
-        {% for norma in filtrocategorias.qs %}
+        {% for norma in evaluaciones_list %}
         <div class="norma">
            <a href="{{ norma.pk }}" class="enlace-norma"><img src="{{ norma.sello_norma.url }}" alt="sello" class="sello"></a>
            <a href="{{ norma.pk }}" class="enlace-norma"><div class="nombre-norma"><h4>{{ norma.titulo_web_norma }}</h4></div></a>

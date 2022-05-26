@@ -11,7 +11,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-          <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluación de Normas</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluación de normas</a></li>
           <li class="breadcrumb-item active" aria-current="page">{{ object.titulo_web_norma }}</li>
       </ol>
     </nav>
@@ -72,7 +72,7 @@
         <div class="org-evaluadora">
             <p>Evaluada por:</p>
             <div class="logos-organizaciones">
-              <a href="#" class="logo-org"><img src="{{ object.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org"></a>
+              <p><img src="{{ object.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">{{ object.org_evaluadora }}</p>
             </div>
         </div>
      </div>
@@ -82,13 +82,15 @@
      </div>
 
      <div class="linea-decoracion"></div>
-     <div class="org-evaluadora">
+     <!-- <div class="org-evaluadora">
          <p><a href="{{ object.url }}">URL al Artículo en borrador</a></p>
-     </div>
+     </div> -->
 
      <div class="descripcion-bullets preguntas">
-       <h3>Algún titular descriptivo de ser necesario</h3>
+       <h3>Evaluación</h3>
        <div class="accordion" id="accordionPanelsStayOpenExample">
+
+{% if object.importancia_para_chile %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading1">
                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse1" aria-expanded="true" aria-controls="panelsStayOpen-collapse1">
@@ -101,6 +103,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
+
+{% if object.razones_importancia_norma %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading2">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false" aria-controls="panelsStayOpen-collapse2">
@@ -113,6 +118,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
+
+{% if object.mejora_de_cp80 %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading3">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
@@ -125,7 +133,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.razones_mejora_cp80 %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading4">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
@@ -138,7 +148,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.presencia_otros_paises %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading5">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
@@ -151,7 +163,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.historia_norma %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading6">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
@@ -164,7 +178,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.mitos_norma %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading7">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7" aria-expanded="false" aria-controls="panelsStayOpen-collapse7">
@@ -177,7 +193,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.futurista_norma %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading8">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8" aria-expanded="false" aria-controls="panelsStayOpen-collapse8">
@@ -190,7 +208,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.aporte_desarrollo %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading9">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse9" aria-expanded="false" aria-controls="panelsStayOpen-collapse9">
@@ -203,7 +223,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.aporte_ddhh_natura %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading10">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse10" aria-expanded="false" aria-controls="panelsStayOpen-collapse10">
@@ -216,7 +238,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.aporte_seguridad %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading11">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse11" aria-expanded="false" aria-controls="panelsStayOpen-collapse11">
@@ -229,7 +253,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.aporte_igualdad %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading12">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse12" aria-expanded="false" aria-controls="panelsStayOpen-collapse12">
@@ -242,7 +268,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.aporte_innovacion %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading13">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse13" aria-expanded="false" aria-controls="panelsStayOpen-collapse13">
@@ -255,7 +283,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.aporte_descentralizacion %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading14">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse14" aria-expanded="false" aria-controls="panelsStayOpen-collapse14">
@@ -268,7 +298,9 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
 
+{% if object.aporte_contra_corrupcion %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading15">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse15" aria-expanded="false" aria-controls="panelsStayOpen-collapse14">
@@ -281,6 +313,8 @@
                    </div>
                </div>
            </div>
+{% else %}{% endif %}
+
        </div> <!--end accordion-->
      </div>
   </div>

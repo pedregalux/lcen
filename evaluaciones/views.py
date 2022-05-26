@@ -5,6 +5,18 @@ from .models import Norma,CategoriaNorma,TagNorma,OrganizacionNorma
 from .filters import NormaCategorias
 
 
+
+class VerHomeEvaluacionesView(ListView):
+    model = Norma
+    context_object_name = 'evaluaciones_list'
+    template_name = 'evaluaciones/homeevaluaciones.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['simbolos'] = TagNorma.objects.all()
+        return context
+
+
 class VerEvaluacionesView(ListView):
     model = Norma
     context_object_name = 'evaluaciones_list'
