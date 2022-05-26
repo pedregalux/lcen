@@ -5,32 +5,48 @@
 {% block content %}
 
 
-<section class="container-fluid portada-gif">
-    <div class="transparencia"></div>
-    <div class="informacion-portada container">
-        <h1 class="animate__animated wow animate__fadeIn animate__delay-1s">Impulsemos una constitución <br>escrita por la ciudadanía</h1>
-        <div class="linea-decoracion yellow wow animate__animated animate__fadeIn animate__delay-1s"></div>
-        <p class="portada wow animate__animated animate__fadeIn animate__delay-1s">¿Cómo se votan las normas convencionales?</p>
-        <a href="{% url 'debate-constituyente' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate__delay-2s">Sigue el recorrido aquí</a>
-    </div>
+<section class="container-fluid portada-banner">
+   <div class="row">
+      <img src="{% static 'img/portada-lcen-evaluacionbanner.jpg' %}" alt="banner" class="img-fluid portada-desktop">
+      <img src="{% static 'img/portada-lcen-evaluacionbanner-movil.jpg' %}" alt="banner" class="img-fluid portada-movil">
+      <div class="enlace-portada">
+        <a href="{% url 'homeevaluaciones' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate__delay-2s">Sigue el recorrido aquí</a>
+      </div>
+   </div>
 </section>
+
 
 <div class="btn-scroll-home">
     <a href="#que-es-lcen" class="btn-lcen button hvr-sweep-to-right animate__animated animate__fadeIn animate__delay-2s"><i class="fas fa-chevron-down"></i><div id="que-es-lcen"></div></a>
 </div>
 
-<section class="container que-es-lcen seccion-info">
-    <div class="row d-flex align-items-center">
-        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
-            <h2>La constitución es nuestra</h2>
-            <p>La Constitución es Nuestra (LCeN) es una plataforma abierta, colaborativa y colectiva que busca reivindicar el poder ciudadano en la Convención Constitucional. Si tienes propuestas para la nueva constitución y quieres que tu voz sea escuchada, únete y participa <b>¡Unidas y unidos somos más fuertes!</b>
-            </p>
-            <br>
 
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
-            <img src="{% static 'img/collage-lcen.png' %}" alt="collage la constitución es nuestra" class="img-fluid">
-        </div>
+<section class="hitos-cc container">
+    <div class="row justify-content-center">
+       <div class="col-12 col-sm-10 col-md-8 img-titulo">
+            <img src="{% static 'img/la-constitucion-es-nuestra-titulo.svg' %}" alt="banner" class="img-fluid">
+       </div>
+       <div class="col-12 col-sm-10 col-md-8 descripcion-lcen-home">
+            <p>La Constitución es Nuestra (LCeN) es una plataforma abierta, colaborativa y colectiva que busca reivindicar el poder ciudadano presente en la nueva Constitución.</p>
+            <p>La historia por la conquista de derechos sociales y por modernizar nuestro Estado es parte de un largo proceso social y político del que hemos sido parte y la decisión final es nuestra.</p>
+       </div>
+    </div>
+</section>
+
+<section class="linea-cronologica">
+      <img src="{% static 'img/hitos-desktop.jpg' %}" alt="banner" class="img-fluid img-banner-desktop">
+      <img src="{% static 'img/hitos-2.jpg' %}" alt="banner" class="img-fluid img-banner-movil">
+</section>
+
+<section class="decision-final-hito container">
+    <div class="row">
+       <div class="col-12 col-sm-5 col-md-5 col-lg-4">
+         <img src="{% static 'img/collage-borrador.png' %}" alt="banner" class="img-fluid img-banner-desktop">
+       </div>
+       <div class="col-12 col-sm-7 col-md-5 col-lg-4">
+         <img src="{% static 'img/la-decision-es-nuestra.svg' %}" alt="banner" class="img-fluid img-banner-desktop">
+         <a href="{% url 'homeevaluaciones' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate__delay-2s">Conoce las normas aquí</a>
+       </div>
     </div>
 </section>
 
@@ -41,10 +57,12 @@
           <img src="{% static 'img/megafono-lcen.png' %}" alt="img megafono lcen" class="img-ipn-uno">
       </div>
       <div class="informacion wow animate__animated animate__fadeIn">
-          <h3>
-            Revisa el recorrido de las normas en la Convención
-          </h3>
+        <img src="{% static 'img/como-se-construyeron-las-normas.svg' %}" alt="banner" class="img-fluid">
 
+
+          <!--<p>
+            Juntando <b>15 mil firmas</b> las propuestas ciudadanas pueden ser discutidas por la Convención Constitucional. Descarga el manual con el paso a paso acá.
+          </p>-->
           <a href="{% url 'debate-constituyente' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Sigue el recorrido aquí</a>
       </div>
       <div class="img img-dos wow animate__animated animate__fadeIn">
@@ -53,52 +71,46 @@
 </section>
 
 
-<section class="container mapa-constitucional-home seccion-info">
-    <div class="row d-flex align-items-center">
-        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
-            <h2>Mapa Constitucional</h2>
-            <p>Una constitución es un sistema. Cada una de sus partes se conecta con las otras e impacta sobre las formas en que el Estado y los derechos de las personas se van haciendo realidad. En esta sección te entregaremos <b>una herramienta para ayudarte a navegar en las aguas de la carta fundamental, a través de nuestro mapa constitucional</b>.
-            </p>
-            <a href="{% url 'mapa-constitucional' %}" class="btn-lcen button hvr-sweep-to-right">Revisar Mapa Constitucional</a>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
-            <img src="{% static 'img/mapa-constitucional-collage.png' %}" alt="collage mapa constitucional" class="img-fluid">
-        </div>
+<section class="quieres-sumar-a-tu-org">
+  <div class="container">
+    <div class="row">
+         <div class="col-12 col-sm-10 col-md-8 col-lg-8">
+           <img src="{% static 'img/incluye-org.svg' %}" alt="banner" class="img-fluid">
+         </div>
+         <div class="col-12 col-sm-10 col-md-8 col-lg-8">
+             <a href="#" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Inscribete aquí</a>
+         </div>
     </div>
+  </div>
+
 </section>
 
+<section class="recursos-cc container">
+    <div class="row">
+       <div class="col-12 img-titulo">
+            <img src="{% static 'img/recursos-constituyentes-titulo.svg' %}" alt="banner" class="img-fluid my-5">
+       </div>
+       <div class="col-12 col-sm-6 col-md-4 img-titulo">
+            <img src="{% static 'img/collage-mapa-home.png' %}" alt="banner" class="img-fluid">
+            <h3>Mapa <br> Constitucional</h3>
+            <div class="decoracion-linea"></div>
+            <a href="#" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Revisar</a>
+       </div>
+       <div class="col-12 col-sm-6 col-md-4 img-titulo">
+            <img src="{% static 'img/collage-ensayos-home.png' %}" alt="banner" class="img-fluid">
+            <h3>Ensayos</h3>
+            <div class="decoracion-linea"></div>
+            <a href="#" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Revisar</a>
+       </div>
+       <div class="col-12 col-sm-6 col-md-4 img-titulo">
+            <img src="{% static 'img/collage-constitucion-feminista-home.png' %}" alt="banner" class="img-fluid">
+            <h3>Constitución <br> Feminista</h3>
+            <div class="decoracion-linea"></div>
+            <a href="#" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Revisar</a>
+       </div>
 
-<section class="convencionales-home container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9 d-flex justify-content-center flex-column  wow animate__animated animate__fadeIn">
-                <h2>Convencionales</h2>
-                <p>Aquí podrás conocer a las 155 personas que componen la Convención Constitucional y sus compromisos con la ciudadanía.</p>
-                <div class="call-to-action">
-                    <a href="{% url 'verconvencionales' %}" class="btn-lcen button hvr-sweep-to-right">Revisa a lxs convencionales</a>
-                </div>
-                <img src="{% static 'img/convencionales-img-decoracion.png' %}" alt="collage constitucion convencionales" class="img-fluid collage-constitucion-convencionales">
-                <img src="{% static 'img/media-luna-convencionales-decoracion.png' %}" alt="medialuna convencionales decoracion" class="img-fluid medialuna-adorno-convencionales">
-            </div>
-        </div>
     </div>
 </section>
-
-<section class="container constitucion-feminista-home seccion-info">
-    <div class="row d-flex align-items-center">
-      <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn">
-          <img src="{% static 'img/constitucion-feminista-collage.png' %}" alt="collage mapa constitucional" class="img-fluid">
-      </div>
-        <div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
-            <h2>Constitución Feminista</h2>
-            <p>Revisa los testimonios de diversas organizaciones sobre las experiencias de vida de las mujeres en Chile y respuestas a cómo la nueva constitución puede mejorarlas incorporando el enfoque de género de manera transversal en los derechos sociales.
-            </p>
-            <p><b>¡Derechos sociales con enfoque de género en la nueva constitución!</b></p>
-            <a href="{% url 'constitucion-feminista' %}" class="btn-lcen button hvr-sweep-to-right">Revisar Reflexiones</a>
-        </div>
-    </div>
-</section>
-
 
 
 {% endblock %}
