@@ -33,3 +33,9 @@ class VerEvaluacionView(DetailView):
     model = Norma
     context_object_name = 'evaluacion_detail'
     template_name = 'evaluaciones/verevaluacion.html'
+
+
+class VerHomeEvaluacionView(DetailView):
+    model = Norma
+    context_object_name = 'evaluacion_detail'
+    template_name = 'evaluaciones/homeevaluacion.html'
