@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load normas_extra %}
+{% load url_target_blank %}
 {% load static %}
 {% block title %}Evaluación de Normas{% endblock %}
 
@@ -78,7 +79,7 @@
      </div>
 
      <div class="descripcion">
-       <p>{{ object.resumen_norma|linebreaks|urlizetrunc:15 }}</p>
+       <p>{{ object.resumen_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
      </div>
 
      <div class="linea-decoracion"></div>
@@ -114,7 +115,7 @@
                </h2>
                <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading2">
                    <div class="accordion-body">
-                       <p>{{ object.razones_importancia_norma|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.razones_importancia_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -144,7 +145,7 @@
                </h2>
                <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
                    <div class="accordion-body">
-                       <p>{{ object.razones_mejora_cp80|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.razones_mejora_cp80|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -159,7 +160,7 @@
                </h2>
                <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
                    <div class="accordion-body">
-                       <p>{{ object.presencia_otros_paises|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.presencia_otros_paises|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -174,7 +175,7 @@
                </h2>
                <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
                    <div class="accordion-body">
-                       <p>{{ object.historia_norma|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.historia_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -189,7 +190,7 @@
                </h2>
                <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading7">
                    <div class="accordion-body">
-                       <p>{{ object.mitos_norma|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.mitos_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -204,7 +205,7 @@
                </h2>
                <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading8">
                    <div class="accordion-body">
-                       <p>{{ object.futurista_norma|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.futurista_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -219,7 +220,7 @@
                </h2>
                <div id="panelsStayOpen-collapse9" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading9">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_desarrollo|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.aporte_desarrollo|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -234,7 +235,7 @@
                </h2>
                <div id="panelsStayOpen-collapse10" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading10">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_ddhh_natura|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.aporte_ddhh_natura|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -249,7 +250,7 @@
                </h2>
                <div id="panelsStayOpen-collapse11" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading11">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_seguridad|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.aporte_seguridad|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -264,7 +265,7 @@
                </h2>
                <div id="panelsStayOpen-collapse12" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading12">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_igualdad|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.aporte_igualdad|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -279,7 +280,7 @@
                </h2>
                <div id="panelsStayOpen-collapse13" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading13">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_innovacion|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.aporte_innovacion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -294,7 +295,7 @@
                </h2>
                <div id="panelsStayOpen-collapse14" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading14">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_descentralizacion|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.aporte_descentralizacion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
@@ -309,7 +310,7 @@
                </h2>
                <div id="panelsStayOpen-collapse15" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading15">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_contra_corrupcion|linebreaks|urlizetrunc:15 }}</p>
+                       <p>{{ object.aporte_contra_corrupcion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
                    </div>
                </div>
            </div>
