@@ -68,14 +68,21 @@
     <div class="normas-sellos">
 
 
-        <div class="titular">
+        <!-- <div class="titular">
           <p class="tema-destacado">Tema</p>
           <h3>
-          {% for norma in filtrocategorias.qs %}
-            {{ norma.categoriadelanorma }}
+          {% for categoria in categorias %}
+            {{ categoria }}
           {% endfor %}
           </h3>
-      </div>
+        </div> -->
+
+        <div class="titular">
+          <p class="tema-destacado">Artículos</p>
+          <h3>
+          Conoce las evaluaciones realizadas en esta categoría
+          </h3>
+        </div>
 
 
 
