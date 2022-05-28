@@ -1,24 +1,141 @@
 
-       <ul class="simbolos">
 
-         {% for simbolo in simbolosnormas %}
+{% load static %}
 
-          <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#desarrollo"><img src="{{ simbolo.icono_tag.url }}" class="simbolo-simbologia" /> {{ simbolo.tag_norma }}</button> </li>
-          <!-- Modal -->
-          <div class="modal fade" id="desarrollo" tabindex="-1" aria-labelledby="desarrolloLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title" id="desarrolloLabel">{{ simbolo.tag_norma }}</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                          <p>{{ simbolo.descripcion_tag_norma }}</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
+<ul class="simbolos">
+   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#desarrollo"><img src="{% static 'img/simbolo-1-desarrollohumanoynacionalsostenible.png' %}" class="simbolo-simbologia" /> Desarrollo humano y nacional sostenible</button> </li>
+   <!-- Modal -->
+   <div class="modal fade" id="desarrollo" tabindex="-1" aria-labelledby="desarrolloLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="desarrolloLabel"><img src="{% static 'img/simbolo-1-desarrollohumanoynacionalsostenible.png' %}" class="simbolo-simbologia" /> Desarrollo humano y nacional sostenible</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                   <p>Al aplicar este sello, los evaluadores han considerado que el artículo incluye facultades individuales y colectivas de las personas de vivir con dignidad, a partir de la realización de todos los derechos humanos.</p>
+                   <p>Esto incluye la erradicación de la pobreza, el mejoramiento de las condiciones de vida de la población y el logro rápido de una transición a una economía ecológica, baja en emisiones de carbono y resiliente al cambio climático.</p>
+                   <p>Además, implica la promoción del mejoramiento sostenido del bienestar socioeconómico; la adopción y revisión periódica de estrategias y planes nacionales de desarrollo; la no discriminación y el respeto del Estado de Derecho en el plano nacional.</p>
+               </div>
+           </div>
+       </div>
+   </div>
 
-          {% endfor %}
 
-       </ul>
+   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#ddhh-y-naturaleza"><img src="{% static 'img/simbolo-2-derechoshumanosydelanaturaleza.png' %}" class="simbolo-simbologia" /> DDHH y de la Naturaleza</button> </li>
+   <!-- Modal -->
+   <div class="modal fade" id="ddhh-y-naturaleza" tabindex="-1" aria-labelledby="ddhhynaturalezaLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="ddhhynaturalezaLabel"><img src="{% static 'img/simbolo-2-derechoshumanosydelanaturaleza.png' %}" class="simbolo-simbologia" /> DDHH y de la Naturaleza</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                   <p>Al aplicar este sello, los evaluadores han considerado que el artículo tiene un compromiso con los derechos fundamentales de las personas, la dignidad y el valor de la persona humana. También con la promoción del progreso social y la mejora continua de las condiciones de existencia de las personas dentro de un concepto más amplio de la libertad.</p>
+                   <p>Además, este sello puede reconocer que la humanidad coexiste con la naturaleza y que toda forma de vida depende de la integridad de la biosfera y de la interconexión de los sistemas ecológicos, evidenciando la estrecha vinculación entre los derechos humanos, la conservación y protección ambiental al igual que el rol fundamental de la mantención de la integridad ecológica para lograr el bienestar del ser humano y el combate de la pobreza.</p>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+
+   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#seguridad-y-certeza"><img src="{% static 'img/simbolo-3-seguridadycerteza.png' %}" class="simbolo-simbologia" /> Seguridad y Certeza</button> </li>
+   <!-- Modal -->
+   <div class="modal fade" id="seguridad-y-certeza" tabindex="-1" aria-labelledby="seguridadycertezaLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="seguridadycertezaLabel"><img src="{% static 'img/simbolo-3-seguridadycerteza.png' %}" class="simbolo-simbologia" /> Seguridad y Certeza</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                 <p>
+                   Al aplicar este sello, los evaluadores han considerado que el artículo protege la esencia vital de todas las vidas humanas frente a amenazas graves y generalizadas, de manera de habilitar las libertades y la plena realización del ser humano y la naturaleza.
+                   </p>
+                  <p>
+                   Aquí se integran tres libertades: la libertad del miedo (protección contra las amenazas directas a la seguridad y a la integridad física), la libertad de la necesidad o miseria (protección para satisfacer las necesidades básicas, el sustento y los aspectos económicos, sociales y ambientales) y la libertad para vivir con dignidad (protección y empoderamiento individual para librarse de la violencia, la discriminación y la exclusión).
+                    </p>
+                   <p>Por último, la aplicación de este sello también incorpora la certeza jurídica, es decir, la protección de las personas frente a modificaciones arbitrarias del derecho.</p>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+
+   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#igualdad"><img src="{% static 'img/simbolo-4-igualdad.png' %}" class="simbolo-simbologia" /> Igualdad</button> </li>
+   <!-- Modal -->
+   <div class="modal fade" id="igualdad" tabindex="-1" aria-labelledby="igualdadLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="igualdadLabel"><img src="{% static 'img/simbolo-4-igualdad.png' %}" class="simbolo-simbologia" /> Igualdad</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                   <p>Al aplicar este sello, los evaluadores han considerado que el artículo reconoce que cada persona es titular de derechos fundamentales de manera igualitaria, recogiendo la idea general de no discriminación (es decir, igualdad formal, de derechos o ante la ley). Este tipo de igualdad incluye, por ejemplo, la igualdad de oportunidades y la igualdad de trato.</p>
+                   <p>Además, este sello contempla que las personas puedan ejercer plenamente sus derechos de manera universal, con capacidad de hacerlos efectivos en la vida cotidiana, incluyendo la capacidad o intención de las normas de disminuir las brechas que producen desigualdad estructural (igualdad sustantiva). Este tipo de igualdad se orienta hacia la igualdad de resultados.</p>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+
+
+   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#innovacionysustentabilidad"><img src="{% static 'img/simbolo-5-innovacionysustentabilidad.png' %}" class="simbolo-simbologia simbolo-innovacion" /> Innovación y sustentabilidad</button> </li>
+   <!-- Modal -->
+   <div class="modal fade" id="innovacionysustentabilidad" tabindex="-1" aria-labelledby="innovacionysustentabilidadLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="innovacionysustentabilidadLabel"><img src="{% static 'img/simbolo-5-innovacionysustentabilidad.png' %}" class="simbolo-simbologia simbolo-innovacion" /> Innovación y sustentabilidad</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                   <p>Al aplicar este sello, los evaluadores han considerado que el artículo representa una posibilidad de cambio o mejora para la realidad chilena, ya sea por la innovación del tratamiento de un tema, por la adopción de un nuevo enfoque en el abordaje de una problemática o por la conexión del tópico con una agenda social más amplia.</p>
+                   <p>Además, esta calificación también toma en cuenta la conexión de las normas con una visión clara sobre la idea colectiva de futuro y una agenda orientada a abordar los problemas actuales y a largo plazo, con el fin de construir un mundo más seguro, ecológico, saludable y equitativo para las generaciones presentes y futuras.</p>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#descentralizacion"><img src="{% static 'img/simbolo-6-descentralizacion.png' %}" class="simbolo-simbologia" /> Descentralización</button> </li>
+   <!-- Modal -->
+   <div class="modal fade" id="descentralizacion" tabindex="-1" aria-labelledby="descentralizacionLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="descentralizacionLabel"><img src="{% static 'img/simbolo-6-descentralizacion.png' %}" class="simbolo-simbologia" /> Descentralización</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                   <p>Al aplicar este sello, los evaluadores han considerado que el artículo tiene la capacidad de identificar, reconocer, valorar y canalizar las particularidades y potencialidades propias de cada territorio, incluyendo entre ellos los factores económicos y no económicos, tales como los recursos sociales, culturales, históricos e institucionales, entre otros.</p>
+                   <p>De este modo, este sello resalta la capacidad de las normas para profundizar el desarrollo local y su contribución a la construcción de un proyecto nacional más amplio, con miras a enfrentar los problemas y desafíos existentes y mejorar las condiciones de vida de las personas.</p>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#participacion-y-anticorrupcion"><img src="{% static 'img/simbolo-7-participacionyluchacontralacorrupcion.png' %}" class="simbolo-simbologia" /> Participación y lucha contra la corrupción</button> </li>
+   <!-- Modal -->
+   <div class="modal fade" id="participacion-y-anticorrupcion" tabindex="-1" aria-labelledby="participacionyanticorrupcionLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="participacionyanticorrupcionLabel"><img src="{% static 'img/simbolo-7-participacionyluchacontralacorrupcion.png' %}" class="simbolo-simbologia" /> Participación y lucha contra la corrupción</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                   <p>Al aplicar este sello, los evaluadores han considerado que el artículo tiene la capacidad de garantizar espacios de participación ciudadana, es decir, de involucramiento activo de las personas en los procesos de toma de decisiones públicas en diferentes instancias e instituciones del Estado, tanto en las fases de diseño e implementación, como en las de monitoreo y mejora continua de los procesos del Estado.</p>
+                   <p>Asimismo, y como consecuencia de la participación, este sello también considera que el artículo provee garantías en relación con la gestión y administración de los servicios del Estado de cara a las personas, incluyendo la incorporación de mecanismos de probidad y transparencia, rendición de cuentas de los funcionarios públicos e información pública abiertamente disponible para la ciudadanía, entre otros.</p>
+               </div>
+           </div>
+       </div>
+   </div>
+
+</ul>
