@@ -5762,7 +5762,7 @@ a.btn-glosario {
 
 .hitos-cc .img-titulo img {
     max-width: 400px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 .hitos-cc p{
   text-align: center;
@@ -5820,6 +5820,11 @@ a.btn-glosario {
     justify-content: center;
     align-items: center;
     align-self: center;
+}
+
+.quieres-sumar-a-tu-org img {
+    margin: auto;
+    display: flex;
 }
 
 .quieres-sumar-a-tu-org .row .btn-box{
@@ -6025,6 +6030,20 @@ a.btn-glosario {
 header{
   z-index: 9999999999999999;
 }
+
+
+.portada-banner .enlace-portada {
+    position: absolute;
+    bottom: 14%;
+    display: flex;
+    width: 100%;
+}
+
+.portada-banner a {
+    position: initial;
+    margin: 0px 10px;
+}
+
 
 footer .impulsado {
     display: none;
