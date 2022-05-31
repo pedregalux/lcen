@@ -21,10 +21,12 @@
     <div class="container">
         <div class="row">
             <div class="organizaciones-lista wow animate__animated animate__fadeIn">
+              <h2>Organizaciones Presentes</h2>
+              <div class="decoracion green"></div>
                 <ul>
-                  {% for organizacion in organizaciones_list %}
+                  {% for orgevaluadora in orgs_evaluaciones_list %}
                   <div class="col-6 col-sm-4 col-md-2">
-                      <li><a href="{{ organizacion.pk }}"><img src="{{ organizacion.logo_organizacion.url }}" alt="organizacion logo" class="img-fluid logo"></a></li>
+                      <li><img src="{{ orgevaluadora.logo_org_norma.url }}" alt="organizacion logo" class="img-fluid logo"></li>
                   </div>
                   {% endfor %}
                 </ul>
