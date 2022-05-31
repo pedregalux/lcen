@@ -39,3 +39,9 @@ class VerHomeEvaluacionView(DetailView):
     model = Norma
     context_object_name = 'evaluacion_detail'
     template_name = 'evaluaciones/homeevaluacion.html'
+
+
+class VerOrgsEvalView(ListView):
+    model = OrganizacionNorma
+    context_object_name = 'orgs_evaluaciones_list'
+    template_name = 'evaluaciones/verorgsevaluadoras.html'

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Organizaciones Participantes{% endblock %}
+
+{% block content %}
+
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/header-organizaciones.jpg' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/header-organizaciones-movil.jpg' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Organizaciones Participantes</li>
+        </ol>
+    </nav>
+</section>
+
+
+<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
+    <div class="container">
+        <div class="row">
+            <div class="organizaciones-lista wow animate__animated animate__fadeIn">
+              <h2>Organizaciones Presentes</h2>
+              <div class="decoracion green"></div>
+                <ul>
+                  {% for orgevaluadora in orgs_evaluaciones_list %}
+                  <div class="col-6 col-sm-4 col-md-2">
+                      <li><img src="{{ orgevaluadora.logo_org_norma.url }}" alt="organizacion logo" class="img-fluid logo"></li>
+                  </div>
+                  {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container call-to-action-organizaciones">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn">
+            <h2>¿Eres una organización y quieres estar aquí?</h2>
+            <div class="call-to-action">
+                <a href="https://wa.me/56953069053" class="btn-lcen button hvr-sweep-to-right">Comunícate aquí</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
