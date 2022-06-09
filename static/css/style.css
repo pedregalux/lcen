@@ -750,9 +750,9 @@ footer .rrss li a i {
     list-style: none;
 }
 
-.propuestas-home ul.filtro-temas-propuestas .btn-lcen {
+.propuestas-home ul.filtro-temas-propuestas .btn-lcen2 {
     font-size: 0.9em;
-    padding: 1px 5px;
+    padding: 7px 7px;
     margin: 3px;
 }
 
@@ -3989,11 +3989,10 @@ input#id_apellido {
 }
 
 
-
 /* Propuestas - Seccion */
 
 .filtro-propuestas {
-    padding: 80px 0px 20px 0px !important;
+    padding: 0px 0px 20px 0px !important;
 }
 
 .filtro-propuestas h2 {
@@ -5200,6 +5199,22 @@ a.btn-glosario {
     overflow: hidden;
 }
 
+.btn-lcen2 {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    background: #2D2D2D!important;
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px 30px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
 .btn-scroll-home a {
     display: flex;
     color: white;
@@ -5472,6 +5487,10 @@ a.btn-glosario {
 
 .normas-sellos  .sellos-lista .norma img{
     width: 100%;
+}
+
+.normas-sellos  .sellos-lista .norma .logo-org {
+    width: 50%;
 }
 
 .normas-sellos .sellos-lista .norma .nombre-norma {
