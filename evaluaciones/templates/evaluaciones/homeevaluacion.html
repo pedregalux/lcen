@@ -6,17 +6,18 @@
 
 {% block content %}
 
-<!-- <section class="portada-lcen-colores">
-  <img src="{% static 'img/banner-edn-escritorio.jpg' %}" alt="img portada" class="img-fluid img-banner-desktop">
-  <img src="{% static 'img/banner-edn-movil.jpg' %}" alt="img portada movil" class="img-fluid img-banner-movil">
-    <nav aria-label="breadcrumb">
+<section class="portada-lcen-colores">
+  <!-- <img src="{% static 'img/banner-edn-escritorio.jpg' %}" alt="img portada" class="img-fluid img-banner-desktop">
+  <img src="{% static 'img/banner-edn-movil.jpg' %}" alt="img portada movil" class="img-fluid img-banner-movil"> -->
+    <!-- <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
           <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluación de normas</a></li>
           <li class="breadcrumb-item active" aria-current="page">{{ object.titulo_web_norma }}</li>
       </ol>
-    </nav>
-</section> -->
+    </nav> -->
+</section>
+<br>
 
 
 <section class="evaluacion-de-norma container">
@@ -24,14 +25,14 @@
 <div class="row">
 
   <div class="col-12 col-sm-12 col-md-4 col-lg-3">
-    <div class="volver-temas">
+    <!-- <div class="volver-temas">
        <nav aria-label="breadcrumb">
          <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{% url 'homeevaluaciones' %}">Temas</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ object.categoriadelanorma }}</li>
          </ol>
        </nav>
-    </div>
+    </div> -->
 
     <div class="sello-norma-visualizacion">
        <img src="{{ object.sello_norma.url }}" alt="sello-norma" class="norma-sello w-100">
@@ -66,20 +67,26 @@
   </div>
 
   <div class="col-12 col-sm-12 col-md-8 col-lg-9 norma-diagnostico">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluación de normas</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">{{ object.categoriadelanorma }}</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ object.titulo_web_norma }}</li>
+      </ol>
+    </nav>
      <div class="titular">
-        <p class="tema-destacado">Artículo</p>
+        <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}#normas" class="btn-lcen2 button hvr-sweep-to-right">  {{ object.categoriadelanorma|truncatechars:10 }}</a>
         <h3>{{ object.titulo_web_norma }}</h3>
         <div class="linea-decoracion"></div>
+        <div class="descripcion">
+          <p>{{ object.resumen_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+        </div>
         <div class="org-evaluadora">
             <p>Evaluada por:</p>
             <div class="logos-organizaciones">
               <p><img src="{{ object.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">{{ object.org_evaluadora }}</p>
             </div>
         </div>
-     </div>
-
-     <div class="descripcion">
-          <p>{{ object.resumen_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
      </div>
 
      <div class="linea-decoracion"></div>
