@@ -5524,6 +5524,9 @@ a.btn-glosario {
   color: #FFD700;
 }
 
+.norma-diagnostico .categorialeft {
+  margin-left: 0px;
+}
 
 /*Norma visitada*/
 .volver-temas{
