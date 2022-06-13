@@ -22,6 +22,9 @@ class VerEvaluacionesView(ListView):
     context_object_name = 'evaluaciones_list'
     template_name = 'evaluaciones/verevaluaciones.html'
 
+    # def get_queryset(self):
+    #     return Propuesta.objects.annotate(apoyos_count=Count('apoyos')).order_by('-autor__organizacion','-apoyos_count')
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['simbolos'] = TagNorma.objects.all()

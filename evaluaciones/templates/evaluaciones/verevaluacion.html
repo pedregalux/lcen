@@ -66,6 +66,25 @@
 
   </div>
 
+  <div class="filtro-propuestas propuestas-home">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-12 col-sm-12 col-md-12">
+
+                <h2>¿Cómo empezar? Te invitamos a encontrar artículos en los siguientes temas</h2>
+
+                {% normasxcategoria %}
+
+              </div>
+              <div class="col-12 col-sm-12 col-md-12">
+                  <h2>Hay <span>{{ evaluaciones_list.count }}</span> artículos evaluados por expertos</h2>
+              </div>
+          </div>
+
+      </div>
+  </div>
+
   <div class="col-12 col-sm-12 col-md-8 col-lg-9 norma-diagnostico">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -75,7 +94,7 @@
       </ol>
     </nav>
      <div class="titular">
-        <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}#normas" class="btn-lcen2 button hvr-sweep-to-right">  {{ object.categoriadelanorma|truncatechars:10 }}</a>
+        <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}#normas" class="btn-lcen2 button hvr-sweep-to-right">  {{ object.categoriadelanorma }}</a>
         <h3>{{ object.titulo_web_norma }}</h3>
         <div class="linea-decoracion"></div>
         <div class="descripcion">
