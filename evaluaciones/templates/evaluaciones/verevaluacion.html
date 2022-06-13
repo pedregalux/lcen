@@ -338,6 +338,18 @@
 {% else %}{% endif %} -->
 
        </div> <!--end accordion-->
+       {% if object.anexo_norma_pdf %}
+       <p>
+         <a href="{{ object.anexo_norma_pdf.url }}" target="_blank"> Descargar documento(pdf) del artículo</a>
+         </p>
+         {% else %}
+         {% endif %}
+       {% if object.anexo_norma_png %}
+       <p>
+         <a href="{{ object.anexo_norma_png.url }}" target="_blank"> Descargar imagen/tarjeta(png) del artículo</a>
+         </p>
+         {% else %}
+         {% endif %}
      </div>
   </div>
 
