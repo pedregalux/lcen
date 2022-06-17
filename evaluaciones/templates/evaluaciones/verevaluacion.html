@@ -350,6 +350,29 @@
          </p>
          {% else %}
          {% endif %}
+
+
+
+         <h5>Revisa otros artículos parecidos a este:</h5>
+
+         <p>
+           <ul>
+            <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}" class="btn-lcen2 button hvr-sweep-to-right">Otras normas de la misma categoría</a>
+           </ul>
+         </p>
+
+
+         <p>
+           <ul>
+             <a href="/evaluaciones/verorgevaluadora/{{ object.org_evaluadora.pk }}">{{ object.org_evaluadora }}</a>
+           </ul>
+         </p>
+
+
+
+
+
+
      </div>
   </div>
 
