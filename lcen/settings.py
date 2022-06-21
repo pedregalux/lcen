@@ -205,5 +205,14 @@ EMAIL_PORT= config('EMAIL_PORT')
 EMAIL_HOST_USER= config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD= config('EMAIL_HOST_PASSWORD')
 
+ACTIVE_URL_KWARGS = {
+    'css_class': 'active',
+    'parent_tag': 'li',
+    'menu': 'yes',
+    'ignore_params': 'no'
+}
+ACTIVE_URL_CACHE = False
+ACTIVE_URL_CACHE_TIMEOUT = 60 * 60 * 24  # 1 day
+ACTIVE_URL_CACHE_PREFIX = 'django_activeurl'
 
 ADMINS = [('Felipe', 'fperry@ciudadaniai.org')]
