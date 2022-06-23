@@ -43,7 +43,7 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 titular">
 
           <h2>
-            Hay {{ evaluaciones.count }} Artículos evaluados por {{ object.nombre_org_norma }}
+            Hay {{ evaluaciones.count }} Artículo evaluados por {{ object.nombre_org_norma }}
           </h2>
 
     </div>
@@ -55,11 +55,11 @@
 
           <div class="norma">
 
-             <a href="{{ evaluacion.pk }}" class="enlace-norma"><img src="{{ evaluacion.sello_norma.url }}" alt="sello" class="sello"></a>
+             <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}" class="enlace-norma"><img src="{{ evaluacion.sello_norma.url }}" alt="sello" class="sello"></a>
 
              {{ evaluacion.titulo_oficial_norma }}
              <br>
-             <a href="{{ evaluacion.pk }}">{{ evaluacion.titulo_web_norma }}</a>
+             <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}">{{ evaluacion.titulo_web_norma }}</a>
              <br>
              Norma evaluada por: <br>
              <p><img src="{{ evaluacion.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org"></p>

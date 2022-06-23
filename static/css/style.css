@@ -293,6 +293,11 @@ header ul.navbar-nav li a:hover {
     border-top: 8px solid #75AADB;
 }
 
+.active2 {
+    color: black;
+    border-top: 8px solid #75AADB;
+}
+
 header ul.navbar-nav li > ul.dropdown-menu {
     border: 0px;
     border-top: 8px solid #FFD700;

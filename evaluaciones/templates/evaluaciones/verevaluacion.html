@@ -360,10 +360,16 @@
            </ul>
          </p>
 
+         <p>
+           <ul>
+            <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}" class="btn-lcen2 button hvr-sweep-to-right">Otras normas de la misma categoría</a>
+           </ul>
+         </p>
+
 
          <p>
            <ul>
-             <a href="/evaluaciones/verorgevaluadora/{{ object.org_evaluadora.pk }}">{{ object.org_evaluadora }}</a>
+             <a href="/evaluaciones/verorgevaluadora/{{ object.org_evaluadora.pk }}" class="btn-lcen2 button hvr-sweep-to-right">Otras normas de la misma org</a>
            </ul>
          </p>
 
@@ -379,6 +385,7 @@
 
 </section>
 
-
+<a href="{{ norma.get_next_by_date_posted }}">Next</a><br>
+<a href="{{ norma.get_previous_by_date_posted }}">Previous</a>
 
 {% endblock %}
