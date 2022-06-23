@@ -111,20 +111,95 @@
        <h3>Evaluación</h3>
        <div class="accordion" id="accordionPanelsStayOpenExample">
 
-{% if object.importancia_para_chile %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading1">
                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse1" aria-expanded="true" aria-controls="panelsStayOpen-collapse1">
-   ¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile? Valoración del 1 al 6, siendo el 6 más importante.
- </button>
+                   Leer evaluación completa
+                   </button>
                </h2>
                <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading1">
-                   <div class="accordion-body">
-                       <img src="{{ object.importancia_para_chile.url }}" class="img-fluid" style="max-width: 50%;">
-                   </div>
+
+
+<div class="accordion-body">
+
+{% if object.importancia_para_chile %}
+<h2>¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile? Valoración del 1 al 6, siendo el 6 más importante.</h2>
+<img src="{{ object.importancia_para_chile.url }}" class="img-fluid" style="max-width: 50%;">
+{% else %}{% endif %}
+
+{% if object.razones_importancia_norma %}
+<h2>¿Por qué este artículo(s) tiene la importancia para la calidad de vida que indicaste en la pregunta anterior?</h2>
+<p>{{ object.razones_importancia_norma|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.mejora_de_cp80 %}
+<h2>En el marco de una agenda de justicia social, económica y de derechos humanos: ¿en qué medida la Nueva Constitución mejora respecto de la Constitución actualmente vigente? Valoración del 1 al 6, siendo el 6 más importante.</h2>
+ <img src="{{ object.mejora_de_cp80.url }}" class="img-fluid" style="max-width: 50%;">
+{% else %}{% endif %}
+
+{% if object.razones_mejora_cp80 %}
+<h2>¿Cómo puedes justificar la opción asignada en la pregunta anterior?</h2>
+<p>{{ object.razones_mejora_cp80|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.presencia_otros_paises %}
+<h2>¿Hay presencia de artículos similares en otros países? Explícanos en qué países y en qué se parecen.</h2>
+<p>{{ object.presencia_otros_paises|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.historia_norma %}
+<h2>¿Cuál es la historia de este artículo en términos de su creación social?</h2>
+<p>{{ object.historia_norma|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.mitos_norma %}
+<h2>¿Cuáles son los principales mitos asociados al artículo(s) y porqué son mitos?</h2>
+<p>{{ object.mitos_norma|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.futurista_norma %}
+<h2>Imagina que estamos en 2052: ¿Cómo es tu entorno y la vida de las personas en Chile después de este artículo(s)?</h2>
+<p>{{ object.futurista_norma|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_desarrollo %}
+<h2>¿En qué forma el artículo(s) analizado aporta al desarrollo del país?</h2>
+<p>{{ object.aporte_desarrollo|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_ddhh_natura %}
+<h2>¿En qué forma el artículo(s) analizado aporta al respeto a los derechos humanos y de la naturaleza?</h2>
+<p>{{ object.aporte_ddhh_natura|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_seguridad %}
+<h2>¿En qué forma el artículo(s) analizado aporta a la seguridad y certeza de las personas en Chile?</h2>
+<p>{{ object.aporte_seguridad|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_igualdad %}
+<h2>¿En qué forma el artículo(s) analizado aporta a la igualdad entre todas las personas?</h2>
+<p>{{ object.aporte_igualdad|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_innovacion %}
+<h2>¿En qué forma el artículo(s) analizado aporta a la innovación y sustentabilidad?</h2>
+<p>{{ object.aporte_innovacion|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_descentralizacion %}
+<h2>¿En qué forma el artículo(s) analizado aporta a los procesos de descentralización?</h2>
+<p>{{ object.aporte_descentralizacion|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_contra_corrupcion %}
+<h2>¿En qué forma el artículo(s) analizado aporta a los procesos de participación y a la lucha contra la corrupción?</h2>
+<p>{{ object.aporte_contra_corrupcion|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+</div>
                </div>
            </div>
-{% else %}{% endif %}
 
 <!-- {% if object.razones_importancia_norma %}
            <div class="accordion-item">
@@ -347,18 +422,22 @@
        <p>
          <a href="{{ object.anexo_norma_png.url }}" target="_blank"> Descargar imagen/tarjeta(png) del artículo</a>
          </p>
+
          {% else %}
          {% endif %}
 
 
 
-         <h5>Revisa otros artículos parecidos a este:</h5>
+         <ul class="redes-sociales">
+             <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"><i class="fab fa-facebook-square"></i></a></li>
+             <li><a href="https://twitter.com/intent/tweet?hashtags=laconstitucionesnuestra&original_referer={{ request.build_absolute_uri }}&text={{ object.titulo|truncatechars:30 }}%20revisa%20la%20evaluación%20en%20&url=https://laconstitucionesnuestra.cl{{ request.get_full_path|truncatechars:1 }}&via=ciudadania_i" data-hash tags="laconstitucionesnuestra"><i class="fab fa-twitter-square"></i></a></li>
+             <!-- <li><a href="#"><i class="fab fa-linkedin"></i></a></li> -->
+             <!-- <li><a href="#"><i class="fab fa-instagram-square"></i></a></li> -->
+         </ul>
 
-         <p>
-           <ul>
-            <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}" class="btn-lcen2 button hvr-sweep-to-right">Otras normas de la misma categoría</a>
-           </ul>
-         </p>
+
+
+         <h5>Revisa otros artículos parecidos a este:</h5>
 
          <p>
            <ul>
@@ -374,10 +453,6 @@
          </p>
 
 
-
-
-
-
      </div>
   </div>
 
@@ -385,7 +460,13 @@
 
 </section>
 
-<a href="{{ norma.get_next_by_date_posted }}">Next</a><br>
-<a href="{{ norma.get_previous_by_date_posted }}">Previous</a>
+
+{% if object.prev_norma %}
+<a href="{{ object.prev_norma.pk }}">{{ object.prev_norma.titulo_web_norma }}</a><br>
+{% endif %}
+{% if object.next_norma %}
+<a href="{{ object.next_norma.pk }}">{{ object.next_norma.titulo_web_norma }}</a>
+{% endif %}
+
 
 {% endblock %}
