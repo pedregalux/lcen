@@ -30,6 +30,17 @@ class NormaResource(resources.ModelResource):
     org_evaluadora = fields.Field(attribute='org_evaluadora', widget=ForeignKeyWidget(OrganizacionNorma, field='org_evaluadora'), column_name='org_evaluadora')
     categoriadelanorma = fields.Field(attribute='categoriadelanorma', widget=ForeignKeyWidget(CategoriaNorma, field='categoriadelanorma'), column_name='categoriadelanorma')
     tags_norma = fields.Field(attribute='tags_norma', widget=ManyToManyWidget(TagNorma, field='tags_norma'), column_name='tags_norma')
+    titulo_oficial_norma = fields.Field(attribute='titulo_oficial_norma', column_name='titulo_oficial_norma')
+    titulo_web_norma = fields.Field(attribute='titulo_web_norma', column_name='titulo_web_norma')
+    resumen_norma = fields.Field(attribute='resumen_norma', column_name='resumen_norma')
+    url = fields.Field(attribute='url', column_name='url')
+    importancia_para_chile = fields.Field(attribute='importancia_para_chile', column_name='importancia_para_chile')
+    razones_importancia_norma = fields.Field(attribute='razones_importancia_norma', column_name='razones_importancia_norma')
+    mejora_de_cp80 = fields.Field(attribute='mejora_de_cp80', column_name='mejora_de_cp80')
+    razones_mejora_cp80 = fields.Field(attribute='razones_mejora_cp80', column_name='razones_mejora_cp80')
+    tema_extra = fields.Field(attribute='tema_extra', column_name='Tema')
+    tema_extra = fields.Field(attribute='tema_extra', column_name='Tema')
+    tema_extra = fields.Field(attribute='tema_extra', column_name='Tema')
 
 
     class Meta:
@@ -38,49 +49,7 @@ class NormaResource(resources.ModelResource):
         fields = ('id','nombre_org_norma','logo_org_norma',)
 
 
-# La norma
-class Norma(models.Model):
-    org_evaluadora = models.ForeignKey(OrganizacionNorma,
-        related_name="organizacion_eval_norma",
-        verbose_name="Organización evaluadora",
-        null=True,
-        on_delete=models.SET_NULL)
-    categoriadelanorma = models.ForeignKey(CategoriaNorma,
-        related_name="categoria_eval_norma",
-        verbose_name="Categoría de la norma",
-        null=True,
-        on_delete=models.SET_NULL)
-    tags_norma = models.ManyToManyField(TagNorma,
-        related_name="tags_de_norma",
-        verbose_name="Tags/Sellos aplicados a la norma",
-        blank=True)
-    titulo_oficial_norma = models.CharField("Título oficial de norma",
-        max_length=256,
-        help_text="Título oficial de la norma")
-    titulo_web_norma = models.CharField("Título web de la norma",
-        max_length=256,
-        help_text="Título oficial de la norma")
-    resumen_norma = models.TextField("Resumen de la norma",
-        help_text="Resumen de la norma")
-    url = models.URLField(
-        "URL de la Norma",
-        null=True,
-        blank=True,
-        help_text="URL de la Norma")
-    importancia_para_chile = models.ImageField("Importancia para Chile",
-        upload_to='iconostemas/',
-        null=True,
-        blank=True,
-        help_text="¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile?")
-    razones_importancia_norma = models.TextField("Razones de importancia de norma",
-        null=True,
-        blank=True,
-        help_text="¿Por qué este artículo(s) tiene la importancia para la calidad de vida que indicaste en la pregunta anterior?")
-    mejora_de_cp80 = models.ImageField("Mejora de constitución anterior",
-        upload_to='iconostemas/',
-        null=True,
-        blank=True,
-        help_text="En el marco de una agenda de justicia social, económica y de derechos humanos: ¿en qué medida la Nueva Constitución mejora respecto de la Constitución actualmente vigente?")
+
     razones_mejora_cp80 = models.TextField("Razones de mejora de constitución anterior",
         null=True,
         blank=True,
