@@ -171,6 +171,6 @@ class Norma(models.Model):
     class Meta:
         verbose_name = "Artículo"
         verbose_name_plural = "Artículos"
-        ordering = ['titulo_web_norma']
+        # ordering = ['titulo_web_norma']
     def __str__(self):
         return self.titulo_web_norma
