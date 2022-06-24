@@ -6,89 +6,325 @@
 
 {% block content %}
 
-<section class="portada-lcen-colores">
-  <!-- <img src="{% static 'img/banner-edn-escritorio.jpg' %}" alt="img portada" class="img-fluid img-banner-desktop">
-  <img src="{% static 'img/banner-edn-movil.jpg' %}" alt="img portada movil" class="img-fluid img-banner-movil"> -->
-    <!-- <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-          <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluación de normas</a></li>
-          <li class="breadcrumb-item active" aria-current="page">{{ object.titulo_web_norma }}</li>
-      </ol>
-    </nav> -->
-</section>
-<br>
-
-
-<section class="evaluacion-de-norma container">
-
-  <div class="filtro-propuestas propuestas-home">
-      <div class="container">
-          <div class="row">
-              <div class="col-12 col-sm-12 col-md-12">
-                <h2>¿Cómo empezar? Te invitamos a encontrar artículos en los siguientes temas</h2>
+<section class="filtro-temas-evaluaciones pt-evaluacion">
+    <div class="container-fluid invitacion-filtros">
+        <div class="row">
+            <div class="col-12">
+                <h4>Te invitamos a filtrar por tema <i class="fas fa-chevron-down" aria-hidden="true"></i></h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 temas">
                 {% normasxcategoria %}
-              </div>
-          </div>
-      </div>
-  </div>
-
-
-
-
-<div class="row">
-
-  <div class="col-12 col-sm-12 col-md-4 col-lg-3">
-    <!-- <div class="volver-temas">
-       <nav aria-label="breadcrumb">
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'homeevaluaciones' %}">Temas</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ object.categoriadelanorma }}</li>
-         </ol>
-       </nav>
-    </div> -->
-
-    <div class="sello-norma-visualizacion">
-       <img src="{{ object.sello_norma.url }}" alt="sello-norma" class="norma-sello w-100">
+            </div>
+        </div>
     </div>
+</section>
 
-    <div class="titulo-simbologia">
-         <h5>Simbología</h5>
+<section class="norma-evaluada container">
+    <div class="row">
+
+        <div class="col-12 col-sm-5 col-md-4 col-lg-3 sello">
+            <a href="#" class="volver-evaluaciones"><img src="{% static 'img/arrow-prev-gris.svg' %}" alt="icono" class="icono">Volver</a>
+            <img src="{{ object.sello_norma.url }}" alt="sello-norma" class="norma-sello">
+
+            <div class="simbologia">
+                <h5>Sellos aplicados <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
+
+                <!-- ACA VAN SOLO LOS SIMBOLOS QUE SE UTILIZAN EN EL SELLO, NO LA SIMBOLOGIA COMPLETA -->
+                <ul class="simbolos sellos-utilizados">
+                   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#desarrollo"><img src="{% static 'img/desarrollo-humano-icono.png' %}" class="simbolo-simbologia" /> <span> <img src="{% static 'img/check-sello.svg' %}" class="simbolo-simbologia" />Desarrollo humano y <br>nacional sostenible</span></button> </li>
+                   <!-- Modal -->
+                   <div class="modal fade" id="desarrollo" tabindex="-1" aria-labelledby="desarrolloLabel" aria-hidden="true">
+                       <div class="modal-dialog">
+                           <div class="modal-content">
+                               <div class="modal-header">
+                                   <h5 class="modal-title" id="desarrolloLabel"><img src="{% static 'img/desarrollo-humano-icono.png' %}" class="simbolo-simbologia" /> Desarrollo humano y nacional sostenible</h5>
+                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                               <div class="modal-body">
+                                   <p>Al aplicar este sello, los evaluadores han considerado que el artículo incluye facultades individuales y colectivas de las personas de vivir con dignidad, a partir de la realización de todos los derechos humanos.</p>
+                                   <p>Esto incluye la erradicación de la pobreza, el mejoramiento de las condiciones de vida de la población y el logro rápido de una transición a una economía ecológica, baja en emisiones de carbono y resiliente al cambio climático.</p>
+                                   <p>Además, implica la promoción del mejoramiento sostenido del bienestar socioeconómico; la adopción y revisión periódica de estrategias y planes nacionales de desarrollo; la no discriminación y el respeto del Estado de Derecho en el plano nacional.</p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#ddhh-y-naturaleza"><img src="{% static 'img/derechos-humanos-icono.png' %}" class="simbolo-simbologia" /> <span><img src="{% static 'img/check-sello.svg' %}" class="simbolo-simbologia" /> DDHH y de la Naturaleza</span></button> </li>
+                   <!-- Modal -->
+                   <div class="modal fade" id="ddhh-y-naturaleza" tabindex="-1" aria-labelledby="ddhhynaturalezaLabel" aria-hidden="true">
+                       <div class="modal-dialog">
+                           <div class="modal-content">
+                               <div class="modal-header">
+                                   <h5 class="modal-title" id="ddhhynaturalezaLabel"><img src="{% static 'img/derechos-humanos-icono.png' %}" class="simbolo-simbologia" /> DDHH y de la Naturaleza</h5>
+                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                               <div class="modal-body">
+                                   <p>Al aplicar este sello, los evaluadores han considerado que el artículo tiene un compromiso con los derechos fundamentales de las personas, la dignidad y el valor de la persona humana. También con la promoción del progreso social y la mejora continua de las condiciones de existencia de las personas dentro de un concepto más amplio de la libertad.</p>
+                                   <p>Además, este sello puede reconocer que la humanidad coexiste con la naturaleza y que toda forma de vida depende de la integridad de la biosfera y de la interconexión de los sistemas ecológicos, evidenciando la estrecha vinculación entre los derechos humanos, la conservación y protección ambiental al igual que el rol fundamental de la mantención de la integridad ecológica para lograr el bienestar del ser humano y el combate de la pobreza.</p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+            </div>
+
+
+            <div class="evaluacion-cuantitativa calidad-de-vida">
+                <img src="{% static 'img/calidad-evaluacion-prototipo.svg' %}" class="img-fluid evaluacion-cuantitativa-img">
+            </div>
+            <div class="evaluacion-cuantitativa mejoras-constitucion">
+                <img src="{% static 'img/mejora-evaluacion-prototipo.svg' %}" class="img-fluid evaluacion-cuantitativa-img">
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-7 col-md-8 col-lg-9 informacion">
+
+            <div class="col-12 como-leer-evaluaciones">
+
+                <!-- Button trigger modal -->
+                <a href="#" type="button" class="como-leerlo" data-bs-toggle="modal" data-bs-target="#como-leerlo">Cómo leerlo <img src="{% static 'img/informacion-icono.svg' %}" alt="icono" class="icono"></a>
+                <!-- Modal -->
+                <div class="modal fade" id="como-leerlo" tabindex="-1" aria-labelledby="como-leerloLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="como-leerloLabel">Cómo Leerlo</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Se seleccionaron un número de normas, cada una de estas están representada por un cartel. Sobre este cartel en blanco se pueden ver los sellos temáticos puestos por les expertes y al costado izquierdo y abajo se puede ver en una escala de 6 qué tan importante puede ser este artículo para las personas y cuánto mejora de la constitución vigente.</p>
+                            <div class="fila">
+                               <div class="cartel">
+                                  <h4>Cartel</h4>
+                                  <img src="{% static 'img/sello-prueba.jpg' %}" class="img-fluid sello">
+                               </div>
+                               <div class="simbologia">
+                                  <h4>Sellos temáticos</h4>
+                                  <p>Cada sello representa un <b>valor y virtud</b> que el experto identifica que la norma considera</p>
+                                  <img src="{% static 'img/simbologia-completa.svg' %}" class="img-fluid simbologia">
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}#normas" class="tema-norma">{{ object.categoriadelanorma }}</a>
+
+            <h3 class="nombre-norma">{{ object.titulo_web_norma }}</h3>
+            {{ object.resumen_norma|linebreaks|urlizetrunc:15|url_target_blank }}
+            <div class="org-evaluadora">
+                <p>Evaluada por:</p>
+                <div class="logos-organizaciones">
+                    <img src="{{ object.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
+                </div>
+            </div>
+
+            <div class="leer-articulos">
+
+                <div class="accordion" id="accordion-articulos">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="articulos-heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#articulos" aria-expanded="true" aria-controls="articulos">
+                                Leer los artículos
+                            </button>
+                        </h2>
+
+                        <div id="articulos" class="accordion-collapse collapse" aria-labelledby="articulos-heading1">
+                            <div class="accordion-body">
+                                <div class="articulo">
+                                    <p>"305.- Artículo 23. De los animales. Los animales son sujetos de especial protección. El Estado los protegerá, reconociendo su sintiencia y el derecho a vivir una vida libre de maltrato.</p>
+                                    <p>El Estado y sus organismos promoverán una educación basada en la empatía y en el respeto hacia los animales.</p>
+                                </div>
+                                <div class="articulo">
+                                    <p>306.- Artículo 23B.- El Estado protege la biodiversidad, debiendo preservar, conservar y restaurar el hábitat de las especies nativas silvestres, en tal cantidad y distribución que sostenga adecuadamente la viabilidad de sus poblaciones y asegure las condiciones para su supervivencia y no extinción."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="evaluacion-completa">
+                <div class="accordion" id="accordion-evaluacion-completa">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="evaluacion-completa-heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#evaluacion-completa" aria-expanded="false" aria-controls="evaluacion-completa">
+                                Leer el resto de la evaluación
+                            </button>
+                        </h2>
+
+                        <div id="evaluacion-completa" class="accordion-collapse collapse" aria-labelledby="evaluacion-completa-heading1">
+                            <div class="accordion-body">
+                                <div class="item">
+                                    {% if object.importancia_para_chile %}
+                                    <h3> ¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile? Valoración del 1 al 6, siendo el 6 más importante.</h3>
+                                    <img src="{{ object.importancia_para_chile.url }}" class="img-fluid" style="max-width: 50%;">
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.razones_importancia_norma %}
+                                    <h3>¿Por qué este artículo(s) tiene la importancia para la calidad de vida que indicaste en la pregunta anterior?</h3>
+                                    <p>{{ object.razones_importancia_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.mejora_de_cp80 %}
+                                    <h3>En el marco de una agenda de justicia social, económica y de derechos humanos: ¿En qué medida la Nueva Constitución mejora respecto de la Constitución actualmente vigente? Valoración del 1 al 6, siendo el 6 más importante.</h3>
+                                    <img src="{{ object.mejora_de_cp80.url }}" class="img-fluid" style="max-width: 50%;">
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.razones_mejora_cp80 %}
+                                    <h3>¿Cómo puedes justificar la opción asignada en la pregunta anterior?</h3>
+                                    <p>{{ object.razones_mejora_cp80|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.presencia_otros_paises %}
+                                    <h3>¿Hay presencia de artículos similares en otros países? Explícanos en qué países y en qué se parecen.</h3>
+                                    <p>{{ object.presencia_otros_paises|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.historia_norma %}
+                                    <h3>¿Cuál es la historia de este artículo en términos de su creación social?</h3>
+                                    <p>{{ object.historia_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.mitos_norma %}
+                                    <h3>¿Cuáles son los principales mitos asociados al artículo(s) y porqué son mitos?</h3>
+                                    <p>{{ object.mitos_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.futurista_norma %}
+                                    <h3>Imagina que estamos en 2052: ¿Cómo es tu entorno y la vida de las personas en Chile después de este artículo(s)?</h3>
+                                    <p>{{ object.futurista_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_desarrollo %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta al desarrollo del país?</h3>
+                                    <p>{{ object.aporte_desarrollo|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_ddhh_natura %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta al respeto a los derechos humanos y de la naturaleza?</h3>
+                                    <p>{{ object.aporte_ddhh_natura|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_seguridad %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta a la seguridad y certeza de las personas en Chile?</h3>
+                                    <p>{{ object.aporte_seguridad|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_igualdad %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta a la igualdad entre todas las personas?</h3>
+                                    <p>{{ object.aporte_igualdad|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_innovacion %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta a la innovación y sustentabilidad?</h3>
+                                    <p>{{ object.aporte_innovacion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_descentralizacion %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta a los procesos de descentralización?</h3>
+                                    <p>{{ object.aporte_descentralizacion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_contra_corrupcion %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta a los procesos de participación y a la lucha contra la corrupción?</h3>
+                                    <p>{{ object.aporte_contra_corrupcion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--end evaluacion completa-->
+
+            <div class="descarga-evaluacion">
+                 {% if object.anexo_norma_pdf %}
+                 <h5>Descargar la evaluación completa aquí</h5>
+                 <br>
+                 <a href="{{ object.anexo_norma_pdf.url }}" target="_blank" class="btn-evaluacion"> Descargar Evaluación</a>
+                {% else %} {% endif %}
+            </div>
+
+            <div class="descarga-evaluacion">
+                 {% if object.anexo_norma_png %}
+                <h5>Comparte esta evaluación en Redes Sociales</h5>
+                <br>
+                <a href="{{ object.anexo_norma_png.url }}" target="_blank" class="btn-evaluacion"> Descargar Postal</a>
+                {% else %} {% endif %}
+            </div>
+
+            <div class="descarga-evaluacion">
+                <h5>Otras normas evaluadas por la organización</h5>
+                <br>
+                <a href="/evaluaciones/verorgevaluadora/{{ object.org_evaluadora.pk }}" class="btn-evaluacion">{{ object.org_evaluadora }}</a>
+            </div>
+
+            <div class="otras-evaluaciones-temas">
+                <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}" class="tema-norma">{{ object.categoriadelanorma }}</a>
+            </div>
+
+
+        </div>
     </div>
+</section>
 
-    <div class="simbologia">
-      <div class="simbolos">
 
-      {% simbolosxcategorias %}
-
+<section class="avanzar-evaluaciones">
+    <div class="container">
+        <div class="row">
+             <div class="col-12">
+                  <ul class="navegacion">
+                      <li><a href="#" class="prev"><img src="{% static 'img/arrow-prev.svg' %}" alt="icono" class="icono">Nombre de la norma que esta antes (...)</a></li>
+                      <li><a href="#" class="next">Nombre de la norma que esta después (...)<img src="{% static 'img/arrow-next.svg' %}" alt="icono" class="icono"></a></li>
+                  </ul>
+             </div>
+        </div>
     </div>
-  </div>
+</section>
 
 
-    <!-- <div class="otras-organizaciones">
-         <h5>Organizaciones que también evaluaron este artículo:</h5>
-         <ul>
-           {% for org in object.org_evaluadora.all %}
-             <li>
-            <a href="" class="logo-org">
-               <img src="{{ org.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
-             </a>
-             </li>
-           {% endfor %}
-         </ul>
-    </div> -->
 
-  </div>
 
-  <div class="col-12 col-sm-12 col-md-8 col-lg-9 norma-diagnostico">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluación de normas</a></li>
-          <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">{{ object.categoriadelanorma }}</a></li>
-          <li class="breadcrumb-item active" aria-current="page">{{ object.titulo_web_norma }}</li>
-      </ol>
-    </nav>
-     <div class="titular">
+    <!--  <div class="col-12 col-sm-12 col-md-8 col-lg-9 norma-diagnostico">
+      <div class="titular">
         <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}#normas" class="btn-lcen2 button hvr-sweep-to-right categorialeft">  {{ object.categoriadelanorma }}</a>
         <h3>{{ object.titulo_web_norma }}</h3>
         <div class="linea-decoracion"></div>
@@ -101,14 +337,14 @@
               <p><img src="{{ object.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">{{ object.org_evaluadora }}</p>
             </div>
         </div>
-     </div>
+     </div> -->
 
-     <div class="linea-decoracion"></div>
-     <!-- <div class="org-evaluadora">
+        <!--<div class="linea-decoracion"></div>
+      <div class="org-evaluadora">
          <p><a href="{{ object.url }}">URL al Artículo en borrador</a></p>
      </div> -->
 
-     <div class="descripcion-bullets preguntas">
+        <!-- <div class="descripcion-bullets preguntas">
        <h3>Evaluación</h3>
        <div class="accordion" id="accordionPanelsStayOpenExample">
 
@@ -127,7 +363,7 @@
            </div>
 {% else %}{% endif %}
 
-<!-- {% if object.razones_importancia_norma %}
+ {% if object.razones_importancia_norma %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading2">
                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false" aria-controls="panelsStayOpen-collapse2">
@@ -335,51 +571,9 @@
                    </div>
                </div>
            </div>
-{% else %}{% endif %} -->
+{% else %}{% endif %}
 
-       </div> <!--end accordion-->
-       {% if object.anexo_norma_pdf %}
-       <p>
-         <a href="{{ object.anexo_norma_pdf.url }}" target="_blank"> Descargar documento(pdf) del artículo</a>
-         </p>
-         {% else %}
-         {% endif %}
-       {% if object.anexo_norma_png %}
-       <p>
-         <a href="{{ object.anexo_norma_png.url }}" target="_blank"> Descargar imagen/tarjeta(png) del artículo</a>
-         </p>
-         {% else %}
-         {% endif %}
-
-
-
-         <h5>Revisa otros artículos parecidos a este:</h5>
-
-         <p>
-           <ul>
-            <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}" class="btn-lcen2 button hvr-sweep-to-right">Otras normas de la misma categoría</a>
-           </ul>
-         </p>
-
-
-         <p>
-           <ul>
-             <a href="/evaluaciones/verorgevaluadora/{{ object.org_evaluadora.pk }}">{{ object.org_evaluadora }}</a>
-           </ul>
-         </p>
-
-
-
-
-
-
-     </div>
-  </div>
-
-</div>
-
-</section>
-
-
+       </div> -->
+        <!--end accordion-->
 
 {% endblock %}
