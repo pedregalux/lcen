@@ -293,6 +293,11 @@ header ul.navbar-nav li a:hover {
     border-top: 8px solid #75AADB;
 }
 
+.active2 {
+    color: black;
+    border-top: 8px solid #75AADB;
+}
+
 header ul.navbar-nav li > ul.dropdown-menu {
     border: 0px;
     border-top: 8px solid #FFD700;
@@ -5207,6 +5212,22 @@ a.btn-glosario {
     text-decoration: none;
     letter-spacing: 2px;
     color: white;
+    background: #2D2D2D!important;
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px 30px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.btn-lcen2 .active a {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: black;
     background: #2D2D2D!important;
     border: 0px;
     border-radius: 5px;

@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load normas_extra %}
-{% load url_target_blank %}
 {% load static %}
 {% block title %}Evaluación de Normas{% endblock %}
 
@@ -93,7 +92,7 @@
         <h3>{{ object.titulo_web_norma }}</h3>
         <div class="linea-decoracion"></div>
         <div class="descripcion">
-          <p>{{ object.resumen_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+          <p>{{ object.resumen_norma|linebreaks|urlizetrunc:15 }}</p>
         </div>
         <div class="org-evaluadora">
             <p>Evaluada por:</p>
@@ -112,20 +111,95 @@
        <h3>Evaluación</h3>
        <div class="accordion" id="accordionPanelsStayOpenExample">
 
-{% if object.importancia_para_chile %}
            <div class="accordion-item">
                <h2 class="accordion-header" id="panelsStayOpen-heading1">
                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse1" aria-expanded="true" aria-controls="panelsStayOpen-collapse1">
-   ¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile? Valoración del 1 al 6, siendo el 6 más importante.
- </button>
+                   Leer evaluación completa
+                   </button>
                </h2>
                <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading1">
-                   <div class="accordion-body">
-                       <img src="{{ object.importancia_para_chile.url }}" class="img-fluid" style="max-width: 50%;">
-                   </div>
+
+
+<div class="accordion-body">
+
+{% if object.importancia_para_chile %}
+<h2>¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile? Valoración del 1 al 6, siendo el 6 más importante.</h2>
+<img src="{{ object.importancia_para_chile.url }}" class="img-fluid" style="max-width: 50%;">
+{% else %}{% endif %}
+
+{% if object.razones_importancia_norma %}
+<h2>¿Por qué este artículo(s) tiene la importancia para la calidad de vida que indicaste en la pregunta anterior?</h2>
+<p>{{ object.razones_importancia_norma|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.mejora_de_cp80 %}
+<h2>En el marco de una agenda de justicia social, económica y de derechos humanos: ¿en qué medida la Nueva Constitución mejora respecto de la Constitución actualmente vigente? Valoración del 1 al 6, siendo el 6 más importante.</h2>
+ <img src="{{ object.mejora_de_cp80.url }}" class="img-fluid" style="max-width: 50%;">
+{% else %}{% endif %}
+
+{% if object.razones_mejora_cp80 %}
+<h2>¿Cómo puedes justificar la opción asignada en la pregunta anterior?</h2>
+<p>{{ object.razones_mejora_cp80|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.presencia_otros_paises %}
+<h2>¿Hay presencia de artículos similares en otros países? Explícanos en qué países y en qué se parecen.</h2>
+<p>{{ object.presencia_otros_paises|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.historia_norma %}
+<h2>¿Cuál es la historia de este artículo en términos de su creación social?</h2>
+<p>{{ object.historia_norma|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.mitos_norma %}
+<h2>¿Cuáles son los principales mitos asociados al artículo(s) y porqué son mitos?</h2>
+<p>{{ object.mitos_norma|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.futurista_norma %}
+<h2>Imagina que estamos en 2052: ¿Cómo es tu entorno y la vida de las personas en Chile después de este artículo(s)?</h2>
+<p>{{ object.futurista_norma|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_desarrollo %}
+<h2>¿En qué forma el artículo(s) analizado aporta al desarrollo del país?</h2>
+<p>{{ object.aporte_desarrollo|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_ddhh_natura %}
+<h2>¿En qué forma el artículo(s) analizado aporta al respeto a los derechos humanos y de la naturaleza?</h2>
+<p>{{ object.aporte_ddhh_natura|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_seguridad %}
+<h2>¿En qué forma el artículo(s) analizado aporta a la seguridad y certeza de las personas en Chile?</h2>
+<p>{{ object.aporte_seguridad|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_igualdad %}
+<h2>¿En qué forma el artículo(s) analizado aporta a la igualdad entre todas las personas?</h2>
+<p>{{ object.aporte_igualdad|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_innovacion %}
+<h2>¿En qué forma el artículo(s) analizado aporta a la innovación y sustentabilidad?</h2>
+<p>{{ object.aporte_innovacion|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_descentralizacion %}
+<h2>¿En qué forma el artículo(s) analizado aporta a los procesos de descentralización?</h2>
+<p>{{ object.aporte_descentralizacion|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+{% if object.aporte_contra_corrupcion %}
+<h2>¿En qué forma el artículo(s) analizado aporta a los procesos de participación y a la lucha contra la corrupción?</h2>
+<p>{{ object.aporte_contra_corrupcion|linebreaks|urlizetrunc:15 }}</p>
+{% else %}{% endif %}
+
+</div>
                </div>
            </div>
-{% else %}{% endif %}
 
 <!-- {% if object.razones_importancia_norma %}
            <div class="accordion-item">
@@ -136,7 +210,7 @@
                </h2>
                <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading2">
                    <div class="accordion-body">
-                       <p>{{ object.razones_importancia_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.razones_importancia_norma|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -166,7 +240,7 @@
                </h2>
                <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
                    <div class="accordion-body">
-                       <p>{{ object.razones_mejora_cp80|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.razones_mejora_cp80|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -181,7 +255,7 @@
                </h2>
                <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
                    <div class="accordion-body">
-                       <p>{{ object.presencia_otros_paises|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.presencia_otros_paises|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -196,7 +270,7 @@
                </h2>
                <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
                    <div class="accordion-body">
-                       <p>{{ object.historia_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.historia_norma|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -211,7 +285,7 @@
                </h2>
                <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading7">
                    <div class="accordion-body">
-                       <p>{{ object.mitos_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.mitos_norma|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -226,7 +300,7 @@
                </h2>
                <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading8">
                    <div class="accordion-body">
-                       <p>{{ object.futurista_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.futurista_norma|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -241,7 +315,7 @@
                </h2>
                <div id="panelsStayOpen-collapse9" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading9">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_desarrollo|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.aporte_desarrollo|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -256,7 +330,7 @@
                </h2>
                <div id="panelsStayOpen-collapse10" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading10">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_ddhh_natura|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.aporte_ddhh_natura|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -271,7 +345,7 @@
                </h2>
                <div id="panelsStayOpen-collapse11" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading11">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_seguridad|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.aporte_seguridad|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -286,7 +360,7 @@
                </h2>
                <div id="panelsStayOpen-collapse12" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading12">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_igualdad|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.aporte_igualdad|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -301,7 +375,7 @@
                </h2>
                <div id="panelsStayOpen-collapse13" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading13">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_innovacion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.aporte_innovacion|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -316,7 +390,7 @@
                </h2>
                <div id="panelsStayOpen-collapse14" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading14">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_descentralizacion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.aporte_descentralizacion|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
@@ -331,25 +405,36 @@
                </h2>
                <div id="panelsStayOpen-collapse15" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading15">
                    <div class="accordion-body">
-                       <p>{{ object.aporte_contra_corrupcion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
+                       <p>{{ object.aporte_contra_corrupcion|linebreaks|urlizetrunc:15 }}</p>
                    </div>
                </div>
            </div>
 {% else %}{% endif %} -->
 
-       </div> <!--end accordion-->
+       </div><!--end accordion-->
+
        {% if object.anexo_norma_pdf %}
        <p>
          <a href="{{ object.anexo_norma_pdf.url }}" target="_blank"> Descargar documento(pdf) del artículo</a>
          </p>
          {% else %}
          {% endif %}
+
        {% if object.anexo_norma_png %}
        <p>
          <a href="{{ object.anexo_norma_png.url }}" target="_blank"> Descargar imagen/tarjeta(png) del artículo</a>
          </p>
+
          {% else %}
          {% endif %}
+
+
+         <ul class="redes-sociales">
+             <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"><i class="fab fa-facebook-square"></i></a></li>
+             <li><a href="https://twitter.com/intent/tweet?hashtags=laconstitucionesnuestra&original_referer={{ request.build_absolute_uri }}&text={{ object.titulo|truncatechars:30 }}%20revisa%20la%20evaluación%20en%20&url=https://laconstitucionesnuestra.cl{{ request.get_full_path|truncatechars:1 }}&via=ciudadania_i" data-hash tags="laconstitucionesnuestra"><i class="fab fa-twitter-square"></i></a></li>
+             <!-- <li><a href="#"><i class="fab fa-linkedin"></i></a></li> -->
+             <!-- <li><a href="#"><i class="fab fa-instagram-square"></i></a></li> -->
+         </ul>
 
 
 
@@ -364,13 +449,9 @@
 
          <p>
            <ul>
-             <a href="/evaluaciones/verorgevaluadora/{{ object.org_evaluadora.pk }}">{{ object.org_evaluadora }}</a>
+             <a href="/evaluaciones/verorgevaluadora/{{ object.org_evaluadora.pk }}" class="btn-lcen2 button hvr-sweep-to-right">Otras normas de la misma org</a>
            </ul>
          </p>
-
-
-
-
 
 
      </div>
@@ -380,6 +461,13 @@
 
 </section>
 
+
+{% if object.prev_norma %}
+<a href="{{ object.prev_norma.pk }}">{{ object.prev_norma.titulo_web_norma }}</a><br>
+{% endif %}
+{% if object.next_norma %}
+<a href="{{ object.next_norma.pk }}">{{ object.next_norma.titulo_web_norma }}</a>
+{% endif %}
 
 
 {% endblock %}
