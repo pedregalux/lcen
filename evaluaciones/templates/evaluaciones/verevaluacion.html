@@ -34,40 +34,26 @@
 
                 <!-- ACA VAN SOLO LOS SIMBOLOS QUE SE UTILIZAN EN EL SELLO, NO LA SIMBOLOGIA COMPLETA -->
                 <ul class="simbolos sellos-utilizados">
-                   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#desarrollo"><img src="{% static 'img/desarrollo-humano-icono.png' %}" class="simbolo-simbologia" /> <span> <img src="{% static 'img/check-sello.svg' %}" class="simbolo-simbologia" />Desarrollo humano y <br>nacional sostenible</span></button> </li>
-                   <!-- Modal -->
+
+                  {% for sello in object.tags_norma.all %}
+                   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#desarrollo"><img src="{{ sello.icono_tag.url }}" class="simbolo-simbologia" /> <span> <img src="{% static 'img/check-sello.svg' %}" class="simbolo-simbologia" />{{ sello.tag_norma }}</span></button> </li>
+
                    <div class="modal fade" id="desarrollo" tabindex="-1" aria-labelledby="desarrolloLabel" aria-hidden="true">
                        <div class="modal-dialog">
                            <div class="modal-content">
                                <div class="modal-header">
-                                   <h5 class="modal-title" id="desarrolloLabel"><img src="{% static 'img/desarrollo-humano-icono.png' %}" class="simbolo-simbologia" /> Desarrollo humano y nacional sostenible</h5>
+                                   <h5 class="modal-title" id="desarrolloLabel"><img src="{{ sello.icono_tag.url }}" class="simbolo-simbologia" /> {{ sello.tag_norma }}</h5>
                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                </div>
                                <div class="modal-body">
-                                   <p>Al aplicar este sello, los evaluadores han considerado que el artículo incluye facultades individuales y colectivas de las personas de vivir con dignidad, a partir de la realización de todos los derechos humanos.</p>
-                                   <p>Esto incluye la erradicación de la pobreza, el mejoramiento de las condiciones de vida de la población y el logro rápido de una transición a una economía ecológica, baja en emisiones de carbono y resiliente al cambio climático.</p>
-                                   <p>Además, implica la promoción del mejoramiento sostenido del bienestar socioeconómico; la adopción y revisión periódica de estrategias y planes nacionales de desarrollo; la no discriminación y el respeto del Estado de Derecho en el plano nacional.</p>
+                                 {{ sello.descripcion_tag_norma }}
                                </div>
                            </div>
                        </div>
                    </div>
+                   {% endfor %}
 
-                   <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#ddhh-y-naturaleza"><img src="{% static 'img/derechos-humanos-icono.png' %}" class="simbolo-simbologia" /> <span><img src="{% static 'img/check-sello.svg' %}" class="simbolo-simbologia" /> DDHH y de la Naturaleza</span></button> </li>
-                   <!-- Modal -->
-                   <div class="modal fade" id="ddhh-y-naturaleza" tabindex="-1" aria-labelledby="ddhhynaturalezaLabel" aria-hidden="true">
-                       <div class="modal-dialog">
-                           <div class="modal-content">
-                               <div class="modal-header">
-                                   <h5 class="modal-title" id="ddhhynaturalezaLabel"><img src="{% static 'img/derechos-humanos-icono.png' %}" class="simbolo-simbologia" /> DDHH y de la Naturaleza</h5>
-                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                               </div>
-                               <div class="modal-body">
-                                   <p>Al aplicar este sello, los evaluadores han considerado que el artículo tiene un compromiso con los derechos fundamentales de las personas, la dignidad y el valor de la persona humana. También con la promoción del progreso social y la mejora continua de las condiciones de existencia de las personas dentro de un concepto más amplio de la libertad.</p>
-                                   <p>Además, este sello puede reconocer que la humanidad coexiste con la naturaleza y que toda forma de vida depende de la integridad de la biosfera y de la interconexión de los sistemas ecológicos, evidenciando la estrecha vinculación entre los derechos humanos, la conservación y protección ambiental al igual que el rol fundamental de la mantención de la integridad ecológica para lograr el bienestar del ser humano y el combate de la pobreza.</p>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
+
             </div>
 
 
