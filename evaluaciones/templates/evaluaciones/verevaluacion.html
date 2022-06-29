@@ -165,7 +165,9 @@
             <div class="org-evaluadora">
                 <p>Evaluada por:</p>
                 <div class="logos-organizaciones">
+                  {% if object.org_evaluadora.logo_org_norma %}
                     <img src="{{ object.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
+                  {% else %}{% endif %}
                 </div>
             </div>
 
