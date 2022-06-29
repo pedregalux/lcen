@@ -104,13 +104,19 @@
                     <div class="sellos-lista">
                         {% for norma in filtrocategorias.qs %}
                         <div class="norma">
+                            {% if norma.sello_norma %}
                             <a href="{{ norma.pk }}" class="enlace-norma"><img src="{{ norma.sello_norma.url }}" alt="sello" class="sello"></a>
+                            {% else %}
+                            {% endif %}
                             <!--{{ norma.titulo_oficial_norma }}-->
                             <div class="informacion-norma">
                               <a href="{{ norma.pk }}">{{ norma.titulo_web_norma }}</a>
                               <div class="decoracion-linea"></div>
                               <p>Evaluada por:</p>
+                              {% if norma.sello_norma %}
                               <img src="{{ norma.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
+                              {% else %}
+                              {% endif %}
                             </div>
                             <div class="tema">
                               <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}" class="tema-norma">{{ norma.categoriadelanorma }}</a>
