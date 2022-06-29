@@ -54,9 +54,9 @@
         {% for evaluacion in  evaluaciones %}
 
           <div class="norma">
-
+            {% if evaluacion.sello_norma %}
              <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}" class="enlace-norma"><img src="{{ evaluacion.sello_norma.url }}" alt="sello" class="sello"></a>
-
+            {% else %}{% endif %}
              {{ evaluacion.titulo_oficial_norma }}
              <br>
              <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}">{{ evaluacion.titulo_web_norma }}</a>
