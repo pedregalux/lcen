@@ -113,7 +113,7 @@
                               <img src="{{ norma.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
                             </div>
                             <div class="tema">
-                              <a href="#" class="tema-norma">Nombre tema</a>
+                              <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}" class="tema-norma">{{ norma.categoriadelanorma }}</a>
                             </div>
                         </div>
                         {% endfor %}
