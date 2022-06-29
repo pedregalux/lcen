@@ -55,14 +55,14 @@
                     <p>Además, implica la promoción del mejoramiento sostenido del bienestar socioeconómico; la adopción y revisión periódica de estrategias y planes nacionales de desarrollo; la no discriminación y el respeto del Estado de Derecho en el plano nacional.</p>
                 </div>
                 <div class="modal-header">
-                    <h5 class="modal-title" id="ddhhynaturalezaLabel"><img src="{% static 'img/derechos-humanos-icono.png' %}" class="simbolo-simbologia" /> DDHH y de la Naturaleza</h5>
+                    <h5 class="modal-title" id="ddhhynaturalezaLabel"><img src="{% static 'img/derechos-humanos-icono.png' %}" class="simbolo-simbologia" /> DDHH y de la naturaleza</h5>
                 </div>
                 <div class="modal-body">
                     <p>Al aplicar este sello, los evaluadores han considerado que el artículo tiene un compromiso con los derechos fundamentales de las personas, la dignidad y el valor de la persona humana. También con la promoción del progreso social y la mejora continua de las condiciones de existencia de las personas dentro de un concepto más amplio de la libertad.</p>
                     <p>Además, este sello puede reconocer que la humanidad coexiste con la naturaleza y que toda forma de vida depende de la integridad de la biosfera y de la interconexión de los sistemas ecológicos, evidenciando la estrecha vinculación entre los derechos humanos, la conservación y protección ambiental al igual que el rol fundamental de la mantención de la integridad ecológica para lograr el bienestar del ser humano y el combate de la pobreza.</p>
                 </div>
                 <div class="modal-header">
-                    <h5 class="modal-title" id="seguridadycertezaLabel"><img src="{% static 'img/seguridad-icono.png' %}" class="simbolo-simbologia" /> Seguridad y Certeza</h5>
+                    <h5 class="modal-title" id="seguridadycertezaLabel"><img src="{% static 'img/seguridad-icono.png' %}" class="simbolo-simbologia" /> Seguridad y certeza</h5>
                 </div>
                 <div class="modal-body">
                   <p>
@@ -108,13 +108,18 @@
      </ul>
 
             </div>
-
+            {% if object.importancia_para_chile %}
             <div class="evaluacion-cuantitativa calidad-de-vida">
                 <img src="{{ object.importancia_para_chile.url }}" class="img-fluid evaluacion-cuantitativa-img">
             </div>
+            {% else %}
+            {% endif %}
+            {% if object.mejora_de_cp80 %}
             <div class="evaluacion-cuantitativa mejoras-constitucion">
                 <img src="{{ object.mejora_de_cp80.url }}" class="img-fluid evaluacion-cuantitativa-img">
             </div>
+            {% else %}
+            {% endif %}
         </div>
 
         <div class="col-12 col-sm-7 col-md-8 col-lg-9 informacion">
