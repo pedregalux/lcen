@@ -113,7 +113,7 @@
                               <a href="{{ norma.pk }}">{{ norma.titulo_web_norma }}</a>
                               <div class="decoracion-linea"></div>
                               <p>Evaluada por:</p>
-                              {% if norma.logo_org_norma %}
+                              {% if norma.org_evaluadora.logo_org_norma %}
                               <img src="{{ norma.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
                               {% else %}
                               {% endif %}
