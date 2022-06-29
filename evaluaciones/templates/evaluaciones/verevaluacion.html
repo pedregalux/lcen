@@ -205,110 +205,138 @@
 
                         <div id="evaluacion-completa" class="accordion-collapse collapse" aria-labelledby="evaluacion-completa-heading1">
                             <div class="accordion-body">
+                                {% if object.importancia_para_chile %}
                                 <div class="item">
-                                    {% if object.importancia_para_chile %}
+
                                     <h3> ¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile? Valoración del 1 al 6, siendo el 6 más importante.</h3>
                                     <img src="{{ object.importancia_para_chile.url }}" class="img-fluid" style="max-width: 50%;">
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+                                {% if object.razones_importancia_norma %}
                                 <div class="item">
-                                    {% if object.razones_importancia_norma %}
+
                                     <h3>¿Por qué este artículo(s) tiene la importancia para la calidad de vida que indicaste en la pregunta anterior?</h3>
                                     <p>{{ object.razones_importancia_norma|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+                                {% if object.mejora_de_cp80 %}
                                 <div class="item">
-                                    {% if object.mejora_de_cp80 %}
+
                                     <h3>En el marco de una agenda de justicia social, económica y de derechos humanos: ¿En qué medida la Nueva Constitución mejora respecto de la Constitución actualmente vigente? Valoración del 1 al 6, siendo el 6 más importante.</h3>
                                     <img src="{{ object.mejora_de_cp80.url }}" class="img-fluid" style="max-width: 50%;">
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.razones_mejora_cp80 %}
                                 <div class="item">
-                                    {% if object.razones_mejora_cp80 %}
+
                                     <h3>¿Cómo puedes justificar la opción asignada en la pregunta anterior?</h3>
                                     <p>{{ object.razones_mejora_cp80|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.presencia_otros_paises %}
                                 <div class="item">
-                                    {% if object.presencia_otros_paises %}
+
                                     <h3>¿Hay presencia de artículos similares en otros países? Explícanos en qué países y en qué se parecen.</h3>
                                     <p>{{ object.presencia_otros_paises|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.historia_norma %}
                                 <div class="item">
-                                    {% if object.historia_norma %}
+
                                     <h3>¿Cuál es la historia de este artículo en términos de su creación social?</h3>
                                     <p>{{ object.historia_norma|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                  {% else %}{% endif %}
+
+                                {% if object.mitos_norma %}
                                 <div class="item">
-                                    {% if object.mitos_norma %}
+
                                     <h3>¿Cuáles son los principales mitos asociados al artículo(s) y porqué son mitos?</h3>
                                     <p>{{ object.mitos_norma|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.futurista_norma %}
                                 <div class="item">
-                                    {% if object.futurista_norma %}
+
                                     <h3>Imagina que estamos en 2052: ¿Cómo es tu entorno y la vida de las personas en Chile después de este artículo(s)?</h3>
                                     <p>{{ object.futurista_norma|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.aporte_desarrollo %}
                                 <div class="item">
-                                    {% if object.aporte_desarrollo %}
+
                                     <h3>¿En qué forma el artículo(s) analizado aporta al desarrollo del país?</h3>
                                     <p>{{ object.aporte_desarrollo|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.aporte_ddhh_natura %}
                                 <div class="item">
-                                    {% if object.aporte_ddhh_natura %}
+
                                     <h3>¿En qué forma el artículo(s) analizado aporta al respeto a los derechos humanos y de la naturaleza?</h3>
                                     <p>{{ object.aporte_ddhh_natura|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.aporte_seguridad %}
                                 <div class="item">
-                                    {% if object.aporte_seguridad %}
+
                                     <h3>¿En qué forma el artículo(s) analizado aporta a la seguridad y certeza de las personas en Chile?</h3>
                                     <p>{{ object.aporte_seguridad|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.aporte_igualdad %}
                                 <div class="item">
-                                    {% if object.aporte_igualdad %}
+
                                     <h3>¿En qué forma el artículo(s) analizado aporta a la igualdad entre todas las personas?</h3>
                                     <p>{{ object.aporte_igualdad|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.aporte_innovacion %}
                                 <div class="item">
-                                    {% if object.aporte_innovacion %}
+
                                     <h3>¿En qué forma el artículo(s) analizado aporta a la innovación y sustentabilidad?</h3>
                                     <p>{{ object.aporte_innovacion|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.aporte_descentralizacion %}
                                 <div class="item">
-                                    {% if object.aporte_descentralizacion %}
+
                                     <h3>¿En qué forma el artículo(s) analizado aporta a los procesos de descentralización?</h3>
                                     <p>{{ object.aporte_descentralizacion|linebreaks }}</p>
-                                    {% else %}{% endif %}
-                                </div>
 
+                                </div>
+                                {% else %}{% endif %}
+
+                                {% if object.aporte_contra_corrupcion %}
                                 <div class="item">
-                                    {% if object.aporte_contra_corrupcion %}
+
                                     <h3>¿En qué forma el artículo(s) analizado aporta a los procesos de participación y a la lucha contra la corrupción?</h3>
                                     <p>{{ object.aporte_contra_corrupcion|linebreaks }}</p>
-                                    {% else %}{% endif %}
+
                                 </div>
+                                {% else %}{% endif %}
 
                             </div>
                         </div>
