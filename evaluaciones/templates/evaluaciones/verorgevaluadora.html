@@ -62,7 +62,9 @@
              <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}">{{ evaluacion.titulo_web_norma }}</a>
              <br>
              Norma evaluada por: <br>
+             {% if evaluacion.org_evaluadora.logo_org_norma %}
              <p><img src="{{ evaluacion.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org"></p>
+             {% else %}{% endif %}
              <!-- <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}#normas" class="btn-lcen2 button hvr-sweep-to-right">  {{ norma.categoriadelanorma }}</a> -->
 
           </div>
