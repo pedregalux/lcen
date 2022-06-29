@@ -155,10 +155,10 @@ class Norma(models.Model):
         null=True,
         blank=True,
         help_text="¿En qué forma el artículo(s) analizado aporta a los procesos de participación y a la lucha contra la corrupción?")
-    anexo_norma_pdf = models.FileField(upload_to='documents/',
-        verbose_name="Documento del artículo",
-        null=True,
-        blank=True)
+    # anexo_norma_pdf = models.FileField(upload_to='documents/',
+    #     verbose_name="Documento del artículo",
+    #     null=True,
+    #     blank=True)
     anexo_norma_png = models.FileField(upload_to='documents/',
         verbose_name="Ilustración del artículo",
         null=True,
