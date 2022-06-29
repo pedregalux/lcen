@@ -57,16 +57,17 @@
             {% if evaluacion.sello_norma %}
              <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}" class="enlace-norma"><img src="{{ evaluacion.sello_norma.url }}" alt="sello" class="sello"></a>
             {% else %}{% endif %}
-
-             <br>
+            <div class="informacion-norma">
              <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}">{{ evaluacion.titulo_web_norma }}</a>
-             <br>
+             <div class="decoracion-linea"></div>
              Norma evaluada por: <br>
              {% if evaluacion.org_evaluadora.logo_org_norma %}
              <p><img src="{{ evaluacion.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org"></p>
              {% else %}{% endif %}
-
-             <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}#normas" class="btn-lcen2 button hvr-sweep-to-right">  {{ evaluacion.categoriadelanorma }}</a>
+             </div>
+             <div class="tema">
+               <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}" class="tema-norma">{{ evaluacion.categoriadelanorma }}</a>
+             </div>
 
           </div>
 
