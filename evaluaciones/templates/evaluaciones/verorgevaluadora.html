@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load normas_extra %}
+{% load static %}
+{% block title %}Evaluación de Normas{% endblock %}
+
+{% block content %}
+
+
+<section class="portada-lcen-colores">
+  <img src="{% static 'img/banner-edn-escritorio.jpg' %}" alt="img portada" class="img-fluid img-banner-desktop">
+  <img src="{% static 'img/banner-edn-movil.jpg' %}" alt="img portada movil" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluaciones</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Organización Evaluadora</li>
+        </ol>
+    </nav>
+    <a name="normas"></a>
+</section>
+
+
+
+<section class="evaluacion-de-norma container">
+<div class="row">
+
+  <div class="col-12 col-sm-12 col-md-4 col-lg-3">
+
+    <div class="titulo-simbologia">
+         <h5>Simbología</h5>
+    </div>
+    <div class="simbologia">
+      <div class="simbolos">
+
+        {% simbolosxcategorias %}
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 titular">
+
+          <h2>
+            Hay {{ evaluaciones.count }} Artículo evaluados por {{ object.nombre_org_norma }}
+          </h2>
+
+    </div>
+    <div class="normas-sellos">
+
+      <div class="sellos-lista">
+
+        {% for evaluacion in  evaluaciones %}
+
+          <div class="norma">
+
+             <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}" class="enlace-norma"><img src="{{ evaluacion.sello_norma.url }}" alt="sello" class="sello"></a>
+
+             {{ evaluacion.titulo_oficial_norma }}
+             <br>
+             <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}">{{ evaluacion.titulo_web_norma }}</a>
+             <br>
+             Norma evaluada por: <br>
+             <p><img src="{{ evaluacion.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org"></p>
+             <!-- <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}#normas" class="btn-lcen2 button hvr-sweep-to-right">  {{ norma.categoriadelanorma }}</a> -->
+
+          </div>
+
+
+        {% endfor %}
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+{% endblock %}

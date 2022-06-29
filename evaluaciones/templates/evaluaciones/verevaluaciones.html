@@ -5,86 +5,125 @@
 
 {% block content %}
 
-<section class="portada-lcen-colores">
-  <img src="{% static 'img/banner-edn-escritorio.jpg' %}" alt="img portada" class="img-fluid img-banner-desktop">
-  <img src="{% static 'img/banner-edn-movil.jpg' %}" alt="img portada movil" class="img-fluid img-banner-movil">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Evaluación de normas</li>
-        </ol>
-    </nav>
+<section class="banner-evaluaciones container-fluid">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4 informacion-banner">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Evaluación de Normas</li>
+                    </ol>
+                </nav>
+                <h2>Evaluación de Normas</h2>
+                <img src="{% static 'img/sellos-banner-evaluaciones.svg' %}" alt="sellos imagen" class="sellos-fila">
+                <a href="#" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn">Más sobre el proyecto</a>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-5 col-lg-6 descripcion-banner">
+                <div class="informacion">
+                    <h3>Leamos colectivamente la constitución que nos pertenece</h3>
+                    <div class="decoracion-linea"></div>
+                    <p>Organizaciones y académicxs evalúan las normas de derechos humanos, de la naturaleza y de fortalecimiento democrático. La simbología muestra sellos que cada organización usa para la evaluación de los artículos y que sirven como indicadores de calidad sobre temas importantes para la ciudadanía. Puedes hacer click en cada sello para profundizar en él.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="{% static 'img/banner-evaluaciones-sellos.gif' %}" alt="imagen banner" class="banner-img-evaluaciones">
+
 </section>
 
-<a name="normas"></a>
-
-<section class="evaluacion-de-norma container">
-<div class="row">
-  <div class="col-12 col-sm-12 col-md-12 col-lg-12 titular">
-        <h2>Leamos colectivamente la Constitución que nos pertenece</h2>
-        <p>Organizaciones y académicxs evalúan las normas de derechos humanos, de la naturaleza y de fortalecimiento democrático. La simbología muestra sellos que cada organización usa para la evaluación de los artículos y que sirven como indicadores de calidad sobre temas importantes para la ciudadanía. Puedes hacer click en cada sello para profundizar en él.</p>
-  </div>
-
-  <div class="col-12 col-sm-12 col-md-4 col-lg-3">
-    <div class="filtro-evaluacion">
-        <h4>Filtrar por tema</h4>
-
-        {% normasxcategoria %}
-
+<section class="filtro-temas-evaluaciones">
+    <div class="container-fluid invitacion-filtros">
+        <div class="row">
+            <div class="col-12">
+                <h4>Te invitamos a filtrar por tema <i class="fas fa-chevron-down" aria-hidden="true"></i></h4>
+            </div>
+        </div>
     </div>
-    <div class="titulo-simbologia">
-         <h5>Simbología</h5>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 temas">
+                {% normasxcategoria %}
+            </div>
+        </div>
     </div>
-    <div class="simbologia">
-      <div class="simbolos">
-
-        {% simbolosxcategorias %}
-
-      </div>
-    </div>
-
-  </div>
-
-  <div class="col-12 col-sm-12 col-md-8 col-lg-9">
-    <div class="normas-sellos">
+</section>
 
 
-        <!-- <div class="titular">
-          <p class="tema-destacado">Tema</p>
-          <h3>
-          {% for categoria in categorias %}
-            {{ categoria }}
-          {% endfor %}
-          </h3>
-        </div> -->
+<section class="evaluaciones-lista">
+    <div class="container">
 
+        <div class="row">
 
-        <div class="titular">
-          <p class="tema-destacado">Artículos</p>
-          <h3>
-          Conoce las evaluaciones realizadas en esta categoría
-          </h3>
+          <div class="col-12 como-leer-evaluaciones">
+
+            <!-- Button trigger modal -->
+            <a href="#" type="button" class="como-leerlo" data-bs-toggle="modal" data-bs-target="#como-leerlo">Cómo leerlo <img src="{% static 'img/informacion-icono.svg' %}" alt="icono" class="icono"></a>
+            <!-- Modal -->
+            <div class="modal fade" id="como-leerlo" tabindex="-1" aria-labelledby="como-leerloLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="como-leerloLabel">Cómo Leerlo</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Se seleccionaron un número de normas, cada una de estas están representada por un cartel. Sobre este cartel en blanco se pueden ver los sellos temáticos puestos por les expertes y al costado izquierdo y abajo se puede ver en una escala de 6 qué tan importante puede ser este artículo para las personas y cuánto mejora de la constitución vigente.</p>
+                        <div class="fila">
+                           <div class="cartel">
+                              <h4>Cartel</h4>
+                              <img src="{% static 'img/sello-prueba.jpg' %}" class="img-fluid sello">
+                           </div>
+                           <div class="simbologia">
+                              <h4>Sellos temáticos</h4>
+                              <p>Cada sello representa un <b>valor y virtud</b> que el experto identifica que la norma considera</p>
+                              <img src="{% static 'img/simbologia-completa.svg' %}" class="img-fluid simbologia">
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+          </div>
 
+            <div class="col-12 col-sm-12 col-md-4 col-lg-3 simbologia">
+                    <h5>Simbología <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
+                    {% simbolosxcategorias %}
+            </div>
 
-      <div class="sellos-lista">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+                <div class="normas-sellos">
+                  <h2 class="titulo-evaluaciones">Hay <span>{{ evaluaciones_list.count }}</span> artículos evaluados por expertos</h2>
 
-        {% for norma in filtrocategorias.qs %}
-        <div class="norma">
-           <a href="{{ norma.pk }}" class="enlace-norma"><img src="{{ norma.sello_norma.url }}" alt="sello" class="sello"></a>
-           <a href="{{ norma.pk }}" class="enlace-norma"><div class="nombre-norma"><h4>{{ norma.titulo_web_norma }}</h4></div></a>
-           <p class="evaluada-por">Evaluada por: <a href="#"><b>{{ norma.org_evaluadora }}</b></a></p>
+                    <div class="sellos-lista">
+                        {% for norma in filtrocategorias.qs %}
+                        <div class="norma">
+                            <a href="{{ norma.pk }}" class="enlace-norma"><img src="{{ norma.sello_norma.url }}" alt="sello" class="sello"></a>
+                            <!--{{ norma.titulo_oficial_norma }}-->
+                            <div class="informacion-norma">
+                              <a href="{{ norma.pk }}">{{ norma.titulo_web_norma }}</a>
+                              <div class="decoracion-linea"></div>
+                              <p>Evaluada por:</p>
+                              <img src="{{ norma.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
+                            </div>
+                            <div class="tema">
+                              <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}" class="tema-norma">{{ norma.categoriadelanorma }}</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-        {% endfor %}
-
-
-      </div>
-
     </div>
-  </div>
-</div>
-
 </section>
 
 

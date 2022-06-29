@@ -293,6 +293,11 @@ header ul.navbar-nav li a:hover {
     border-top: 8px solid #75AADB;
 }
 
+.active2 {
+    color: black;
+    border-top: 8px solid #75AADB;
+}
+
 header ul.navbar-nav li > ul.dropdown-menu {
     border: 0px;
     border-top: 8px solid #FFD700;
@@ -750,9 +755,9 @@ footer .rrss li a i {
     list-style: none;
 }
 
-.propuestas-home ul.filtro-temas-propuestas .btn-lcen {
+.propuestas-home ul.filtro-temas-propuestas .btn-lcen2 {
     font-size: 0.9em;
-    padding: 1px 5px;
+    padding: 5px 5px;
     margin: 3px;
 }
 
@@ -3989,11 +3994,10 @@ input#id_apellido {
 }
 
 
-
 /* Propuestas - Seccion */
 
 .filtro-propuestas {
-    padding: 80px 0px 20px 0px !important;
+    padding: 0px 0px 20px 0px !important;
 }
 
 .filtro-propuestas h2 {
@@ -5159,26 +5163,6 @@ header ul.navbar-nav li p {
     width: auto;
 }
 
-a.btn-glosario {
-    background: black;
-    color: white;
-    padding: 10px 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 4px;
-    text-decoration: none;
-    position: absolute;
-    right: -65px;
-    top: 200px;
-    transform: rotate(-90deg);
-    border-radius: 20px 0px 0px 0px;
-    border-right: 10px solid #CC0000;
-    position: fixed;
-    z-index: 999;
-    overflow: hidden!important;
-}
-
-
 .hvr-sweep-to-left:before {
     background: #CC0000!important;
     overflow: hidden!important;
@@ -5195,6 +5179,38 @@ a.btn-glosario {
     background: black!important;
     border: 0px;
     border-radius: 50px;
+    padding: 8px 30px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.btn-lcen2 {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    background: #2D2D2D!important;
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px 30px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.btn-lcen2 .active a {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: black;
+    background: #2D2D2D!important;
+    border: 0px;
+    border-radius: 5px;
     padding: 8px 30px;
     margin: 20px auto;
     overflow: hidden;
@@ -5474,6 +5490,10 @@ a.btn-glosario {
     width: 100%;
 }
 
+.normas-sellos  .sellos-lista .norma .logo-org {
+    width: 50%;
+}
+
 .normas-sellos .sellos-lista .norma .nombre-norma {
     position: absolute;
     top: 20px;
@@ -5505,6 +5525,9 @@ a.btn-glosario {
   color: #FFD700;
 }
 
+.norma-diagnostico .categorialeft {
+  margin-left: 0px;
+}
 
 /*Norma visitada*/
 .volver-temas{
@@ -5640,7 +5663,7 @@ a.btn-glosario {
 
 .norma-diagnostico .org-evaluadora .logo-org {
     width: auto;
-    height: 40px;
+    height: 80px;
     margin-right: 10px;
 }
 
@@ -6023,7 +6046,6 @@ a.btn-glosario {
    }
    a.btn-glosario{
      zoom:0.7;
-     top:230px;
    }
 }
 
@@ -6051,4 +6073,783 @@ footer .impulsado {
 18:42
 footer .impulsado {
     display: none;
+}
+
+
+/* EXPERIENCIA MEJORADA */
+
+/*Boton fijo Glosario*/
+
+a.btn-glosario {
+  font-weight: 900;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 4px;
+  color: white;
+  background: black;
+  border-radius: 0px 0px 0px 0px;
+  padding: 5px 11px;
+  position: fixed;
+  right: -51px;
+  bottom: 100px;
+  transform: rotate(-90deg);
+  overflow: hidden!important;
+  z-index: 999;
+}
+
+
+/*Evaluaciones 2.0*/
+
+.banner-evaluaciones{
+    margin-top: 100px;
+    height: 245px;
+    background: url(../img/bg-evaluaciones.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-evaluaciones .banner-img-evaluaciones{
+   position: absolute;
+   right: 0px;
+   top: 100px!important;
+   z-index: 0;
+}
+
+.banner-evaluaciones .container{
+  padding: 0px;
+}
+
+.banner-evaluaciones .informacion-banner{
+  padding-left: 0px;
+}
+
+.banner-evaluaciones .informacion-banner nav ol{
+    margin-bottom: 5px;
+}
+
+.banner-evaluaciones .informacion-banner nav ol li.active{
+    color: #4F4F4F;
+    font-size: 0.9em;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.banner-evaluaciones .informacion-banner nav ol li a{
+    color: #4F4F4F;
+    font-size: 0.9em!important;
+    padding: 0px;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+}
+
+.banner-evaluaciones .informacion-banner nav ol li a:hover{
+    text-decoration: underline;
+}
+
+.banner-evaluaciones .informacion-banner h2{
+    border-left: 0px;
+    padding: 0px;
+    color: black;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.banner-evaluaciones .informacion-banner img.sellos-fila {
+    width: 70%;
+}
+
+.banner-evaluaciones .informacion-banner a {
+    font-size: 0.8em!important;
+    padding: 8px 14px;
+}
+
+.banner-evaluaciones .descripcion-banner {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-evaluaciones .descripcion-banner .informacion{
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+}
+
+.banner-evaluaciones .descripcion-banner h3 {
+    font-size: 1.2em;
+    margin-bottom: 0px;
+}
+
+.banner-evaluaciones .descripcion-banner .decoracion-linea {
+    height: 4px;
+    width: 45px;
+    background: #3A6AB1;
+    margin: 5px 0px;
+}
+
+.banner-evaluaciones .descripcion-banner p {
+    font-size: 0.9em;
+    margin-bottom: 0px;
+}
+
+
+/*Filtros Evaluacion*/
+.filtro-temas-evaluaciones{
+    background: #F2F2F2;
+}
+
+.filtro-temas-evaluaciones .invitacion-filtros{
+    background: #333333;
+    padding: 8px;
+}
+
+.filtro-temas-evaluaciones .invitacion-filtros h4{
+   color: white;
+   font-size: 1em;
+   font-weight: 800;
+   text-transform: uppercase;
+   margin-bottom: 0px;
+   text-align: center;
+}
+
+.filtro-temas-evaluaciones .temas ul{
+    padding-left: 0px;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filtro-temas-evaluaciones .temas ul li{
+    list-style: none;
+    margin: 5px;
+}
+
+.filtro-temas-evaluaciones .temas ul li a{
+    margin: 0px;
+    padding: 3px 13px 2px 13px;
+    border-radius: 50px;
+    background: transparent!important;
+    color: #4F4F4F;
+    border: 1.5px solid #4F4F4F;
+    font-size: 0.8em;
+    transition: 0.5s all;
+    letter-spacing: 0.6px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.filtro-temas-evaluaciones .temas ul li a:before{
+   background: transparent!important;
+}
+
+.filtro-temas-evaluaciones .temas ul li a:hover{
+    background: #3A6AB1!important;
+    border: 1.5px solid #3A6AB1;
+    color: white;
+}
+
+/*Listado de evaluaciones*/
+
+.evaluaciones-lista {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.evaluaciones-lista .como-leer-evaluaciones {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: -30px;
+}
+
+.evaluaciones-lista .como-leer-evaluaciones a{
+    color: #4F4F4F;
+    font-size: 1em;
+}
+
+.evaluaciones-lista .como-leer-evaluaciones a img{
+    padding-left: 1px;
+    width: 15px;
+}
+
+
+.evaluaciones-lista h2.titulo-evaluaciones{
+    border-left: 0px;
+    padding-left: 0px;
+    font-size: 1.8em;
+    color: black;
+    font-weight: 900;
+}
+
+.evaluaciones-lista h2.titulo-evaluaciones span{
+    color: #3A6AB1;
+}
+
+/*Simbologia*/
+.simbologia {
+    background: transparent;
+    padding: 0px;
+    margin-right:0px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.simbologia h5 {
+    background: black;
+    color: white;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 15px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.simbologia ul li {
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+.simbologia .simbolos span{
+   background: rgba(204, 204, 204, 0.3);
+   padding: 5px 10px;
+   border-radius: 10px;
+}
+
+.simbologia .simbolo img {
+    width: 25px!important;
+    height: auto!important;
+}
+
+/*Evaluaciones Listados Sellos*/
+
+.normas-sellos .sellos-lista .norma {
+    width: 23%;
+    margin-right: 1%;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.normas-sellos .sellos-lista .norma .informacion-norma {
+    height: 180px;
+}
+
+.normas-sellos .sellos-lista .norma a{
+    color: black;
+    font-size: 1.2em;
+    font-weight: 900;
+    text-decoration: none;
+    line-height: normal;
+}
+
+.normas-sellos .sellos-lista .norma img{
+    margin-bottom: 15px;
+}
+
+.normas-sellos .sellos-lista .norma .decoracion-linea{
+    height: 4px;
+    width: 34px;
+    background: black;
+    margin: 10px 0px;
+}
+
+.normas-sellos .sellos-lista .norma p{
+    color: #4F4F4F;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.normas-sellos .sellos-lista .norma .logo-org {
+    width: auto;
+    max-height: 45px;
+    max-width: 100px;
+    margin-bottom: 5px;
+}
+
+.normas-sellos .sellos-lista .norma .tema a.tema-norma{
+    margin: 0px;
+    padding: 3px 13px 2px 13px;
+    border-radius: 50px;
+    background: #3A6AB1!important;
+    border: 1.5px solid #3A6AB1;
+    color: white;
+    font-size: 0.8em;
+    transition: 0.5s all;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.normas-sellos .sellos-lista .norma .tema a.tema-norma:hover{
+    background: black!important;
+    border: 1.5px solid black;
+}
+
+
+/*Evaluacion Sección*/
+
+.pt-evaluacion{
+  margin-top: 100px;
+}
+
+.norma-evaluada{
+   margin: 60px auto;
+}
+
+.norma-evaluada .sello .volver-evaluaciones{
+    color:#4F4F4F;
+    font-weight: 700;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.norma-evaluada .sello .volver-evaluaciones img{
+    margin-right:4px;
+    width: 10px;
+}
+
+.norma-evaluada .sello img.norma-sello {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.norma-evaluada .sello .simbologia{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.norma-evaluada .sello .simbologia span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.norma-evaluada .sello .simbologia span img{
+    width: 10px;
+}
+
+.norma-evaluada .sello .evaluacion-cuantitativa img{
+    width: 85%;
+    margin-bottom: 40px;
+}
+
+.norma-evaluada .informacion{
+  padding-left: 40px;
+}
+
+.norma-evaluada .informacion .como-leer-evaluaciones{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.norma-evaluada .informacion .como-leer-evaluaciones a.como-leerlo {
+    color: #4F4F4F;
+    font-size: 1em;
+}
+
+.norma-evaluada .informacion a.tema-norma{
+  margin: 0px;
+  padding: 3px 13px 2px 13px;
+  border-radius: 50px;
+  background: #3A6AB1!important;
+  border: 1.5px solid #3A6AB1;
+  color: white;
+  font-size: 0.8em;
+  transition: 0.5s all;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.norma-evaluada .informacion a.tema-norma:hover{
+    background: black!important;
+    border: 1.5px solid black;
+}
+
+.norma-evaluada .informacion .nombre-norma{
+    margin: 10px 0px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 900;
+    letter-spacing: 0px;
+}
+
+.norma-evaluada .informacion p{
+    color: #4F4F4F;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.norma-evaluada .informacion .org-evaluadora{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.norma-evaluada .informacion .org-evaluadora p{
+    font-size: 0.8em;
+    font-weight: 900;
+    color: #4F4F4F;
+    letter-spacing: 0.5px;
+    font-style: normal;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.norma-evaluada .informacion .org-evaluadora .logos-organizaciones img{
+    width: auto;
+    max-height: 100px;
+    max-width: 150px;
+    margin-bottom:20px;
+}
+
+.norma-evaluada .informacion .accordion-item {
+    margin-bottom: 10px;
+    border: 0px;
+}
+
+
+.norma-evaluada .informacion .accordion-item .articulo{
+  border-bottom: 1px solid #4F4F4F;
+  padding: 20px 0px;
+}
+
+.norma-evaluada .informacion .accordion-item .articulo:first-child {
+    padding-top: 0px;
+}
+
+.norma-evaluada .informacion .accordion-item .articulo:last-child {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.norma-evaluada .informacion .accordion-item .articulo p:last-child{
+   margin-bottom: 0px;
+}
+
+.norma-evaluada .informacion .accordion-item h2{
+    border-left: 0px;
+    padding: 0px;
+}
+
+.norma-evaluada .informacion .accordion-item button {
+    background: #333333;
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    padding: 8px 20px;
+}
+
+.norma-evaluada .informacion .accordion-button::after {
+    background-image: url(../img//arrow-blanco.png);
+    width: 15px;
+    height: 15px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.norma-evaluada .informacion .accordion-item .accordion-body {
+    background: #F2F2F2;
+    border-left: 4px solid #FFD700;
+}
+
+.norma-evaluada .informacion .accordion-item .accordion-body p{
+   font-size: 0.95em;
+   font-style: normal;
+   color: ##4F4F4F;
+   font-weight: 500;
+}
+.norma-evaluada .informacion .accordion-item .item{
+   border-bottom: 1px solid #4F4F4F;
+   padding: 20px 0px;
+}
+
+.norma-evaluada .informacion .accordion-item .item:first-child {
+    padding-top: 0px;
+}
+
+.norma-evaluada .informacion .accordion-item .item:last-child {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+
+.norma-evaluada .informacion .accordion-item h3{
+   font-size: 1.1em;
+   color:#4F4F4F;
+   font-weight: 900;
+   text-transform: inherit;
+   margin-bottom: 5px;
+   letter-spacing: 0px;
+}
+
+.norma-evaluada .informacion .accordion-item .item p{
+   margin-bottom: 0px;
+}
+
+.norma-evaluada .informacion .accordion-item .item img{
+  width: 250px;
+  max-width: 250px;
+  height: auto;
+  margin: 10px 0px;
+}
+
+.norma-evaluada .informacion .evaluacion-completa{
+  margin-bottom: 40px;
+}
+
+.norma-evaluada .informacion .descarga-evaluacion{
+    margin: 0px 0px 50px 0px;
+}
+
+.norma-evaluada .informacion .descarga-evaluacion h5{
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: black;
+  margin-bottom: 0px;
+}
+
+.norma-evaluada .informacion .descarga-evaluacion a{
+  margin: 0px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: black!important;
+  border: 1.5px solid #black;
+  color: white;
+  font-size: 0.8em;
+  transition: 0.5s all;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.norma-evaluada .informacion .descarga-evaluacion a:hover{
+   background: #CC0000!important;
+}
+
+
+.norma-evaluada .informacion .otras-evaluaciones-temas{
+    margin: 40px 0px 0px 0px;
+}
+
+.norma-evaluada .informacion .otras-evaluaciones-temas a{
+      margin: 0px;
+      padding: 3px 13px 2px 13px;
+      border-radius: 50px;
+      background: #3A6AB1!important;
+      border: 1.5px solid #3A6AB1;
+      color: white;
+      font-size: 0.8em;
+      transition: 0.5s all;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      font-weight: 800;
+      text-decoration: none;
+      margin-bottom: 20px;
+}
+
+.avanzar-evaluaciones {
+    background: black;
+}
+
+.avanzar-evaluaciones .navegacion{
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.avanzar-evaluaciones .navegacion li{
+  list-style: none;
+}
+
+.avanzar-evaluaciones .navegacion li a{
+  color: white;
+  font-size: 0.9em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.avanzar-evaluaciones .navegacion li a img{
+  margin:0px 10px;
+}
+
+.avanzar-evaluaciones .navegacion li a:hover{
+  color: FFD700;
+}
+
+
+/*Contenido interno simbologia*/
+
+.simbologia .modal-content .modal-header {
+    border-bottom: 0px;
+    margin: 0px 50px;
+    padding-bottom: 0px;
+    padding: 30px 0px 0px 0px;
+}
+
+.simbologia .modal-content h5 {
+    background: transparent;
+    color: black;
+    border: 0px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.simbologia .modal-content h5 img {
+  width: 25px!important;
+  height: auto!important;
+}
+
+.simbologia .modal-content .modal-body {
+    padding: 10px 0px 20px 0px;
+    margin: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.simbologia .modal-content .modal-body p {
+    text-align: left;
+    font-size: 1em;
+    color: black;
+    padding-bottom: 0px;
+    margin: 10px 0px!important;
+    width: 100%;
+}
+
+
+/*Como leer evaluaciones*/
+
+.como-leer-evaluaciones .modal-header {
+  border-bottom: 0px;
+  margin: 0px 50px;
+  padding-bottom: 0px;
+  padding: 30px 0px 0px 0px;
+}
+
+.como-leer-evaluaciones .modal-content .modal-body {
+    padding: 10px 0px 30px 0px;
+    margin: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.como-leer-evaluaciones .modal-content .modal-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    border-left: 0px;
+    color: black;
+    padding-left: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.como-leer-evaluaciones .modal-content .modal-body h4{
+   color: white;
+   font-weight: 900;
+   text-transform: uppercase;
+   padding: 5px 10px;
+   background: black;
+   font-size: 1em;
+}
+
+.como-leer-evaluaciones .modal-content .modal-body p{
+   font-size: 0.9em;
+   text-align: center;
+   margin: 0px 0px 35px 0px;
+   font-style: normal;
+   font-weight: 400;
+   color: black;
+   padding: 0px;
+   width: 100%;
+}
+
+.como-leer-evaluaciones .modal-content .modal-body .fila{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.como-leer-evaluaciones .modal-content .modal-body .cartel{
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.como-leer-evaluaciones .modal-content .modal-body .cartel img{
+   width: 70%;
+}
+
+.como-leer-evaluaciones .modal-content .modal-body .simbologia{
+  width:50%;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.como-leer-evaluaciones .modal-content .modal-body .simbologia p{
+  text-align: left!important;
+  font-size: 0.9em;
+  color: black;
+  padding: 0px;
+  margin: 0px 0px 15px 0px;
+}
+
+.como-leer-evaluaciones .modal-content .modal-body .simbologia img{
+  width: 70%;
+}
+
+
+@media (max-width:991px){
+   .pt-evaluacion{
+     margin-top: 82px;
+   }
+   .norma-evaluada .informacion{
+     padding-left: 20px;
+   }
+}
+
+@media (max-width:768px){
+   .norma-evaluada .informacion{
+     padding-left: 0px;
+   }
 }

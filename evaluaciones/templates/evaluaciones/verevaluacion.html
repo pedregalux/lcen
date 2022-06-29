@@ -1,329 +1,367 @@
 {% extends "base.html" %}
 {% load normas_extra %}
-{% load url_target_blank %}
 {% load static %}
 {% block title %}Evaluación de Normas{% endblock %}
 
 {% block content %}
 
-<section class="portada-lcen-colores">
-  <img src="{% static 'img/banner-edn-escritorio.jpg' %}" alt="img portada" class="img-fluid img-banner-desktop">
-  <img src="{% static 'img/banner-edn-movil.jpg' %}" alt="img portada movil" class="img-fluid img-banner-movil">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-          <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluación de normas</a></li>
-          <li class="breadcrumb-item active" aria-current="page">{{ object.titulo_web_norma }}</li>
-      </ol>
-    </nav>
-</section>
-
-
-<section class="evaluacion-de-norma container">
-
-<div class="row">
-
-  <div class="col-12 col-sm-12 col-md-4 col-lg-3">
-    <div class="volver-temas">
-       <nav aria-label="breadcrumb">
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'homeevaluaciones' %}">Temas</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ object.categoriadelanorma }}</li>
-         </ol>
-       </nav>
-    </div>
-
-    <div class="sello-norma-visualizacion">
-       <img src="{{ object.sello_norma.url }}" alt="sello-norma" class="norma-sello w-100">
-    </div>
-
-    <div class="titulo-simbologia">
-         <h5>Simbología</h5>
-    </div>
-
-    <div class="simbologia">
-      <div class="simbolos">
-
-      {% simbolosxcategorias %}
-
-    </div>
-  </div>
-
-
-    <!-- <div class="otras-organizaciones">
-         <h5>Organizaciones que también evaluaron este artículo:</h5>
-         <ul>
-           {% for org in object.org_evaluadora.all %}
-             <li>
-            <a href="" class="logo-org">
-               <img src="{{ org.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
-             </a>
-             </li>
-           {% endfor %}
-         </ul>
-    </div> -->
-
-  </div>
-
-  <div class="col-12 col-sm-12 col-md-8 col-lg-9 norma-diagnostico">
-     <div class="titular">
-        <p class="tema-destacado">Artículo</p>
-        <h3>{{ object.titulo_web_norma }}</h3>
-        <div class="linea-decoracion"></div>
-        <div class="org-evaluadora">
-            <p>Evaluada por:</p>
-            <div class="logos-organizaciones">
-              <p><img src="{{ object.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">{{ object.org_evaluadora }}</p>
+<section class="filtro-temas-evaluaciones pt-evaluacion">
+    <div class="container-fluid invitacion-filtros">
+        <div class="row">
+            <div class="col-12">
+                <h4>Te invitamos a filtrar por tema <i class="fas fa-chevron-down" aria-hidden="true"></i></h4>
             </div>
         </div>
-     </div>
-
-     <div class="descripcion">
-       <p>{{ object.resumen_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-     </div>
-
-     <div class="linea-decoracion"></div>
-     <!-- <div class="org-evaluadora">
-         <p><a href="{{ object.url }}">URL al Artículo en borrador</a></p>
-     </div> -->
-
-     <div class="descripcion-bullets preguntas">
-       <h3>Evaluación</h3>
-       <div class="accordion" id="accordionPanelsStayOpenExample">
-
-{% if object.importancia_para_chile %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading1">
-                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse1" aria-expanded="true" aria-controls="panelsStayOpen-collapse1">
-   ¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile? Valoración del 1 al 6, siendo el 6 más importante.
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading1">
-                   <div class="accordion-body">
-                       <img src="{{ object.importancia_para_chile.url }}" class="img-fluid" style="max-width: 50%;">
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.razones_importancia_norma %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading2">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false" aria-controls="panelsStayOpen-collapse2">
-   ¿Por qué este artículo(s) tiene la importancia para la calidad de vida que indicaste en la pregunta anterior?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading2">
-                   <div class="accordion-body">
-                       <p>{{ object.razones_importancia_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.mejora_de_cp80 %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading3">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
-   En el marco de una agenda de justicia social, económica y de derechos humanos: ¿en qué medida la Nueva Constitución mejora respecto de la Constitución actualmente vigente? Valoración del 1 al 6, siendo el 6 más importante.
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
-                   <div class="accordion-body">
-                       <img src="{{ object.mejora_de_cp80.url }}" class="img-fluid" style="max-width: 50%;">
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.razones_mejora_cp80 %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading4">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
-   ¿Cómo puedes justificar la opción asignada en la pregunta anterior?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
-                   <div class="accordion-body">
-                       <p>{{ object.razones_mejora_cp80|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.presencia_otros_paises %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading5">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
-   ¿Hay presencia de artículos similares en otros países? Explícanos en qué países y en qué se parecen.
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
-                   <div class="accordion-body">
-                       <p>{{ object.presencia_otros_paises|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.historia_norma %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading6">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
-   ¿Cuál es la historia de este artículo en términos de su creación social?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
-                   <div class="accordion-body">
-                       <p>{{ object.historia_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.mitos_norma %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading7">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7" aria-expanded="false" aria-controls="panelsStayOpen-collapse7">
-   ¿Cuáles son los principales mitos asociados al artículo(s) y porqué son mitos?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading7">
-                   <div class="accordion-body">
-                       <p>{{ object.mitos_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.futurista_norma %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading8">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8" aria-expanded="false" aria-controls="panelsStayOpen-collapse8">
-   Imagina que estamos en 2052: ¿Cómo es tu entorno y la vida de las personas en Chile después de este artículo(s)?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading8">
-                   <div class="accordion-body">
-                       <p>{{ object.futurista_norma|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.aporte_desarrollo %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading9">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse9" aria-expanded="false" aria-controls="panelsStayOpen-collapse9">
-   ¿En qué forma el artículo(s) analizado aporta al desarrollo del país?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse9" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading9">
-                   <div class="accordion-body">
-                       <p>{{ object.aporte_desarrollo|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.aporte_ddhh_natura %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading10">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse10" aria-expanded="false" aria-controls="panelsStayOpen-collapse10">
-   ¿En qué forma el artículo(s) analizado aporta al respeto a los derechos humanos y de la naturaleza?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse10" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading10">
-                   <div class="accordion-body">
-                       <p>{{ object.aporte_ddhh_natura|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.aporte_seguridad %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading11">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse11" aria-expanded="false" aria-controls="panelsStayOpen-collapse11">
-   ¿En qué forma el artículo(s) analizado aporta a la seguridad y certeza de las personas en Chile?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse11" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading11">
-                   <div class="accordion-body">
-                       <p>{{ object.aporte_seguridad|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.aporte_igualdad %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading12">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse12" aria-expanded="false" aria-controls="panelsStayOpen-collapse12">
-   ¿En qué forma el artículo(s) analizado aporta a la igualdad entre todas las personas?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse12" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading12">
-                   <div class="accordion-body">
-                       <p>{{ object.aporte_igualdad|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.aporte_innovacion %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading13">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse13" aria-expanded="false" aria-controls="panelsStayOpen-collapse13">
-   ¿En qué forma el artículo(s) analizado aporta a la innovación y sustentabilidad?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse13" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading13">
-                   <div class="accordion-body">
-                       <p>{{ object.aporte_innovacion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.aporte_descentralizacion %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading14">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse14" aria-expanded="false" aria-controls="panelsStayOpen-collapse14">
-   ¿En qué forma el artículo(s) analizado aporta a los procesos de descentralización?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse14" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading14">
-                   <div class="accordion-body">
-                       <p>{{ object.aporte_descentralizacion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-{% if object.aporte_contra_corrupcion %}
-           <div class="accordion-item">
-               <h2 class="accordion-header" id="panelsStayOpen-heading15">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse15" aria-expanded="false" aria-controls="panelsStayOpen-collapse14">
-   ¿En qué forma el artículo(s) analizado aporta a los procesos de participación y a la lucha contra la corrupción?
- </button>
-               </h2>
-               <div id="panelsStayOpen-collapse15" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading15">
-                   <div class="accordion-body">
-                       <p>{{ object.aporte_contra_corrupcion|linebreaks|urlizetrunc:15|url_target_blank }}</p>
-                   </div>
-               </div>
-           </div>
-{% else %}{% endif %}
-
-       </div> <!--end accordion-->
-     </div>
-  </div>
-
-</div>
-
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 temas">
+                {% normasxcategoria %}
+            </div>
+        </div>
+    </div>
 </section>
 
+<section class="norma-evaluada container">
+    <div class="row">
+
+        <div class="col-12 col-sm-5 col-md-4 col-lg-3 sello">
+            <a href="{% url 'verevaluaciones' %}" class="volver-evaluaciones"><img src="{% static 'img/arrow-prev-gris.svg' %}" alt="icono" class="icono">Volver</a>
+            <img src="{{ object.sello_norma.url }}" alt="sello-norma" class="norma-sello">
+
+            <div class="simbologia">
+                <h5>Sellos aplicados <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
+
+<!-- ACA VAN SOLO LOS SIMBOLOS QUE SE UTILIZAN EN EL SELLO, NO LA SIMBOLOGIA COMPLETA -->
+
+  <ul class="simbolos sellos-utilizados">
+
+    {% if object.tags_norma.all %}
+    {% for sello in object.tags_norma.all %}
+    <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#desarrollo"><img src="{{ sello.icono_tag.url }}" class="simbolo-simbologia" /> <span> {{ sello.tag_norma }}</span></button> </li>
+    {% endfor %}
+    {% endif %}
+
+    <div class="modal fade" id="desarrollo" tabindex="-1" aria-labelledby="desarrolloLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="desarrolloLabel"><img src="{% static 'img/desarrollo-humano-icono.png' %}" class="simbolo-simbologia" /> Desarrollo humano y nacional sostenible</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Al aplicar este sello, los evaluadores han considerado que el artículo incluye facultades individuales y colectivas de las personas de vivir con dignidad, a partir de la realización de todos los derechos humanos.</p>
+                    <p>Esto incluye la erradicación de la pobreza, el mejoramiento de las condiciones de vida de la población y el logro rápido de una transición a una economía ecológica, baja en emisiones de carbono y resiliente al cambio climático.</p>
+                    <p>Además, implica la promoción del mejoramiento sostenido del bienestar socioeconómico; la adopción y revisión periódica de estrategias y planes nacionales de desarrollo; la no discriminación y el respeto del Estado de Derecho en el plano nacional.</p>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ddhhynaturalezaLabel"><img src="{% static 'img/derechos-humanos-icono.png' %}" class="simbolo-simbologia" /> DDHH y de la Naturaleza</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Al aplicar este sello, los evaluadores han considerado que el artículo tiene un compromiso con los derechos fundamentales de las personas, la dignidad y el valor de la persona humana. También con la promoción del progreso social y la mejora continua de las condiciones de existencia de las personas dentro de un concepto más amplio de la libertad.</p>
+                    <p>Además, este sello puede reconocer que la humanidad coexiste con la naturaleza y que toda forma de vida depende de la integridad de la biosfera y de la interconexión de los sistemas ecológicos, evidenciando la estrecha vinculación entre los derechos humanos, la conservación y protección ambiental al igual que el rol fundamental de la mantención de la integridad ecológica para lograr el bienestar del ser humano y el combate de la pobreza.</p>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="seguridadycertezaLabel"><img src="{% static 'img/seguridad-icono.png' %}" class="simbolo-simbologia" /> Seguridad y Certeza</h5>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Al aplicar este sello, los evaluadores han considerado que el artículo protege la esencia vital de todas las vidas humanas frente a amenazas graves y generalizadas, de manera de habilitar las libertades y la plena realización del ser humano y la naturaleza.
+                    </p>
+                   <p>
+                    Aquí se integran tres libertades: la libertad del miedo (protección contra las amenazas directas a la seguridad y a la integridad física), la libertad de la necesidad o miseria (protección para satisfacer las necesidades básicas, el sustento y los aspectos económicos, sociales y ambientales) y la libertad para vivir con dignidad (protección y empoderamiento individual para librarse de la violencia, la discriminación y la exclusión).
+                     </p>
+                    <p>Por último, la aplicación de este sello también incorpora la certeza jurídica, es decir, la protección de las personas frente a modificaciones arbitrarias del derecho.</p>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="igualdadLabel"><img src="{% static 'img/igualdad-icono.png' %}" class="simbolo-simbologia" /> Igualdad</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Al aplicar este sello, los evaluadores han considerado que el artículo reconoce que cada persona es titular de derechos fundamentales de manera igualitaria, recogiendo la idea general de no discriminación (es decir, igualdad formal, de derechos o ante la ley). Este tipo de igualdad incluye, por ejemplo, la igualdad de oportunidades y la igualdad de trato.</p>
+                    <p>Además, este sello contempla que las personas puedan ejercer plenamente sus derechos de manera universal, con capacidad de hacerlos efectivos en la vida cotidiana, incluyendo la capacidad o intención de las normas de disminuir las brechas que producen desigualdad estructural (igualdad sustantiva). Este tipo de igualdad se orienta hacia la igualdad de resultados.</p>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="innovacionysustentabilidadLabel"><img src="{% static 'img/innovacion.png' %}" class="simbolo-simbologia simbolo-innovacion" /> Innovación y sustentabilidad</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Al aplicar este sello, los evaluadores han considerado que el artículo representa una posibilidad de cambio o mejora para la realidad chilena, ya sea por la innovación del tratamiento de un tema, por la adopción de un nuevo enfoque en el abordaje de una problemática o por la conexión del tópico con una agenda social más amplia.</p>
+                    <p>Además, esta calificación también toma en cuenta la conexión de las normas con una visión clara sobre la idea colectiva de futuro y una agenda orientada a abordar los problemas actuales y a largo plazo, con el fin de construir un mundo más seguro, ecológico, saludable y equitativo para las generaciones presentes y futuras.</p>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="descentralizacionLabel"><img src="{% static 'img/descentralizacion-icono.png' %}" class="simbolo-simbologia" /> Descentralización</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Al aplicar este sello, los evaluadores han considerado que el artículo tiene la capacidad de identificar, reconocer, valorar y canalizar las particularidades y potencialidades propias de cada territorio, incluyendo entre ellos los factores económicos y no económicos, tales como los recursos sociales, culturales, históricos e institucionales, entre otros.</p>
+                    <p>De este modo, este sello resalta la capacidad de las normas para profundizar el desarrollo local y su contribución a la construcción de un proyecto nacional más amplio, con miras a enfrentar los problemas y desafíos existentes y mejorar las condiciones de vida de las personas.</p>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="participacionyanticorrupcionLabel"><img src="{% static 'img/participacion.png' %}" class="simbolo-simbologia" /> Participación y lucha contra la corrupción</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Al aplicar este sello, los evaluadores han considerado que el artículo tiene la capacidad de garantizar espacios de participación ciudadana, es decir, de involucramiento activo de las personas en los procesos de toma de decisiones públicas en diferentes instancias e instituciones del Estado, tanto en las fases de diseño e implementación, como en las de monitoreo y mejora continua de los procesos del Estado.</p>
+                    <p>Asimismo, y como consecuencia de la participación, este sello también considera que el artículo provee garantías en relación con la gestión y administración de los servicios del Estado de cara a las personas, incluyendo la incorporación de mecanismos de probidad y transparencia, rendición de cuentas de los funcionarios públicos e información pública abiertamente disponible para la ciudadanía, entre otros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     </ul>
+
+            </div>
+
+            <div class="evaluacion-cuantitativa calidad-de-vida">
+                <img src="{{ object.importancia_para_chile.url }}" class="img-fluid evaluacion-cuantitativa-img">
+            </div>
+            <div class="evaluacion-cuantitativa mejoras-constitucion">
+                <img src="{{ object.mejora_de_cp80.url }}" class="img-fluid evaluacion-cuantitativa-img">
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-7 col-md-8 col-lg-9 informacion">
+
+            <div class="col-12 como-leer-evaluaciones">
+
+                <!-- Button trigger modal -->
+                <a href="#" type="button" class="como-leerlo" data-bs-toggle="modal" data-bs-target="#como-leerlo">Cómo leerlo <img src="{% static 'img/informacion-icono.svg' %}" alt="icono" class="icono"></a>
+                <!-- Modal -->
+                <div class="modal fade" id="como-leerlo" tabindex="-1" aria-labelledby="como-leerloLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="como-leerloLabel">Cómo Leerlo</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Se seleccionaron un número de normas, cada una de estas están representada por un cartel. Sobre este cartel en blanco se pueden ver los sellos temáticos puestos por les expertes y al costado izquierdo y abajo se puede ver en una escala de 6 qué tan importante puede ser este artículo para las personas y cuánto mejora de la constitución vigente.</p>
+                            <div class="fila">
+                               <div class="cartel">
+                                  <h4>Cartel</h4>
+                                  <img src="{% static 'img/sello-prueba.jpg' %}" class="img-fluid sello">
+                               </div>
+                               <div class="simbologia">
+                                  <h4>Sellos temáticos</h4>
+                                  <p>Cada sello representa un <b>valor y virtud</b> que el experto identifica que la norma considera</p>
+                                  <img src="{% static 'img/simbologia-completa.svg' %}" class="img-fluid simbologia">
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}#normas" class="tema-norma">{{ object.categoriadelanorma }}</a>
+
+            <h3 class="nombre-norma">{{ object.titulo_web_norma }}</h3>
+            {{ object.resumen_norma|linebreaks }}
+            <div class="org-evaluadora">
+                <p>Evaluada por:</p>
+                <div class="logos-organizaciones">
+                    <img src="{{ object.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
+                </div>
+            </div>
+
+            <div class="leer-articulos">
+
+                <div class="accordion" id="accordion-articulos">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="articulos-heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#articulos" aria-expanded="true" aria-controls="articulos">
+                                Leer los artículos
+                            </button>
+                        </h2>
+
+                        <div id="articulos" class="accordion-collapse collapse" aria-labelledby="articulos-heading1">
+                            <div class="accordion-body">
+                                <div class="articulo">
+                                    <p>{{ object.titulo_oficial_norma }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+
+
+            <div class="evaluacion-completa">
+                <div class="accordion" id="accordion-evaluacion-completa">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="evaluacion-completa-heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#evaluacion-completa" aria-expanded="false" aria-controls="evaluacion-completa">
+                                Leer el resto de la evaluación
+                            </button>
+                        </h2>
+
+                        <div id="evaluacion-completa" class="accordion-collapse collapse" aria-labelledby="evaluacion-completa-heading1">
+                            <div class="accordion-body">
+                                <div class="item">
+                                    {% if object.importancia_para_chile %}
+                                    <h3> ¿Cuán importante es este artículo(s) para la calidad de vida de las personas en Chile? Valoración del 1 al 6, siendo el 6 más importante.</h3>
+                                    <img src="{{ object.importancia_para_chile.url }}" class="img-fluid" style="max-width: 50%;">
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.razones_importancia_norma %}
+                                    <h3>¿Por qué este artículo(s) tiene la importancia para la calidad de vida que indicaste en la pregunta anterior?</h3>
+                                    <p>{{ object.razones_importancia_norma|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.mejora_de_cp80 %}
+                                    <h3>En el marco de una agenda de justicia social, económica y de derechos humanos: ¿En qué medida la Nueva Constitución mejora respecto de la Constitución actualmente vigente? Valoración del 1 al 6, siendo el 6 más importante.</h3>
+                                    <img src="{{ object.mejora_de_cp80.url }}" class="img-fluid" style="max-width: 50%;">
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.razones_mejora_cp80 %}
+                                    <h3>¿Cómo puedes justificar la opción asignada en la pregunta anterior?</h3>
+                                    <p>{{ object.razones_mejora_cp80|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.presencia_otros_paises %}
+                                    <h3>¿Hay presencia de artículos similares en otros países? Explícanos en qué países y en qué se parecen.</h3>
+                                    <p>{{ object.presencia_otros_paises|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.historia_norma %}
+                                    <h3>¿Cuál es la historia de este artículo en términos de su creación social?</h3>
+                                    <p>{{ object.historia_norma|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.mitos_norma %}
+                                    <h3>¿Cuáles son los principales mitos asociados al artículo(s) y porqué son mitos?</h3>
+                                    <p>{{ object.mitos_norma|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.futurista_norma %}
+                                    <h3>Imagina que estamos en 2052: ¿Cómo es tu entorno y la vida de las personas en Chile después de este artículo(s)?</h3>
+                                    <p>{{ object.futurista_norma|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_desarrollo %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta al desarrollo del país?</h3>
+                                    <p>{{ object.aporte_desarrollo|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_ddhh_natura %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta al respeto a los derechos humanos y de la naturaleza?</h3>
+                                    <p>{{ object.aporte_ddhh_natura|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_seguridad %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta a la seguridad y certeza de las personas en Chile?</h3>
+                                    <p>{{ object.aporte_seguridad|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_igualdad %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta a la igualdad entre todas las personas?</h3>
+                                    <p>{{ object.aporte_igualdad|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_innovacion %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta a la innovación y sustentabilidad?</h3>
+                                    <p>{{ object.aporte_innovacion|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_descentralizacion %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta a los procesos de descentralización?</h3>
+                                    <p>{{ object.aporte_descentralizacion|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                                <div class="item">
+                                    {% if object.aporte_contra_corrupcion %}
+                                    <h3>¿En qué forma el artículo(s) analizado aporta a los procesos de participación y a la lucha contra la corrupción?</h3>
+                                    <p>{{ object.aporte_contra_corrupcion|linebreaks }}</p>
+                                    {% else %}{% endif %}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--end evaluacion completa-->
+
+            <div class="descarga-evaluacion">
+                 {% if object.anexo_norma_pdf %}
+                 <h5>Descargar la evaluación completa aquí</h5>
+                 <br>
+                 <a href="{{ object.anexo_norma_pdf.url }}" target="_blank" class="btn-evaluacion"> Descargar Evaluación</a>
+                {% else %} {% endif %}
+            </div>
+
+            <div class="descarga-evaluacion">
+                 {% if object.anexo_norma_png %}
+                <h5>Comparte esta evaluación en Redes Sociales</h5>
+                <br>
+                <a href="{{ object.anexo_norma_png.url }}" target="_blank" class="btn-evaluacion"> Descargar Postal</a>
+                {% else %} {% endif %}
+            </div>
+
+            <div class="descarga-evaluacion">
+                <h5>Otras normas evaluadas por la organización</h5>
+                <br>
+                <a href="/evaluaciones/verorgevaluadora/{{ object.org_evaluadora.pk }}" class="btn-evaluacion">{{ object.org_evaluadora }}</a>
+            </div>
+
+            <div class="otras-evaluaciones-temas">
+                <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ object.categoriadelanorma.pk }}" class="tema-norma">{{ object.categoriadelanorma }}</a>
+            </div>
+
+
+          </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="avanzar-evaluaciones">
+    <div class="container">
+        <div class="row">
+             <div class="col-12">
+                  <ul class="navegacion">
+                      <li>
+                        {% if object.prev_norma %}
+                        <a href="{{ object.prev_norma.pk }}" class="prev"><img src="{% static 'img/arrow-prev.svg' %}" alt="icono" class="icono">{{ object.prev_norma.titulo_web_norma }}</a>
+                        {% endif %}
+                      </li>
+                        {% if object.next_norma %}
+                      <li>
+                        <a href="{{ object.next_norma.pk }}" class="next">{{ object.next_norma.titulo_web_norma }}<img src="{% static 'img/arrow-next.svg' %}" alt="icono" class="icono"></a>
+                        {% endif %}
+                      </li>
+                  </ul>
+             </div>
+        </div>
+    </div>
+</section>
 
 
 {% endblock %}

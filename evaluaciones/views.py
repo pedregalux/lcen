@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 from django.views.generic import DetailView
+from django.shortcuts import get_object_or_404
 from .models import Norma,CategoriaNorma,TagNorma,OrganizacionNorma
 from .filters import NormaCategorias
 
@@ -45,3 +46,14 @@ class VerOrgsEvalView(ListView):
     model = OrganizacionNorma
     context_object_name = 'orgs_evaluaciones_list'
     template_name = 'evaluaciones/verorgsevaluadoras.html'
+
+
+class VerOrgEvalView(DetailView):
+    model = OrganizacionNorma
+    context_object_name = 'organizaciones_detail'
+    template_name = 'evaluaciones/verorgevaluadora.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['evaluaciones'] = Norma.objects.filter(org_evaluadora=self.object)
+        return context
