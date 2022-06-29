@@ -49,7 +49,7 @@ class NormaResource(resources.ModelResource):
     aporte_innovacion = fields.Field(attribute='aporte_innovacion', column_name='aporte_innovacion')
     aporte_descentralizacion = fields.Field(attribute='aporte_descentralizacion', column_name='aporte_descentralizacion')
     aporte_contra_corrupcion = fields.Field(attribute='aporte_contra_corrupcion', column_name='aporte_contra_corrupcion')
-    # anexo_norma_pdf = fields.Field(attribute='anexo_norma_pdf', column_name='anexo_norma_pdf')
+    anexo_norma_pdf = fields.Field(attribute='anexo_norma_pdf', column_name='anexo_norma_pdf')
     anexo_norma_png = fields.Field(attribute='anexo_norma_png', column_name='anexo_norma_png')
     sello_norma = fields.Field(attribute='sello_norma', column_name='sello_norma')
     # prev_norma = fields.Field(attribute='prev_norma', widget=ForeignKeyWidget(Norma, field='prev_norma'), column_name='prev_norma')
