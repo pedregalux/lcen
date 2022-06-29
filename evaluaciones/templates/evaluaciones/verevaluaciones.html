@@ -119,7 +119,7 @@
                               {% endif %}
                             </div>
                             <div class="tema">
-                              <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}" class="tema-norma">{{ norma.categoriadelanorma }}</a>
+                              <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}" class="tema-norma">{{ norma.categoriadelanorma|truncatechars:25 }}</a>
                             </div>
                         </div>
                         {% endfor %}
