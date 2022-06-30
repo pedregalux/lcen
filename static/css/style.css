@@ -7022,3 +7022,148 @@ a.btn-glosario {
         font-size: 1.3em;
     }
 }
+
+/*Home Evaluaciones de norma*/
+
+.portada-banner {
+    padding-top: 60px;
+    position: relative;
+}
+
+.portada-banner .enlace-portada {
+    position: absolute;
+    bottom: auto;
+    top: 32%;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portada-banner .enlace-portada p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: #4F4F4F;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.portada-banner .enlace-portada h2 {
+    border: 0px;
+    text-align: center;
+    padding: 0px;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.llamado-inscripcion {
+    background: #333333;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    bottom: 1px;
+    margin-bottom: 80px;
+}
+
+.llamado-inscripcion p{
+  color: white;
+  padding: 0px 10px;
+  margin-bottom: 0px;
+  text-transform: uppercase;;
+  font-size: 1em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.llamado-inscripcion a{
+  margin: 0px;
+  background:#FFD700!important;
+  color: #333333;
+  zoom: 0.95;
+}
+
+
+/*Más sobre el proyecto*/
+#mas-sobre-el-proyecto .modal-header {
+  margin-bottom: 0px;
+}
+#mas-sobre-el-proyecto .modal-header .modal-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    border-left: 0px;
+    color: black;
+    text-align: center;
+    font-size: 1.6em;
+    padding-left: 0px;
+    width: 100%;
+}
+
+/* Descripción Simbologia */
+
+
+.simbologia p {
+    width: 85%;
+    font-size: 12.5px;
+    line-height: inherit;
+    color: black;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+@media (max-width:1200px) {
+.portada-banner {
+      padding-top: 85px;
+  }
+
+  .portada-banner .enlace-portada h2 {
+    font-size: 2.7em;
+}
+.portada-banner .enlace-portada p {
+    font-size: 1.2em;
+}
+.portada-banner a {
+    font-size: 0.85em;
+    padding: 8px 20px;
+}
+}
+
+
+@media (max-width:768px) {
+.portada-banner {
+    padding-top: 85px;
+}
+.portada-banner .enlace-portada h2 {
+  font-size: 2em;
+}
+.portada-banner .enlace-portada p {
+    font-size: 1em;
+}
+.portada-banner .enlace-portada {
+    top: 140px;
+}
+.llamado-inscripcion{
+  padding: 15px 0px;
+}
+.llamado-inscripcion a {
+    zoom: 0.85;
+    padding: 5px 20px;
+}
+}
+
+@media (max-width:550px) {
+.portada-banner .enlace-portada {
+    top: 100px;
+}
+.llamado-inscripcion p{
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+}
