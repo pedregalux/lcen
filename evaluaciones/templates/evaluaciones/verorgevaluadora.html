@@ -12,7 +12,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Evaluaciones</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'verevaluaciones' %}">Conoce la nueva Constitución</a></li>
             <li class="breadcrumb-item active" aria-current="page">Organización Evaluadora</li>
         </ol>
     </nav>
@@ -54,16 +54,20 @@
         {% for evaluacion in  evaluaciones %}
 
           <div class="norma">
-
-             <a href="{{ evaluacion.pk }}" class="enlace-norma"><img src="{{ evaluacion.sello_norma.url }}" alt="sello" class="sello"></a>
-
-             {{ evaluacion.titulo_oficial_norma }}
-             <br>
-             <a href="{{ evaluacion.pk }}">{{ evaluacion.titulo_web_norma }}</a>
-             <br>
+            {% if evaluacion.sello_norma %}
+             <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}" class="enlace-norma"><img src="{{ evaluacion.sello_norma.url }}" alt="sello" class="sello"></a>
+            {% else %}{% endif %}
+            <div class="informacion-norma">
+             <a href="{% url 'verevaluaciones' %}{{ evaluacion.pk }}">{{ evaluacion.titulo_web_norma }}</a>
+             <div class="decoracion-linea"></div>
              Norma evaluada por: <br>
+             {% if evaluacion.org_evaluadora.logo_org_norma %}
              <p><img src="{{ evaluacion.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org"></p>
-             <!-- <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}#normas" class="btn-lcen2 button hvr-sweep-to-right">  {{ norma.categoriadelanorma }}</a> -->
+             {% else %}{% endif %}
+             </div>
+             <div class="tema">
+               <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}" class="tema-norma">{{ evaluacion.categoriadelanorma|truncatechars:15 }}</a>
+             </div>
 
           </div>
 
