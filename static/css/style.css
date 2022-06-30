@@ -24,7 +24,7 @@
 }
 
 a:-webkit-any-link:focus-visible {
-    outline-offset: 0px!important;
+    outline-offset: 0px !important;
 }
 
 :focus-visible {
@@ -32,8 +32,8 @@ a:-webkit-any-link:focus-visible {
 }
 
 :focus {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 
 /* Modales */
@@ -1047,31 +1047,35 @@ footer .rrss li a i {
 
 /*Infografia IPN*/
 
-.infografia-ipn{
-  margin-bottom: 100px;
+.infografia-ipn {
+    margin-bottom: 100px;
 }
 
-.infografia-ipn img.infografia-desktop-ipn{
-  display: block;
-}
-.infografia-ipn img.infografia-movil-ipn{
-  display: none;
-}
-
-@media(max-width:768px){
-  .infografia-ipn img.infografia-desktop-ipn{
-    display: none;
-  }
-  .infografia-ipn img.infografia-movil-ipn{
+.infografia-ipn img.infografia-desktop-ipn {
     display: block;
-  }
-  .infografia-ipn{
-    margin-bottom: 50px;
-  }
-  .iniciativa-popular .informacion p {
-    text-align: center;
-    font-size: 1em;
 }
+
+.infografia-ipn img.infografia-movil-ipn {
+    display: none;
+}
+
+@media(max-width:768px) {
+    .infografia-ipn img.infografia-desktop-ipn {
+        display: none;
+    }
+
+    .infografia-ipn img.infografia-movil-ipn {
+        display: block;
+    }
+
+    .infografia-ipn {
+        margin-bottom: 50px;
+    }
+
+    .iniciativa-popular .informacion p {
+        text-align: center;
+        font-size: 1em;
+    }
 }
 
 
@@ -2229,11 +2233,11 @@ footer .rrss li a i {
 
 /*Seccion Iniciativa Popular*/
 
-.seccion-iniciatipa-popular{
+.seccion-iniciatipa-popular {
     margin-bottom: 100px;
 }
 
-.seccion-iniciatipa-popular .presentacion-seccion{
+.seccion-iniciatipa-popular .presentacion-seccion {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2241,7 +2245,7 @@ footer .rrss li a i {
 }
 
 .seccion-iniciatipa-popular img {
-    width: 70%!important;
+    width: 70% !important;
     padding: 50px 50px 30px 50px;
 }
 
@@ -2264,102 +2268,113 @@ footer .rrss li a i {
 }
 
 .iniciativas-propuestas .carousel-control-next-icon {
-    background-image: url(../img/arrow-carrousel-next.png)!important;
+    background-image: url(../img/arrow-carrousel-next.png) !important;
 }
 
 .iniciativas-propuestas .carousel-control-prev-icon {
-    background-image: url(../img/arrow-carrousel-prev.png)!important;
-  }
+    background-image: url(../img/arrow-carrousel-prev.png) !important;
+}
 
 .iniciativas-propuestas .carousel-control-prev-icon,
 .iniciativas-propuestas .carousel-control-next-icon {
-      width: 20px;
-      height: 32px;
-  }
+    width: 20px;
+    height: 32px;
+}
 
-.iniciativas-propuestas .carousel-control-prev, .iniciativas-propuestas .carousel-control-next {
-      width: 5%;
-      height: 70%;
-  }
+.iniciativas-propuestas .carousel-control-prev,
+.iniciativas-propuestas .carousel-control-next {
+    width: 5%;
+    height: 70%;
+}
 
-.iniciativas-propuestas .carousel-inner .row{
+.iniciativas-propuestas .carousel-inner .row {
     padding: 0 5%;
-  }
-
-.v-desktop-carrousel{
-  display: block;
 }
-.v-tablet-carrousel{
+
+.v-desktop-carrousel {
+    display: block;
+}
+
+.v-tablet-carrousel {
     display: none;
 }
-.v-movil-carrousel{
+
+.v-movil-carrousel {
     display: none;
 }
 
-@media(max-width:1200px){
-  .v-desktop-carrousel{
-    display: none;
-  }
-  .v-tablet-carrousel{
-      display: block;
-  }
-  .v-movil-carrousel{
-      display: none;
-  }
-  .seccion-iniciatipa-popular img {
-    width: 80%!important;
-}
+@media(max-width:1200px) {
+    .v-desktop-carrousel {
+        display: none;
+    }
+
+    .v-tablet-carrousel {
+        display: block;
+    }
+
+    .v-movil-carrousel {
+        display: none;
+    }
+
+    .seccion-iniciatipa-popular img {
+        width: 80% !important;
+    }
 }
 
-@media(max-width:992px){
-  .iniciativas-propuestas{
-   max-width: 100%!important;
-}
-.seccion-iniciatipa-popular img {
-  width: 90%!important;
-}
+@media(max-width:992px) {
+    .iniciativas-propuestas {
+        max-width: 100% !important;
+    }
+
+    .seccion-iniciatipa-popular img {
+        width: 90% !important;
+    }
 }
 
-@media(max-width:768px){
-  .v-desktop-carrousel{
-    display: none;
-  }
-  .v-tablet-carrousel{
-      display: none;
-  }
-  .v-movil-carrousel{
-      display: block;
-  }
-  .seccion-iniciatipa-popular img {
-    width: 100%!important;
-    padding: 50px 50px 30px 50px;
-}
+@media(max-width:768px) {
+    .v-desktop-carrousel {
+        display: none;
+    }
+
+    .v-tablet-carrousel {
+        display: none;
+    }
+
+    .v-movil-carrousel {
+        display: block;
+    }
+
+    .seccion-iniciatipa-popular img {
+        width: 100% !important;
+        padding: 50px 50px 30px 50px;
+    }
 }
 
-@media(max-width:500px){
-  .seccion-iniciatipa-popular img {
-    width: 100%!important;
-    padding: 0px 0px 30px 0px;
-}
-.seccion-iniciatipa-popular {
-    margin-bottom: 50px;
-}
+@media(max-width:500px) {
+    .seccion-iniciatipa-popular img {
+        width: 100% !important;
+        padding: 0px 0px 30px 0px;
+    }
+
+    .seccion-iniciatipa-popular {
+        margin-bottom: 50px;
+    }
 }
 
 
 
 /*Debate Constituyente - Seccion*/
-.debate-constituyente{
-  margin-top: 50px;
-  margin-bottom: 100px;
+.debate-constituyente {
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
-.debate-constituyente h2{
-  border-color:#FFD700;
+.debate-constituyente h2 {
+    border-color: #FFD700;
 }
 
-.debate-constituyente img{
-  width: 100%;
+.debate-constituyente img {
+    width: 100%;
 }
 
 .debate-constituyente p {
@@ -2367,8 +2382,8 @@ footer .rrss li a i {
     padding-right: 20px;
 }
 
-.debate-constituyente p b{
-  font-size: 1.2em;
+.debate-constituyente p b {
+    font-size: 1.2em;
 }
 
 .cronograma-cta {
@@ -2379,82 +2394,82 @@ footer .rrss li a i {
     padding: 40px 0px;
 }
 
-.cronograma-cta .btn-cronograma{
-  display: flex;
-  justify-content: center;
+.cronograma-cta .btn-cronograma {
+    display: flex;
+    justify-content: center;
 }
 
-.cronograma-cta .btn-cronograma a.btn-lcen{
-  background: #CC0000;
+.cronograma-cta .btn-cronograma a.btn-lcen {
+    background: #CC0000;
 }
 
 .cronograma-cta .btn-cronograma a.btn-lcen:before {
-    background: black!important;
+    background: black !important;
 }
 
-.glosario-cta{
-  background: url(../img/bg-papel-glosario.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-top: 40px;
+.glosario-cta {
+    background: url(../img/bg-papel-glosario.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 40px;
 }
 
-.glosario-cta p{
-  color: #008000;
-  font-size: 1.2em;
-  text-align: center;
-  margin-bottom: 0px;
+.glosario-cta p {
+    color: #008000;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
-.glosario-cta h3{
-  color: black;
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 0px;
+.glosario-cta h3 {
+    color: black;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
-.glosario-cta .btn-glosario{
-  display: flex;
-  justify-content: center;
+.glosario-cta .btn-glosario {
+    display: flex;
+    justify-content: center;
 }
 
 
 /*Glosario Constitucional*/
 
-.glosario-seccion h2{
-  border-left: 0px;
-  text-align: center;
+.glosario-seccion h2 {
+    border-left: 0px;
+    text-align: center;
 }
 
-.glosario-seccion form .item{
+.glosario-seccion form .item {
     margin: 0px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.glosario-seccion form p{
-   font-size: 1.4em;
-   text-transform: inherit;
-   font-weight: 800;
-   color: black;
-   letter-spacing: 0px;
-   margin-bottom: 0px;
-   height: 100%;
-   display: flex;
-   align-items: center;
+.glosario-seccion form p {
+    font-size: 1.4em;
+    text-transform: inherit;
+    font-weight: 800;
+    color: black;
+    letter-spacing: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.glosario-seccion form input{
-  border: 3px solid transparent !important;
-  color: #212529;
-  background-color: #fff;
-  outline: 0;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-  padding: 3px 10px;
+.glosario-seccion form input {
+    border: 3px solid transparent !important;
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+    padding: 3px 10px;
 }
 
 .glosario-seccion form input:focus {
@@ -2462,33 +2477,33 @@ footer .rrss li a i {
     color: #212529;
     background-color: #fff;
     outline: 0;
-    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 .glosario-seccion form {
     flex-wrap: wrap;
 }
 
-.glosario-definiciones{
-    margin: 0px auto 100px auto!important;
+.glosario-definiciones {
+    margin: 0px auto 100px auto !important;
 }
 
-.palabras-nuevas{
-  position: relative;
+.palabras-nuevas {
+    position: relative;
 }
 
-.palabras-nuevas .collage-glosario{
-  position: absolute;
-  right: 3%;
-  top: 3%;
-  width: auto;
-  height: 100%;
-  padding-bottom: 10px;
+.palabras-nuevas .collage-glosario {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    width: auto;
+    height: 100%;
+    padding-bottom: 10px;
 }
 
-.palabras-nuevas .contenedor-titulo{
+.palabras-nuevas .contenedor-titulo {
     background: url(../img/bg-papel-glosario.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -2496,18 +2511,18 @@ footer .rrss li a i {
     padding: 40px 0px;
 }
 
-.palabras-nuevas .contenedor-titulo .titulo-seccion{
-    width:70%;
+.palabras-nuevas .contenedor-titulo .titulo-seccion {
+    width: 70%;
     display: flex;
     justify-content: center;
 }
 
-.palabras-nuevas .contenedor-titulo .titulo-seccion img{
-   width:60%;
-   margin: auto;
+.palabras-nuevas .contenedor-titulo .titulo-seccion img {
+    width: 60%;
+    margin: auto;
 }
 
-.palabras-nuevas .contenedor-formulario{
+.palabras-nuevas .contenedor-formulario {
     background: url(../img/bg-form-glosario.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -2516,49 +2531,49 @@ footer .rrss li a i {
     padding: 100px 0px;
 }
 
-.palabras-nuevas .contenedor-formulario .formulario{
-    width:70%;
+.palabras-nuevas .contenedor-formulario .formulario {
+    width: 70%;
     display: flex;
     flex-direction: row;
 }
 
-.palabras-nuevas .contenedor-formulario img{
+.palabras-nuevas .contenedor-formulario img {
     width: 18%;
     position: absolute;
     bottom: 0px;
     left: 5px;
 }
 
-.palabras-nuevas .contenedor-formulario .formulario{
-    width:40%;
+.palabras-nuevas .contenedor-formulario .formulario {
+    width: 40%;
     margin-left: 20%;
 }
 
-.palabras-nuevas .contenedor-formulario .formulario .items-form{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
+.palabras-nuevas .contenedor-formulario .formulario .items-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.palabras-nuevas .contenedor-formulario .formulario .titulo-form p{
-  margin-bottom: 5px;
-  font-size: 1.2em;
-  color: black;
-  text-align: center;
+.palabras-nuevas .contenedor-formulario .formulario .titulo-form p {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
 }
 
-.palabras-nuevas .contenedor-formulario .formulario input{
-  border: 3px solid transparent !important;
-  color: #212529;
-  background-color: #fff;
-  outline: 0;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-  padding: 5px 10px;
-  width: 55%;
-  margin-right: 10px;
+.palabras-nuevas .contenedor-formulario .formulario input {
+    border: 3px solid transparent !important;
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    width: 55%;
+    margin-right: 10px;
 }
 
 .palabras-nuevas .contenedor-formulario .formulario input:focus {
@@ -2566,14 +2581,14 @@ footer .rrss li a i {
     color: #212529;
     background-color: #fff;
     outline: 0;
-    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
-.palabras-nuevas .contenedor-formulario .formulario button{
-   width: 40%;
-   background: #CC0000;
+.palabras-nuevas .contenedor-formulario .formulario button {
+    width: 40%;
+    background: #CC0000;
 }
 
 .palabras-nuevas .contenedor-formulario .formulario .btn-lcen:before {
@@ -2581,89 +2596,101 @@ footer .rrss li a i {
 }
 
 
-@media(max-width:1200px){
-  .palabras-nuevas .collage-glosario {
-      right: 0%;
-      height: 80%;
-  }
-
-  .palabras-nuevas .contenedor-formulario .formulario {
-      width: 50%;
-      margin-left: 20%;
-  }
-}
-
-@media(max-width:991px){
-.palabras-nuevas .contenedor-formulario .formulario {
-    width: 60%;
-    margin-left: 5%;
-}
-}
-
-@media(max-width:850px){
-.palabras-nuevas .collage-glosario {
-    right: 0%;
-    height: 70%;
-}
-.palabras-nuevas .contenedor-formulario .formulario {
-    width: 60%;
-    margin-left: 10%;
-}
-}
-
-@media(max-width:768px){
-   /*Llamado a la acción en debate constituyente del glosario*/
-   .glosario-cta img {
-      margin-bottom: 40px;
-      width: 70%!important;
-   }
-  .glosario-cta{
-    padding-bottom: 80px;
-  }
-
-   /*Sección glosario*/
-   .glosario-seccion form .item{
-     padding: 0px;
-     margin: 0px;
-     width: 100%;
-   }
-  .glosario-seccion form p{
-    padding-bottom: 10px;
-  }
-
-  .palabras-nuevas .contenedor-titulo .titulo-seccion {
-      width: 100%;
-  }
-  .palabras-nuevas .contenedor-titulo .titulo-seccion img {
-    width: 100%;
-   }
-  .palabras-nuevas .contenedor-formulario {
-      padding: 60px 0px 0px 0px;
-      display: flex;
-      flex-direction: column-reverse;
-      background-position: left;
-  }
-  .palabras-nuevas .collage-glosario {
-      display: none;
-  }
-  .palabras-nuevas .contenedor-formulario .formulario {
-      width: 100%;
-      margin-left: 0%;
-      padding: 0px;
-   }
-   .palabras-nuevas .contenedor-formulario img {
-      width: 40%;
-      position: inherit;
-      margin-left: 30%;
-   }
-   .palabras-nuevas .contenedor-formulario .formulario .titulo-form p {
-       font-size: 1em;
+@media(max-width:1200px) {
+    .palabras-nuevas .collage-glosario {
+        right: 0%;
+        height: 80%;
     }
-   .palabras-nuevas .contenedor-formulario .formulario input{
-      width: 100%;
+
+    .palabras-nuevas .contenedor-formulario .formulario {
+        width: 50%;
+        margin-left: 20%;
     }
-    .palabras-nuevas .contenedor-formulario .formulario input{
-      margin-right: 0px;
+}
+
+@media(max-width:991px) {
+    .palabras-nuevas .contenedor-formulario .formulario {
+        width: 60%;
+        margin-left: 5%;
+    }
+}
+
+@media(max-width:850px) {
+    .palabras-nuevas .collage-glosario {
+        right: 0%;
+        height: 70%;
+    }
+
+    .palabras-nuevas .contenedor-formulario .formulario {
+        width: 60%;
+        margin-left: 10%;
+    }
+}
+
+@media(max-width:768px) {
+
+    /*Llamado a la acción en debate constituyente del glosario*/
+    .glosario-cta img {
+        margin-bottom: 40px;
+        width: 70% !important;
+    }
+
+    .glosario-cta {
+        padding-bottom: 80px;
+    }
+
+    /*Sección glosario*/
+    .glosario-seccion form .item {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+
+    .glosario-seccion form p {
+        padding-bottom: 10px;
+    }
+
+    .palabras-nuevas .contenedor-titulo .titulo-seccion {
+        width: 100%;
+    }
+
+    .palabras-nuevas .contenedor-titulo .titulo-seccion img {
+        width: 100%;
+    }
+
+    .palabras-nuevas .contenedor-formulario {
+        padding: 60px 0px 0px 0px;
+        display: flex;
+        flex-direction: column-reverse;
+        background-position: left;
+    }
+
+    .palabras-nuevas .collage-glosario {
+        display: none;
+    }
+
+    .palabras-nuevas .contenedor-formulario .formulario {
+        width: 100%;
+        margin-left: 0%;
+        padding: 0px;
+    }
+
+    .palabras-nuevas .contenedor-formulario img {
+        width: 40%;
+        position: inherit;
+        margin-left: 30%;
+    }
+
+    .palabras-nuevas .contenedor-formulario .formulario .titulo-form p {
+        font-size: 1em;
+    }
+
+    .palabras-nuevas .contenedor-formulario .formulario input {
+        width: 100%;
+    }
+
+    .palabras-nuevas .contenedor-formulario .formulario input {
+        margin-right: 0px;
     }
 }
 
@@ -2672,21 +2699,21 @@ footer .rrss li a i {
 
 .cronograma-seccion h2 {
     text-align: center;
-    border-left: 0px!important;
+    border-left: 0px !important;
     padding-left: 0px;
     padding-bottom: 0px !important;
     margin-bottom: 0px !important;
 }
 
-.cronograma-seccion p{
-  text-align: center;
+.cronograma-seccion p {
+    text-align: center;
 }
 
 .cronograma {
     margin-top: 20px;
 }
 
-.cronograma-seccion .cronograma .accordion-item h2{
+.cronograma-seccion .cronograma .accordion-item h2 {
     width: 100px;
     padding-top: 0px;
 }
@@ -2699,8 +2726,8 @@ footer .rrss li a i {
 }
 
 .accordion-button:focus {
-    border-color: transparent!important;
-    box-shadow: 0 0 0 0rem rgb(13 110 253 / 0%)!important;
+    border-color: transparent !important;
+    box-shadow: 0 0 0 0rem rgb(13 110 253 / 0%) !important;
 }
 
 .cronograma-seccion .cronograma .accordion-item .linea-cronograma-visible {
@@ -2727,11 +2754,11 @@ footer .rrss li a i {
     border-radius: 3px;
 }
 
-.cronograma-seccion .cronograma .accordion-item .accordion-collapse{
+.cronograma-seccion .cronograma .accordion-item .accordion-collapse {
     width: 100%;
 }
 
-.cronograma-seccion .cronograma .accordion-item .accordion-body{
+.cronograma-seccion .cronograma .accordion-item .accordion-body {
     padding: 0px;
     display: flex;
     flex-direction: row;
@@ -2784,12 +2811,12 @@ footer .rrss li a i {
     width: 50%;
 }
 
-.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-1 p{
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 30px;
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-1 p {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .cronograma-seccion .cronograma .accordion-item .accordion-body .fila-1 span.acontecimiento {
@@ -2801,8 +2828,8 @@ footer .rrss li a i {
     font-size: 0.95em;
 }
 
-.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-1 p .dia-numero{
-  margin-left: 10px;
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-1 p .dia-numero {
+    margin-left: 10px;
 }
 
 .cronograma-seccion .cronograma .accordion-item .accordion-body .fila-2 {
@@ -2810,15 +2837,15 @@ footer .rrss li a i {
     margin-top: 30px;
 }
 
-.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-2 p{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-2 p {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-2 p .dia-numero{
-  margin-right: 10px;
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila-2 p .dia-numero {
+    margin-right: 10px;
 }
 
 .cronograma-seccion .cronograma .accordion-item .accordion-body .fila-2 span.acontecimiento {
@@ -2831,28 +2858,28 @@ footer .rrss li a i {
 }
 
 .cronograma-seccion .cronograma .mes-activo .linea-separacion {
-    background: #008000!important;
+    background: #008000 !important;
 }
 
-.cronograma-seccion .cronograma .mes-activo .accordion-button{
-  background: #008000!important;
+.cronograma-seccion .cronograma .mes-activo .accordion-button {
+    background: #008000 !important;
 }
 
 .cronograma-seccion .cronograma .mes-activo .linea-cronograma-visible {
-    background: #008000!important;
+    background: #008000 !important;
 }
 
 
 .cronograma-seccion .cronograma .mes-activo .fila .linea {
-    background: #008000!important;
+    background: #008000 !important;
 }
 
 .cronograma-seccion .cronograma .mes-activo .fila p .dia-numero {
-    border: 2px solid #008000!important;
-    color: #008000!important;
+    border: 2px solid #008000 !important;
+    color: #008000 !important;
 }
 
-.circulo{
+.circulo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2888,19 +2915,19 @@ footer .rrss li a i {
     letter-spacing: 2px;
 }
 
-.plebicito p{
-  font-size: 1em;
-  text-align: center;
-  padding: 20px;
-  margin-bottom: 0px;
+.plebicito p {
+    font-size: 1em;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 0px;
 }
 
-.plebicito a{
-  color:#008000;
+.plebicito a {
+    color: #008000;
 }
 
-.plebicito .box img{
-  margin-left: auto;
+.plebicito .box img {
+    margin-left: auto;
 }
 
 .plebicito .box img {
@@ -2921,88 +2948,92 @@ footer .rrss li a i {
     z-index: -1;
 }
 
-.cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil{
-  display: none;
-}
-
-@media(max-width:768px){
-  .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-1{
+.cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil {
     display: none;
-  }
-  .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-2{
-    display: none;
-  }
-  .cronograma-seccion .cronograma .accordion-item .accordion-body .linea-separacion{
-    display: none;
-  }
-
-  .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil {
-      display: block;
-      border-left: 2px solid black;
-      padding-bottom: 30px;
-      width: 100%;
-      margin-left: 10px;
-  }
-
-  .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil span.acontecimiento {
-    text-align: left;
-    line-height: 18px;
-    padding-left: 10px;
- }
-
-  .cronograma-seccion .cronograma .mes-activo .fila.fila-movil {
-      border-left: 2px solid #008000!important;
-  }
-
-  .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil p {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-  }
-
-  .cronograma-seccion .cronograma .accordion-item {
-    align-items: flex-start;
-  }
-
-  .cronograma-seccion .cronograma .accordion-button{
-    border-radius: 0px;
-  }
-
-  .cronograma-seccion .cronograma .accordion-item .linea-cronograma-visible {
-    height: 30px;
-    width: 2px;
-    background: black;
-    margin-left: 10px;
-  }
-  .circulo {
-    justify-content: flex-start;
-    padding-left: 6px;
-  }
-  .plebicito h4 {
-    font-size: 1.1em;
-  }
-
-.plebicito img.icono-voto {
-    width: 45px;
-    position: absolute;
-    top: -30px;
 }
 
-.plebicito img.bg-icono-voto {
-    width: 100px;
-    top: -48px;
-    position: absolute;
-    z-index: -1;
-}
+@media(max-width:768px) {
+    .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-1 {
+        display: none;
+    }
 
-.plebicito {
-    margin-top: 50px;
-}
+    .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-2 {
+        display: none;
+    }
 
-.cronograma-seccion {
-    padding-top: 0px!important;
-}
+    .cronograma-seccion .cronograma .accordion-item .accordion-body .linea-separacion {
+        display: none;
+    }
+
+    .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil {
+        display: block;
+        border-left: 2px solid black;
+        padding-bottom: 30px;
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil span.acontecimiento {
+        text-align: left;
+        line-height: 18px;
+        padding-left: 10px;
+    }
+
+    .cronograma-seccion .cronograma .mes-activo .fila.fila-movil {
+        border-left: 2px solid #008000 !important;
+    }
+
+    .cronograma-seccion .cronograma .accordion-item .accordion-body .fila.fila-movil p {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .cronograma-seccion .cronograma .accordion-item {
+        align-items: flex-start;
+    }
+
+    .cronograma-seccion .cronograma .accordion-button {
+        border-radius: 0px;
+    }
+
+    .cronograma-seccion .cronograma .accordion-item .linea-cronograma-visible {
+        height: 30px;
+        width: 2px;
+        background: black;
+        margin-left: 10px;
+    }
+
+    .circulo {
+        justify-content: flex-start;
+        padding-left: 6px;
+    }
+
+    .plebicito h4 {
+        font-size: 1.1em;
+    }
+
+    .plebicito img.icono-voto {
+        width: 45px;
+        position: absolute;
+        top: -30px;
+    }
+
+    .plebicito img.bg-icono-voto {
+        width: 100px;
+        top: -48px;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .plebicito {
+        margin-top: 50px;
+    }
+
+    .cronograma-seccion {
+        padding-top: 0px !important;
+    }
 
 }
 
@@ -3295,40 +3326,40 @@ footer .rrss li a i {
     margin-bottom: 30px;
 }
 
-.btn-constitucionfeminista .btn-lcen{
+.btn-constitucionfeminista .btn-lcen {
     background: #008000;
 }
 
-.btn-constitucionfeminista .btn-lcen:before{
-  background: #AB47BC!important;
+.btn-constitucionfeminista .btn-lcen:before {
+    background: #AB47BC !important;
 }
 
-a.enlace-cf{
-  color: #008000;
-  text-decoration: none;
-  font-size: 1em;
-  font-weight: 800;
+a.enlace-cf {
+    color: #008000;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 800;
 }
 
-a.enlace-cf:hover{
-  color: #AB47BC;
+a.enlace-cf:hover {
+    color: #AB47BC;
 }
 
 /*Libro Constitucion feminista 1980*/
 
-.libro-constitucion-feminista{
+.libro-constitucion-feminista {
     background: #FFDF94;
 }
 
-.libro-constitucion-feminista p.creditos-libro{
-   font-size: 1.3em;
-   font-weight: 500;
-   text-transform: uppercase;
-   margin-left: 30px;
-   margin-bottom: 0px;
+.libro-constitucion-feminista p.creditos-libro {
+    font-size: 1.3em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 30px;
+    margin-bottom: 0px;
 }
 
-.libro-constitucion-feminista .border-decoracion{
+.libro-constitucion-feminista .border-decoracion {
     width: 80px;
     height: 8px;
     margin-left: 30px;
@@ -3336,25 +3367,25 @@ a.enlace-cf:hover{
     margin-bottom: 15px;
 }
 
-.libro-constitucion-feminista h2{
-   font-size: 2.4em;
-   color: black;
-   border-left: 0px;
-   padding: 0px;
-   margin-left: 30px;
+.libro-constitucion-feminista h2 {
+    font-size: 2.4em;
+    color: black;
+    border-left: 0px;
+    padding: 0px;
+    margin-left: 30px;
 }
 
-.libro-constitucion-feminista a{
-  background: #008000;
-  margin-left: 30px;
+.libro-constitucion-feminista a {
+    background: #008000;
+    margin-left: 30px;
 }
 
-.libro-constitucion-feminista a:before{
-  background: #AB47BC!important;
+.libro-constitucion-feminista a:before {
+    background: #AB47BC !important;
 }
 
-.libro-constitucion-feminista img{
-  padding: 50px!important;
+.libro-constitucion-feminista img {
+    padding: 50px !important;
 }
 
 /*Constitución Feminista - Reflexiones lista*/
@@ -4532,27 +4563,29 @@ ul.pagination .active a {
 
     header ul.navbar-nav li > .dropdown-menu a {
         font-size: 0.75em !important;
-        padding: 12px 10px!important;
-    }
-    /*Libro Constitucion feminista 1980*/
-    .libro-constitucion-feminista p.creditos-libro{
-       margin-left: 0px;
+        padding: 12px 10px !important;
     }
 
-    .libro-constitucion-feminista .border-decoracion{
+    /*Libro Constitucion feminista 1980*/
+    .libro-constitucion-feminista p.creditos-libro {
         margin-left: 0px;
     }
 
-    .libro-constitucion-feminista h2{
-       font-size: 1.6em;
-       margin-left: 0px;
+    .libro-constitucion-feminista .border-decoracion {
+        margin-left: 0px;
     }
 
-    .libro-constitucion-feminista a{
-      margin-left: 0px;
+    .libro-constitucion-feminista h2 {
+        font-size: 1.6em;
+        margin-left: 0px;
     }
-    .libro-constitucion-feminista img{
-      padding: 20px 0px!important;
+
+    .libro-constitucion-feminista a {
+        margin-left: 0px;
+    }
+
+    .libro-constitucion-feminista img {
+        padding: 20px 0px !important;
     }
 }
 
@@ -4987,14 +5020,16 @@ ul.pagination .active a {
     }
 
     /*Libro Constitucion feminista 1980*/
-    .libro-constitucion-feminista{
-      padding: 80px 0px;
+    .libro-constitucion-feminista {
+        padding: 80px 0px;
     }
-    .libro-constitucion-feminista h2{
-      font-size: 1.4em;
+
+    .libro-constitucion-feminista h2 {
+        font-size: 1.4em;
     }
-    .libro-constitucion-feminista img{
-      padding: 40px 20px 0px 20px!important;
+
+    .libro-constitucion-feminista img {
+        padding: 40px 20px 0px 20px !important;
     }
 }
 
@@ -5060,13 +5095,13 @@ ul.pagination .active a {
     }
 
     .constitucionfeminista-descripcion .logo-autor img {
-    max-width: 150px;
-   }
+        max-width: 150px;
+    }
 
-   /*Cronograma*/
-   .cronograma-cta .container .row div{
-     padding: 0px;
-   }
+    /*Cronograma*/
+    .cronograma-cta .container .row div {
+        padding: 0px;
+    }
 }
 
 
@@ -5079,71 +5114,74 @@ ul.pagination .active a {
 
 
 /*Header*/
-.header-desktop{
-  display: block;
+.header-desktop {
+    display: block;
 }
-.header-movil{
-  display: none;
+
+.header-movil {
+    display: none;
 }
 
 @media (max-width: 991px) {
-  /*Header*/
-  .header-desktop{
-    display: none;
-  }
-  .header-movil{
-    display: block;
-  }
 
-  .header-movil .dropdown-anidado {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    align-items: center;
+    /*Header*/
+    .header-desktop {
+        display: none;
+    }
+
+    .header-movil {
+        display: block;
+    }
+
+    .header-movil .dropdown-anidado {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+    }
+
+    .header-movil li.nav-item.dropdown-anidado a#navbarDropdown {
+        padding: 0px 0px;
+        font-size: 1.1em;
+        padding-left: 10px;
+    }
+
+    .header-movil li.nav-item.dropdown-anidado ul.dropdown-menu {
+        width: 100%;
+    }
+
+    header ul.navbar-nav li p {
+        font-size: 0.85em;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        color: black;
+        padding: 10px 0px;
+        border-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .portada-lcen-colores {
+        margin-bottom: 0px;
+    }
 }
 
-.header-movil li.nav-item.dropdown-anidado a#navbarDropdown {
-    padding: 0px 0px;
-    font-size: 1.1em;
-    padding-left: 10px;
-}
-
-  .header-movil li.nav-item.dropdown-anidado ul.dropdown-menu {
-    width: 100%;
-}
-
-header ul.navbar-nav li p {
-    font-size: 0.85em;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.2px;
-    color: black;
-    padding: 10px 0px;
-    border-top: 0px;
-    margin-bottom: 0px;
-}
-
-.portada-lcen-colores {
-    margin-bottom: 0px;
-}
-}
-
-@media(max-width:500px){
-  .portada-lcen-colores ol.breadcrumb li {
-    font-size: 0.8em !important;
-}
+@media(max-width:500px) {
+    .portada-lcen-colores ol.breadcrumb li {
+        font-size: 0.8em !important;
+    }
 }
 
 
 /*Nueva experiencia User*/
-.portada-banner{
-  padding-top: 98px;
-  position: relative;
+.portada-banner {
+    padding-top: 98px;
+    position: relative;
 }
 
-.portada-banner img{
-  padding: 0px;
+.portada-banner img {
+    padding: 0px;
 }
 
 .portada-banner .enlace-portada {
@@ -5159,8 +5197,8 @@ header ul.navbar-nav li p {
 }
 
 .hvr-sweep-to-left:before {
-    background: #CC0000!important;
-    overflow: hidden!important;
+    background: #CC0000 !important;
+    overflow: hidden !important;
 }
 
 .btn-lcen {
@@ -5171,7 +5209,7 @@ header ul.navbar-nav li p {
     text-decoration: none;
     letter-spacing: 2px;
     color: white;
-    background: black!important;
+    background: black !important;
     border: 0px;
     border-radius: 50px;
     padding: 8px 30px;
@@ -5187,7 +5225,7 @@ header ul.navbar-nav li p {
     text-decoration: none;
     letter-spacing: 2px;
     color: white;
-    background: #2D2D2D!important;
+    background: #2D2D2D !important;
     border: 0px;
     border-radius: 5px;
     padding: 8px 30px;
@@ -5211,8 +5249,8 @@ header ul.navbar-nav li p {
 
 /*Hitos*/
 
-.hitos-cc{
-  margin-bottom: 100px;
+.hitos-cc {
+    margin-bottom: 100px;
 }
 
 .hitos-cc .img-titulo {
@@ -5222,9 +5260,9 @@ header ul.navbar-nav li p {
 
 /*Recursos*/
 
-.recursos-cc{
-  margin-top: 100px;
-  margin-bottom: 100px;
+.recursos-cc {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .recursos-cc .img-titulo {
@@ -5241,7 +5279,7 @@ header ul.navbar-nav li p {
     margin-bottom: 100px;
 }
 
-.evaluacion-de-norma .titular{
+.evaluacion-de-norma .titular {
     margin-bottom: 40px;
 }
 
@@ -5297,7 +5335,7 @@ header ul.navbar-nav li p {
 
 
 .filtro-evaluacion ul li a:hover {
-    transition: 0.5s all!important;
+    transition: 0.5s all !important;
 }
 
 
@@ -5393,31 +5431,31 @@ header ul.navbar-nav li p {
     margin-bottom: 15px;
 }
 
-.simbologia .modal-content h5{
-    border:0px;
+.simbologia .modal-content h5 {
+    border: 0px;
     display: flex;
     align-items: flex-end;
 }
 
-.simbologia .modal-content h5 img{
+.simbologia .modal-content h5 img {
     width: 40px;
     margin-right: 10px;
 }
 
-.simbologia .modal-content a.enlaces{
-  color: black;
-  text-decoration: none;
-  font-weight: 800;
-  color: #0E8142;
-  transition: 0.5s all;
+.simbologia .modal-content a.enlaces {
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    color: #0E8142;
+    transition: 0.5s all;
 }
 
-.simbologia .modal-content a.enlace:hover{
-  text-decoration: underline;
+.simbologia .modal-content a.enlace:hover {
+    text-decoration: underline;
 }
 
-.simbologia .simbolo-innovacion{
-    width: auto!important;
+.simbologia .simbolo-innovacion {
+    width: auto !important;
     height: 50px;
 }
 
@@ -5430,15 +5468,15 @@ header ul.navbar-nav li p {
     margin-bottom: 0px;
 }
 
-.normas-sellos .titular p{
-  text-align: left;
-  padding: 3px 10px;
-  background: #CC0000;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 1em;
-  margin-bottom: 0px;
+.normas-sellos .titular p {
+    text-align: left;
+    padding: 3px 10px;
+    background: #CC0000;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1em;
+    margin-bottom: 0px;
 }
 
 
@@ -5461,15 +5499,15 @@ header ul.navbar-nav li p {
     margin: 0.5%;
 }
 
-.normas-sellos  .sellos-lista .norma{
+.normas-sellos .sellos-lista .norma {
     position: relative;
 }
 
-.normas-sellos  .sellos-lista .norma img{
+.normas-sellos .sellos-lista .norma img {
     width: 100%;
 }
 
-.normas-sellos  .sellos-lista .norma .logo-org {
+.normas-sellos .sellos-lista .norma .logo-org {
     width: 50%;
 }
 
@@ -5500,21 +5538,21 @@ header ul.navbar-nav li p {
     font-size: 0.8em;
 }
 
-.normas-sellos .sellos-lista .norma p.evaluada-por a{
-  color: #FFD700;
+.normas-sellos .sellos-lista .norma p.evaluada-por a {
+    color: #FFD700;
 }
 
 .norma-diagnostico .categorialeft {
-  margin-left: 0px;
+    margin-left: 0px;
 }
 
 /*Norma visitada*/
-.volver-temas{
-  margin-bottom: 30px;
+.volver-temas {
+    margin-bottom: 30px;
 }
 
 .volver-temas li {
-    color: black!important;
+    color: black !important;
     font-weight: 700;
 }
 
@@ -5524,8 +5562,8 @@ header ul.navbar-nav li p {
     font-weight: 500;
 }
 
-.volver-temas li a:hover{
-  text-decoration: underline;
+.volver-temas li a:hover {
+    text-decoration: underline;
 }
 
 .volver-temas .breadcrumb-item + .breadcrumb-item::before {
@@ -5537,17 +5575,17 @@ header ul.navbar-nav li p {
     color: #C4C4C4;
 }
 
-.sello-norma-visualizacion{
-  margin-right: 30px;
-  margin-bottom: 30px;
+.sello-norma-visualizacion {
+    margin-right: 30px;
+    margin-bottom: 30px;
 }
 
-.sello-norma-visualizacion img{
-  width: 100%;
+.sello-norma-visualizacion img {
+    width: 100%;
 }
 
-.otras-organizaciones{
-  margin:30px 30px 30px 0px;
+.otras-organizaciones {
+    margin: 30px 30px 30px 0px;
 }
 
 .otras-organizaciones h5 {
@@ -5555,7 +5593,7 @@ header ul.navbar-nav li p {
     font-weight: 800;
     margin-bottom: 20px;
     text-align: left;
-  }
+}
 
 .otras-organizaciones ul {
     padding-left: 0px;
@@ -5564,31 +5602,31 @@ header ul.navbar-nav li p {
     flex-wrap: wrap;
 }
 
-.otras-organizaciones ul li{
+.otras-organizaciones ul li {
     list-style: none;
     margin-bottom: 10px;
     margin-right: 10px;
 }
 
-.otras-organizaciones ul li a{
-   text-decoration: none;
-   opacity: 0.6;
-   transition: 0.5s all;
+.otras-organizaciones ul li a {
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.5s all;
 }
 
-.otras-organizaciones ul li a:hover{
-   text-decoration: none;
-   opacity: 1;
+.otras-organizaciones ul li a:hover {
+    text-decoration: none;
+    opacity: 1;
 }
 
-.otras-organizaciones ul li a img{
-   width: auto;
-   height: 35px;
-   align-self: center;
+.otras-organizaciones ul li a img {
+    width: auto;
+    height: 35px;
+    align-self: center;
 }
 
-.norma-diagnostico{
-   padding-left: 20px;
+.norma-diagnostico {
+    padding-left: 20px;
 }
 
 .norma-diagnostico .titular {
@@ -5600,31 +5638,31 @@ header ul.navbar-nav li p {
     margin-bottom: 0px;
 }
 
-.norma-diagnostico p.tema-destacado{
-  text-align: left;
-  padding: 3px 10px;
-  background: #CC0000;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 1em;
-  margin-bottom: 0px;
+.norma-diagnostico p.tema-destacado {
+    text-align: left;
+    padding: 3px 10px;
+    background: #CC0000;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1em;
+    margin-bottom: 0px;
 }
 
-.norma-diagnostico .titular h3{
-  font-size: 1.8em;
-  color: black;
-  padding-top: 5px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+.norma-diagnostico .titular h3 {
+    font-size: 1.8em;
+    color: black;
+    padding-top: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
-.norma-diagnostico .linea-decoracion{
-  background: #FFD700;
+.norma-diagnostico .linea-decoracion {
+    background: #FFD700;
 }
 
-.norma-diagnostico .org-evaluadora{
-  margin-bottom: 20px;
+.norma-diagnostico .org-evaluadora {
+    margin-bottom: 20px;
 }
 
 .norma-diagnostico .org-evaluadora p {
@@ -5646,119 +5684,138 @@ header ul.navbar-nav li p {
     margin-right: 10px;
 }
 
-.norma-diagnostico .descripcion{
-   margin-top: 10px;
-   margin-bottom: 30px;
+.norma-diagnostico .descripcion {
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
-.norma-diagnostico .descripcion p{
-  text-align: left;
-  font-size: 1em;
-  color: black;
-  padding-bottom: 10px;
-  margin-bottom: 0px;
-}
-.norma-diagnostico .preguntas{
-  margin-bottom: 0px;
+.norma-diagnostico .descripcion p {
+    text-align: left;
+    font-size: 1em;
+    color: black;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
 }
 
-.norma-diagnostico .preguntas h3{
-  margin-bottom: 20px;
-  padding-bottom: 0px;
-  font-size: 1.5em;
-  font-weight: 800;
-  color: black;
-  text-align: left;
-  letter-spacing: 0px;
+.norma-diagnostico .preguntas {
+    margin-bottom: 0px;
+}
+
+.norma-diagnostico .preguntas h3 {
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: black;
+    text-align: left;
+    letter-spacing: 0px;
 }
 
 /*Ajustes movil secciones evaluacion*/
-@media(max-width:991px){
-  .normas-sellos .sellos-lista .norma {
-    width: 49%;
-    margin: 0.5%;
-   }
-   .filtro-evaluacion ul{
-     margin-right: 0px;
-   }
-   .sello-norma-visualizacion {
-     margin-right: 0px;
-   }
-   .simbologia{
-     margin-right: 0px;
-   }
-   .otras-organizaciones{
-     margin-right: 0px;
-   }
-   .normas-sellos .titular h3{
-     font-size: 1.5em;
-   }
-   .norma-diagnostico .titular h3 {
-     font-size: 1.5em;
-   }
-   .norma-diagnostico .preguntas h3 {
-     font-size: 1.3em;
-   }
+@media(max-width:991px) {
+    .normas-sellos .sellos-lista .norma {
+        width: 49%;
+        margin: 0.5%;
+    }
+
+    .filtro-evaluacion ul {
+        margin-right: 0px;
+    }
+
+    .sello-norma-visualizacion {
+        margin-right: 0px;
+    }
+
+    .simbologia {
+        margin-right: 0px;
+    }
+
+    .otras-organizaciones {
+        margin-right: 0px;
+    }
+
+    .normas-sellos .titular h3 {
+        font-size: 1.5em;
+    }
+
+    .norma-diagnostico .titular h3 {
+        font-size: 1.5em;
+    }
+
+    .norma-diagnostico .preguntas h3 {
+        font-size: 1.3em;
+    }
 }
 
-@media(max-width:768px){
-  .evaluacion-de-norma h2 {
-      font-size: 1.5em;
-  }
-  .filtro-evaluacion ul{
-    margin-right: 0px;
-  }
-  .normas-sellos .titular h3{
-    font-size: 1.5em;
-  }
-  .normas-sellos .sellos-lista .norma {
-    width: 49%;
-    margin: 0.5%;
-   }
-  .sello-norma-visualizacion {
-    margin-right: 0px;
-  }
-  .simbologia{
-    margin-right: 0px;
-  }
-  .otras-organizaciones{
-    margin-right: 0px;
-  }
-  .norma-diagnostico {
-     padding-left: 15px;
-  }
-  .norma-diagnostico .titular h3 {
-    font-size: 1.5em;
-  }
-  .norma-diagnostico .preguntas h3 {
-    font-size: 1.3em;
-  }
+@media(max-width:768px) {
+    .evaluacion-de-norma h2 {
+        font-size: 1.5em;
+    }
+
+    .filtro-evaluacion ul {
+        margin-right: 0px;
+    }
+
+    .normas-sellos .titular h3 {
+        font-size: 1.5em;
+    }
+
+    .normas-sellos .sellos-lista .norma {
+        width: 49%;
+        margin: 0.5%;
+    }
+
+    .sello-norma-visualizacion {
+        margin-right: 0px;
+    }
+
+    .simbologia {
+        margin-right: 0px;
+    }
+
+    .otras-organizaciones {
+        margin-right: 0px;
+    }
+
+    .norma-diagnostico {
+        padding-left: 15px;
+    }
+
+    .norma-diagnostico .titular h3 {
+        font-size: 1.5em;
+    }
+
+    .norma-diagnostico .preguntas h3 {
+        font-size: 1.3em;
+    }
 }
 
-@media(max-width:450px){
-  .normas-sellos .sellos-lista .norma {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 10px;
-   }
+@media(max-width:450px) {
+    .normas-sellos .sellos-lista .norma {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
 }
 
 /*Home 2.0*/
-.portada-desktop{
-  display: block;
+.portada-desktop {
+    display: block;
 }
-.portada-movil{
-  display: none;
+
+.portada-movil {
+    display: none;
 }
+
 .portada-banner a {
-    bottom: 8%!important;
+    bottom: 8% !important;
 }
 
 .btn-scroll-home {
     z-index: 9;
 }
 
-.hitos-cc{
+.hitos-cc {
     margin-bottom: 80px;
 }
 
@@ -5766,31 +5823,37 @@ header ul.navbar-nav li p {
     max-width: 400px;
     margin-bottom: 40px;
 }
-.hitos-cc p{
-  text-align: center;
-  font-size: 1em;
-  color: black;
+
+.hitos-cc p {
+    text-align: center;
+    font-size: 1em;
+    color: black;
 }
-.linea-cronologica .img-banner-desktop{
-  display: block;
-  width: 100%;
+
+.linea-cronologica .img-banner-desktop {
+    display: block;
+    width: 100%;
 }
-.linea-cronologica .img-banner-movil{
-  display: none;
-  width: 100%;
+
+.linea-cronologica .img-banner-movil {
+    display: none;
+    width: 100%;
 }
-.decision-final-hito{
+
+.decision-final-hito {
     margin-bottom: 100px;
 }
+
 .decision-final-hito .row {
     align-items: center;
 }
-.decision-final-hito .row a{
-  margin-bottom: 0px!important;
+
+.decision-final-hito .row a {
+    margin-bottom: 0px !important;
 }
 
-.decision-final-hito .img-borrador img{
-  width: 100%;
+.decision-final-hito .img-borrador img {
+    width: 100%;
 }
 
 .recursos-cc .img-titulo {
@@ -5800,8 +5863,8 @@ header ul.navbar-nav li p {
     align-items: center;
 }
 
-.recursos-cc .img-titulo h3{
-  text-align: center;
+.recursos-cc .img-titulo h3 {
+    text-align: center;
 }
 
 .linea-cronologica {
@@ -5809,7 +5872,7 @@ header ul.navbar-nav li p {
 }
 
 .quieres-sumar-a-tu-org {
-    padding-top:100px;
+    padding-top: 100px;
     padding-bottom: 100px;
     background: url(../img/bg-textura-papel.jpg);
     background-size: cover;
@@ -5829,9 +5892,9 @@ header ul.navbar-nav li p {
     display: flex;
 }
 
-.quieres-sumar-a-tu-org .row .btn-box{
-  display: flex;
-  justify-content: center;
+.quieres-sumar-a-tu-org .row .btn-box {
+    display: flex;
+    justify-content: center;
 }
 
 .recursos-cc {
@@ -5844,7 +5907,7 @@ header ul.navbar-nav li p {
     justify-content: center;
 }
 
-.recursos-cc .titulo-img img{
+.recursos-cc .titulo-img img {
     width: 300px;
 }
 
@@ -5867,7 +5930,7 @@ header ul.navbar-nav li p {
     margin-bottom: 50px;
 }
 
-.normas-evaluadas-home .titulo-img img{
+.normas-evaluadas-home .titulo-img img {
     width: 300px;
 }
 
@@ -5886,8 +5949,8 @@ header ul.navbar-nav li p {
     position: relative;
 }
 
-.normas-evaluadas-home .enlace-norma{
-  background: black;
+.normas-evaluadas-home .enlace-norma {
+    background: black;
 }
 
 .normas-evaluadas-home .nombre-norma {
@@ -5916,120 +5979,139 @@ header ul.navbar-nav li p {
     font-weight: 400;
 }
 
-.normas-evaluadas-home .evaluada-por a{
-  color: white;
-  text-decoration: none;
+.normas-evaluadas-home .evaluada-por a {
+    color: white;
+    text-decoration: none;
 }
 
-.normas-evaluadas-home .evaluada-por a:hover{
-  text-decoration: underline;
+.normas-evaluadas-home .evaluada-por a:hover {
+    text-decoration: underline;
 }
 
-.normas-evaluadas-home .enlace-norma{
-  text-decoration: none;
+.normas-evaluadas-home .enlace-norma {
+    text-decoration: none;
 }
 
-@media(max-width:991px){
-  .portada-banner {
-    padding-top: 85px;
-    position: relative;
-}
-.normas-evaluadas-home .norma {
-    width: 49%;
-    padding: 1%;
-}
+@media(max-width:991px) {
+    .portada-banner {
+        padding-top: 85px;
+        position: relative;
+    }
+
+    .normas-evaluadas-home .norma {
+        width: 49%;
+        padding: 1%;
+    }
 
 }
-@media(max-width:768px){
-  .portada-desktop{
+
+@media(max-width:768px) {
+    .portada-desktop {
         display: none;
-  }
-  .portada-movil{
-      display: block;
-  }
-  .portada-banner a {
-      position: absolute;
-      bottom: 25px;
-      width: auto;
-  }
-  .linea-cronologica .img-banner-desktop{
-    display: none;
-    width: 100%;
-  }
-  .linea-cronologica .img-banner-movil{
-    display: block;
-    width: 100%;
-  }
-  .hitos-cc .img-titulo img {
-    max-width: 250px;
-    margin-bottom: 30px;
-}
-.decision-final-hito .img-borrador img {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    margin-bottom: 30px;
-}
-.titulo-img-decision{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   align-self: center;
-   flex-wrap: wrap;
-}
-.titulo-img-decision img{
-  width: 80%!important;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  align-items: center;
-}
-.iniciativa-popular .titulo-img img {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: auto;
-}
-.recursos-cc .titulo-img img {
-    width: 250px;
-}
-.hitos-cc {
-    margin-bottom: 40px;
-}
-.normas-evaluadas-home {
-    top: -65px;
+    }
+
+    .portada-movil {
+        display: block;
+    }
+
+    .portada-banner a {
+        position: absolute;
+        bottom: 25px;
+        width: auto;
+    }
+
+    .linea-cronologica .img-banner-desktop {
+        display: none;
+        width: 100%;
+    }
+
+    .linea-cronologica .img-banner-movil {
+        display: block;
+        width: 100%;
+    }
+
+    .hitos-cc .img-titulo img {
+        max-width: 250px;
+        margin-bottom: 30px;
+    }
+
+    .decision-final-hito .img-borrador img {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .titulo-img-decision {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        flex-wrap: wrap;
+    }
+
+    .titulo-img-decision img {
+        width: 80% !important;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+    }
+
+    .iniciativa-popular .titulo-img img {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    .recursos-cc .titulo-img img {
+        width: 250px;
+    }
+
+    .hitos-cc {
+        margin-bottom: 40px;
+    }
+
+    .normas-evaluadas-home {
+        top: -65px;
+    }
+
+    .normas-evaluadas-home .norma {
+        width: 85%;
+        padding: 1%;
+        margin: auto;
+    }
+
+    .normas-evaluadas-home .titulo-img img {
+        width: 250px;
+    }
 }
 
-.normas-evaluadas-home .norma {
-    width: 85%;
-    padding: 1%;
-    margin: auto;
-}
-.normas-evaluadas-home .titulo-img img {
-    width: 250px;
-}
-}
-@media(max-width:550px){
-  .portada-banner a {
-      position: absolute;
-      bottom: 20px;
-      width: auto;
-      zoom:0.8;
-  }
-  .btn-scroll-home a {
-    zoom: 0.8;
-   }
-   .btn-scroll-home {
-    bottom: 35px;
-   }
-   a.btn-glosario{
-     zoom:0.7;
-   }
+@media(max-width:550px) {
+    .portada-banner a {
+        position: absolute;
+        bottom: 20px;
+        width: auto;
+        zoom: 0.8;
+    }
+
+    .btn-scroll-home a {
+        zoom: 0.8;
+    }
+
+    .btn-scroll-home {
+        bottom: 35px;
+    }
+
+    a.btn-glosario {
+        zoom: 0.7;
+    }
 }
 
-header{
-  z-index: 9999999999999999;
+header {
+    z-index: 9999999999999999;
 }
 
 
@@ -6049,8 +6131,8 @@ header{
 footer .impulsado {
     display: none;
 }
-18:42
-footer .impulsado {
+
+18:42 footer .impulsado {
     display: none;
 }
 
@@ -6060,27 +6142,27 @@ footer .impulsado {
 /*Boton fijo Glosario*/
 
 a.btn-glosario {
-  font-weight: 900;
-  font-size: 1.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 4px;
-  color: white;
-  background: black;
-  border-radius: 0px 0px 0px 0px;
-  padding: 5px 11px;
-  position: fixed;
-  right: -51px;
-  bottom: 100px;
-  transform: rotate(-90deg);
-  overflow: hidden!important;
-  z-index: 999;
+    font-weight: 900;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    color: white;
+    background: black;
+    border-radius: 0px 0px 0px 0px;
+    padding: 5px 11px;
+    position: fixed;
+    right: -51px;
+    bottom: 100px;
+    transform: rotate(-90deg);
+    overflow: hidden !important;
+    z-index: 999;
 }
 
 
 /*Evaluaciones 2.0*/
 
-.banner-evaluaciones{
+.banner-evaluaciones {
     margin-top: 100px;
     height: 245px;
     background: url(../img/bg-evaluaciones.jpg);
@@ -6092,46 +6174,46 @@ a.btn-glosario {
     justify-content: center;
 }
 
-.banner-evaluaciones .banner-img-evaluaciones{
-   position: absolute;
-   right: 0px;
-   top: 100px!important;
-   z-index: 0;
+.banner-evaluaciones .banner-img-evaluaciones {
+    position: absolute;
+    right: 0px;
+    top: 100px !important;
+    z-index: 0;
 }
 
-.banner-evaluaciones .container{
-  padding: 0px;
+.banner-evaluaciones .container {
+    padding: 0px;
 }
 
-.banner-evaluaciones .informacion-banner{
-  padding-left: 0px;
+.banner-evaluaciones .informacion-banner {
+    padding-left: 0px;
 }
 
-.banner-evaluaciones .informacion-banner nav ol{
+.banner-evaluaciones .informacion-banner nav ol {
     margin-bottom: 5px;
 }
 
-.banner-evaluaciones .informacion-banner nav ol li.active{
+.banner-evaluaciones .informacion-banner nav ol li.active {
     color: #4F4F4F;
     font-size: 0.9em;
     font-weight: 700;
     letter-spacing: 0.4px;
 }
 
-.banner-evaluaciones .informacion-banner nav ol li a{
+.banner-evaluaciones .informacion-banner nav ol li a {
     color: #4F4F4F;
-    font-size: 0.9em!important;
+    font-size: 0.9em !important;
     padding: 0px;
     text-decoration: none;
     letter-spacing: 0.4px;
     font-weight: 500;
 }
 
-.banner-evaluaciones .informacion-banner nav ol li a:hover{
+.banner-evaluaciones .informacion-banner nav ol li a:hover {
     text-decoration: underline;
 }
 
-.banner-evaluaciones .informacion-banner h2{
+.banner-evaluaciones .informacion-banner h2 {
     border-left: 0px;
     padding: 0px;
     color: black;
@@ -6144,7 +6226,7 @@ a.btn-glosario {
 }
 
 .banner-evaluaciones .informacion-banner a {
-    font-size: 0.8em!important;
+    font-size: 0.8em !important;
     padding: 8px 14px;
 }
 
@@ -6155,9 +6237,9 @@ a.btn-glosario {
     justify-content: center;
 }
 
-.banner-evaluaciones .descripcion-banner .informacion{
-  background: rgba(255, 255, 255, 0.7);
-  padding: 15px;
+.banner-evaluaciones .descripcion-banner .informacion {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px;
 }
 
 .banner-evaluaciones .descripcion-banner h3 {
@@ -6179,25 +6261,25 @@ a.btn-glosario {
 
 
 /*Filtros Evaluacion*/
-.filtro-temas-evaluaciones{
+.filtro-temas-evaluaciones {
     background: #F2F2F2;
 }
 
-.filtro-temas-evaluaciones .invitacion-filtros{
+.filtro-temas-evaluaciones .invitacion-filtros {
     background: #333333;
     padding: 8px;
 }
 
-.filtro-temas-evaluaciones .invitacion-filtros h4{
-   color: white;
-   font-size: 1em;
-   font-weight: 800;
-   text-transform: uppercase;
-   margin-bottom: 0px;
-   text-align: center;
+.filtro-temas-evaluaciones .invitacion-filtros h4 {
+    color: white;
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    text-align: center;
 }
 
-.filtro-temas-evaluaciones .temas ul{
+.filtro-temas-evaluaciones .temas ul {
     padding-left: 0px;
     margin: 20px 0px;
     display: flex;
@@ -6206,16 +6288,16 @@ a.btn-glosario {
     justify-content: center;
 }
 
-.filtro-temas-evaluaciones .temas ul li{
+.filtro-temas-evaluaciones .temas ul li {
     list-style: none;
     margin: 5px;
 }
 
-.filtro-temas-evaluaciones .temas ul li a{
+.filtro-temas-evaluaciones .temas ul li a {
     margin: 0px;
     padding: 3px 13px 2px 13px;
     border-radius: 50px;
-    background: transparent!important;
+    background: transparent !important;
     color: #4F4F4F;
     border: 1.5px solid #4F4F4F;
     font-size: 0.8em;
@@ -6225,12 +6307,12 @@ a.btn-glosario {
     text-decoration: none;
 }
 
-.filtro-temas-evaluaciones .temas ul li a:before{
-   background: transparent!important;
+.filtro-temas-evaluaciones .temas ul li a:before {
+    background: transparent !important;
 }
 
-.filtro-temas-evaluaciones .temas ul li a:hover{
-    background: #3A6AB1!important;
+.filtro-temas-evaluaciones .temas ul li a:hover {
+    background: #3A6AB1 !important;
     border: 1.5px solid #3A6AB1;
     color: white;
 }
@@ -6249,18 +6331,18 @@ a.btn-glosario {
     bottom: -30px;
 }
 
-.evaluaciones-lista .como-leer-evaluaciones a{
+.evaluaciones-lista .como-leer-evaluaciones a {
     color: #4F4F4F;
     font-size: 1em;
 }
 
-.evaluaciones-lista .como-leer-evaluaciones a img{
+.evaluaciones-lista .como-leer-evaluaciones a img {
     padding-left: 1px;
     width: 15px;
 }
 
 
-.evaluaciones-lista h2.titulo-evaluaciones{
+.evaluaciones-lista h2.titulo-evaluaciones {
     border-left: 0px;
     padding-left: 0px;
     font-size: 1.8em;
@@ -6268,7 +6350,7 @@ a.btn-glosario {
     font-weight: 900;
 }
 
-.evaluaciones-lista h2.titulo-evaluaciones span{
+.evaluaciones-lista h2.titulo-evaluaciones span {
     color: #3A6AB1;
 }
 
@@ -6276,7 +6358,7 @@ a.btn-glosario {
 .simbologia {
     background: transparent;
     padding: 0px;
-    margin-right:0px;
+    margin-right: 0px;
     margin-top: 70px;
     display: flex;
     flex-direction: column;
@@ -6301,15 +6383,15 @@ a.btn-glosario {
     padding-bottom: 15px;
 }
 
-.simbologia .simbolos span{
-   background: rgba(204, 204, 204, 0.3);
-   padding: 5px 10px;
-   border-radius: 10px;
+.simbologia .simbolos span {
+    background: rgba(204, 204, 204, 0.3);
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 
 .simbologia .simbolo img {
-    width: 25px!important;
-    height: auto!important;
+    width: 25px !important;
+    height: auto !important;
 }
 
 /*Evaluaciones Listados Sellos*/
@@ -6323,10 +6405,10 @@ a.btn-glosario {
 }
 
 .normas-sellos .sellos-lista .norma .informacion-norma {
-    height: 180px;
+    height: 200px;
 }
 
-.normas-sellos .sellos-lista .norma a{
+.normas-sellos .sellos-lista .norma a {
     color: black;
     font-size: 1.2em;
     font-weight: 900;
@@ -6334,18 +6416,18 @@ a.btn-glosario {
     line-height: normal;
 }
 
-.normas-sellos .sellos-lista .norma img{
+.normas-sellos .sellos-lista .norma img {
     margin-bottom: 15px;
 }
 
-.normas-sellos .sellos-lista .norma .decoracion-linea{
+.normas-sellos .sellos-lista .norma .decoracion-linea {
     height: 4px;
     width: 34px;
     background: black;
     margin: 10px 0px;
 }
 
-.normas-sellos .sellos-lista .norma p{
+.normas-sellos .sellos-lista .norma p {
     color: #4F4F4F;
     text-transform: uppercase;
     font-size: 0.9em;
@@ -6360,11 +6442,11 @@ a.btn-glosario {
     margin-bottom: 5px;
 }
 
-.normas-sellos .sellos-lista .norma .tema a.tema-norma{
+.normas-sellos .sellos-lista .norma .tema a.tema-norma {
     margin: 0px;
     padding: 3px 13px 2px 13px;
     border-radius: 50px;
-    background: #3A6AB1!important;
+    background: #3A6AB1 !important;
     border: 1.5px solid #3A6AB1;
     color: white;
     font-size: 0.8em;
@@ -6375,31 +6457,31 @@ a.btn-glosario {
     text-decoration: none;
 }
 
-.normas-sellos .sellos-lista .norma .tema a.tema-norma:hover{
-    background: black!important;
+.normas-sellos .sellos-lista .norma .tema a.tema-norma:hover {
+    background: black !important;
     border: 1.5px solid black;
 }
 
 
 /*Evaluacion Sección*/
 
-.pt-evaluacion{
-  margin-top: 100px;
+.pt-evaluacion {
+    margin-top: 100px;
 }
 
-.norma-evaluada{
-   margin: 60px auto;
+.norma-evaluada {
+    margin: 60px auto;
 }
 
-.norma-evaluada .sello .volver-evaluaciones{
-    color:#4F4F4F;
+.norma-evaluada .sello .volver-evaluaciones {
+    color: #4F4F4F;
     font-weight: 700;
     font-size: 1em;
     text-decoration: none;
 }
 
-.norma-evaluada .sello .volver-evaluaciones img{
-    margin-right:4px;
+.norma-evaluada .sello .volver-evaluaciones img {
+    margin-right: 4px;
     width: 10px;
 }
 
@@ -6409,7 +6491,7 @@ a.btn-glosario {
     width: 90%;
 }
 
-.norma-evaluada .sello .simbologia{
+.norma-evaluada .sello .simbologia {
     margin-top: 0px;
     margin-bottom: 20px;
 }
@@ -6420,20 +6502,20 @@ a.btn-glosario {
     align-items: center;
 }
 
-.norma-evaluada .sello .simbologia span img{
+.norma-evaluada .sello .simbologia span img {
     width: 10px;
 }
 
-.norma-evaluada .sello .evaluacion-cuantitativa img{
+.norma-evaluada .sello .evaluacion-cuantitativa img {
     width: 85%;
     margin-bottom: 40px;
 }
 
-.norma-evaluada .informacion{
-  padding-left: 40px;
+.norma-evaluada .informacion {
+    padding-left: 40px;
 }
 
-.norma-evaluada .informacion .como-leer-evaluaciones{
+.norma-evaluada .informacion .como-leer-evaluaciones {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
@@ -6444,28 +6526,28 @@ a.btn-glosario {
     font-size: 1em;
 }
 
-.norma-evaluada .informacion a.tema-norma{
-  margin: 0px;
-  padding: 3px 13px 2px 13px;
-  border-radius: 50px;
-  background: #3A6AB1!important;
-  border: 1.5px solid #3A6AB1;
-  color: white;
-  font-size: 0.8em;
-  transition: 0.5s all;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  font-weight: 800;
-  text-decoration: none;
-  margin-bottom: 20px;
+.norma-evaluada .informacion a.tema-norma {
+    margin: 0px;
+    padding: 3px 13px 2px 13px;
+    border-radius: 50px;
+    background: #3A6AB1 !important;
+    border: 1.5px solid #3A6AB1;
+    color: white;
+    font-size: 0.8em;
+    transition: 0.5s all;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: none;
+    margin-bottom: 20px;
 }
 
-.norma-evaluada .informacion a.tema-norma:hover{
-    background: black!important;
+.norma-evaluada .informacion a.tema-norma:hover {
+    background: black !important;
     border: 1.5px solid black;
 }
 
-.norma-evaluada .informacion .nombre-norma{
+.norma-evaluada .informacion .nombre-norma {
     margin: 10px 0px;
     font-size: 1.3em;
     text-transform: uppercase;
@@ -6474,19 +6556,19 @@ a.btn-glosario {
     letter-spacing: 0px;
 }
 
-.norma-evaluada .informacion p{
+.norma-evaluada .informacion p {
     color: #4F4F4F;
     font-size: 1.5em;
     font-weight: 700;
     font-style: italic;
 }
 
-.norma-evaluada .informacion .org-evaluadora{
-  margin-top: 20px;
-  margin-bottom: 30px;
+.norma-evaluada .informacion .org-evaluadora {
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-.norma-evaluada .informacion .org-evaluadora p{
+.norma-evaluada .informacion .org-evaluadora p {
     font-size: 0.8em;
     font-weight: 900;
     color: #4F4F4F;
@@ -6496,11 +6578,11 @@ a.btn-glosario {
     margin-bottom: 15px;
 }
 
-.norma-evaluada .informacion .org-evaluadora .logos-organizaciones img{
+.norma-evaluada .informacion .org-evaluadora .logos-organizaciones img {
     width: auto;
     max-height: 100px;
     max-width: 150px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .norma-evaluada .informacion .accordion-item {
@@ -6509,9 +6591,9 @@ a.btn-glosario {
 }
 
 
-.norma-evaluada .informacion .accordion-item .articulo{
-  border-bottom: 1px solid #4F4F4F;
-  padding: 20px 0px;
+.norma-evaluada .informacion .accordion-item .articulo {
+    border-bottom: 1px solid #4F4F4F;
+    padding: 20px 0px;
 }
 
 .norma-evaluada .informacion .accordion-item .articulo:first-child {
@@ -6523,11 +6605,11 @@ a.btn-glosario {
     padding-bottom: 0px;
 }
 
-.norma-evaluada .informacion .accordion-item .articulo p:last-child{
-   margin-bottom: 0px;
+.norma-evaluada .informacion .accordion-item .articulo p:last-child {
+    margin-bottom: 0px;
 }
 
-.norma-evaluada .informacion .accordion-item h2{
+.norma-evaluada .informacion .accordion-item h2 {
     border-left: 0px;
     padding: 0px;
 }
@@ -6557,15 +6639,16 @@ a.btn-glosario {
     border-left: 4px solid #FFD700;
 }
 
-.norma-evaluada .informacion .accordion-item .accordion-body p{
-   font-size: 0.95em;
-   font-style: normal;
-   color: ##4F4F4F;
-   font-weight: 500;
+.norma-evaluada .informacion .accordion-item .accordion-body p {
+    font-size: 0.95em;
+    font-style: normal;
+    color: ##4F4F4F;
+    font-weight: 500;
 }
-.norma-evaluada .informacion .accordion-item .item{
-   border-bottom: 1px solid #4F4F4F;
-   padding: 20px 0px;
+
+.norma-evaluada .informacion .accordion-item .item {
+    border-bottom: 1px solid #4F4F4F;
+    padding: 20px 0px;
 }
 
 .norma-evaluada .informacion .accordion-item .item:first-child {
@@ -6578,115 +6661,115 @@ a.btn-glosario {
 }
 
 
-.norma-evaluada .informacion .accordion-item h3{
-   font-size: 1.1em;
-   color:#4F4F4F;
-   font-weight: 900;
-   text-transform: inherit;
-   margin-bottom: 5px;
-   letter-spacing: 0px;
+.norma-evaluada .informacion .accordion-item h3 {
+    font-size: 1.1em;
+    color: #4F4F4F;
+    font-weight: 900;
+    text-transform: inherit;
+    margin-bottom: 5px;
+    letter-spacing: 0px;
 }
 
-.norma-evaluada .informacion .accordion-item .item p{
-   margin-bottom: 0px;
+.norma-evaluada .informacion .accordion-item .item p {
+    margin-bottom: 0px;
 }
 
-.norma-evaluada .informacion .accordion-item .item img{
-  width: 250px;
-  max-width: 250px;
-  height: auto;
-  margin: 10px 0px;
+.norma-evaluada .informacion .accordion-item .item img {
+    width: 250px;
+    max-width: 250px;
+    height: auto;
+    margin: 10px 0px;
 }
 
-.norma-evaluada .informacion .evaluacion-completa{
-  margin-bottom: 40px;
+.norma-evaluada .informacion .evaluacion-completa {
+    margin-bottom: 40px;
 }
 
-.norma-evaluada .informacion .descarga-evaluacion{
+.norma-evaluada .informacion .descarga-evaluacion {
     margin: 0px 0px 50px 0px;
 }
 
-.norma-evaluada .informacion .descarga-evaluacion h5{
-  font-size: 1em;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: black;
-  margin-bottom: 0px;
+.norma-evaluada .informacion .descarga-evaluacion h5 {
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: black;
+    margin-bottom: 0px;
 }
 
-.norma-evaluada .informacion .descarga-evaluacion a{
-  margin: 0px;
-  padding: 10px 20px;
-  border-radius: 50px;
-  background: black!important;
-  border: 1.5px solid #black;
-  color: white;
-  font-size: 0.8em;
-  transition: 0.5s all;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  font-weight: 800;
-  text-decoration: none;
-  margin-bottom: 20px;
+.norma-evaluada .informacion .descarga-evaluacion a {
+    margin: 0px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: black !important;
+    border: 1.5px solid #black;
+    color: white;
+    font-size: 0.8em;
+    transition: 0.5s all;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: none;
+    margin-bottom: 20px;
 }
 
-.norma-evaluada .informacion .descarga-evaluacion a:hover{
-   background: #CC0000!important;
+.norma-evaluada .informacion .descarga-evaluacion a:hover {
+    background: #CC0000 !important;
 }
 
 
-.norma-evaluada .informacion .otras-evaluaciones-temas{
+.norma-evaluada .informacion .otras-evaluaciones-temas {
     margin: 40px 0px 0px 0px;
 }
 
-.norma-evaluada .informacion .otras-evaluaciones-temas a{
-      margin: 0px;
-      padding: 3px 13px 2px 13px;
-      border-radius: 50px;
-      background: #3A6AB1!important;
-      border: 1.5px solid #3A6AB1;
-      color: white;
-      font-size: 0.8em;
-      transition: 0.5s all;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      font-weight: 800;
-      text-decoration: none;
-      margin-bottom: 20px;
+.norma-evaluada .informacion .otras-evaluaciones-temas a {
+    margin: 0px;
+    padding: 3px 13px 2px 13px;
+    border-radius: 50px;
+    background: #3A6AB1 !important;
+    border: 1.5px solid #3A6AB1;
+    color: white;
+    font-size: 0.8em;
+    transition: 0.5s all;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: none;
+    margin-bottom: 20px;
 }
 
 .avanzar-evaluaciones {
     background: black;
 }
 
-.avanzar-evaluaciones .navegacion{
-  padding: 0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px auto;
+.avanzar-evaluaciones .navegacion {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px auto;
 }
 
-.avanzar-evaluaciones .navegacion li{
-  list-style: none;
+.avanzar-evaluaciones .navegacion li {
+    list-style: none;
 }
 
-.avanzar-evaluaciones .navegacion li a{
-  color: white;
-  font-size: 0.9em;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-decoration: none;
+.avanzar-evaluaciones .navegacion li a {
+    color: white;
+    font-size: 0.9em;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
-.avanzar-evaluaciones .navegacion li a img{
-  margin:0px 10px;
+.avanzar-evaluaciones .navegacion li a img {
+    margin: 0px 10px;
 }
 
-.avanzar-evaluaciones .navegacion li a:hover{
-  color: FFD700;
+.avanzar-evaluaciones .navegacion li a:hover {
+    color: FFD700;
 }
 
 
@@ -6710,8 +6793,8 @@ a.btn-glosario {
 }
 
 .simbologia .modal-content h5 img {
-  width: 25px!important;
-  height: auto!important;
+    width: 25px !important;
+    height: auto !important;
 }
 
 .simbologia .modal-content .modal-body {
@@ -6727,7 +6810,7 @@ a.btn-glosario {
     font-size: 1em;
     color: black;
     padding-bottom: 0px;
-    margin: 10px 0px!important;
+    margin: 10px 0px !important;
     width: 100%;
 }
 
@@ -6735,10 +6818,10 @@ a.btn-glosario {
 /*Como leer evaluaciones*/
 
 .como-leer-evaluaciones .modal-header {
-  border-bottom: 0px;
-  margin: 0px 50px;
-  padding-bottom: 0px;
-  padding: 30px 0px 0px 0px;
+    border-bottom: 0px;
+    margin: 0px 50px;
+    padding-bottom: 0px;
+    padding: 30px 0px 0px 0px;
 }
 
 .como-leer-evaluaciones .modal-content .modal-body {
@@ -6760,75 +6843,327 @@ a.btn-glosario {
     font-size: 1.5em;
 }
 
-.como-leer-evaluaciones .modal-content .modal-body h4{
-   color: white;
-   font-weight: 900;
-   text-transform: uppercase;
-   padding: 5px 10px;
-   background: black;
-   font-size: 1em;
+.como-leer-evaluaciones .modal-content .modal-body h4 {
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    background: black;
+    font-size: 1em;
 }
 
-.como-leer-evaluaciones .modal-content .modal-body p{
-   font-size: 0.9em;
-   text-align: center;
-   margin: 0px 0px 35px 0px;
-   font-style: normal;
-   font-weight: 400;
-   color: black;
-   padding: 0px;
-   width: 100%;
+.como-leer-evaluaciones .modal-content .modal-body p {
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0px 0px 35px 0px;
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    padding: 0px;
+    width: 100%;
 }
 
-.como-leer-evaluaciones .modal-content .modal-body .fila{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.como-leer-evaluaciones .modal-content .modal-body .fila {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.como-leer-evaluaciones .modal-content .modal-body .cartel{
-  width:50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.como-leer-evaluaciones .modal-content .modal-body .cartel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.como-leer-evaluaciones .modal-content .modal-body .cartel img{
-   width: 70%;
+.como-leer-evaluaciones .modal-content .modal-body .cartel img {
+    width: 70%;
 }
 
-.como-leer-evaluaciones .modal-content .modal-body .simbologia{
-  width:50%;
-  margin-top: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.como-leer-evaluaciones .modal-content .modal-body .simbologia {
+    width: 50%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.como-leer-evaluaciones .modal-content .modal-body .simbologia p{
-  text-align: left!important;
-  font-size: 0.9em;
-  color: black;
-  padding: 0px;
-  margin: 0px 0px 15px 0px;
+.como-leer-evaluaciones .modal-content .modal-body .simbologia p {
+    text-align: left !important;
+    font-size: 0.9em;
+    color: black;
+    padding: 0px;
+    margin: 0px 0px 15px 0px;
 }
 
-.como-leer-evaluaciones .modal-content .modal-body .simbologia img{
-  width: 70%;
+.como-leer-evaluaciones .modal-content .modal-body .simbologia img {
+    width: 70%;
 }
 
 
-@media (max-width:991px){
-   .pt-evaluacion{
-     margin-top: 82px;
-   }
-   .norma-evaluada .informacion{
-     padding-left: 20px;
-   }
+/*Movil Evaluación de norma*/
+
+@media (max-width:1200px) {
+    .normas-sellos .sellos-lista .norma {
+        width: 31.8%;
+    }
 }
 
-@media (max-width:768px){
-   .norma-evaluada .informacion{
-     padding-left: 0px;
-   }
+
+@media (max-width:991px) {
+    .banner-evaluaciones {
+        height: 500px;
+        position: relative;
+        margin-top: 85px;
+    }
+
+    .banner-evaluaciones .banner-img-evaluaciones {
+        bottom: 0px;
+        top: auto !important;
+    }
+
+    .banner-evaluaciones .descripcion-banner {
+        padding: 0px;
+    }
+
+    .pt-evaluacion {
+        margin-top: 82px;
+    }
+
+    .norma-evaluada .informacion {
+        padding-left: 20px;
+    }
+
+    .evaluaciones-lista .como-leer-evaluaciones {
+        bottom: 0px;
+    }
+
+    .normas-sellos .sellos-lista .norma {
+        width: 48.5%;
+    }
+
+    .normas-sellos .sellos-lista .norma .informacion-norma {
+        height: 200px;
+    }
+
+    .simbologia .simbolos button {
+        font-size: 0.9em;
+    }
+
+    .simbologia .simbolos span {
+        padding: 5px 5px;
+    }
+
+}
+
+
+@media (max-width:768px) {
+    .norma-evaluada .informacion {
+        padding-left: 0px;
+    }
+
+    .banner-evaluaciones {
+        height: 500px;
+        position: relative;
+        margin-top: 85px;
+    }
+
+    .banner-evaluaciones .banner-img-evaluaciones {
+        bottom: 0px;
+        top: auto !important;
+    }
+
+    .banner-evaluaciones .descripcion-banner {
+        padding: 0px;
+    }
+
+    .banner-evaluaciones .informacion-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-evaluaciones .informacion-banner h2 {
+        font-size: 1.6em;
+    }
+
+    .filtro-temas-evaluaciones .container {
+        max-width: 100% !important;
+        margin: 0px;
+    }
+
+    .evaluaciones-lista h2.titulo-evaluaciones {
+        font-size: 1.6em;
+    }
+
+    .normas-sellos .sellos-lista .norma {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .evaluaciones-lista .como-leer-evaluaciones {
+        justify-content: flex-start;
+    }
+
+    .simbologia {
+        margin-top: 30px;
+    }
+
+    .avanzar-evaluaciones .navegacion {
+        justify-content: center;
+    }
+
+    .avanzar-evaluaciones .navegacion li {
+        padding: 5px;
+    }
+
+    .norma-evaluada .informacion p {
+        font-size: 1.3em;
+    }
+}
+
+/*Home Evaluaciones de norma*/
+
+.portada-banner {
+    padding-top: 60px;
+    position: relative;
+}
+
+.portada-banner .enlace-portada {
+    position: absolute;
+    bottom: auto;
+    top: 32%;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portada-banner .enlace-portada p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: #4F4F4F;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.portada-banner .enlace-portada h2 {
+    border: 0px;
+    text-align: center;
+    padding: 0px;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.llamado-inscripcion {
+    background: #333333;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    bottom: 1px;
+    margin-bottom: 80px;
+}
+
+.llamado-inscripcion p{
+  color: white;
+  padding: 0px 10px;
+  margin-bottom: 0px;
+  text-transform: uppercase;;
+  font-size: 1em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.llamado-inscripcion a{
+  margin: 0px;
+  background:#FFD700!important;
+  color: #333333;
+  zoom: 0.95;
+}
+
+
+/*Más sobre el proyecto*/
+#mas-sobre-el-proyecto .modal-header {
+  margin-bottom: 0px;
+}
+#mas-sobre-el-proyecto .modal-header .modal-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    border-left: 0px;
+    color: black;
+    text-align: center;
+    font-size: 1.6em;
+    padding-left: 0px;
+    width: 100%;
+}
+
+/* Descripción Simbologia */
+
+
+.simbologia p {
+    width: 85%;
+    font-size: 12.5px;
+    line-height: inherit;
+    color: black;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+@media (max-width:1200px) {
+.portada-banner {
+      padding-top: 85px;
+  }
+
+  .portada-banner .enlace-portada h2 {
+    font-size: 2.7em;
+}
+.portada-banner .enlace-portada p {
+    font-size: 1.2em;
+}
+.portada-banner a {
+    font-size: 0.85em;
+    padding: 8px 20px;
+}
+}
+
+
+@media (max-width:768px) {
+.portada-banner {
+    padding-top: 85px;
+}
+.portada-banner .enlace-portada h2 {
+  font-size: 2em;
+}
+.portada-banner .enlace-portada p {
+    font-size: 1em;
+}
+.portada-banner .enlace-portada {
+    top: 140px;
+}
+.llamado-inscripcion{
+  padding: 15px 0px;
+}
+.llamado-inscripcion a {
+    zoom: 0.85;
+    padding: 5px 20px;
+}
+}
+
+@media (max-width:550px) {
+.portada-banner .enlace-portada {
+    top: 100px;
+}
+.llamado-inscripcion p{
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
 }
