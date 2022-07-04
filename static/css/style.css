@@ -7122,7 +7122,7 @@ a.btn-glosario {
       padding-top: 85px;
   }
 
-  .portada-banner .enlace-portada h2 {
+.portada-banner .enlace-portada h2 {
     font-size: 2.7em;
 }
 .portada-banner .enlace-portada p {
@@ -7139,18 +7139,22 @@ a.btn-glosario {
 .portada-banner {
     padding-top: 85px;
 }
+
+.portada-banner .enlace-portada {
+    top: 35%;
+}
+
 .portada-banner .enlace-portada h2 {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 .portada-banner .enlace-portada p {
     font-size: 1em;
 }
-.portada-banner .enlace-portada {
-    top: 140px;
-}
+
 .llamado-inscripcion{
   padding: 15px 0px;
 }
+
 .llamado-inscripcion a {
     zoom: 0.85;
     padding: 5px 20px;
@@ -7158,12 +7162,11 @@ a.btn-glosario {
 }
 
 @media (max-width:550px) {
-.portada-banner .enlace-portada {
-    top: 100px;
-}
+.portada-banner .enlace-portada h2 {
+    font-size: 2em;
+  }
 .llamado-inscripcion p{
     font-size: 0.9em;
     margin-bottom: 8px;
 }
-
 }
