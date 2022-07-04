@@ -8,7 +8,7 @@
 <section class="container-fluid portada-banner">
    <div class="row">
       <img src="{% static 'img/banner-desktop.gif' %}" alt="banner" class="img-fluid portada-desktop">
-      <img src="{% static 'img/banner-desktop.gif' %}" alt="banner" class="img-fluid portada-movil">
+      <img src="{% static 'img/banner-movil.gif' %}" alt="banner" class="img-fluid portada-movil">
      <div class="enlace-portada">
        <p>Aquí nos acercamos a la</p>
        <h2>Nueva Constitución</h2>
@@ -20,7 +20,6 @@
         <p>Inscríbete para evaluar con tu organización</p>
         <a href="https://wa.me/56953069053" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn">Inscríbete aquí</a>
 </section>
-
 
 <section class="hitos-cc container">
     <div class="row justify-content-center">
@@ -107,6 +106,38 @@
             <a href="{% url 'constitucion-feminista' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Revisar</a>
        </div>
 
+    </div>
+</section>
+
+
+
+<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
+    <div class="container">
+        <div class="row">
+            <div class="organizaciones-lista wow animate__animated animate__fadeIn">
+              <h2>Organizaciones Presentes</h2>
+              <div class="decoracion green"></div>
+                <ul>
+                  {% for orgevaluadora in orgs_evaluaciones_list %}
+                  <div class="col-6 col-sm-4 col-md-2">
+                      <li><img src="{{ orgevaluadora.logo_org_norma.url }}" alt="organizacion logo" class="img-fluid logo"></li>
+                  </div>
+                  {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container call-to-action-organizaciones">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn">
+            <h2>¿Eres una organización y quieres estar aquí?</h2>
+            <div class="call-to-action">
+                <a href="https://wa.me/56953069053" class="btn-lcen button hvr-sweep-to-right">Comunícate aquí</a>
+            </div>
+        </div>
     </div>
 </section>
 

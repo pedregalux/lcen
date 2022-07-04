@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 from django.views.generic import DetailView
-from django.shortcuts import get_object_or_404
 from .models import Norma,CategoriaNorma,TagNorma,OrganizacionNorma
 from .filters import NormaCategorias
 
@@ -34,6 +33,11 @@ class VerEvaluacionView(DetailView):
     model = Norma
     context_object_name = 'evaluacion_detail'
     template_name = 'evaluaciones/verevaluacion.html'
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['relacionadas'] = Norma.objects.filter(categoriadelanorma=self.object)
+    #     return context
 
 
 class VerHomeEvaluacionView(DetailView):

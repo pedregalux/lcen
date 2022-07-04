@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils import timezone
 
 class OrganizacionNorma(models.Model):
     nombre_org_norma = models.CharField(
@@ -81,8 +80,9 @@ class Norma(models.Model):
         related_name="tags_de_norma",
         verbose_name="Tags/Sellos aplicados a la norma",
         blank=True)
-    titulo_oficial_norma = models.TextField("Texto del artículo",
-        help_text="Texto del artículo")
+    titulo_oficial_norma = models.CharField("Título oficial de norma",
+        max_length=256,
+        help_text="Título oficial de la norma")
     titulo_web_norma = models.CharField("Título web de la norma",
         max_length=256,
         help_text="Título oficial de la norma")
@@ -164,12 +164,8 @@ class Norma(models.Model):
         null=True,
         blank=True)
     sello_norma = models.ImageField("Imagen/Sello de Norma", upload_to='iconostemas/', null=True, blank=True)
-    prev_norma = models.ForeignKey("self", related_name="norma_prev", null=True, blank=True, on_delete=models.CASCADE)
-    next_norma = models.ForeignKey("self", related_name="norma_next", null=True, blank=True, on_delete=models.CASCADE)
-
     class Meta:
         verbose_name = "Artículo"
         verbose_name_plural = "Artículos"
-        # ordering = ['titulo_web_norma']
     def __str__(self):
         return self.titulo_web_norma
