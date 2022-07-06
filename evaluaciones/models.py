@@ -80,9 +80,8 @@ class Norma(models.Model):
         related_name="tags_de_norma",
         verbose_name="Tags/Sellos aplicados a la norma",
         blank=True)
-    titulo_oficial_norma = models.CharField("Título oficial de norma",
-        max_length=256,
-        help_text="Título oficial de la norma")
+    titulo_oficial_norma = models.TextField("Texto oficial de norma",
+        help_text="Texto oficial de la norma")
     titulo_web_norma = models.CharField("Título web de la norma",
         max_length=256,
         help_text="Título oficial de la norma")
