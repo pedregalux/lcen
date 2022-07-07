@@ -163,6 +163,8 @@ class Norma(models.Model):
         null=True,
         blank=True)
     sello_norma = models.ImageField("Imagen/Sello de Norma", upload_to='iconostemas/', null=True, blank=True)
+    prev_norma = models.ForeignKey('self', related_name="prev_eval_norma", on_delete=models.DO_NOTHING)
+    next_norma = models.ForeignKey('self', related_name="next_eval_norma", on_delete=models.DO_NOTHING)
     class Meta:
         verbose_name = "Artículo"
         verbose_name_plural = "Artículos"
