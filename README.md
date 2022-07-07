@@ -149,6 +149,6 @@ Todo el código utilizado está [público](https://gitlab.com/ciudadaniai/lcen) 
 
 ## Licencia
 
-
+[Licencia](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 **Paz y Software Libre!**
