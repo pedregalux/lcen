@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'laconstitucion.apps.LaconstitucionConfig',
     'organizaciones.apps.OrganizacionesConfig',
     'evaluaciones.apps.EvaluacionesConfig',
+    'evaluacionesinternacionales.apps.EvaluacionesinternacionalesConfig',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
