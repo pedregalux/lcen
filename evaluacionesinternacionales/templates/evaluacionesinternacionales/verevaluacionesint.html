@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load normas_extra %}
+{% load static %}
+{% block title %}Conoce la nueva Constitución{% endblock %}
+
+{% block content %}
+
+<section class="banner-evaluaciones container-fluid">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4 informacion-banner">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Conoce la nueva Constitución</li>
+                    </ol>
+                </nav>
+                <h2>Evaluación de Normas</h2>
+                <img src="{% static 'img/sellos-banner-evaluaciones.svg' %}" alt="sellos imagen" class="sellos-fila">
+                <a href="#" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn" type="button" data-bs-toggle="modal" data-bs-target="#mas-sobre-el-proyecto">Más sobre el proyecto</a>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="mas-sobre-el-proyecto" tabindex="-1" aria-labelledby="mas-sobre-el-proyectoLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="mas-sobre-el-proyectoLabel">Más sobre el proyecto</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>La Constitución es Nuestra  es un esfuerzo colectivo de organizaciones de la sociedad civil y personas de la academia que nos hemos unido para analizar y evaluar el nuevo texto constitucional en relación a derechos humanos, derechos de la naturaleza y fortalecimiento democrático. La plataforma quiere lograr una “Constitución comentada” desde un lugar distinto al de la Convención Constitucional, los partidos políticos y los grupos de siempre. Para ello, proponemos compartir en este espacio la diversidad de conocimientos y experiencias de organizaciones que han sido parte de las demandas por derechos sociales en las últimas décadas y que participan activamente en los territorios del país, para contribuir al fortalecimiento del debate democrático en las comunidades.</p>
+                        </div>
+                   </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-5 col-lg-6 descripcion-banner">
+                <div class="informacion">
+                    <h3>LA CONSTITUCIÓN EN NUESTRAS VIDAS</h3>
+                    <div class="decoracion-linea"></div>
+                    <p>¿Cómo la nueva constitución afectará nuestras vidas? Es un interrogante que muchas personas se hacen cara al plebiscito, por ello organizaciones de la sociedad civil y personas de la academia analizan, explican y evalúan los principales artículos en materia de derechos humanos, derechos de la naturaleza y fortalecimiento democrático.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="{% static 'img/banner-evaluaciones-sellos.gif' %}" alt="imagen banner" class="banner-img-evaluaciones">
+
+</section>
+
+<section class="filtro-temas-evaluaciones">
+    <div class="container-fluid invitacion-filtros">
+        <div class="row">
+            <div class="col-12">
+                <h4>Explora los artículos por tema de interés <i class="fas fa-chevron-down" aria-hidden="true"></i></h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 temas">
+                {% normasxcategoria %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="evaluaciones-lista">
+    <div class="container">
+
+        <div class="row">
+
+          <div class="col-12 como-leer-evaluaciones">
+
+            <!-- Button trigger modal -->
+            <a href="#" type="button" class="como-leerlo" data-bs-toggle="modal" data-bs-target="#como-leerlo">Cómo leerlo <img src="{% static 'img/informacion-icono.svg' %}" alt="icono" class="icono"></a>
+            <!-- Modal -->
+            <div class="modal fade" id="como-leerlo" tabindex="-1" aria-labelledby="como-leerloLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="como-leerloLabel">DESCUBRE LA NUEVA CONSTITUCIÓN DESDE LA VOZ DE LA SOCIEDAD CIVIL</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Explora cómo organizaciones de la sociedad civil evaluaron los  artículos de la nueva constitución en relación a DD.HH, derechos de la naturaleza y fortalecimiento democrático.<br />
+                            Cada norma es representada por un cartel o estampilla que contiene los sellos de garantía que fueron aplicados por las organizaciones evaluadoras. Luego, al hacer click, se podrá ver en profundidad la justificación de estos sellos y otras preguntas que fueron respondidas para analizar y evaluar cada artículo.</p>
+                        <div class="fila">
+                           <div class="cartel">
+                              <h4>Cartel</h4>
+                              <img src="{% static 'img/sello-prueba.jpg' %}" class="img-fluid sello">
+                           </div>
+                           <div class="simbologia">
+                              <h4>Sellos temáticos</h4>
+                              <p>Cada sello representa un <b>valor y virtud</b> que el experto identifica que la norma considera</p>
+                              <img src="{% static 'img/simbologia-completa.svg' %}" class="img-fluid simbologia">
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-3 simbologia">
+                  <h5>Simbología <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
+                  <p>Cada norma cuenta con uno o más sellos de calidad que le permiten a las y los evaluadores medir el aporte de las normas en: desarrollo, derechos humanos y de la naturaleza, seguridad y certeza, igualdad, innovación y sustentabilidad, descentralización, y participación y anticorrupción. Los sellos están representados por un color y símbolo. La suma de distintos sellos construye la estampilla de cada norma.</p>
+                  {% simbolosxcategorias %}
+          </div>
+
+            <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+                <div class="normas-sellos">
+                  <h2 class="titulo-evaluaciones">Hay <span>{{ evaluaciones_list.count }}</span> artículos evaluados por expertos</h2>
+
+                    <div class="sellos-lista">
+                        {% for norma in filtrocategorias.qs %}
+                        <div class="norma">
+                            {% if norma.sello_norma %}
+                            <a href="{{ norma.pk }}" class="enlace-norma"><img src="{{ norma.sello_norma.url }}" alt="sello" class="sello"></a>
+                            {% else %}
+                            {% endif %}
+                            <!--{{ norma.titulo_oficial_norma }}-->
+                            <div class="informacion-norma">
+                              <a href="{{ norma.pk }}">{{ norma.titulo_web_norma }}</a>
+                              <div class="decoracion-linea"></div>
+                              <p>Evaluada por:</p>
+                              {% if norma.org_evaluadora.logo_org_norma %}
+                              <img src="{{ norma.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
+                              {% else %}
+                              {% endif %}
+                            </div>
+                            <div class="tema">
+                              <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}" class="tema-norma">{{ norma.categoriadelanorma|truncatechars:15 }}</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
