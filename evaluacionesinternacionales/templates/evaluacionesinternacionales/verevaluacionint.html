@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load normas_extra %}
 {% load static %}
-{% block title %}Evaluación de Normas{% endblock %}
+{% block title %}Evaluación Internacional de Normas{% endblock %}
 
 {% block content %}
 
-<section class="filtro-temas-evaluaciones pt-evaluacion">
+<!-- <section class="filtro-temas-evaluaciones pt-evaluacion">
     <div class="container-fluid invitacion-filtros">
         <div class="row">
             <div class="col-12">
@@ -20,14 +20,14 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="norma-evaluada container">
     <div class="row">
 
         <div class="col-12 col-sm-5 col-md-4 col-lg-3 sello">
             <a href="{% url 'verevaluaciones' %}" class="volver-evaluaciones"><img src="{% static 'img/arrow-prev-gris.svg' %}" alt="icono" class="icono">Volver</a>
-            {% if object.sello_norma %}
+            {% if object.sello_norma_int %}
             <img src="{{ object.sello_norma.url }}" alt="sello-norma" class="norma-sello">
             {% else %}
             {% endif %}
@@ -38,9 +38,9 @@
 
   <ul class="simbolos sellos-utilizados">
 
-    {% if object.tags_norma.all %}
-    {% for sello in object.tags_norma.all %}
-    <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#desarrollo"><img src="{{ sello.icono_tag.url }}" class="simbolo-simbologia" /> <span> {{ sello.tag_norma }}</span></button> </li>
+    {% if object.tags_norma_int.all %}
+    {% for sello in object.tags_norma_int.all %}
+    <li class="simbolo"><button type="button" class="btn-simbolo-modal" data-bs-toggle="modal" data-bs-target="#desarrollo"><img src="{{ sello.icono_tag.url }}" class="simbolo-simbologia" /> <span> {{ sello.tag_norma_int }}</span></button> </li>
     {% endfor %}
     {% endif %}
 
@@ -110,15 +110,15 @@
      </ul>
 
             </div>
-            {% if object.importancia_para_chile %}
+            {% if object.estandares_int %}
             <div class="evaluacion-cuantitativa calidad-de-vida">
-                <img src="{{ object.importancia_para_chile.url }}" class="img-fluid evaluacion-cuantitativa-img">
+                <img src="{{ object.estandares_int.url }}" class="img-fluid evaluacion-cuantitativa-img">
             </div>
             {% else %}
             {% endif %}
-            {% if object.mejora_de_cp80 %}
+            {% if object.constituciones_int %}
             <div class="evaluacion-cuantitativa mejoras-constitucion">
-                <img src="{{ object.mejora_de_cp80.url }}" class="img-fluid evaluacion-cuantitativa-img">
+                <img src="{{ object.constituciones_int.url }}" class="img-fluid evaluacion-cuantitativa-img">
             </div>
             {% else %}
             {% endif %}
