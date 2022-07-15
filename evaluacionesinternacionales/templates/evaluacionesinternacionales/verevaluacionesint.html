@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load normas_extra %}
 {% load static %}
-{% block title %}Conoce la nueva Constitución{% endblock %}
+{% block title %}Conoce la nueva Constitución - Evaluación Internacional de Normas{% endblock %}
 
 {% block content %}
 
@@ -14,7 +14,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Conoce la nueva Constitución</li>
+                        <li class="breadcrumb-item active" aria-current="page">Evaluación Internacional de Normas</li>
                     </ol>
                 </nav>
                 <h2>Evaluación de Normas</h2>
@@ -52,7 +52,7 @@
 
 </section>
 
-<!--<section class="filtro-temas-evaluaciones">
+<section class="filtro-temas-evaluaciones">
     <div class="container-fluid invitacion-filtros">
         <div class="row">
             <div class="col-12">
@@ -67,48 +67,7 @@
             </div>
         </div>
     </div>
-</section> -->
-
-<!-- Filtro Desplegable -->
-
-<section class="filtro-temas-evaluaciones accordion filtro-desktop" id="accordionExample">
-    <div class="container-fluid invitacion-filtros accordion-item">
-        <div class="row">
-            <div class="col-12">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Explora los artículos por tema de interés
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="container accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-        <div class="row accordion-body">
-            <div class="col-12 col-sm-12 col-md-12 temas">
-                 {% normasxcategoria %}
-            </div>
-        </div>
-    </div>
 </section>
-
-<section class="filtro-temas-evaluaciones accordion filtro-movil" id="accordionExample">
-    <div class="container-fluid invitacion-filtros accordion-item">
-        <div class="row">
-            <div class="col-12">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Explora los artículos por tema de interés
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="container accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-        <div class="row accordion-body">
-            <div class="col-12 col-sm-12 col-md-12 temas">
-                 {% normasxcategoria %}
-            </div>
-        </div>
-    </div>
-</section>
-
 
 
 <section class="evaluaciones-lista">

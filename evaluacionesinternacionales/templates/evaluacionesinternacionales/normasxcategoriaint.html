@@ -1,0 +1,11 @@
+
+<ul class="filtro-temas-propuestas">
+  {% for categoria in categorias %}
+      <li>
+      <a class="btn-lcen2 button hvr-sweep-to-right" href="{% url 'verevaluaciones' %}?categoriadelanorma={{ categoria.pk }}#normas">{{ categoria }}</a>
+      </li>
+  {% endfor %}
+      <li>
+      <a class="btn-lcen2 button hvr-sweep-to-right" href="{% url 'verevaluaciones' %}#normas">Ver Todas</a>
+      </li>
+</ul>
