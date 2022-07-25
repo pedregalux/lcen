@@ -17,7 +17,7 @@
                         <li class="breadcrumb-item active" aria-current="page">Evaluación Internacional de Normas</li>
                     </ol>
                 </nav>
-                <h2>Evaluación de Normas</h2>
+                <h2>Evaluación Internacional</h2>
                 <img src="{% static 'img/sellos-banner-evaluaciones.svg' %}" alt="sellos imagen" class="sellos-fila">
                 <a href="#" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn" type="button" data-bs-toggle="modal" data-bs-target="#mas-sobre-el-proyecto">Más sobre el proyecto</a>
             </div>
@@ -52,18 +52,39 @@
 
 </section>
 
-<section class="filtro-temas-evaluaciones">
-    <div class="container-fluid invitacion-filtros">
+<section class="filtro-temas-evaluaciones accordion filtro-desktop" id="accordionExample">
+    <div class="container-fluid invitacion-filtros accordion-item">
         <div class="row">
             <div class="col-12">
-                <h4>Explora los artículos por tema de interés <i class="fas fa-chevron-down" aria-hidden="true"></i></h4>
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Explora los artículos por tema de interés
+                </button>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
+    <div class="container accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="row accordion-body">
             <div class="col-12 col-sm-12 col-md-12 temas">
-                {% normasxcategoria %}
+                 {% normasxcategoriaint %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="filtro-temas-evaluaciones accordion filtro-movil" id="accordionExample">
+    <div class="container-fluid invitacion-filtros accordion-item">
+        <div class="row">
+            <div class="col-12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Explora los artículos por tema de interés
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="row accordion-body">
+            <div class="col-12 col-sm-12 col-md-12 temas">
+                 {% normasxcategoriaint %}
             </div>
         </div>
     </div>
@@ -75,7 +96,7 @@
 
         <div class="row">
 
-          <div class="col-12 como-leer-evaluaciones">
+        {% comment %} <div class="col-12 como-leer-evaluaciones">
 
             <!-- Button trigger modal -->
             <a href="#" type="button" class="como-leerlo" data-bs-toggle="modal" data-bs-target="#como-leerlo">Cómo leerlo <img src="{% static 'img/informacion-icono.svg' %}" alt="icono" class="icono"></a>
@@ -106,12 +127,12 @@
             </div>
         </div>
 
-          </div>
+        </div> {% endcomment %}
 
           <div class="col-12 col-sm-12 col-md-4 col-lg-3 simbologia">
-                  <h5>Simbología <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
+                  {% comment %} <h5>Simbología <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
                   <p>Cada norma cuenta con uno o más sellos de calidad que le permiten a las y los evaluadores medir el aporte de las normas en: desarrollo, derechos humanos y de la naturaleza, seguridad y certeza, igualdad, innovación y sustentabilidad, descentralización, y participación y anticorrupción. Los sellos están representados por un color y símbolo. La suma de distintos sellos construye la estampilla de cada norma.</p>
-                  {% simbolosxcategorias %}
+                  {% simbolosxcategorias %} {% endcomment %}
           </div>
 
             <div class="col-12 col-sm-12 col-md-8 col-lg-9">
