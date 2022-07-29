@@ -26,7 +26,7 @@ class EvaluadoraNormaInt(models.Model):
         verbose_name = "Evaluador@"
         verbose_name_plural = "Evaluador@s"
     def __str__(self):
-        return self.nombre_eval_int
+        return self.nombre_eval_norma_int
 
 # Es la categoría general que agrupa normas, ej: Equidad de Género, etc
 class CategoriaNormaInt(models.Model):
