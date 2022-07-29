@@ -143,6 +143,10 @@
                 <div class="normas-sellos">
                   <h2 class="titulo-evaluaciones">Hay <span>{{ evaluaciones_list.count }}</span> evaluaciones realizadas por expertos/as</h2>
 
+                  <form action="" method="get">
+                    <input name="q" type="text" placeholder="Buscar en los artículos...">
+                  </form>
+
                     <div class="sellos-lista">
                         {% for norma in filtrocategorias.qs %}
                         <div class="norma">
