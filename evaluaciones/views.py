@@ -3,6 +3,7 @@ from django.views.generic import ListView
 from django.views.generic import DetailView
 from .models import Norma,CategoriaNorma,TagNorma,OrganizacionNorma
 from .filters import NormaCategorias
+from django.db.models import Q
 
 
 
@@ -61,3 +62,12 @@ class VerOrgEvalView(DetailView):
         context = super().get_context_data(**kwargs)
         context['evaluaciones'] = Norma.objects.filter(org_evaluadora=self.object)
         return context
+
+class SearchResultsView(ListView):
+    model = Norma
+    template_name = 'search_results.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get("q")
+        object_list = Norma.objects.filter(titulo_oficial_norma__icontains=query)
+        return object_list

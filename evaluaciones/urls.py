@@ -11,4 +11,5 @@ urlpatterns=[
     path('verevaluaciones/<pk>',views.VerEvaluacionView.as_view(), name='verevaluacion'),
     path('verorgsevaluadoras/',views.VerOrgsEvalView.as_view(), name='verorgsevaluadoras'),
     path('verorgevaluadora/<pk>',views.VerOrgEvalView.as_view(), name='verorgevaluadora'),
+    path('search/', SearchResultsView.as_view(), name='search_results'),
 ]
