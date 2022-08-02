@@ -65,9 +65,14 @@ class VerOrgEvalView(DetailView):
 
 class SearchResultsView(ListView):
     model = Norma
-    template_name = 'search_results.html'
+    template_name = 'evaluaciones/search_results.html'
 
     def get_queryset(self):
         query = self.request.GET.get("q")
-        object_list = Norma.objects.filter(titulo_oficial_norma__icontains=query)
+        object_list = Norma.objects.filter(Q(titulo_oficial_norma__icontains=query) | Q(titulo_web_norma__icontains=query))
         return object_list
+
+class SearchResultView(DetailView):
+    model = Norma
+    context_object_name = 'evaluacion_detail'
+    template_name = 'evaluaciones/verevaluacion.html'

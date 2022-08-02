@@ -131,7 +131,7 @@
             </div>
         </div>
 
-          </div>
+        </div>
 
           <div class="col-12 col-sm-12 col-md-4 col-lg-3 simbologia">
                   <h5>Simbología <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
@@ -141,11 +141,44 @@
 
             <div class="col-12 col-sm-12 col-md-8 col-lg-9">
                 <div class="normas-sellos">
-                  <h2 class="titulo-evaluaciones">Resultados de la búsqueda... </h2>
 
-                  <form action="" method="get">
-                    <input name="q" type="text" placeholder="Buscar en los artículos...">
-                  </form>
+                    <div class="formulario">
+                    <form action="{% url 'search_results' %}" method="get">
+                        <input name="q" type="text" placeholder="Buscar en los artículos...">
+                    </form>
+                    </div>
+                    <br>
+                    
+                  <h2 class="titulo-evaluaciones">Resultados de la búsqueda... </h2>
+                    
+                  
+                <div class="sellos-lista">
+                    {% for norma in object_list %}
+                      
+                    <div class="norma">
+                        {% if norma.sello_norma %}
+                        <a href="{{ norma.pk }}" class="enlace-norma"><img src="{{ norma.sello_norma.url }}" alt="sello" class="sello"></a>
+                        {% else %}
+                        {% endif %}
+                        <!--{{ norma.titulo_oficial_norma }}-->
+                        <div class="informacion-norma">
+                          <a href="{{ norma.pk }}">{{ norma.titulo_web_norma }}</a>
+                          <div class="decoracion-linea"></div>
+                          <p>Evaluada por:</p>
+                          {% if norma.org_evaluadora.logo_org_norma %}
+                          <img src="{{ norma.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
+                          {% else %}
+                          {% endif %}
+                        </div>
+                        <div class="tema">
+                          <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}" class="tema-norma">{{ norma.categoriadelanorma|truncatechars:15 }}</a>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+
+
 
                   
 
