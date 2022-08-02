@@ -71,3 +71,8 @@ class SearchResultsView(ListView):
         query = self.request.GET.get("q")
         object_list = Norma.objects.filter(Q(titulo_oficial_norma__icontains=query) | Q(titulo_web_norma__icontains=query))
         return object_list
+
+class SearchResultView(DetailView):
+    model = Norma
+    context_object_name = 'evaluacion_detail'
+    template_name = 'evaluaciones/verevaluacion.html'
