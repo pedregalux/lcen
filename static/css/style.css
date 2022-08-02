@@ -497,7 +497,7 @@ footer .rrss li a i {
 /*Formularios Estilos*/
 .formulario {
     width: 100%;
-    padding: 0px 0px 0px 50px;
+    padding: 0px 0px 0px 0px;
 }
 
 .formulario select.form-select option:hover {
