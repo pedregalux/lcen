@@ -137,27 +137,28 @@
 
             <div class="col-12 col-sm-12 col-md-8 col-lg-9">
                 <div class="normas-sellos">
-                  <h2 class="titulo-evaluaciones">Hay <span>{{ evaluaciones_list.count }}</span> artículos evaluados por expertos</h2>
+                  <h2 class="titulo-evaluaciones">Hay <span>{{ evaluaciones_int_list.count }}</span> artículos evaluados por expertos</h2>
 
                     <div class="sellos-lista">
-                        {% for norma in filtrocategorias.qs %}
+                        {% for normaint in filtrocategoriasint.qs %}
                         <div class="norma">
-                            {% if norma.sello_norma %}
-                            <a href="{{ norma.pk }}" class="enlace-norma"><img src="{{ norma.sello_norma.url }}" alt="sello" class="sello"></a>
+                            {% if normaint.sello_norma_int %}
+                            <a href="{{ normaint.pk }}" class="enlace-norma"><img src="{{ normaint.sello_norma_int.url }}" alt="sello" class="sello"></a>
                             {% else %}
                             {% endif %}
                             <!--{{ norma.titulo_oficial_norma }}-->
                             <div class="informacion-norma">
-                              <a href="{{ norma.pk }}">{{ norma.titulo_web_norma }}</a>
+                              <a href="{{ normaint.pk }}">{{ normaint.titulo_web_norma_int }}</a>
                               <div class="decoracion-linea"></div>
                               <p>Evaluada por:</p>
-                              {% if norma.org_evaluadora.logo_org_norma %}
-                              <img src="{{ norma.org_evaluadora.logo_org_norma.url }}" alt="logo organizacion" class="logo-org">
+                              {{ normaint.org_evaluadora_int }}
+                              {% if normaint.org_evaluadora_int.logo_org_eval_norma_int %}
+                              <img src="{{ normaint.org_evaluadora_int.logo_org_eval_norma_int.url }}" alt="logo organizacion" class="logo-org">
                               {% else %}
                               {% endif %}
                             </div>
                             <div class="tema">
-                              <a href="{% url 'verevaluaciones' %}?categoriadelanorma={{ norma.categoriadelanorma.pk }}" class="tema-norma">{{ norma.categoriadelanorma|truncatechars:15 }}</a>
+                            <a href="{% url 'evaluaciones_int' %}?categoriadelanorma_int={{ normaint.categoriadelanorma_int.pk }}" class="tema-nomra">{{ normaint.categoriadelanorma_int|truncatechars:15 }}</a>
                             </div>
                         </div>
                         {% endfor %}
