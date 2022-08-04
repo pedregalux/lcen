@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% load normas_extra %}
+{% load static %}
+{% block title %}Evaluación Internacional{% endblock %}
+
+{% block content %}
+
+<section class="banner-evaluaciones container-fluid evaluacion-internacional">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 informacion-banner">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="#">Conoce la nueva Constitución</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Evaluación Internacional</li>
+                    </ol>
+                </nav>
+                <h2>Evaluación Internacional</h2>
+                <div class="decoracion-linea"></div>
+                <p class="bajada-titulo">Informate que tan alineada se encuentra la nueva propuesta constitucional de chile en relación a otras constituciones alrededor del mundo.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="{% static 'img/gif-evaluacion-v2.gif' %}" alt="imagen banner" class="banner-img-evaluaciones">
+
+</section>
+
+
+<!-- Filtro Desplegable -->
+
+<section class="filtro-temas-evaluaciones accordion filtro-desktop" id="accordionExample">
+    <div class="container-fluid invitacion-filtros accordion-item">
+        <div class="row">
+            <div class="col-12">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Explora los artículos por tema de interés
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="row accordion-body">
+            <div class="col-12 col-sm-12 col-md-12 temas">
+                 {% normasxcategoria %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="filtro-temas-evaluaciones accordion filtro-movil" id="accordionExample">
+    <div class="container-fluid invitacion-filtros accordion-item">
+        <div class="row">
+            <div class="col-12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Explora los artículos por tema de interés
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="row accordion-body">
+            <div class="col-12 col-sm-12 col-md-12 temas">
+                 {% normasxcategoria %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Visualización lectura evaluacion -->
+
+<section class="norma-evaluada container">
+    <div class="row">
+
+        <div class="col-12 col-sm-5 col-md-4 col-lg-3 sello evaluacion-internacional-lectura">
+            <a href="{% url 'evaluacion-internacional' %}" class="volver-evaluaciones"><img src="{% static 'img/arrow-prev-gris.svg' %}" alt="icono" class="icono">Volver a evaluación internacional</a>
+
+            <div class="leer-articulos">
+                <div class="accordion" id="accordion-articulos">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="articulos-heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#articulos" aria-expanded="true" aria-controls="articulos">
+                                Leer Artículo
+                            </button>
+                        </h2>
+
+                        <div id="articulos" class="accordion-collapse collapse" aria-labelledby="articulos-heading1">
+                            <div class="accordion-body">
+                                <div class="articulo">
+                                    <p>Artículo 82</p>
+                                    <p>1. Toda persona, natural o jurídica, tiene derecho a la libertad de expresión y opinión, en cualquier forma y por cualquier medio, el cual comprende la libertad de buscar, recibir y difundir informaciones e ideas de toda índole.</p>
+                                    <p>2. No existirá censura previa, sino únicamente las responsabilidades ulteriores que determine la ley.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="simbologia">
+                <h5>Evaluación Internacional <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
+                <p>Académicxs internacionales evalúan según su experiencia los principales artículos de la nueva propuesta constitucional  de Chile y <b>que tan alineados estan con otras constituciones alrededor del mundo.</b></p>
+                <div class="simbologia-evaluacion-internacional">
+                    <img src="{% static 'img/simbologia-evaluacion.svg' %}" alt="imagen banner" class="simbologia-evaluaciones">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-7 col-md-8 col-lg-9 evaluacion-internacional-lectura">
+
+            <a href="#" class="tema-norma">Mujeres</a>
+
+            <h3 class="nombre-norma">Sobre la libertad de Expresión</h3>
+            <p class="extracto-norma">“(...) Este artículo toma en consideración las recomendaciones efectuadas por los organismos internacionales y, además, considera los atributos esenciales del derecho a una vivienda adecuada definidos por los instrumentos de la ONU (...)”</p>
+            <div class="org-evaluadora">
+                <p>Evaluada por:</p>
+                <div class="academico-evaluador">
+                    <img src="{% static 'img/icono-experto-evaluador.png' %}" alt="logo organizacion" class="icono experto">
+                    <div class="academico">
+                        <p class="nombre">Nombre evaluador</p>
+                        <p class="profesion">Profesión | País</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leer-biografia">
+                <div class="accordion" id="accordion-biografia">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="biografia-heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#biografia" aria-expanded="true" aria-controls="biografia">
+                                Leer biografía
+                            </button>
+                        </h2>
+
+                        <div id="biografia" class="accordion-collapse collapse" aria-labelledby="biografia-heading1">
+                            <div class="accordion-body">
+                                <div class="biografia">
+                                    <p>Como periodista y jefe de información para una agencia internacional de noticias y corresponsal en Cuba y Europa, la trayectoria profesional de José se nutre de experiencias de primera mano de momentos cruciales en la historia del último cuarto de siglo. Los jueves y domingos publica la columna Número Cero en el periódico Excelsior sobre los temas más relevantes de la agenda pública de México.</p>
+                                    <p>Es además, conductor de televisión de diversos programas de análisis político y de coyuntura en Imagen, Excelsior y Canal Once. Como analista político, busca incidir y generar conversaciones para dar cause a los debates que inciden en la vida de los ciudadanos.</p>
+                                    <p>Además, desde el año 2012 se desempeña como profesor e imparte clases en el Departamento de Comunicación de la Universidad Iberoamericana.</p>
+                                    <p>Tiene experiencia adicional en legislación y cargos públicos, la haberse desempeñado como Diputado en el Congreso de la Ciudad de México, donde presentó y promovió la primera Ley de Transparencia y Acceso a la Información Pública de la capital y la creación de la institución garante del derecho. Asimismo, trabajó en la aprobación de la reforma para elevar la no discriminación a la Constitución, la aprobación de una ley en la materia y la creación del CONAPRED como promesa de campaña de Democracia Social y de otros partidos socialdemócratas que le sucedieron. Dentro del INE se desempeñó como Director de Difusión y Relaciones Institucionales del año 1997 a 1999.</p>
+                                    <p>Por último, dentro de la sociedad civil, en 2004 puso en marcha la Fundación Prensa y Democracia, para promover la profesionalización de la prensa, la investigación periodística y el periodismo de calidad, con el apoyo de Open Society y la Universidad Iberoamericana. A partir de 2010, dicho programa fue absorbido por la antedicha Universidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+
+            <div class="evaluacion-completa">
+                 <h2>Evaluación según su experiencia</h2>
+                 <div class="evaluacion-simbolos">
+                     <div class="item">
+                          <h4>¿Qué tan alineado está este artículo con los estándares establecidos por otras constituciones alrededor del mundo?</h4>
+                          <img src="{% static 'img/alineado.svg' %}" alt="logo organizacion" class="simbolo">
+                     </div>
+                     <div class="item">
+                         <h4>¿Qué tan alineado está este artículo con los estándares internacionales o las prácticas de su disciplina?</h4>
+                         <img src="{% static 'img/no-alineado.svg' %}" alt="logo organizacion" class="simbolo">
+                     </div>
+                 </div>
+                 <div class="preguntas">
+                   <div class="item">
+                         <h4>¿Podrías compartir algunas ideas en respaldo de tus respuestas anteriores?</h4>
+                         <p>El artículo 82 del constituyente chileno cumple con los estándares de toda constitución democrática para proteger, promover y salvaguardar el ejercicio de la libertad de expresión y de prensa. Elimina cualquier restricción a la libertad de buscar, recibir y transmitir información por cualquier medio, prohibe la censura previa y no se desentiende de la responsabilidad con los derechos de terceros a través del reconocimiento del derecho de réplica.</p>
+                   </div>
+                   <div class="item">
+                         <h4>¿Qué mensaje darías a las personas en Chile teniendo en cuenta que en septiembre votarán en el plebiscito en favor o rechazo de la nueva propuesta constitucional?</h4>
+                         <p>El proceso constituyente chileno es un referente en América Latina para la aprobación de una nueva Constitución progresista, incluyente y con un amplio catálogo de derechos sociales, capaz de dejar atrás las viejas estructuras autoritarias de su pasado. Por ello deben resistir las campañas que pretendan aterrorizar a la población contra la nueva Constitución para conservar los privilegios de los viejos ordenes.</p>
+                   </div>
+                 </div>
+                 <div class="descarga-evaluacion">
+                      <h5>Descargar la evaluación completa aquí</h5>
+                      <br>
+                      <a href="#" target="_blank" class="btn-evaluacion"> Descargar Evaluación</a>
+                 </div>
+
+            </div>
+
+
+            <!--end evaluacion completa-->
+          </div>
+        </div>
+</section>
+
+
+
+{% endblock %}
