@@ -6132,9 +6132,6 @@ footer .impulsado {
     display: none;
 }
 
-18:42 footer .impulsado {
-    display: none;
-}
 
 
 /* EXPERIENCIA MEJORADA */
@@ -6711,7 +6708,7 @@ a.btn-glosario {
 .norma-evaluada .informacion .accordion-item .accordion-body p {
     font-size: 0.95em;
     font-style: normal;
-    color: ##4F4F4F;
+    color: #4F4F4F;
     font-weight: 500;
 }
 
@@ -6772,7 +6769,7 @@ a.btn-glosario {
     padding: 10px 20px;
     border-radius: 50px;
     background: black !important;
-    border: 1.5px solid #black;
+    border: 1.5px solid black;
     color: white;
     font-size: 0.8em;
     transition: 0.5s all;
