@@ -145,6 +145,7 @@
 
                   <div class="formulario">
                   <form action="{% url 'search_results' %}">
+                    {% csrf_token %}
                     <input name="q" type="text" placeholder="Buscar en los artículos...">
                   </form>
                   </div>
