@@ -17,11 +17,12 @@ class EvaluadoraNormaInt(models.Model):
         null=True,
         blank=True,
         help_text="Descripción de la evaluador@")
-    sitioweb_eval_norma_int = models.URLField(
+    sitioweb_eval_norma_int = models.CharField(
         "Sitio Web de la Eval",
         null=True,
+        max_length=255,
         blank=True,
-        help_text="URL de la eval")
+        help_text="Profesión/País")
     class Meta:
         verbose_name = "Evaluador@"
         verbose_name_plural = "Evaluador@s"
