@@ -360,6 +360,12 @@ class CronogramaconstitucionalView(TemplateView):
 class GlosarioconstitucionalView(TemplateView):
     template_name = "inicio/glosario-constitucional.html"
 
+class EvaluacioninternacionalView(TemplateView):
+    template_name = "inicio/evaluacion-internacional.html"
+
+class EvaluacioninternacionallecturaView(TemplateView):
+    template_name = "inicio/evaluacion-internacional-lectura.html"
+
     def getpalabra(request):
         form = GlosarioForm()
         if request.method == 'POST':

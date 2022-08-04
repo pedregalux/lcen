@@ -155,4 +155,10 @@ urlpatterns = [
     path('reimaginala/', ReimaginalaView.as_view(),
          name='reimaginala'),
 
+    path('evaluacion-internacional/', EvaluacioninternacionalView.as_view(),
+         name='evaluacion-internacional'),
+
+    path('evaluacion-internacional-lectura/', EvaluacioninternacionallecturaView.as_view(),
+         name='evaluacion-internacional-lectura'),
+
 ]

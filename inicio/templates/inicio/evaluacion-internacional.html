@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% load normas_extra %}
+{% load static %}
+{% block title %}Evaluación Internacional{% endblock %}
+
+{% block content %}
+
+<section class="banner-evaluaciones container-fluid evaluacion-internacional">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 informacion-banner">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="#">Conoce la nueva Constitución</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Evaluación Internacional</li>
+                    </ol>
+                </nav>
+                <h2>Evaluación Internacional</h2>
+                <div class="decoracion-linea"></div>
+                <p class="bajada-titulo">Informate que tan alineada se encuentra la nueva propuesta constitucional de chile en relación a otras constituciones alrededor del mundo.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="{% static 'img/gif-evaluacion-v2.gif' %}" alt="imagen banner" class="banner-img-evaluaciones">
+
+</section>
+
+
+<!-- Filtro Desplegable -->
+
+<section class="filtro-temas-evaluaciones accordion filtro-desktop" id="accordionExample">
+    <div class="container-fluid invitacion-filtros accordion-item">
+        <div class="row">
+            <div class="col-12">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Explora los artículos por tema de interés
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="row accordion-body">
+            <div class="col-12 col-sm-12 col-md-12 temas">
+                 {% normasxcategoria %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="filtro-temas-evaluaciones accordion filtro-movil" id="accordionExample">
+    <div class="container-fluid invitacion-filtros accordion-item">
+        <div class="row">
+            <div class="col-12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Explora los artículos por tema de interés
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="row accordion-body">
+            <div class="col-12 col-sm-12 col-md-12 temas">
+                 {% normasxcategoria %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="evaluaciones-lista internacional-lista">
+    <div class="container">
+
+        <div class="row">
+
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                  <h2 class="titulo-evaluacion-internacional">Hay <span>15</span> artículos evaluados por expertos internacionales</h2>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-3 simbologia">
+                  <h5>Evaluación Internacional <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
+                  <p>Académicxs internacionales evalúan según su experiencia los principales artículos de la nueva propuesta constitucional  de Chile y <b>que tan alineados estan con otras constituciones alrededor del mundo.</b></p>
+                  <div class="simbologia-evaluacion-internacional">
+                      <img src="{% static 'img/simbologia-evaluacion.svg' %}" alt="imagen banner" class="simbologia-evaluaciones">
+                  </div>
+          </div>
+
+            <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+
+                  <div class="book-lista">
+
+
+                      <a href="{% url 'evaluacion-internacional-lectura' %}">
+                        <div class="evaluacion-book">
+                            <p class="articulo">Artículo 161</p>
+                            <div class="decoracion-linea"></div>
+                            <h3>Sobre la paridad</h3>
+                            <img src="{% static 'img/no-alineado.svg' %}" alt="sello" class="simbolo-ei">
+                            <p class="evaluada-por">Evaluada por:</p>
+                            <p class="evaluador">Nombre Apellido</p>
+                            <p class="datos-evaluador">Profesión / País</p>
+                            <div class="tema">
+                              <a href="#" class="tema-norma">Mujeres</a>
+                            </div>
+                          </div>
+                       </a>
+
+                       <a href="{% url 'evaluacion-internacional-lectura' %}">
+                         <div class="evaluacion-book">
+                             <p class="articulo">Artículo 161</p>
+                             <div class="decoracion-linea"></div>
+                             <h3>Sobre la paridad</h3>
+                             <img src="{% static 'img/alineado.svg' %}" alt="sello" class="simbolo-ei">
+                             <p class="evaluada-por">Evaluada por:</p>
+                             <p class="evaluador">Nombre Apellido</p>
+                             <p class="datos-evaluador">Profesión / País</p>
+                             <div class="tema">
+                               <a href="#" class="tema-norma">Mujeres</a>
+                             </div>
+                           </div>
+                        </a>
+
+                        <a href="{% url 'evaluacion-internacional-lectura' %}">
+                          <div class="evaluacion-book">
+                              <p class="articulo">Artículo 161</p>
+                              <div class="decoracion-linea"></div>
+                              <h3>Sobre la paridad</h3>
+                              <img src="{% static 'img/poco-alineado.svg' %}" alt="sello" class="simbolo-ei">
+                              <p class="evaluada-por">Evaluada por:</p>
+                              <p class="evaluador">Nombre Apellido</p>
+                              <p class="datos-evaluador">Profesión / País</p>
+                              <div class="tema">
+                                <a href="#" class="tema-norma">Mujeres</a>
+                              </div>
+                            </div>
+                         </a>
+
+                         <a href="{% url 'evaluacion-internacional-lectura' %}">
+                           <div class="evaluacion-book">
+                               <p class="articulo">Artículo 161</p>
+                               <div class="decoracion-linea"></div>
+                               <h3>Sobre la paridad</h3>
+                               <img src="{% static 'img/bastante-alineado.svg' %}" alt="sello" class="simbolo-ei">
+                               <p class="evaluada-por">Evaluada por:</p>
+                               <p class="evaluador">Nombre Apellido</p>
+                               <p class="datos-evaluador">Profesión / País</p>
+                               <div class="tema">
+                                 <a href="#" class="tema-norma">Mujeres</a>
+                               </div>
+                             </div>
+                          </a>
+
+                  </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
