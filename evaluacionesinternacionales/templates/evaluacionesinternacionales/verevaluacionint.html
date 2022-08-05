@@ -81,7 +81,7 @@
         <div class="col-12 col-sm-5 col-md-4 col-lg-3 sello evaluacion-internacional-lectura">
             <a href="{% url 'evaluaciones_int' %}" class="volver-evaluaciones"><img src="{% static 'img/arrow-prev-gris.svg' %}" alt="icono" class="icono">Volver</a>
 
-            <div class="leer-articulos">
+            {% comment %} <div class="leer-articulos">
                 <div class="accordion" id="accordion-articulos">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="articulos-heading1">
@@ -99,7 +99,7 @@
                         </div>
                     </div>
                   </div>
-            </div>
+            </div> {% endcomment %}
 
 
             <div class="leer-articulos">
@@ -155,25 +155,25 @@
             <p class="extracto-norma">{{ object.resumen_norma_int }}</p>
 
 
-            {% comment %} <div class="leer-biografia">
+            <div class="leer-biografia">
                 <div class="accordion" id="accordion-biografia">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="biografia-heading1">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#biografia" aria-expanded="true" aria-controls="biografia">
-                                Leer biografía
+                                Leer artículo(s) completo(s)
                             </button>
                         </h2>
 
                         <div id="biografia" class="accordion-collapse collapse" aria-labelledby="biografia-heading1">
                             <div class="accordion-body">
                                 <div class="biografia">
-                                    <p>{{ object.org_evaluadora_int.descripcion_eval_norma_int|linebreaks }}</p>
+                                    <p>{{ object.titulo_oficial_norma_int|linebreaks }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                   </div>
-            </div> {% endcomment %}
+            </div>
 
 
             <div class="evaluacion-completa">
