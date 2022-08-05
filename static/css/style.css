@@ -7424,6 +7424,7 @@ header .nav-item-instagram a:hover {
     width: 34px;
     background: #4CB13A;
     margin: 5px auto;
+    display: none;
 }
 
 .internacional-lista .book-lista .evaluacion-book h3 {

@@ -101,6 +101,33 @@
                   </div>
             </div>
 
+
+            <div class="leer-articulos">
+                <div class="accordion" id="accordion-articulos">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="articulos-heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bios" aria-expanded="true" aria-controls="bios">
+                                Leer Biografía Completa
+                            </button>
+                        </h2>
+
+                        <div id="bios" class="accordion-collapse collapse" aria-labelledby="articulos-heading1">
+                            <div class="accordion-body">
+                                <div class="articulo">
+                                    <p>{{ object.org_evaluadora_int.descripcion_eval_norma_int|linebreaks }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+
+
+
+
+
+
             <div class="simbologia">
                 <h5>Evaluación Internacional <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
                 <p>Académic@s internacionales evalúan según su experiencia los principales artículos de la nueva propuesta constitucional  de Chile y <b>que tan alineados están con otras constituciones alrededor del mundo.</b></p>
@@ -115,19 +142,20 @@
             <a href="{% url 'evaluaciones_int' %}?categoriadelanorma_int={{ object.categoriadelanorma_int.pk }}" class="tema-norma">{{ object.categoriadelanorma_int|truncatechars:15 }}</a>
 
             <h3 class="nombre-norma">{{ object.titulo_web_norma_int }}</h3>
-            <p class="extracto-norma">“{{ object.resumen_norma_int }}”</p>
             <div class="org-evaluadora">
                 <p>Evaluada por:</p>
                 <div class="academico-evaluador">
-                    <img src="{% static 'img/icono-experto-evaluador.png' %}" alt="logo organizacion" class="icono experto">
+                    
                     <div class="academico">
                         <p class="nombre">{{ object.org_evaluadora_int }}</p>
                         <p class="profesion">{{ object.org_evaluadora_int.sitioweb_eval_norma_int }}</p>
                     </div>
                 </div>
             </div>
+            <p class="extracto-norma">{{ object.resumen_norma_int }}</p>
 
-            <div class="leer-biografia">
+
+            {% comment %} <div class="leer-biografia">
                 <div class="accordion" id="accordion-biografia">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="biografia-heading1">
@@ -145,7 +173,7 @@
                         </div>
                     </div>
                   </div>
-            </div>
+            </div> {% endcomment %}
 
 
             <div class="evaluacion-completa">
