@@ -105,14 +105,18 @@
                             <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
                         </li>
 
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-27" class="dropdown nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'verevaluaciones' %}">Conoce la nueva constitución</a>
+                        </li>
+
+                        {% comment %} <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-27" class="dropdown nav-item">
                             <a title="Conoce la nueva Constitución" href="{% url 'verevaluaciones' %}" class="nav-link dropdown-toggle">Conoce la nueva constitución<i class="fas fa-chevron-down d-inline d-md-none"></i></a>
                             <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-134" role="menu">
                                 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
                                     <a title="Evaluaciones Internacionales" href="{% url 'evaluaciones_int' %}" class="dropdown-item">Evaluaciones Internacionales</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> {% endcomment %}
 
                         <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-27" class="dropdown nav-item">
                             <a title="Debate Constituyente" href="{% url 'debate-constituyente' %}" class="nav-link dropdown-toggle">Debate Constituyente<i class="fas fa-chevron-down d-inline d-md-none"></i></a>
