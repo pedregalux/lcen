@@ -95,7 +95,6 @@
                     {% for normaint in filtrocategoriasint.qs %}
                       <a href="{{ normaint.pk }}">
                         <div class="evaluacion-book">
-                            <div class="decoracion-linea"></div>
                             <h3>{{ normaint.titulo_web_norma_int }}</h3>
                             <img src="{% static 'img/no-alineado.svg' %}" alt="sello" class="simbolo-ei">
                             <p class="evaluada-por">Evaluada por:</p>
@@ -107,7 +106,7 @@
                           </div>
                        </a>
                     {% endfor %}
-                    
+
                   </div>
 
             </div>
@@ -118,8 +117,3 @@
 
 
 {% endblock %}
-
-
-
-
-
