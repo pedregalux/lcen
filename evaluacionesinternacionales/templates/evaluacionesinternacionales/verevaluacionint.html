@@ -93,7 +93,7 @@
 
         <div class="col-12 col-sm-7 col-md-8 col-lg-9 evaluacion-internacional-lectura">
 
-            <a href="{% url 'evaluaciones_int' %}?categoriadelanorma_int={{ object.categoriadelanorma_int.pk }}" class="tema-norma">{{ object.categoriadelanorma_int|truncatechars:15 }}</a>
+            <a href="{% url 'evaluaciones_int' %}?categoriadelanorma_int={{ object.categoriadelanorma_int.pk }}" class="tema-norma">{{ object.categoriadelanorma_int }}</a>
 
             <h3 class="nombre-norma">{{ object.titulo_web_norma_int }}</h3>
 
@@ -152,10 +152,10 @@
                          <h4>¿Podrías compartir algunas ideas en respaldo de tus respuestas anteriores?</h4>
                          <p>{{ object.explicacion_int|linebreaks }}</p>
                    </div>
-                   <div class="item">
+                   {% comment %} <div class="item">
                          <h4>¿Qué mensaje darías a las personas en Chile teniendo en cuenta que en septiembre votarán en el plebiscito en favor o rechazo de la nueva propuesta constitucional?</h4>
                          <p>{{ object.mensaje_int|linebreaks }}</p>
-                   </div>
+                   </div> {% endcomment %}
                  </div>
                  {% comment %} <div class="descarga-evaluacion">
                       <h5>Descargar la evaluación completa aquí</h5>
@@ -184,6 +184,26 @@
                       </div>
                     </div>
               </div>
+
+              <div class="leer-biografia">
+                <div class="accordion" id="accordion-articulos">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="articulos-heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mensaje" aria-expanded="true" aria-controls="mensaje">
+                                Mensaje de evaluador(a) a ...
+                            </button>
+                        </h2>
+
+                        <div id="mensaje" class="accordion-collapse collapse" aria-labelledby="articulos-heading1">
+                            <div class="accordion-body">
+                                <div class="articulo">
+                                    <p>{{ object.mensaje_int|linebreaks }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
 
 
             <!--end evaluacion completa-->
