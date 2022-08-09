@@ -140,11 +140,11 @@
                  <div class="evaluacion-simbolos">
                      <div class="item">
                           <h4>¿Qué tan alineado está este artículo con los estándares establecidos por otras constituciones alrededor del mundo?</h4>
-                          <img src="{% static 'img/alineado.svg' %}" alt="logo organizacion" class="simbolo">
+                          <img src="{{ object.constituciones_int.url }}" alt="logo organizacion" class="simbolo">
                      </div>
                      <div class="item">
                          <h4>¿Qué tan alineado está este artículo con los estándares internacionales o las prácticas de su disciplina?</h4>
-                         <img src="{% static 'img/no-alineado.svg' %}" alt="logo organizacion" class="simbolo">
+                         <img src="{{ object.estandares_int.url }}" alt="logo organizacion" class="simbolo">
                      </div>
                  </div>
                  <div class="preguntas">
