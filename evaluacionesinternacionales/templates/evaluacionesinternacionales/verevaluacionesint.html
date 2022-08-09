@@ -97,7 +97,7 @@
                       <a href="{{ normaint.pk }}">
                         <div class="evaluacion-book">
                             <h3>{{ normaint.titulo_web_norma_int }}</h3>
-                            <img src="{% static 'img/no-alineado.svg' %}" alt="sello" class="simbolo-ei">
+                            <img src="{{ normaint.sello_norma_int.url }}" alt="sello" class="simbolo-ei">
                             <p class="evaluada-por">Evaluada por:</p>
                             <p class="evaluador">{{ normaint.org_evaluadora_int }}</p>
                             <p class="datos-evaluador">{{ normaint.org_evaluadora_int.sitioweb_eval_norma_int }}</p>
