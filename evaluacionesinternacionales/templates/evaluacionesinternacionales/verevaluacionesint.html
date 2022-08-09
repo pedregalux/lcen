@@ -18,9 +18,9 @@
                         <li class="breadcrumb-item active" aria-current="page">Evaluación Internacional</li>
                     </ol>
                 </nav>
-                <h2>Evaluación Internacional</h2>
+                <h2>ACADÉMICOS/AS DEL MUNDO OPINAN SOBRE LA NUEVA CONSTITUCIÓN</h2>
                 <div class="decoracion-linea"></div>
-                <p class="bajada-titulo">Informate que tan alineada se encuentra la nueva propuesta constitucional de Chile en relación a otras constituciones alrededor del mundo.</p>
+                <p class="bajada-titulo">¿Qué tan alineada está esta propuesta de nueva Constitución para Chile con estándares internacionales y otras Constituciones del mundo? Descubre qué dijeron académicos/as expertos/as en distintas disciplinas alrededor del mundo.</p>
             </div>
 
         </div>
@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-12">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Explora los artículos por tema de interés
+                    Explora los artículos según tus temas de interés
                 </button>
             </div>
         </div>
@@ -57,7 +57,7 @@
         <div class="row">
             <div class="col-12">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Explora los artículos por tema de interés
+                    Explora los artículos según tus temas de interés
                 </button>
             </div>
         </div>
@@ -81,8 +81,9 @@
           </div>
 
           <div class="col-12 col-sm-12 col-md-4 col-lg-3 simbologia">
-                  <h5>Evaluación Internacional <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
-                  <p>Académicxs internacionales evalúan según su experiencia los principales artículos de la nueva propuesta constitucional  de Chile y <b>que tan alineados estan con otras constituciones alrededor del mundo.</b></p>
+                  <h5>Simbología <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
+                  <p>Académicas/os internacionales expertas/os en diversos temas evaluaron qué tan acorde se encuentra la propuesta de Nueva Constitución con estándares internacionales y otras Constituciones del mundo. Acá encontrarás cuatro niveles de concordancia representados por un símbolo con un color y un nivel de alineación: plenamente alineado, bastante alineado, parcialmente alineado o no alineado.
+                  </p>
                   <div class="simbologia-evaluacion-internacional">
                       <img src="{% static 'img/simbologia-evaluacion.svg' %}" alt="imagen banner" class="simbologia-evaluaciones">
                   </div>
@@ -95,7 +96,6 @@
                     {% for normaint in filtrocategoriasint.qs %}
                       <a href="{{ normaint.pk }}">
                         <div class="evaluacion-book">
-                            <div class="decoracion-linea"></div>
                             <h3>{{ normaint.titulo_web_norma_int }}</h3>
                             <img src="{% static 'img/no-alineado.svg' %}" alt="sello" class="simbolo-ei">
                             <p class="evaluada-por">Evaluada por:</p>
@@ -107,7 +107,7 @@
                           </div>
                        </a>
                     {% endfor %}
-                    
+
                   </div>
 
             </div>
@@ -118,8 +118,3 @@
 
 
 {% endblock %}
-
-
-
-
-

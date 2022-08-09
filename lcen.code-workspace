@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "folders": [
         {
             "path": "../../FCI"
@@ -10,4 +11,21 @@
             "path": "../../notas"
         }
     ]
+=======
+	"folders": [
+		{
+			"name": "FCI",
+			"path": "../../FCI"
+		},
+		{
+			"name": "lcen",
+			"path": "."
+		},
+		{
+			"name": "notas",
+			"path": "../../notas"
+		}
+	],
+	"settings": {}
+>>>>>>> desarrollo
 }

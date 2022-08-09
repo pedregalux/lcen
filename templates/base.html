@@ -10,20 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Meta tags para Facebook, Twitter, etc. -->
-    <meta name="description" content="Plataforma ciudadana para conocer las normas de la nueva Constitución analizadas y evaluadas  en relación a derechos humanos, derechos de la naturaleza y fortalecimiento democrático." />
+    <meta name="description" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático." />
     <meta name="author" content="Fundación Ciudadanía Inteligente" />
     <meta name="keywords" content="La Constitución es Nuestra, LCen, Constitución"/>
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="La Constitución es Nuestra"/>
-    <meta property="og:title" content="Plataforma ciudadana para conocer las normas de la nueva Constitución analizadas y evaluadas  en relación a derechos humanos, derechos de la naturaleza y fortalecimiento democrático.">
+    <meta property="og:title" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático.">
     <meta property="og:image" content="{% static 'img/lcen-redes.jpg' %}"/>
-    <meta property="og:description" content="Plataforma ciudadana para conocer las normas de la nueva Constitución analizadas y evaluadas  en relación a derechos humanos, derechos de la naturaleza y fortalecimiento democrático."/>
+    <meta property="og:description" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático."/>
     <meta property="og:url" content="https://laconstitucionesnuestra.cl">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@ciudadania_i" />
     <meta name="twitter:creator" content="@ciudadania_i">
     <meta name="twitter:title" content="La Constitución es Nuestra" />
-    <meta name="twitter:description" content="Plataforma ciudadana para conocer las normas de la nueva Constitución analizadas y evaluadas  en relación a derechos humanos, derechos de la naturaleza y fortalecimiento democrático." />
+    <meta name="twitter:description" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático." />
     <meta name="twitter:image" content="https://laconstitucionesnuestra.cl/static/img/lcen-redes.jpg" />
     <meta name="facebook-domain-verification" content="bdt9t8xxbih23y6dcff3er426vsrp9" />
 
@@ -109,6 +109,15 @@
                             <a class="nav-link" href="{% url 'verevaluaciones' %}">Conoce la nueva constitución</a>
                         </li>
 
+                        {% comment %} <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-27" class="dropdown nav-item">
+                            <a title="Conoce la nueva Constitución" href="{% url 'verevaluaciones' %}" class="nav-link dropdown-toggle">Conoce la nueva constitución<i class="fas fa-chevron-down d-inline d-md-none"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-134" role="menu">
+                                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
+                                    <a title="Evaluaciones Internacionales" href="{% url 'evaluaciones_int' %}" class="dropdown-item">Evaluaciones Internacionales</a>
+                                </li>
+                            </ul>
+                        </li> {% endcomment %}
+
                         <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-27" class="dropdown nav-item">
                             <a title="Debate Constituyente" href="{% url 'debate-constituyente' %}" class="nav-link dropdown-toggle">Debate Constituyente<i class="fas fa-chevron-down d-inline d-md-none"></i></a>
                             <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-134" role="menu">
@@ -168,6 +177,13 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'verevaluaciones' %}">Conoce la nueva constitución</a>
+                        </li>
+
+                        <li class="nav-item dropdown-anidado">
+                            <a class="nav-link" href="{% url 'verevaluaciones' %}">Conoce la nueva Constitución</a> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluaciones Internacionales</a></li>
+                            </ul>
                         </li>
 
                         <li class="nav-item dropdown-anidado">
