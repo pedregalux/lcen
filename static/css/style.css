@@ -7436,13 +7436,11 @@ header .nav-item-instagram a:hover {
 }
 
 .internacional-lista .book-lista .evaluacion-book img {
-    width: 80%;
-    height: 100px;
-    margin: auto;
+    width: 100%;
     display: flex;
     align-self: center;
     margin-bottom: 20px;
-}
+} 
 
 .internacional-lista .book-lista .evaluacion-book p.evaluada-por {
     text-align: center;
