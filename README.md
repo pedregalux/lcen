@@ -10,11 +10,6 @@ La Constitución es Nuestra nació como una iniciativa de Ciudadanía Inteligent
 
 Con el texto constitucional listo, la actual etapa del proyecto –liderada por Ciudadanía Inteligente, la iniciativa Global por los Derechos Económicos, Sociales y Culturales (GI-ESCR), Avina y Amnistía Internacional– invita organizaciones de la sociedad civil y personas de la academia a analizar y evaluar el nuevo texto constitucional en relación a derechos humanos, derechos de la naturaleza y fortalecimiento democrático.
 
-## Objetivos del proyecto
-- Ser una plataforma para la creación de propuestas para la nueva constitución
-- Entregar información sobre l*s integrantes de la Convención Constituyente
-- Difundir información sobre el proceso constituyente
-
 El objetivo de esta guía es documentar los pasos necesarios para la instalación y la modificación del código del proyecto para otras necesidades.
 
 ## Componentes del proyecto
