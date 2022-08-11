@@ -142,10 +142,6 @@ En ese archivo debe incluir la siguiente información:
 
 Todo el código utilizado está [público](https://github.com/ciudadanointeligente/lcen) on GitHub.
 
-Todo el código utilizado está [público](https://gitlab.com/ciudadaniai/lcen) on Gitlab.
-
-
-
 
 ## Licencia
 
