@@ -7910,7 +7910,7 @@ header .nav-item-instagram a:hover {
   margin-bottom: 0px;
   border-left: 0px;
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2.5em;
   color: black;
   text-transform: uppercase;
 }
@@ -7922,7 +7922,7 @@ header .nav-item-instagram a:hover {
   font-size: 2em;
   color: black;
   text-transform: inherit;
-  font-size: 1.5em;
+  font-size: 1.68em;
   margin-bottom: 20px;
 }
 
@@ -7955,7 +7955,7 @@ header .nav-item-instagram a:hover {
 }
 
 .kit-de-difusion .box-kit img {
-    height: 200px;
+    height: 240px;
     width: auto;
 }
 
@@ -7974,14 +7974,6 @@ header .nav-item-instagram a:hover {
 
 .kit-de-difusion .cartillas{
   border-left: #F75B40 solid 8px;
-}
-
-.kit-de-difusion .cartillas img{
-
-}
-
-.kit-de-difusion .cartillas img{
-
 }
 
 .kit-de-difusion .postales{
@@ -8007,12 +7999,15 @@ header .nav-item-instagram a:hover {
 }
 
 
-.kit-de-difusion .prensa img{
-
+@media(max-width:1400px){
+  .kit-de-difusion .box-kit {
+    min-height: 200px;
+    }
+  .kit-de-difusion .box-kit img{
+    height: 180px;
+    width: auto;
+    }
 }
-
-
-
 
 
 @media(max-width:991px){
