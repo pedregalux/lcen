@@ -366,6 +366,9 @@ class EvaluacioninternacionalView(TemplateView):
 class EvaluacioninternacionallecturaView(TemplateView):
     template_name = "inicio/evaluacion-internacional-lectura.html"
 
+class KitdedifusionView(TemplateView):
+    template_name = "inicio/kit-de-difusion.html"
+
     def getpalabra(request):
         form = GlosarioForm()
         if request.method == 'POST':
