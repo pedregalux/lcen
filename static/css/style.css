@@ -6393,8 +6393,11 @@ a.btn-glosario {
 .evaluaciones-lista .como-leer-evaluaciones {
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    bottom: -30px;
+    margin-bottom: 30px;
+}
+
+.evaluaciones-lista .como-leer-evaluaciones a.metodologia-lcen {
+    margin-right: 30px;
 }
 
 .evaluaciones-lista .como-leer-evaluaciones a {
@@ -6414,6 +6417,7 @@ a.btn-glosario {
     font-size: 1.8em;
     color: black;
     font-weight: 900;
+    padding-top: 0px;
 }
 
 .evaluaciones-lista h2.titulo-evaluaciones span {
@@ -6425,7 +6429,7 @@ a.btn-glosario {
     background: transparent;
     padding: 0px;
     margin-right: 0px;
-    margin-top: 70px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -6459,6 +6463,31 @@ a.btn-glosario {
     width: 25px !important;
     height: auto !important;
 }
+
+
+/*Filtro evaluaciones*/
+
+.formulario-evaluaciones input {
+    border: 0px;
+    background: #EDEDED;
+    color: black;
+    padding: 8px 10px;
+    border-radius: 30px;
+    width: 250px;
+    font-size: 1em;
+    padding-right: 10px;
+}
+
+.formulario-evaluaciones ::placeholder {
+    color: #4F4F4F;
+    font-style: italic;
+    font-size: 1em;
+}
+
+.formulario-evaluaciones .btn-lcen:hover{
+    background: ;
+}
+
 
 /*Evaluaciones Listados Sellos*/
 
