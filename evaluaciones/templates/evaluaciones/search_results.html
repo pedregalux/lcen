@@ -27,11 +27,12 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="mas-sobre-el-proyectoLabel">Más sobre el proyecto</h5>
+                            <h5 class="modal-title" id="mas-sobre-el-proyectoLabel">La decisión es nuestra <br> Organizaciones y personas de la academia explican y evalúan los principales artículos de la nueva Constitución
+                            </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p>La Constitución es Nuestra  es un esfuerzo colectivo de organizaciones de la sociedad civil y personas de la academia que nos hemos unido para analizar y evaluar el nuevo texto constitucional en relación a derechos humanos, derechos de la naturaleza y fortalecimiento democrático. La plataforma quiere lograr una “Constitución comentada” desde un lugar distinto al de la Convención Constitucional, los partidos políticos y los grupos de siempre. Para ello, proponemos compartir en este espacio la diversidad de conocimientos y experiencias de organizaciones que han sido parte de las demandas por derechos sociales en las últimas décadas y que participan activamente en los territorios del país, para contribuir al fortalecimiento del debate democrático en las comunidades.</p>
+                            <p>La Constitución es Nuestra es un esfuerzo colectivo de organizaciones de la sociedad civil y personas de la academia que nos hemos unido para analizar y evaluar el nuevo texto constitucional en relación a derechos humanos, derechos de la naturaleza y fortalecimiento democrático. La plataforma quiere lograr una “Constitución comentada” desde un lugar distinto al de la Convención Constitucional, los partidos políticos y los grupos de siempre. Para ello, proponemos compartir en este espacio la diversidad de conocimientos y experiencias de organizaciones que han sido parte de las demandas por derechos sociales en las últimas décadas y que participan activamente en los territorios del país, para contribuir al fortalecimiento del debate democrático en las comunidades.</p>
                         </div>
                    </div>
                </div>
@@ -102,6 +103,8 @@
 
           <div class="col-12 como-leer-evaluaciones">
 
+            <a href="#" class="metodologia-lcen">Metodología <img src="{% static 'img/informacion-icono.svg' %}" alt="icono" class="icono"></a>
+
             <!-- Button trigger modal -->
             <a href="#" type="button" class="como-leerlo" data-bs-toggle="modal" data-bs-target="#como-leerlo">Cómo leerlo <img src="{% static 'img/informacion-icono.svg' %}" alt="icono" class="icono"></a>
             <!-- Modal -->
@@ -131,7 +134,7 @@
             </div>
         </div>
 
-        </div>
+          </div>
 
           <div class="col-12 col-sm-12 col-md-4 col-lg-3 simbologia">
                   <h5>Simbología <img src="{% static 'img/icono-informacion-blanco.svg' %}" alt="icono" class="icono"></h5>
@@ -141,16 +144,15 @@
 
             <div class="col-12 col-sm-12 col-md-8 col-lg-9">
                 <div class="normas-sellos">
+                  <h2 class="titulo-evaluaciones">Hay <span>{{ evaluaciones_list.count }}</span> evaluaciones realizadas por expertos/as</h2>
 
-                    <div class="formulario">
-                    <form action="{% url 'search_results' %}" method="get">
-                        {% csrf_token %}
-                        <input name="q" type="text" placeholder="Buscar en los artículos...">
-                    </form>
-                    </div>
-                    <br>
-                    
-                  <h2 class="titulo-evaluaciones">Resultados de la búsqueda... </h2>
+                  <div class="formulario-evaluaciones">
+                  <form action="{% url 'search_results' %}">
+                    {% csrf_token %}
+                    <input name="q" type="text" placeholder="Buscar en los artículos...">
+                    <button type="submit" class="btn-lcen button hvr-sweep-to-right wow animate__ animate__fadeIn animated">Buscar</button>
+                  </form>
+                  </div>
                     
                   
                 <div class="sellos-lista">
