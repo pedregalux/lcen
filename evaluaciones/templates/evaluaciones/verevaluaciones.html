@@ -103,6 +103,8 @@
 
           <div class="col-12 como-leer-evaluaciones">
 
+            <a href="#" class="metodologia-lcen">Metodología <img src="{% static 'img/informacion-icono.svg' %}" alt="icono" class="icono"></a>
+
             <!-- Button trigger modal -->
             <a href="#" type="button" class="como-leerlo" data-bs-toggle="modal" data-bs-target="#como-leerlo">Cómo leerlo <img src="{% static 'img/informacion-icono.svg' %}" alt="icono" class="icono"></a>
             <!-- Modal -->
@@ -144,13 +146,14 @@
                 <div class="normas-sellos">
                   <h2 class="titulo-evaluaciones">Hay <span>{{ evaluaciones_list.count }}</span> evaluaciones realizadas por expertos/as</h2>
 
-                  <div class="formulario">
+                  <div class="formulario-evaluaciones">
                   <form action="{% url 'search_results' %}">
                     {% csrf_token %}
                     <input name="q" type="text" placeholder="Buscar en los artículos...">
+                    <button type="submit" class="btn-lcen button hvr-sweep-to-right wow animate__ animate__fadeIn animated">Buscar</button>
                   </form>
                   </div>
-                  
+
 
                     <div class="sellos-lista">
                         {% for norma in filtrocategorias.qs %}

@@ -161,4 +161,7 @@ urlpatterns = [
     path('evaluacion-internacional-lectura/', EvaluacioninternacionallecturaView.as_view(),
          name='evaluacion-internacional-lectura'),
 
+    path('kit-de-difusion/', KitdedifusionView.as_view(),
+        name='kit-de-difusion'),
+
 ]

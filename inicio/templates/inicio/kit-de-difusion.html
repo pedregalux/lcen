@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Qué es{% endblock %}
+
+{% block content %}
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/banner-kit.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/banner-kit-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Kit de difusión</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="kit-de-difusion container">
+
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-10 col-lg-8">
+            <h2>Activa el debate ciudadano</h2>
+            <h3>con el material de La Constitución es Nuestra</h3>
+            <p>A pocas semanas del plebiscito de salida, conocer la nueva Constitución es fundamental. Para ello, ponemos a disposición distintos productos para compartir en redes sociales, activar conversaciones en tu comunidad y difundir en todas partes.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6">
+            <div class="box-kit cartillas">
+                <div class="img">
+                    <img src="{% static 'img/img-imprimir-kit.png' %}" alt="img kit" class="img-imprimir">
+                </div>
+                <div class="informacion">
+                    <h3>Cartillas para imprimir</h3>
+                    <a href="https://drive.google.com/drive/folders/18P999qLS1zakftx0P1tvtDUE21dtbMzN?usp=sharing" class="btn-lcen">Descargar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <div class="box-kit postales">
+                <div class="img">
+                    <img src="{% static 'img/img-sellos-kit.png' %}" alt="img kit" class="img-postales">
+                </div>
+                <div class="informacion">
+                    <h3>Postales de normas para Redes Sociales</h3>
+                    <a href="https://drive.google.com/drive/folders/12S8KMUmylMUJ1YikTl1qiQvr2SCnjb0z?usp=sharing" class="btn-lcen">Descargar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="img-decoracion">
+            <img src="{% static 'img/decoracion-kit.png' %}" alt="img kit" class="collage-decoracion">
+    </div>
+
+    <div class="row row-position">
+        <div class="col-12 col-sm-12 col-md-6">
+            <div class="box-kit digital">
+                <div class="img">
+                    <img src="{% static 'img/img-digital-kit.png' %}" alt="img kit" class="img-digital">
+                </div>
+                <div class="informacion">
+                    <h3>Campaña digital</h3>
+                    <a href="https://drive.google.com/drive/folders/1Hiqixyc7-KXRp2k8nEfiWQHnui8__jDM?usp=sharing" class="btn-lcen">Descargar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <div class="box-kit prensa">
+                <div class="img">
+                    <img src="{% static 'img/img-prensa-kit.png' %}" alt="img kit" class="img-prensa">
+                </div>
+                <div class="informacion">
+                    <h3>Kit de prensa</h3>
+                    <a href="https://drive.google.com/drive/folders/1EqL4Aj2QoFjyBZFoTykuxOvQKz_pdDPt?usp=sharing" class="btn-lcen">Descargar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
