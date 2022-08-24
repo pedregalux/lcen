@@ -2,7 +2,8 @@
 {% load static %}
 
 <html lang="es">
-  <head>
+
+<head>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,12 +13,12 @@
     <!-- Meta tags para Facebook, Twitter, etc. -->
     <meta name="description" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático." />
     <meta name="author" content="Fundación Ciudadanía Inteligente" />
-    <meta name="keywords" content="La Constitución es Nuestra, LCen, Constitución"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:site_name" content="La Constitución es Nuestra"/>
+    <meta name="keywords" content="La Constitución es Nuestra, LCen, Constitución" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="La Constitución es Nuestra" />
     <meta property="og:title" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático.">
-    <meta property="og:image" content="{% static 'img/lcen-redes.jpg' %}"/>
-    <meta property="og:description" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático."/>
+    <meta property="og:image" content="{% static 'img/lcen-redes.jpg' %}" />
+    <meta property="og:description" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático." />
     <meta property="og:url" content="https://laconstitucionesnuestra.cl">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@ciudadania_i" />
@@ -41,11 +42,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Font Awesome -->
-  <!-- <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.css' %}" />
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.css' %}" />
    <script src="https://kit.fontawesome.com/8a388b05d1.js" crossorigin="anonymous"></script> -->
-  <script src="https://kit.fontawesome.com/8a388b05d1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8a388b05d1.js" crossorigin="anonymous"></script>
 
-   <!-- JQuery
+    <!-- JQuery
    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 
     <!-- Wow.js activar animación al hacer scroll -->
@@ -57,47 +58,58 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0VHB77FX6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0VHB77FX6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-R0VHB77FX6');
-</script>
-<!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '464341775126659');
-    fbq('track', 'PageView');
-</script>
-<noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=464341775126659&ev=PageView&noscript=1"
-    />
-</noscript>
-<!-- End Meta Pixel Code -->
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-  </head>
+        gtag('config', 'G-R0VHB77FX6');
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '464341775126659');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=464341775126659&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
 
-  <body>
+</head>
+
+<body>
 
     <header class="container-fluid fixed-top header-desktop">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid p-0">
                 <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -105,7 +117,7 @@
                             <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
                         </li>
 
-                       <!-- <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{% url 'verevaluaciones' %}">Conoce la nueva constitución</a>
                         </li>  -->
 
@@ -116,7 +128,7 @@
                                     <a title="Evaluaciones Internacionales" href="{% url 'evaluaciones_int' %}" class="dropdown-item">Evaluaciones Internacionales</a>
                                 </li>
                                 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
-                                    <a title="Evaluaciones Internacionales" href="{% url 'kit-de-difusion' %}" class="dropdown-item">Kit de difusión</a>
+                                    <a title="Lectura interactiva de la propuesta" target="_blank" href="https://nuevaconstitucion.laconstitucionesnuestra.cl" class="dropdown-item">Lectura interactiva de la propuesta</a>
                                 </li>
                             </ul>
                         </li>
@@ -134,22 +146,23 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
-                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                 <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
-                                 <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
-                                 <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
-                                 <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
-                             </ul>
-                         </li>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'kit-de-difusion' %}">Kit de difusión</a></li>
+                                <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+                                <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+                                <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                                <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
+                            </ul>
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'verorgsevaluadoras' %}">Organizaciones</a>
                         </li>
                         <li class="nav-item-instagram">
                             Siguenos en: <a class="nav-link" href="https://www.instagram.com/laconstitucion_esnuestra/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-</svg></a>
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg></a>
                         </li>
 
 
@@ -161,16 +174,18 @@
 
 
     <header class="container-fluid fixed-top header-movil">
-      <div class="instagram">
-        <div class="container">  <p>Siguenos en:</p> <a class="nav-link" href="https://www.instagram.com/laconstitucion_esnuestra/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-</svg></a></div>
-      </div>
+        <div class="instagram">
+            <div class="container">
+                <p>Siguenos en:</p> <a class="nav-link" href="https://www.instagram.com/laconstitucion_esnuestra/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg></a>
+            </div>
+        </div>
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid p-0">
                 <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -186,7 +201,7 @@
                             <a class="nav-link" href="{% url 'verevaluaciones' %}">Conoce la nueva Constitución</a> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluaciones Internacionales</a></li>
-                                <li><a class="dropdown-item" href="{% url 'kit-de-difusion' %}">Kit de difusión</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="https://nuevaconstitucion.laconstitucionesnuestra.cl">Lectura interactiva de la propuesta</a></li>
                             </ul>
                         </li>
 
@@ -201,16 +216,17 @@
                         <li class="nav-item dropdown-anidado">
                             <p>Recursos</p> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
-                              <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
-                              <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
-                              <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
+                                <li><a class="dropdown-item" href="{% url 'kit-de-difusion' %}">Kit de difusión</a></li>
+                                <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+                                <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+                                <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                                <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'verorgsevaluadoras' %}">Organizaciones</a>
                         </li>
-                       <!-- <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{% url 'evaluaciones_int' %}">Int</a>
                         </li>  -->
                     </ul>
@@ -224,75 +240,76 @@
         <a href="{% url 'kit-de-difusion' %}" class="btn-glosario button hvr-sweep-to-left animate__animated animate__fadeIn">Kit de difusión</a>
     </div>
 
-{% block content %}
+    {% block content %}
 
 
 
-{% endblock %}
+    {% endblock %}
 
 
 
-<div class="decoracion-colores">
-    <div class="yellow"></div>
-    <div class="blue"></div>
-    <div class="green"></div>
-    <div class="red"></div>
-</div>
-
-<footer class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 logo">
-            <img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid logo">
-        </div>
-
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 apoyo">
-            <h3>Proyecto impulsado por:</h3>
-            <div class="logos-organizaciones">
-                <img src="{% static 'img/fci-logo.png' %}" alt="logo fci" class="img-fluid logo">
-                <img src="{% static 'img/amnestyp.png' %}" alt="logo amnistia" class="img-fluid logo">
-                <img src="{% static 'img/the-global-iniciative-logo.png' %}" alt="logo the global iniciative" class="img-fluid logo">
-                <img src="{% static 'img/logo-avina.png' %}" alt="logo avina" class="img-fluid logo">
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 apoyo">
-            <h3>Apoyado por:</h3>
-            <div class="logos-organizaciones">
-                <img src="{% static 'img/ned-logo.png' %}" alt="logo Ned" class="img-fluid logo">
-                <img src="{% static 'img/osf.png' %}" alt="logo osf" class="img-fluid logo">
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 apoyo">
-            <h3>Proyecto creado por:</h3>
-            <div class="logos-organizaciones">
-                <img src="{% static 'img/fci-logo.png' %}" alt="logo fci" class="img-fluid logo-creadores">
-                <img src="{% static 'img/constituyo-logo.png' %}" alt="logo Constituyo" class="img-fluid logo-creadores">
-                <img src="{% static 'img/the-global-iniciative-logo.png' %}" alt="logo the global iniciative" class="img-fluid logo-creadores">
-                <img src="{% static 'img/fes-logo.png' %}" alt="logo FES" class="img-fluid logo-creadores">
-            </div>
-        </div>
-
-        <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 collage-1">
-            <img src="{% static 'img/footer-collage-1.png' %}" alt="collage footer 1" class="img-fluid">
-        </div>
-        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 redes">
-            <p>#LaConstituciónEsNuestra</p>
-            <ul class="rrss">
-                <li><a href="mailto:contacto@laconstitucionesnuestra.cl" target="_blank"><i class="fas fa-envelope"></i></a></li>
-                <li><a href="https://github.com/ciudadanointeligente/lcen" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank"><i class="far fa-closed-captioning"></i></a></li>
-            </ul>
-        </div>
-        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 collage-2">
-            <img src="{% static 'img/footer-collage-2.png' %}" alt="collage footer 2" class="img-fluid">
-        </div>
+    <div class="decoracion-colores">
+        <div class="yellow"></div>
+        <div class="blue"></div>
+        <div class="green"></div>
+        <div class="red"></div>
     </div>
-</footer>
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 logo">
+                <img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid logo">
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 apoyo">
+                <h3>Proyecto impulsado por:</h3>
+                <div class="logos-organizaciones">
+                    <img src="{% static 'img/fci-logo.png' %}" alt="logo fci" class="img-fluid logo">
+                    <img src="{% static 'img/amnestyp.png' %}" alt="logo amnistia" class="img-fluid logo">
+                    <img src="{% static 'img/the-global-iniciative-logo.png' %}" alt="logo the global iniciative" class="img-fluid logo">
+                    <img src="{% static 'img/logo-avina.png' %}" alt="logo avina" class="img-fluid logo">
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 apoyo">
+                <h3>Apoyado por:</h3>
+                <div class="logos-organizaciones">
+                    <img src="{% static 'img/ned-logo.png' %}" alt="logo Ned" class="img-fluid logo">
+                    <img src="{% static 'img/osf.png' %}" alt="logo osf" class="img-fluid logo">
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 apoyo">
+                <h3>Proyecto creado por:</h3>
+                <div class="logos-organizaciones">
+                    <img src="{% static 'img/fci-logo.png' %}" alt="logo fci" class="img-fluid logo-creadores">
+                    <img src="{% static 'img/constituyo-logo.png' %}" alt="logo Constituyo" class="img-fluid logo-creadores">
+                    <img src="{% static 'img/the-global-iniciative-logo.png' %}" alt="logo the global iniciative" class="img-fluid logo-creadores">
+                    <img src="{% static 'img/fes-logo.png' %}" alt="logo FES" class="img-fluid logo-creadores">
+                </div>
+            </div>
+
+            <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 collage-1">
+                <img src="{% static 'img/footer-collage-1.png' %}" alt="collage footer 1" class="img-fluid">
+            </div>
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 redes">
+                <p>#LaConstituciónEsNuestra</p>
+                <ul class="rrss">
+                    <li><a href="mailto:contacto@laconstitucionesnuestra.cl" target="_blank"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="https://github.com/ciudadanointeligente/lcen" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank"><i class="far fa-closed-captioning"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 collage-2">
+                <img src="{% static 'img/footer-collage-2.png' %}" alt="collage footer 2" class="img-fluid">
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript" src="{% static 'js/src.js' %}"></script>
-  </body>
+</body>
+
 </html>
