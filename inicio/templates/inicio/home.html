@@ -6,60 +6,60 @@
 
 
 <section class="container-fluid portada-banner">
-    <div class="row">
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{% static 'img/header1.png' %}" alt="banner" class="img-fluid portada-desktop">
 
-
-                    <div class="carousel-caption text-start">
-                        <!-- <h1>Example headline.</h1>
-                            <p>Some representative placeholder content for the first slide of the carousel.</p> -->
-                        <p><a class="btn-lcen button hvr-sweep-to-right wow animate__animated" href="https://youtu.be/yRET40ozjlw" target="_blank">Ver Vídeo</a></p>
-                    </div>
-
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/header2.png' %}" alt="banner" class="img-fluid portada-desktop">
-
-
-                    <div class="carousel-caption">
-                        <!-- <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p> -->
-                        <p><a class="btn-lcen button hvr-sweep-to-right wow animate__animated" href="https://youtu.be/aFNPdmUs_v0" target="_blank">Ver Vídeo</a></p>
-                    </div>
-
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/header3.png' %}" alt="banner" class="img-fluid portada-desktop">
-
-
-                    <div class="carousel-caption text-end">
-                        <!-- <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p> -->
-                        <p><a class="btn-lcen button hvr-sweep-to-right wow animate__animated" href="https://youtu.be/0C7qJ78ZwPs" target="_blank">Ver Vídeo</a></p>
-                    </div>
-
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <!-- <img src="{% static 'img/output.gif' %}" alt="banner" class="img-fluid portada-desktop">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/header1.png' %}" alt="banner" class="img-fluid portada-desktop">
+
+
+                <div class="carousel-caption text-start">
+                    <!-- <h1>Example headline.</h1>
+                            <p>Some representative placeholder content for the first slide of the carousel.</p> -->
+                    <p><a class="btn-lcen button hvr-sweep-to-right wow animate__animated" href="https://youtu.be/yRET40ozjlw" target="_blank">Ver Vídeo</a></p>
+                </div>
+
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/header2.png' %}" alt="banner" class="img-fluid portada-desktop">
+
+
+                <div class="carousel-caption">
+                    <!-- <h1>Another example headline.</h1>
+                            <p>Some representative placeholder content for the second slide of the carousel.</p> -->
+                    <p><a class="btn-lcen button hvr-sweep-to-right wow animate__animated" href="https://youtu.be/aFNPdmUs_v0" target="_blank">Ver Vídeo</a></p>
+                </div>
+
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/header3.png' %}" alt="banner" class="img-fluid portada-desktop">
+
+
+                <div class="carousel-caption text-end">
+                    <!-- <h1>One more for good measure.</h1>
+                            <p>Some representative placeholder content for the third slide of this carousel.</p> -->
+                    <p><a class="btn-lcen button hvr-sweep-to-right wow animate__animated" href="https://youtu.be/0C7qJ78ZwPs" target="_blank">Ver Vídeo</a></p>
+                </div>
+
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- <img src="{% static 'img/output.gif' %}" alt="banner" class="img-fluid portada-desktop">
         <img src="{% static 'img/banner-movil.gif' %}" alt="banner" class="img-fluid portada-movil"> -->
-        <!-- <div class="enlace-portada">
+    <!-- <div class="enlace-portada">
             <p>Aquí nos acercamos a la</p>
             <h2>Nueva Constitución</h2>
             <a href="{% url 'verevaluaciones' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated">
@@ -67,11 +67,11 @@
             <br><br>
             <a href="{% url 'evaluaciones_int' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated">Evaluaciones de académicos/as internacionales</a>
         </div> -->
-    </div>
+
 </section>
 <section class="llamado-inscripcion">
-    <p>Inscríbete para evaluar con tu organización</p>
-    <a href="https://wa.me/56953069053" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn">Inscríbete aquí</a>
+    <p>Lee la Propuesta Constitucional</p>
+    <a href="https://nuevaconstitucion.laconstitucionesnuestra.cl" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn">Lectura Interactiva</a>
 </section>
 
 <section class="hitos-cc container">
