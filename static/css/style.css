@@ -5802,7 +5802,7 @@ ul.pagination .active a {
 /*Home 2.0*/
 .portada-desktop {
     display: block;
-    max-width: 1440px;
+    max-width: 100%;
 }
 
 .portada-movil {
