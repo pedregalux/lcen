@@ -11,20 +11,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Meta tags para Facebook, Twitter, etc. -->
-    <meta name="description" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático." />
+    <meta name="description" content="La Constitución es Nuestra" />
     <meta name="author" content="Fundación Ciudadanía Inteligente" />
     <meta name="keywords" content="La Constitución es Nuestra, LCen, Constitución" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="La Constitución es Nuestra" />
-    <meta property="og:title" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático.">
+    <meta property="og:title" content="La Constitución es Nuestra.">
     <meta property="og:image" content="{% static 'img/lcen-redes.jpg' %}" />
-    <meta property="og:description" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático." />
+    <meta property="og:description" content="La Constitución es Nuestra." />
     <meta property="og:url" content="https://laconstitucionesnuestra.cl">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@ciudadania_i" />
     <meta name="twitter:creator" content="@ciudadania_i">
     <meta name="twitter:title" content="La Constitución es Nuestra" />
-    <meta name="twitter:description" content="Plataforma ciudadanía para conocer las normas de la nueva Constitución analizadas y evaluadas en relación a Derechos Humanos, Derechos de la Naturaleza y fortalecimiento democrático." />
+    <meta name="twitter:description" content="La Constitución es Nuestra." />
     <meta name="twitter:image" content="https://laconstitucionesnuestra.cl/static/img/lcen-redes.jpg" />
     <meta name="facebook-domain-verification" content="bdt9t8xxbih23y6dcff3er426vsrp9" />
 
@@ -117,12 +117,24 @@
                             <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
                         </li>
 
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="{% url 'verevaluaciones' %}">Conoce la nueva constitución</a>
-                        </li>  -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'quees' %}">Discusión post plebiscito</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+                                <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+                                <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                                <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
+                                <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}" class="dropdown-item">Glosario Constitucional</a>
+                                </li>
+                            </ul>
+                        </li>
 
                         <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-27" class="dropdown nav-item">
-                            <a title="Conoce la nueva Constitución" href="{% url 'verevaluaciones' %}" class="nav-link dropdown-toggle">Conoce la nueva constitución<i class="fas fa-chevron-down d-inline d-md-none"></i></a>
+                            <a title="Evaluaciones de norma" href="{% url 'verevaluaciones' %}" class="nav-link dropdown-toggle">Evaluaciones de norma<i class="fas fa-chevron-down d-inline d-md-none"></i></a>
                             <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-134" role="menu">
                                 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
                                     <a title="Evaluaciones Nacionales" href="{% url 'verevaluaciones' %}" class="dropdown-item">Evaluaciones Nacionales</a>
@@ -133,35 +145,12 @@
                                 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
                                     <a title="Lectura interactiva de la propuesta" target="_blank" href="https://nuevaconstitucion.laconstitucionesnuestra.cl" class="dropdown-item">Lectura interactiva de la propuesta</a>
                                 </li>
-                            </ul>
-                        </li>
-
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-27" class="dropdown nav-item">
-                            <a title="Debate Constituyente" href="{% url 'debate-constituyente' %}" class="nav-link dropdown-toggle">Debate Constituyente<i class="fas fa-chevron-down d-inline d-md-none"></i></a>
-                            <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-134" role="menu">
                                 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
-                                    <a title="Cronograma constitucional" href="{% url 'cronograma-constitucional' %}" class="dropdown-item">Cronograma Constitucional</a>
-                                </li>
-                                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
-                                    <a title="Glosario constitucional" href="{% url 'glosario-constitucional' %}" class="dropdown-item">Glosario Constitucional</a>
+                                    <a title="Lectura interactiva de la propuesta" target="_blank" href="{% url 'verorgsevaluadoras' %}" class="dropdown-item">Oarganizaciones</a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'kit-de-difusion' %}">Kit de difusión</a></li>
-                                <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
-                                <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
-                                <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
-                                <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'verorgsevaluadoras' %}">Organizaciones</a>
-                        </li>
                         <li class="nav-item-instagram">
                             Siguenos en: <a class="nav-link" href="https://www.instagram.com/laconstitucion_esnuestra/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
                                     <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
@@ -196,39 +185,31 @@
                             <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
                         </li>
 
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="{% url 'verevaluaciones' %}">Conoce la nueva constitución</a>
-                        </li> -->
-
-                        <li class="nav-item dropdown-anidado">
-                            <a class="nav-link" href="{% url 'verevaluaciones' %}">Conoce la nueva Constitución</a> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones Nacionales</a></li>
-                                <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluaciones Internacionales</a></li>
-                                <li><a class="dropdown-item" target="_blank" href="https://nuevaconstitucion.laconstitucionesnuestra.cl">Lectura interactiva de la propuesta</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'quees' %}">Discusión post plebiscito</a>
                         </li>
 
-                        <li class="nav-item dropdown-anidado">
-                            <a class="nav-link" href="{% url 'debate-constituyente' %}">Debate Constituyente</a> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'cronograma-constitucional' %}">Cronograma Constitucional</a></li>
-                                <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario Constitucional</a></li>
-                            </ul>
-                        </li>
 
                         <li class="nav-item dropdown-anidado">
                             <p>Recursos</p> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'kit-de-difusion' %}">Kit de difusión</a></li>
                                 <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
                                 <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
                                 <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
                                 <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
+                                <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario Constitucional</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'verorgsevaluadoras' %}">Organizaciones</a>
+
+
+                        <li class="nav-item dropdown-anidado">
+                            <a class="nav-link" href="{% url 'verevaluaciones' %}">Evaluaciones de Norma</a> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones Nacionales</a></li>
+                                <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluaciones Internacionales</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="https://nuevaconstitucion.laconstitucionesnuestra.cl">Lectura interactiva de la propuesta</a></li>
+                                <li><a class="dropdown-item" href="{% url 'verorgsevaluadoras' %}">Organizaciones</a></li>
+                            </ul>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="{% url 'evaluaciones_int' %}">Int</a>
@@ -240,9 +221,6 @@
         </nav>
     </header>
 
-    <div class="btn-fixed-glosario">
-        <a href="{% url 'kit-de-difusion' %}" class="btn-glosario button hvr-sweep-to-left animate__animated animate__fadeIn">Kit de difusión</a>
-    </div>
 
     {% block content %}
 
