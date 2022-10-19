@@ -40,6 +40,9 @@ Clone el proyecto desde la última versión de desarrollo en Github. Esta está 
 git clone https://github.com/pedregalux/lcen
 ```
 
+Las ramas son desarrollo y master. Además hay dos ramas para tener ordenados los cambios del proyecto en el tiempo: preplebiscito y postplebiscito. Si se necesita un modelo de app para crear propuestas y compromisos, se debe usar preplebiscito.
+
+
 Le recomendamos usar virtualenv, un paquete de python para crear un [entorno virtual de desarrollo](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment) local para este proyecto, así no afectará otras instalaciones de python y django que pueda tener en su servidor o máquina local. Si ya tiene instalados python3 y viartualenv, el comando para crear el ambiente de trabajo debería ser:
 ```sh
 python3 -m venv /ruta/entorno/virtual
