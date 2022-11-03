@@ -12,7 +12,7 @@ from mantenedores.models import *
 class UserResource(resources.ModelResource):
     class Meta:
         model = User
-        exclude = ('password','groups','user_permissions',)
+        exclude = ('password','groups','user_permissions','is_convencional','is_superuser','first_name','last_name','email','is_staff','is_active','date_joined','last_login',)
 
 
 class CiudadanoResource(resources.ModelResource):
@@ -46,7 +46,7 @@ class UserAdmin(UserAdmin, ImportExportModelAdmin):
     resource_class = UserResource
     form = UserChangeForm
     fieldsets = UserAdmin.fieldsets + (
-            (None, {'fields': ('nombre','is_ciudadano','is_organizacion','is_convencional',)}),
+            (None, {'fields': ('nombre',)}),
     )
 
 
