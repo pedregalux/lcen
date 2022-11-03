@@ -88,12 +88,12 @@
                               <div class="row">
 
                               <p class="lugar">
-                              <!-- {% if propuesta.autor.organizacion %} -->
+                              {% if propuesta.autor.organizacion %}
                               <img src="{{ propuesta.autor.organizacion.logo_organizacion.url }}" alt="logo organizacion">
 
-                              {{ propuesta.autor.nombre }}
+                              {{ propuesta.autor.organizacion.nombre_perfil }}
 
-                              <!-- {% else %}
+                              {% else %}
 
                               Propuesta Personal
 
@@ -103,7 +103,7 @@
                               <img src="{{ organizacion.logo_organizacion.url }}" alt="logo organizacion">
                               {{ organizacion.nombre_perfil }}
 
-                              {% endfor %} -->
+                              {% endfor %}
                               </p>
 
                               {% if propuesta.organizaciones_de_propuesta %}
