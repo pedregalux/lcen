@@ -64,7 +64,7 @@ class VerPropuestaView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['comprometidos'] = Norma.objects.filter(sellos=self.object.tags_norma.all())
+        # context['comprometidos'] = Norma.objects.filter(sellos=self.object.tags_norma.all())
         return context
 
 
