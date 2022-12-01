@@ -48,7 +48,7 @@ class VerPropuestasView(ListView):
     template_name = 'propuestas/ver_propuestas.html'
 
     def get_queryset(self):
-        return Propuesta.objects.annotate(apoyos_count=Count('apoyos')).order_by('-autor__organizacion','-apoyos_count')
+        return Propuesta.objects.order_by('-autor__organizacion')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -62,10 +62,11 @@ class VerPropuestaView(DetailView):
     context_object_name = 'propuestas_detail'
     template_name = 'propuestas/ver_propuesta.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['comprometidos'] = Norma.objects.filter(sellos=self.object.tags_norma.all())
-        return context
+# Comentado para tercera etapa con propuestas sólo para mostrar, nunca más, nunca más!!!
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['comprometidos'] = Norma.objects.filter(sellos=self.object.tags_norma.all())
+    #     return context
 
 
 

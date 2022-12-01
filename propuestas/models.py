@@ -54,59 +54,47 @@ class Propuesta(models.Model):
         verbose_name="Autor@ de Propuesta",
         null=True,
         on_delete=models.SET_NULL)
-    # paso 1
-    pais = models.ForeignKey(Pais,
-        related_name="pais_propuesta",
-        verbose_name="País de Origen de Propuesta",
-        null=True,
-        on_delete=models.SET_NULL)
-    region = models.ForeignKey(Region,
-        related_name="region_propuesta",
-        verbose_name="Región de Propuesta",
+    pais = models.CharField("País",
         blank=True,
-        null=True,
-        on_delete=models.SET_NULL)
-    comuna = models.ForeignKey(Comuna,
-        related_name="comuna_propuesta",
-        verbose_name="Comuna de Propuesta",
-        blank=True,
-        null=True,
-        on_delete=models.SET_NULL)
-    # paso 2
-    tema = models.ForeignKey(TemaPropuesta,
-        null=True,
-        on_delete=models.SET_NULL)
-    otros_temas = models.ManyToManyField(SubtemaPropuesta,
-        related_name="otros_temas_propuesta",
-        verbose_name="Otros Temas de Propuesta")
+        max_length=250, 
+        null=True)
+    region = models.CharField("Región",
+        blank=True,max_length=250,
+        null=True)
+    comuna = models.CharField("Comuna",
+        blank=True,max_length=250,
+        null=True)
+    tema = models.CharField("Tema Propuesta",
+        null=True,max_length=250,
+        blank=True)
+    otros_temas = models.CharField("Subtema Propuesta",
+        null=True,max_length=250,
+        blank=True)
     tema_extra = models.CharField("Tema complementario",
-        max_length=100,
-        null=True,
+        null=True,max_length=250,
         blank=True)
     # paso 3
     problema = models.TextField("Descripción de problema a solucionar",
-        null=True)
+        null=True,
+        blank=True)
     situacion = models.TextField("Situación ideal de solución",
-        null=True)
+        null=True,
+        blank=True)
     componente = models.TextField("Componente de la Constitución",
-        null=True)
+        null=True,
+        blank=True)
     # paso 4
     otras_organizaciones = models.BooleanField("Junto a otras organizaciones",
         default=False)
     organizaciones_de_propuesta = models.TextField("Otras Organizaciones",
         null=True,
         blank=True)
-    organizaciones = models.ManyToManyField(Organizacion,
-        verbose_name="Otras Organizaciones de la Propuesta",
-        blank=True,
-        related_name="organizaciones_propuesta")
+    organizaciones = models.CharField(Organizacion,
+        null=True,max_length=250,
+        blank=True)
     #paso 5
     compromiso_convencionales = models.BooleanField("Convencionales comprometidos",
         default=False)
-    # convencionales_comprometidos = models.ManyToManyField(Constituyente,
-    #     related_name="convencionales_comprometidos",
-    #     verbose_name="Nombres Convencionales Comprometidos",
-    #     blank=True)
     # paso 6
     anexo_propuesta = models.FileField(upload_to='documents/',
         verbose_name="Anexos de la Propuesta",
@@ -132,10 +120,8 @@ class Propuesta(models.Model):
         help_text="Ingresa la URL así: https://www.link.com")
     # paso 7
     titulo = models.CharField("Título Propuesta",
-        max_length=255,
-        null=True)
-    apoyos = models.ManyToManyField(User, related_name="apoyos_propuestas", through='ApoyoPropuesta')
-    compromisos = models.ManyToManyField(User, related_name="compromisos_propuestas", through='CompromisoPropuesta')
+        null=True,max_length=250,
+        blank=True)
 
     def __str__(self):
         return self.titulo
