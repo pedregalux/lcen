@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load propuestas_extra %}
+
 {% load static %}
 {% load crispy_forms_tags %}
 {% block title %}Propuestas{% endblock %}
@@ -41,7 +41,7 @@
 
               <p class="bajada text-center">Te invitamos a filtrar y encontrar propuestas ciudadanas en los siguientes temas</p>
 
-              {% propuestasxsubtema %}
+              
 
             </div>
         </div>
@@ -123,10 +123,6 @@
                               <!-- <a href="{{ propuesta.pk }}" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a> -->
                               <a href="{{ propuesta.pk }}" class="btn-lcen">Leer propuesta</a>
                           </div>
-                          <!-- <div class="cifras">
-                              <p><span class="numero">{{ propuesta.compromisos.count }}</span> convencionalxs comprometidxs</p>
-                              <p><span class="numero">{{ propuesta.apoyos.count }}</span> apoyos ciudadanos</p>
-                          </div> -->
                       </div>
                   </div>
               </div>
@@ -185,10 +181,6 @@
                     <div class="call-to-action">
                         <a href="{{ propuesta.pk }}" class="btn-lcen apoyar">Apoyar <i class="fas fa-heart"></i></a>
                         <a href="{{ propuesta.pk }}" class="btn-lcen">Leer propuesta</a>
-                    </div>
-                    <div class="cifras">
-                        <p><span class="numero">{{ propuesta.compromisos.count }}</span> convencionalxs comprometidxs</p>
-                        <p><span class="numero">{{ propuesta.apoyos.count }}</span> apoyos ciudadanos</p>
                     </div>
                 </div>
             </div>
