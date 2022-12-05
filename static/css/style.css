@@ -6162,7 +6162,7 @@ a.btn-glosario {
 /*Evaluaciones 2.0*/
 
 .banner-evaluaciones {
-    margin-top: 100px;
+    padding-top: 100px!important;
     height: 245px;
     background: url(../img/bg-evaluaciones.jpg);
     background-size: cover;
@@ -7362,7 +7362,7 @@ header .nav-item-instagram a:hover {
 
 /*Evaluación Internacional*/
 .evaluacion-internacional {
-    margin-top: 100px;
+    padding-top: 100px;
     height: 245px;
     background: url(../img/bg-banner-ei.png);
     background-size: cover;
@@ -8096,5 +8096,990 @@ header .nav-item-instagram a:hover {
 @media(max-width:500px) {
     .kit-de-difusion h2 {
         font-size: 1.3em;
+    }
+}
+
+
+
+
+
+/*Nueva versión web*/
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+:focus-visible {
+    outline: 0px !important;
+}
+
+.version-desktop {
+    display: block;
+}
+
+.version-movil {
+    display: none;
+}
+
+@media(max-width:768px) {
+    .version-desktop {
+        display: none;
+    }
+
+    .version-movil {
+        display: block;
+    }
+
+}
+
+/*BTN LCEN*/
+
+a.btn-web-lcen {
+    padding: 8px 30px;
+    background-color: black;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1em;
+    transition: 0.5s all;
+}
+
+
+a.btn-web-lcen:hover {
+    background: #CC0000;
+}
+
+/*Menu navegacion*/
+
+nav {
+    padding: 0px !important;
+    width: 100%;
+}
+
+nav .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+nav .container .collapse > ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+
+nav img {
+    width: 150px;
+    padding: 10px 0px;
+}
+
+nav li {
+    padding: 0px 15px;
+}
+
+nav li a {
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 0.6px;
+    font-size: 12.5px;
+    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid transparent;
+    transition: 0.5 all;
+    padding: 34px 0px !important;
+}
+
+nav li a:hover {
+    color: white !important;
+    border-top: 5px solid #FFD700;
+}
+
+.fixed-top {
+    transition: all 0.5s;
+}
+
+.bg-white a {
+    color: black !important;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.bg-white a:hover {
+    color: black !important;
+}
+
+nav.navbar .dropdown-menu {
+    background: white;
+    border-radius: 0px;
+    border-color: transparent;
+    padding: 0px !important;
+    border-top: 8px solid #FFD700;
+    box-shadow: 0px 0px 11px -3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 11px -3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 11px -3px rgba(0, 0, 0, 0.2);
+}
+
+nav.navbar .dropdown-menu li {
+    padding: 0px !important;
+    margin: 0px !important;
+    border: 0px !important;
+}
+
+nav.navbar .dropdown-menu li a {
+    padding: 15px 20px !important;
+    margin: 0px;
+    border: 0px;
+    font-weight: 900;
+    color: black !important;
+}
+
+nav.navbar .dropdown-menu li a:hover {
+    border: 0px;
+}
+
+nav .dropdown-item.active,
+nav .dropdown-item:active {
+    background-color: transparent;
+    color: black !important;
+}
+
+
+/*Flotante*/
+.botones-flotantes {
+    position: fixed;
+    right: 3px;
+    top: 30%;
+    z-index: 1;
+}
+
+.botones-flotantes .btn {
+    background: black;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+.botones-flotantes .btn:hover {
+    background: #AB47BC;
+}
+
+.botones-flotantes .btn img.instagram-icono {
+    position: relative;
+    bottom: 2px;
+}
+
+
+/*Como avanza el proceso*/
+
+.scroll-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.scroll-btn p {
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.scroll-btn .img-scroll {
+    background: #FFD700;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s all;
+}
+
+
+.scroll-btn .img-scroll img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 1px;
+}
+
+.scroll-btn .img-scroll:hover {
+    background: black;
+}
+
+/*portada*/
+.portada {
+    position: relative;
+}
+
+.portada img {
+    width: 100%;
+}
+
+.portada .degradado {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 0.01%, rgba(0, 0, 0, 0) 82.14%);
+    width: 100%;
+    height: 128px;
+}
+
+
+/* franja*/
+
+.post-plebiscito {
+    margin-top: 60px;
+}
+
+.post-plebiscito .franja {
+    position: relative;
+}
+
+
+.post-plebiscito .img-alarma {
+    position: absolute;
+    z-index: 1;
+    bottom: -25px;
+    left: 8%;
+}
+
+.post-plebiscito .img-alarma img {
+    width: 90px;
+}
+
+.post-plebiscito .franja-contenido {
+    background: #383838;
+}
+
+
+.post-plebiscito .franja .informativo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.post-plebiscito .franja .informativo p img.circulo-rojo {
+    margin-right: 10px;
+    position: relative;
+    bottom: 2px;
+}
+
+/* Parpadeo circulo rojo*/
+
+.parpadea {
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: parpadeo;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.post-plebiscito .franja .informativo {
+    overflow: hidden;
+}
+
+.post-plebiscito .franja .informativo p {
+    margin-bottom: 0px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.post-plebiscito .franja .informativo p span {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 10px;
+}
+
+/*Texto informativo en movimiento*/
+
+@-webkit-keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translate3d(-1000%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.ticker-wrap {
+    bottom: 0;
+    width: 90%;
+    overflow: hidden;
+    height: auto;
+    margin-left: 10px;
+}
+
+.ticker-wrap .ticker {
+    display: inline-block;
+    height: auto;
+    line-height: auto;
+    white-space: nowrap;
+    box-sizing: content-box;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 200s;
+    animation-duration: 200s;
+}
+
+.ticker:hover {
+    animation-play-state: paused;
+}
+
+.ticker-wrap .ticker__item {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.ticker-wrap .ticker__item p {
+    padding-bottom: 0px;
+    text-align: center;
+    color: white;
+    border-right: 5px solid #FFD700;
+    padding-right: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* Seccion post plebiscito*/
+
+.seccion-post-plebiscito-home {
+    background: url(../img/img-lcen-2/bg-papel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 90px;
+}
+
+.seccion-post-plebiscito-home .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-post-plebiscito-home .contenido .titulo {
+    width: 450px;
+    margin-bottom: 30px;
+}
+
+
+/*Seccion quienes somos home*/
+
+.quienes-somos {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+
+.quienes-somos .img img {
+    width: 100%;
+}
+
+/* Seccion que ha ocurrido hasta ahora*/
+
+.que-ha-ocurrido-hasta-ahora {
+    background: url(../img/img-lcen-2/bg-papel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.que-ha-ocurrido-hasta-ahora .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.que-ha-ocurrido-hasta-ahora .contenido .titulo {
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.que-ha-ocurrido-hasta-ahora .contenido .linea-de-tiempo {
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+
+/*Recursos*/
+.recursos-para-la-constitucion {
+    margin-top: 80px;
+    margin-bottom: 130px;
+}
+
+.recursos-para-la-constitucion .img-titulo {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.recursos-para-la-constitucion .img-titulo img.titulo {
+    width: 80%;
+    margin: auto;
+}
+
+.recursos-para-la-constitucion .recurso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.recursos-para-la-constitucion .recurso h3 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.recursos-para-la-constitucion .recurso img.collage-glosario {
+    width: 70%;
+}
+
+.recursos-para-la-constitucion .recurso img.collage-mapa {
+    width: 80%;
+}
+
+/*Footer*/
+
+.colores-lineal-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.colores-lineal-footer .color {
+    height: 8px;
+}
+
+
+.colores-lineal-footer .color-celeste {
+    width: 15%;
+    background: #75AADB;
+}
+
+
+.colores-lineal-footer .color-verde {
+    width: 20%;
+    background: #008000;
+}
+
+
+.colores-lineal-footer .color-amarillo {
+    width: 30%;
+    background: #FFD700;
+}
+
+
+.colores-lineal-footer .color-rojo {
+    width: 20%;
+    background: #CC0000;
+}
+
+.colores-lineal-footer .color-violeta {
+    width: 15%;
+    background: #AB47BC;
+}
+
+
+.footer {
+    position: relative;
+}
+
+.footer .personas-lcen {
+    position: absolute;
+    top: -80px;
+    width: 45%;
+    left: 28%;
+    right: 28%;
+}
+
+.footer {
+    background: url(../img/img-lcen-2/bg-papel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 90px;
+    padding-bottom: 80px;
+}
+
+.footer .columna-1-footer .logo-footer {
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.footer .columna-1-footer h3 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.4em;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer .columna-1-footer .logos-fundaciones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer .columna-1-footer .logos-fundaciones img {
+    width: 70%;
+}
+
+
+.footer .columna-2-footer h3 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.4em;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.footer .columna-2-footer .logos-fundaciones-apoyo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+.footer .columna-2-footer .logos-fundaciones-apoyo img {
+    width: 50%;
+}
+
+
+
+.footer .columna-2-footer .rrss {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+.footer .columna-2-footer .rrss h4 {
+    text-align: right;
+    font-weight: 900;
+    font-size: 1.4em;
+    border-bottom: 10px solid #FFD700;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer .columna-2-footer .rrss .logos-rrss ul {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    list-style: none;
+}
+
+.footer .columna-2-footer .rrss .logos-rrss ul li {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.footer .columna-2-footer .rrss .logos-rrss ul li img.mensaje {
+    width: 40px;
+}
+
+
+.footer .columna-2-footer .rrss .logos-rrss ul li img.git {
+    width: 35px;
+}
+
+
+.footer .columna-2-footer .rrss .logos-rrss ul li img.cc {
+    width: 35px;
+}
+
+.footer .columna-2-footer .rrss .logos-rrss ul li img {
+    opacity: 0.5;
+    transition: 0.5s all;
+}
+
+.footer .columna-2-footer .rrss .logos-rrss ul li img:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    background: #383838;
+    padding: 20px 0px;
+}
+
+.footer-bottom p {
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.footer-bottom p img {
+    padding-right: 10px;
+}
+
+
+@media(max-width:1200px) {
+  nav .container{
+    max-width: 90%;
+  }
+  nav img {
+    width: 120px;
+}
+nav li {
+    padding: 0px 7px;
+}
+
+nav li a{
+  font-size: 11px;
+  padding: 28px 0px !important;
+}
+nav li a:hover{
+  padding: 28px 0px !important;
+}
+}
+
+@media(max-width:1000px) {
+  nav img {
+    width: 110px;
+}
+
+nav li a{
+  padding: 26px 0px !important;
+  font-size: 10px;
+}
+nav li a:hover{
+  padding: 26px 0px !important;
+}
+}
+
+/*Movil*/
+@media(max-width:991px) {
+
+  nav .navbar-collapse {
+      background: white;
+      position: absolute;
+      width: 100%;
+      left: 0px;
+      margin-top: 81px;
+  }
+
+.navbar-toggler{
+  font-size: 1rem;
+}
+
+nav .container .collapse > ul{
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+nav li {
+    padding: 0px 7px;
+    width: 90%;
+    margin: auto;
+}
+
+nav .navbar-collapse li a{
+  color: black!important;
+  padding: 20px 0px!important;
+  border-top:0px!important;
+  font-size: 13px;
+}
+
+nav .navbar-collapse li a:hover{
+  border-top:0px!important;
+}
+nav img {
+  width: 130px;
+}
+}
+
+@media(max-width:768px) {
+    .footer {
+        background: url(../img/img-lcen-2/bg-papel-movil.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .footer .personas-lcen {
+        position: absolute;
+        top: -80px;
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .footer .columna-1-footer .logo-footer {
+        width: 200px;
+        display: flex;
+        margin: auto;
+        margin-bottom: 70px;
+    }
+
+    .footer .columna-1-footer h3 {
+        font-size: 1.2em;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer .columna-1-footer .logos-fundaciones {
+        justify-content: center;
+    }
+
+    .footer .columna-1-footer .logos-fundaciones img {
+        width: 70%;
+    }
+
+    .footer .columna-2-footer h3 {
+        font-size: 1.2em;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 70px;
+    }
+
+    .footer .columna-2-footer .logos-fundaciones-apoyo {
+        justify-content: center;
+    }
+
+    .footer .columna-2-footer .logos-fundaciones-apoyo img {
+        width: 50%;
+    }
+
+    .footer .columna-2-footer .rrss h4 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .footer .columna-2-footer .rrss .logos-rrss ul li:first-child {
+        padding-left: 0px;
+    }
+
+    .footer .columna-2-footer .rrss {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .footer-bottom p {
+        font-size: 0.7em;
+    }
+
+}
+
+
+@media(max-width:600px) {
+    .post-plebiscito .img-alarma img {
+        display: none;
+    }
+
+    .post-plebiscito .franja .informativo {
+        padding: 10px 0px;
+    }
+
+    .post-plebiscito .franja .informativo p {
+        font-size: 1em;
+    }
+
+    .post-plebiscito .franja .informativo .circulo-rojo {
+        width: 15px;
+    }
+
+    .ticker-wrap .ticker__item p {
+        padding-bottom: 0px;
+        text-align: center;
+        color: white;
+        font-size: 1em !important;
+        border-right: 5px solid #FFD700;
+        padding-right: 5px;
+        font-weight: 700;
+    }
+
+    .ticker-wrap .ticker__item {
+        padding: 5px;
+    }
+
+    .seccion-post-plebiscito-home .contenido .titulo {
+        width: 300px;
+    }
+
+    .seccion-post-plebiscito-home .contenido a {
+        margin-bottom: 40px;
+    }
+
+    .quienes-somos .img img {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .quienes-somos .informacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quienes-somos .informacion p {
+        text-align: center;
+    }
+
+    .que-ha-ocurrido-hasta-ahora .contenido .titulo {
+        width: 220px;
+        margin-bottom: 40px;
+    }
+
+    .que-ha-ocurrido-hasta-ahora .contenido .linea-de-tiempo {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .recursos-para-la-constitucion {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .recursos-para-la-constitucion .img-titulo img.titulo {
+        width: 220px;
+        margin-bottom: 40px;
+    }
+
+    .recursos-para-la-constitucion .recurso h3 {
+        font-size: 1.4em;
+    }
+
+    .recursos-para-la-constitucion .recurso a {
+        margin-bottom: 50px;
+    }
+
+    .recursos-para-la-constitucion .recurso img.collage-glosario {
+        width: 70%;
+    }
+
+    .botones-flotantes .btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .botones-flotantes .btn img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .footer .personas-lcen {
+        top: -50px;
+        width: 90%;
+    }
+}
+
+@media(max-width:600px) {
+    .footer .personas-lcen {
+        top: -40px;
+        width: 90%;
     }
 }

@@ -5,182 +5,161 @@
 {% block content %}
 
 
-<section class="container-fluid portada-banner">
 
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+    <section class="portada wow animate__animated animate__fadeIn">
+        <div class="degradado"></div>
+        <img src="{% static 'img/img-lcen-2/portada-home.png' %}" alt="banner" class="banner-portada w-100 version-desktop">
+        <img src="{% static 'img/img-lcen-2/portada-movil.png' %}" alt="banner" class="banner-portada w-100 version-movil">
+    </section>
+
+    <section class="scroll-btn wow animate__animated animate__fadeIn">
+        <p>¿Cómo avanza el proceso?</p>
+        <div class="img-scroll">
+            <a href="#post-plebiscito">
+                <img src="{% static 'img/img-lcen-2/flecha-icono.svg' %}" alt="flecha" class="img-flecha">
+            </a>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{% static 'img/header1.jpg' %}" alt="banner" class="img-fluid portada-desktop">
-                <img src="{% static 'img/header1m.jpg' %}" alt="banner" class="img-fluid portada-movil">
+    </section>
 
 
-                <div class="carousel-caption text-start">
-                    <!-- <h1>Example headline.</h1>
-                            <p>Some representative placeholder content for the first slide of the carousel.</p> -->
-                    <p><a class="btn-lcen button hvr-sweep-to-right wow animate__animated" href="https://youtu.be/yRET40ozjlw" target="_blank">Ver Vídeo</a></p>
+    <section class="post-plebiscito wow animate__animated animate__fadeIn" id="post-plebiscito">
+        <div class="franja">
+            <div class="img-alarma">
+                <img src="{% static 'img/img-lcen-2/alarma-img.png' %}" alt="alarma" width="80px">
+            </div>
+            <div class="franja-contenido">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="informativo">
+                                <img src="{% static 'img/img-lcen-2/circulo-rojo.svg' %}" alt="circulo-rojo" class="circulo-rojo parpadea">
+                                <p><span>Informativo:</span></p>
+                                <div class="et_pb_row et_pb_row_1">
+                                    <div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                        <div class="et_pb_module et_pb_code et_pb_code_0">
+                                            <div class="et_pb_code_inner">
+                                                <div class="ticker-wrap">
+                                                    <div class="ticker">
+                                                        <div class="ticker__item">
+                                                            <p>Este jueves 1 de diciembre se reuirá nuevamente la mesa oficial de negociaciones para destrabar el acuerdo acerca del órgano de redacción y su mecanismo de elección.</p>
+                                                        </div>
+                                                        <div class="ticker__item">
+                                                            <p>Desde el oficialismo se abren cada vez más a la posibilidad de un órgano mixto. Mientras que amarillos por chile, quienes habian propuesto un órgano 100% electo por el congreso tambien se han abierto a esta posibilidad.</p>
+                                                        </div>
+                                                        <div class="ticker__item">
+                                                            <p>Un grupo diverso de la academia redactaron una carta expresando su preocupación porque una nueva constitución sea redactada por personas electas integramente por la ciudadanía.</p>
+                                                        </div>
+
+
+                                                        <div class="ticker__item">
+                                                            <p>Este jueves 1 de diciembre se reuirá nuevamente la mesa oficial de negociaciones para destrabar el acuerdo acerca del órgano de redacción y su mecanismo de elección.</p>
+                                                        </div>
+                                                        <div class="ticker__item">
+                                                            <p>Desde el oficialismo se abren cada vez más a la posibilidad de un órgano mixto. Mientras que amarillos por chile, quienes habian propuesto un órgano 100% electo por el congreso tambien se han abierto a esta posibilidad.</p>
+                                                        </div>
+                                                        <div class="ticker__item">
+                                                            <p>Un grupo diverso de la academia redactaron una carta expresando su preocupación porque una nueva constitución sea redactada por personas electas integramente por la ciudadanía.</p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-            <div class="carousel-item">
-                <img src="{% static 'img/header2.jpg' %}" alt="banner" class="img-fluid portada-desktop">
-                <img src="{% static 'img/header2m.jpg' %}" alt="banner" class="img-fluid portada-movil">
+        </div>
 
-
-                <div class="carousel-caption text-start">
-                    <!-- <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p> -->
-                    <p><a class="btn-lcen button hvr-sweep-to-right wow animate__animated" href="https://youtu.be/aFNPdmUs_v0" target="_blank">Ver Vídeo</a></p>
+        <div class="seccion-post-plebiscito-home wow animate__animated animate__fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contenido">
+                            <img src="{% static 'img/img-lcen-2/titulo-discusion-post-plebiscito.png' %}" alt="titulo" class="titulo">
+                            <a href="{% url 'mapa-constitucional' %}" class="btn-web-lcen">Conoce más</a>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-            <div class="carousel-item">
-                <img src="{% static 'img/header3.jpg' %}" alt="banner" class="img-fluid portada-desktop">
-                <img src="{% static 'img/header3m.jpg' %}" alt="banner" class="img-fluid portada-movil">
+            <img src="{% static 'img/img-lcen-2/collage-politicos.png' %}" alt="collage politicos" class="w-100 version-desktop">
+            <img src="{% static 'img/img-lcen-2/politicos-movil.png' %}" alt="collage politicos" class="w-100 version-movil">
+        </div>
+    </section>
 
-
-                <div class="carousel-caption text-start">
-                    <!-- <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p> -->
-                    <p><a class="btn-lcen button hvr-sweep-to-right wow animate__animated" href="https://youtu.be/0C7qJ78ZwPs" target="_blank">Ver Vídeo</a></p>
+    <section class="quienes-somos wow animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 col-md-5 col-lg-4 align-self-center">
+                    <div class="img">
+                        <img src="{% static 'img/img-lcen-2/lcen-collage-faro.png' %}" alt="collage-quienes-somos">
+                    </div>
                 </div>
-
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'img/header0.jpg' %}" alt="banner" class="img-fluid portada-desktop">
-                <img src="{% static 'img/header0m.png' %}" alt="banner" class="img-fluid portada-movil">
-
-
-                <div class="carousel-caption text-start">
-                    <!-- <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p> -->
-                    <p><a class="btn-lcen button hvr-sweep-to-right wow animate__animated" href="https://youtu.be/oQZKOF3BnJ8" target="_blank">Ver Vídeo</a></p>
+                <div class="col-12 col-sm-6 offset-md-1 col-md-6 offset-lg-1 col-lg-5 align-self-center">
+                    <div class="informacion">
+                        <p>La Constitución es Nuestra es una Plataforma abierta y colaborativa que busca darle voz a la ciudadanía en el proceso constituyente que está recorriendo Chile desde el año 2019. La ciudadanía ha sido la protagonista de las demandas que impulsaron este camino y también debe ser una pieza fundamental de su construcción.</p>
+                        <a href="{% url 'quees' %}" class="btn-web-lcen">Conoce más</a>
+                    </div>
                 </div>
-
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!-- <img src="{% static 'img/output.gif' %}" alt="banner" class="img-fluid portada-desktop">
-        <img src="{% static 'img/banner-movil.gif' %}" alt="banner" class="img-fluid portada-movil"> -->
-    <!-- <div class="enlace-portada">
-            <p>Aquí nos acercamos a la</p>
-            <h2>Nueva Constitución</h2>
-            <a href="{% url 'verevaluaciones' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated">
-                Evaluaciones de organizaciones y académicos/as nacionales</a>
-            <br><br>
-            <a href="{% url 'evaluaciones_int' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated">Evaluaciones de académicos/as internacionales</a>
-        </div> -->
+    </section>
 
-</section>
-<section class="llamado-inscripcion">
-    <p>Lee la Propuesta Constitucional</p>
-    <a href="https://nuevaconstitucion.laconstitucionesnuestra.cl" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn">Lectura Interactiva</a>
-</section>
-
-<section class="hitos-cc container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-sm-10 col-md-8 img-titulo">
-            <img src="{% static 'img/la-constitucion-es-nuestra-titulo.svg' %}" alt="banner" class="img-fluid">
-        </div>
-        <div class="col-12 col-sm-10 col-md-8 descripcion-lcen-home">
-            <p>La Constitución es Nuestra (LCeN) es una plataforma abierta, colaborativa y colectiva que busca reivindicar el poder ciudadano presente en la nueva Constitución.</p>
-            <p>La historia por la conquista de derechos sociales y por modernizar nuestro Estado es parte de un largo proceso social y político del que hemos sido parte y la decisión final es nuestra.</p>
-        </div>
-    </div>
-</section>
-
-<section class="linea-cronologica">
-    <img src="{% static 'img/hitos-desktop-lcen.jpg' %}" alt="banner" class="img-fluid img-banner-desktop">
-    <img src="{% static 'img/hitos-lcen.jpg' %}" alt="banner" class="img-fluid img-banner-movil">
-</section>
-
-<section class="decision-final-hito container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-sm-5 col-md-5 col-lg-4">
-            <img src="{% static 'img/collage-borrador.png' %}" alt="banner" class="img-fluid img-banner-desktop">
-        </div>
-        <div class="col-12 col-sm-7 col-md-5 col-lg-4">
-            <img src="{% static 'img/la-decision-es-nuestra.svg' %}" alt="banner" class="img-fluid img-banner-desktop">
-            <a href="{% url 'homeevaluaciones' %}" class="btn-lcen button hvr-sweep-to-right wow animate__animated animate__fadeIn animate__delay-2s">Conoce las normas aquí</a>
-        </div>
-    </div>
-</section>
-
-
-<!-- Iniciativa Popular de Norma -->
-<section class="iniciativa-popular container-fluid">
-    <div class="img img-uno wow animate__animated animate__fadeIn">
-        <img src="{% static 'img/megafono-lcen.png' %}" alt="img megafono lcen" class="img-ipn-uno">
-    </div>
-    <div class="informacion wow animate__animated animate__fadeIn">
-        <img src="{% static 'img/como-se-construyeron-las-normas.svg' %}" alt="banner" class="img-fluid">
-
-
-        <a href="{% url 'debate-constituyente' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Sigue el recorrido aquí</a>
-    </div>
-    <div class="img img-dos wow animate__animated animate__fadeIn">
-        <img src="{% static 'img/papel-lcen.png' %}" alt="img mano con papel lcen" class="img-ipn-dos">
-    </div>
-</section>
-
-
-<!-- <section class="quieres-sumar-a-tu-org">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-10 col-md-8 col-lg-8">
-                <img src="{% static 'img/incluye-org.svg' %}" alt="banner" class="img-fluid">
-            </div>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-8 btn">
-                <a href="https://wa.me/56953069053" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Inscríbete aquí</a>
+    <section class="que-ha-ocurrido-hasta-ahora wow animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="contenido">
+                        <img src="{% static 'img/img-lcen-2/titulo-que-ha-ocurrido-hasta-ahora.svg' %}" alt="titulo" class="titulo">
+                        <img src="{% static 'img/img-lcen-2/linea-de-tiempo-home.png' %}" class="linea-de-tiempo version-desktop">
+                        <img src="{% static 'img/img-lcen-2/linea-de-tiempo-home-movil.png' %}" alt="linea-de-tiempo" class="linea-de-tiempo version-movil">
+                        <a href="#" class="btn-web-lcen">Recorre el proceso</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-</section> -->
 
-<section class="recursos-cc container">
-    <div class="row">
-        <div class="col-12 img-titulo">
-            <img src="{% static 'img/recursos-constituyentes-titulo.svg' %}" alt="banner" class="img-fluid my-5">
+    <section class="recursos-para-la-constitucion wow animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-md-4 align-self-center version-movil">
+                    <div class="img-titulo">
+                        <img src="{% static 'img/img-lcen-2/titulo-recursos-para-el-proceso-constitucional.svg' %}" alt="titulo" class="titulo">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 align-self-center">
+                    <div class="recurso">
+                        <img src="{% static 'img/img-lcen-2/glosario-img.png' %}" alt="img glosario" class="collage-glosario">
+                        <h3>Glosario<br> Constitucional</h3>
+                        <a href="{% url 'glosario-constitucional' %}" class="btn-web-lcen">Revisar Glosario</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 align-self-center version-desktop">
+                    <div class="img-titulo">
+                        <img src="{% static 'img/img-lcen-2/titulo-recursos-para-el-proceso-constitucional.svg' %}" alt="titulo" class="titulo">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 align-self-center">
+                    <div class="recurso">
+                        <img src="{% static 'img/img-lcen-2/mapa-constitucional-img.png' %}" alt="img mapa collage" class="collage-mapa">
+                        <h3>Mapa<br> Constitucional</h3>
+                        <a href="{% url 'mapa-constitucional' %}" class="btn-web-lcen">Revisar Mapa</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-4 img-titulo">
-            <img src="{% static 'img/collage-mapa-constitucional-home.png' %}" alt="banner" class="img-fluid">
-            <h3>Mapa <br> Constitucional</h3>
-            <div class="decoracion-linea"></div>
-            <a href="{% url 'mapa-constitucional' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Revisar</a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 img-titulo">
-            <img src="{% static 'img/collage-ensayos-home.png' %}" alt="banner" class="img-fluid">
-            <h3>Ensayos</h3>
-            <div class="decoracion-linea"></div>
-            <a href="{% url 'ensayos' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Revisar</a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 img-titulo">
-            <img src="{% static 'img/collage-constitucion-feminista-home.png' %}" alt="banner" class="img-fluid">
-            <h3>Constitución <br> Feminista</h3>
-            <div class="decoracion-linea"></div>
-            <a href="{% url 'constitucion-feminista' %}" class="btn-lcen button hvr-sweep-to-right boton-manual-convencion" target="_blank">Revisar</a>
-        </div>
-
-    </div>
-</section>
+    </section>
 
 
-
-<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
+<!--<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
     <div class="container">
         <div class="row">
             <div class="organizaciones-lista wow animate__animated animate__fadeIn">
@@ -196,20 +175,6 @@
             </div>
         </div>
     </div>
-</section>
-
-
-<!-- <section class="container call-to-action-organizaciones">
-    <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 wow animate__animated animate__fadeIn">
-            <h2>¿Eres una organización y quieres estar aquí?</h2>
-            <div class="call-to-action">
-                <a href="https://wa.me/56953069053" class="btn-lcen button hvr-sweep-to-right">Comunícate aquí</a>
-            </div>
-        </div>
-    </div>
 </section> -->
-
-
 
 {% endblock %}

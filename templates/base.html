@@ -104,7 +104,7 @@
 
 <body>
 
-    <header class="container-fluid fixed-top header-desktop">
+    <!--<header class="container-fluid fixed-top header-desktop">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid p-0">
                 <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
@@ -116,10 +116,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
                         </li>
-
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="{% url 'quees' %}">Discusión post plebiscito</a>
-                        </li> -->
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
@@ -185,11 +181,6 @@
                             <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
                         </li>
 
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="{% url 'quees' %}">Discusión post plebiscito</a>
-                        </li> -->
-
-
                         <li class="nav-item dropdown-anidado">
                             <p>Recursos</p> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -211,15 +202,67 @@
                                 <li><a class="dropdown-item" href="{% url 'verorgsevaluadoras' %}">Organizaciones</a></li>
                             </ul>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="{% url 'evaluaciones_int' %}">Int</a>
-                        </li>  -->
                     </ul>
                 </div>
 
             </div>
         </nav>
-    </header>
+    </header> -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'quees' %}">¿Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Un viaje por el proceso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Post Plebiscito</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
+                       <!--<li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
+                            <li><a class="dropdown-item" href="#">Propuestas ciudadanas</a></li>-->
+                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+    <div class="botones-flotantes">
+        <div class="btn">
+            <a href="mailto:contacto@laconstitucionesnuestra.cl" class="btn-flotante"><img src="{% static 'img/img-lcen-2/instagram-icono.svg' %}" alt="instagram-icono" class="instagram-icono"></a>
+        </div>
+        <div class="btn">
+            <a href="https://www.instagram.com/laconstitucion_esnuestra/" class="btn-flotante" target="_blank"><img src="{% static 'img/img-lcen-2/contacto-icono.svg' %}" alt="contacto-icono" class="contacto-icono"></a>
+        </div>
+    </div>
 
 
     {% block content %}
@@ -230,7 +273,7 @@
 
 
 
-    <div class="decoracion-colores">
+  <!--  <div class="decoracion-colores">
         <div class="yellow"></div>
         <div class="blue"></div>
         <div class="green"></div>
@@ -286,12 +329,80 @@
                 <img src="{% static 'img/footer-collage-2.png' %}" alt="collage footer 2" class="img-fluid">
             </div>
         </div>
-    </footer>
+    </footer> -->
+
+
+
+        <section class="colores-lineal-footer">
+            <div class="color color-celeste"></div>
+            <div class="color color-verde"></div>
+            <div class="color color-amarillo"></div>
+            <div class="color color-rojo"></div>
+            <div class="color color-violeta"></div>
+        </section>
+
+        <footer class="footer">
+            <img src="{% static 'img/img-lcen-2/gente-lcen.png' %}" alt="personas-lcen" class="personas-lcen">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-6 columna-1-footer">
+                        <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-footer">
+                        <h3>Impulsado por:</h3>
+                        <div class="logos-fundaciones">
+                            <img src="{% static 'img/img-lcen-2/logos-desktop-footer-organizaciones.png' %}" alt="logos" class="logos-org version-desktop">
+                            <img src="{% static 'img/img-lcen-2/logos-movil-footer-organizaciones.png' %}" alt="fci" class="logos-org version-movil">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 columna-2-footer">
+                        <h3>Con el apoyo de:</h3>
+                        <div class="logos-fundaciones-apoyo">
+                            <img src="{% static 'img/img-lcen-2/logo-apoyo-footer-desktop.png' %}" alt="logos" class="logos-apoyo">
+                        </div>
+                        <div class="rrss">
+                            <h4>#LaConstituciónEsNuestra</h4>
+                            <div class="logos-rrss">
+                                <ul>
+                                    <li><a href="mailto:contacto@laconstitucionesnuestra.cl"><img src="{% static 'img/img-lcen-2/mensaje-icono-footer.svg' %}" alt="mensaje" class="mensaje"></a></li>
+                                    <li><a href="https://github.com/ciudadanointeligente/lcen" target="_blank"><img src="{% static 'img/img-lcen-2/git-logo-footer.svg' %}" alt="git" class="git"></a></li>
+                                    <li><a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank"><img src="{% static 'img/img-lcen-2/cc-logo-footer.svg' %}" alt="cc" class="cc"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p><img src="{% static 'img/img-lcen-2/info.svg' %}" alt="info">Este sitio web utiliza Google Analytics para analizar el tráfico que recibe y Cloudflare para administrar los DNS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     <!-- Bootstrap JS -->
     <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript" src="{% static 'js/src.js' %}"></script>
+
+
+        <script type="text/javascript">
+            var nav = document.querySelector('nav');
+
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 50) {
+                    nav.classList.add('bg-white', 'shadow');
+                } else {
+                    nav.classList.remove('bg-white', 'shadow');
+                }
+            });
+        </script>
+
+
 </body>
 
 </html>
