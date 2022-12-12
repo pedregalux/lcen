@@ -8507,13 +8507,14 @@ nav .dropdown-item:active {
     white-space: nowrap;
     box-sizing: content-box;
     -webkit-animation-iteration-count: infinite;
+    animation-play-state: running;
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
     -webkit-animation-name: ticker;
     animation-name: ticker;
-    -webkit-animation-duration: 200s;
-    animation-duration: 200s;
+    -webkit-animation-duration: 400s;
+    animation-duration: 400s;
 }
 
 .ticker:hover {
@@ -8905,6 +8906,7 @@ nav img {
         background-position: center;
         background-size: cover;
         padding-bottom: 50px;
+        padding-left: 0px;
     }
 
     .footer .personas-lcen {
@@ -8934,6 +8936,7 @@ nav img {
 
     .footer .columna-1-footer .logos-fundaciones img {
         width: 70%;
+        margin-bottom: 60px;
     }
 
     .footer .columna-2-footer h3 {
@@ -8990,6 +8993,9 @@ nav img {
         width: 15px;
     }
 
+.informativo>p{
+  display:none;
+}
     .ticker-wrap .ticker__item p {
         padding-bottom: 0px;
         text-align: center;
@@ -9075,11 +9081,16 @@ nav img {
         top: -50px;
         width: 90%;
     }
-}
-
-@media(max-width:600px) {
     .footer .personas-lcen {
         top: -40px;
         width: 90%;
     }
+
+    .footer .columna-1-footer .logos-fundaciones img {
+    width: 90%;
+}
+    .footer .columna-2-footer .rrss h4 {
+    font-size: 1em;
+}
+
 }
