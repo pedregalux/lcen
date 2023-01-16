@@ -40,10 +40,20 @@ class HomeView(TemplateView):
 class QueesView(TemplateView):
     template_name = 'inicio/que_es.html'
 
+class QuienessomosView(TemplateView):
+    template_name = 'inicio/quienes-somos.html'
 
 class PreguntasView(TemplateView):
     template_name = 'inicio/preguntas-frecuentes.html'
 
+class UnviajeView(TemplateView):
+    template_name = 'inicio/un-viaje-por-el-proceso.html'
+
+class PostplebiscitoView(TemplateView):
+    template_name = 'inicio/post-plebiscito.html'
+
+class ContactoView(TemplateView):
+    template_name = 'inicio/contacto.html'
 
 class EnsayosView(TemplateView):
     template_name = 'inicio/ensayos.html'

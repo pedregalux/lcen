@@ -105,51 +105,6 @@
 <body>
 
 
-  <!--
-  <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-          <div class="container">
-              <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                          <a class="nav-link" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'un-viaje-por-el-proceso' %}">Un viaje por el proceso</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'post-plebiscito' %}">Post Plebiscito</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Recursos
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
-                              <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
-                              <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
-                              <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
-                              <li><a class="dropdown-item" href="#">Propuestas ciudadanas</a></li>
-                              <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
-                              <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'preguntas-frecuentes' %}">Preguntas Frecuentes</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </nav>
--->
 
 
     <div class="botones-flotantes">
@@ -168,63 +123,7 @@
 
 
 
-  <!--  <div class="decoracion-colores">
-        <div class="yellow"></div>
-        <div class="blue"></div>
-        <div class="green"></div>
-        <div class="red"></div>
-    </div>
-
-    <footer class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 logo">
-                <img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid logo">
-            </div>
-
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 apoyo">
-                <h3>Proyecto impulsado por:</h3>
-                <div class="logos-organizaciones">
-                    <img src="{% static 'img/fci-logo.png' %}" alt="logo fci" class="img-fluid logo">
-                    <img src="{% static 'img/amnestyp.png' %}" alt="logo amnistia" class="img-fluid logo">
-                    <img src="{% static 'img/the-global-iniciative-logo.png' %}" alt="logo the global iniciative" class="img-fluid logo">
-                    <img src="{% static 'img/logo-avina.png' %}" alt="logo avina" class="img-fluid logo">
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 apoyo">
-                <h3>Apoyado por:</h3>
-                <div class="logos-organizaciones">
-                    <img src="{% static 'img/ned-logo.png' %}" alt="logo Ned" class="img-fluid logo">
-                    <img src="{% static 'img/osf.png' %}" alt="logo osf" class="img-fluid logo">
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 apoyo">
-                <h3>Proyecto creado por:</h3>
-                <div class="logos-organizaciones">
-                    <img src="{% static 'img/fci-logo.png' %}" alt="logo fci" class="img-fluid logo-creadores">
-                    <img src="{% static 'img/constituyo-logo.png' %}" alt="logo Constituyo" class="img-fluid logo-creadores">
-                    <img src="{% static 'img/the-global-iniciative-logo.png' %}" alt="logo the global iniciative" class="img-fluid logo-creadores">
-                    <img src="{% static 'img/fes-logo.png' %}" alt="logo FES" class="img-fluid logo-creadores">
-                </div>
-            </div>
-
-            <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7 collage-1">
-                <img src="{% static 'img/footer-collage-1.png' %}" alt="collage footer 1" class="img-fluid">
-            </div>
-            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 redes">
-                <p>#LaConstituciónEsNuestra</p>
-                <ul class="rrss">
-                    <li><a href="mailto:contacto@laconstitucionesnuestra.cl" target="_blank"><i class="fas fa-envelope"></i></a></li>
-                    <li><a href="https://github.com/ciudadanointeligente/lcen" target="_blank"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank"><i class="far fa-closed-captioning"></i></a></li>
-                </ul>
-            </div>
-            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 collage-2">
-                <img src="{% static 'img/footer-collage-2.png' %}" alt="collage footer 2" class="img-fluid">
-            </div>
-        </div>
-    </footer> -->
+  
 
 
 
@@ -249,10 +148,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 columna-2-footer">
-                        <!--<h3>Con el apoyo de:</h3>
-                        <div class="logos-fundaciones-apoyo">
-                            <img src="{% static 'img/img-lcen-2/logo-apoyo-footer-desktop.png' %}" alt="logos" class="logos-apoyo">
-                        </div>-->
+
                         <div class="rrss">
                             <h4>#LaConstituciónEsNuestra</h4>
                             <div class="logos-rrss">
