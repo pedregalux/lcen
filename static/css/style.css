@@ -1170,7 +1170,7 @@ footer .rrss li a i {
 
 /*BANNER PORTADA SECCIONES INTERNAS*/
 .portada-lcen-colores {
-    margin-top: 98px;
+    margin-top: 0px;
     position: relative;
     margin-bottom: 70px;
 }
@@ -1189,7 +1189,7 @@ footer .rrss li a i {
 
 .portada-lcen-colores .breadcrumb {
     position: absolute;
-    top: 15%;
+    top: 30%;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -1203,20 +1203,24 @@ footer .rrss li a i {
 }
 
 .portada-lcen-colores ol.breadcrumb li {
-    font-size: 1.2em !important;
+    font-size:16px!important;
     color: black;
-    font-weight: 800;
+    font-weight: 800!important;
 }
 
 .portada-lcen-colores ol.breadcrumb li a {
-    font-weight: 500;
+    font-weight: 500!important;
+    text-transform: inherit!important;
     text-decoration: none;
-    color: black;
+    color: black!important;
     padding-bottom: 0px;
+    border-top: 0px;
+    font-size:16px!important;
 }
 
 .portada-lcen-colores ol.breadcrumb li a:hover {
     text-decoration: underline;
+    border-top: 0px;
 }
 
 
@@ -3043,8 +3047,13 @@ footer .rrss li a i {
     margin-top: 0px !important;
 }
 
+.mapa-constitucional .collage-mapa-constitucional{
+  width: 75%;
+  margin: auto;
+}
+
 .mapa-temas-list {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .mapa-temas-list h2 {
@@ -3092,7 +3101,7 @@ footer .rrss li a i {
 /*Mapa Constitucional - Sección Interna*/
 
 .mapa-constitucional-terminos {
-    margin-bottom: 70px;
+    margin-bottom: 140px;
 }
 
 .mapa-constitucional-terminos h3 {
@@ -3104,8 +3113,8 @@ footer .rrss li a i {
 }
 
 .mapa-constitucional-terminos p a.enlaces {
-    color: #008000;
-    font-weight: 600;
+    color: #008000!important;
+    font-weight: 600!important;
 }
 
 .mapa-constitucional-terminos .breadcrumb li {
@@ -3114,9 +3123,21 @@ footer .rrss li a i {
 }
 
 .mapa-constitucional-terminos .breadcrumb li a {
-    font-weight: 400;
-    color: black;
-    text-decoration: none;
+    font-weight: 400!important;
+    color: black!important;
+    text-decoration: none!important;
+    text-transform: inherit;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 0.6px;
+    font-size: inherit;
+    padding:0px !important;
+    border:0px!important;
+}
+
+.mapa-constitucional-terminos .breadcrumb li a:hover{
+  border: 0px!important;
+  text-decoration: underline!important;
 }
 
 .mapa-constitucional-terminos .btn-concepto-modal {
@@ -6162,7 +6183,7 @@ a.btn-glosario {
 /*Evaluaciones 2.0*/
 
 .banner-evaluaciones {
-    padding-top: 100px!important;
+    margin-top: 100px!important;
     height: 245px;
     background: url(../img/bg-evaluaciones.jpg);
     background-size: cover;
@@ -8204,9 +8225,19 @@ nav li a {
     padding: 34px 0px !important;
 }
 
+nav li a.active{
+  border-top: 5px solid #FFD700;
+}
+
 nav li a:hover {
     color: white !important;
     border-top: 5px solid #FFD700;
+}
+
+nav .dropdown-menu[data-bs-popper]{
+  left: inherit!important;
+  top: inherit!important;
+  margin-top: 0px!important;
 }
 
 .fixed-top {
@@ -8257,6 +8288,19 @@ nav .dropdown-item:active {
     color: black !important;
 }
 
+nav.navbar .dropdown-menu li a.active{
+  background: #F2F2F2;
+}
+
+/*breadcrumb*/
+
+.breadcrumb .breadcrumb-item{
+  padding: 0px;
+}
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    padding: 0rem 0.5rem;
+  }
 
 /*Flotante*/
 .botones-flotantes {
@@ -8596,6 +8640,7 @@ nav .dropdown-item:active {
 
 .que-ha-ocurrido-hasta-ahora .contenido .linea-de-tiempo {
     width: 80%;
+    margin-top: 0px;
     margin-bottom: 40px;
 }
 
@@ -9091,6 +9136,912 @@ nav img {
 }
     .footer .columna-2-footer .rrss h4 {
     font-size: 1em;
+}
+
+}
+
+
+
+/*Post Plebiscito - Sección*/
+
+.seccion-post-plebiscito{
+  padding: 80px 0px 100px 0px;
+}
+
+.seccion-post-plebiscito .contenedor-linea-reels{
+
+}
+
+.seccion-post-plebiscito .columna-linea-de-tiempo{
+  width: auto;
+  padding: 0px;
+}
+
+.seccion-post-plebiscito .columna-contenido-linea-de-tiempo{
+  width: 70%;
+  padding: 0px;
+}
+
+.seccion-post-plebiscito .titular{
+  margin-bottom: 35px;
+}
+
+.seccion-post-plebiscito .titular h2{
+  border: 0px;
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 0.06em;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.seccion-post-plebiscito .titular p{
+  text-align: center;
+  font-size: 1em;
+}
+
+.seccion-post-plebiscito .linea-de-tiempo .triangulo-1{
+  width: 0;
+  height: 0;
+  border-left: 3.5px solid transparent;
+  border-bottom: 7px solid black;
+  border-right: 3.5px solid transparent;
+  position: relative;
+  left: -3px;
+}
+
+.seccion-post-plebiscito .linea-de-tiempo .triangulo-2{
+  width: 0;
+  height: 0;
+  border-left: 3.5px solid transparent;
+  border-top: 7px solid black;
+  border-right: 3.5px solid transparent;
+  position: relative;
+  left: -3px;
+}
+
+.seccion-post-plebiscito .linea-de-tiempo .nav-pills{
+  border-left: 1.5px solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-right: 0px;
+}
+
+.seccion-post-plebiscito .linea-de-tiempo .nav-pills .nav-link{
+  margin: 20px 0px;
+  padding: 0px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: black;
+  font-size: 1.3em;
+}
+
+.seccion-post-plebiscito .linea-de-tiempo .nav-pills .nav-link.active{
+    color: #CC0000;
+    background-color: transparent;
+}
+
+.seccion-post-plebiscito .linea-de-tiempo .nav-pills .nav-link:before{
+  content: url('../img/dot-black.png');
+  position: relative;
+  left: -18px;
+}
+
+.seccion-post-plebiscito .linea-de-tiempo .nav-pills .nav-link.active:before{
+  content: url('../img/dot-select.png');
+}
+
+.seccion-post-plebiscito .linea-de-tiempo .nav-pills .nav-link:after{
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 9px solid transparent;
+  border-top: 9px solid transparent;
+  border-right: 13px solid transparent;
+  padding-left: 10px;
+  position: relative;
+  right: -1px;
+}
+
+.seccion-post-plebiscito .linea-de-tiempo .nav-pills .nav-link.active:after{
+  border-right: 12px solid #F2F2F2;
+  position: relative;
+  right: -1px;
+}
+
+/*Contenido linea de tiempo post plebiscito*/
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses {
+    background: #F2F2F2;
+    padding: 20px 30px 20px 30px;
+    margin-right: 30px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses h4{
+    font-size: 1.2em;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .nav-link{
+  margin: 6px 0px;
+  padding: 0px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #4F4F4F;
+  font-size: 0.9em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .nav-link span{
+  padding: 3px 8px;
+  transition: 0.5s all;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .nav-link:before{
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   content: "\f111";
+   color: #4F4F4F;
+   padding-right: 5px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .nav-link.active:before,
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .show > .nav-link:before{
+  color: #4656B3;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .nav-link.active,
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .show > .nav-link {
+  color: white;
+  background-color: transparent;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .nav-link.active span{
+  color: white;
+  background-color: #4656B3;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .nav-link:hover:before{
+  color: #4656B3!important;
+  transition: 0.5s all;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .nav-link:hover span{
+  color: white!important;
+  background-color: #4656B3!important;
+  border-radius: 3px;
+  transition: 0.5s all;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .btn-desactivado{
+  margin: 6px 0px;
+  padding: 0px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #B3B3B3;
+  font-size: 0.9em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .btn-desactivado span{
+  padding: 3px 8px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .btn-desactivado:before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f111";
+  color: #B3B3B3;
+  padding-right: 5px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido{
+  display: flex;
+  flex-direction: row;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video{
+  width: 40%;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video .video-modal{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video .video-modal img{
+  width: 100%!important;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video .video-modal .ver-video{
+  position: absolute;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: #f7f6f6a8;
+  overflow: hidden;
+  transform: translate(0px, -101%);
+  opacity: 0;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video .video-modal:hover .ver-video{
+  opacity: 1;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video .video-modal .ver-video .alineacion{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video .video-modal .ver-video button {
+    margin: auto;
+    border: 0px;
+    background: #4656B3;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video .video-modal .ver-video button img{
+  width: 25px!important;
+  height: auto;
+  margin-right: 5px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video video{
+  width: 100%!important;
+  height: auto;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video .fecha-video{
+  background: #383838;
+  padding: 8px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  width: 100%;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video .fecha-video p{
+  color: white;
+  padding: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video{
+  width: 60%;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video .mes-videos-destacado{
+  background: #383838;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  font-size: 1em;
+  color: white;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video h3{
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  font-size: 1.6em;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 0px!important;
+  padding-bottom: 0px!important;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video .linea-decoracion{
+  width: 60px;
+  height: 7px;
+  background: #4656B3;
+  margin: 10px 0px!important;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video p{
+  color: black;
+  font-size: 1em;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video .seleccion-videos{
+  background: #F2F2F2;
+  padding: 15px 20px 0px 20px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video .seleccion-videos p{
+  color: #333333;
+  font-weight: 800;
+  font-size: 1em;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video .seleccion-videos .nav-pills{
+  display: flex;
+  flex-direction: column;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video .seleccion-videos .nav-pills .nav-link{
+  background: #CBCBCB;
+  color: #333333;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+  transition: 0.5s all;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video .seleccion-videos .nav-pills .nav-link.active{
+    color: #fff;
+    background-color: #4656B3;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video .seleccion-videos .nav-pills .nav-link:hover{
+    color: #fff;
+    background-color: #4656B3;
+}
+
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-header{
+    margin: 10px 10px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body{
+  display: flex;
+  flex-direction: row;
+  padding: 0px 30px 30px 30px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body .reels{
+    width: 50%;
+    padding-right: 30px;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body .descripcion{
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   padding: 20px;
+   background: #F2F2F2;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body .descripcion h3{
+   font-size: 1.5em;
+   padding: 0px;
+   margin-bottom: 0px;
+   color: black;
+   width: 95%;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body .descripcion p{
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    font-size: 1em;
+    width: 95%;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body .descripcion .linea-decoracion{
+  height: 7px;
+  width: 50px;
+  background: #4656B3;
+}
+
+.modal-header .btn-close:hover{
+  transform: rotate(90deg);
+  transition: 0.5s all;
+}
+
+/*Acuerdos Alcanzados*/
+.acuerdos-alcanzados {
+    background: url(../img/img-lcen-2/bg-papel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.acuerdos-alcanzados h2{
+  border: 0px;
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.acuerdos-alcanzados p{
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 30px;
+}
+
+.acuerdos-alcanzados .item{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.acuerdos-alcanzados .item-1 {
+    position: relative;
+    bottom: 50px;
+}
+
+.acuerdos-alcanzados .item img{
+  width: 80%;
+  margin: auto;
+}
+
+.acuerdos-alcanzados .item h3{
+  text-transform: inherit;
+  font-size: 1.4em;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Postura sociedad civil*/
+.postura-osc {
+    padding-top: 80px;
+    padding-bottom: 200px;
+}
+
+.postura-osc h2{
+  border: 0px;
+  text-align: left;
+  font-size: 1.8em;
+  letter-spacing: 0.06em;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.postura-osc .img-postura-osc{
+  display: flex;
+  justify-content: center;
+}
+
+.postura-osc .img-postura-osc img{
+  width: 90%;
+  margin: auto;
+}
+
+
+
+/*Menu navegación evaluaciones*/
+
+.nav-evaluaciones li a{
+  color: black!important;
+}
+
+.nav-evaluaciones li a:hover{
+  color: black!important;
+}
+
+.banner-evaluaciones .breadcrumb li a{
+  border: 0px!important;
+  color: #4F4F4F!important;
+  font-size: 0.9em!important;
+  font-weight: 700!important;
+  letter-spacing: 0.4px!important;
+  text-transform: inherit!important;
+  padding: 0px!important;
+}
+
+
+/*Contacto*/
+.contacto-seccion{
+  margin-bottom: 140px;
+}
+
+.contacto-seccion h2{
+  border: 0px;
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.contacto-seccion p{
+  text-align: center;
+  color: black;
+  font-size: 1em;
+  margin-bottom: 0px;
+}
+
+.contacto-seccion form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-seccion form input{
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: black;
+  padding: 10px;
+}
+
+.contacto-seccion ::placeholder{
+    font-size: 1em;
+    color: #4F4F4F;
+    font-style: italic;
+}
+
+.contacto-seccion input:focus {
+    border: 1px solid #FFD700 !important;
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.contacto-seccion form textarea{
+  border-radius: 20px;
+  font-size: 1em;
+  color: black;
+  padding: 10px;
+}
+
+.contacto-seccion form textarea:focus {
+    border: 1px solid #FFD700 !important;
+}
+
+.contacto-seccion form button{
+      padding: 8px 30px;
+      background-color: black;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 1em;
+      transition: 0.5s all;
+      border:0px;
+      margin-top: 15px;
+}
+
+.contacto-seccion form button:hover{
+     background: #CC0000;
+}
+
+
+/*Quienes somos*/
+
+.que-es-lcen h2{
+  border: 0px;
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.quienes-somos-lcen h2{
+  border: 0px;
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+
+/*.quienes-somos-lcen .dropdown:hover .dropdown-menu .contenido {
+    display: block;
+    margin-top: 0px;
+    width: 250px;
+    border: 5px solid #383838;
+    padding: 20px;
+    left: 30px;
+    border-radius: 2px;
+    background: #383838;
+} /*
+
+
+/*Portada Migas de pan*/
+
+.portada-lcen-colores .breadcrumb{
+
+}
+
+.portada-lcen-colores ol.breadcrumb li a {
+    font-weight: 500!important;
+    text-transform: inherit!important;
+    text-decoration: none;
+    color: black!important;
+    padding-bottom: 0px;
+    border-top: 0px;
+    font-size: 18px!important;
+}
+.portada-lcen-colores ol.breadcrumb li {
+    font-size: 19px!important;
+    color: black;
+    font-weight: 800!important;
+}
+
+
+@media(max-width:900px){
+
+}
+
+@media(max-width:768px){
+  .portada-lcen-colores {
+   margin-top: 80px;
+   }
+
+}
+
+@media(max-width:600px){
+
+   .seccion-post-plebiscito .titular h2 {
+    font-size: 1.5em;
+    margin: 0px;
+    padding: 0px;
+}
+
+   .seccion-post-plebiscito .columna-linea-de-tiempo {
+       width: 100%;
+       padding: 0px;
+   }
+
+   .seccion-post-plebiscito .columna-linea-de-tiempo .linea-de-tiempo{
+      padding: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+   }
+
+   .seccion-post-plebiscito .columna-contenido-linea-de-tiempo {
+      width: 100%;
+      padding: 0px;
+   }
+
+   .seccion-post-plebiscito .linea-de-tiempo .nav-pills {
+       border-top: 1.5px solid black;
+       border-left: 0px;
+       flex-direction: row!important;
+       display: flex;
+       justify-content: center;
+       padding-top: 15px;
+       padding-bottom: 15px;
+   }
+
+   .seccion-post-plebiscito .linea-de-tiempo .nav-pills .nav-link:before {
+       position: relative;
+       left: 40px;
+       top: -34px;
+   }
+   .seccion-post-plebiscito .linea-de-tiempo .nav-pills .nav-link {
+    margin: 0px 0px;
+   }
+
+   .seccion-post-plebiscito .linea-de-tiempo .nav-pills .nav-link.active:after {
+       content: "";
+       border-color: transparent!important;
+   }
+
+   .seccion-post-plebiscito .linea-de-tiempo .nav-pills .nav-link:after {
+    content: "";
+    border-color: transparent!important;
+}
+
+ .seccion-post-plebiscito .linea-de-tiempo .triangulo-1 {
+     width: 0;
+     height: 0;
+     border-top: 3.5px solid transparent;
+     border-bottom: 3.5px solid transparent;
+     border-right: 7px solid black;
+     position: relative;
+     left: 0px;
+     top: -3px;
+ }
+
+ .seccion-post-plebiscito .linea-de-tiempo .triangulo-2 {
+     width: 0;
+     height: 0;
+     border-top: 3.5px solid transparent;
+     border-bottom: 3.5px solid transparent;
+     border-left: 7px solid black;
+     position: relative;
+     left: 0px;
+     top: -3px;
+ }
+
+   .seccion-post-plebiscito .columna-contenido-linea-de-tiempo .contenido-linea-de-tiempo{
+
+   }
+
+   .seccion-post-plebiscito .columna-contenido-linea-de-tiempo .contenido-linea-de-tiempo .menu-meses {
+      flex-wrap: wrap;
+    }
+
+    .seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses {
+        background: #F2F2F2;
+        padding: 20px 15px 20px 15px;
+        margin: 0px 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row!important;
+        justify-content: center;
+    }
+
+    .seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses h4 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .nav-link:before {
+       content: "";
+    }
+
+    .seccion-post-plebiscito .contenido-linea-de-tiempo .navegacion-meses .btn-desactivado:before{
+      content: "";
+    }
+
+    .seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+
+
+    .seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .video {
+        width: 100%;
+        padding: 0px 30px;
+    }
+
+    .seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   }
+
+   .seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .contenido-seleccion-video h3 {
+       font-size: 1.4em;
+   }
+
+
+  .seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body {
+    flex-wrap: wrap;
+  }
+
+  .seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body .reels {
+    width: 100%;
+    padding-right: 0px;
+    margin-bottom: 30px;
+}
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body .descripcion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    background: #F2F2F2;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body .descripcion h3 {
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.seccion-post-plebiscito .contenido-linea-de-tiempo .mes-contenido .modal-body .descripcion p {
+    width: 100%;
+}
+
+/*Acuerdos alcanzados*/
+
+.acuerdos-alcanzados {
+    background-repeat: repeat-y;
+    background-size: contain;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.acuerdos-alcanzados h2 {
+    font-size: 1.4em;
+}
+
+.acuerdos-alcanzados .item {
+    margin-bottom: 50px;
+}
+.acuerdos-alcanzados .item-1 {
+    position: relative;
+    bottom: 0px;
+}
+
+/*Postura OSCs*/
+
+.postura-osc{
+  padding-bottom: 100px;
+}
+
+.postura-osc .img-postura-osc{
+  margin-top: 50px;
+}
+
+
+/*Migas de pan movil*/
+
+.portada-lcen-colores nav {
+    justify-content: center;
+    display: flex;
+}
+
+.portada-lcen-colores .breadcrumb{
+  width: auto;
+  top:20%;
+}
+
+.portada-lcen-colores ol.breadcrumb li{
+  width: auto;
+  font-size: 14px!important;
+}
+
+.portada-lcen-colores ol.breadcrumb li a{
+  font-size: 13px!important;
+}
+
+.postura-osc h2 {
+    font-size: 1.4em;
+}
+
+.contacto-seccion {
+    margin: 100px 0px;
 }
 
 }
