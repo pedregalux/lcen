@@ -1,17 +1,63 @@
-{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Constitución Feminista {% endblock %}
+{% block content %}
 
-<section class="portada-lcen-colores">
-    <img src="{% static 'img/header-constitucionfeminista.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
-    <img src="{% static 'img/header-constitucionfeminista-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
+                    </li>
+                    <!--  <li class="nav-item">
+                          <a class="nav-link" href="{% url 'un-viaje-por-el-proceso' %}">Un viaje por el proceso</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{% url 'post-plebiscito' %}">Post Plebiscito</a>
+                      </li>-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
+                            <li><a class="dropdown-item" href="#">Propuestas ciudadanas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'preguntas-frecuentes' %}">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="portada-lcen-colores mb-3">
+    <img src="{% static 'img/portadas/constitucion-feminista-portada.png' %}" alt="img portada desktop" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/portadas/constitucion-feminista-portada-movil.png' %}" alt="img portada movil" class="img-fluid img-banner-movil">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Niñas, adolescentes y la Constitución</li>
+          <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Niñas, adolescentes y la Constitución</li>
         </ol>
     </nav>
 </section>
-
 
 <section class="container-fluid constitucionfeminista-descripcion  no-bg py-5">
     <div class="container py-5 ensayos-descripcion reflexion">
@@ -21,17 +67,17 @@
                 <h3>Reflexiones de Bárbara, 13 años</h3>
 
                 <div class="decoracion violeta"></div>
-                
+
                 <p>Debería haber equidad entre hombres y mujeres. No necesariamente que la mujer sea mejor o esté por encima del hombre, sino que pueda estar a la par.</p>
-                
+
                 <p><b><i><span>La nueva Constitución podría ayudar a las mujeres a tener la posibilidad de decidir sobre su cuerpo</span></i></b>, en caso que quiera abortar, o no, pues hay mujeres que tienen a sus hijos e hijas, pero no los quieren. Después esos hijos sufren y andan en la calle.</p>
-                
+
                 <p>Respecto a los derechos ambientales, pueden mejorar si la derecha no se mete, si los empresarios no se meten. Porque ellos nunca querrán dejar de explotar la tierra, las aguas, el mar… <b><i><span>a ellos la plata los manda.</span></i></b></p>
-                
+
                 <p>También, <b><i><span>las mujeres deberían exigir un sueldo equitativo</span></i></b>, igual al de los hombres si es el mismo trabajo. <b><i><span>Y la salud no debería ser más cara para las mujeres, sólo por ser mujeres.</span></i></b></p>
-                
+
                 <p><span class="destacado-reflexion">Pienso que la nueva Constitución puede ayudar en todo eso.</span></p>
-                
+
             </div>
 
             <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">

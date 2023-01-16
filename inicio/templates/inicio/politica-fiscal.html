@@ -1,16 +1,61 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} Inicio {% endblock %}
+{% block title %} Mapa Constitucional {% endblock %}
 {% block content %}
 
-<section class="portada-lcen-colores">
-    <img src="{% static 'img/mapa-contitucional-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
-    <img src="{% static 'img/mapa-constitucional-movil-banner.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
+                    </li>
+                    <!--  <li class="nav-item">
+                          <a class="nav-link" href="{% url 'un-viaje-por-el-proceso' %}">Un viaje por el proceso</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{% url 'post-plebiscito' %}">Post Plebiscito</a>
+                      </li>-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
+                            <li><a class="dropdown-item" href="#">Propuestas ciudadanas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'preguntas-frecuentes' %}">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<section class="portada-lcen-colores mb-5 pb-5">
+    <img src="{% static 'img/portadas/mapa-constitucional-portada.png' %}" alt="img portada desktop" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/portadas/mapa-constitucional-portada-movil.png' %}" alt="img portada movil" class="img-fluid img-banner-movil">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Politíca Fiscal</li>
+          <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Politíca Fiscal</li>
         </ol>
     </nav>
 </section>
@@ -53,7 +98,7 @@
 
         <div class="col-12 col-md-12 col-lg-8">
             <div class="d-flex align-items-start">
-               
+
                 <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <h4>5 contenidos asociados</h4>
                     <button class="nav-link active" id="v-pills-tab-1" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true"> <span>Principios de la tributación</span></button>
@@ -62,9 +107,9 @@
                     <button class="nav-link" id="v-pills-tab-4" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false"><span>Presupuestos participativos</span></button>
                     <button class="nav-link" id="v-pills-tab-5" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false"><span>Finanzas subnacionales y desentralización fiscal</span></button>
                 </div>
-                
+
                 <div class="tab-content" id="v-pills-tabContent">
-                   
+
                     <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-tab-1">
                         <p class="text-bold">¿Para qué tenemos un Estado?</p>
                         <h4>Principios de la tributación</h4>
@@ -76,7 +121,7 @@
                             <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
                         </ul>-->
                     </div>
-                    
+
                     <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-tab-2">
                         <p class="text-bold">¿Para qué tenemos un Estado?</p>
                         <h4>Regla fiscal</h4>
@@ -88,7 +133,7 @@
                             <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
                         </ul>-->
                     </div>
-                    
+
                     <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-tab-3">
                         <p class="text-bold">¿Para qué tenemos un Estado?</p>
                         <h4>Potestades sobre presupuesto y gasto público</h4>
@@ -99,7 +144,7 @@
                             <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
                         </ul>-->
                     </div>
-                    
+
                     <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-tab-4">
                         <p class="text-bold">¿Para qué tenemos un Estado?</p>
                         <h4>Presupuestos participativos</h4>
@@ -110,7 +155,7 @@
                             <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
                         </ul>-->
                     </div>
-                    
+
                     <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-tab-5">
                         <p class="text-bold">¿Para qué tenemos un Estado?</p>
                         <h4>Finanzas subnacionales y desentralización fiscal</h4>
@@ -121,7 +166,7 @@
                             <li><a href="#" class="btn-lcen button hvr-sweep-to-right">Item</a></li>
                         </ul>-->
                     </div>
-                    
+
                 </div>
             </div>
         </div>

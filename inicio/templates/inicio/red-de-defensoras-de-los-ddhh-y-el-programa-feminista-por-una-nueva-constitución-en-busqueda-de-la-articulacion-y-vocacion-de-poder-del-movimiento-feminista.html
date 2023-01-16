@@ -1,13 +1,60 @@
-{% extends "base.html" %} {% load static %} {% block title %} Inicio {% endblock %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Constitución Feminista {% endblock %}
+{% block content %}
 
-<section class="portada-lcen-colores">
-    <img src="{% static 'img/header-constitucionfeminista.png' %}" alt="img collage portada" class="img-fluid img-banner-desktop">
-    <img src="{% static 'img/header-constitucionfeminista-movil.png' %}" alt="img collage portada" class="img-fluid img-banner-movil">
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
+                    </li>
+                    <!--  <li class="nav-item">
+                          <a class="nav-link" href="{% url 'un-viaje-por-el-proceso' %}">Un viaje por el proceso</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{% url 'post-plebiscito' %}">Post Plebiscito</a>
+                      </li>-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
+                            <li><a class="dropdown-item" href="#">Propuestas ciudadanas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'preguntas-frecuentes' %}">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="portada-lcen-colores mb-3">
+    <img src="{% static 'img/portadas/constitucion-feminista-portada.png' %}" alt="img portada desktop" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/portadas/constitucion-feminista-portada-movil.png' %}" alt="img portada movil" class="img-fluid img-banner-movil">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Red de Defensoras de los DD.HH. y el Programa Feminista (...)</li>
+          <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Red de Defensoras de los DD.HH. y el Programa Feminista (...)</li>
         </ol>
     </nav>
 </section>
@@ -19,56 +66,56 @@
             <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
                 <h2>Red de Defensoras de los DD.HH. y el Programa Feminista por una nueva constitución: En búsqueda de la articulación y vocación de poder del movimiento feminista</h2>
                 <h3>Reflexiones de Karen Espinoza Sobarzo, Red de Defensoras de los Derechos Humanos</h3>
-                
+
                 <div class="decoracion violeta"></div>
-                
+
                 <h4>Caracterización de la organización feminista y su participación en el  movimiento social </h4>
-                
+
                 <p><b><i><span>Cuando nombran al movimiento feminista y de mujeres emergen imaginarios múltiples, diversos y muchas veces divorciados de los anhelos que conforman el esfuerzo de articularse por una causa que no puede encerrarse en la “cuestión femenina” ni mucho menos al día de hoy, con la multiplicidad de pensamientos, en la “cuestión feminista”</span></i></b>. La  convicción pujante que ha llenado las calles de nuestro país, así como también en el mundo, superan el manifiesto de vida que convocó y sensibilizó a muchas mujeres con el “Ni una  Menos” (2016)<sup>1</sup> el cual permitió que el feminismo se convirtiera en un movimiento de masas posterior a la política de represión, persecución, eliminación de movimientos sociales y  políticos en dictadura<sup>2</sup>.</p>
-                
+
                 <p>La ciudadanía constantemente ha estado al calor de las contradicciones provocadas por el  neoliberalismo, esta tetera llamada Chile post dictadura, ha humeado y gritado diferentes causas que dada su urgencia han tenido un carácter masivo<sup>3</sup>. El movimiento social ha sido radicalizante y formador ya que ha permitido el derecho de lo político a las clases más golpeadas por el neoliberalismo y el patriarcado. Sin embargo, el movimiento de mujeres dentro de esta efervescencia a partir su individualización y quiebre cultural ha enfrentado contradicciones dentro del seno del movimiento social y partidos, situación que ha permitido la construcción y rearticulación de pensamiento desde el reconocimiento como sujetas y de nuestra genealogía. <b><i><span>El reencuentro de nuestra historia como mujeres ha permitido desarrollar nuevas propuestas de organicidad, de convergencia y de poder.</span></i></b></p>
-                
+
                 <p>El mayo feminista<sup>4</sup> es muestra del fruto de la radicalización de las sujetas en marco de la  desnaturalización de prácticas patriarcales, el quiebre del contrato heteronormativo que descansaba en el cuerpo de las mujeres transversalmente a las clases, orgánicas y espacios, sumado a la realidad discriminatoria que pesaba en otras identidades disidentes, <b><i><span>hizo posible la complicidad nacional sobre la necesidad de protocolos y avanzar en políticas que aseguraran mejores condiciones en el aula y espacios educativos.</span></i></b></p>
-                
+
                 <p>La realización de encuentros nacionales<sup>5</sup>, propuestas programáticas, tensión y quiebres dentro de los partidos, ha permitido una acumulación de madurez política de la sujeta que no sale a manifestarse por una causa sino por la transformación estructural y el avance  hasta la eliminación del patriarcado. Esto último, ha permitido sembrar el germen contracultural que forma a sujetas pero también confronta a quien ejerce el poder sobre las mujeres. Muestra de ello, es el avance y legitimación del “separatismo” como forma de  organización entre mujeres, que ha visibilizado nuevas formas de hacer política y de establecer liderazgos y que también ha presentado desafíos en función del desarrollo, vocación de poder y madurez de un movimiento que tiene mucho por proponerle al país.</p>
-                
+
                 <p>Las articulaciones no han estado exentas de complejidades, ha sido difícil aunar criterios que permitan la consolidación de un programa concreto y sustantivo de avance con amplio respaldo y articulado a través del tiempo, no se ha vencido la atomización por lo que es difícil superar las consignas o causas puntuales<sup>6</sup>, así como también el centralismo para  desarrollar otras perspectivas fuera del liderazgo, particularidades orgánicas y realidades de Santiago.</p>
-                
+
                 <p>A pesar de lo anterior, <b><i><span>desde diferentes colectivas, organizaciones y encuentros, se ha apostado por ejercicios, discursos y convergencias de unidad que ha manifestado el movimiento feminista y de mujeres desde su pluralidad.</span></i></b> Estos esfuerzos sin duda han rendido frutos sorteando las dificultades, asumiendo nuestra diferencia y comprendiendo  que la rebeldía feminista se construye desde diversos espacios y experiencias, permitiendo la complicidad e inclusive viviendo la masividad.</p>
-                
+
                 <p><b><i><span>Igualmente la experiencia desde regiones, ha sido un aprendizaje progresivo porque Chile tiene muchas realidades viviendo dentro de él, la resistencia a la emancipación de las mujeres es diferente y particular desde el territorio donde se viva, así como también, la  organización de la rebeldía tiene componentes territoriales que perspectiva luchas y establecen prioridades que superan a la sujeta genérica citadina y cosmopolita que suelen caricaturizar los medios o las redes sociales cuando se habla de feministas.</span></i></b></p>
-                
+
                 <br>
                 <br>
                 <h4>Cambio Constitucional y la Creación de la Red de Defensoras de los DD.HH.</h4>
-                
+
                 <p><b><i><span>El avance de la organización feminista y de mujeres, ha sido parte del caudal que permitió la revuelta social, al 18-O las secundarias lideraron el primer acto<sup>7</sup> que sería un boleto hacia romper la camisa de fuerza que dejo la dictadura cívico militar en nuestro país, la Constitución de Guzmán</span></i></b>. Esto abriría una coyuntura inimaginable para muchos y muchas,  así como también la muestra de lo que es capaz la derecha chilena con tal de proteger el  modelo: vejámenes, violaciones y mutilaciones para quienes se manifestaron en contra de Piñera.</p>
-                
+
                 <p>Es así como en respuesta al abuso del gobierno de Sebastián Piñera y gracias a la maduración de reflexiones sobre el quehacer político, es que en mayo del 2020 un grupo  de feministas a lo largo del país decidió articular y crear la <a href="https://www.facebook.com/reddefensorasddhh"  target="_blank">Red de Defensoras de los  Derechos Humanos</a>, convocada por la histórica casa de la mujer La Morada y organizada, inicialmente, por Colectiva La Olla revuelta (Curico), Legatarias – Organización Feminista  por la liberación (Bío Bío), Acción Feminista Ovolucionaria (Talca) y desarrollada hasta el día de hoy por La Monche – Centro Cultural por la memoria (Concepción), Cueca Sola (Punta Arenas) parte del Parlamento Feminista de la Patagonia Rebelde, Legatarias – OFL y mujeres participantes de la convocatoria de la red. </p>
-                
+
                 <p>Permitiendo el desarrollo de una estructura mínima en marco de la creación de un programa que le diera contenido a la coyuntura constitucional y que superara las lógicas personalistas caminando hacia una agenda feminista desde las mujeres hacia la transformación y refundación plurinacional.</p>
-                
+
                 <p><b><i><span>La voluntad desde las organizaciones que han compuesto la Red de Defensoras de los DD.HH. comparten la reflexión fundadora de vocación de unidad, de profundización de la sujeta plural y de vocación de poder que permita los cambios estructurales antipatriarcales, antineoliberales y anticoloniales en nuestro país.</span></i></b></p>
-                
+
                 <p>Este espacio se reunió periódicamente y estableció metodologías participativas que desembocaron en la creación de 12 ejes temáticos de reivindicación nacional.</p>
-                
+
                 <br>
                 <br>
                 <h4>Programa Feminista por una nueva Constitución</h4>
-                
+
                 <p>El programa se desarrolló como una propuesta desde las mujeres para Chile, la transversalización del feminismo como un ideal a alcanzar no solamente contempla la  igualdad de género, sino la propuesta de un Chile que avance hacia la eliminación del patriarcado como modelo de dominación y explotación de la vida humana y ecosistémica.</p>
-                
+
                 <p>Es por ello que se desarrollan 12 capítulos: Modelo económico; Derechos humanos y derechos de las mujeres; Educación; Ciudad y vivienda; Pueblos originarios y  naturaleza; Trabajo y seguridad social; Medio Ambiente; Democratización del poder y las Fuerzas Armadas; Culturas, Artes y Patrimonio; Niñas, niños y adolescentes;  Salud; Derechos constitucionales a Migrantes. Los cuales contemplan una presentación y diagnóstico para avanzar hacia propuestas concretas que permitan desarrollar un marco de derechos y propiciar políticas públicas que garanticen la protección, promoción y profundización de los mismos.</p>
-                
+
                 <p>Este programa fue lanzado mediante una presentación a diferentes candidatos y candidatas constituyentes y posteriormente a la elección de convencionales, fue enviado, presentado y conversado en una reunión con quienes asistieron a la convocatoria (Junio, 2021).</p>
-                
+
                 <p>Se espera que el programa sea un instrumento guía, que permita el avance, contenido y diálogo que contribuya al sustento de las transformaciones urgentes que requiere nuestro país pensado del cuerpo y experiencia vital de mujeres del sur de Chile.</p>
-                
+
                 <p>Los desafíos que se propone la Red de Defensoras de los Derechos Humanos es crecer en  articulación, visibilizar el trabajo realizado y socializar el programa de manera que pueda concretarse la idea de instrumento base que permita un primer puntapié de consulta o marco de discusión para otras feministas.</p>
-                
+
                 <h5><a href="https://issuu.com/reddefensorasddhh/docs/programa_feminista_por_una_nueva_constituci_n_red_" target="_blank">Conoce el Programa Feminista por una Nueva Constitución aquí</a></h5>
 
-           
+
             </div>
 
             <div class="col-12 col-sm-12 col-md-9 wow animate__animated animate__fadeIn">
