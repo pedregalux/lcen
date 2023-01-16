@@ -104,169 +104,64 @@
 
 <body>
 
-    <!--<header class="container-fluid fixed-top header-desktop">
-        <nav class="navbar navbar-expand-lg container">
-            <div class="container-fluid p-0">
-                <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
-                        </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
-                                <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
-                                <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
-                                <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
-                                <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}" class="dropdown-item">Glosario Constitucional</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-27" class="dropdown nav-item">
-                            <a title="Evaluaciones de norma" href="{% url 'verevaluaciones' %}" class="nav-link dropdown-toggle">Evaluaciones de norma<i class="fas fa-chevron-down d-inline d-md-none"></i></a>
-                            <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-134" role="menu">
-                                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
-                                    <a title="Evaluaciones Nacionales" href="{% url 'verevaluaciones' %}" class="dropdown-item">Evaluaciones Nacionales</a>
-                                </li>
-                                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
-                                    <a title="Evaluaciones Internacionales" href="{% url 'evaluaciones_int' %}" class="dropdown-item">Evaluaciones Internacionales</a>
-                                </li>
-                                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
-                                    <a title="Lectura interactiva de la propuesta" target="_blank" href="https://nuevaconstitucion.laconstitucionesnuestra.cl" class="dropdown-item">Lectura interactiva de la propuesta</a>
-                                </li>
-                                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211 nav-item">
-                                    <a title="Lectura interactiva de la propuesta" target="_blank" href="{% url 'verorgsevaluadoras' %}" class="dropdown-item">Oarganizaciones</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item-instagram">
-                            Siguenos en: <a class="nav-link" href="https://www.instagram.com/laconstitucion_esnuestra/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                                </svg></a>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-
-    <header class="container-fluid fixed-top header-movil">
-        <div class="instagram">
-            <div class="container">
-                <p>Siguenos en:</p> <a class="nav-link" href="https://www.instagram.com/laconstitucion_esnuestra/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                    </svg></a>
-            </div>
-        </div>
-        <nav class="navbar navbar-expand-lg container">
-            <div class="container-fluid p-0">
-                <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/logo-lcen.png' %}" alt="logo LCeN" class="img-fluid"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'quees' %}">¿Qué es?</a>
-                        </li>
-
-                        <li class="nav-item dropdown-anidado">
-                            <p>Recursos</p> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa Constitucional</a></li>
-                                <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución Feminista</a></li>
-                                <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
-                                <li><a class="dropdown-item" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a></li>
-                                <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario Constitucional</a></li>
-                            </ul>
-                        </li>
-
-
-                        <li class="nav-item dropdown-anidado">
-                            <a class="nav-link" href="{% url 'verevaluaciones' %}">Evaluaciones de Norma</a> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones Nacionales</a></li>
-                                <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluaciones Internacionales</a></li>
-                                <li><a class="dropdown-item" target="_blank" href="https://nuevaconstitucion.laconstitucionesnuestra.cl">Lectura interactiva de la propuesta</a></li>
-                                <li><a class="dropdown-item" href="{% url 'verorgsevaluadoras' %}">Organizaciones</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </nav>
-    </header> -->
-
-    <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'quees' %}">¿Quiénes somos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Un viaje por el proceso</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Post Plebiscito</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Recursos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
-                            <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
-                       <!--<li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
-                            <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
-                            <li><a class="dropdown-item" href="#">Propuestas ciudadanas</a></li>-->
-                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
-                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'preguntasfrecuentes' %}">Preguntas Frecuentes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
-
+  <!--
+  <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+          <div class="container">
+              <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{% url 'un-viaje-por-el-proceso' %}">Un viaje por el proceso</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{% url 'post-plebiscito' %}">Post Plebiscito</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Recursos
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
+                              <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
+                              <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
+                              <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
+                              <li><a class="dropdown-item" href="#">Propuestas ciudadanas</a></li>
+                              <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
+                              <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{% url 'preguntas-frecuentes' %}">Preguntas Frecuentes</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
+-->
 
 
     <div class="botones-flotantes">
         <div class="btn">
-            <a href="mailto:contacto@laconstitucionesnuestra.cl" class="btn-flotante"><img src="{% static 'img/img-lcen-2/instagram-icono.svg' %}" alt="instagram-icono" class="instagram-icono"></a>
+            <a href="https://www.instagram.com/laconstitucion_esnuestra" class="btn-flotante" target="_blank"><img src="{% static 'img/img-lcen-2/instagram-icono.svg' %}" alt="instagram-icono" class="instagram-icono"></a>
         </div>
         <div class="btn">
-            <a href="https://www.instagram.com/laconstitucion_esnuestra/" class="btn-flotante" target="_blank"><img src="{% static 'img/img-lcen-2/contacto-icono.svg' %}" alt="contacto-icono" class="contacto-icono"></a>
+            <a href="{% url 'contacto' %}" class="btn-flotante"><img src="{% static 'img/img-lcen-2/contacto-icono.svg' %}" alt="contacto-icono" class="contacto-icono"></a>
         </div>
     </div>
 
-
     {% block content %}
-
 
 
     {% endblock %}
