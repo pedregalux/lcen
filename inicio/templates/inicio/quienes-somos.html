@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Quiénes somos{% endblock %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
+                    </li>
+                    <!--  <li class="nav-item">
+                          <a class="nav-link" href="{% url 'un-viaje-por-el-proceso' %}">Un viaje por el proceso</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{% url 'post-plebiscito' %}">Post Plebiscito</a>
+                      </li>-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
+                            <li><a class="dropdown-item" href="#">Propuestas ciudadanas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'preguntas-frecuentes' %}">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="portada-lcen-colores">
+    <img src="{% static 'img/portadas/quienes-somos-portada.png' %}" alt="img portada desktop" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/portadas/quienes-somos-portada-movil.png' %}" alt="img portada movil" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">¿Quiénes somos?</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="container que-es-lcen py-5 my-5 seccion-info">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7">
+            <h2>La constitución es nuestra</h2>
+            <p>La Constitución es Nuestra nació como una iniciativa de Ciudadanía Inteligente, CONSTITU+YO y la iniciativa Global por los Derechos Económicos, Sociales y Culturales (GI-ESCR) con la convicción de que el proceso constituyente le pertenece a la ciudadanía. Para ello, en una primera etapa, mientras se desarrollaba la Convención Constitucional, se puso a disposición una serie de herramientas orientadas a comprender, articular y seguir el proceso constituyente con miras a la incidencia efectiva de las organizaciones de la sociedad civil. El objetivo de la primera etapa fue construir propuestas de cambio que avancen en la incorporación de los derechos sociales y profundicen la democracia y así, impulsar la construcción de un Chile más justo, igualitario e inclusivo. Esta etapa, impulsada por, culminó con un apoyo técnico y metodológico al proceso de Iniciativas Populares de Norma llevado a cabo por la Convención Constitucional.</p>
+            <p>Con el texto constitucional listo, la actual etapa del proyecto –liderada por Ciudadanía Inteligente, la iniciativa Global por los Derechos Económicos, Sociales y Culturales (GI-ESCR), Avina y Amnistía Internacional– invita organizaciones de la sociedad civil y personas de la academia a analizar y evaluar el nuevo texto constitucional en relación a derechos humanos, derechos de la naturaleza y fortalecimiento democrático. Esta información permite entregar explicaciones concretas y aterrizadas sobre lo que significan las potenciales nuevas normas para la calidad de vida de las personas y sobre las diferencias entre la Constitución actual y la nueva propuesta de texto.</p>
+            <p>Así, La Constitución es Nuestra busca ofrecer información respecto de cómo la propuesta de nueva Constitución se hace cargo de desafíos del futuro a partir de los estándares internacionales de derechos humanos, de la naturaleza y de fortalecimiento democrático.
+            </p>
+            <!-- Button trigger modal -->
+            <!--<button type="button" class="btn-lcen button hvr-sweep-to-right" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Ver video </button>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Video: La constitución es nuestra</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/38HD1vXub_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!--<div class="col-12 col-sm-12 col-md-6 wow animate__animated animate__fadeIn animate__delay-1s">
+            <img src="{% static 'img/collage-lcen.png' %}" alt="collage la constitución es nuestra">
+        </div> -->
+    </div>
+</section>
+
+<section class="container-fluid infografia-que-es py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-4 item">
+                <p><span class="yellow">1</span></p>
+                <p>Entregamos información y herramientas digitales para que la ciudadanía pueda participar de forma activa e incidente en todo el proceso constituyente.</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 item">
+                <p><span class="green">2</span></p>
+                <p>Enriquecemos la discusión constitucional con contenidos en formatos amigables sobre derechos sociales, enfoque de género y fortalecimiento de la democracia</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 item">
+                <p><span class="red">3</span></p>
+                <p>Desarrollamos talleres y facilitamos metodologías para apoyar los planes de incidencia de OSCs en la nueva Constitución de Chile.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quienes-somos-lcen container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12">
+            <h2>Quienes Somos</h2>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12">
+          <ul class="organizaciones-list">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'img/fci-logo.png' %}" alt="img organizacion logo fci" class="logo-fci"></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <img src="{% static 'img/arrow-hover.png' %}" alt="arrow">
+                        <div class="contenido">
+                            <p>ONG sin fines de lucro y apartidista. Buscamos fortalecer las democracias de Latinoamérica mediante el uso innovador de tecnologías.</p>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'img/constituyo-logo.png' %}" alt="img organizacion logo constituyo" class="logo-constituyo"></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <img src="{% static 'img/arrow-hover.png' %}" alt="arrow">
+                        <div class="contenido">
+                            <p> Red autoconvocada de personas diversas en edad, género, educación y ocupación. Promovemos el aprendizaje, la participación y la incidencia ciudadana en el Proceso Constituyente.</p>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'img/the-global-iniciative-logo.png' %}" alt="img organizacion logo the global iniciative" class="logo-gi"></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <img src="{% static 'img/arrow-hover.png' %}" alt="arrow">
+                        <div class="contenido">
+                            <p>Organización internacional no gubernamental. Promovemos cambios transformadores para acabar con los problemas endémicos de injusticia social y económica a través de un lente de derechos humanos.</p>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'img/fes-logo.png' %}" alt="img organizacion logo fes" class="logo-fes"></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <img src="{% static 'img/arrow-hover.png' %}" alt="arrow">
+                        <div class="contenido">
+                            <p>Fundación política alemana con oficinas en 100+ países. Fomentamos los pilares de una democracia social: justicia social, igualdad de género, seguridad social y trabajo decente, en el marco de un desarrollo sustentable.</p>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12">
+           <ul class="apoyo">
+                <li>
+                    <p>Con el apoyo de:</p>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'img/ned-logo.png' %}" alt="logo Ned" class="img-fluid logo logo-ned"></a>
+                    <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <img src="{% static 'img/arrow-hover.png' %}" alt="arrow">
+                        <div class="contenido">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus turpis sit amet risus efficitur, ac suscipit dui bibendum.</p>
+                        </div>
+                    </ul> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

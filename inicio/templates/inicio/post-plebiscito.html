@@ -1,0 +1,1012 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Post plebiscito{% endblock %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'un-viaje-por-el-proceso' %}">Un viaje por el proceso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'post-plebiscito' %}">Post Plebiscito</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
+                            <li><a class="dropdown-item" href="#">Propuestas ciudadanas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'preguntas-frecuentes' %}">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="portada-lcen-colores mb-0">
+    <img src="{% static 'img/portadas/discusion-post-plebiscito-portada.png' %}" alt="img portada desktop" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/portadas/discusion-post-plebiscito-portada-movil.png' %}" alt="img portada movil" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Post Plebiscito</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="post-plebiscito wow animate__animated animate__fadeIn mt-0" id="post-plebiscito">
+    <div class="franja">
+        <div class="img-alarma">
+            <img src="{% static 'img/img-lcen-2/alarma-img.png' %}" alt="alarma" width="80px">
+        </div>
+        <div class="franja-contenido">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="informativo">
+                            <img src="{% static 'img/img-lcen-2/circulo-rojo.svg' %}" alt="circulo-rojo" class="circulo-rojo parpadea">
+                            <p><span>Informativo:</span></p>
+                            <div class="et_pb_row et_pb_row_1">
+                                <div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div class="et_pb_module et_pb_code et_pb_code_0">
+                                        <div class="et_pb_code_inner">
+                                            <div class="ticker-wrap">
+                                                <div class="ticker">
+                                                    <div class="ticker__item">
+                                                        <p>Las distintas fuerzas políticas aún no logran llegar a un acuerdo final para habilitar un nuevo proceso constituyente. El principal nudo de disenso es la composición de órgano redactor para el cual existen propuestas de órgano mixto, 100% designado por el Congreso o 100% electo la ciudadanía. Desde la sociedad civil creemos fundamental que una nueva Constitución sea redactada por órgano 100% electo #QuelaCiudadaníaElija.</p>
+                                                    </div>
+                                                    <div class="ticker__item">
+                                                        <p>Las distintas fuerzas políticas aún no logran llegar a un acuerdo final para habilitar un nuevo proceso constituyente. El principal nudo de disenso es la composición de órgano redactor para el cual existen propuestas de órgano mixto, 100% designado por el Congreso o 100% electo la ciudadanía. Desde la sociedad civil creemos fundamental que una nueva Constitución sea redactada por órgano 100% electo #QuelaCiudadaníaElija.</p>
+                                                    </div>
+                                                    <div class="ticker__item">
+                                                        <p>Las distintas fuerzas políticas aún no logran llegar a un acuerdo final para habilitar un nuevo proceso constituyente. El principal nudo de disenso es la composición de órgano redactor para el cual existen propuestas de órgano mixto, 100% designado por el Congreso o 100% electo la ciudadanía. Desde la sociedad civil creemos fundamental que una nueva Constitución sea redactada por órgano 100% electo #QuelaCiudadaníaElija.</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--Nuevo-->
+
+<section class="seccion-post-plebiscito container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6 titular">
+            <h2>Reportes semanales</h2>
+            <p>Un recorrido semana a semana por la discusión constitucional post plebiscito</p>
+        </div>
+    </div>
+    <div class="row justify-content-center contenedor-linea-reels">
+            <!--Linea de tiempo-->
+            <div class="columna-linea-de-tiempo">
+                <div class="linea-de-tiempo">
+                    <div class="triangulo-1"></div>
+                    <div class="nav flex-column nav-pills" id="v-pills-tab-years" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link" id="v-pills-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2023" type="button" role="tab" aria-controls="v-pills-2023" aria-selected="true">2023</button>
+                        <button class="nav-link active" id="v-pills-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2022" type="button" role="tab" aria-controls="v-pills-2022" aria-selected="false">2022</button>
+                    </div>
+                    <div class="triangulo-2"></div>
+
+                </div>
+            </div>
+            <!--End linea de tiempo-->
+
+            <!--Contenido linea de tiempo desktop-->
+            <div class="columna-contenido-linea-de-tiempo contenido-ldt-desktop">
+                <div class="contenido-linea-de-tiempo">
+
+                    <div class="tab-content" id="v-pills-tab-yearsContent">
+
+                        <!--Contenido año 2023-->
+                        <div class="tab-pane fade" id="v-pills-2023" role="tabpanel" aria-labelledby="v-pills-2023-tab">
+
+                            <div class="d-flex align-items-start menu-meses">
+                                <div class="nav flex-column nav-pills navegacion-meses" id="v-pills-tab-meses-2023" role="tablist" aria-orientation="vertical">
+                                    <h4>Año 2022</h4>
+                                    <p class="btn-desactivado"><span>Diciembre</span></p>
+                                    <p class="btn-desactivado"><span>Noviembre</span></p>
+                                    <p class="btn-desactivado"><span>Octubre</span></p>
+                                    <p class="btn-desactivado"><span>Septiembre</span></p>
+                                    <p class="btn-desactivado"><span>Agosto</span></p>
+                                    <p class="btn-desactivado"><span>Julio</span></p>
+                                    <p class="btn-desactivado"><span>Junio</span></p>
+                                    <p class="btn-desactivado"><span>Mayo</span></p>
+                                    <p class="btn-desactivado"><span>Abril</span></p>
+                                    <p class="btn-desactivado"><span>Marzo</span></p>
+                                    <p class="btn-desactivado"><span>Febrero</span></p>
+                                    <!--<button class="nav-link active" id="v-pills-diciembre-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-diciembre-2023" type="button" role="tab" aria-controls="v-pills-diciembre-2023" aria-selected="true"><span>Diciembre</span></button>
+                                    <button class="nav-link" id="v-pills-noviembre-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-noviembre-2023" type="button" role="tab" aria-controls="v-pills-noviembre-2023" aria-selected="false"><span>Noviembre</span></button>
+                                    <button class="nav-link" id="v-pills-octubre-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-octubre-2023" type="button" role="tab" aria-controls="v-pills-octubre-2023" aria-selected="false"><span>Octubre</span></button>
+                                    <button class="nav-link" id="v-pills-septiembre-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-septiembre-2023" type="button" role="tab" aria-controls="v-pills-septiembre-2023" aria-selected="false"><span>Septiembre</span></button>
+                                    <button class="nav-link" id="v-pills-agosto-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-agosto-2023" type="button" role="tab" aria-controls="v-pills-agosto-2023" aria-selected="false"><span>Agosto</span></button>
+                                    <button class="nav-link" id="v-pills-julio-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-julio-2023" type="button" role="tab" aria-controls="v-pills-julio-2023" aria-selected="false"><span>Julio</span></button>
+                                    <button class="nav-link" id="v-pills-junio-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-junio-2023" type="button" role="tab" aria-controls="v-pills-junio-2023" aria-selected="false"><span>Junio</span></button>
+                                    <button class="nav-link" id="v-pills-mayo-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-mayo-2023" type="button" role="tab" aria-controls="v-pills-mayo-2023" aria-selected="false"><span>Mayo</span></button>
+                                    <button class="nav-link" id="v-pills-abril-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-abril-2023" type="button" role="tab" aria-controls="v-pills-abril-2023" aria-selected="false"><span>Abril</span></button>
+                                    <button class="nav-link" id="v-pills-marzo-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-marzo-2023" type="button" role="tab" aria-controls="v-pills-marzo-2023" aria-selected="false"><span>Marzo</span></button>
+                                    <button class="nav-link" id="v-pills-febrero-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-febrero-2023" type="button" role="tab" aria-controls="v-pills-febrero-2023" aria-selected="false"><span>Febrero</span></button>-->
+                                    <button class="nav-link active" id="v-pills-enero-2023-tab" data-bs-toggle="pill" data-bs-target="#v-pills-enero-2023" type="button" role="tab" aria-controls="v-pills-enero-2023" aria-selected="false"><span>Enero</span></button>
+                                </div>
+                                <div class="tab-content" id="v-pills-tab-meses-2023Content">
+                                  <!--  <div class="tab-pane fade show active" id="v-pills-diciembre-2023" role="tabpanel" aria-labelledby="v-pills-diciembre-2023-tab">Contenido Diciembre 2023</div>
+                                    <div class="tab-pane fade" id="v-pills-noviembre-2023" role="tabpanel" aria-labelledby="v-pills-noviembre-2023-tab">Contenido Noviembre 2023</div>
+                                    <div class="tab-pane fade" id="v-pills-octubre-2023" role="tabpanel" aria-labelledby="v-pills-octubre-2023-tab">Contenido Octubre 2023</div>
+                                    <div class="tab-pane fade" id="v-pills-septiembre-2023" role="tabpanel" aria-labelledby="v-pills-septiembre-2023-tab">Contenido Septiembre 2023</div>
+                                    <div class="tab-pane fade" id="v-pills-agosto-2023" role="tabpanel" aria-labelledby="v-pills-agosto-2023-tab">Contenido Agosto 2023</div>
+                                    <div class="tab-pane fade" id="v-pills-julio-2023" role="tabpanel" aria-labelledby="v-pills-julio-2023-tab">Contenido Julio 2023</div>
+                                    <div class="tab-pane fade" id="v-pills-junio-2023" role="tabpanel" aria-labelledby="v-pills-junio-2023-tab">Contenido Junio 2023</div>
+                                    <div class="tab-pane fade" id="v-pills-mayo-2023" role="tabpanel" aria-labelledby="v-pills-mayo-2023-tab">Contenido Mayo 2023</div>
+                                    <div class="tab-pane fade" id="v-pills-abril-2023" role="tabpanel" aria-labelledby="v-pills-abril-2023-tab">Contenido Abril 2023</div>
+                                    <div class="tab-pane fade" id="v-pills-marzo-2023" role="tabpanel" aria-labelledby="v-pills-marzo-2023-tab">Contenido Marzo 2023</div>
+                                    <div class="tab-pane fade" id="v-pills-febrero-2023" role="tabpanel" aria-labelledby="v-pills-febrero-2023-tab">Contenido Febrero 2023</div>-->
+                                    <div class="tab-pane fade show active" id="v-pills-enero-2023" role="tabpanel" aria-labelledby="v-pills-enero-2023-tab">Contenido Enero 2023</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <!--Contenido año 2022-->
+                        <div class="tab-pane fade show active" id="v-pills-2022" role="tabpanel" aria-labelledby="v-pills-2022-tab">
+
+                          <div class="d-flex align-items-start menu-meses">
+                              <div class="nav flex-column nav-pills navegacion-meses" id="v-pills-tab-meses-2022" role="tablist" aria-orientation="vertical">
+                                  <h4>Año 2022</h4>
+                                  <button class="nav-link active" id="v-pills-diciembre-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-diciembre-2022" type="button" role="tab" aria-controls="v-pills-diciembre-2022" aria-selected="true"><span>Diciembre</span></button>
+                                  <button class="nav-link" id="v-pills-noviembre-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-noviembre-2022" type="button" role="tab" aria-controls="v-pills-noviembre-2022" aria-selected="false"><span>Noviembre</span></button>
+                                  <button class="nav-link" id="v-pills-octubre-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-octubre-2022" type="button" role="tab" aria-controls="v-pills-octubre-2022" aria-selected="false"><span>Octubre</span></button>
+                                  <button class="nav-link" id="v-pills-septiembre-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-septiembre-2022" type="button" role="tab" aria-controls="v-pills-septiembre-2022" aria-selected="false"><span>Septiembre</span></button>
+                                  <p class="btn-desactivado"><span>Agosto</span></p>
+                                  <p class="btn-desactivado"><span>Julio</span></p>
+                                  <p class="btn-desactivado"><span>Junio</span></p>
+                                  <p class="btn-desactivado"><span>Mayo</span></p>
+                                  <p class="btn-desactivado"><span>Abril</span></p>
+                                  <p class="btn-desactivado"><span>Marzo</span></p>
+                                  <p class="btn-desactivado"><span>Febrero</span></p>
+                                  <p class="btn-desactivado"><span>Enero</span></p>
+
+                                  <!--<button class="nav-link" id="v-pills-agosto-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-agosto-2022" type="button" role="tab" aria-controls="v-pills-agosto-2022" aria-selected="false"><span>Agosto</span></button>
+                                  <button class="nav-link" id="v-pills-julio-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-julio-2022" type="button" role="tab" aria-controls="v-pills-julio-2022" aria-selected="false"><span>Julio</span></button>
+                                  <button class="nav-link" id="v-pills-junio-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-junio-2022" type="button" role="tab" aria-controls="v-pills-junio-2022" aria-selected="false"><span>Junio</span></button>
+                                  <button class="nav-link" id="v-pills-mayo-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-mayo-2022" type="button" role="tab" aria-controls="v-pills-mayo-2022" aria-selected="false"><span>Mayo</span></button>
+                                  <button class="nav-link" id="v-pills-abril-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-abril-2022" type="button" role="tab" aria-controls="v-pills-abril-2022" aria-selected="false"><span>Abril</span></button>
+                                  <button class="nav-link" id="v-pills-marzo-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-marzo-2022" type="button" role="tab" aria-controls="v-pills-marzo-2022" aria-selected="false"><span>Marzo</span></button>
+                                  <button class="nav-link" id="v-pills-febrero-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-febrero-2022" type="button" role="tab" aria-controls="v-pills-febrero-2022" aria-selected="false"><span>Febrero</span></button>
+                                  <button class="nav-link" id="v-pills-enero-2022-tab" data-bs-toggle="pill" data-bs-target="#v-pills-enero-2022" type="button" role="tab" aria-controls="v-pills-enero-2022" aria-selected="false"><span>Enero</span></button>-->
+                              </div>
+                              <div class="tab-content" id="v-pills-tab-meses-2022Content">
+
+                              <!-- Diciembre 2022-->
+                                  <div class="tab-pane fade show active" id="v-pills-diciembre-2022" role="tabpanel" aria-labelledby="v-pills-diciembre-2022-tab">
+                                      <div class="mes-contenido">
+                                          <div class="video">
+
+                                            <div class="tab-content" id="pills-tab-videos-diciembre-2022Content">
+                                              <div class="tab-pane fade show active" id="pills-3-dic-2022" role="tabpanel" aria-labelledby="pills-3-dic-2022-tab">
+
+                                                <!-- Button trigger modal -->
+                                                <figure class="video-modal">
+                                                   <img src="{% static 'img/reels-lcen/2022/diciembre/21-dic/portada-21-dic.jpg' %}" alt="portada reels">
+                                                   <figcaption class="ver-video">
+                                                     <div class="alineacion">
+                                                        <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-dic-3">
+                                                           <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                         </button>
+                                                      </div>
+                                                  </figcaption>
+                                                  <div class="fecha-video">
+                                                    <p>Resumen semanal</p>
+                                                    <p>Del 19 al 25 de diciembre</p>
+                                                  </div>
+                                                </figure>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="modal-dic-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-dic-semana-3Label" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+
+                                                                <div class="reels">
+                                                                    <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/diciembre/21-dic/portada-21-dic.jpg' %}">
+                                                                        <source src="{% static 'img/reels-lcen/2022/diciembre/21-dic/reels-21-dic.mp4' %}" type="video/mp4">
+                                                                    </video>
+                                                                </div>
+                                                                <div class="descripcion">
+                                                                    <h3>Semana del 19 al 25 de diciembre o título para este video</h3>
+                                                                    <div class="linea-decoracion"></div>
+                                                                    <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                              </div>
+                                              <div class="tab-pane fade" id="pills-2-dic-2022" role="tabpanel" aria-labelledby="pills-2-dic-2022-tab">
+
+                                                <!-- Button trigger modal -->
+                                                <figure class="video-modal">
+                                                   <img src="{% static 'img/reels-lcen/2022/diciembre/12-dic/portada-12-dic.jpg' %}" alt="portada reels">
+                                                   <figcaption class="ver-video">
+                                                     <div class="alineacion">
+                                                        <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-dic-2">
+                                                           <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                         </button>
+                                                      </div>
+                                                  </figcaption>
+                                                  <div class="fecha-video">
+                                                    <p>Resumen semanal</p>
+                                                    <p>Del 12 al 18 de diciembre</p>
+                                                  </div>
+                                                </figure>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="modal-dic-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-dic-semana-2Label" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+
+                                                                <div class="reels">
+                                                                    <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/diciembre/12-dic/portada-12-dic.jpg' %}">
+                                                                        <source src="{% static 'img/reels-lcen/2022/diciembre/12-dic/reels-12-dic.mp4' %}" type="video/mp4">
+                                                                    </video>
+                                                                </div>
+                                                                <div class="descripcion">
+                                                                    <h3>Semana del 12 al 18 de diciembre o título para este video</h3>
+                                                                    <div class="linea-decoracion"></div>
+                                                                    <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="tab-pane fade" id="pills-1-dic-2022" role="tabpanel" aria-labelledby="pills-1-dic-2022-tab">
+
+                                                <!-- Button trigger modal -->
+                                                <figure class="video-modal">
+                                                   <img src="{% static 'img/reels-lcen/2022/diciembre/5-dic/portada-5-dic.jpg' %}" alt="portada reels">
+                                                   <figcaption class="ver-video">
+                                                     <div class="alineacion">
+                                                        <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-dic-1">
+                                                           <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                         </button>
+                                                      </div>
+                                                  </figcaption>
+                                                  <div class="fecha-video">
+                                                    <p>Resumen semanal</p>
+                                                    <p>Del 5 al 11 de diciembre</p>
+                                                  </div>
+                                                </figure>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="modal-dic-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-dic-semana-1Label" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+
+                                                                <div class="reels">
+                                                                    <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/diciembre/5-dic/portada-5-dic.jpg' %}">
+                                                                        <source src="{% static 'img/reels-lcen/2022/diciembre/5-dic/reels-5-dic.mp4' %}" type="video/mp4">
+                                                                    </video>
+                                                                </div>
+                                                                <div class="descripcion">
+                                                                    <h3>Semana del 5 al 11 de diciembre o título para este video</h3>
+                                                                    <div class="linea-decoracion"></div>
+                                                                    <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                          </div>
+                                          <div class="contenido-seleccion-video">
+                                            <p class="mes-videos-destacado">Diciembre, 2022</p>
+                                            <h3>Todo lo que sucedió semana a semana</h3>
+                                            <div class="linea-decoracion"></div>
+                                            <p>Aquí encontraras un recorrido semana a semana de la discusión post plebiscito en torno a la nueva constitución.</p>
+                                            <div class="seleccion-videos">
+                                              <p>Explora los resúmenes seleccionando la fecha de la semana correspondiente:</p>
+                                              <ul class="nav nav-pills mb-3" id="pills-videos-diciembre-2022" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                  <button class="nav-link active" id="pills-3-dic-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-3-dic-2022" type="button" role="tab" aria-controls="pills-3-dic-2022" aria-selected="true">19 al 25 de diciembre</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                  <button class="nav-link" id="pills-2-dic-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-2-dic-2022" type="button" role="tab" aria-controls="pills-2-dic-2022" aria-selected="false">12 al 18 de diciembre</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                  <button class="nav-link" id="pills-1-dic-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-1-dic-2022" type="button" role="tab" aria-controls="pills-1-dic-2022" aria-selected="false">5 al 11 de diciembre</button>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <!-- Noviembre 2022-->
+                                  <div class="tab-pane fade" id="v-pills-noviembre-2022" role="tabpanel" aria-labelledby="v-pills-noviembre-2022-tab">
+
+                                    <div class="mes-contenido">
+                                        <div class="video">
+
+                                          <div class="tab-content" id="pills-tab-videos-noviembre-2022Content">
+
+                                            <div class="tab-pane fade show active" id="pills-5-nov-2022" role="tabpanel" aria-labelledby="pills-5-nov-2022-tab">
+
+                                              <!-- Button trigger modal -->
+                                              <figure class="video-modal">
+                                                 <img src="{% static 'img/reels-lcen/2022/noviembre/28-nov/portada-28-nov.jpg' %}" alt="portada reels">
+                                                 <figcaption class="ver-video">
+                                                   <div class="alineacion">
+                                                      <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-nov-5">
+                                                         <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                       </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="fecha-video">
+                                                  <p>Resumen semanal</p>
+                                                  <p>Del 28 de noviembre al 4 de diciembre</p>
+                                                </div>
+                                              </figure>
+
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="modal-nov-5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-nov-semana-5Label" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+
+                                                              <div class="reels">
+                                                                  <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/noviembre/28-nov/portada-28-nov.jpg' %}">
+                                                                      <source src="{% static 'img/reels-lcen/2022/noviembre/28-nov/reels-28-nov.mp4' %}" type="video/mp4">
+                                                                  </video>
+                                                              </div>
+                                                              <div class="descripcion">
+                                                                  <h3>Semana del 28 de noviembre al 4 de diciembre o título para este video</h3>
+                                                                  <div class="linea-decoracion"></div>
+                                                                  <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+
+                                            <div class="tab-pane fade" id="pills-4-nov-2022" role="tabpanel" aria-labelledby="pills-4-nov-2022-tab">
+
+                                              <!-- Button trigger modal -->
+                                              <figure class="video-modal">
+                                                 <img src="{% static 'img/reels-lcen/2022/noviembre/21-nov/portada-21-nov.jpg' %}" alt="portada reels">
+                                                 <figcaption class="ver-video">
+                                                   <div class="alineacion">
+                                                      <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-nov-4">
+                                                         <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                       </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="fecha-video">
+                                                  <p>Resumen semanal</p>
+                                                  <p>Del 21 al 27 de noviembre</p>
+                                                </div>
+                                              </figure>
+
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="modal-nov-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-nov-semana-4Label" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+
+                                                              <div class="reels">
+                                                                  <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/noviembre/21-nov/portada-21-nov.jpg' %}">
+                                                                      <source src="{% static 'img/reels-lcen/2022/noviembre/21-nov/reels-21-nov.mp4' %}" type="video/mp4">
+                                                                  </video>
+                                                              </div>
+                                                              <div class="descripcion">
+                                                                  <h3>Semana del 21 al 27 de noviembre o título para este video</h3>
+                                                                  <div class="linea-decoracion"></div>
+                                                                  <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+
+                                            <div class="tab-pane fade" id="pills-3-nov-2022" role="tabpanel" aria-labelledby="pills-3-nov-2022-tab">
+
+                                              <!-- Button trigger modal -->
+                                              <figure class="video-modal">
+                                                 <img src="{% static 'img/reels-lcen/2022/noviembre/14-nov/portada-14-nov.jpg' %}" alt="portada reels">
+                                                 <figcaption class="ver-video">
+                                                   <div class="alineacion">
+                                                      <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-nov-3">
+                                                         <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                       </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="fecha-video">
+                                                  <p>Resumen semanal</p>
+                                                  <p>Del 14 al 20 de noviembre</p>
+                                                </div>
+                                              </figure>
+
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="modal-nov-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-nov-semana-3Label" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+
+                                                              <div class="reels">
+                                                                  <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/noviembre/14-nov/portada-14-nov.jpg' %}">
+                                                                      <source src="{% static 'img/reels-lcen/2022/noviembre/14-nov/reels-14-nov.mp4' %}" type="video/mp4">
+                                                                  </video>
+                                                              </div>
+                                                              <div class="descripcion">
+                                                                  <h3>Semana del 14 al 20 de noviembre o título para este video</h3>
+                                                                  <div class="linea-decoracion"></div>
+                                                                  <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="pills-2-nov-2022" role="tabpanel" aria-labelledby="pills-2-nov-2022-tab">
+
+                                              <!-- Button trigger modal -->
+                                              <figure class="video-modal">
+                                                 <img src="{% static 'img/reels-lcen/2022/noviembre/7-nov/portada-7-nov.jpg' %}" alt="portada reels">
+                                                 <figcaption class="ver-video">
+                                                   <div class="alineacion">
+                                                      <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-nov-2">
+                                                         <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                       </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="fecha-video">
+                                                  <p>Resumen semanal</p>
+                                                  <p>Del 7 al 13 de noviembre</p>
+                                                </div>
+                                              </figure>
+
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="modal-nov-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-nov-semana-2Label" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+
+                                                              <div class="reels">
+                                                                  <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/noviembre/7-nov/portada-7-nov.jpg' %}">
+                                                                      <source src="{% static 'img/reels-lcen/2022/noviembre/7-nov/reels-7-nov.mp4' %}" type="video/mp4">
+                                                                  </video>
+                                                              </div>
+                                                              <div class="descripcion">
+                                                                  <h3>Semana del 7 al 13 de noviembre o título para este video</h3>
+                                                                  <div class="linea-decoracion"></div>
+                                                                  <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="pills-1-nov-2022" role="tabpanel" aria-labelledby="pills-1-nov-2022-tab">
+
+                                              <!-- Button trigger modal -->
+                                              <figure class="video-modal">
+                                                 <img src="{% static 'img/reels-lcen/2022/noviembre/1-nov/portada-1-nov.jpg' %}" alt="portada reels">
+                                                 <figcaption class="ver-video">
+                                                   <div class="alineacion">
+                                                      <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-nov-1">
+                                                         <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                       </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="fecha-video">
+                                                  <p>Resumen semanal</p>
+                                                  <p>Del 30 de octubre al 6 de noviembre</p>
+                                                </div>
+                                              </figure>
+
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="modal-nov-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-nov-semana-1Label" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+
+                                                              <div class="reels">
+                                                                  <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/noviembre/1-nov/portada-1-nov.jpg' %}">
+                                                                      <source src="{% static 'img/reels-lcen/2022/noviembre/1-nov/reels-1-nov.mp4' %}" type="video/mp4">
+                                                                  </video>
+                                                              </div>
+                                                              <div class="descripcion">
+                                                                  <h3>Semana del 30 de octubre al 6 de noviembre o título para este video</h3>
+                                                                  <div class="linea-decoracion"></div>
+                                                                  <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+                                          </div>
+                                        </div>
+
+                                        <div class="contenido-seleccion-video">
+                                          <p class="mes-videos-destacado">Noviembre, 2022</p>
+                                          <h3>Todo lo que sucedió semana a semana</h3>
+                                          <div class="linea-decoracion"></div>
+                                          <p>Aquí encontraras un recorrido semana a semana de la discusión post plebiscito en torno a la nueva constitución.</p>
+                                          <div class="seleccion-videos">
+                                            <p>Explora los resúmenes seleccionando la fecha de la semana correspondiente:</p>
+                                            <ul class="nav nav-pills mb-3" id="pills-videos-noviembre-2022" role="tablist">
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="pills-5-nov-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-5-nov-2022" type="button" role="tab" aria-controls="pills-5-nov-2022" aria-selected="true">28 de noviembre al 4 de diciembre</button>
+                                              </li>
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-4-nov-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-4-nov-2022" type="button" role="tab" aria-controls="pills-4-nov-2022" aria-selected="false">21 al 27 de noviembre</button>
+                                              </li>
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-3-nov-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-3-nov-2022" type="button" role="tab" aria-controls="pills-3-nov-2022" aria-selected="false">14 al 20 de noviembre</button>
+                                              </li>
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-2-nov-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-2-nov-2022" type="button" role="tab" aria-controls="pills-2-nov-2022" aria-selected="false">7 al 13 de noviembre</button>
+                                              </li>
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-1-nov-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-1-nov-2022" type="button" role="tab" aria-controls="pills-1-nov-2022" aria-selected="false">30 de octubre al 6 de noviembre</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                  </div>
+
+                                  <!-- Octubre 2022-->
+                                  <div class="tab-pane fade" id="v-pills-octubre-2022" role="tabpanel" aria-labelledby="v-pills-octubre-2022-tab">
+
+                                    <div class="mes-contenido">
+                                        <div class="video">
+
+                                          <div class="tab-content" id="pills-tab-videos-octubre-2022Content">
+
+                                            <div class="tab-pane fade show active" id="pills-4-oct-2022" role="tabpanel" aria-labelledby="pills-4-oct-2022-tab">
+
+                                              <!-- Button trigger modal -->
+                                              <figure class="video-modal">
+                                                 <img src="{% static 'img/reels-lcen/2022/octubre/24-oct/portada-24-oct.jpg' %}" alt="portada reels">
+                                                 <figcaption class="ver-video">
+                                                   <div class="alineacion">
+                                                      <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-oct-4">
+                                                         <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                       </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="fecha-video">
+                                                  <p>Resumen semanal</p>
+                                                  <p>Del 24 al 30 de octubre</p>
+                                                </div>
+                                              </figure>
+
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="modal-oct-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-oct-semana-4Label" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+
+                                                              <div class="reels">
+                                                                  <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/octubre/24-oct/portada-24-oct.jpg' %}">
+                                                                      <source src="{% static 'img/reels-lcen/2022/octubre/24-oct/reels-24-oct.mp4' %}" type="video/mp4">
+                                                                  </video>
+                                                              </div>
+                                                              <div class="descripcion">
+                                                                  <h3>Semana del 24 al 30 de octubre o título para este video</h3>
+                                                                  <div class="linea-decoracion"></div>
+                                                                  <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="pills-3-oct-2022" role="tabpanel" aria-labelledby="pills-3-oct-2022-tab">
+
+                                              <!-- Button trigger modal -->
+                                              <figure class="video-modal">
+                                                 <img src="{% static 'img/reels-lcen/2022/octubre/17-oct/portada-17-oct.jpg' %}" alt="portada reels">
+                                                 <figcaption class="ver-video">
+                                                   <div class="alineacion">
+                                                      <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-oct-3">
+                                                         <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                       </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="fecha-video">
+                                                  <p>Resumen semanal</p>
+                                                  <p>Del 17 al 23 de octubre</p>
+                                                </div>
+                                              </figure>
+
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="modal-oct-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-oct-semana-3Label" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+
+                                                              <div class="reels">
+                                                                  <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/octubre/17-oct/portada-17-oct.jpg' %}">
+                                                                      <source src="{% static 'img/reels-lcen/2022/octubre/17-oct/reels-17-oct.mp4' %}" type="video/mp4">
+                                                                  </video>
+                                                              </div>
+                                                              <div class="descripcion">
+                                                                  <h3>Semana del 17 al 23 de octubre o título para este video</h3>
+                                                                  <div class="linea-decoracion"></div>
+                                                                  <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="pills-2-oct-2022" role="tabpanel" aria-labelledby="pills-2-oct-2022-tab">
+
+                                              <!-- Button trigger modal -->
+                                              <figure class="video-modal">
+                                                 <img src="{% static 'img/reels-lcen/2022/octubre/10-oct/portada-10-oct.jpg' %}" alt="portada reels">
+                                                 <figcaption class="ver-video">
+                                                   <div class="alineacion">
+                                                      <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-oct-2">
+                                                         <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                       </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="fecha-video">
+                                                  <p>Resumen semanal</p>
+                                                  <p>Del 10 al 16 de octubre</p>
+                                                </div>
+                                              </figure>
+
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="modal-oct-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-oct-semana-2Label" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+
+                                                              <div class="reels">
+                                                                  <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/octubre/10-oct/portada-10-oct.jpg' %}">
+                                                                      <source src="{% static 'img/reels-lcen/2022/octubre/10-oct/reels-10-oct.mp4' %}" type="video/mp4">
+                                                                  </video>
+                                                              </div>
+                                                              <div class="descripcion">
+                                                                  <h3>Semana del 10 al 16 de octubre o título para este video</h3>
+                                                                  <div class="linea-decoracion"></div>
+                                                                  <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+
+                                            <div class="tab-pane fade" id="pills-1-oct-2022" role="tabpanel" aria-labelledby="pills-1-oct-2022-tab">
+
+                                              <!-- Button trigger modal -->
+                                              <figure class="video-modal">
+                                                 <img src="{% static 'img/reels-lcen/2022/octubre/3-oct/portada-3-oct.jpg' %}" alt="portada reels">
+                                                 <figcaption class="ver-video">
+                                                   <div class="alineacion">
+                                                      <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-oct-1">
+                                                         <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                       </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="fecha-video">
+                                                  <p>Resumen semanal</p>
+                                                  <p>Del 3 al 9 de octubre</p>
+                                                </div>
+                                              </figure>
+
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="modal-oct-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-oct-semana-1Label" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+
+                                                              <div class="reels">
+                                                                  <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/octubre/3-oct/portada-3-oct.jpg' %}">
+                                                                      <source src="{% static 'img/reels-lcen/2022/octubre/3-oct/reels-3-oct.mp4' %}" type="video/mp4">
+                                                                  </video>
+                                                              </div>
+                                                              <div class="descripcion">
+                                                                  <h3>Semana del 3 al 9 de octubre o título para este video</h3>
+                                                                  <div class="linea-decoracion"></div>
+                                                                  <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+                                          </div>
+
+                                        </div>
+
+                                        <div class="contenido-seleccion-video">
+                                          <p class="mes-videos-destacado">Octubre, 2022</p>
+                                          <h3>Todo lo que sucedió semana a semana</h3>
+                                          <div class="linea-decoracion"></div>
+                                          <p>Aquí encontraras un recorrido semana a semana de la discusión post plebiscito en torno a la nueva constitución.</p>
+                                          <div class="seleccion-videos">
+                                            <p>Explora los resúmenes seleccionando la fecha de la semana correspondiente:</p>
+                                            <ul class="nav nav-pills mb-3" id="pills-videos-octubre-2022" role="tablist">
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="pills-4-oct-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-4-oct-2022" type="button" role="tab" aria-controls="pills-4-oct-2022" aria-selected="true">24 al 30 de octubre</button>
+                                              </li>
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-3-oct-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-3-oct-2022" type="button" role="tab" aria-controls="pills-3-oct-2022" aria-selected="false">17 al 23 de octubre</button>
+                                              </li>
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-2-oct-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-2-oct-2022" type="button" role="tab" aria-controls="pills-2-oct-2022" aria-selected="false">10 al 16 de octubre</button>
+                                              </li>
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-1-oct-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-1-oct-2022" type="button" role="tab" aria-controls="pills-1-oct-2022" aria-selected="false">3 al 9 de octubre</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                  </div>
+
+                                  <!-- Septiembre 2022-->
+                                  <div class="tab-pane fade" id="v-pills-septiembre-2022" role="tabpanel" aria-labelledby="v-pills-septiembre-2022-tab">
+
+                                    <div class="mes-contenido">
+                                        <div class="video">
+
+                                          <div class="tab-content" id="pills-tab-videos-septiembre-2022Content">
+                                            <div class="tab-pane fade show active" id="pills-1-sep-2022" role="tabpanel" aria-labelledby="pills-1-sep-2022-tab">
+
+                                              <!-- Button trigger modal -->
+                                              <figure class="video-modal">
+                                                 <img src="{% static 'img/reels-lcen/2022/septiembre/26-sep/portada-26-sep.jpg' %}" alt="portada reels">
+                                                 <figcaption class="ver-video">
+                                                   <div class="alineacion">
+                                                      <button type="button" class="btn-reels-modal" data-bs-toggle="modal" data-bs-target="#modal-sep-1">
+                                                         <img src="{% static 'img/ver-video.png' %}" alt="icono"> Ver resumen
+                                                       </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="fecha-video">
+                                                  <p>Resumen semanal</p>
+                                                  <p>Del 26 de septiembre al 2 de octubre</p>
+                                                </div>
+                                              </figure>
+
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="modal-sep-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-sep-semana-1Label" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+
+                                                              <div class="reels">
+                                                                  <video width="300px" height="" controls poster="{% static 'img/reels-lcen/2022/septiembre/26-sep/portada-26-sep.jpg' %}">
+                                                                      <source src="{% static 'img/reels-lcen/2022/septiembre/26-sep/reels-26-sep.mp4' %}" type="video/mp4">
+                                                                  </video>
+                                                              </div>
+                                                              <div class="descripcion">
+                                                                  <h3>Semana del 3 al 9 de octubre o título para este video</h3>
+                                                                  <div class="linea-decoracion"></div>
+                                                                  <p>Prototipo texto explicativo resumen video: Han pasado 10 semanas desde el plebiscito y la mesa oficial de negociación llegó a un acuerdo sobre el órgano que velará por el cumplimiento de las 12 bases institucionales. Será una Comisión Técnica de admisibilidad paritaria compuesta por 14 juristas de destacada trayectoria y cuyo nombramiento dependerá de ambas Cámaras.</p>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                            </div>
+                                          </div>
+
+                                        </div>
+                                        <div class="contenido-seleccion-video">
+                                          <p class="mes-videos-destacado">Septiembre, 2022</p>
+                                          <h3>Todo lo que sucedió semana a semana</h3>
+                                          <div class="linea-decoracion"></div>
+                                          <p>Aquí encontraras un recorrido semana a semana de la discusión post plebiscito en torno a la nueva constitución.</p>
+                                          <div class="seleccion-videos">
+                                            <p>Explora los resúmenes seleccionando la fecha de la semana correspondiente:</p>
+                                            <ul class="nav nav-pills mb-3" id="pills-videos-septiembre-2022" role="tablist">
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="pills-1-sep-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-1-sep-2022" type="button" role="tab" aria-controls="pills-1-sep-2022" aria-selected="true">26 de septiembre al 2 de octubre</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                  </div>
+
+                                  <!-- Agosto 2022-->
+                                  <!--<div class="tab-pane fade" id="v-pills-agosto-2022" role="tabpanel" aria-labelledby="v-pills-agosto-2022-tab">Contenido Agosto 2022</div>-->
+
+                                  <!-- Julio 2022-->
+                                  <!--<div class="tab-pane fade" id="v-pills-julio-2022" role="tabpanel" aria-labelledby="v-pills-julio-2022-tab">Contenido Julio 2022</div>-->
+
+                                  <!-- Junio 2022-->
+                                  <!--<div class="tab-pane fade" id="v-pills-junio-2022" role="tabpanel" aria-labelledby="v-pills-junio-2022-tab">Contenido Junio 2022</div>-->
+
+                                  <!-- Mayo 2022-->
+                                  <!--<div class="tab-pane fade" id="v-pills-mayo-2022" role="tabpanel" aria-labelledby="v-pills-mayo-2022-tab">Contenido Mayo 2022</div>-->
+
+                                  <!-- Abril 2022-->
+                                  <!--<div class="tab-pane fade" id="v-pills-abril-2022" role="tabpanel" aria-labelledby="v-pills-abril-2022-tab">Contenido Abril 2022</div>-->
+
+                                  <!-- Marzo 2022-->
+                                  <!--<div class="tab-pane fade" id="v-pills-marzo-2022" role="tabpanel" aria-labelledby="v-pills-marzo-2022-tab">Contenido Marzo 2022</div>-->
+
+                                  <!-- Febrero 2022-->
+                                  <!--<div class="tab-pane fade" id="v-pills-febrero-2022" role="tabpanel" aria-labelledby="v-pills-febrero-2022-tab">Contenido Febrero 2022</div>-->
+
+                                  <!-- Enero 2022-->
+                                  <!--<div class="tab-pane fade" id="v-pills-enero-2022" role="tabpanel" aria-labelledby="v-pills-enero-2022-tab">Contenido Enero 2022</div>-->
+                              </div>
+                          </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--End contenido linea de tiempo desktop-->
+
+    </div>
+</section>
+
+
+<section class="acuerdos-alcanzados container-fluid">
+<div class="container">
+   <div class="row justify-content-center">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-5">
+             <h2>Acuerdos Alcanzados</h2>
+             <p>Conoce y descarga aquí los acuerdos alcanzados por la mesa oficial del Congreso para un nuevo acuerdo constitucional.</p>
+        </div>
+   </div>
+   <div class="row justify-content-center">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 item item-1">
+             <img src="{% static 'img/12-bases-institucionales-img.png' %}" alt="img" class="img-acuerdo">
+             <h3>12 bases institucionales</h3>
+             <a href="#" class="btn-web-lcen" target="_blank">Descargar</a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 item">
+             <img src="{% static 'img/organo-de-arbitraje-img.png' %}" alt="img" class="img-acuerdo">
+             <h3>Órgano de arbitraje</h3>
+             <a href="#" class="btn-web-lcen" target="_blank">Descargar</a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 item item-1">
+             <img src="{% static 'img/organo-redactor-img.png' %}" alt="img" class="img-acuerdo">
+             <h3>Órgano redactor</h3>
+             <a href="#" class="btn-web-lcen" target="_blank">Descargar</a>
+        </div>
+   </div>
+</div>
+</section>
+
+
+<section class="postura-osc container">
+   <div class="row justify-content-center">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 align-self-center">
+             <h2>Postura de la sociedad civil</h2>
+             <p>Conoce y descarga aquí las propuestas de la sociedad civil para esta nueva etapa constituyente. Esta declaración fue entregada al presidente del Senado en septiembre.</p>
+             <a href="#" class="btn-web-lcen" target="_blank">Propuesta de la sociedad civil</a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 align-self-center img-postura-osc">
+             <img src="{% static 'img/postura-sociedad-civil-img.png' %}" alt="img">
+        </div>
+   </div>
+</section>
+
+
+{% endblock %}
