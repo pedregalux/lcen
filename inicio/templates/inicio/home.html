@@ -60,11 +60,51 @@
     <section class="scroll-btn wow animate__animated animate__fadeIn">
         <p>¿Cómo avanza el proceso?</p>
         <div class="img-scroll">
-            <a href="#post-plebiscito">
+            <a href="#mapa">
                 <img src="{% static 'img/img-lcen-2/flecha-icono.svg' %}" alt="flecha" class="img-flecha">
             </a>
         </div>
     </section>
+
+
+    <section class="mapa-constitucional-cronograma container" id="mapa">
+        <div class="img-desktop">
+            <img src="{% static 'img/cronograma-desktop.svg' %}" alt="flecha" class="mapa">
+        </div>
+        <div class="img-movil">
+            <img src="{% static 'img/cronograma-movil.svg' %}" alt="flecha" class="mapa">
+        </div>
+    </section>
+
+    <style>
+        .mapa-constitucional-cronograma{
+           padding-top:100px;
+        }
+
+        .mapa-constitucional-cronograma img {
+            width: 100%;
+        }
+
+        .mapa-constitucional-cronograma .img-desktop{
+          display:block;
+          width: 100%;
+        }
+        .mapa-constitucional-cronograma .img-movil{
+          display:none;
+          width: 100%;
+        }
+
+        @media(max-width:768px){
+          .mapa-constitucional-cronograma .img-desktop{
+            display:none;
+            width: 100%;
+          }
+          .mapa-constitucional-cronograma .img-movil{
+            display:block;
+            width: 100%;
+          }
+        }
+    </style>
 
 
     <section class="post-plebiscito wow animate__animated animate__fadeIn" id="post-plebiscito">
