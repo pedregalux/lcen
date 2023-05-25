@@ -93,8 +93,8 @@ class PropuestaWizardViewBase(LoginRequiredMixin,SessionWizardView):
         [data.update(form.cleaned_data) for form in form_list]
         self.instance.autor = self.request.user
         self.instance.save()
-        self.instance.otros_temas.set(data['otros_temas'])
-        self.instance.organizaciones.set(data['organizaciones'])
+        # self.instance.otros_temas.set(data['otros_temas'])
+        # self.instance.organizaciones.set(data['organizaciones'])
         return render(self.request, 'done.html')
 
 
