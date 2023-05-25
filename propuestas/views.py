@@ -48,12 +48,12 @@ class VerPropuestasView(ListView):
     template_name = 'propuestas/ver_propuestas.html'
 
     def get_queryset(self):
-        return Propuesta.objects.order_by('-autor__organizacion')
+        return Propuesta.objects.order_by('-created')
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['filtropropuestas'] = PropuestaTemas(self.request.GET, queryset=self.get_queryset())
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['filtropropuestas'] = PropuestaTemas(self.request.GET, queryset=self.get_queryset())
+    #     return context
 
 
 
