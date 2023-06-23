@@ -1,0 +1,510 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link active" href="{% url 'iniciativas' %}">Iniciativas</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link" href="{% url 'escano52' %}">Escaño52</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ver_propuestas' %}">Propuestas ciudadanas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'preguntas-frecuentes' %}">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<section class="portada-lcen-colores no-margin-bottom">
+    <img src="{% static 'img/mdp/header-mdp.png' %}" alt="img portada desktop" class="img-fluid img-banner-desktop">
+    <img src="{% static 'img/mdp/header-mdp-mobile.png' %}" alt="img portada movil" class="img-fluid img-banner-movil">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Iniciativas</li>
+        </ol>
+    </nav>
+</section>
+
+<section class="post-plebiscito wow animate__animated animate__fadeIn no-margin-top" id="post-plebiscito">
+    <div class="franja">
+        <div class="img-alarma">
+            <img src="{% static 'img/img-lcen-2/alarma-img.png' %}" alt="alarma" width="80px">
+        </div>
+        <div class="franja-contenido">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="informativo">
+                            <img src="{% static 'img/img-lcen-2/circulo-rojo.svg' %}" alt="circulo-rojo" class="circulo-rojo parpadea">
+                            <p><span>Informativo:</span></p>
+                            <div class="et_pb_row et_pb_row_1">
+                                <div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div class="et_pb_module et_pb_code et_pb_code_0">
+                                        <div class="et_pb_code_inner">
+                                            <div class="ticker-wrap">
+                                                <div class="ticker">
+                                                    <div class="ticker__item">
+                                                        <p>Iniciativa popular de norma: Entre el 23 de junio y el 7 de julio puedes firmar por ellas</p>
+                                                    </div>
+                                                    <div class="ticker__item">
+                                                        <p>Recuerda debes contar con clave única para participar.</p>
+                                                    </div>
+                                                    <div class="ticker__item">
+                                                        <p>Las audiencias públicas son hasta el 21 de junio. Podrán solicitar ser recibidos en una audiencia.</p>
+                                                    </div>
+                                                    <div class="ticker__item">
+                                                        <p>La consulta Ciudadana es durante todo el mes de la participación (del 7 de junio al 7 de julio).</p>
+                                                    </div>
+                                                    <div class="ticker__item">
+                                                        <p>Puedes organizar y registrar los diálogos ciudadanos entre el 7 de junio y el 7 de julio.</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <section class="iniciativas container seccion-iniciativas" id="iniciativas">
+
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-sm-12 col-md-9 col-lg-6 col-xl-6 titulo-section">
+                      <img src="{% static 'img/mdp/titulo-home-mdp.svg' %}" alt="titulo" class="titulo-mdp" width="100%">
+                </div>
+                <div class="col-12 col-sm-12 col-md-9 col-lg-8 col-xl-7 descripcion-iniciativa-section">
+                      <p class="descripcion-breve">Las iniciativas populares de norma requieren de <b>10.000 firmas</b> para ser presentadas ante el Consejo Constitucional y ser discutidas. Puedes firmar por máximo 10 iniciativas entre el 23 de junio y el 7 de julio.</p>
+                      <p class="fecha">Aquí compartimos que promovemos desde organizaciones de la sociedad civil</p>
+                </div>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+                           <p class="numero-iniciativa">Iniciativa n° 135</p>
+                           <h4>Familias iguales</h4>
+                           <p class="descripcion-corta">Construir un Chile donde todas las familias puedan desarrollarse y vivir libres, seguras e iguales en dignidad y derechos</p>
+                           <p class="realizada-por">Presentada por</p>
+                           <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+                           <p class="texto-org">IGUALES</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa135' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                  <div class="iniciativa">
+                     <div class="datos-iniciativa">
+                         <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                         <p class="tema">Derechos</p>
+                         <p class="numero-iniciativa">Iniciativa n° 151</p>
+                         <h4>Un Chile libre de violencia y discriminación</h4>
+                         <p class="descripcion-corta">Para construir un país donde todas las personas puedan desarrollarse de manera libre y seguras, protegidas de la violencia y la discriminación</p>
+                         <p class="realizada-por">Presentada por</p>
+                         <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+                         <p class="texto-org">IGUALES</p>
+                     </div>
+                     <div class="zona-btn">
+                        <a href="{% url 'iniciativa151' %}" class="btn-iniciativa">Leer iniciativa</a>
+                        <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                     </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                  <div class="iniciativa">
+                     <div class="datos-iniciativa">
+                         <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                         <p class="tema">Derechos</p>
+                         <p class="numero-iniciativa">Iniciativa n° 9531</p>
+                         <h4>Iniciativa ciudadana en el reemplazo constitucional. Un aprendizaje necesario frente a nuestra historia reciente</h4>
+                         <p class="descripcion-corta">Incluir iniciativa ciudadana para proponer proceso de reemplazo constitucional</p>
+                         <p class="realizada-por">Presentada por</p>
+                         <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+                         <p class="texto-org">Fundación Ciudadanía Inteligente</p>
+                     </div>
+                     <div class="zona-btn">
+                        <a href="{% url 'iniciativa9531' %}" class="btn-iniciativa">Leer iniciativa</a>
+                        <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                     </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+                            <p class="numero-iniciativa">Iniciativa n° 9247</p>
+                            <h4>Niños, niñas y adolescentes en la Nueva Constitución</h4>
+                           <p class="descripcion-corta">Niños, niñas y adolescentes con derechos y protegidos integralmente para su desarrollo en plenitud y en sus familias</p>
+                           <p class="realizada-por">Presentada por</p>
+                           <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+                           <p class="texto-org">PACTO NIÑEZ</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa9247' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                  <div class="iniciativa">
+                     <div class="datos-iniciativa">
+                         <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                         <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 8339</p>
+          <h4>Derechos Laborales fundamentales en la nueva constitución</h4>
+                         <p class="descripcion-corta">Ampliar y consagrar derechos fundamentales del trabajo con apego a los principios de la OIT, consagrando el trabajo decente y digno</p>
+                         <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">UNIDAD POR TRABAJO DIGNO</p>
+                     </div>
+                     <div class="zona-btn">
+                        <a href="{% url 'iniciativa8339' %}" class="btn-iniciativa">Leer iniciativa</a>
+                        <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                     </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                  <div class="iniciativa">
+                     <div class="datos-iniciativa">
+                         <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                         <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 2419</p>
+          <h4>Chile necesita ESI</h4>
+                         <p class="descripcion-corta">Derechos sexuales y reproductivos</p>
+                         <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">UNIDAD POR TRABAJO DIGNO</p>
+                     </div>
+                     <div class="zona-btn">
+                        <a href="{% url 'iniciativa2419' %}" class="btn-iniciativa">Leer iniciativa</a>
+                        <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                     </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 2631</p>
+          <h4>Perspectiva de género en la administración de justicia</h4>
+                           <p class="descripcion-corta">Mandato transversal de incorporación de perspectiva de género con enfoque interseccional y de derechos humanos en todo órgano que ejerza jurisdicción</p>
+                           <p class="realizada-por">Presentada por</p>
+                           <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+                           <p class="texto-org">ABOFEM</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa2631' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                  <div class="iniciativa">
+                     <div class="datos-iniciativa">
+                         <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                         <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 8255</p>
+          <h4>Defiende los DDHH sobre jerarquía constitucional, tratados DDHH y obligaciones de Estado</h4>
+                         <p class="descripcion-corta">Los tratados de derechos humanos deben tener rango constitucional y el Estado debe promover, respetar, proteger y garantizar los DDHH</p>
+                         <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">Humanas, Plataforma Nada Sin Nosotras y Articulación de Organizaciones Defensoras de Derechos Humanos</p>
+                     </div>
+                     <div class="zona-btn">
+                        <a href="{% url 'iniciativa8255' %}" class="btn-iniciativa">Leer iniciativa</a>
+                        <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                     </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                  <div class="iniciativa">
+                     <div class="datos-iniciativa">
+                         <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                         <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 4423</p>
+          <h4>Un Chile para todas las edades: Reconocimiento de los derechos de las personas mayores</h4>
+                         <p class="descripcion-corta">Voces Mayores sugiere incorporar un segundo inciso al Artículo 14, con el objetivo de reconocer a las personas mayores como plenos sujetos de derecho</p>
+                         <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">Voces Mayores</p>
+                     </div>
+                     <div class="zona-btn">
+                        <a href="{% url 'iniciativa4423' %}" class="btn-iniciativa">Leer iniciativa</a>
+                        <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                     </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 6791</p>
+          <h4>Agua para las comunidades y la naturaleza: desde el secano a la nueva Constitución</h4>
+                           <p class="descripcion-corta">Nueva institucionalidad que regule el acceso al agua y su saneamiento, con perspectiva territorial y asegure la gestión comunitaria de cuencas</p>
+                           <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">Fundación Superación de la Pobreza y el Proyecto Activa Secano</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa6791' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                  <div class="iniciativa">
+                     <div class="datos-iniciativa">
+                         <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                         <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 8219</p>
+          <h4>Derecho a una vida libre de violencia</h4>
+                         <p class="descripcion-corta">Para lograr una sociedad segura para todas y todos, la Constitución debe reconocer el derecho de las mujeres y niñas a una vida libre de violencia</p>
+                         <div class="decoracion-iniciativa-lectura"></div>
+          <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">Humanas, Plataforma Nada Sin Nosotras y Articulación de Organizaciones Defensoras de Derechos Humanos</p>
+                     </div>
+                     <div class="zona-btn">
+                        <a href="{% url 'iniciativa8219' %}" class="btn-iniciativa">Leer iniciativa</a>
+                        <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                     </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                  <div class="iniciativa">
+                     <div class="datos-iniciativa">
+                         <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                         <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 8247</p>
+          <h4>Sobre democracia paritaria</h4>
+                         <p class="descripcion-corta">La futura Constitución debe asegurar a mujeres y hombres la posibilidad de participar en la vida pública en iguales condiciones</p>
+                         <p class="realizada-por">Presentada por</p>
+                         <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+                         <p class="texto-org">Humanas, Plataforma Nada Sin Nosotras y Articulación de Organizaciones Defensoras de Derechos Humanos</p>
+                     </div>
+                     <div class="zona-btn">
+                        <a href="{% url 'iniciativa8247' %}" class="btn-iniciativa">Leer iniciativa</a>
+                        <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                     </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+                           <p class="numero-iniciativa">Iniciativa n° 8255</p>
+                           <h4>Defiende los DDHH sobre jerarquía constitucional, tratados DDHH y obligaciones de Estado</h4>
+                           <p class="descripcion-corta">Los tratados de derechos humanos deben tener rango constitucional y el Estado debe promover, respetar, proteger y garantizar los DDHH</p>
+                           <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">Humanas, Plataforma Nada Sin Nosotras y Articulación de Organizaciones Defensoras de Derechos Humanos</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa8247' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 10107</p>
+          <h4>Me cuidaron, cuido y me cuidaran: derecho constitucional a los cuidados</h4>
+                           <p class="descripcion-corta">Se propone agregar al artículo 16 el derecho a los cuidados, comprensivo del derecho a cuidar y a ser cuidados</p>
+                           <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">Comunidad Mujer, Núcleo Constitucional Universidad Alberto Hurtado y Asociación Yo Cuido
+        </p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa10107' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+                           <p class="numero-iniciativa">Iniciativa n° 10831</p>
+                           <h4>Reconocimiento al desarrollo integral de una vida plena, libre de violencia y discriminación para Niños, Niñas y Adolescentes</h4>
+                           <p class="descripcion-corta">El Estado debe reconocer los derechos de niños, niñas y adolescentes y salvaguardar el desarrollo integral de una vida plena y libre de violencia</p>
+                           <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">Tremendas</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa10831' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 10887</p>
+          <h4>Fin al lucro en salud, educación, pensiones. No mas abusos de las afps, isapres y del mercado en la educación</h4>
+                           <p class="descripcion-corta">Cada peso que va a parar como ganancia a los bolsillos de quienes lucran con nuestros derechos, es un peso menos que se invierte en pensiones, salud y educación digna</p>
+                           <p class="realizada-por">Presentada por</p>
+                           <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+                           <p class="texto-org">NODO XXI</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa10887' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 11351</p>
+          <h4>Seguridad Hídrica para Chile</h4>
+                           <p class="descripcion-corta">Garantizar la protección de los ciclos del agua para que el equilibrio de los ecosistemas se mantenga. Agua para las actuales y futuras generaciones</p>
+                           <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">Articulación Ambiental Constituyente. Heinrich Böll Stiftung, Fundación Glaciares Chilenos, Colectivo de Estudios Político-Ambientales (CEPA), Earth Law Center, Chile Sustentable, ONG Defensa Ambiental, ONG FIMA, Red Plurinacional de Humedales, Centro de estudios Aguatierra, Observatorio Ciudadano, Colectivo de Estudios Político Ambientales – CEPA, ONG CEUS</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa11351' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+          <p class="numero-iniciativa">Iniciativa n° 11355</p>
+          <h4>Chile defiende la naturaleza para las generaciones futuras</h4>
+                           <p class="descripcion-corta">Proteger a la naturaleza por su indispensable y propio valor, creando una Defensoría que defienda a las personas y medio ambiente</p>
+                           <p class="realizada-por">Presentada por</p>
+          <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+          <p class="texto-org">Articulación Ambiental Constituyente. Heinrich Böll Stiftung, Fundación Glaciares Chilenos, Colectivo de Estudios Político-Ambientales (CEPA), Earth Law Center, Chile Sustentable, ONG Defensa Ambiental, ONG FIMA, Red Plurinacional de Humedales, Centro de estudios Aguatierra, Observatorio Ciudadano, Colectivo de Estudios Político Ambientales – CEPA, ONG CEUS</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa11355' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Derechos</p>
+                           <p class="numero-iniciativa">Iniciativa n° 11359</p>
+                           <h4>Desarrollo verde para Chile</h4>
+                           <p class="descripcion-corta">El desarrollo de nuestro país requiere un ordenamiento territorial que protega los bienes naturales para las generaciones actuales y futuras</p>
+                           <p class="realizada-por">Presentada por</p>
+                           <!-- <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org"> -->
+                           <p class="texto-org">Humanas, Plataforma Nada Sin Nosotras y Articulación de Organizaciones Defensoras de Derechos Humanos</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa11359' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <!-- <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p> -->
+                       </div>
+                    </div>
+                  </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+{% endblock %}

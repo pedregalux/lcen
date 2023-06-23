@@ -379,6 +379,76 @@ class EvaluacioninternacionallecturaView(TemplateView):
 class KitdedifusionView(TemplateView):
     template_name = "inicio/kit-de-difusion.html"
 
+class IniciativasView(TemplateView):
+    template_name = "inicio/iniciativas.html"
+
+class IniciativatemplateView(TemplateView):
+    template_name = "inicio/iniciativa-template.html"
+
+class Ini135(TemplateView):
+    template_name = "inicio/iniciativa135.html"
+
+class Ini151(TemplateView):
+    template_name = "inicio/iniciativa151.html"
+
+class Ini2419(TemplateView):
+    template_name = "inicio/iniciativa2419.html"
+
+class Ini2631(TemplateView):
+    template_name = "inicio/iniciativa2631.html"
+
+class Ini4423(TemplateView):
+    template_name = "inicio/iniciativa4423.html"
+
+class Ini6791(TemplateView):
+    template_name = "inicio/iniciativa6791.html"
+
+class Ini8219(TemplateView):
+    template_name = "inicio/iniciativa8219.html"
+
+class Ini8247(TemplateView):
+    template_name = "inicio/iniciativa8247.html"
+
+class Ini8255(TemplateView):
+    template_name = "inicio/iniciativa8255.html"
+
+class Ini8339(TemplateView):
+    template_name = "inicio/iniciativa8339.html"
+
+class Ini9247(TemplateView):
+    template_name = "inicio/iniciativa9247.html"
+
+class Ini9531(TemplateView):
+    template_name = "inicio/iniciativa9531.html"
+
+class Ini10107(TemplateView):
+    template_name = "inicio/iniciativa10107.html"
+
+class Ini10831(TemplateView):
+    template_name = "inicio/iniciativa10831.html"
+
+class Ini10887(TemplateView):
+    template_name = "inicio/iniciativa10887.html"
+
+class Ini11351(TemplateView):
+    template_name = "inicio/iniciativa11351.html"
+
+class Ini11355(TemplateView):
+    template_name = "inicio/iniciativa11355.html"
+
+class Ini11359(TemplateView):
+    template_name = "inicio/iniciativa11359.html"
+
+
+
+
+
+
+
+
+class Escano52View(TemplateView):
+    template_name = "inicio/escano52.html"
+
     def getpalabra(request):
         form = GlosarioForm()
         if request.method == 'POST':

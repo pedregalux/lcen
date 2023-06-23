@@ -8558,7 +8558,7 @@ nav.navbar .dropdown-menu li a.active{
     -webkit-animation-name: ticker;
     animation-name: ticker;
     -webkit-animation-duration: 400s;
-    animation-duration: 400s;
+    animation-duration: 200s;
 }
 
 .ticker:hover {
@@ -10044,4 +10044,368 @@ nav img {
     margin: 100px 0px;
 }
 
+}
+
+
+
+/*Mes de la participacion*/
+.seccion-cronograma-mdp{
+background: url(../img/img-lcen-2/bg-papel.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+.seccion-cronograma-mdp img {
+    width: 100%;
+}
+
+.seccion-cronograma-mdp .img-desktop{
+  display:block;
+  width: 100%;
+  padding: 60px 0px;
+}
+
+
+.no-margin-bottom{
+  margin-bottom:0px!important;
+}
+
+.no-margin-top{
+    margin-top:0px!important;
+}
+
+/*.seccion-cronograma-mdp .img-movil{
+  display:none;
+  width: 100%;
+  padding: 60px 0px;
+}
+
+@media(max-width:768px){
+  .seccion-cronograma-mdp .img-desktop{
+    display:none;
+    width: 100%;
+  }
+  .seccion-cronograma-mdp .img-movil{
+    display:block;
+    width: 100%;
+  }
+}*/
+
+
+/*Iniciativas*/
+
+.iniciativas{
+    padding:130px 0px 40px 0px;
+}
+
+
+.iniciativas .titulo-section{
+  margin-bottom: 30px;
+}
+
+  .iniciativas .descripcion-iniciativa-section p{
+    font-size: 1em;
+    color:black;
+    text-align: center;
+  }
+
+  .iniciativas .descripcion-iniciativa-section p span{
+    color:#4656B3;
+    font-weight: bold;
+  }
+
+  .iniciativas .descripcion-iniciativa-section p.fecha{
+    margin-bottom: 35px;
+  }
+
+
+.iniciativas .iniciativa{
+    border:4px solid #000000;
+    background: url(../img/img-lcen-2/bg-papel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
+.iniciativas .iniciativa .datos-iniciativa{
+    padding: 20px 20px 0px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.iniciativas .iniciativa .decoracion-clip{
+   width:30px;
+   position: absolute;
+   top: -17px;
+   right: 10px;
+}
+
+
+.iniciativas .iniciativa .tema{
+  padding: 3px 5px;
+  background: #4656B3;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.iniciativas .iniciativa .numero-iniciativa{
+  padding: 0px;
+  font-size: 0.9em;
+  color: #383838;
+  margin-bottom: 5px;
+}
+
+.iniciativas .iniciativa h4{
+  padding: 0px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.iniciativas .iniciativa .descripcion-corta{
+  font-size: 0.9em;
+  color: #383838;
+  text-align: left;
+}
+
+.iniciativas .iniciativa .realizada-por{
+  color: #383838;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.iniciativas .iniciativa .logo-org{
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.iniciativas .iniciativa .texto-org{
+  font-size: 1em;
+  color:#383838;
+  text-align: center;
+  width: 100%;
+}
+
+.iniciativas .iniciativa .zona-btn{
+  background: #212121;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iniciativas .iniciativa .btn-iniciativa {
+    border-radius: 20px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    padding: 6px 20px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+.iniciativas .iniciativa .btn-iniciativa:hover {
+  background: #AB47BC;
+  color: white;
+}
+
+.iniciativas .iniciativa .zona-btn p{
+  margin-bottom: 0px;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.btn-leer-todas-iniciativas {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-leer-todas-iniciativas a{
+  padding: 8px 30px;
+  background-color: black;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1em;
+  transition: 0.5s all;
+}
+
+.btn-leer-todas-iniciativas a:hover{
+  background: #CC0000;
+  color: white;
+}
+
+
+/*Seccion iniciativas*/
+
+.seccion-iniciativas{
+  margin-bottom: 100px;
+  padding-top: 80px;
+}
+
+
+/*iniciativa-lectura*/
+
+.iniciativa-lectura{
+  margin-bottom: 140px;
+  padding-top: 80px;
+}
+
+.iniciativa-lectura .volver ul {
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.iniciativa-lectura li{
+      padding-right: 10px;
+}
+
+.iniciativa-lectura a {
+    color: black;
+    text-decoration: none;
+}
+
+.iniciativa-lectura a:hover {
+    color: #AB47BC;
+    text-decoration: underline;
+}
+
+.iniciativa-lectura p{
+   color: black;
+   font-weight: bold;
+}
+
+.iniciativa-lectura .iniciativa-textos{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.iniciativa-lectura .iniciativa-textos .tema{
+  padding: 3px 5px;
+  background: #4656B3;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.iniciativa-lectura .iniciativa-textos .numero-iniciativa{
+  padding: 0px;
+  font-size: 0.9em;
+  color: #383838;
+  margin-bottom: 5px;
+}
+
+.iniciativa-lectura .iniciativa-textos h4{
+  padding: 0px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.iniciativa-lectura .iniciativa-textos .decoracion-iniciativa-lectura{
+  height: 8px;
+  background: #4CB13A;
+  width: 200px;
+  margin: 20px 0px;
+}
+
+.iniciativa-lectura .iniciativa-textos .subtitulo{
+  color: #383838;
+  text-align: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.iniciativa-lectura .iniciativa-textos .descripcion{
+  font-size: 1em;
+  color: #383838;
+  text-align: left;
+}
+
+.iniciativa-lectura .iniciativa-textos .realizada-por{
+  color: #383838;
+  text-align: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.iniciativa-lectura .iniciativa-textos .logo-org{
+  width: 150px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.iniciativa-lectura .iniciativa-textos .texto-org{
+  font-size: 1em;
+  color:#383838;
+  text-align: left;
+  width: 100%;
+}
+
+
+.iniciativa-lectura .apoyar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.iniciativa-lectura .apoyar a{
+  padding: 8px 30px;
+  background-color: black;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1em;
+  transition: 0.5s all;
+}
+
+.iniciativa-lectura .apoyar a:hover{
+  background: #CC0000;
+  color: white;
 }

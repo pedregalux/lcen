@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo-lcen" class="logo-lcen"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link" href="{% url 'iniciativas' %}">Iniciativas</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link active" href="{% url 'escano52' %}">Escaño52</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ver_propuestas' %}">Propuestas ciudadanas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'preguntas-frecuentes' %}">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+    <section class="portada wow animate__animated animate__fadeIn">
+        <div class="degradado"></div>
+        <img src="{% static 'img/mdp/portada-escritorio-mdp.svg' %}" alt="banner" class="banner-portada w-100 version-desktop">
+        <img src="{% static 'img/mdp/portada-mobile-mdp.svg' %}" alt="banner" class="banner-portada w-100 version-movil">
+    </section>
+
+    <section class="scroll-btn wow animate__animated animate__fadeIn">
+        <p>¿Cómo avanza el proceso?</p>
+        <div class="img-scroll">
+            <a href="#mapa">
+                <img src="{% static 'img/img-lcen-2/flecha-icono.svg' %}" alt="flecha" class="img-flecha">
+            </a>
+        </div>
+    </section>
+
+
+    <section class="mapa-constitucional-cronograma container" id="mapa">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-4">
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-4">
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-4">
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+                    <div class="btn">
+                         <a href="#">Ver todas las iniciativas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="post-plebiscito wow animate__animated animate__fadeIn" id="post-plebiscito">
+        <div class="franja">
+            <div class="img-alarma">
+                <img src="{% static 'img/img-lcen-2/alarma-img.png' %}" alt="alarma" width="80px">
+            </div>
+            <div class="franja-contenido">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="informativo">
+                                <img src="{% static 'img/img-lcen-2/circulo-rojo.svg' %}" alt="circulo-rojo" class="circulo-rojo parpadea">
+                                <p><span>Informativo:</span></p>
+                                <div class="et_pb_row et_pb_row_1">
+                                    <div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                        <div class="et_pb_module et_pb_code et_pb_code_0">
+                                            <div class="et_pb_code_inner">
+                                                <div class="ticker-wrap">
+                                                    <div class="ticker">
+                                                        <div class="ticker__item">
+                                                            <p>Iniciativa popular de norma: Entre el 23 de junio y el 7 de julio puedes firmar por ellas</p>
+                                                        </div>
+                                                        <div class="ticker__item">
+                                                            <p>Recuerda debes contar con clave única para participar.</p>
+                                                        </div>
+                                                        <div class="ticker__item">
+                                                            <p>Las audiencias públicas son hasta el 21 de junio. Podrán solicitar ser recibidos en una audiencia.</p>
+                                                        </div>
+                                                        <div class="ticker__item">
+                                                            <p>La consulta Ciudadana es durante todo el mes de la participación (del 7 de junio al 7 de julio).</p>
+                                                        </div>
+                                                        <div class="ticker__item">
+                                                            <p>Puedes organizar y registrar los diálogos ciudadanos entre el 7 de junio y el 7 de julio.</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      <div class="seccion-cronograma-mdp wow animate__animated animate__fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contenido">
+                          <div class="img-desktop">
+                              <img src="{% static 'img/mdp/infografia.svg' %}" alt="flecha" class="mapa">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="seccion-post-plebiscito-home wow animate__animated animate__fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contenido">
+                            <img src="{% static 'img/img-lcen-2/titulo-discusion-post-plebiscito.png' %}" alt="titulo" class="titulo">
+                            <a href="#" class="btn-web-lcen">Conoce más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'img/img-lcen-2/collage-politicos.png' %}" alt="collage politicos" class="w-100 version-desktop">
+            <img src="{% static 'img/img-lcen-2/politicos-movil.png' %}" alt="collage politicos" class="w-100 version-movil">
+        </div> -->
+    </section>
+
+    <section class="quienes-somos wow animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 col-md-5 col-lg-4 align-self-center">
+                    <div class="img">
+                        <img src="{% static 'img/img-lcen-2/lcen-collage-faro.png' %}" alt="collage-quienes-somos">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 offset-md-1 col-md-6 offset-lg-1 col-lg-5 align-self-center">
+                    <div class="informacion">
+                        <p>La Constitución es Nuestra es una Plataforma abierta y colaborativa que busca darle voz a la ciudadanía en el proceso constituyente que está recorriendo Chile desde el año 2019. La ciudadanía ha sido la protagonista de las demandas que impulsaron este camino y también debe ser una pieza fundamental de su construcción.</p>
+                        <a href="{% url 'quees' %}" class="btn-web-lcen">Conoce más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!--  <section class="que-ha-ocurrido-hasta-ahora wow animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="contenido">
+                        <img src="{% static 'img/img-lcen-2/titulo-que-ha-ocurrido-hasta-ahora.svg' %}" alt="titulo" class="titulo">
+                        <img src="{% static 'img/img-lcen-2/linea-de-tiempo-home.png' %}" class="linea-de-tiempo version-desktop">
+                        <img src="{% static 'img/img-lcen-2/linea-de-tiempo-home-movil.png' %}" alt="linea-de-tiempo" class="linea-de-tiempo version-movil">
+                        <a href="#" class="btn-web-lcen">Recorre el proceso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <section class="recursos-para-la-constitucion wow animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-md-4 align-self-center version-movil">
+                    <div class="img-titulo">
+                        <img src="{% static 'img/img-lcen-2/titulo-recursos-para-el-proceso-constitucional.svg' %}" alt="titulo" class="titulo">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 align-self-center">
+                    <div class="recurso">
+                        <img src="{% static 'img/img-lcen-2/glosario-img.png' %}" alt="img glosario" class="collage-glosario">
+                        <h3>Glosario<br> Constitucional</h3>
+                        <a href="{% url 'glosario-constitucional' %}" class="btn-web-lcen">Revisar Glosario</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 align-self-center version-desktop">
+                    <div class="img-titulo">
+                        <img src="{% static 'img/img-lcen-2/titulo-recursos-para-el-proceso-constitucional.svg' %}" alt="titulo" class="titulo">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 align-self-center">
+                    <div class="recurso">
+                        <img src="{% static 'img/img-lcen-2/mapa-constitucional-img.png' %}" alt="img mapa collage" class="collage-mapa">
+                        <h3>Mapa<br> Constitucional</h3>
+                        <a href="{% url 'mapa-constitucional' %}" class="btn-web-lcen">Revisar Mapa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!--<section class="container-fluid organizaciones-home no-bg organizaciones-seccion">
+    <div class="container">
+        <div class="row">
+            <div class="organizaciones-lista wow animate__animated animate__fadeIn">
+                <h2>Organizaciones Presentes</h2>
+                <div class="decoracion green"></div>
+                <ul>
+                    {% for orgevaluadora in organizaciones_evaluadoras %}
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <li><img src="{{ orgevaluadora.logo_org_norma.url }}" alt="organizacion logo" class="img-fluid logo"></li>
+                    </div>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+{% endblock %}
