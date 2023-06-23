@@ -21,11 +21,11 @@
                         <a class="nav-link" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
                     </li>
                     <li class="nav-item">
-                          <a class="nav-link" href="{% url 'un-viaje-por-el-proceso' %}">Un viaje por el proceso</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'post-plebiscito' %}">Post Plebiscito</a>
-                      </li>
+                          <a class="nav-link" href="{% url 'iniciativas' %}">Iniciativas</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link" href="{% url 'escano52' %}">Escaño52</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Recursos
@@ -83,9 +83,9 @@
 
             <div class="col-12 col-sm-12 col-md-12">
 
-              <!-- <p class="bajada text-center">Te invitamos a filtrar y encontrar propuestas ciudadanas en los siguientes temas</p> -->
+              <p class="bajada text-center">Te invitamos a filtrar y encontrar propuestas ciudadanas en los siguientes temas</p>
 
-              
+
 
             </div>
         </div>
@@ -96,14 +96,14 @@
 <section class="container propuestas-seccion wow animate__animated animate__fadeIn">
     <div class="row">
 
-      {% for propuesta in propuestas_list %}
+      {% for propuesta in filtropropuestas.qs %}
 
               <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                   <div class="propuesta salud">
                       <div class="informacion-propuesta">
                           <!-- <h3 class="tema">
                             {% for otro_tema in propuesta.otros_temas.all %}
-                             {{ otro_tema }} · 
+                             {{ otro_tema }} ·
                             {% endfor %}</h3> -->
                           <p class="numero-propuesta">Propuesta <b>N° {{ propuesta.id }}</b></p>
                           <h2 class="titulo">{{ propuesta.titulo }}</h2>

@@ -168,4 +168,13 @@ urlpatterns = [
     path('kit-de-difusion/', KitdedifusionView.as_view(),
         name='kit-de-difusion'),
 
+    path('iniciativas/', IniciativasView.as_view(),
+        name='iniciativas'),
+
+    path('iniciativa-template/', IniciativatemplateView.as_view(),
+        name='iniciativa-template'),
+
+    path('escano52/', Escano52View.as_view(),
+        name='escano52'),
+
 ]

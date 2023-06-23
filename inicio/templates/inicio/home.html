@@ -18,11 +18,11 @@
                         <a class="nav-link" aria-current="page" href="{% url 'quienes-somos' %}">¿Quiénes somos</a>
                     </li>
                     <li class="nav-item">
-                          <a class="nav-link" href="{% url 'un-viaje-por-el-proceso' %}">Un viaje por el proceso</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'post-plebiscito' %}">Post Plebiscito</a>
-                      </li>
+                          <a class="nav-link" href="{% url 'iniciativas' %}">Iniciativas</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link" href="{% url 'escano52' %}">Escaño52</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Recursos
@@ -53,58 +53,110 @@
 
     <section class="portada wow animate__animated animate__fadeIn">
         <div class="degradado"></div>
-        <img src="{% static 'img/img-lcen-2/portada-home.png' %}" alt="banner" class="banner-portada w-100 version-desktop">
-        <img src="{% static 'img/img-lcen-2/portada-movil.png' %}" alt="banner" class="banner-portada w-100 version-movil">
+        <img src="{% static 'img/mdp/portada-escritorio-mdp.svg' %}" alt="banner" class="banner-portada w-100 version-desktop">
+        <img src="{% static 'img/mdp/portada-mobile-mdp.svg' %}" alt="banner" class="banner-portada w-100 version-movil">
     </section>
 
     <section class="scroll-btn wow animate__animated animate__fadeIn">
         <p>¿Cómo avanza el proceso?</p>
         <div class="img-scroll">
-            <a href="#mapa">
+            <a href="#iniciativas">
                 <img src="{% static 'img/img-lcen-2/flecha-icono.svg' %}" alt="flecha" class="img-flecha">
             </a>
         </div>
     </section>
 
 
-    <section class="mapa-constitucional-cronograma container" id="mapa">
-        <div class="img-desktop">
-            <img src="{% static 'img/cronograma-desktop.svg' %}" alt="flecha" class="mapa">
+    <section class="iniciativas container" id="iniciativas">
+
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-sm-12 col-md-9 col-lg-6 col-xl-6 titulo-section">
+                      <img src="{% static 'img/mdp/titulo-home-mdp.svg' %}" alt="titulo" class="titulo-mdp" width="100%">
+                </div>
+                <div class="col-12 col-sm-12 col-md-9 col-lg-8 col-xl-7 descripcion-iniciativa-section">
+                      <p class="descripcion-breve">Las iniciativas populares de norma requieren de <b>10.000 firmas</b> para ser presentadas ante el Consejo Constitucional y ser discutidas. Puedes firmar por máximo 10 iniciativas entre el 23 de junio y el 7 de julio.</p>
+                      <p class="fecha">Aquí compartimos <span>12 iniciativas</span> que promovemos desde organizaciones de la sociedad civil</p>
+                </div>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                    <div class="iniciativa">
+                       <div class="datos-iniciativa">
+                           <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                           <p class="tema">Tema de iniciativa</p>
+                           <p class="numero-iniciativa">Iniciativa n° X</p>
+                           <h4>Nombre de iniciativa lorem ipsum eneanut vestibulum</h4>
+                           <p class="descripcion-corta">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
+                           <p class="realizada-por">Quien la realizo</p>
+                           <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org">
+                           <p class="texto-org">Nombre de organización</p>
+                       </div>
+                       <div class="zona-btn">
+                          <a href="{% url 'iniciativa-template' %}" class="btn-iniciativa">Leer iniciativa</a>
+                          <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p>
+                       </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                  <div class="iniciativa">
+                     <div class="datos-iniciativa">
+                         <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                         <p class="tema">Tema de iniciativa</p>
+                         <p class="numero-iniciativa">Iniciativa n° X</p>
+                         <h4>Nombre de iniciativa lorem ipsum eneanut vestibulum</h4>
+                         <p class="descripcion-corta">Descripción breve o extracto de descripción, consectetur adipiscing elit.Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
+                         <p class="realizada-por">Quien la realizo</p>
+                         <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org">
+                         <p class="texto-org">Nombre de organización</p>
+                     </div>
+                     <div class="zona-btn">
+                        <a href="{% url 'iniciativa-template' %}" class="btn-iniciativa">Leer iniciativa</a>
+                        <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p>
+                     </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                  <div class="iniciativa">
+                     <div class="datos-iniciativa">
+                         <img src="{% static 'img/mdp/clip.png' %}" alt="clip" class="decoracion-clip">
+                         <p class="tema">Tema de iniciativa</p>
+                         <p class="numero-iniciativa">Iniciativa n° X</p>
+                         <h4>Nombre de iniciativa lorem ipsum eneanut vestibulum</h4>
+                         <p class="descripcion-corta">Descripción breve o extracto de descripción, consectetur adipiscing elit. Aenean id malesuada quam, ut vestibulum urna consectetur adipiscing elit. Aenean id ... (*)</p>
+                         <p class="realizada-por">Quien la realizo</p>
+                         <img src="{% static 'img/img-lcen-2/logo-lcen.svg' %}" alt="logo" class="logo-org">
+                         <p class="texto-org">Nombre de organización</p>
+                     </div>
+                     <div class="zona-btn">
+                        <a href="{% url 'iniciativa-template' %}" class="btn-iniciativa">Leer iniciativa</a>
+                        <p class="numero-adherencia">XX <span>apoyos ciudadanía</span></p>
+                     </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+                    <div class="btn-leer-todas-iniciativas">
+                         <a href="{% url 'iniciativas' %}">Ver todas las iniciativas</a>
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
-        <div class="img-movil">
-            <img src="{% static 'img/cronograma-movil.svg' %}" alt="flecha" class="mapa">
-        </div>
+
+
     </section>
-
-    <style>
-        .mapa-constitucional-cronograma{
-           padding-top:100px;
-        }
-
-        .mapa-constitucional-cronograma img {
-            width: 100%;
-        }
-
-        .mapa-constitucional-cronograma .img-desktop{
-          display:block;
-          width: 100%;
-        }
-        .mapa-constitucional-cronograma .img-movil{
-          display:none;
-          width: 100%;
-        }
-
-        @media(max-width:768px){
-          .mapa-constitucional-cronograma .img-desktop{
-            display:none;
-            width: 100%;
-          }
-          .mapa-constitucional-cronograma .img-movil{
-            display:block;
-            width: 100%;
-          }
-        }
-    </style>
 
 
     <section class="post-plebiscito wow animate__animated animate__fadeIn" id="post-plebiscito">
@@ -126,13 +178,19 @@
                                                 <div class="ticker-wrap">
                                                     <div class="ticker">
                                                         <div class="ticker__item">
-                                                            <p>Las distintas fuerzas políticas aún no logran llegar a un acuerdo final para habilitar un nuevo proceso constituyente. El principal nudo de disenso es la composición de órgano redactor para el cual existen propuestas de órgano mixto, 100% designado por el Congreso o 100% electo la ciudadanía. Desde la sociedad civil creemos fundamental que una nueva Constitución sea redactada por órgano 100% electo #QuelaCiudadaníaElija.</p>
+                                                            <p>Iniciativa popular de norma: Entre el 23 de junio y el 7 de julio puedes firmar por ellas</p>
                                                         </div>
                                                         <div class="ticker__item">
-                                                            <p>Las distintas fuerzas políticas aún no logran llegar a un acuerdo final para habilitar un nuevo proceso constituyente. El principal nudo de disenso es la composición de órgano redactor para el cual existen propuestas de órgano mixto, 100% designado por el Congreso o 100% electo la ciudadanía. Desde la sociedad civil creemos fundamental que una nueva Constitución sea redactada por órgano 100% electo #QuelaCiudadaníaElija.</p>
+                                                            <p>Recuerda debes contar con clave única para participar.</p>
                                                         </div>
                                                         <div class="ticker__item">
-                                                            <p>Las distintas fuerzas políticas aún no logran llegar a un acuerdo final para habilitar un nuevo proceso constituyente. El principal nudo de disenso es la composición de órgano redactor para el cual existen propuestas de órgano mixto, 100% designado por el Congreso o 100% electo la ciudadanía. Desde la sociedad civil creemos fundamental que una nueva Constitución sea redactada por órgano 100% electo #QuelaCiudadaníaElija.</p>
+                                                            <p>Las audiencias públicas son hasta el 21 de junio. Podrán solicitar ser recibidos en una audiencia.</p>
+                                                        </div>
+                                                        <div class="ticker__item">
+                                                            <p>La consulta Ciudadana es durante todo el mes de la participación (del 7 de junio al 7 de julio).</p>
+                                                        </div>
+                                                        <div class="ticker__item">
+                                                            <p>Puedes organizar y registrar los diálogos ciudadanos entre el 7 de junio y el 7 de julio.</p>
                                                         </div>
 
                                                     </div>
@@ -148,7 +206,21 @@
             </div>
         </div>
 
-        <div class="seccion-post-plebiscito-home wow animate__animated animate__fadeIn">
+      <div class="seccion-cronograma-mdp wow animate__animated animate__fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contenido">
+                          <div class="img-desktop">
+                              <img src="{% static 'img/mdp/infografia.svg' %}" alt="flecha" class="mapa">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="seccion-post-plebiscito-home wow animate__animated animate__fadeIn">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -161,7 +233,7 @@
             </div>
             <img src="{% static 'img/img-lcen-2/collage-politicos.png' %}" alt="collage politicos" class="w-100 version-desktop">
             <img src="{% static 'img/img-lcen-2/politicos-movil.png' %}" alt="collage politicos" class="w-100 version-movil">
-        </div>
+        </div> -->
     </section>
 
     <section class="quienes-somos wow animate__animated animate__fadeIn">
