@@ -173,6 +173,68 @@ urlpatterns = [
 
     path('iniciativa-template/', IniciativatemplateView.as_view(),
         name='iniciativa-template'),
+        
+    path('iniciativa135/', Ini135.as_view(),
+        name='iniciativa135'),
+
+    path('iniciativa151/', Ini151.as_view(),
+        name='iniciativa151'),
+
+    path('iniciativa2419/', Ini2419.as_view(),
+        name='iniciativa2419'),
+
+    path('iniciativa2631/', Ini2631.as_view(),
+         name='iniciativa2631'),
+
+    path('iniciativa4423/', Ini4423.as_view(),
+         name='iniciativa4423'),
+
+    path('iniciativa6791/', Ini6791.as_view(),
+         name='iniciativa6791'),
+
+    path('iniciativa8219/', Ini8219.as_view(),
+         name='iniciativa8219'),
+
+    path('iniciativa8247/', Ini8247.as_view(),
+         name='iniciativa8247'),
+
+    path('iniciativa8255/', Ini8255.as_view(),
+         name='iniciativa8255'),
+
+    path('iniciativa8339/', Ini8339.as_view(),
+         name='iniciativa8339'),
+
+    path('iniciativa9247/', Ini9247.as_view(),
+         name='iniciativa9247'),
+
+    path('iniciativa9531/', Ini9531.as_view(),
+         name='iniciativa9531'),
+
+    path('iniciativa10107/', Ini10107.as_view(),
+         name='iniciativa10107'),
+
+    path('iniciativa10831/', Ini10831.as_view(),
+         name='iniciativa10831'),
+
+    path('iniciativa10887/', Ini10887.as_view(),
+         name='iniciativa10887'),
+
+    path('iniciativa11351/', Ini11351.as_view(),
+         name='iniciativa11351'),
+
+    path('iniciativa11355/', Ini11355.as_view(),
+         name='iniciativa11355'),
+
+    path('iniciativa11359/', Ini11359.as_view(),
+         name='iniciativa11359'),
+
+
+
+
+
+
+
+
 
     path('escano52/', Escano52View.as_view(),
         name='escano52'),
