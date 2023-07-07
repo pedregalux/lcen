@@ -10895,3 +10895,17 @@ background-size: cover;
 .iniciativas .apoyos img{
   margin-left: 10px;
 }
+
+/*Franja*/
+.iniciativas .franja {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0;
+}
+.iniciativas .franja img{
+   width: 130px;
+}
+.iniciativas .iniciativa {
+position:relative;
+}
