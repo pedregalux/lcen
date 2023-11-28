@@ -30,11 +30,18 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{% url 'mapa-constitucional' %}">Mapa constitucional</a></li>
                             <li><a class="dropdown-item" href="{% url 'glosario-constitucional' %}">Glosario constitucional</a></li>
+                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Proceso 2022/23
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{% url 'verevaluaciones' %}">Evaluaciones de normas</a></li>
                             <li><a class="dropdown-item" href="{% url 'evaluaciones_int' %}">Evaluación internacional</a></li>
                             <li><a class="dropdown-item" href="{% url 'ver_propuestas' %}">Propuestas ciudadanas</a></li>
-                            <li><a class="dropdown-item" href="{% url 'constitucion-feminista' %}">Constitución feminista</a></li>
-                            <li><a class="dropdown-item" href="{% url 'ensayos' %}">Ensayos</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -53,16 +60,16 @@
 
     <section class="portada wow animate__animated animate__fadeIn">
         <div class="degradado"></div>
-        <img src="{% static 'img/mdp/portada-1.png' %}" alt="banner" class="banner-portada w-100 version-desktop">
-        <img src="{% static 'img/mdp/portada-2.png' %}" alt="banner" class="banner-portada w-100 version-movil">
+        <img src="{% static 'img/portadas/mapa-constitucional-portada.png' %}" alt="banner" class="banner-portada w-100 version-desktop">
+        <img src="{% static 'img/portadas/mapa-constitucional-portada-movil.png' %}" alt="banner" class="banner-portada w-100 version-movil">
     </section>
 
 
     <section class="post-plebiscito wow animate__animated animate__fadeIn no-margin-top" id="post-plebiscito">
         <div class="franja">
-            <div class="img-alarma">
+            <!-- <div class="img-alarma">
                 <img src="{% static 'img/img-lcen-2/alarma-img.png' %}" alt="alarma" width="80px">
-            </div>
+            </div> -->
             <!-- <div class="franja-contenido">
                 <div class="container">
                     <div class="row">
