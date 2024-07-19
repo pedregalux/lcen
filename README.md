@@ -8,7 +8,9 @@
 
 La Constitución es Nuestra nació como una iniciativa de Ciudadanía Inteligente, CONSTITU+YO y la iniciativa Global por los Derechos Económicos, Sociales y Culturales (GI-ESCR) con la convicción de que el proceso constituyente le pertenece a la ciudadanía. 
 
-Con el texto constitucional listo, la actual etapa del proyecto –liderada por Ciudadanía Inteligente, la iniciativa Global por los Derechos Económicos, Sociales y Culturales (GI-ESCR), Avina y Amnistía Internacional– invita organizaciones de la sociedad civil y personas de la academia a analizar y evaluar el nuevo texto constitucional en relación a derechos humanos, derechos de la naturaleza y fortalecimiento democrático.
+Este proyecto acompañó las etapas de ensayos constitucionales que vivió la sociedad chilena a partir del estallido social. 
+
+liderado por Ciudadanía Inteligente, la iniciativa Global por los Derechos Económicos, Sociales y Culturales (GI-ESCR), Avina y Amnistía Internacional– invitó a organizaciones y personas a participar haciendo propuestas, evaluando medidas y comentando los posibles contenidos de la eventual nueva constitución.
 
 El objetivo de esta guía es documentar los pasos necesarios para la instalación y la modificación del código del proyecto para otras necesidades.
 
